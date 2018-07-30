@@ -140,17 +140,18 @@ end;
 
 procedure TFrmView.CheckBoxConsultaClick(Sender: TObject);
 begin
-if (CheckBoxConsulta.Checked = True) then
-begin
-  CodigoUser := '';
-  CodigoAssunto := '';
-  CodigoUserPorNome := '';
-end else
-    begin
-  CodigoUser := '';
-  CodigoAssunto := '';
-  CodigoUserPorNome := '';
-    end;
+  if (CheckBoxConsulta.Checked = True) then
+  begin
+    CodigoUser := '';
+    CodigoAssunto := '';
+    CodigoUserPorNome := '';
+  end
+  else
+  begin
+    CodigoUser := '';
+    CodigoAssunto := '';
+    CodigoUserPorNome := '';
+  end;
 
 end;
 
@@ -337,10 +338,10 @@ begin
   begin
     DBGrid1.DataSource := Dtsrc;
 
-   // with DM.sds_view do
-   // begin
-      BitBtn2.Enabled := true;
-    //end;
+    // with DM.sds_view do
+    // begin
+    BitBtn2.Enabled := True;
+    // end;
 
     with DM.sds_view do
     begin
@@ -412,10 +413,10 @@ end;
 procedure TFrmView.RadioGroup1Click(Sender: TObject);
 begin
   Dtsrc.DataSet.CLOSE;
- DtsrcTodos.DataSet.CLOSE;
- DtsrcCod.DataSet.CLOSE;
- Dtscra.DataSet.CLOSE;
- Dtscru.DataSet.CLOSE;
+  DtsrcTodos.DataSet.CLOSE;
+  DtsrcCod.DataSet.CLOSE;
+  Dtscra.DataSet.CLOSE;
+  Dtscru.DataSet.CLOSE;
 
   { EditPesqu.text := '';
     Alert.Visible := False;
@@ -507,8 +508,8 @@ begin
   CodigoUser := '';
   CodigoAssunto := '';
   CodigoUserPorNome := '';
-DM.sds_view.Close;
-DM.sds_view_todos.Close;
+  DM.sds_view.CLOSE;
+  DM.sds_view_todos.CLOSE;
   if (FrmLogin.TODOS = 1) then
   begin
     case RadioGroup1.ItemIndex of
@@ -858,7 +859,7 @@ DM.sds_view_todos.Close;
             (CodigoUserPorNome <> '') then
           begin
             Dtsrc.DataSet.Filtered := False;
-            Dtsrc.DataSet.Filter :=' IDUSUARIOS=' + CodigoUserPorNome;
+            Dtsrc.DataSet.Filter := ' IDUSUARIOS=' + CodigoUserPorNome;
           end;
           Dtsrc.DataSet.Filtered := True;
           // DBGrid1.DataSource := Dtsrc;

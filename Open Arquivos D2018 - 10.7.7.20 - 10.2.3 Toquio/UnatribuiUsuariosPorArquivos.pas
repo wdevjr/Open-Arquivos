@@ -131,10 +131,9 @@ begin
           DM.sds_lista_Usuarios.Refresh;
           excluir.Enabled := (not DM.cds_UserAdd.IsEmpty);
 
-         end;
-
         end;
 
+      end;
 
   finally
     frmIncluir.Free;

@@ -910,7 +910,7 @@ end;
 procedure TDM.cds_UserAddReconcileError(DataSet: TCustomClientDataSet;
   E: EReconcileError; UpdateKind: TUpdateKind; var Action: TReconcileAction);
 begin
-MessageDlg('Esse Usuário já Existe!',mtWarning,[mbOk],0)
+  MessageDlg('Esse Usuário já Existe!', mtWarning, [mbOk], 0)
 end;
 
 procedure TDM.cds_UserBeforePost(DataSet: TDataSet);
