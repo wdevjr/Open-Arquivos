@@ -1,18 +1,17 @@
 ﻿[Closed Files]
-File_0=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UProjeto.pas',0,1,995,38,1005,0,0,,
-File_1=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnConsultaEspecial_old.pas',0,1,19,30,4,0,0,,
-File_2=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.15 - 10.2.3 Toquio\UnConsultaEspecialold.pas',0,1,1,1,1,0,0,,
-File_3=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.15 - 10.2.3 Toquio\UnNovVersao.pas',0,1,297,39,172,0,0,,
-File_4=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.2.3 Toquio\UnUtilitLog.pas',0,1,1509,1,1510,0,0,,
-File_5=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.15 - 10.2.3 Toquio\UnDlgProcura.pas',0,1,1,1,1,0,0,,
-File_6=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.2.3 Toquio\UnContrUser.pas',0,1,313,28,318,0,0,,
+File_0=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnConsultaEspecial_old.pas',0,1,19,30,4,0,0,,
+File_1=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.15 - 10.2.3 Toquio\UnConsultaEspecialold.pas',0,1,1,1,1,0,0,,
+File_2=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.15 - 10.2.3 Toquio\UnNovVersao.pas',0,1,297,39,172,0,0,,
+File_3=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.2.3 Toquio\UnUtilitLog.pas',0,1,1509,1,1510,0,0,,
+File_4=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.15 - 10.2.3 Toquio\UnDlgProcura.pas',0,1,1,1,1,0,0,,
+File_5=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.2.3 Toquio\UnContrUser.pas',0,1,313,28,318,0,0,,
 
 [Modules]
 Module0=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnConsultaEspecial.pas
-Module1=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnNovVersao.pas
+Module1=default.htm
 Module2=documentation.htm
 Module3=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UDM.pas
-Module4=default.htm
+Module4=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnNovVersao.pas
 Module5=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnatribuiUsuariosPorArquivos.pas
 Module6=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnLogin.pas
 Count=7
@@ -21,8 +20,8 @@ EditWindowCount=1
 [D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnConsultaEspecial.pas]
 ModuleType=TSourceModule
 
-[D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnNovVersao.pas]
-ModuleType=TSourceModule
+[default.htm]
+ModuleType=TURLModule
 
 [documentation.htm]
 ModuleType=TURLModule
@@ -30,8 +29,8 @@ ModuleType=TURLModule
 [D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UDM.pas]
 ModuleType=TSourceModule
 
-[default.htm]
-ModuleType=TURLModule
+[D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnNovVersao.pas]
+ModuleType=TSourceModule
 
 [D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnatribuiUsuariosPorArquivos.pas]
 ModuleType=TSourceModule
@@ -85,8 +84,8 @@ WelcomePageURL=bds:/documentation.htm
 [View2]
 CustomEditViewType=TEditView
 Module=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnConsultaEspecial.pas
-CursorX=26
-CursorY=146
+CursorX=44
+CursorY=143
 TopLine=141
 LeftCol=1
 Elisions=
@@ -165,9 +164,7 @@ Dockable=1
 StayOnTop=0
 
 [Breakpoints]
-Count=2
-Breakpoint0='D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnConsultaEspecial.pas',885,'',0,1,'',1,0,0,'',1,'','','',0,''
-Breakpoint1='D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnConsultaEspecial.pas',845,'',0,1,'',1,0,0,'',1,'','','',0,''
+Count=0
 
 [EmbarcaderoWin32Debugger_AddressBreakpoints]
 Count=0
@@ -524,11 +521,11 @@ State=0
 Left=0
 Top=0
 Width=4381
-Height=911
+Height=1146
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=4381
-ClientHeight=911
+ClientHeight=1146
 TBDockHeight=2500
 LRDockWidth=3398
 Dockable=1
@@ -543,11 +540,11 @@ State=0
 Left=0
 Top=0
 Width=4381
-Height=911
+Height=1146
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=4381
-ClientHeight=911
+ClientHeight=1146
 TBDockHeight=5078
 LRDockWidth=5302
 Dockable=1
@@ -562,11 +559,11 @@ State=0
 Left=0
 Top=0
 Width=4381
-Height=911
+Height=1146
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=4381
-ClientHeight=911
+ClientHeight=1146
 TBDockHeight=3841
 LRDockWidth=5302
 Dockable=1
@@ -579,14 +576,14 @@ Visible=0
 Docked=1
 State=0
 Left=308
-Top=642
+Top=754
 Width=3669
-Height=1003
+Height=990
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=3669
-ClientHeight=1003
-TBDockHeight=1003
+ClientHeight=990
+TBDockHeight=990
 LRDockWidth=3669
 Dockable=1
 StayOnTop=0
@@ -707,7 +704,7 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=148
+Left=74
 Top=0
 Width=1471
 Height=8255
@@ -734,12 +731,12 @@ State=0
 Left=8
 Top=8
 Width=4381
-Height=1237
+Height=1471
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=4381
-ClientHeight=1237
-TBDockHeight=1237
+ClientHeight=1471
+TBDockHeight=1471
 LRDockWidth=4381
 Dockable=1
 StayOnTop=0
