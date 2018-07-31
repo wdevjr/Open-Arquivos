@@ -47,12 +47,12 @@ uses UDM, UnIncluirUsuarios, UProjeto;
 
 procedure TFrmAtribuiUser.BitBtn1Click(Sender: TObject);
 begin
-  if (Edit1.Text <> '') and (Edit1.Text <> '%') and (Edit1.Text <> '.') then
-  begin
+  //if (Edit1.Text <> '') and (Edit1.Text <> '%') and (Edit1.Text <> '.') then
+  //begin
     DM.sds_lista_Usuarios.Close;
     DM.sds_lista_Usuarios.Params[1].AsString := '%' + Edit1.Text + '%';
     DM.sds_lista_Usuarios.Open;
-  end;
+  //end;
 end;
 
 procedure TFrmAtribuiUser.DBGrid1CellClick(Column: TColumn);
@@ -98,7 +98,7 @@ end;
 
 procedure TFrmAtribuiUser.FormShow(Sender: TObject);
 begin
-  // DM.sds_lista_Usuarios.Refresh;
+  ///DM.sds_lista_Usuarios.Refresh;
 end;
 
 procedure TFrmAtribuiUser.incluirClick(Sender: TObject);
