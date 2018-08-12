@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<TfrxReport Version="5.4.6" DataSetName="frxUserDataSet1" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="4095" PreviewOptions.Zoom="1" PrintOptions.Printer="Padrão" PrintOptions.PrintOnSheet="0" ReportOptions.CreateDate="43322,045178831" ReportOptions.Description.Text="" ReportOptions.LastChange="43323,9438042245" ScriptLanguage="PascalScript" ScriptText.Text="begin&#13;&#10;&#13;&#10;end.">
+<TfrxReport Version="5.4.6" DataSetName="frxUserDataSet1" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="4095" PreviewOptions.Zoom="1" PrintOptions.Printer="Padrão" PrintOptions.PrintOnSheet="0" ReportOptions.CreateDate="43322,045178831" ReportOptions.Description.Text="" ReportOptions.LastChange="43323,9694403241" ScriptLanguage="PascalScript" ScriptText.Text="begin&#13;&#10;&#13;&#10;end.">
   <Datasets>
     <item DataSet="frxDBDataset1" DataSetName="frxDBDataset1"/>
   </Datasets>
@@ -18,7 +18,7 @@
       <TfrxMemoView Name="Memo2" Left="7,55906" Top="64,2520100000002" Width="219,21274" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="1" ParentFont="False" Text="Titulo do Assunto:"/>
       <TfrxMemoView Name="frxDBDataset1NOME" Left="3,77953" Top="154,96073" Width="483,77984" Height="18,89765" DataField="NOME" DataSet="frxDBDataset1" DataSetName="frxDBDataset1" Text="[frxDBDataset1.&#34;NOME&#34;]"/>
       <TfrxMemoView Name="Memo3" Left="7,55906" Top="132,28355" Width="124,72449" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="1" ParentFont="False" Text="Proprietario:"/>
-      <TfrxMemoView Name="frxDBDataset1DESCRICAO" Left="3,77953" Top="241,88992" Width="699,21305" Height="336,37817" DataField="DESCRICAO" DataSet="frxDBDataset1" DataSetName="frxDBDataset1" Font.Charset="1" Font.Color="16711680" Font.Height="-13" Font.Name="Arial" Font.Style="0" ParentFont="False" Text="[frxDBDataset1.&#34;DESCRICAO&#34;]"/>
+      <TfrxMemoView Name="frxDBDataset1DESCRICAO" Left="3,77953" Top="241,88992" Width="699,21305" Height="336,37817" DataField="DESCRICAO" DataSet="frxDBDataset1" DataSetName="frxDBDataset1" Font.Charset="1" Font.Color="16711680" Font.Height="-13" Font.Name="Arial" Font.Style="0" Font.Quality="fqProof" HAlign="haBlock" ParentFont="False" Text="[frxDBDataset1.&#34;DESCRICAO&#34;]"/>
       <TfrxMemoView Name="Memo4" Left="3,77953" Top="196,53556" Width="162,51979" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="1" ParentFont="False" Text="Descrição do Arquivo:"/>
     </TfrxMasterData>
   </TfrxReportPage>
