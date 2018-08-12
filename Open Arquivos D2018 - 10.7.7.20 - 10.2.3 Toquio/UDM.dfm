@@ -527,6 +527,7 @@ object DM: TDM
     Top = 160
   end
   object sds_Report_Detalhe: TSimpleDataSet
+    Active = True
     Aggregates = <>
     Connection = SQLConnection
     DataSet.CommandText = 
@@ -2110,6 +2111,7 @@ object DM: TDM
       'RoleName=RoleName'
       'ServerCharSet=win1252'
       'Trim Char=False')
+    Connected = True
     Left = 40
     Top = 184
   end
@@ -2487,7 +2489,7 @@ object DM: TDM
     PrintOptions.Printer = 'Padr'#227'o'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 43322.045178831000000000
-    ReportOptions.LastChange = 43323.927436076400000000
+    ReportOptions.LastChange = 43323.944124421290000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -2521,7 +2523,7 @@ object DM: TDM
         Width = 718.110700000000000000
         object Memo5: TfrxMemoView
           Left = 7.559060000000000000
-          Top = 49.133889999999990000
+          Top = 49.133890000000000000
           Width = 302.362400000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -2536,7 +2538,7 @@ object DM: TDM
         object Date: TfrxMemoView
           Left = 7.559060000000000000
           Top = 15.118120000000000000
-          Width = 98.267780000000000000
+          Width = 151.181200000000000000
           Height = 18.897650000000000000
           DisplayFormat.FormatStr = 'd "de" mmmm "de" yyyy'
           DisplayFormat.Kind = fkDateTime
@@ -2550,7 +2552,7 @@ object DM: TDM
           ParentFont = False
         end
         object Memo6: TfrxMemoView
-          Left = 105.826840000000000000
+          Left = 162.519790000000000000
           Top = 15.118120000000000000
           Width = 18.897650000000000000
           Height = 18.897650000000000000
@@ -2564,7 +2566,7 @@ object DM: TDM
           ParentFont = False
         end
         object Time: TfrxMemoView
-          Left = 124.724490000000000000
+          Left = 181.417440000000000000
           Top = 15.118120000000000000
           Width = 79.370130000000000000
           Height = 18.897650000000000000
@@ -2588,7 +2590,7 @@ object DM: TDM
         RowCount = 0
         object frxDBDataset1ID: TfrxMemoView
           Left = 7.559060000000000000
-          Top = 34.015770000000010000
+          Top = 34.015770000000000000
           Width = 102.047310000000000000
           Height = 18.897650000000000000
           DataField = 'ID'
@@ -2605,7 +2607,7 @@ object DM: TDM
         end
         object Memo1: TfrxMemoView
           Left = 11.338590000000000000
-          Top = 7.559059999999988000
+          Top = 7.559059999999990000
           Width = 94.488250000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -2630,7 +2632,7 @@ object DM: TDM
         end
         object Memo2: TfrxMemoView
           Left = 7.559060000000000000
-          Top = 64.252010000000220000
+          Top = 64.252010000000200000
           Width = 219.212740000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
