@@ -406,7 +406,7 @@ begin
   Dtscra.DataSet.CLOSE;
   Dtscru.DataSet.CLOSE;
 
-    // PanelMostrData.Visible:=False;
+  // PanelMostrData.Visible:=False;
 end;
 
 procedure TFrmView.RadioGroup1Click(Sender: TObject);
@@ -1077,7 +1077,7 @@ begin
     DM.sds_report_detalhe.Params[0].asInteger := selecAtualReport;
     DM.sds_report_detalhe.Open;
     DM.frxReport1.LoadFromFile(ExtractFilePath(ParamStr(0)) +
-    'ReportGeral\FastReport\RelatorioPorSelecao.fr3', True);
+      'ReportGeral\FastReport\RelatorioPorSelecao.fr3', True);
     DM.frxReport1.ShowReport;
   end;
 end;

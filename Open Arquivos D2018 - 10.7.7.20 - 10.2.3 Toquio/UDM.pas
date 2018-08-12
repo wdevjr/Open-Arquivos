@@ -6,7 +6,8 @@ uses
   SysUtils, Classes, DB, SqlExpr, FMTBcd, Provider, SimpleDS,
   MidasLib, ComCtrls, DBCtrls, Controls, StdCtrls,
   WideStrings,
-  DBXFirebird, DBXPool, Data.DBXMsSQL, Datasnap.DBClient, frxClass, frxDBSet;
+  DBXFirebird, DBXPool, Data.DBXMsSQL, Datasnap.DBClient, frxClass, frxDBSet,
+  frxExportPDF, frxGradient, frxDesgn;
 
 type
   TDM = class(TDataModule)
@@ -382,6 +383,10 @@ type
     sds_ArquTITULOASSUN: TStringField;
     frxReport1: TfrxReport;
     frxDBDataset1: TfrxDBDataset;
+    frxPDFExport1: TfrxPDFExport;
+    sds_Report_DetalheADMINISTRADOR: TIntegerField;
+    frxGradientObject1: TfrxGradientObject;
+    frxDesigner1: TfrxDesigner;
     procedure DataModuleCreate(Sender: TObject);
     function PreencheCombo: TStrings;
     function PreencheList: TStrings;
