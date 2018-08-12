@@ -68,8 +68,6 @@ type
     PanelData: TPanel;
     SpeedButton11: TSpeedButton;
     Label8: TLabel;
-    habilitar03: TSpeedButton;
-    desabilitar03: TSpeedButton;
     PanelMostrData: TPanel;
     Label9: TLabel;
     DateTimePicker1: TDateTimePicker;
@@ -407,7 +405,8 @@ begin
   DtsrcCod.DataSet.CLOSE;
   Dtscra.DataSet.CLOSE;
   Dtscru.DataSet.CLOSE;
-  // PanelMostrData.Visible:=False;
+
+    // PanelMostrData.Visible:=False;
 end;
 
 procedure TFrmView.RadioGroup1Click(Sender: TObject);

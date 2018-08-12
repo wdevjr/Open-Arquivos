@@ -527,7 +527,6 @@ object DM: TDM
     Top = 160
   end
   object sds_Report_Detalhe: TSimpleDataSet
-    Active = True
     Aggregates = <>
     Connection = SQLConnection
     DataSet.CommandText = 
@@ -2111,7 +2110,6 @@ object DM: TDM
       'RoleName=RoleName'
       'ServerCharSet=win1252'
       'Trim Char=False')
-    Connected = True
     Left = 40
     Top = 184
   end
