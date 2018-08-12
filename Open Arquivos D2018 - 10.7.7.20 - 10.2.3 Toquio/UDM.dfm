@@ -548,7 +548,7 @@ object DM: TDM
         Name = 'ID'
         ParamType = ptInput
       end>
-    Left = 328
+    Left = 304
     Top = 336
     object sds_Report_DetalheID: TIntegerField
       FieldName = 'ID'
@@ -2475,6 +2475,249 @@ object DM: TDM
     Params = <>
     OnFilterRecord = sds_ViewFilterRecord
     Left = 112
+    Top = 328
+  end
+  object frxReport1: TfrxReport
+    Version = '5.4.6'
+    DataSetName = 'frxUserDataSet1'
+    DotMatrixReport = False
+    IniFile = '\Software\Fast Reports'
+    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
+    PreviewOptions.Zoom = 1.000000000000000000
+    PrintOptions.Printer = 'Padr'#227'o'
+    PrintOptions.PrintOnSheet = 0
+    ReportOptions.CreateDate = 43322.045178831000000000
+    ReportOptions.LastChange = 43323.927436076400000000
+    ScriptLanguage = 'PascalScript'
+    ScriptText.Strings = (
+      'begin'
+      ''
+      'end.')
+    Left = 408
+    Top = 328
+    Datasets = <
+      item
+        DataSet = frxDBDataset1
+        DataSetName = 'frxDBDataset1'
+      end>
+    Variables = <>
+    Style = <>
+    object Data: TfrxDataPage
+      Height = 1000.000000000000000000
+      Width = 1000.000000000000000000
+    end
+    object Page1: TfrxReportPage
+      PaperWidth = 210.000000000000000000
+      PaperHeight = 297.000000000000000000
+      PaperSize = 9
+      LeftMargin = 10.000000000000000000
+      RightMargin = 10.000000000000000000
+      TopMargin = 10.000000000000000000
+      BottomMargin = 10.000000000000000000
+      object PageHeader1: TfrxPageHeader
+        FillType = ftBrush
+        Height = 86.929190000000000000
+        Top = 18.897650000000000000
+        Width = 718.110700000000000000
+        object Memo5: TfrxMemoView
+          Left = 7.559060000000000000
+          Top = 49.133889999999990000
+          Width = 302.362400000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clRed
+          Font.Height = -16
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Memo.UTF8W = (
+            'Dados da Consulta Atual por sele'#231#227'o:')
+          ParentFont = False
+        end
+        object Date: TfrxMemoView
+          Left = 7.559060000000000000
+          Top = 15.118120000000000000
+          Width = 98.267780000000000000
+          Height = 18.897650000000000000
+          DisplayFormat.FormatStr = 'd "de" mmmm "de" yyyy'
+          DisplayFormat.Kind = fkDateTime
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clGreen
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Memo.UTF8W = (
+            '[Date]')
+          ParentFont = False
+        end
+        object Memo6: TfrxMemoView
+          Left = 105.826840000000000000
+          Top = 15.118120000000000000
+          Width = 18.897650000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clGreen
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Memo.UTF8W = (
+            #224's')
+          ParentFont = False
+        end
+        object Time: TfrxMemoView
+          Left = 124.724490000000000000
+          Top = 15.118120000000000000
+          Width = 79.370130000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clGreen
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Memo.UTF8W = (
+            '[Time]')
+          ParentFont = False
+        end
+      end
+      object MasterData1: TfrxMasterData
+        FillType = ftBrush
+        Height = 755.906000000000000000
+        Top = 166.299320000000000000
+        Width = 718.110700000000000000
+        DataSet = frxDBDataset1
+        DataSetName = 'frxDBDataset1'
+        RowCount = 0
+        object frxDBDataset1ID: TfrxMemoView
+          Left = 7.559060000000000000
+          Top = 34.015770000000010000
+          Width = 102.047310000000000000
+          Height = 18.897650000000000000
+          DataField = 'ID'
+          DataSet = frxDBDataset1
+          DataSetName = 'frxDBDataset1'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clGreen
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Memo.UTF8W = (
+            '[frxDBDataset1."ID"]')
+          ParentFont = False
+        end
+        object Memo1: TfrxMemoView
+          Left = 11.338590000000000000
+          Top = 7.559059999999988000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clRed
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Memo.UTF8W = (
+            'C'#243'digo:')
+          ParentFont = False
+        end
+        object frxDBDataset1TITULOASSUN: TfrxMemoView
+          Left = 7.559060000000000000
+          Top = 86.929190000000200000
+          Width = 695.433520000000000000
+          Height = 18.897650000000000000
+          DataField = 'TITULOASSUN'
+          DataSet = frxDBDataset1
+          DataSetName = 'frxDBDataset1'
+          Memo.UTF8W = (
+            '[frxDBDataset1."TITULOASSUN"]')
+        end
+        object Memo2: TfrxMemoView
+          Left = 7.559060000000000000
+          Top = 64.252010000000220000
+          Width = 219.212740000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Memo.UTF8W = (
+            'Titulo do Assunto:')
+          ParentFont = False
+        end
+        object frxDBDataset1NOME: TfrxMemoView
+          Left = 3.779530000000000000
+          Top = 154.960730000000000000
+          Width = 483.779840000000000000
+          Height = 18.897650000000000000
+          DataField = 'NOME'
+          DataSet = frxDBDataset1
+          DataSetName = 'frxDBDataset1'
+          Memo.UTF8W = (
+            '[frxDBDataset1."NOME"]')
+        end
+        object Memo3: TfrxMemoView
+          Left = 7.559060000000000000
+          Top = 132.283550000000000000
+          Width = 124.724490000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Memo.UTF8W = (
+            'Proprietario:')
+          ParentFont = False
+        end
+        object frxDBDataset1DESCRICAO: TfrxMemoView
+          Left = 3.779530000000000000
+          Top = 241.889920000000000000
+          Width = 699.213050000000000000
+          Height = 336.378170000000000000
+          DataField = 'DESCRICAO'
+          DataSet = frxDBDataset1
+          DataSetName = 'frxDBDataset1'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlue
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Memo.UTF8W = (
+            '[frxDBDataset1."DESCRICAO"]')
+          ParentFont = False
+        end
+        object Memo4: TfrxMemoView
+          Left = 3.779530000000000000
+          Top = 196.535560000000000000
+          Width = 162.519790000000000000
+          Height = 18.897650000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Memo.UTF8W = (
+            'Descri'#231#227'o do Arquivo:')
+          ParentFont = False
+        end
+      end
+    end
+  end
+  object frxDBDataset1: TfrxDBDataset
+    UserName = 'frxDBDataset1'
+    CloseDataSource = False
+    FieldAliases.Strings = (
+      'ID=ID'
+      'COD_USUARIO=COD_USUARIO'
+      'TITULOASSUN=TITULOASSUN'
+      'NOME=NOME'
+      'DESCRICAO=DESCRICAO'
+      'NOME_ARQUIVO=NOME_ARQUIVO'
+      'INFORMACOES=INFORMACOES'
+      'LOGIN=LOGIN'
+      'NIVEL=NIVEL'
+      'NOME_1=NOME_1')
+    DataSet = sds_Report_Detalhe
+    BCDToCurrency = False
+    Left = 528
     Top = 328
   end
 end

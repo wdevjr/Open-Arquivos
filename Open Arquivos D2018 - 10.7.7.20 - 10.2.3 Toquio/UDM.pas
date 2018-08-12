@@ -6,7 +6,7 @@ uses
   SysUtils, Classes, DB, SqlExpr, FMTBcd, Provider, SimpleDS,
   MidasLib, ComCtrls, DBCtrls, Controls, StdCtrls,
   WideStrings,
-  DBXFirebird, DBXPool, Data.DBXMsSQL, Datasnap.DBClient;
+  DBXFirebird, DBXPool, Data.DBXMsSQL, Datasnap.DBClient, frxClass, frxDBSet;
 
 type
   TDM = class(TDataModule)
@@ -380,6 +380,8 @@ type
     sds_ArquIDUSUARIOS: TIntegerField;
     sds_ArquNOME: TStringField;
     sds_ArquTITULOASSUN: TStringField;
+    frxReport1: TfrxReport;
+    frxDBDataset1: TfrxDBDataset;
     procedure DataModuleCreate(Sender: TObject);
     function PreencheCombo: TStrings;
     function PreencheList: TStrings;
