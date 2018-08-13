@@ -11,7 +11,7 @@ interface
 uses
   SysUtils, Classes, FMTBcd, DB, SqlExpr, DBClient, Provider, SimpleDS,
   StdCtrls,
-  Graphics, jpeg;
+  Graphics, jpeg, Data.DBXFirebird;
 
 type
   TDMII = class(TDataModule)

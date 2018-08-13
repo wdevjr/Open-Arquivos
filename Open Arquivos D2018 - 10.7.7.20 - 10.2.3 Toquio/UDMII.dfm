@@ -662,6 +662,7 @@ object DMII: TDMII
   end
   object sds_Recebe_CodUser: TSimpleDataSet
     Aggregates = <>
+    Connection = DM.SQLConnection
     DataSet.CommandText = 
       'select AU.COD_USUARIO,AU. NOME,AU.NIVEL,AU. LOGIN,AU. DATA, AU.A' +
       'DMINISTRADOR,NI.NOMEL from USUARIO AU'#13#10'inner join PERFIL NI on N' +
@@ -882,6 +883,7 @@ object DMII: TDMII
   end
   object sds_BuscaNomeArquivo: TSimpleDataSet
     Aggregates = <>
+    Connection = DM.SQLConnection
     DataSet.CommandText = 
       'select AQ.ID,AQ.TITULO,AQ.NOME_ARQUIVO,AQ.EXTENCAO,AQ.DATA,AQ.DE' +
       'SCRICAO,AQ.HORA,AQ.TAMANHO,AQ.INFORMACOES,UR.NOME,OT.NOME,SN.TIT' +

@@ -153,6 +153,8 @@ type
     Timer1: TTimer;
     lookUser: TSpeedButton;
     Label7: TLabel;
+    SpeedButton1: TSpeedButton;
+    Label9: TLabel;
     procedure relatoriosClick(Sender: TObject);
     procedure N1Click(Sender: TObject);
     procedure cbCadLogAssistenteExecute(Sender: TObject);
@@ -209,6 +211,7 @@ type
     procedure btntrazerClick(Sender: TObject);
     procedure Cidades1Click(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
+    procedure SpeedButton1Click(Sender: TObject);
     // para a chamada de status do componente
   private
     buffer: array [0 .. 255] of Char;
@@ -758,6 +761,25 @@ begin
     FrmAtribuiUser.ShowModal;
   finally
     FrmAtribuiUser.Free;
+  end;
+
+end;
+
+procedure TFrPrincipal.SpeedButton1Click(Sender: TObject);
+begin
+  if (DBText2.Caption = '') then
+  begin
+    MessageDlg('Consulte um arquivo ou Cadastre um novo arquivo!', mtWarning,
+      [mbOK], 0);
+  end
+  else
+  begin
+    DM.sds_report_detalhe.CLOSE;
+    DM.sds_report_detalhe.Params[0].asInteger := StrToInt(DBText2.caption);
+    DM.sds_report_detalhe.Open;
+    DM.frxReport1.LoadFromFile(ExtractFilePath(ParamStr(0)) +
+      'ReportGeral\FastReport\RelatorioPorSelecao.fr3', True);
+    DM.frxReport1.ShowReport;
   end;
 end;
 

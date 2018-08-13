@@ -3,7 +3,7 @@ object FrmRelatoriosGerais: TFrmRelatoriosGerais
   Top = 0
   Caption = 'Relat'#243'rios'
   ClientHeight = 488
-  ClientWidth = 803
+  ClientWidth = 811
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,25 +19,25 @@ object FrmRelatoriosGerais: TFrmRelatoriosGerais
   object StatusBar1: TStatusBar
     Left = 0
     Top = 458
-    Width = 803
+    Width = 811
     Height = 30
     Panels = <>
-    ExplicitWidth = 865
+    ExplicitWidth = 803
   end
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 803
+    Width = 811
     Height = 65
     Align = alTop
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 865
+    ExplicitWidth = 803
     object Image2: TImage
       Left = 1
       Top = 1
-      Width = 705
+      Width = 713
       Height = 63
       Align = alClient
       Picture.Data = {
@@ -502,10 +502,10 @@ object FrmRelatoriosGerais: TFrmRelatoriosGerais
       ParentFont = False
     end
     object Image4: TImage
-      Left = 754
+      Left = 762
       Top = 1
       Width = 48
-      Height = 48
+      Height = 63
       Align = alRight
       AutoSize = True
       Picture.Data = {
@@ -800,12 +800,14 @@ object FrmRelatoriosGerais: TFrmRelatoriosGerais
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
         FFFF}
+      ExplicitLeft = 754
+      ExplicitHeight = 48
     end
     object Image1: TImage
-      Left = 706
+      Left = 714
       Top = 1
       Width = 48
-      Height = 48
+      Height = 63
       Align = alRight
       AutoSize = True
       Picture.Data = {
@@ -1100,22 +1102,24 @@ object FrmRelatoriosGerais: TFrmRelatoriosGerais
         F63FC6EDF83FDAF3FA3FEFF8FB3FFCFCFC3FFEFEFE3FFEFEFE3FFEFEFE3FFEFE
         FE3FFEFEFE3FFEFEFE3FFEFEFE3FFEFEFE3FFEFEFE3FFEFEFE3FFEFEFE3FFEFE
         FE3F}
+      ExplicitLeft = 706
+      ExplicitHeight = 48
     end
   end
   object Panel2: TPanel
     Left = 0
     Top = 65
-    Width = 803
+    Width = 811
     Height = 9
     Align = alTop
     Color = 12615680
     TabOrder = 1
-    ExplicitWidth = 865
+    ExplicitWidth = 803
   end
   object Panel6: TPanel
     Left = 0
     Top = 91
-    Width = 803
+    Width = 811
     Height = 17
     Align = alTop
     Caption = 'Consultas Realizadas por Nome Indicado'
@@ -1128,28 +1132,28 @@ object FrmRelatoriosGerais: TFrmRelatoriosGerais
     ParentBackground = False
     ParentFont = False
     TabOrder = 2
-    ExplicitWidth = 865
+    ExplicitWidth = 803
   end
   object Panel7: TPanel
     Left = 0
     Top = 108
-    Width = 803
+    Width = 811
     Height = 9
     Align = alTop
     Color = 12615680
     TabOrder = 3
-    ExplicitWidth = 865
+    ExplicitWidth = 803
   end
   object Panel8: TPanel
     Left = 0
     Top = 117
-    Width = 803
+    Width = 811
     Height = 304
     Align = alClient
     Color = clWhite
     ParentBackground = False
     TabOrder = 4
-    ExplicitWidth = 865
+    ExplicitWidth = 803
     object Label5: TLabel
       Left = 7
       Top = 143
@@ -1574,14 +1578,14 @@ object FrmRelatoriosGerais: TFrmRelatoriosGerais
     object Panel3: TPanel
       Left = 1
       Top = 1
-      Width = 801
+      Width = 809
       Height = 136
       Align = alTop
       BevelOuter = bvNone
       Color = clWhite
       ParentBackground = False
       TabOrder = 1
-      ExplicitWidth = 863
+      ExplicitWidth = 801
       object Label6: TLabel
         Left = 53
         Top = 16
@@ -2064,20 +2068,20 @@ object FrmRelatoriosGerais: TFrmRelatoriosGerais
   object Panel9: TPanel
     Left = 0
     Top = 421
-    Width = 803
+    Width = 811
     Height = 37
     Align = alBottom
     TabOrder = 6
-    ExplicitWidth = 865
+    ExplicitWidth = 803
     object Panel5: TPanel
-      Left = 568
+      Left = 576
       Top = 1
       Width = 234
       Height = 35
       Align = alRight
       BevelOuter = bvNone
       TabOrder = 0
-      ExplicitLeft = 630
+      ExplicitLeft = 568
       object SpeedButton3: TSpeedButton
         Left = 136
         Top = 1
@@ -2092,12 +2096,12 @@ object FrmRelatoriosGerais: TFrmRelatoriosGerais
   object PanelGridBar: TPanel
     Left = 0
     Top = 74
-    Width = 803
+    Width = 811
     Height = 17
     Align = alTop
     TabOrder = 5
     Visible = False
-    ExplicitWidth = 865
+    ExplicitWidth = 803
   end
   object DtsrcMult: TDataSource
     DataSet = DMII.sds_Multconsulta

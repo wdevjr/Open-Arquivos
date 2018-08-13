@@ -1,7 +1,7 @@
 object DM: TDM
   OldCreateOrder = False
   OnCreate = DataModuleCreate
-  Height = 900
+  Height = 1104
   Width = 972
   object sdt_Combo: TSQLDataSet
     SchemaName = 'sysdba'
