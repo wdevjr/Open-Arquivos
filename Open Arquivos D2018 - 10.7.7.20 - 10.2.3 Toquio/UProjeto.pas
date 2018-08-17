@@ -153,8 +153,7 @@ type
     Timer1: TTimer;
     lookUser: TSpeedButton;
     Label7: TLabel;
-    SpeedButton1: TSpeedButton;
-    Label9: TLabel;
+    relatorio: TSpeedButton;
     procedure relatoriosClick(Sender: TObject);
     procedure N1Click(Sender: TObject);
     procedure cbCadLogAssistenteExecute(Sender: TObject);
@@ -211,7 +210,7 @@ type
     procedure btntrazerClick(Sender: TObject);
     procedure Cidades1Click(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
-    procedure SpeedButton1Click(Sender: TObject);
+    procedure relatorioClick(Sender: TObject);
     // para a chamada de status do componente
   private
     buffer: array [0 .. 255] of Char;
@@ -308,6 +307,24 @@ begin
     end;
   end;
   Result := respQtd;
+end;
+
+procedure TFrPrincipal.relatorioClick(Sender: TObject);
+begin
+  if (DBText2.Caption = '') then
+  begin
+    MessageDlg('Consulte um arquivo ou Cadastre um novo arquivo!', mtWarning,
+      [mbOK], 0);
+  end
+  else
+  begin
+    DM.sds_report_detalhe.CLOSE;
+    DM.sds_report_detalhe.Params[0].asInteger := StrToInt(DBText2.caption);
+    DM.sds_report_detalhe.Open;
+    DM.frxReport1.LoadFromFile(ExtractFilePath(ParamStr(0)) +
+      'ReportGeral\FastReport\RelatorioPorSelecao.fr3', True);
+    DM.frxReport1.ShowReport;
+  end;
 end;
 
 procedure TFrPrincipal.relatoriosClick(Sender: TObject);
@@ -653,6 +670,7 @@ begin
   Image6.visible := False;
   excluiAssunto.Enabled := False;
   excluiAutor.Enabled := False;
+
 end;
 
 procedure TFrPrincipal.ExcluirTempClick(Sender: TObject);
@@ -763,24 +781,6 @@ begin
     FrmAtribuiUser.Free;
   end;
 
-end;
-
-procedure TFrPrincipal.SpeedButton1Click(Sender: TObject);
-begin
-  if (DBText2.Caption = '') then
-  begin
-    MessageDlg('Consulte um arquivo ou Cadastre um novo arquivo!', mtWarning,
-      [mbOK], 0);
-  end
-  else
-  begin
-    DM.sds_report_detalhe.CLOSE;
-    DM.sds_report_detalhe.Params[0].asInteger := StrToInt(DBText2.caption);
-    DM.sds_report_detalhe.Open;
-    DM.frxReport1.LoadFromFile(ExtractFilePath(ParamStr(0)) +
-      'ReportGeral\FastReport\RelatorioPorSelecao.fr3', True);
-    DM.frxReport1.ShowReport;
-  end;
 end;
 
 procedure TFrPrincipal.SpeedButton4Click(Sender: TObject);
@@ -929,7 +929,7 @@ begin
     DBText3.Font.Color := clBlue;
     DBText3.visible := True;
     CheckBox1.Checked := True;
-    Height := 599;
+    Height := 615;
   end
   else if (DM.cds_arquivo.FieldByName('COD_AUTOR').AsInteger = 0) then
   begin
@@ -1195,6 +1195,7 @@ begin
     excluiAssunto.Enabled := Dtsrc.State in [dsInsert, dsEdit, dsbrowse];
     excluiAutor.Enabled := Dtsrc.State in [dsInsert, dsEdit, dsbrowse];
     lookUser.Enabled := Dtsrc.State in [dsbrowse, dsEdit];
+    relatorio.Enabled := Dtsrc.State in [dsbrowse, dsEdit];
 
   end;
   if Dtsrc.DataSet.State = dsbrowse then
@@ -1403,6 +1404,7 @@ begin
     excluiAssunto.Enabled := not IsEmpty;
     excluiAutor.Enabled := not IsEmpty;
     lookUser.Enabled := not IsEmpty;
+    relatorios.Enabled := not IsEmpty;
 
     // exclusão de campos recebendo 0
 
