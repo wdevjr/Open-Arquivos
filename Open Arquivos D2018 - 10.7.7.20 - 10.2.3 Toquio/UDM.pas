@@ -456,6 +456,8 @@ type
     procedure cds_UserAddReconcileError(DataSet: TCustomClientDataSet;
       E: EReconcileError; UpdateKind: TUpdateKind;
       var Action: TReconcileAction);
+    procedure sds_Report_DetalheADMINISTRADORGetText(Sender: TField;
+      var Text: string; DisplayText: Boolean);
   private
 
   public
@@ -1162,6 +1164,18 @@ begin
     Accept := True;
   end;
 
+end;
+
+procedure TDM.sds_Report_DetalheADMINISTRADORGetText(Sender: TField;
+  var Text: string; DisplayText: Boolean);
+begin
+  if DisplayText then
+  begin
+    if Sender.Value = (1) then
+      Text := 'Administrador'
+    else if Sender.Value = (0) then
+      Text := 'Usuário';
+  end;
 end;
 
 function TDM.receberUsuario: Integer;

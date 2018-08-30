@@ -594,6 +594,7 @@ object DM: TDM
     object sds_Report_DetalheADMINISTRADOR: TIntegerField
       FieldName = 'ADMINISTRADOR'
       Required = True
+      OnGetText = sds_Report_DetalheADMINISTRADORGetText
     end
   end
   object sdt_Assunt: TSQLDataSet
@@ -2492,7 +2493,7 @@ object DM: TDM
     PrintOptions.Printer = 'Padr'#227'o'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 43322.045178831000000000
-    ReportOptions.LastChange = 43324.661694166700000000
+    ReportOptions.LastChange = 43329.387573854170000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -2521,7 +2522,8 @@ object DM: TDM
       BottomMargin = 10.000000000000000000
       object PageHeader1: TfrxPageHeader
         FillType = ftGradient
-        Fill.EndColor = 16700346
+        Fill.StartColor = 16700346
+        Fill.EndColor = clWhite
         Fill.GradientStyle = gsHorizontal
         Height = 52.913420000000000000
         Top = 18.897650000000000000
@@ -3143,7 +3145,8 @@ object DM: TDM
           Font.Quality = fqProof
           Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
           FillType = ftGradient
-          Fill.EndColor = 16700346
+          Fill.StartColor = 16700346
+          Fill.EndColor = clWhite
           Fill.GradientStyle = gsHorizontal
           HAlign = haBlock
           Memo.UTF8W = (
@@ -3163,32 +3166,6 @@ object DM: TDM
           Memo.UTF8W = (
             'Descri'#231#227'o do Arquivo:')
           ParentFont = False
-        end
-        object Memo7: TfrxMemoView
-          Left = 502.677490000000000000
-          Top = 132.283550000000000000
-          Width = 132.283550000000000000
-          Height = 18.897650000000000000
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
-          Font.Height = -13
-          Font.Name = 'Arial'
-          Font.Style = [fsBold]
-          Memo.UTF8W = (
-            'Tipo Administrador:')
-          ParentFont = False
-        end
-        object CheckBox1: TfrxCheckBoxView
-          Left = 638.740570000000000000
-          Top = 132.283550000000000000
-          Width = 30.236240000000000000
-          Height = 18.897650000000000000
-          CheckColor = clRed
-          Checked = False
-          CheckStyle = csCross
-          DataField = 'ADMINISTRADOR'
-          DataSet = frxDBDataset1
-          DataSetName = 'frxDBDataset1'
         end
       end
     end
