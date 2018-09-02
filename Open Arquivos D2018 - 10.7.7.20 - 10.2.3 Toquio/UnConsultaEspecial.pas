@@ -526,7 +526,7 @@ begin
               (CodigoUserPorNome = '') then
             begin
               DtsrcTodos.DataSet.Filtered := False;
-              DtsrcTodos.DataSet.Filter := ' COD_USUARIO=' + CodigoUser;
+              DtsrcTodos.DataSet.Filter := ' IDUSUARIOS=' + CodigoUser;
             end;
             if (CodigoUser = '') and (CodigoAssunto <> '') and
               (CodigoUserPorNome = '') then
@@ -538,7 +538,7 @@ begin
               (CodigoUserPorNome <> '') then
             begin
               DtsrcTodos.DataSet.Filtered := False;
-              DtsrcTodos.DataSet.Filter := ' COD_USUARIO=' + CodigoUserPorNome;
+              DtsrcTodos.DataSet.Filter := ' IDUSUARIOS=' + CodigoUserPorNome;
             end;
             DtsrcTodos.DataSet.Filtered := True;
 
@@ -575,7 +575,7 @@ begin
                 (CodigoUserPorNome = '') then
               begin
                 DtsrcTodos.DataSet.Filtered := False;
-                DtsrcTodos.DataSet.Filter := ' COD_USUARIO=' + CodigoUser;
+                DtsrcTodos.DataSet.Filter := ' IDUSUARIOS=' + CodigoUser;
               end;
               if (CodigoUser = '') and (CodigoAssunto <> '') and
                 (CodigoUserPorNome = '') then
@@ -587,7 +587,7 @@ begin
                 (CodigoUserPorNome <> '') then
               begin
                 DtsrcTodos.DataSet.Filtered := False;
-                DtsrcTodos.DataSet.Filter := ' COD_USUARIO=' +
+                DtsrcTodos.DataSet.Filter := ' IDUSUARIOS=' +
                   CodigoUserPorNome;
               end;
               DtsrcTodos.DataSet.Filtered := True;
@@ -633,7 +633,7 @@ begin
                   (CodigoUserPorNome = '') then
                 begin
                   DtsrcTodos.DataSet.Filtered := False;
-                  DtsrcTodos.DataSet.Filter := ' COD_USUARIO=' + CodigoUser;
+                  DtsrcTodos.DataSet.Filter := ' IDUSUARIOS=' + CodigoUser;
                 end;
                 if (CodigoUser = '') and (CodigoAssunto <> '') and
                   (CodigoUserPorNome = '') then
@@ -645,7 +645,7 @@ begin
                   (CodigoUserPorNome <> '') then
                 begin
                   DtsrcTodos.DataSet.Filtered := False;
-                  DtsrcTodos.DataSet.Filter := ' COD_USUARIO=' +
+                  DtsrcTodos.DataSet.Filter := ' IDUSUARIOS=' +
                     CodigoUserPorNome;
                 end;
                 DtsrcTodos.DataSet.Filtered := True;
@@ -677,7 +677,7 @@ begin
                 (CodigoUserPorNome = '') then
               begin
                 DtsrcTodos.DataSet.Filtered := False;
-                DtsrcTodos.DataSet.Filter := ' COD_USUARIO=' + CodigoUser;
+                DtsrcTodos.DataSet.Filter := ' IDUSUARIOS=' + CodigoUser;
               end;
               if (CodigoUser = '') and (CodigoAssunto <> '') and
                 (CodigoUserPorNome = '') then
@@ -689,7 +689,7 @@ begin
                 (CodigoUserPorNome <> '') then
               begin
                 DtsrcTodos.DataSet.Filtered := False;
-                DtsrcTodos.DataSet.Filter := ' COD_USUARIO=' +
+                DtsrcTodos.DataSet.Filter := ' IDUSUARIOS=' +
                   CodigoUserPorNome;
               end;
               DtsrcTodos.DataSet.Filtered := True;
@@ -743,7 +743,7 @@ begin
                 (CodigoUserPorNome <> '') then
               begin
                 DtsrcTodos.DataSet.Filtered := False;
-                DtsrcTodos.DataSet.Filter := ' COD_USUARIO=' +
+                DtsrcTodos.DataSet.Filter := ' IDUSUARIOS=' +
                   CodigoUserPorNome;
               end;
               DtsrcTodos.DataSet.Filtered := True;
@@ -783,8 +783,8 @@ begin
           DM.sds_view.CLOSE;
           DM.sds_view.DataSet.CommandText := '';
           DM.sds_view.DataSet.CommandText :=
-            'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME from ARQUIVOS_USUARIOS N '
-            + ' inner join ARQUIVOLIST AQ on (AQ.ID = N.IDARQUIVOS) ' +
+            'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME from ARQUIVOLIST AQ'
+            + ' inner join ARQUIVOS_USUARIOS N  on (AQ.ID = N.IDARQUIVOS) ' +
             ' inner join ARQUIVOS_USUARIOS N on (N.IDARQUIVOS = AQ.ID) and (N.IDUSUARIOS = AQ.COD_USUARIO)'
             + ' inner join USUARIO U on (N.IDUSUARIOS = U.COD_USUARIO)' +
             ' inner join AUTORES T on (T.CODIGO = AQ.COD_AUTOR)' +
@@ -797,7 +797,7 @@ begin
               (CodigoUserPorNome = '') then
             begin
               Dtsrc.DataSet.Filtered := False;
-              Dtsrc.DataSet.Filter := ' IDUSUARIOS=' + CodigoUser;
+              Dtsrc.DataSet.Filter := ' COD_USUARIO=' + CodigoUser;
             end;
             if (CodigoUser = '') and (CodigoAssunto <> '') and
               (CodigoUserPorNome = '') then
@@ -809,7 +809,7 @@ begin
               (CodigoUserPorNome <> '') then
             begin
               Dtsrc.DataSet.Filtered := False;
-              Dtsrc.DataSet.Filter := ' IDUSUARIOS=' + CodigoUserPorNome;
+              Dtsrc.DataSet.Filter := ' COD_USUARIO=' + CodigoUserPorNome;
             end;
             Dtsrc.DataSet.Filtered := True;
           end;
@@ -834,8 +834,8 @@ begin
           DM.sds_view.CLOSE;
           DM.sds_view.DataSet.CommandText := '';
           DM.sds_view.DataSet.CommandText :=
-            'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME,SU.TITULOASSUN from ARQUIVOS_USUARIOS N '
-            + ' inner join ARQUIVOLIST AQ on (AQ.ID = N.IDARQUIVOS) ' +
+            'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME from ARQUIVOLIST AQ'
+            + ' inner join ARQUIVOS_USUARIOS N  on (AQ.ID = N.IDARQUIVOS) ' +
             ' inner join ASSUNTO SU on AQ.COD_ASSUNTO = SU.CODIGO ' +
             'inner join USUARIO PO on N.IDUSUARIOS = PO.COD_USUARIO ' +
             'inner join AUTORES T on T.CODIGO = AQ.COD_AUTOR ' +
@@ -846,7 +846,7 @@ begin
             (CodigoUserPorNome = '') then
           begin
             Dtsrc.DataSet.Filtered := False;
-            Dtsrc.DataSet.Filter := ' IDUSUARIOS=' + CodigoUser;
+            Dtsrc.DataSet.Filter := ' COD_USUARIO=' + CodigoUser;
           end;
           if (CodigoUser = '') and (CodigoAssunto <> '') and
             (CodigoUserPorNome = '') then
@@ -858,7 +858,7 @@ begin
             (CodigoUserPorNome <> '') then
           begin
             Dtsrc.DataSet.Filtered := False;
-            Dtsrc.DataSet.Filter := ' IDUSUARIOS=' + CodigoUserPorNome;
+            Dtsrc.DataSet.Filter := ' COD_USUARIO=' + CodigoUserPorNome;
           end;
           Dtsrc.DataSet.Filtered := True;
           // DBGrid1.DataSource := Dtsrc;
@@ -891,8 +891,8 @@ begin
             DM.sds_view.CLOSE;
             DM.sds_view.DataSet.CommandText := '';
             DM.sds_view.DataSet.CommandText :=
-              'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, PO.NOME, AQ.DATA, SU.TITULOASSUN,N.IDUSUARIOS,T.NOME from ARQUIVOS_USUARIOS N '
-              + ' inner join ARQUIVOLIST AQ on (AQ.ID = N.IDARQUIVOS)' +
+            'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME from ARQUIVOLIST AQ'
+            + ' inner join ARQUIVOS_USUARIOS N  on (AQ.ID = N.IDARQUIVOS) ' +
               'inner join ASSUNTO SU on (AQ.COD_ASSUNTO = SU.CODIGO) ' +
               ' inner join USUARIO PO on (AQ.COD_USUARIO = PO.COD_USUARIO) ' +
               ' inner join AUTORES T on (T.CODIGO = AQ.COD_AUTOR) ' +
@@ -904,7 +904,7 @@ begin
                 (CodigoUserPorNome = '') then
               begin
                 Dtsrc.DataSet.Filtered := False;
-                Dtsrc.DataSet.Filter := ' IDUSUARIOS=' + CodigoUser;
+                Dtsrc.DataSet.Filter := ' COD_USUARIO=' + CodigoUser;
               end;
               if (CodigoUser = '') and (CodigoAssunto <> '') and
                 (CodigoUserPorNome = '') then
@@ -916,7 +916,7 @@ begin
                 (CodigoUserPorNome <> '') then
               begin
                 Dtsrc.DataSet.Filtered := False;
-                Dtsrc.DataSet.Filter := ' IDUSUARIOS=' + CodigoUserPorNome;
+                Dtsrc.DataSet.Filter := ' COD_USUARIO=' + CodigoUserPorNome;
               end;
               Dtsrc.DataSet.Filtered := True;
               DBGrid1.DataSource := Dtsrc;
@@ -939,8 +939,8 @@ begin
           DM.sds_view.CLOSE;
           DM.sds_view.DataSet.CommandText := '';
           DM.sds_view.DataSet.CommandText :=
-            ' select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO,AQ.DESCRICAO, AQ.TITULO, AQ.NOME_ARQUIVO, PO.NOME, AQ.DATA, SU.TITULOASSUN,N.IDUSUARIOS,T.NOME from ARQUIVOS_USUARIOS N '
-            + ' inner join ARQUIVOLIST AQ on (AQ.ID = N.IDARQUIVOS)' +
+            'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME from ARQUIVOLIST AQ'
+            + ' inner join ARQUIVOS_USUARIOS N  on (AQ.ID = N.IDARQUIVOS) ' +
             ' inner join ASSUNTO SU on (AQ.COD_ASSUNTO = SU.CODIGO) ' +
             ' inner join USUARIO PO on (AQ.COD_USUARIO = PO.COD_USUARIO) ' +
             ' inner join AUTORES T on (T.CODIGO = AQ.COD_AUTOR) ' +
@@ -953,7 +953,7 @@ begin
               (CodigoUserPorNome = '') then
             begin
               Dtsrc.DataSet.Filtered := False;
-              Dtsrc.DataSet.Filter := ' IDUSUARIOS=' + CodigoUser;
+              Dtsrc.DataSet.Filter := 'COD_USUARIO=' + CodigoUser;
             end;
             if (CodigoUser = '') and (CodigoAssunto <> '') and
               (CodigoUserPorNome = '') then
@@ -965,7 +965,7 @@ begin
               (CodigoUserPorNome <> '') then
             begin
               Dtsrc.DataSet.Filtered := False;
-              Dtsrc.DataSet.Filter := ' IDUSUARIOS=' + CodigoUserPorNome;
+              Dtsrc.DataSet.Filter := 'COD_USUARIO=' + CodigoUserPorNome;
             end;
             Dtsrc.DataSet.Filtered := True;
 
@@ -994,8 +994,8 @@ begin
           DM.sds_view.CLOSE;
           DM.sds_view.DataSet.CommandText := '';
           DM.sds_view.DataSet.CommandText :=
-            'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, PO.NOME, AQ.DATA, SU.TITULOASSUN,N.IDUSUARIOS,T.NOME from ARQUIVOS_USUARIOS N '
-            + ' inner join ARQUIVOLIST AQ on on (AQ.ID = N.IDARQUIVOS)' +
+            'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME from ARQUIVOLIST AQ'
+            + ' inner join ARQUIVOS_USUARIOS N  on (AQ.ID = N.IDARQUIVOS) ' +
             'inner join ASSUNTO SU on AQ.COD_ASSUNTO = SU.CODIGO ' +
             'inner join USUARIO PO on AQ.COD_USUARIO = PO.COD_USUARIO ' +
             'inner join AUTORES T on (T.CODIGO = AQ.COD_AUTOR) ' +
@@ -1009,7 +1009,7 @@ begin
               (CodigoUserPorNome = '') then
             begin
               Dtsrc.DataSet.Filtered := False;
-              Dtsrc.DataSet.Filter := ' IDUSUARIOS=' + CodigoUser;
+              Dtsrc.DataSet.Filter := ' COD_USUARIO=' + CodigoUser;
             end;
             if (CodigoUser = '') and (CodigoAssunto <> '') and
               (CodigoUserPorNome = '') then
@@ -1021,7 +1021,7 @@ begin
               (CodigoUserPorNome <> '') then
             begin
               Dtsrc.DataSet.Filtered := False;
-              Dtsrc.DataSet.Filter := ' IDUSUARIOS=' + CodigoUserPorNome;
+              Dtsrc.DataSet.Filter := ' COD_USUARIO=' + CodigoUserPorNome;
             end;
             Dtsrc.DataSet.Filtered := True;
             DBGrid1.DataSource := Dtsrc;

@@ -1853,7 +1853,6 @@ object FrmView: TFrmView
       Color = 16774388
       ParentBackground = False
       TabOrder = 5
-      ExplicitTop = 137
       object SpeedButton11: TSpeedButton
         Left = 7
         Top = 3
