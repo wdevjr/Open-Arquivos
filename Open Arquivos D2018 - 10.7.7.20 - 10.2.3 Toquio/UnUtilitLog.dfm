@@ -504,6 +504,7 @@ object FrmLogAcesso: TFrmLogAcesso
       item
         Width = 50
       end>
+    ExplicitTop = 668
   end
   object Panel3: TPanel
     Left = 0
@@ -529,9 +530,16 @@ object FrmLogAcesso: TFrmLogAcesso
     Margins.Right = 4
     Margins.Bottom = 4
     Align = alClient
-    PageIndex = 8
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    PageIndex = 1
+    ParentFont = False
     TabOrder = 3
     OnPageChanged = Notebook1PageChanged
+    ExplicitTop = 83
     object TPage
       Left = 0
       Top = 0
@@ -718,8 +726,8 @@ object FrmLogAcesso: TFrmLogAcesso
       object Label3: TLabel
         Left = 554
         Top = 85
-        Width = 244
-        Height = 18
+        Width = 180
+        Height = 13
         Margins.Left = 4
         Margins.Top = 4
         Margins.Right = 4
@@ -727,7 +735,7 @@ object FrmLogAcesso: TFrmLogAcesso
         Caption = 'Este Assistente ira lhe conduzir para  '
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -15
+        Font.Height = -11
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
@@ -752,8 +760,8 @@ object FrmLogAcesso: TFrmLogAcesso
       object Label5: TLabel
         Left = 619
         Top = 110
-        Width = 177
-        Height = 18
+        Width = 131
+        Height = 13
         Margins.Left = 4
         Margins.Top = 4
         Margins.Right = 4
@@ -761,7 +769,7 @@ object FrmLogAcesso: TFrmLogAcesso
         Caption = 'as primeiras configura'#231#245'es.'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -15
+        Font.Height = -11
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
@@ -769,8 +777,8 @@ object FrmLogAcesso: TFrmLogAcesso
       object Label6: TLabel
         Left = 552
         Top = 150
-        Width = 248
-        Height = 18
+        Width = 182
+        Height = 13
         Margins.Left = 4
         Margins.Top = 4
         Margins.Right = 4
@@ -778,7 +786,7 @@ object FrmLogAcesso: TFrmLogAcesso
         Caption = 'Fa'#231'a Login para ter Acesso Completo.'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -15
+        Font.Height = -11
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
@@ -786,8 +794,8 @@ object FrmLogAcesso: TFrmLogAcesso
       object Label7: TLabel
         Left = 483
         Top = 204
-        Width = 322
-        Height = 18
+        Width = 235
+        Height = 13
         Margins.Left = 4
         Margins.Top = 4
         Margins.Right = 4
@@ -795,7 +803,7 @@ object FrmLogAcesso: TFrmLogAcesso
         Caption = 'Preencha as informa'#231#245'es devidamente Conforme'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -15
+        Font.Height = -11
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
@@ -803,8 +811,8 @@ object FrmLogAcesso: TFrmLogAcesso
       object Label8: TLabel
         Left = 630
         Top = 229
-        Width = 162
-        Height = 18
+        Width = 122
+        Height = 13
         Margins.Left = 4
         Margins.Top = 4
         Margins.Right = 4
@@ -812,7 +820,7 @@ object FrmLogAcesso: TFrmLogAcesso
         Caption = 'os Crit'#233'rios de Avalia'#231#227'o.'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -15
+        Font.Height = -11
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
@@ -1000,8 +1008,8 @@ object FrmLogAcesso: TFrmLogAcesso
       object Label9: TLabel
         Left = 46
         Top = 229
-        Width = 152
-        Height = 18
+        Width = 108
+        Height = 13
         Margins.Left = 4
         Margins.Top = 4
         Margins.Right = 4
@@ -1009,7 +1017,7 @@ object FrmLogAcesso: TFrmLogAcesso
         Caption = 'ACESSO RESTRITO !'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -15
+        Font.Height = -11
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1017,8 +1025,8 @@ object FrmLogAcesso: TFrmLogAcesso
       object Label10: TLabel
         Left = 46
         Top = 255
-        Width = 308
-        Height = 18
+        Width = 223
+        Height = 13
         Margins.Left = 4
         Margins.Top = 4
         Margins.Right = 4
@@ -1026,7 +1034,7 @@ object FrmLogAcesso: TFrmLogAcesso
         Caption = 'SOMENTE PARA PESSOAS AUTORIZADAS'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -15
+        Font.Height = -11
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1034,8 +1042,8 @@ object FrmLogAcesso: TFrmLogAcesso
       object Label11: TLabel
         Left = 47
         Top = 281
-        Width = 543
-        Height = 18
+        Width = 389
+        Height = 13
         Margins.Left = 4
         Margins.Top = 4
         Margins.Right = 4
@@ -1043,7 +1051,7 @@ object FrmLogAcesso: TFrmLogAcesso
         Caption = 'CONSULTE O ADMINISTRADOR DO SISTEMA PARA MAIS INFORMA'#199#213'ES'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
-        Font.Height = -15
+        Font.Height = -11
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
@@ -1063,8 +1071,8 @@ object FrmLogAcesso: TFrmLogAcesso
         object Label1: TLabel
           Left = 41
           Top = 4
-          Width = 49
-          Height = 21
+          Width = 31
+          Height = 13
           Margins.Left = 4
           Margins.Top = 4
           Margins.Right = 4
@@ -1072,7 +1080,7 @@ object FrmLogAcesso: TFrmLogAcesso
           Caption = 'Nome:'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = 4227072
-          Font.Height = -17
+          Font.Height = -11
           Font.Name = 'Tahoma'
           Font.Style = []
           ParentFont = False
@@ -1080,8 +1088,8 @@ object FrmLogAcesso: TFrmLogAcesso
         object Label2: TLabel
           Left = 39
           Top = 62
-          Width = 45
-          Height = 18
+          Width = 34
+          Height = 13
           Margins.Left = 4
           Margins.Top = 4
           Margins.Right = 4
@@ -1089,7 +1097,7 @@ object FrmLogAcesso: TFrmLogAcesso
           Caption = 'Senha:'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clRed
-          Font.Height = -15
+          Font.Height = -11
           Font.Name = 'Tahoma'
           Font.Style = []
           ParentFont = False
@@ -1098,7 +1106,7 @@ object FrmLogAcesso: TFrmLogAcesso
           Left = 98
           Top = 4
           Width = 510
-          Height = 23
+          Height = 24
           Margins.Left = 4
           Margins.Top = 4
           Margins.Right = 4
@@ -1118,7 +1126,7 @@ object FrmLogAcesso: TFrmLogAcesso
           Left = 97
           Top = 58
           Width = 511
-          Height = 23
+          Height = 24
           Margins.Left = 4
           Margins.Top = 4
           Margins.Right = 4
@@ -1149,7 +1157,7 @@ object FrmLogAcesso: TFrmLogAcesso
           Default = True
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = -15
+          Font.Height = -11
           Font.Name = 'Tahoma'
           Font.Style = []
           Glyph.Data = {
@@ -1195,7 +1203,7 @@ object FrmLogAcesso: TFrmLogAcesso
           Caption = 'Cancelar'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = -15
+          Font.Height = -11
           Font.Name = 'Tahoma'
           Font.Style = []
           Glyph.Data = {
@@ -1251,7 +1259,7 @@ object FrmLogAcesso: TFrmLogAcesso
         Caption = 'Op'#231#227'o por Relat'#243'rios '
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clGray
-        Font.Height = -15
+        Font.Height = -11
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
@@ -1269,7 +1277,7 @@ object FrmLogAcesso: TFrmLogAcesso
           Color = 16774388
           Font.Charset = DEFAULT_CHARSET
           Font.Color = 12615680
-          Font.Height = -15
+          Font.Height = -11
           Font.Name = 'Tahoma'
           Font.Style = []
           ParentColor = False
@@ -1290,7 +1298,7 @@ object FrmLogAcesso: TFrmLogAcesso
           Color = 14939380
           Font.Charset = DEFAULT_CHARSET
           Font.Color = 12615680
-          Font.Height = -15
+          Font.Height = -11
           Font.Name = 'Tahoma'
           Font.Style = []
           ParentColor = False
@@ -1551,8 +1559,8 @@ object FrmLogAcesso: TFrmLogAcesso
         object Label26: TLabel
           Left = 16
           Top = 63
-          Width = 704
-          Height = 17
+          Width = 558
+          Height = 13
           Margins.Left = 4
           Margins.Top = 4
           Margins.Right = 4
@@ -1772,8 +1780,6 @@ object FrmLogAcesso: TFrmLogAcesso
       Margins.Right = 4
       Margins.Bottom = 4
       Caption = 'Config03'
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Panel6: TPanel
         Left = 39
         Top = 8
@@ -1920,7 +1926,7 @@ object FrmLogAcesso: TFrmLogAcesso
           Margins.Top = 4
           Margins.Right = 4
           Margins.Bottom = 4
-          Date = 39781.706580347220000000
+          Date = 39781.675818680550000000
           TabOrder = 3
         end
       end
@@ -1933,8 +1939,6 @@ object FrmLogAcesso: TFrmLogAcesso
       Margins.Right = 4
       Margins.Bottom = 4
       Caption = 'Config04'
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Panel7: TPanel
         Left = 0
         Top = 0
@@ -2024,7 +2028,7 @@ object FrmLogAcesso: TFrmLogAcesso
           Margins.Top = 4
           Margins.Right = 4
           Margins.Bottom = 4
-          Date = 39781.706580358800000000
+          Date = 39781.675818692130000000
           TabOrder = 0
           OnClick = MonthCalendar2Click
         end
@@ -2037,7 +2041,7 @@ object FrmLogAcesso: TFrmLogAcesso
           Margins.Top = 4
           Margins.Right = 4
           Margins.Bottom = 4
-          Date = 39781.706580358800000000
+          Date = 39781.675818692130000000
           TabOrder = 1
           OnClick = MonthCalendar3Click
         end
@@ -2051,8 +2055,6 @@ object FrmLogAcesso: TFrmLogAcesso
       Margins.Right = 4
       Margins.Bottom = 4
       Caption = 'Config05'
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Panel10: TPanel
         Left = 0
         Top = 424
@@ -2079,7 +2081,7 @@ object FrmLogAcesso: TFrmLogAcesso
           Flat = True
           Font.Charset = DEFAULT_CHARSET
           Font.Color = 12615680
-          Font.Height = -15
+          Font.Height = -11
           Font.Name = 'Tahoma'
           Font.Style = []
           Glyph.Data = {
@@ -2216,8 +2218,8 @@ object FrmLogAcesso: TFrmLogAcesso
           object Label28: TLabel
             Left = 56
             Top = 3
-            Width = 88
-            Height = 18
+            Width = 64
+            Height = 13
             Margins.Left = 4
             Margins.Top = 4
             Margins.Right = 4
@@ -2225,7 +2227,7 @@ object FrmLogAcesso: TFrmLogAcesso
             Caption = 'Clique aqui:'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clMaroon
-            Font.Height = -15
+            Font.Height = -11
             Font.Name = 'Tahoma'
             Font.Style = [fsBold]
             ParentFont = False
@@ -2272,8 +2274,8 @@ object FrmLogAcesso: TFrmLogAcesso
           object Label29: TLabel
             Left = 188
             Top = 3
-            Width = 173
-            Height = 18
+            Width = 128
+            Height = 13
             Margins.Left = 4
             Margins.Top = 4
             Margins.Right = 4
@@ -2281,7 +2283,7 @@ object FrmLogAcesso: TFrmLogAcesso
             Caption = 'para visualizar Melhor!'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clMaroon
-            Font.Height = -15
+            Font.Height = -11
             Font.Name = 'Tahoma'
             Font.Style = [fsBold]
             ParentFont = False
@@ -2305,7 +2307,7 @@ object FrmLogAcesso: TFrmLogAcesso
         DrawingStyle = gdsGradient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -15
+        Font.Height = -11
         Font.Name = 'Tahoma'
         Font.Style = []
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
@@ -2336,8 +2338,8 @@ object FrmLogAcesso: TFrmLogAcesso
         object Label40: TLabel
           Left = 16
           Top = 42
-          Width = 53
-          Height = 18
+          Width = 40
+          Height = 13
           Margins.Left = 4
           Margins.Top = 4
           Margins.Right = 4
@@ -2345,7 +2347,7 @@ object FrmLogAcesso: TFrmLogAcesso
           Caption = 'Usu'#225'rio:'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = 4227200
-          Font.Height = -15
+          Font.Height = -11
           Font.Name = 'Tahoma'
           Font.Style = []
           ParentFont = False
@@ -2373,13 +2375,19 @@ object FrmLogAcesso: TFrmLogAcesso
           object AlertUserInicial: TLabel
             Left = 43
             Top = 21
-            Width = 120
-            Height = 18
+            Width = 88
+            Height = 13
             Margins.Left = 4
             Margins.Top = 4
             Margins.Right = 4
             Margins.Bottom = 4
             Caption = 'AlertUserInicial'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clMaroon
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            Font.Style = [fsBold]
+            ParentFont = False
           end
           object ImageAlertInicial: TImage
             Left = 14
@@ -2431,13 +2439,11 @@ object FrmLogAcesso: TFrmLogAcesso
       Margins.Right = 4
       Margins.Bottom = 4
       Caption = 'Config06'
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Label30: TLabel
         Left = 21
         Top = 21
-        Width = 378
-        Height = 18
+        Width = 275
+        Height = 13
         Margins.Left = 4
         Margins.Top = 4
         Margins.Right = 4
@@ -2445,7 +2451,7 @@ object FrmLogAcesso: TFrmLogAcesso
         Caption = 'Informe qual item voc'#234' deseja  que o Assistente Procure:'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clGray
-        Font.Height = -15
+        Font.Height = -11
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
@@ -2463,7 +2469,7 @@ object FrmLogAcesso: TFrmLogAcesso
         Color = 14939380
         Font.Charset = DEFAULT_CHARSET
         Font.Color = 12615680
-        Font.Height = -15
+        Font.Height = -11
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentColor = False
@@ -2484,7 +2490,7 @@ object FrmLogAcesso: TFrmLogAcesso
         Color = 16774388
         Font.Charset = DEFAULT_CHARSET
         Font.Color = 12615680
-        Font.Height = -15
+        Font.Height = -11
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentColor = False
@@ -2505,7 +2511,7 @@ object FrmLogAcesso: TFrmLogAcesso
         Color = 14939380
         Font.Charset = DEFAULT_CHARSET
         Font.Color = 12615680
-        Font.Height = -15
+        Font.Height = -11
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentColor = False
@@ -2522,8 +2528,6 @@ object FrmLogAcesso: TFrmLogAcesso
       Margins.Right = 4
       Margins.Bottom = 4
       Caption = 'Config07'
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Panel13: TPanel
         Left = 0
         Top = 0
@@ -2589,7 +2593,7 @@ object FrmLogAcesso: TFrmLogAcesso
           Left = 42
           Top = 29
           Width = 142
-          Height = 23
+          Height = 24
           Margins.Left = 4
           Margins.Top = 4
           Margins.Right = 4
@@ -2621,11 +2625,12 @@ object FrmLogAcesso: TFrmLogAcesso
         Color = clWhite
         TabOrder = 2
         Visible = False
+        ExplicitTop = 149
         object Label31: TLabel
           Left = 43
           Top = 170
-          Width = 86
-          Height = 18
+          Width = 63
+          Height = 13
           Margins.Left = 4
           Margins.Top = 4
           Margins.Right = 4
@@ -2633,7 +2638,7 @@ object FrmLogAcesso: TFrmLogAcesso
           Caption = 'Por Usu'#225'rio ?'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = 4227072
-          Font.Height = -15
+          Font.Height = -11
           Font.Name = 'Tahoma'
           Font.Style = []
           ParentFont = False
@@ -2642,7 +2647,7 @@ object FrmLogAcesso: TFrmLogAcesso
           Left = 424
           Top = 174
           Width = 60
-          Height = 25
+          Height = 21
           Margins.Left = 4
           Margins.Top = 4
           Margins.Right = 4
@@ -2664,7 +2669,7 @@ object FrmLogAcesso: TFrmLogAcesso
           Caption = 'OK !'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clRed
-          Font.Height = -15
+          Font.Height = -11
           Font.Name = 'Tahoma'
           Font.Style = [fsBold]
           ParentFont = False
@@ -2687,8 +2692,8 @@ object FrmLogAcesso: TFrmLogAcesso
           object Label37: TLabel
             Left = 18
             Top = 25
-            Width = 168
-            Height = 18
+            Width = 125
+            Height = 13
             Margins.Left = 4
             Margins.Top = 4
             Margins.Right = 4
@@ -2696,7 +2701,7 @@ object FrmLogAcesso: TFrmLogAcesso
             Caption = 'Procure por o Usu'#225'rio:'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = 4227200
-            Font.Height = -15
+            Font.Height = -11
             Font.Name = 'Tahoma'
             Font.Style = [fsBold]
             ParentFont = False
@@ -2765,7 +2770,7 @@ object FrmLogAcesso: TFrmLogAcesso
               DataSource = Dtscuu
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlue
-              Font.Height = -15
+              Font.Height = -11
               Font.Name = 'Tahoma'
               Font.Style = []
               ParentColor = False
@@ -2809,8 +2814,8 @@ object FrmLogAcesso: TFrmLogAcesso
           object Label39: TLabel
             Left = 54
             Top = 9
-            Width = 614
-            Height = 18
+            Width = 461
+            Height = 13
             Margins.Left = 4
             Margins.Top = 4
             Margins.Right = 4
@@ -2820,7 +2825,7 @@ object FrmLogAcesso: TFrmLogAcesso
               'C'#243'digo do Usu'#225'rio !'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clMaroon
-            Font.Height = -15
+            Font.Height = -11
             Font.Name = 'Tahoma'
             Font.Style = [fsBold]
             ParentFont = False
@@ -2895,7 +2900,7 @@ object FrmLogAcesso: TFrmLogAcesso
           DataSource = Dtscu
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlue
-          Font.Height = -15
+          Font.Height = -11
           Font.Name = 'Tahoma'
           Font.Style = []
           ParentColor = False
@@ -2922,7 +2927,7 @@ object FrmLogAcesso: TFrmLogAcesso
           Left = 486
           Top = 8
           Width = 51
-          Height = 23
+          Height = 24
           Margins.Left = 4
           Margins.Top = 4
           Margins.Right = 4
@@ -2956,11 +2961,12 @@ object FrmLogAcesso: TFrmLogAcesso
         Color = clWhite
         TabOrder = 4
         Visible = False
+        ExplicitTop = 62
         object Label19: TLabel
           Left = 21
           Top = 10
-          Width = 306
-          Height = 18
+          Width = 228
+          Height = 13
           Margins.Left = 4
           Margins.Top = 4
           Margins.Right = 4
@@ -2968,7 +2974,7 @@ object FrmLogAcesso: TFrmLogAcesso
           Caption = 'Insira o C'#243'digo do Registro do Arquivo ...'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clOlive
-          Font.Height = -15
+          Font.Height = -11
           Font.Name = 'Tahoma'
           Font.Style = [fsBold]
           ParentFont = False
@@ -2988,7 +2994,7 @@ object FrmLogAcesso: TFrmLogAcesso
           BorderStyle = bsNone
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = -15
+          Font.Height = -11
           Font.Name = 'Tahoma'
           Font.Style = []
           ParentFont = False
@@ -3005,8 +3011,6 @@ object FrmLogAcesso: TFrmLogAcesso
       Margins.Right = 4
       Margins.Bottom = 4
       Caption = 'Config08'
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object DBGrid2: TDBGrid
         Left = 0
         Top = 116
@@ -3023,7 +3027,7 @@ object FrmLogAcesso: TFrmLogAcesso
         DrawingStyle = gdsGradient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -15
+        Font.Height = -11
         Font.Name = 'Tahoma'
         Font.Style = []
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
@@ -3158,6 +3162,7 @@ object FrmLogAcesso: TFrmLogAcesso
           Color = 14286847
           TabOrder = 0
           Visible = False
+          ExplicitTop = -1
           object SpeedButton6: TSpeedButton
             Left = 148
             Top = -1
@@ -3200,8 +3205,8 @@ object FrmLogAcesso: TFrmLogAcesso
           object Label34: TLabel
             Left = 56
             Top = 3
-            Width = 88
-            Height = 18
+            Width = 64
+            Height = 13
             Margins.Left = 4
             Margins.Top = 4
             Margins.Right = 4
@@ -3209,7 +3214,7 @@ object FrmLogAcesso: TFrmLogAcesso
             Caption = 'Clique aqui:'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clMaroon
-            Font.Height = -15
+            Font.Height = -11
             Font.Name = 'Tahoma'
             Font.Style = [fsBold]
             ParentFont = False
@@ -3256,8 +3261,8 @@ object FrmLogAcesso: TFrmLogAcesso
           object Label35: TLabel
             Left = 188
             Top = 3
-            Width = 173
-            Height = 18
+            Width = 128
+            Height = 13
             Margins.Left = 4
             Margins.Top = 4
             Margins.Right = 4
@@ -3265,7 +3270,7 @@ object FrmLogAcesso: TFrmLogAcesso
             Caption = 'para visualizar Melhor!'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clMaroon
-            Font.Height = -15
+            Font.Height = -11
             Font.Name = 'Tahoma'
             Font.Style = [fsBold]
             ParentFont = False
@@ -3312,7 +3317,7 @@ object FrmLogAcesso: TFrmLogAcesso
           Caption = 'Informa'#231#227'o localizada conforme os itens escolhidos.'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clGray
-          Font.Height = -15
+          Font.Height = -11
           Font.Name = 'Tahoma'
           Font.Style = []
           ParentFont = False
@@ -3320,8 +3325,8 @@ object FrmLogAcesso: TFrmLogAcesso
         object Label15: TLabel
           Left = 27
           Top = 52
-          Width = 53
-          Height = 18
+          Width = 40
+          Height = 13
           Margins.Left = 4
           Margins.Top = 4
           Margins.Right = 4
@@ -3329,7 +3334,7 @@ object FrmLogAcesso: TFrmLogAcesso
           Caption = 'Usu'#225'rio:'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = 4227200
-          Font.Height = -15
+          Font.Height = -11
           Font.Name = 'Tahoma'
           Font.Style = []
           ParentFont = False
@@ -3357,13 +3362,19 @@ object FrmLogAcesso: TFrmLogAcesso
           object AlertUserFinal: TLabel
             Left = 42
             Top = 16
-            Width = 109
-            Height = 18
+            Width = 80
+            Height = 13
             Margins.Left = 4
             Margins.Top = 4
             Margins.Right = 4
             Margins.Bottom = 4
             Caption = 'AlertUserFinal'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clMaroon
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            Font.Style = [fsBold]
+            ParentFont = False
             Visible = False
           end
           object ImageUserFinal: TImage
@@ -3446,6 +3457,11 @@ object FrmLogAcesso: TFrmLogAcesso
         Margins.Right = 4
         Margins.Bottom = 4
         Caption = 'Voltar'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
         Glyph.Data = {
           76060000424D7606000000000000360400002800000018000000180000000100
           0800000000004002000000000000000000000001000000000000FFFFFF00FEE5
@@ -3499,6 +3515,7 @@ object FrmLogAcesso: TFrmLogAcesso
           3131313131313130083031313131313131313131313131313131313131313131
           3031313131313131313131313131313131313131313131313131313131313131
           3131313131313131313131313131313131313131313131313131}
+        ParentFont = False
         TabOrder = 0
         OnClick = voltarClick
       end
@@ -3513,6 +3530,11 @@ object FrmLogAcesso: TFrmLogAcesso
         Margins.Bottom = 4
         Caption = 'Avan'#231'ar'
         Enabled = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
         Glyph.Data = {
           76060000424D7606000000000000360400002800000018000000180000000100
           0800000000004002000000000000000000000001000000000000FFFFFF00FFE6
@@ -3566,6 +3588,7 @@ object FrmLogAcesso: TFrmLogAcesso
           39380B3839393939393939393939393939393939393939393939383939393939
           3939393939393939393939393939393939393939393939393939393939393939
           3939393939393939393939393939393939393939393939393939}
+        ParentFont = False
         TabOrder = 1
         OnClick = avancarClick
       end
@@ -3580,6 +3603,11 @@ object FrmLogAcesso: TFrmLogAcesso
         Margins.Bottom = 4
         Cancel = True
         Caption = 'Cancel'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
         Glyph.Data = {
           DE010000424DDE01000000000000760000002800000024000000120000000100
           0400000000006801000000000000000000001000000000000000000000000000
@@ -3598,6 +3626,7 @@ object FrmLogAcesso: TFrmLogAcesso
           3333333333333333333888330000333333333333333333333333333333333333
           0000}
         NumGlyphs = 2
+        ParentFont = False
         TabOrder = 2
         OnClick = cancelarClick
       end
