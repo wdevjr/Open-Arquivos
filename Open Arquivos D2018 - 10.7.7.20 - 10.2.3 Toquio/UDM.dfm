@@ -527,7 +527,6 @@ object DM: TDM
     Top = 160
   end
   object sds_Report_Detalhe: TSimpleDataSet
-    Active = True
     Aggregates = <>
     Connection = SQLConnection
     DataSet.CommandText = 
@@ -2117,7 +2116,6 @@ object DM: TDM
       'RoleName=RoleName'
       'ServerCharSet=win1252'
       'Trim Char=False')
-    Connected = True
     Left = 32
     Top = 184
   end
@@ -2495,7 +2493,7 @@ object DM: TDM
     PrintOptions.Printer = 'Padr'#227'o'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 43322.045178831000000000
-    ReportOptions.LastChange = 43349.744212662000000000
+    ReportOptions.LastChange = 43349.803110625000000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -2524,8 +2522,8 @@ object DM: TDM
       BottomMargin = 10.000000000000000000
       object PageHeader1: TfrxPageHeader
         FillType = ftGradient
-        Fill.StartColor = 16700346
-        Fill.EndColor = clWhite
+        Fill.StartColor = 16774348
+        Fill.EndColor = clNone
         Fill.GradientStyle = gsHorizontal
         Height = 52.913420000000000000
         Top = 18.897650000000000000
@@ -2546,7 +2544,7 @@ object DM: TDM
         end
         object Date: TfrxMemoView
           Left = 7.559060000000000000
-          Width = 147.401670000000000000
+          Width = 192.756030000000000000
           Height = 18.897650000000000000
           DisplayFormat.FormatStr = 'd "de" mmmm "de" yyyy'
           DisplayFormat.Kind = fkDateTime
@@ -2560,7 +2558,7 @@ object DM: TDM
           ParentFont = False
         end
         object Memo6: TfrxMemoView
-          Left = 158.740260000000000000
+          Left = 204.094620000000000000
           Width = 18.897650000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
@@ -2573,8 +2571,8 @@ object DM: TDM
           ParentFont = False
         end
         object Time: TfrxMemoView
-          Left = 185.196970000000000000
-          Width = 120.944960000000000000
+          Left = 226.771800000000000000
+          Width = 166.299320000000000000
           Height = 18.897650000000000000
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clGreen
