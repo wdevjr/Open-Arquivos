@@ -13,7 +13,7 @@ uses
   Dialogs, ExtCtrls, StdCtrls, ComCtrls, Buttons, Grids, DBGrids, DB, Mask,
   DBCtrls, MidasLib, DBClient, SimpleDS, ExtDlgs, FMTBcd, Provider, SqlExpr,
   ImgList, ToolWin, ActnMan, ActnCtrls, ActnMenus, XPStyleActnCtrls, ActnList,
-  Menus, DateUtils, System.Actions, System.ImageList;
+  Menus, DateUtils, System.Actions, System.ImageList,Vcl.Themes;
 // adiciona DBCLient para TClientDataSet
 
 type
@@ -154,6 +154,7 @@ type
     lookUser: TSpeedButton;
     Label7: TLabel;
     relatorio: TSpeedButton;
+    BitBtn1: TBitBtn;
     procedure relatoriosClick(Sender: TObject);
     procedure N1Click(Sender: TObject);
     procedure cbCadLogAssistenteExecute(Sender: TObject);
@@ -211,6 +212,7 @@ type
     procedure Cidades1Click(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure relatorioClick(Sender: TObject);
+    procedure BitBtn1Click(Sender: TObject);
     // para a chamada de status do componente
   private
     buffer: array [0 .. 255] of Char;
@@ -237,6 +239,7 @@ var
   FrPrincipal: TFrPrincipal;
   respArquivos, respUsuarios, respAssuntos, respAutores, respLog, spAutores,
     respLogar, respLogados: Integer;
+    thema: TStyleManager;
 
 implementation
 
@@ -710,6 +713,12 @@ begin
   end;
 end;
 
+procedure TFrPrincipal.BitBtn1Click(Sender: TObject);
+begin
+  thema := TStyleManager.Create();
+  thema.SetStyle('Carbon');
+end;
+
 procedure TFrPrincipal.btnextrairClick(Sender: TObject);
 begin
   begin
@@ -935,7 +944,7 @@ begin
   begin
     PanelAutor.visible := False;
     CheckBox1.Checked := False;
-    Height := 560;
+    Height := 615;
   end;
 
 
@@ -1043,13 +1052,13 @@ begin
         DBText3.Font.Color := clBlue;
         DBText3.visible := True;
         CheckBox1.Checked := True;
-        Height := 599;
+        Height := 610;
       end
       else if (DM.cds_arquivo.FieldByName('COD_AUTOR').AsInteger = 0) then
       begin
         PanelAutor.visible := False;
         CheckBox1.Checked := False;
-        Height := 560;
+        Height := 610;
       end;
     end;
   finally
@@ -1130,14 +1139,14 @@ begin
       begin
         PanelAutor.visible := True;
         DBEdit3.Font.Color := clBlue;
-        Height := 569;
+        Height := 610;
         CheckBox1.Checked := True;
       end
       else if DBEdit3.Text = '0' then
       begin
         PanelAutor.visible := False;
         DBText3.Font.Color := $00E3F4F4;
-        Height := 569;
+        Height := 610;
         CheckBox1.Checked := False;
       end;
     end;
@@ -1212,14 +1221,14 @@ begin
     begin
       PanelAutor.visible := True;
       DBEdit3.Font.Color := clBlue;
-      Height := 590;
+      Height := 610;
       CheckBox1.Checked := True;
     end
     else if DBEdit3.Text <> '0' then
     begin
       PanelAutor.visible := False;
       DBText3.Font.Color := $00CBEAEB; // $00E3F4F4
-      Height := 569;
+      Height := 610;
       CheckBox1.Checked := False;
     end;
   end;
@@ -1362,7 +1371,7 @@ begin
     else
     begin
       DBText3.Font.Color := $00E3F4F4;
-      Height := 592;
+      Height := 610;
     end;
     { if DBEdit3.Text <> '' then
       begin
@@ -1422,14 +1431,14 @@ begin
       begin
         PanelAutor.visible := True;
         DBEdit3.Font.Color := clBlue;
-        Height := 590;
+        Height := 610;
         CheckBox1.Checked := True;
       end
       else if DBEdit3.Text <> '0' then
       begin
         PanelAutor.visible := False;
         DBText3.Font.Color := $00CBEAEB; // $00E3F4F4
-        Height := 569;
+        Height := 610;
         CheckBox1.Checked := False;
       end;
     end;
@@ -1652,7 +1661,7 @@ begin
       ('NOME_ARQUIVO').AsString;
     DtscLog.DataSet.Post;
     (DtscLog.DataSet as TClientDataSet).ApplyUpdates(0);
-    Height := 599;
+    Height := 610;
   end;
 end;
 
@@ -1990,12 +1999,12 @@ begin
       DBEdit3.Font.Color := clBlue;
     end;
     PanelAutor.visible := True;
-    Height := 599;
+    Height := 610;
   end
   else
   begin
     PanelAutor.visible := False;
-    Height := 599;
+    Height := 610;
   end;
   DBEdit1.Text := IntToStr(FrmLogin.COD_USUARIO);
   { if (DBEdit5.Text='  /  /    ') then

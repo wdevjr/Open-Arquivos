@@ -3,7 +3,7 @@ object FrPrincipal: TFrPrincipal
   Top = 144
   BorderStyle = bsSingle
   Caption = 'Open Arquivos - v7.9.9.5 - Uso em Rede'
-  ClientHeight = 561
+  ClientHeight = 557
   ClientWidth = 844
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
@@ -22,7 +22,7 @@ object FrPrincipal: TFrPrincipal
   TextHeight = 13
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 536
+    Top = 532
     Width = 844
     Height = 25
     Panels = <
@@ -39,12 +39,13 @@ object FrPrincipal: TFrPrincipal
         Width = 50
       end>
     OnDrawPanel = StatusBar1DrawPanel
+    ExplicitTop = 536
   end
   object Panel5: TPanel
     Left = 0
-    Top = 469
+    Top = 481
     Width = 844
-    Height = 67
+    Height = 51
     Align = alBottom
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
@@ -53,6 +54,7 @@ object FrPrincipal: TFrPrincipal
     Font.Style = []
     ParentFont = False
     TabOrder = 1
+    ExplicitTop = 512
     object inserir: TSpeedButton
       Left = 8
       Top = 2
@@ -506,9 +508,9 @@ object FrPrincipal: TFrPrincipal
       OnClick = editarClick
     end
     object relatorio: TSpeedButton
-      Left = 424
-      Top = 8
-      Width = 124
+      Left = 504
+      Top = 9
+      Width = 87
       Height = 32
       Caption = 'Relat'#243'rio'
       Enabled = False
@@ -571,6 +573,16 @@ object FrPrincipal: TFrPrincipal
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
       OnClick = relatorioClick
+    end
+    object BitBtn1: TBitBtn
+      Left = 423
+      Top = 9
+      Width = 75
+      Height = 25
+      Caption = 'BitBtn1'
+      TabOrder = 0
+      Visible = False
+      OnClick = BitBtn1Click
     end
   end
   object ToolBar1: TToolBar
@@ -1731,7 +1743,7 @@ object FrPrincipal: TFrPrincipal
     Left = 608
     Top = 184
     Bitmap = {
-      494C010112001300480228002800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010112001300540228002800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000A0000000C8000000010020000000000000F4
       0100000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -5867,7 +5879,7 @@ object FrPrincipal: TFrPrincipal
     Left = 676
     Top = 183
     Bitmap = {
-      494C010105000900480210001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010105000900540210001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000002000000001002000000000000020
       00000000000000000000000000000000000000000000F7F7F700EFEFEF00E7E7
       E700E7E7E700EFEFEF00EFEFEF00F7F7F700FFFFFF00FFFFFF00FFFFFF00FFFF
@@ -6377,7 +6389,7 @@ object FrPrincipal: TFrPrincipal
     Left = 592
     Top = 232
     Bitmap = {
-      494C01010F001300480213001300FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010F001300540213001300FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       00000000000036000000280000004C0000004C0000000100200000000000405A
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

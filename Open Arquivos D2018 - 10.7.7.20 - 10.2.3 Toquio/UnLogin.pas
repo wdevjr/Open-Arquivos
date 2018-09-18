@@ -9,7 +9,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, ExtCtrls, jpeg, DB, DBClient, Registry, DBCtrls;
+  Dialogs, StdCtrls, Buttons, ExtCtrls, jpeg, DB, DBClient, Registry, DBCtrls,Vcl.Themes;
 
 type
   TFrmLogin = class(TForm)
@@ -48,6 +48,7 @@ type
     NIVEL: Integer;
     ADMIN: Integer;
     TODOS: Integer;
+    THEMA_ATUAL: String;
     procedure IncrementaAdd;
     procedure CorrigeUserCod;
   end;
@@ -73,6 +74,7 @@ procedure TFrmLogin.BitBtn2Click(Sender: TObject);
 var
   respValue: Integer;
   mensagem: String;
+  thema: TStyleManager;
 begin
   mensagem := 'Usuário ou Senha Invalidos !' + #13 + #13 +
     'Se você esqueceu sua Senha ' + #13 +
@@ -102,6 +104,7 @@ begin
       NIVEL := Fields[4].AsInteger;
       ADMIN := Fields[6].AsInteger;
       TODOS := Fields[7].AsInteger;
+     // THEMA_ATUAL := Fields[8].AsString;
       // ID.add(DM.dst_Login['ID']);
       DMII.CarregaPerfil;
     end;
@@ -151,8 +154,10 @@ begin
     // //Application.CreateForm(TFrPrincipal, FrPrincipal);
     if not Assigned(FrPrincipal) then
       FrPrincipal := TFrPrincipal.Create(Application);
-    FrPrincipal.Show;
-
+      FrPrincipal.Show;
+      FrPrincipal.Visible := true;
+     // thema := TStyleManager.Create();
+     // thema.SetStyle(THEMA_ATUAL);
     // FrPrincipal := TFrPrincipal.Create(Application);
     // try
     // FrPrincipal.ShowModal;

@@ -587,7 +587,7 @@ begin
                 (CodigoUserPorNome <> '') then
               begin
                 DtsrcTodos.DataSet.Filtered := False;
-                DtsrcTodos.DataSet.Filter := ' IDUSUARIOS=' +
+                DtsrcTodos.DataSet.Filter := ' COD_USUARIO=' +
                   CodigoUserPorNome;
               end;
               DtsrcTodos.DataSet.Filtered := True;
@@ -633,7 +633,7 @@ begin
                   (CodigoUserPorNome = '') then
                 begin
                   DtsrcTodos.DataSet.Filtered := False;
-                  DtsrcTodos.DataSet.Filter := ' IDUSUARIOS=' + CodigoUser;
+                  DtsrcTodos.DataSet.Filter := ' COD_USUARIO=' + CodigoUser;
                 end;
                 if (CodigoUser = '') and (CodigoAssunto <> '') and
                   (CodigoUserPorNome = '') then
@@ -645,7 +645,7 @@ begin
                   (CodigoUserPorNome <> '') then
                 begin
                   DtsrcTodos.DataSet.Filtered := False;
-                  DtsrcTodos.DataSet.Filter := ' IDUSUARIOS=' +
+                  DtsrcTodos.DataSet.Filter := ' COD_USUARIO=' +
                     CodigoUserPorNome;
                 end;
                 DtsrcTodos.DataSet.Filtered := True;
@@ -677,7 +677,7 @@ begin
                 (CodigoUserPorNome = '') then
               begin
                 DtsrcTodos.DataSet.Filtered := False;
-                DtsrcTodos.DataSet.Filter := ' IDUSUARIOS=' + CodigoUser;
+                DtsrcTodos.DataSet.Filter := ' COD_USUARIO=' + CodigoUser;
               end;
               if (CodigoUser = '') and (CodigoAssunto <> '') and
                 (CodigoUserPorNome = '') then
@@ -689,7 +689,7 @@ begin
                 (CodigoUserPorNome <> '') then
               begin
                 DtsrcTodos.DataSet.Filtered := False;
-                DtsrcTodos.DataSet.Filter := ' IDUSUARIOS=' +
+                DtsrcTodos.DataSet.Filter := ' COD_USUARIO=' +
                   CodigoUserPorNome;
               end;
               DtsrcTodos.DataSet.Filtered := True;
@@ -731,7 +731,7 @@ begin
                 (CodigoUserPorNome = '') then
               begin
                 DtsrcTodos.DataSet.Filtered := False;
-                DtsrcTodos.DataSet.Filter := ' IDUSUARIOS=' + CodigoUser;
+                DtsrcTodos.DataSet.Filter := ' COD_USUARIO=' + CodigoUser;
               end;
               if (CodigoUser = '') and (CodigoAssunto <> '') and
                 (CodigoUserPorNome = '') then
@@ -743,7 +743,7 @@ begin
                 (CodigoUserPorNome <> '') then
               begin
                 DtsrcTodos.DataSet.Filtered := False;
-                DtsrcTodos.DataSet.Filter := ' IDUSUARIOS=' +
+                DtsrcTodos.DataSet.Filter := ' COD_USUARIO=' +
                   CodigoUserPorNome;
               end;
               DtsrcTodos.DataSet.Filtered := True;
@@ -840,7 +840,7 @@ begin
             'inner join USUARIO PO on N.IDUSUARIOS = PO.COD_USUARIO ' +
             'inner join AUTORES T on T.CODIGO = AQ.COD_AUTOR ' +
             'where AQ.DESCRICAO like ' + QuotedStr('%' + EditPesqu.Text + '%') +
-            ' and N.IDUSUARIOS=' + IntToStr(FrmLogin.COD_USUARIO) +
+           ' and N.IDUSUARIOS=' + IntToStr(FrmLogin.COD_USUARIO) +
             ' order by AQ.DESCRICAO';
           if (CodigoUser <> '') and (CodigoAssunto = '') and
             (CodigoUserPorNome = '') then
