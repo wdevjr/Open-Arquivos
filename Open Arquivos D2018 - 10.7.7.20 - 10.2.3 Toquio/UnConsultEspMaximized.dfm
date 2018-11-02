@@ -3,7 +3,7 @@ object FrmviewMax: TFrmviewMax
   Top = 0
   Caption = 'Visualiza'#231#227'o Especial'
   ClientHeight = 457
-  ClientWidth = 792
+  ClientWidth = 800
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,12 +19,13 @@ object FrmviewMax: TFrmviewMax
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 792
+    Width = 800
     Height = 39
     Align = alTop
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 792
     object Image1: TImage
       Left = 14
       Top = 4
@@ -146,7 +147,7 @@ object FrmviewMax: TFrmviewMax
       ParentFont = False
     end
     object Panel6: TPanel
-      Left = 557
+      Left = 565
       Top = 1
       Width = 234
       Height = 37
@@ -154,6 +155,7 @@ object FrmviewMax: TFrmviewMax
       BevelOuter = bvNone
       Color = clWhite
       TabOrder = 0
+      ExplicitLeft = 557
       object Image2: TImage
         Left = 186
         Top = 4
@@ -279,19 +281,21 @@ object FrmviewMax: TFrmviewMax
   object Panel2: TPanel
     Left = 0
     Top = 39
-    Width = 792
+    Width = 800
     Height = 8
     Align = alTop
     Color = 12615680
     TabOrder = 1
+    ExplicitWidth = 792
   end
   object Panel3: TPanel
     Left = 0
     Top = 408
-    Width = 792
+    Width = 800
     Height = 49
     Align = alBottom
     TabOrder = 2
+    ExplicitWidth = 792
     object Panel4: TPanel
       Left = 1
       Top = 1
@@ -472,13 +476,14 @@ object FrmviewMax: TFrmviewMax
       end
     end
     object Panel5: TPanel
-      Left = 558
+      Left = 566
       Top = 1
       Width = 233
       Height = 47
       Align = alRight
       BevelOuter = bvNone
       TabOrder = 1
+      ExplicitLeft = 558
       object BitBtn1: TBitBtn
         Left = 55
         Top = 11
@@ -591,7 +596,7 @@ object FrmviewMax: TFrmviewMax
   object DBGrid1Max: TDBGrid
     Left = 0
     Top = 47
-    Width = 792
+    Width = 800
     Height = 361
     Align = alClient
     Color = clWhite
@@ -628,12 +633,6 @@ object FrmviewMax: TFrmviewMax
       end
       item
         Expanded = False
-        FieldName = 'COD_USUARIO'
-        Title.Caption = 'C'#243'digo Usu'#225'rio'
-        Visible = False
-      end
-      item
-        Expanded = False
         FieldName = 'DESCRICAO'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -641,7 +640,7 @@ object FrmviewMax: TFrmviewMax
         Font.Name = 'Tahoma'
         Font.Style = []
         Title.Caption = 'Descri'#231#227'o'
-        Width = 726
+        Width = 416
         Visible = True
       end
       item
@@ -653,6 +652,7 @@ object FrmviewMax: TFrmviewMax
         Font.Name = 'Tahoma'
         Font.Style = []
         Title.Caption = 'T'#237'tulo'
+        Width = 205
         Visible = True
       end
       item
@@ -664,8 +664,14 @@ object FrmviewMax: TFrmviewMax
         Font.Name = 'Tahoma'
         Font.Style = []
         Title.Caption = 'Nome Arquivo'
-        Width = 328
+        Width = 123
         Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'COD_USUARIO'
+        Title.Caption = 'C'#243'digo Usu'#225'rio'
+        Visible = False
       end
       item
         Expanded = False

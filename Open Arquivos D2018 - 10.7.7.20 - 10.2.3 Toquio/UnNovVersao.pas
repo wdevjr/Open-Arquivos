@@ -36,6 +36,7 @@ type
     procedure EditProc2Change(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
     procedure FormClick(Sender: TObject);
+    procedure DBGrid1CellClick(Column: TColumn);
   private
     function changeVazParam(valor: String): Integer;
 
@@ -51,7 +52,7 @@ implementation
 
 {$R *.dfm}
 
-uses UDM, UnLogin;
+uses UDM, UnLogin, UProjeto;
 
 Function TFrmArquProc.changeVazParam(valor: string): Integer;
 var
@@ -212,12 +213,17 @@ begin
   end;
 end;
 
+procedure TFrmArquProc.DBGrid1CellClick(Column: TColumn);
+begin
+FrPrincipal.codigoArquSolteiro := DBGrid1.DataSource.DataSet.Fields[0].asInteger;
+end;
+
 procedure TFrmArquProc.DBGrid1DrawColumnCell(Sender: TObject; const Rect: TRect;
   DataCol: Integer; Column: TColumn; State: TGridDrawState);
 var
   R: TRect;
 begin
-  if (FrmLogin.TODOS = 0) then
+ { if (FrmLogin.TODOS = 0) then
   begin
     if DM.sds_Arqu.IsEmpty = false then
     begin
@@ -275,7 +281,7 @@ begin
       end;
     end;
   end
-  else if (FrmLogin.TODOS = 1) then
+  else} if (FrmLogin.TODOS = 1) then
   begin
     if DM.sds_ArquTodos.IsEmpty = false then
     begin

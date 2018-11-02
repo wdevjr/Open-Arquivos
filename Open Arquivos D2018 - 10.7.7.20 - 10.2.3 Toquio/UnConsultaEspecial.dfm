@@ -96,18 +96,6 @@ object FrmView: TFrmView
       end
       item
         Expanded = False
-        FieldName = 'NOME'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Tahoma'
-        Font.Style = []
-        Title.Caption = 'Autor do Arquivo'
-        Width = 322
-        Visible = True
-      end
-      item
-        Expanded = False
         FieldName = 'DATA'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -120,25 +108,14 @@ object FrmView: TFrmView
       end
       item
         Expanded = False
-        FieldName = 'IDUSUARIOS'
+        FieldName = 'NOME'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'Tahoma'
         Font.Style = []
-        Title.Caption = 'Codigo Conjunto User'
+        Title.Caption = 'Nome do Usu'#225'rio Propriet'#225'rio'
         Width = 224
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'TITULOASSUN'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Tahoma'
-        Font.Style = []
-        Title.Caption = 'Titulo Assunto'
         Visible = True
       end>
   end
@@ -741,7 +718,7 @@ object FrmView: TFrmView
       Margins.Top = 4
       Margins.Right = 4
       Margins.Bottom = 4
-      Caption = 'OK'
+      Caption = 'Fechar'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -1821,7 +1798,7 @@ object FrmView: TFrmView
       object DBEdit1: TDBEdit
         Left = 297
         Top = 19
-        Width = 54
+        Width = 96
         Height = 26
         Margins.Left = 4
         Margins.Top = 4

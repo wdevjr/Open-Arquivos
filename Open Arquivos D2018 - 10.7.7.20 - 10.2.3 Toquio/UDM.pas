@@ -371,16 +371,6 @@ type
     sds_view_todosDATA: TDateField;
     sds_view_todosTITULOASSUN: TStringField;
     sds_view: TSimpleDataSet;
-    sds_ArquID: TIntegerField;
-    sds_ArquCOD_ASSUNTO: TIntegerField;
-    sds_ArquCOD_USUARIO: TIntegerField;
-    sds_ArquDESCRICAO: TStringField;
-    sds_ArquTITULO: TStringField;
-    sds_ArquNOME_ARQUIVO: TStringField;
-    sds_ArquDATA: TDateField;
-    sds_ArquIDUSUARIOS: TIntegerField;
-    sds_ArquNOME: TStringField;
-    sds_ArquTITULOASSUN: TStringField;
     frxReport1: TfrxReport;
     frxDBDataset1: TfrxDBDataset;
     frxPDFExport1: TfrxPDFExport;
@@ -396,7 +386,6 @@ type
       E: EReconcileError; UpdateKind: TUpdateKind;
       var Action: TReconcileAction);
     procedure cds_UserNewRecord(DataSet: TDataSet);
-    procedure sds_ArquFilterRecord(DataSet: TDataSet; var Accept: Boolean);
     procedure sds_ViewFilterRecord(DataSet: TDataSet; var Accept: Boolean);
     procedure cds_AssuntNewRecord(DataSet: TDataSet);
     procedure cds_AutoresNewRecord(DataSet: TDataSet);
@@ -980,7 +969,7 @@ var
   exessao01, valor: Integer;
   Data: TDate;
 begin
-  valor := 0;
+//  valor := 0;
 
 end;
 
@@ -1002,26 +991,6 @@ var
 begin
   temp := frmlogin.ADMIN;
   Result := temp;
-end;
-
-procedure TDM.sds_ArquFilterRecord(DataSet: TDataSet; var Accept: Boolean);
-begin
-  // Accept := False;
-  if (frmlogin.TODOS = 0) then
-  begin
-    // DM.sds_Arqu.Filtered := True;
-    if (sds_Arqu['IDUSUARIOS'] = frmlogin.COD_USUARIO) then
-    begin
-      Accept := True;
-    end; // else
-
-  end
-  else if (frmlogin.TODOS = 1) then
-  begin
-    Accept := False;
-    // DM.sds_Arqu.Filtered := False;
-  end;
-
 end;
 
 procedure TDM.sds_AssuntFilterRecord(DataSet: TDataSet; var Accept: Boolean);

@@ -230,7 +230,7 @@ type
     numCodigoII: Integer;
     codigo, codigoII, UserTemp, RegistroTemp, RegistroMoment: Integer;
     condNivelForm: Integer;
-    figTipo, codigoArqu: Integer;
+    figTipo, codigoArqu, codigoArquSolteiro: Integer;
     procedure MostrarEstatistica;
     procedure InicializarComponentes;
   end;
@@ -895,7 +895,8 @@ begin
     begin
       try
 
-        DM.cds_arquivo.Params[0].AsInteger := DM.sds_arquID.AsInteger;
+
+        //DM.cds_arquivo.Params[0].AsInteger := DM.sds_arquID.AsInteger;
         DM.cds_arquivo.Open;
 
         FrmProcedimento.Progress;
@@ -1125,7 +1126,7 @@ begin
     if FrmDlgProcurar.ShowModal = mrOk then
     begin
       DM.cds_arquivo.Close;
-      DM.cds_arquivo.Params[0].AsInteger := DM.sds_arquID.AsInteger;
+      DM.cds_arquivo.Params[0].AsInteger := DM.sds_Arqu.DataSet.FieldByName('ID').AsInteger;
       DM.cds_arquivo.Open;
       if DBEdit4.Text <> '0' then
       begin

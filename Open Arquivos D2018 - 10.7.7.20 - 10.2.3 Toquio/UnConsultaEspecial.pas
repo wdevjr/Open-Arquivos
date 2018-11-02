@@ -138,18 +138,13 @@ end;
 
 procedure TFrmView.CheckBoxConsultaClick(Sender: TObject);
 begin
-  if (CheckBoxConsulta.Checked = True) then
+  if (CheckBoxConsulta.Checked = False) then
   begin
     CodigoUser := '';
     CodigoAssunto := '';
     CodigoUserPorNome := '';
   end
-  else
-  begin
-    CodigoUser := '';
-    CodigoAssunto := '';
-    CodigoUserPorNome := '';
-  end;
+
 
 end;
 
@@ -344,7 +339,7 @@ begin
     with DM.sds_view do
     begin
       DBGrid1.DataSource := DtsrcTodos;
-      BitBtn2.Enabled := not IsEmpty;
+
     end;
     DM.sds_view.CLOSE;
   end
@@ -354,7 +349,7 @@ begin
     with DM.sds_view_todos do
     begin
       DBGrid1.DataSource := DtsrcTodos;
-      BitBtn2.Enabled := not IsEmpty;
+      //BitBtn2.Enabled := not IsEmpty;
     end;
     DM.sds_view_todos.CLOSE;
   end;
@@ -504,9 +499,7 @@ end;
 
 procedure TFrmView.SpeedButton2Click(Sender: TObject);
 begin
-  CodigoUser := '';
-  CodigoAssunto := '';
-  CodigoUserPorNome := '';
+
   DM.sds_view.CLOSE;
   DM.sds_view_todos.CLOSE;
   if (FrmLogin.TODOS = 1) then
@@ -774,7 +767,17 @@ begin
 
     // BitBtn1.Visible := False;
   end
-  else if (FrmLogin.TODOS = 0) then
+
+  else
+     with DM.sds_view do
+      begin
+        BitBtn1.Enabled := not IsEmpty;
+        SpeedButton3.Enabled := not IsEmpty;
+       // BitBtn2.Enabled := not IsEmpty;
+      end;
+      BitBtn1.Visible := False;
+
+  if (FrmLogin.TODOS = 0) then
   begin
 
     case RadioGroup1.ItemIndex of
@@ -834,13 +837,13 @@ begin
           DM.sds_view.CLOSE;
           DM.sds_view.DataSet.CommandText := '';
           DM.sds_view.DataSet.CommandText :=
-            'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME from ARQUIVOLIST AQ'
-            + ' inner join ARQUIVOS_USUARIOS N  on (AQ.ID = N.IDARQUIVOS) ' +
-            ' inner join ASSUNTO SU on AQ.COD_ASSUNTO = SU.CODIGO ' +
-            'inner join USUARIO PO on N.IDUSUARIOS = PO.COD_USUARIO ' +
+            'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA, PO.NOME from ARQUIVOLIST AQ'
+            //+ ' inner join ARQUIVOS_USUARIOS N  on (AQ.ID = N.IDARQUIVOS) ' +
+           + ' inner join ASSUNTO SU on AQ.COD_ASSUNTO = SU.CODIGO ' +
+            'inner join USUARIO PO on AQ.COD_USUARIO = PO.COD_USUARIO ' +
             'inner join AUTORES T on T.CODIGO = AQ.COD_AUTOR ' +
-            'where AQ.DESCRICAO like ' + QuotedStr('%' + EditPesqu.Text + '%') +
-           ' and N.IDUSUARIOS=' + IntToStr(FrmLogin.COD_USUARIO) +
+            'where AQ.DESCRICAO like ' + QuotedStr('%'+ EditPesqu.Text + '%') +
+          // ' and AQ.COD_USUARIO=' + IntToStr(FrmLogin.COD_USUARIO) +
             ' order by AQ.DESCRICAO';
           if (CodigoUser <> '') and (CodigoAssunto = '') and
             (CodigoUserPorNome = '') then
@@ -1058,8 +1061,10 @@ begin
       begin
         BitBtn1.Enabled := not IsEmpty;
         SpeedButton3.Enabled := not IsEmpty;
+        //BitBtn2.Enabled := not IsEmpty;
       end;
       BitBtn1.Visible := False;
+
     end;
   end;
 end;

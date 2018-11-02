@@ -2031,48 +2031,8 @@ object DM: TDM
     DataSet.MaxBlobSize = -1
     DataSet.Params = <>
     Params = <>
-    OnFilterRecord = sds_ArquFilterRecord
     Left = 112
     Top = 152
-    object sds_ArquID: TIntegerField
-      FieldName = 'ID'
-      Required = True
-    end
-    object sds_ArquCOD_ASSUNTO: TIntegerField
-      FieldName = 'COD_ASSUNTO'
-    end
-    object sds_ArquCOD_USUARIO: TIntegerField
-      FieldName = 'COD_USUARIO'
-      Required = True
-    end
-    object sds_ArquDESCRICAO: TStringField
-      FieldName = 'DESCRICAO'
-      Size = 20000
-    end
-    object sds_ArquTITULO: TStringField
-      FieldName = 'TITULO'
-      Size = 140
-    end
-    object sds_ArquNOME_ARQUIVO: TStringField
-      FieldName = 'NOME_ARQUIVO'
-      Size = 300
-    end
-    object sds_ArquDATA: TDateField
-      FieldName = 'DATA'
-      Required = True
-    end
-    object sds_ArquIDUSUARIOS: TIntegerField
-      FieldName = 'IDUSUARIOS'
-      Required = True
-    end
-    object sds_ArquNOME: TStringField
-      FieldName = 'NOME'
-      Size = 140
-    end
-    object sds_ArquTITULOASSUN: TStringField
-      FieldName = 'TITULOASSUN'
-      Size = 140
-    end
   end
   object SQLConnection: TSQLConnection
     ConnectionName = 'OPENARQUIVOS'
@@ -2481,7 +2441,7 @@ object DM: TDM
     Params = <>
     OnFilterRecord = sds_ViewFilterRecord
     Left = 112
-    Top = 328
+    Top = 336
   end
   object frxReport1: TfrxReport
     Version = '5.4.6'
