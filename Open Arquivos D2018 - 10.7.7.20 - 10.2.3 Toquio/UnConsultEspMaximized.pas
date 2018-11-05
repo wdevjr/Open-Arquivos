@@ -81,7 +81,7 @@ var
 begin
   if (FrmLogin.TODOS = 1) then
   begin
-    if Odd(DM.sds_view_todos.RecNo) then
+    if Odd(DM.sds_view.RecNo) then
     begin
       DBGrid1Max.Canvas.Brush.Color := $00CBEAEB;
       // DBGrid1.Canvas.Font.Color:=clBlack;
@@ -104,36 +104,36 @@ begin
     end;
     r := Rect;
     Dec(r.Bottom, 2);
-    if Column.Field = DM.sds_view_todos.FieldByName('DESCRICAO') then
+    if Column.Field = DM.sds_view.FieldByName('DESCRICAO') then
     begin
       if not(gdSelected in State) or (gdSelected in State) then
       begin
         DBGrid1Max.Canvas.FillRect(Rect);
         DrawText(DBGrid1Max.Canvas.Handle,
-          pchar(DM.sds_view_todos.FieldByName('DESCRICAO').asString),
-          Length(DM.sds_view_todos.FieldByName('DESCRICAO').asString), r,
+          pchar(DM.sds_view.FieldByName('DESCRICAO').asString),
+          Length(DM.sds_view.FieldByName('DESCRICAO').asString), r,
           DT_WORDBREAK);
       end;
     end;
-    if Column.Field = DM.sds_view_todos.FieldByName('TITULO') then
+    if Column.Field = DM.sds_view.FieldByName('TITULO') then
     begin
       if not(gdSelected in State) or (gdSelected in State) then
       begin
         DBGrid1Max.Canvas.FillRect(Rect);
         DrawText(DBGrid1Max.Canvas.Handle,
-          pchar(DM.sds_view_todos.FieldByName('TITULO').asString),
-          Length(DM.sds_view_todos.FieldByName('TITULO').asString), r,
+          pchar(DM.sds_view.FieldByName('TITULO').asString),
+          Length(DM.sds_view.FieldByName('TITULO').asString), r,
           DT_WORDBREAK);
       end;
     end;
-    if Column.Field = DM.sds_view_todos.FieldByName('NOME_ARQUIVO') then
+    if Column.Field = DM.sds_view.FieldByName('NOME_ARQUIVO') then
     begin
       if not(gdSelected in State) or (gdSelected in State) then
       begin
         DBGrid1Max.Canvas.FillRect(Rect);
         DrawText(DBGrid1Max.Canvas.Handle,
-          pchar(DM.sds_view_todos.FieldByName('NOME_ARQUIVO').asString),
-          Length(DM.sds_view_todos.FieldByName('NOME_ARQUIVO').asString), r,
+          pchar(DM.sds_view.FieldByName('NOME_ARQUIVO').asString),
+          Length(DM.sds_view.FieldByName('NOME_ARQUIVO').asString), r,
           DT_WORDBREAK);
       end;
     end;
@@ -204,11 +204,11 @@ begin
   if (FrmLogin.TODOS = 0) then
   begin
     Dtsrc.DataSet := DM.sds_view;
-  end
-  else
+  end;
+{  else
   begin
     Dtsrc.DataSet := DM.sds_view_todos;
-  end;
+  end; }
 end;
 
 procedure TFrmviewMax.SpeedButton1Click(Sender: TObject);

@@ -25,7 +25,6 @@ object FrmviewMax: TFrmviewMax
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 792
     object Image1: TImage
       Left = 14
       Top = 4
@@ -155,7 +154,6 @@ object FrmviewMax: TFrmviewMax
       BevelOuter = bvNone
       Color = clWhite
       TabOrder = 0
-      ExplicitLeft = 557
       object Image2: TImage
         Left = 186
         Top = 4
@@ -286,7 +284,6 @@ object FrmviewMax: TFrmviewMax
     Align = alTop
     Color = 12615680
     TabOrder = 1
-    ExplicitWidth = 792
   end
   object Panel3: TPanel
     Left = 0
@@ -295,7 +292,6 @@ object FrmviewMax: TFrmviewMax
     Height = 49
     Align = alBottom
     TabOrder = 2
-    ExplicitWidth = 792
     object Panel4: TPanel
       Left = 1
       Top = 1
@@ -483,7 +479,6 @@ object FrmviewMax: TFrmviewMax
       Align = alRight
       BevelOuter = bvNone
       TabOrder = 1
-      ExplicitLeft = 558
       object BitBtn1: TBitBtn
         Left = 55
         Top = 11
@@ -710,6 +705,7 @@ object FrmviewMax: TFrmviewMax
       end>
   end
   object Dtsrc: TDataSource
+    DataSet = DM.sds_view
     Left = 528
     Top = 16
   end

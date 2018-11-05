@@ -2467,7 +2467,6 @@ object DM: TDM
     DataSet.MaxBlobSize = -1
     DataSet.Params = <>
     Params = <>
-    OnFilterRecord = sds_ViewFilterRecord
     Left = 112
     Top = 336
   end

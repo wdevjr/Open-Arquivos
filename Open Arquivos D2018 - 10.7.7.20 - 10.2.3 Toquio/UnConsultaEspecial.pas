@@ -165,7 +165,7 @@ var
 begin
   if (FrmLogin.TODOS = 1) then
   begin
-    if Odd(DM.sds_view_todos.RecNo) then
+    if Odd(DM.sds_view.RecNo) then
     begin
       DBGrid1.Canvas.Brush.Color := $00CBEAEB;
       // DBGrid1.Canvas.Font.Color:=clBlack;
@@ -188,36 +188,36 @@ begin
     end;
     r := Rect;
     Dec(r.Bottom, 2);
-    if Column.Field = DM.sds_view_todos.FieldByName('DESCRICAO') then
+    if Column.Field = DM.sds_view.FieldByName('DESCRICAO') then
     begin
       if not(gdSelected in State) or (gdSelected in State) then
       begin
         DBGrid1.Canvas.FillRect(Rect);
         DrawText(DBGrid1.Canvas.Handle,
-          pchar(DM.sds_view_todos.FieldByName('DESCRICAO').asString),
-          Length(DM.sds_view_todos.FieldByName('DESCRICAO').asString), r,
+          pchar(DM.sds_view.FieldByName('DESCRICAO').asString),
+          Length(DM.sds_view.FieldByName('DESCRICAO').asString), r,
           DT_WORDBREAK);
       end;
     end;
-    if Column.Field = DM.sds_view_todos.FieldByName('TITULO') then
+    if Column.Field = DM.sds_view.FieldByName('TITULO') then
     begin
       if not(gdSelected in State) or (gdSelected in State) then
       begin
         DBGrid1.Canvas.FillRect(Rect);
         DrawText(DBGrid1.Canvas.Handle,
-          pchar(DM.sds_view_todos.FieldByName('TITULO').asString),
-          Length(DM.sds_view_todos.FieldByName('TITULO').asString), r,
+          pchar(DM.sds_view.FieldByName('TITULO').asString),
+          Length(DM.sds_view.FieldByName('TITULO').asString), r,
           DT_WORDBREAK);
       end;
     end;
-    if Column.Field = DM.sds_view_todos.FieldByName('NOME_ARQUIVO') then
+    if Column.Field = DM.sds_view.FieldByName('NOME_ARQUIVO') then
     begin
       if not(gdSelected in State) or (gdSelected in State) then
       begin
         DBGrid1.Canvas.FillRect(Rect);
         DrawText(DBGrid1.Canvas.Handle,
-          pchar(DM.sds_view_todos.FieldByName('NOME_ARQUIVO').asString),
-          Length(DM.sds_view_todos.FieldByName('NOME_ARQUIVO').asString), r,
+          pchar(DM.sds_view.FieldByName('NOME_ARQUIVO').asString),
+          Length(DM.sds_view.FieldByName('NOME_ARQUIVO').asString), r,
           DT_WORDBREAK);
       end;
     end;
@@ -317,7 +317,7 @@ end;
 procedure TFrmView.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   DM.sds_view.CLOSE;
-  DM.sds_view_todos.CLOSE;
+  //DM.sds_view_todos.CLOSE;
   DM.cds_User.CLOSE;
   DM.cds_UserCod.CLOSE;
   DM.cds_Assunt.CLOSE;
@@ -345,12 +345,12 @@ begin
   else if (FrmLogin.TODOS = 1) then
   begin
 
-    with DM.sds_view_todos do
+    with DM.sds_view do
     begin
       DBGrid1.DataSource := DtsrcTodos;
       // BitBtn2.Enabled := not IsEmpty;
     end;
-    DM.sds_view_todos.CLOSE;
+    DM.sds_view.CLOSE;
   end;
 
 end;
@@ -500,7 +500,7 @@ procedure TFrmView.SpeedButton2Click(Sender: TObject);
 begin
 
   DM.sds_view.CLOSE;
-  DM.sds_view_todos.CLOSE;
+  //DM.sds_view_todos.CLOSE;
   if (FrmLogin.TODOS = 1) then
   begin
      case RadioGroup1.ItemIndex of
@@ -510,9 +510,9 @@ begin
           DM.sds_view.DataSet.CommandText := '';
           DM.sds_view.DataSet.CommandText :=
             'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME from ARQUIVOLIST AQ'
-            + ' inner join ARQUIVOS_USUARIOS N  on (AQ.ID = N.IDARQUIVOS) ' +
-            ' inner join ARQUIVOS_USUARIOS N on (N.IDARQUIVOS = AQ.ID) and (N.IDUSUARIOS = AQ.COD_USUARIO)'
-            + ' inner join USUARIO U on (N.IDUSUARIOS = U.COD_USUARIO)' +
+            //+ ' inner join ARQUIVOS_USUARIOS N  on (AQ.ID = N.IDARQUIVOS) ' +
+            +' inner join ARQUIVOS_USUARIOS N on (N.IDARQUIVOS = AQ.ID) and (N.IDUSUARIOS = AQ.COD_USUARIO)'
+            + ' inner join USUARIO U on (AQ.COD_USUARIO = U.COD_USUARIO)' +
             ' inner join AUTORES T on (T.CODIGO = AQ.COD_AUTOR)' +
             ' where AQ.NOME_ARQUIVO like ' +
             QuotedStr('%' + EditPesqu.Text + '%') +
@@ -778,7 +778,7 @@ begin
 
       if (FrmLogin.TODOS = 1) then
       begin
-        with DM.sds_view_todos do
+        with DM.sds_view do
         begin
           BitBtn1.Enabled := not IsEmpty;
           SpeedButton3.Enabled := not IsEmpty;
@@ -1073,7 +1073,7 @@ begin
 
       if (FrmLogin.TODOS = 1) then
       begin
-        with DM.sds_view_todos do
+        with DM.sds_view do
         begin
           BitBtn1.Enabled := not IsEmpty;
           SpeedButton3.Enabled := not IsEmpty;
@@ -1124,14 +1124,14 @@ begin
   end
   else
 
-    if (FrmLogin.TODOS = 1) then
+  {  if (FrmLogin.TODOS = 1) then
   begin
-    with DM.sds_view_todos do
+    with DM.sds_view do
     begin
       BitBtn1.Enabled := not IsEmpty;
       SpeedButton3.Enabled := not IsEmpty;
     end;
-  end;
+  end;}
 end;
 
 procedure TFrmView.SpeedButton5Click(Sender: TObject);
