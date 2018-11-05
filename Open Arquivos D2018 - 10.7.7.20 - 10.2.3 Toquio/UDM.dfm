@@ -1134,10 +1134,10 @@ object DM: TDM
       ProviderFlags = [pfInUpdate]
       Required = True
     end
-    object sdt_LogadosDATAATUAL: TDateField
+    object sdt_LogadosDATAATUAL: TStringField
       FieldName = 'DATAATUAL'
-      ProviderFlags = [pfInUpdate]
       Required = True
+      Size = 10
     end
   end
   object dsp_Logados: TDataSetProvider
@@ -1175,10 +1175,10 @@ object DM: TDM
       ProviderFlags = [pfInUpdate]
       Required = True
     end
-    object cds_LogadosDATAATUAL: TDateField
+    object cds_LogadosDATAATUAL: TStringField
       FieldName = 'DATAATUAL'
-      ProviderFlags = [pfInUpdate]
       Required = True
+      Size = 10
     end
   end
   object DtsrcLogados: TDataSource
@@ -1309,19 +1309,20 @@ object DM: TDM
       FieldName = 'CODIGO'
       ProviderFlags = []
     end
-    object sdt_ExcRepetidosDATAATUAL: TDateField
-      FieldName = 'DATAATUAL'
-      ProviderFlags = []
-    end
     object sdt_ExcRepetidosORDEM: TIntegerField
       FieldName = 'ORDEM'
       ProviderFlags = []
+    end
+    object sdt_ExcRepetidosDATAATUAL: TStringField
+      FieldName = 'DATAATUAL'
+      Required = True
+      Size = 10
     end
   end
   object dsp_ExcRepetidos: TDataSetProvider
     DataSet = sdt_ExcRepetidos
     UpdateMode = upWhereKeyOnly
-    Left = 200
+    Left = 208
     Top = 648
   end
   object cds_ExcRepetidos: TClientDataSet
@@ -1344,13 +1345,14 @@ object DM: TDM
       FieldName = 'CODIGO'
       ProviderFlags = []
     end
-    object cds_ExcRepetidosDATAATUAL: TDateField
-      FieldName = 'DATAATUAL'
-      ProviderFlags = []
-    end
     object cds_ExcRepetidosORDEM: TIntegerField
       FieldName = 'ORDEM'
       ProviderFlags = []
+    end
+    object cds_ExcRepetidosDATAATUAL: TStringField
+      FieldName = 'DATAATUAL'
+      Required = True
+      Size = 10
     end
   end
   object sdt_CadDep: TSQLDataSet
@@ -1547,10 +1549,10 @@ object DM: TDM
       ProviderFlags = [pfInUpdate]
       Required = True
     end
-    object sdt_LogINSERDATA: TDateField
+    object sdt_LogINSERDATA: TStringField
       FieldName = 'INSERDATA'
-      ProviderFlags = [pfInUpdate]
       Required = True
+      Size = 10
     end
     object sdt_LogHORA: TTimeField
       FieldName = 'HORA'
@@ -1610,10 +1612,10 @@ object DM: TDM
       ProviderFlags = [pfInUpdate]
       Required = True
     end
-    object cds_LogINSERDATA: TDateField
+    object cds_LogINSERDATA: TStringField
       FieldName = 'INSERDATA'
-      ProviderFlags = [pfInUpdate]
       Required = True
+      Size = 10
     end
     object cds_LogHORA: TTimeField
       FieldName = 'HORA'
@@ -1695,6 +1697,12 @@ object DM: TDM
       ProviderFlags = [pfInUpdate]
       Size = 140
     end
+    object sdt_ArquivoDATA: TStringField
+      FieldName = 'DATA'
+      Required = True
+      EditMask = '!99/99/0000;1;_'
+      Size = 10
+    end
     object sdt_ArquivoNOME_ARQUIVO: TStringField
       FieldName = 'NOME_ARQUIVO'
       ProviderFlags = [pfInUpdate]
@@ -1704,11 +1712,6 @@ object DM: TDM
       FieldName = 'EXTENCAO'
       ProviderFlags = [pfInUpdate]
       Size = 6
-    end
-    object sdt_ArquivoDATA: TDateField
-      FieldName = 'DATA'
-      ProviderFlags = [pfInUpdate]
-      EditMask = '!99/99/0000;1;_'
     end
     object sdt_ArquivoDESCRICAO: TStringField
       FieldName = 'DESCRICAO'
@@ -1793,6 +1796,12 @@ object DM: TDM
       ProviderFlags = [pfInUpdate]
       Size = 140
     end
+    object cds_ArquivoDATA: TStringField
+      FieldName = 'DATA'
+      Required = True
+      EditMask = '!99/99/0000;1;_'
+      Size = 10
+    end
     object cds_ArquivoNOME_ARQUIVO: TStringField
       FieldName = 'NOME_ARQUIVO'
       ProviderFlags = [pfInUpdate]
@@ -1802,11 +1811,6 @@ object DM: TDM
       FieldName = 'EXTENCAO'
       ProviderFlags = [pfInUpdate]
       Size = 6
-    end
-    object cds_ArquivoDATA: TDateField
-      FieldName = 'DATA'
-      ProviderFlags = [pfInUpdate]
-      EditMask = '!99/99/0000;1;_'
     end
     object cds_ArquivoDESCRICAO: TStringField
       FieldName = 'DESCRICAO'
@@ -2314,7 +2318,8 @@ object DM: TDM
       'SUNTO)'#13#10'where (AQ.NOME_ARQUIVO like :nomearquivo)'#13#10'or  (AQ.DESCR' +
       'ICAO like :descric)'#13#10'or (AQ.ID=:IDARQ)'#13#10'or  (AQ.TITULO like :til' +
       ')'#13#10'or (AQ.DATA=:dt)'#13#10'or (AQ.COD_ASSUNTO=:ASST)'#13#10'or (AQ.COD_USUAR' +
-      'IO=:idUser)'#13#10'order by AQ.NOME_ARQUIVO desc'
+      'IO=:idUser)'#13#10'and (AQ.DATA >= :dsinicio)'#13#10'and (AQ.DATA <= :dsfim)' +
+      #13#10'order by AQ.NOME_ARQUIVO desc'
     DataSet.MaxBlobSize = -1
     DataSet.Params = <
       item
@@ -2351,7 +2356,18 @@ object DM: TDM
         DataType = ftInteger
         Name = 'idUser'
         ParamType = ptInput
+      end
+      item
+        DataType = ftString
+        Name = 'dsinicio'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftString
+        Name = 'dsfim'
+        ParamType = ptInput
       end>
+    ObjectView = False
     Params = <
       item
         DataType = ftString
@@ -2386,6 +2402,16 @@ object DM: TDM
       item
         DataType = ftInteger
         Name = 'idUser'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftString
+        Name = 'dsinicio'
+        ParamType = ptInput
+      end
+      item
+        DataType = ftString
+        Name = 'dsfim'
         ParamType = ptInput
       end>
     Left = 200
@@ -2424,13 +2450,14 @@ object DM: TDM
       FieldName = 'NOME'
       Size = 70
     end
-    object sds_view_todosDATA: TDateField
-      FieldName = 'DATA'
-      Required = True
-    end
     object sds_view_todosTITULOASSUN: TStringField
       FieldName = 'TITULOASSUN'
       Size = 140
+    end
+    object sds_view_todosDATA: TStringField
+      FieldName = 'DATA'
+      Required = True
+      Size = 10
     end
   end
   object sds_view: TSimpleDataSet

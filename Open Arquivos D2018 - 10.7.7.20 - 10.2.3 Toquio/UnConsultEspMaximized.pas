@@ -225,7 +225,7 @@ begin
   end
   else
   begin
-    DM.sds_report_detalhe.CLOSE;
+    DM.sds_report_detalhe.Close;
     DM.sds_report_detalhe.Params[0].asInteger := selecAtualReport;
     DM.sds_report_detalhe.Open;
     DM.frxReport1.LoadFromFile(ExtractFilePath(ParamStr(0)) +

@@ -9,7 +9,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Buttons, ExtCtrls, jpeg, DB, DBClient, Registry, DBCtrls,Vcl.Themes;
+  Dialogs, StdCtrls, Buttons, ExtCtrls, jpeg, DB, DBClient, Registry, DBCtrls,
+  Vcl.Themes;
 
 type
   TFrmLogin = class(TForm)
@@ -104,7 +105,7 @@ begin
       NIVEL := Fields[4].AsInteger;
       ADMIN := Fields[6].AsInteger;
       TODOS := Fields[7].AsInteger;
-     // THEMA_ATUAL := Fields[8].AsString;
+      // THEMA_ATUAL := Fields[8].AsString;
       // ID.add(DM.dst_Login['ID']);
       DMII.CarregaPerfil;
     end;
@@ -114,7 +115,7 @@ begin
     Dtsrc.DataSet.Append;
     Dtsrc.DataSet.Insert;
     DM.cds_LogCOD_USUARIO.Value := COD_USUARIO;
-    DM.cds_LogINSERDATA.Value := Date;
+    DM.cds_LogINSERDATA.Value := DateToStr(Date);
     DM.cds_LogHORA.Value := Time;
     DM.cds_LogCOD_ACAO.Value := 4;
     DM.cds_LogACAO.Value := 'LOGOU';
@@ -154,10 +155,10 @@ begin
     // //Application.CreateForm(TFrPrincipal, FrPrincipal);
     if not Assigned(FrPrincipal) then
       FrPrincipal := TFrPrincipal.Create(Application);
-      FrPrincipal.Show;
-      FrPrincipal.Visible := true;
-     // thema := TStyleManager.Create();
-     // thema.SetStyle(THEMA_ATUAL);
+    FrPrincipal.Show;
+    FrPrincipal.Visible := true;
+    // thema := TStyleManager.Create();
+    // thema.SetStyle(THEMA_ATUAL);
     // FrPrincipal := TFrPrincipal.Create(Application);
     // try
     // FrPrincipal.ShowModal;
@@ -191,7 +192,7 @@ begin
     DtsrcLogados.DataSet.Append;
     DM.cds_LogadosORDEM.Value := 1;
     DM.cds_LogadosCOD_USUARIO.Value := COD_USUARIO;
-    DM.cds_LogadosDATAATUAL.Value := Date;
+    DM.cds_LogadosDATAATUAL.Value := DateToStr(Date);
     DtsrcLogados.DataSet.Post;
     (DtsrcLogados.DataSet as TClientDataSet).ApplyUpdates(0);
   end

@@ -13,7 +13,7 @@ uses
   Dialogs, ExtCtrls, StdCtrls, ComCtrls, Buttons, Grids, DBGrids, DB, Mask,
   DBCtrls, MidasLib, DBClient, SimpleDS, ExtDlgs, FMTBcd, Provider, SqlExpr,
   ImgList, ToolWin, ActnMan, ActnCtrls, ActnMenus, XPStyleActnCtrls, ActnList,
-  Menus, DateUtils, System.Actions, System.ImageList,Vcl.Themes;
+  Menus, DateUtils, System.Actions, System.ImageList, Vcl.Themes;
 // adiciona DBCLient para TClientDataSet
 
 type
@@ -154,7 +154,7 @@ type
     lookUser: TSpeedButton;
     Label7: TLabel;
     relatorio: TSpeedButton;
-    BitBtn1: TBitBtn;
+    fundobtn: TSpeedButton;
     procedure relatoriosClick(Sender: TObject);
     procedure N1Click(Sender: TObject);
     procedure cbCadLogAssistenteExecute(Sender: TObject);
@@ -213,6 +213,7 @@ type
     procedure Timer1Timer(Sender: TObject);
     procedure relatorioClick(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
+    procedure fundobtnClick(Sender: TObject);
     // para a chamada de status do componente
   private
     buffer: array [0 .. 255] of Char;
@@ -239,7 +240,7 @@ var
   FrPrincipal: TFrPrincipal;
   respArquivos, respUsuarios, respAssuntos, respAutores, respLog, spAutores,
     respLogar, respLogados: Integer;
-    thema: TStyleManager;
+  thema: TStyleManager;
 
 implementation
 
@@ -248,7 +249,7 @@ uses UDMII, ShellAPI, UnAbertura, UnLogin, UnCadDepartamento, UnCadCidades,
   UnDlgProcuraAutor, UnCadAutores, UnCadAssuntos, UnDlgProcuraAssunto, UDM,
   UnDlgProcura, UnStatus, MMSystem, UAutoPreench, ABOUT, UnContrUser,
   UnManutencao, UnConsultaEspecial, UnMensProce, UnNovVersao,
-  UnProcessIndefinido, UnatribuiUsuariosPorArquivos;
+  UnProcessIndefinido, UnatribuiUsuariosPorArquivos, UnFrontColor;
 
 {$R *.dfm}
 
@@ -321,8 +322,8 @@ begin
   end
   else
   begin
-    DM.sds_report_detalhe.CLOSE;
-    DM.sds_report_detalhe.Params[0].asInteger := StrToInt(DBText2.caption);
+    DM.sds_report_detalhe.Close;
+    DM.sds_report_detalhe.Params[0].AsInteger := StrToInt(DBText2.Caption);
     DM.sds_report_detalhe.Open;
     DM.frxReport1.LoadFromFile(ExtractFilePath(ParamStr(0)) +
       'ReportGeral\FastReport\RelatorioPorSelecao.fr3', True);
@@ -792,6 +793,18 @@ begin
 
 end;
 
+procedure TFrPrincipal.fundobtnClick(Sender: TObject);
+begin
+  // thema := TStyleManager.Create();
+  // thema.SetStyle('Carbon');
+  FrmFrontColor := TFrmFrontColor.Create(Self);
+  try
+    FrmFrontColor.ShowModal;
+  finally
+    FrmFrontColor.Free;
+  end;
+end;
+
 procedure TFrPrincipal.SpeedButton4Click(Sender: TObject);
 begin
   MostrarEstatistica;
@@ -895,8 +908,7 @@ begin
     begin
       try
 
-
-        //DM.cds_arquivo.Params[0].AsInteger := DM.sds_arquID.AsInteger;
+        // DM.cds_arquivo.Params[0].AsInteger := DM.sds_arquID.AsInteger;
         DM.cds_arquivo.Open;
 
         FrmProcedimento.Progress;
@@ -1126,7 +1138,8 @@ begin
     if FrmDlgProcurar.ShowModal = mrOk then
     begin
       DM.cds_arquivo.Close;
-      DM.cds_arquivo.Params[0].AsInteger := DM.sds_Arqu.DataSet.FieldByName('ID').AsInteger;
+      DM.cds_arquivo.Params[0].AsInteger := DM.sds_Arqu.DataSet.FieldByName
+        ('ID').AsInteger;
       DM.cds_arquivo.Open;
       if DBEdit4.Text <> '0' then
       begin
@@ -1153,7 +1166,7 @@ begin
     end;
 
   finally
-    DM.sds_arqu.Close;
+    DM.sds_Arqu.Close;
     FrmDlgProcurar.Free;
   end;
   MostrarIcon;
@@ -1652,7 +1665,7 @@ begin
     DtscLog.DataSet.Open;
     DtscLog.DataSet.Append;
     DM.cds_LogCOD_USUARIO.Value := FrmLogin.COD_USUARIO;
-    DM.cds_LogINSERDATA.Value := Date;
+    DM.cds_LogINSERDATA.Value := DateToStr(Date);
     DM.cds_LogHORA.Value := Time;
     DM.cds_LogCOD_ACAO.Value := 3;
     DM.cds_LogACAO.Value := 'ALTEROU';
@@ -1706,7 +1719,7 @@ begin
     DtscLog.DataSet.Open;
     DtscLog.DataSet.Append;
     DM.cds_LogCOD_USUARIO.Value := FrmLogin.COD_USUARIO;
-    DM.cds_LogINSERDATA.Value := Date;
+    DM.cds_LogINSERDATA.Value := DateToStr(Date);
     DM.cds_LogHORA.Value := Time;
     DM.cds_LogCOD_ACAO.Value := 2;
     DM.cds_LogACAO.Value := 'EXCLUIU';
@@ -2059,7 +2072,7 @@ begin
 
     // Log
     DM.cds_LogCOD_USUARIO.Value := FrmLogin.COD_USUARIO;
-    DM.cds_LogINSERDATA.Value := Date;
+    DM.cds_LogINSERDATA.Value := DateToStr(Date);
     DM.cds_LogHORA.Value := Time;
     DM.cds_LogCOD_ACAO.Value := 1;
     DM.cds_LogACAO.Value := 'GRAVOU';

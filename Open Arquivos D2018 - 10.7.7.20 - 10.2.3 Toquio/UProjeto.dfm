@@ -25,6 +25,7 @@ object FrPrincipal: TFrPrincipal
     Top = 532
     Width = 844
     Height = 25
+    Color = 14083559
     Panels = <
       item
         Style = psOwnerDraw
@@ -39,7 +40,6 @@ object FrPrincipal: TFrPrincipal
         Width = 50
       end>
     OnDrawPanel = StatusBar1DrawPanel
-    ExplicitTop = 528
   end
   object Panel5: TPanel
     Left = 0
@@ -47,11 +47,13 @@ object FrPrincipal: TFrPrincipal
     Width = 844
     Height = 51
     Align = alBottom
+    Color = clWhite
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = -11
     Font.Name = 'Tahoma'
     Font.Style = []
+    ParentBackground = False
     ParentFont = False
     TabOrder = 1
     object inserir: TSpeedButton
@@ -508,9 +510,9 @@ object FrPrincipal: TFrPrincipal
     end
     object relatorio: TSpeedButton
       Left = 504
-      Top = 9
+      Top = 10
       Width = 87
-      Height = 32
+      Height = 25
       Caption = 'Relat'#243'rio'
       Enabled = False
       Flat = True
@@ -573,15 +575,20 @@ object FrPrincipal: TFrPrincipal
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
       OnClick = relatorioClick
     end
-    object BitBtn1: TBitBtn
-      Left = 423
-      Top = 9
-      Width = 75
-      Height = 25
-      Caption = 'BitBtn1'
-      TabOrder = 0
-      Visible = False
-      OnClick = BitBtn1Click
+    object fundobtn: TSpeedButton
+      Left = 416
+      Top = 8
+      Width = 82
+      Height = 29
+      Caption = 'Fundo Color'
+      Flat = True
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGreen
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      OnClick = fundobtnClick
     end
   end
   object ToolBar1: TToolBar
@@ -700,6 +707,7 @@ object FrPrincipal: TFrPrincipal
     Align = alTop
     BevelOuter = bvNone
     Color = clWhite
+    ParentBackground = False
     TabOrder = 3
     object BtnLoc01: TSpeedButton
       Left = 16
@@ -1277,7 +1285,8 @@ object FrPrincipal: TFrPrincipal
     Height = 23
     Align = alTop
     BevelOuter = bvNone
-    Color = 14286847
+    Color = clWhite
+    ParentBackground = False
     TabOrder = 4
     object Image5: TImage
       Left = 22
@@ -1351,6 +1360,7 @@ object FrPrincipal: TFrPrincipal
     Align = alTop
     BevelOuter = bvNone
     Color = clWhite
+    ParentBackground = False
     TabOrder = 5
     Visible = False
     object Label12: TLabel
@@ -1499,6 +1509,7 @@ object FrPrincipal: TFrPrincipal
     Align = alTop
     BevelOuter = bvNone
     Color = clWhite
+    ParentBackground = False
     TabOrder = 6
     object Label5: TLabel
       Left = 17
@@ -1742,7 +1753,7 @@ object FrPrincipal: TFrPrincipal
     Left = 608
     Top = 184
     Bitmap = {
-      494C0101120013005C0228002800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C0101120013006C0228002800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000A0000000C8000000010020000000000000F4
       0100000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -5878,7 +5889,7 @@ object FrPrincipal: TFrPrincipal
     Left = 676
     Top = 183
     Bitmap = {
-      494C0101050009005C0210001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C0101050009006C0210001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000002000000001002000000000000020
       00000000000000000000000000000000000000000000F7F7F700EFEFEF00E7E7
       E700E7E7E700EFEFEF00EFEFEF00F7F7F700FFFFFF00FFFFFF00FFFFFF00FFFF
@@ -6388,7 +6399,7 @@ object FrPrincipal: TFrPrincipal
     Left = 592
     Top = 232
     Bitmap = {
-      494C01010F0013005C0213001300FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010F0013006C0213001300FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       00000000000036000000280000004C0000004C0000000100200000000000405A
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

@@ -1106,7 +1106,7 @@ object FrmLogAcesso: TFrmLogAcesso
           Left = 98
           Top = 4
           Width = 510
-          Height = 24
+          Height = 19
           Margins.Left = 4
           Margins.Top = 4
           Margins.Right = 4
@@ -1126,7 +1126,7 @@ object FrmLogAcesso: TFrmLogAcesso
           Left = 97
           Top = 58
           Width = 511
-          Height = 24
+          Height = 19
           Margins.Left = 4
           Margins.Top = 4
           Margins.Right = 4
@@ -1780,6 +1780,8 @@ object FrmLogAcesso: TFrmLogAcesso
       Margins.Right = 4
       Margins.Bottom = 4
       Caption = 'Config03'
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Panel6: TPanel
         Left = 39
         Top = 8
@@ -1926,7 +1928,7 @@ object FrmLogAcesso: TFrmLogAcesso
           Margins.Top = 4
           Margins.Right = 4
           Margins.Bottom = 4
-          Date = 39781.675818680550000000
+          Date = 39781.753715729170000000
           TabOrder = 3
         end
       end
@@ -1939,6 +1941,8 @@ object FrmLogAcesso: TFrmLogAcesso
       Margins.Right = 4
       Margins.Bottom = 4
       Caption = 'Config04'
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Panel7: TPanel
         Left = 0
         Top = 0
@@ -2028,7 +2032,7 @@ object FrmLogAcesso: TFrmLogAcesso
           Margins.Top = 4
           Margins.Right = 4
           Margins.Bottom = 4
-          Date = 39781.675818692130000000
+          Date = 39781.753715752320000000
           TabOrder = 0
           OnClick = MonthCalendar2Click
         end
@@ -2041,7 +2045,7 @@ object FrmLogAcesso: TFrmLogAcesso
           Margins.Top = 4
           Margins.Right = 4
           Margins.Bottom = 4
-          Date = 39781.675818692130000000
+          Date = 39781.753715752320000000
           TabOrder = 1
           OnClick = MonthCalendar3Click
         end
@@ -2055,6 +2059,8 @@ object FrmLogAcesso: TFrmLogAcesso
       Margins.Right = 4
       Margins.Bottom = 4
       Caption = 'Config05'
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Panel10: TPanel
         Left = 0
         Top = 424
@@ -2439,6 +2445,8 @@ object FrmLogAcesso: TFrmLogAcesso
       Margins.Right = 4
       Margins.Bottom = 4
       Caption = 'Config06'
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Label30: TLabel
         Left = 21
         Top = 21
@@ -2528,6 +2536,8 @@ object FrmLogAcesso: TFrmLogAcesso
       Margins.Right = 4
       Margins.Bottom = 4
       Caption = 'Config07'
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Panel13: TPanel
         Left = 0
         Top = 0
@@ -2593,7 +2603,7 @@ object FrmLogAcesso: TFrmLogAcesso
           Left = 42
           Top = 29
           Width = 142
-          Height = 24
+          Height = 19
           Margins.Left = 4
           Margins.Top = 4
           Margins.Right = 4
@@ -2927,7 +2937,7 @@ object FrmLogAcesso: TFrmLogAcesso
           Left = 486
           Top = 8
           Width = 51
-          Height = 24
+          Height = 19
           Margins.Left = 4
           Margins.Top = 4
           Margins.Right = 4
@@ -3011,6 +3021,8 @@ object FrmLogAcesso: TFrmLogAcesso
       Margins.Right = 4
       Margins.Bottom = 4
       Caption = 'Config08'
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object DBGrid2: TDBGrid
         Left = 0
         Top = 116

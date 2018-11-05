@@ -215,7 +215,8 @@ end;
 
 procedure TFrmArquProc.DBGrid1CellClick(Column: TColumn);
 begin
-FrPrincipal.codigoArquSolteiro := DBGrid1.DataSource.DataSet.Fields[0].asInteger;
+  FrPrincipal.codigoArquSolteiro := DBGrid1.DataSource.DataSet.Fields[0]
+    .asInteger;
 end;
 
 procedure TFrmArquProc.DBGrid1DrawColumnCell(Sender: TObject; const Rect: TRect;
@@ -223,7 +224,7 @@ procedure TFrmArquProc.DBGrid1DrawColumnCell(Sender: TObject; const Rect: TRect;
 var
   R: TRect;
 begin
- { if (FrmLogin.TODOS = 0) then
+  if (FrmLogin.TODOS = 0) then
   begin
     if DM.sds_Arqu.IsEmpty = false then
     begin
@@ -251,37 +252,42 @@ begin
 
       R := Rect;
       Dec(R.Bottom, 2);
-      if Column.Field = DM.sds_ArquDESCRICAO then
-      begin
-        if not(gdSelected in State) or (gdSelected in State) then
-        begin
-          DBGrid1.Canvas.FillRect(Rect);
-          DrawText(DBGrid1.Canvas.Handle, pchar(DM.sds_ArquDESCRICAO.AsString),
-            Length(DM.sds_ArquDESCRICAO.AsString), R, DT_WORDBREAK);
-        end;
-      end;
-      if Column.Field = DM.sds_ArquTITULO then
-      begin
-        if not(gdSelected in State) or (gdSelected in State) then
-        begin
-          DBGrid1.Canvas.FillRect(Rect);
-          DrawText(DBGrid1.Canvas.Handle, pchar(DM.sds_ArquTITULO.AsString),
-            Length(DM.sds_ArquTITULO.AsString), R, DT_WORDBREAK);
-        end;
-      end;
-      if Column.Field = DM.sds_ArquNOME_ARQUIVO then
+      if Column.Field = DM.sds_Arqu.FieldByName('DESCRICAO') then
       begin
         if not(gdSelected in State) or (gdSelected in State) then
         begin
           DBGrid1.Canvas.FillRect(Rect);
           DrawText(DBGrid1.Canvas.Handle,
-            pchar(DM.sds_ArquNOME_ARQUIVO.AsString),
-            Length(DM.sds_ArquNOME_ARQUIVO.AsString), R, DT_WORDBREAK);
+            pchar(DM.sds_Arqu.FieldByName('DESCRICAO').AsString),
+            Length(DM.sds_Arqu.FieldByName('DESCRICAO').AsString), R,
+            DT_WORDBREAK);
+        end;
+      end;
+      if Column.Field = DM.sds_Arqu.FieldByName('TITULO') then
+      begin
+        if not(gdSelected in State) or (gdSelected in State) then
+        begin
+          DBGrid1.Canvas.FillRect(Rect);
+          DrawText(DBGrid1.Canvas.Handle,
+            pchar(DM.sds_Arqu.FieldByName('TITULO').AsString),
+            Length(DM.sds_Arqu.FieldByName('TITULO').AsString), R,
+            DT_WORDBREAK);
+        end;
+      end;
+      if Column.Field = DM.sds_Arqu.FieldByName('NOME_ARQUIVO') then
+      begin
+        if not(gdSelected in State) or (gdSelected in State) then
+        begin
+          DBGrid1.Canvas.FillRect(Rect);
+          DrawText(DBGrid1.Canvas.Handle,
+            pchar(DM.sds_Arqu.FieldByName('NOME_ARQUIVO').AsString),
+            Length(DM.sds_Arqu.FieldByName('NOME_ARQUIVO').AsString), R,
+            DT_WORDBREAK);
         end;
       end;
     end;
   end
-  else} if (FrmLogin.TODOS = 1) then
+  else if (FrmLogin.TODOS = 1) then
   begin
     if DM.sds_ArquTodos.IsEmpty = false then
     begin

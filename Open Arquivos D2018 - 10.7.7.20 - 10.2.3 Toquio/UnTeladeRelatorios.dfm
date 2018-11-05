@@ -505,7 +505,7 @@ object FrmRelatoriosGerais: TFrmRelatoriosGerais
       Left = 762
       Top = 1
       Width = 48
-      Height = 63
+      Height = 48
       Align = alRight
       AutoSize = True
       Picture.Data = {
@@ -801,13 +801,12 @@ object FrmRelatoriosGerais: TFrmRelatoriosGerais
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
         FFFF}
       ExplicitLeft = 754
-      ExplicitHeight = 48
     end
     object Image1: TImage
       Left = 714
       Top = 1
       Width = 48
-      Height = 63
+      Height = 48
       Align = alRight
       AutoSize = True
       Picture.Data = {
@@ -1103,7 +1102,6 @@ object FrmRelatoriosGerais: TFrmRelatoriosGerais
         FE3FFEFEFE3FFEFEFE3FFEFEFE3FFEFEFE3FFEFEFE3FFEFEFE3FFEFEFE3FFEFE
         FE3F}
       ExplicitLeft = 706
-      ExplicitHeight = 48
     end
   end
   object Panel2: TPanel

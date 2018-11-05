@@ -178,13 +178,11 @@ type
     sdt_LogadosCODIGO: TIntegerField;
     sdt_LogadosORDEM: TIntegerField;
     sdt_LogadosCOD_USUARIO: TIntegerField;
-    sdt_LogadosDATAATUAL: TDateField;
     dsp_Logados: TDataSetProvider;
     cds_Logados: TClientDataSet;
     cds_LogadosCODIGO: TIntegerField;
     cds_LogadosORDEM: TIntegerField;
     cds_LogadosCOD_USUARIO: TIntegerField;
-    cds_LogadosDATAATUAL: TDateField;
     DtsrcLogados: TDataSource;
     Qry_Secun: TSQLQuery;
     sdt_ExcAtual: TSQLDataSet;
@@ -206,13 +204,11 @@ type
     sdt_ExcRepetidos: TSQLDataSet;
     sdt_ExcRepetidosCOD_USUARIO: TIntegerField;
     sdt_ExcRepetidosCODIGO: TIntegerField;
-    sdt_ExcRepetidosDATAATUAL: TDateField;
     sdt_ExcRepetidosORDEM: TIntegerField;
     dsp_ExcRepetidos: TDataSetProvider;
     cds_ExcRepetidos: TClientDataSet;
     cds_ExcRepetidosCOD_USUARIO: TIntegerField;
     cds_ExcRepetidosCODIGO: TIntegerField;
-    cds_ExcRepetidosDATAATUAL: TDateField;
     cds_ExcRepetidosORDEM: TIntegerField;
     sdt_CadDep: TSQLDataSet;
     dsp_CadDep: TDataSetProvider;
@@ -250,7 +246,6 @@ type
     sdt_ArquivoTITULO: TStringField;
     sdt_ArquivoNOME_ARQUIVO: TStringField;
     sdt_ArquivoEXTENCAO: TStringField;
-    sdt_ArquivoDATA: TDateField;
     sdt_ArquivoDESCRICAO: TStringField;
     sdt_ArquivoHORA: TTimeField;
     sdt_ArquivoDADOS: TBlobField;
@@ -265,7 +260,6 @@ type
     cds_ArquivoTITULO: TStringField;
     cds_ArquivoNOME_ARQUIVO: TStringField;
     cds_ArquivoEXTENCAO: TStringField;
-    cds_ArquivoDATA: TDateField;
     cds_ArquivoDESCRICAO: TStringField;
     cds_ArquivoHORA: TTimeField;
     cds_ArquivoDADOS: TBlobField;
@@ -312,7 +306,6 @@ type
     SQLConnection: TSQLConnection;
     sdt_LogCODIGO: TIntegerField;
     sdt_LogCOD_USUARIO: TIntegerField;
-    sdt_LogINSERDATA: TDateField;
     sdt_LogHORA: TTimeField;
     sdt_LogCOD_ACAO: TIntegerField;
     sdt_LogACAO: TStringField;
@@ -321,7 +314,6 @@ type
     sdt_LogDISCRIMINACAO: TStringField;
     cds_LogCODIGO: TIntegerField;
     cds_LogCOD_USUARIO: TIntegerField;
-    cds_LogINSERDATA: TDateField;
     cds_LogHORA: TTimeField;
     cds_LogCOD_ACAO: TIntegerField;
     cds_LogACAO: TStringField;
@@ -368,7 +360,6 @@ type
     sds_view_todosLOGIN: TStringField;
     sds_view_todosNIVEL: TIntegerField;
     sds_view_todosNOME: TStringField;
-    sds_view_todosDATA: TDateField;
     sds_view_todosTITULOASSUN: TStringField;
     sds_view: TSimpleDataSet;
     frxReport1: TfrxReport;
@@ -377,6 +368,15 @@ type
     sds_Report_DetalheADMINISTRADOR: TIntegerField;
     frxGradientObject1: TfrxGradientObject;
     frxDesigner1: TfrxDesigner;
+    sdt_ArquivoDATA: TStringField;
+    cds_ArquivoDATA: TStringField;
+    sdt_LogINSERDATA: TStringField;
+    cds_LogINSERDATA: TStringField;
+    sdt_LogadosDATAATUAL: TStringField;
+    cds_LogadosDATAATUAL: TStringField;
+    sdt_ExcRepetidosDATAATUAL: TStringField;
+    cds_ExcRepetidosDATAATUAL: TStringField;
+    sds_view_todosDATA: TStringField;
     procedure DataModuleCreate(Sender: TObject);
     function PreencheCombo: TStrings;
     function PreencheList: TStrings;
@@ -695,7 +695,7 @@ procedure TDM.cds_ArquivoBeforePost(DataSet: TDataSet);
 begin
   if cds_Arquivo.State = dsInsert then
   begin
-    cds_ArquivoDATA.Value := Date;
+    cds_ArquivoDATA.Value := DateToStr(Date);
     cds_ArquivoHORA.Value := Time;
   end;
 
@@ -836,7 +836,7 @@ procedure TDM.cds_LogadosBeforePost(DataSet: TDataSet);
 begin
   if cds_Logados.State = dsInsert then
     IncrementaPersonalizado('NUM_LOGADOS', cds_LogadosCODIGO);
-  cds_LogadosDATAATUAL.Value := Date
+  cds_LogadosDATAATUAL.Value := DateToStr(Date);
 
 end;
 
@@ -873,7 +873,7 @@ procedure TDM.cds_LogBeforePost(DataSet: TDataSet);
 begin
   if cds_Log.State = dsInsert then
     IncrementaPersonalizado('LOG', cds_LogCODIGO);
-  cds_LogINSERDATA.Value := Date;
+  cds_LogINSERDATA.Value := DateToStr(Date);
 
 end;
 
@@ -969,7 +969,7 @@ var
   exessao01, valor: Integer;
   Data: TDate;
 begin
-//  valor := 0;
+  // valor := 0;
 
 end;
 

@@ -1,39 +1,32 @@
 ﻿[Closed Files]
-File_0=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnConsultaEspecial_old.pas',0,1,19,30,4,0,0,,
-File_1=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.15 - 10.2.3 Toquio\UnConsultaEspecialold.pas',0,1,1,1,1,0,0,,
-File_2=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.15 - 10.2.3 Toquio\UnNovVersao.pas',0,1,297,39,172,0,0,,
-File_3=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.2.3 Toquio\UnUtilitLog.pas',0,1,1509,1,1510,0,0,,
-File_4=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.15 - 10.2.3 Toquio\UnDlgProcura.pas',0,1,1,1,1,0,0,,
-File_5=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.2.3 Toquio\UnContrUser.pas',0,1,313,28,318,0,0,,
+File_0=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnFrontColor.pas',0,1,18,1,32,0,0,,
+File_1=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnThemas.pas',0,1,1,1,1,0,0,,
+File_2=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnConsultaEspecial_old.pas',0,1,19,30,4,0,0,,
+File_3=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.15 - 10.2.3 Toquio\UnConsultaEspecialold.pas',0,1,1,1,1,0,0,,
+File_4=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.15 - 10.2.3 Toquio\UnNovVersao.pas',0,1,297,39,172,0,0,,
+File_5=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.2.3 Toquio\UnUtilitLog.pas',0,1,1509,1,1510,0,0,,
+File_6=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.15 - 10.2.3 Toquio\UnDlgProcura.pas',0,1,1,1,1,0,0,,
 
 [Modules]
-Module0=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UDM.pas
-Module1=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UProjeto.pas
-Module2=d:\projetosesistemas\open arquivos d2018 - 10.7.7.20 - 10.2.3 toquio\UnConsultEspMaximized.pas
-Module3=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnConsultaEspecial.pas
-Module4=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnLogin.pas
-Module5=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnatribuiUsuariosPorArquivos.pas
-Module6=default.htm
-Module7=documentation.htm
-Count=8
+Module0=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UProjeto.pas
+Module1=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UDM.pas
+Module2=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnConsultaEspecial.pas
+Module3=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnLogin.pas
+Module4=default.htm
+Module5=documentation.htm
+Count=6
 EditWindowCount=1
-
-[D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UDM.pas]
-ModuleType=TSourceModule
 
 [D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UProjeto.pas]
 ModuleType=TSourceModule
 
-[d:\projetosesistemas\open arquivos d2018 - 10.7.7.20 - 10.2.3 toquio\UnConsultEspMaximized.pas]
+[D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UDM.pas]
 ModuleType=TSourceModule
 
 [D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnConsultaEspecial.pas]
 ModuleType=TSourceModule
 
 [D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnLogin.pas]
-ModuleType=TSourceModule
-
-[D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnatribuiUsuariosPorArquivos.pas]
 ModuleType=TSourceModule
 
 [default.htm]
@@ -43,29 +36,27 @@ ModuleType=TURLModule
 ModuleType=TURLModule
 
 [EditWindow0]
-ViewCount=8
-CurrentEditView=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UDM.pas
+ViewCount=6
+CurrentEditView=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UProjeto.pas
 View0=0
 View1=1
 View2=2
 View3=3
 View4=4
 View5=5
-View6=6
-View7=7
 PercentageSizes=1
 Create=1
 Visible=1
 Docked=0
 State=0
-Left=1695
-Top=1979
-Width=6526
-Height=7839
+Left=1825
+Top=1927
+Width=6296
+Height=7799
 MaxLeft=-8
 MaxTop=-13
-ClientWidth=6403
-ClientHeight=7331
+ClientWidth=6173
+ClientHeight=7292
 DockedToMainForm=0
 BorlandEditorCodeExplorer=BorlandEditorCodeExplorer@EditWindow0
 TopPanelSize=0
@@ -76,7 +67,7 @@ RightPanelSize=0
 BottomPanelSize=0
 BottomMiddlePanelSize=1458
 BottomMiddlePanelClients=DockSite0,ToDo List,MessageView
-BottomMiddelPanelData=0000080001020200000009000000446F636B53697465300E000000546F446F4C69737457696E646F77782A00000000000002B2050000000000000100000000782A00000F0000004D65737361676556696577466F726DFFFFFFFF
+BottomMiddelPanelData=0000080001020200000009000000446F636B53697465300E000000546F446F4C69737457696E646F77F22800000000000002B2050000000000000100000000F22800000F0000004D65737361676556696577466F726DFFFFFFFF
 
 [View0]
 CustomEditViewType=TWelcomePageView
@@ -88,65 +79,43 @@ WelcomePageURL=bds:/documentation.htm
 
 [View2]
 CustomEditViewType=TEditView
-Module=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnConsultaEspecial.pas
+Module=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UDM.pas
 CursorX=1
-CursorY=1076
-TopLine=1067
-LeftCol=1
-Elisions=
-Bookmarks=
-EditViewName=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnConsultaEspecial.pas
-
-[View3]
-CustomEditViewType=TEditView
-Module=d:\projetosesistemas\open arquivos d2018 - 10.7.7.20 - 10.2.3 toquio\UnConsultEspMaximized.pas
-CursorX=30
-CursorY=233
-TopLine=219
-LeftCol=1
-Elisions=
-Bookmarks=
-EditViewName=d:\projetosesistemas\open arquivos d2018 - 10.7.7.20 - 10.2.3 toquio\UnConsultEspMaximized.pas
-
-[View4]
-CustomEditViewType=TEditView
-Module=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnatribuiUsuariosPorArquivos.pas
-CursorX=5
-CursorY=55
-TopLine=48
-LeftCol=1
-Elisions=
-Bookmarks=
-EditViewName=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnatribuiUsuariosPorArquivos.pas
-
-[View5]
-CustomEditViewType=TEditView
-Module=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnLogin.pas
-CursorX=1
-CursorY=88
-TopLine=72
-LeftCol=1
-Elisions=
-Bookmarks=
-EditViewName=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnLogin.pas
-
-[View6]
-CustomEditViewType=TEditView
-Module=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UProjeto.pas
-CursorX=1
-CursorY=1
-TopLine=1
+CursorY=981
+TopLine=976
 LeftCol=1
 Elisions=
 Bookmarks=
 EditViewName=Borland.FormDesignerView
 
-[View7]
+[View3]
 CustomEditViewType=TEditView
-Module=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UDM.pas
-CursorX=1
-CursorY=499
-TopLine=497
+Module=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnConsultaEspecial.pas
+CursorX=47
+CursorY=511
+TopLine=506
+LeftCol=1
+Elisions=
+Bookmarks=
+EditViewName=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnConsultaEspecial.pas
+
+[View4]
+CustomEditViewType=TEditView
+Module=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnLogin.pas
+CursorX=54
+CursorY=195
+TopLine=116
+LeftCol=1
+Elisions=
+Bookmarks=
+EditViewName=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnLogin.pas
+
+[View5]
+CustomEditViewType=TEditView
+Module=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UProjeto.pas
+CursorX=72
+CursorY=883
+TopLine=850
 LeftCol=1
 Elisions=
 Bookmarks=
@@ -180,7 +149,8 @@ Dockable=1
 StayOnTop=0
 
 [Breakpoints]
-Count=0
+Count=1
+Breakpoint0='D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnConsultaEspecial.pas',504,'',0,1,'',1,0,0,'',1,'','','',0,''
 
 [EmbarcaderoWin32Debugger_AddressBreakpoints]
 Count=0
@@ -243,11 +213,11 @@ Docked=1
 State=0
 Left=0
 Top=18
-Width=6403
+Width=6173
 Height=1224
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=6403
+ClientWidth=6173
 ClientHeight=1224
 TBDockHeight=1224
 LRDockWidth=3520
@@ -279,7 +249,7 @@ Create=1
 Visible=0
 Docked=0
 State=0
-Left=475
+Left=0
 Top=0
 Width=1787
 Height=6107
@@ -298,16 +268,16 @@ Create=1
 Visible=0
 Docked=0
 State=0
-Left=0
+Left=475
 Top=0
-Width=2025
-Height=6680
+Width=1933
+Height=7031
 MaxLeft=-8
 MaxTop=-13
-ClientWidth=1902
-ClientHeight=6172
-TBDockHeight=6680
-LRDockWidth=2025
+ClientWidth=1810
+ClientHeight=6523
+TBDockHeight=7031
+LRDockWidth=1933
 Dockable=1
 StayOnTop=0
 
@@ -317,24 +287,24 @@ Create=1
 Visible=1
 Docked=0
 State=0
-Left=-15
-Top=1914
-Width=1695
-Height=7734
+Left=8
+Top=1940
+Width=1910
+Height=7786
 MaxLeft=-8
 MaxTop=-13
-ClientWidth=1572
-ClientHeight=7227
+ClientWidth=1787
+ClientHeight=7279
 TBDockHeight=5807
 LRDockWidth=1549
 Dockable=1
 StayOnTop=0
-SplitPos=104
+SplitPos=112
 
 [PropInspDesignerSelection]
 ArrangeBy=Name
-SelectedItem=Name,
-ExpandedItems="LiveBindings Designer=0",ProviderFlags=0,Connection=0,DataSet=1,FilterOptions=0,"DataSet.LiveBindings Designer=0",Driver=0,TableScope=0,DefaultFont=0,Restrictions=0,EngineOptions=0,PreviewOptions=0,PrintOptions=0,ReportOptions=0,Anchors=0,BorderIcons=0,Constraints=0
+SelectedItem=Action,AfterConnect
+ExpandedItems=DataSet=1,"LiveBindings Designer=0",DataSet.Connection=0,DataSet.DataSet=0,DataSet.FilterOptions=0,"DataSet.DataSet.LiveBindings Designer=0","DataSet.LiveBindings Designer=0",Connection=0,FilterOptions=0,Value=0,Driver=0,TableScope=0,SQLConnection=0,ProviderFlags=0,Anchors=0,BorderIcons=0,Constraints=0
 
 [ClassBrowserTool]
 PercentageSizes=1
@@ -361,8 +331,8 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=-299
-Top=-754
+Left=0
+Top=0
 Width=3566
 Height=4831
 MaxLeft=-1
@@ -380,8 +350,8 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=-299
-Top=-754
+Left=0
+Top=0
 Width=3566
 Height=4831
 MaxLeft=-1
@@ -596,8 +566,8 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=0
-Top=0
+Left=314
+Top=635
 Width=3673
 Height=1003
 MaxLeft=-1
@@ -725,7 +695,7 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=0
+Left=124
 Top=0
 Width=1472
 Height=8255
@@ -772,8 +742,8 @@ Create=1
 Visible=1
 Docked=0
 State=0
-Left=8106
-Top=1979
+Left=8137
+Top=1927
 Width=1787
 Height=8294
 MaxLeft=-8

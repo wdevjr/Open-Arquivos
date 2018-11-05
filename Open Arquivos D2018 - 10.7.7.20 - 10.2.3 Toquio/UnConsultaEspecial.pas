@@ -145,7 +145,6 @@ begin
     CodigoUserPorNome := '';
   end
 
-
 end;
 
 procedure TFrmView.DBGrid1CellClick(Column: TColumn);
@@ -349,7 +348,7 @@ begin
     with DM.sds_view_todos do
     begin
       DBGrid1.DataSource := DtsrcTodos;
-      //BitBtn2.Enabled := not IsEmpty;
+      // BitBtn2.Enabled := not IsEmpty;
     end;
     DM.sds_view_todos.CLOSE;
   end;
@@ -509,7 +508,9 @@ begin
         with DM.sds_view_todos do
         Begin
           CLOSE;
-          DM.sds_view_todos.Params[0].Value := '%' + EditPesqu.Text + '%';
+          DM.sds_view_todos.Params[0].Value :=EditPesqu.Text + '%';
+          DM.sds_view_todos.ParamByName('dsinicio').AsString :=(DateToStr(DateTimePicker1.Date));
+          DM.sds_view_todos.ParamByName('dsfim').AsString :=(DateToStr(DateTimePicker2.Date));
 
           // DM.sds_view_todos.Params[6].asInteger := FrmLogin.COD_USUARIO;
 
@@ -533,6 +534,7 @@ begin
               DtsrcTodos.DataSet.Filtered := False;
               DtsrcTodos.DataSet.Filter := ' IDUSUARIOS=' + CodigoUserPorNome;
             end;
+
             DtsrcTodos.DataSet.Filtered := True;
 
             // end;
@@ -555,6 +557,7 @@ begin
             PanelComplete.Visible := False;
           end;
         end;
+
       1:
         begin
           with DM.sds_view_todos do
@@ -583,11 +586,7 @@ begin
                 DtsrcTodos.DataSet.Filter := ' COD_USUARIO=' +
                   CodigoUserPorNome;
               end;
-              DtsrcTodos.DataSet.Filtered := True;
-              DBGrid1.DataSource := DtsrcTodos;
-              // end;
-            end;
-            // Params[6].asInteger := FrmLogin.COD_USUARIO;
+
 
             DBGrid1.DataSource := DtsrcTodos;
             Open;
@@ -605,6 +604,7 @@ begin
             PanelMaximizar.Visible := False;
             PanelComplete.Visible := False;
           end;
+        end;
         end;
       2:
         begin
@@ -641,6 +641,8 @@ begin
                   DtsrcTodos.DataSet.Filter := ' COD_USUARIO=' +
                     CodigoUserPorNome;
                 end;
+                
+
                 DtsrcTodos.DataSet.Filtered := True;
 
                 // end;
@@ -685,6 +687,7 @@ begin
                 DtsrcTodos.DataSet.Filter := ' COD_USUARIO=' +
                   CodigoUserPorNome;
               end;
+
               DtsrcTodos.DataSet.Filtered := True;
 
               // end;
@@ -739,6 +742,7 @@ begin
                 DtsrcTodos.DataSet.Filter := ' COD_USUARIO=' +
                   CodigoUserPorNome;
               end;
+
               DtsrcTodos.DataSet.Filtered := True;
 
               // end;
@@ -769,13 +773,13 @@ begin
   end
 
   else
-     with DM.sds_view do
-      begin
-        BitBtn1.Enabled := not IsEmpty;
-        SpeedButton3.Enabled := not IsEmpty;
-       // BitBtn2.Enabled := not IsEmpty;
-      end;
-      BitBtn1.Visible := False;
+    with DM.sds_view do
+    begin
+      BitBtn1.Enabled := not IsEmpty;
+      SpeedButton3.Enabled := not IsEmpty;
+      // BitBtn2.Enabled := not IsEmpty;
+    end;
+  BitBtn1.Visible := False;
 
   if (FrmLogin.TODOS = 0) then
   begin
@@ -816,6 +820,7 @@ begin
             end;
             Dtsrc.DataSet.Filtered := True;
           end;
+
           DM.sds_view.Open;
           DBGrid1.DataSource := Dtsrc;
 
@@ -838,11 +843,11 @@ begin
           DM.sds_view.DataSet.CommandText := '';
           DM.sds_view.DataSet.CommandText :=
             'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA, PO.NOME from ARQUIVOLIST AQ'
-            //+ ' inner join ARQUIVOS_USUARIOS N  on (AQ.ID = N.IDARQUIVOS) ' +
-           + ' inner join ASSUNTO SU on AQ.COD_ASSUNTO = SU.CODIGO ' +
+          // + ' inner join ARQUIVOS_USUARIOS N  on (AQ.ID = N.IDARQUIVOS) ' +
+            + ' inner join ASSUNTO SU on AQ.COD_ASSUNTO = SU.CODIGO ' +
             'inner join USUARIO PO on AQ.COD_USUARIO = PO.COD_USUARIO ' +
             'inner join AUTORES T on T.CODIGO = AQ.COD_AUTOR ' +
-            'where AQ.DESCRICAO like ' + QuotedStr('%'+ EditPesqu.Text + '%') +
+            'where AQ.DESCRICAO like ' + QuotedStr('%' + EditPesqu.Text + '%') +
           // ' and AQ.COD_USUARIO=' + IntToStr(FrmLogin.COD_USUARIO) +
             ' order by AQ.DESCRICAO';
           if (CodigoUser <> '') and (CodigoAssunto = '') and
@@ -863,6 +868,7 @@ begin
             Dtsrc.DataSet.Filtered := False;
             Dtsrc.DataSet.Filter := ' COD_USUARIO=' + CodigoUserPorNome;
           end;
+
           Dtsrc.DataSet.Filtered := True;
           // DBGrid1.DataSource := Dtsrc;
           // end;
@@ -894,8 +900,8 @@ begin
             DM.sds_view.CLOSE;
             DM.sds_view.DataSet.CommandText := '';
             DM.sds_view.DataSet.CommandText :=
-            'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME from ARQUIVOLIST AQ'
-            + ' inner join ARQUIVOS_USUARIOS N  on (AQ.ID = N.IDARQUIVOS) ' +
+              'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME from ARQUIVOLIST AQ'
+              + ' inner join ARQUIVOS_USUARIOS N  on (AQ.ID = N.IDARQUIVOS) ' +
               'inner join ASSUNTO SU on (AQ.COD_ASSUNTO = SU.CODIGO) ' +
               ' inner join USUARIO PO on (AQ.COD_USUARIO = PO.COD_USUARIO) ' +
               ' inner join AUTORES T on (T.CODIGO = AQ.COD_AUTOR) ' +
@@ -921,6 +927,7 @@ begin
                 Dtsrc.DataSet.Filtered := False;
                 Dtsrc.DataSet.Filter := ' COD_USUARIO=' + CodigoUserPorNome;
               end;
+
               Dtsrc.DataSet.Filtered := True;
               DBGrid1.DataSource := Dtsrc;
             end;
@@ -970,6 +977,7 @@ begin
               Dtsrc.DataSet.Filtered := False;
               Dtsrc.DataSet.Filter := 'COD_USUARIO=' + CodigoUserPorNome;
             end;
+            
             Dtsrc.DataSet.Filtered := True;
 
             // end;
@@ -1061,7 +1069,7 @@ begin
       begin
         BitBtn1.Enabled := not IsEmpty;
         SpeedButton3.Enabled := not IsEmpty;
-        //BitBtn2.Enabled := not IsEmpty;
+        // BitBtn2.Enabled := not IsEmpty;
       end;
       BitBtn1.Visible := False;
 

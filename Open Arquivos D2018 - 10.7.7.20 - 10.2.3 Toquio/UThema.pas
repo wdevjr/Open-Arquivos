@@ -36,7 +36,7 @@ implementation
 
 {$R *.dfm}
 
-uses UDM,UProjeto,UnContrUser;
+uses UDM, UProjeto, UnContrUser;
 
 procedure TFrmThemas.aplicarClick(Sender: TObject);
 var
@@ -51,8 +51,8 @@ begin
     (FrmContrUser.Dtscu.DataSet.State = dsInsert) or
     (FrmContrUser.Dtscu.DataSet.State = dsBrowse) then
   begin
-   // DM.cds_User.Edit;
-   // DM.cds_UserTHEMA.AsString := ListBox1.Items[ListBox1.ItemIndex];
+    // DM.cds_User.Edit;
+    // DM.cds_UserTHEMA.AsString := ListBox1.Items[ListBox1.ItemIndex];
   end;
 end;
 
@@ -112,8 +112,8 @@ begin
   if (FrPrincipal.Dtsrc.DataSet.State = dsEdit) or
     (FrPrincipal.Dtsrc.DataSet.State = dsInsert) then
   begin
-      DM.cds_User.Post;
-      DM.cds_User.ApplyUpdates(0);
+    DM.cds_User.Post;
+    DM.cds_User.ApplyUpdates(0);
   end;
 end;
 
