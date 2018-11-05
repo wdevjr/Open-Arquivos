@@ -33,7 +33,6 @@ type
     sds_OpenLOGIN: TStringField;
     sds_OpenSENHA: TStringField;
     sds_OpenLEMBRAR_SENHA: TStringField;
-    sds_OpenDATA: TDateField;
     sds_OpenNIVEL: TIntegerField;
     sds_OpenCOD_PERFIL: TIntegerField;
     sds_OpenADMINISTRADOR: TIntegerField;
@@ -46,7 +45,6 @@ type
     sdt_UserLOGIN: TStringField;
     sdt_UserSENHA: TStringField;
     sdt_UserLEMBRAR_SENHA: TStringField;
-    sdt_UserDATA: TDateField;
     sdt_UserNIVEL: TIntegerField;
     sdt_UserCOD_PERFIL: TIntegerField;
     sdt_UserADMINISTRADOR: TIntegerField;
@@ -58,7 +56,6 @@ type
     cds_UserLOGIN: TStringField;
     cds_UserSENHA: TStringField;
     cds_UserLEMBRAR_SENHA: TStringField;
-    cds_UserDATA: TDateField;
     cds_UserNIVEL: TIntegerField;
     cds_UserCOD_PERFIL: TIntegerField;
     cds_UserADMINISTRADOR: TIntegerField;
@@ -377,6 +374,9 @@ type
     sdt_ExcRepetidosDATAATUAL: TStringField;
     cds_ExcRepetidosDATAATUAL: TStringField;
     sds_view_todosDATA: TStringField;
+    sdt_UserDATA: TStringField;
+    cds_UserDATA: TStringField;
+    sds_OpenDATA: TStringField;
     procedure DataModuleCreate(Sender: TObject);
     function PreencheCombo: TStrings;
     function PreencheList: TStrings;
@@ -916,7 +916,7 @@ begin
   checado := frmlogin.ADMIN;
   if cds_User.State = dsInsert then
   begin
-    cds_UserDATA.Value := Date;
+    cds_UserDATA.Value := DateToStr(Date);
 
     if (checado = 0) then
     begin

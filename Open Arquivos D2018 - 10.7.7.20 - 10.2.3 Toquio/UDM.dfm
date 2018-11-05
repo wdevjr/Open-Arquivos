@@ -86,8 +86,8 @@ object DM: TDM
         ParamType = ptInput
       end>
     Params = <>
-    Left = 360
-    Top = 160
+    Left = 368
+    Top = 152
     object sdsss_UserCOD_USUARIO: TIntegerField
       FieldName = 'COD_USUARIO'
       Required = True
@@ -121,8 +121,8 @@ object DM: TDM
     DataSet.MaxBlobSize = -1
     DataSet.Params = <>
     Params = <>
-    Left = 440
-    Top = 160
+    Left = 448
+    Top = 152
     object sds_OpenCOD_USUARIO: TIntegerField
       FieldName = 'COD_USUARIO'
       Required = True
@@ -143,10 +143,6 @@ object DM: TDM
       FixedChar = True
       Size = 1
     end
-    object sds_OpenDATA: TDateField
-      FieldName = 'DATA'
-      Required = True
-    end
     object sds_OpenNIVEL: TIntegerField
       FieldName = 'NIVEL'
       Required = True
@@ -165,6 +161,11 @@ object DM: TDM
     end
     object sds_OpenTIPO_TODOS: TIntegerField
       FieldName = 'TIPO_TODOS'
+    end
+    object sds_OpenDATA: TStringField
+      FieldName = 'DATA'
+      Required = True
+      Size = 10
     end
   end
   object sds_Cont: TSimpleDataSet
@@ -222,11 +223,6 @@ object DM: TDM
       FixedChar = True
       Size = 1
     end
-    object sdt_UserDATA: TDateField
-      FieldName = 'DATA'
-      ProviderFlags = [pfInUpdate]
-      Required = True
-    end
     object sdt_UserNIVEL: TIntegerField
       FieldName = 'NIVEL'
       ProviderFlags = [pfInUpdate]
@@ -250,6 +246,11 @@ object DM: TDM
       FieldName = 'NOMEL'
       ProviderFlags = []
       Size = 70
+    end
+    object sdt_UserDATA: TStringField
+      FieldName = 'DATA'
+      Required = True
+      Size = 10
     end
   end
   object dsp_User: TDataSetProvider
@@ -297,11 +298,6 @@ object DM: TDM
       FixedChar = True
       Size = 1
     end
-    object cds_UserDATA: TDateField
-      FieldName = 'DATA'
-      ProviderFlags = [pfInUpdate]
-      Required = True
-    end
     object cds_UserNIVEL: TIntegerField
       FieldName = 'NIVEL'
       ProviderFlags = [pfInUpdate]
@@ -325,6 +321,11 @@ object DM: TDM
       FieldName = 'NOMEL'
       ProviderFlags = []
       Size = 70
+    end
+    object cds_UserDATA: TStringField
+      FieldName = 'DATA'
+      Required = True
+      Size = 10
     end
   end
   object sdt_User_Cod: TSQLDataSet
