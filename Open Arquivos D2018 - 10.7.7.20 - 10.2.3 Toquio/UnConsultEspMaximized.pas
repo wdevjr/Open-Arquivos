@@ -122,8 +122,7 @@ begin
         DBGrid1Max.Canvas.FillRect(Rect);
         DrawText(DBGrid1Max.Canvas.Handle,
           pchar(DM.sds_view.FieldByName('TITULO').asString),
-          Length(DM.sds_view.FieldByName('TITULO').asString), r,
-          DT_WORDBREAK);
+          Length(DM.sds_view.FieldByName('TITULO').asString), r, DT_WORDBREAK);
       end;
     end;
     if Column.Field = DM.sds_view.FieldByName('NOME_ARQUIVO') then
@@ -205,10 +204,10 @@ begin
   begin
     Dtsrc.DataSet := DM.sds_view;
   end;
-{  else
-  begin
+  { else
+    begin
     Dtsrc.DataSet := DM.sds_view_todos;
-  end; }
+    end; }
 end;
 
 procedure TFrmviewMax.SpeedButton1Click(Sender: TObject);
