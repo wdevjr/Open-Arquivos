@@ -504,6 +504,8 @@ begin
       0:
         begin
           DM.sds_view.CLOSE;
+          DM.sds_view.Params.Clear;
+          DM.sds_view.DataSet.Params.Clear;
           DM.sds_view.DataSet.CommandText := '';
           DM.sds_view.DataSet.CommandText :=
             'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME from ARQUIVOLIST AQ'
@@ -572,6 +574,8 @@ begin
       1:
         begin
           DM.sds_view.CLOSE;
+          DM.sds_view.Params.Clear;
+          DM.sds_view.DataSet.Params.Clear;
           DM.sds_view.DataSet.CommandText := '';
           DM.sds_view.DataSet.CommandText :=
             'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA, PO.NOME from ARQUIVOLIST AQ'
@@ -650,6 +654,8 @@ begin
           else
           begin
             DM.sds_view.CLOSE;
+          DM.sds_view.Params.Clear;
+          DM.sds_view.DataSet.Params.Clear;
             DM.sds_view.DataSet.CommandText := '';
             DM.sds_view.DataSet.CommandText :=
               'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME from ARQUIVOLIST AQ'
@@ -714,6 +720,8 @@ begin
       3:
         begin
           DM.sds_view.CLOSE;
+          DM.sds_view.Params.Clear;
+          DM.sds_view.DataSet.Params.Clear;
           DM.sds_view.DataSet.CommandText := '';
           DM.sds_view.DataSet.CommandText :=
             'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME from ARQUIVOLIST AQ'
@@ -783,6 +791,7 @@ begin
         end;
       4:
         begin
+          DM.sds_view.Params.Clear;
           DM.sds_view.DataSet.Params.Clear;
           EditPesqu.EditMask := '!99/99/0000;1;_';
           DM.sds_view.CLOSE;
@@ -863,6 +872,8 @@ begin
         0:
           begin
             DM.sds_view.CLOSE;
+            DM.sds_view.Params.Clear;
+            DM.sds_view.DataSet.Params.Clear;
             DM.sds_view.DataSet.CommandText := '';
             DM.sds_view.DataSet.CommandText :=
               'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME from ARQUIVOLIST AQ'
@@ -915,6 +926,8 @@ begin
         1:
           begin
             DM.sds_view.CLOSE;
+            DM.sds_view.Params.Clear;
+            DM.sds_view.DataSet.Params.Clear;
             DM.sds_view.DataSet.CommandText := '';
             DM.sds_view.DataSet.CommandText :=
               'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA, PO.NOME from ARQUIVOLIST AQ'
@@ -974,6 +987,8 @@ begin
             else
             begin
               DM.sds_view.CLOSE;
+              DM.sds_view.Params.Clear;
+              DM.sds_view.DataSet.Params.Clear;
               DM.sds_view.DataSet.CommandText := '';
               DM.sds_view.DataSet.CommandText :=
                 'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME from ARQUIVOLIST AQ'
@@ -1023,6 +1038,8 @@ begin
         3:
           begin
             DM.sds_view.CLOSE;
+            DM.sds_view.Params.Clear;
+            DM.sds_view.DataSet.Params.Clear;
             DM.sds_view.DataSet.CommandText := '';
             DM.sds_view.DataSet.CommandText :=
               'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME from ARQUIVOLIST AQ'
@@ -1079,6 +1096,8 @@ begin
           begin
             EditPesqu.EditMask := '!99/99/0000;1;_';
             DM.sds_view.CLOSE;
+            DM.sds_view.Params.Clear;
+            DM.sds_view.DataSet.Params.Clear;
             DM.sds_view.DataSet.CommandText := '';
             DM.sds_view.DataSet.CommandText :=
               'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME from ARQUIVOLIST AQ'
