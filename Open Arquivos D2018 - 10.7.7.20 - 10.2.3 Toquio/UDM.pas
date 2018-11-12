@@ -185,18 +185,15 @@ type
     sdt_ExcAtual: TSQLDataSet;
     sdt_ExcAtualCOD_USUARIO: TIntegerField;
     sdt_ExcAtualCODIGO: TIntegerField;
-    sdt_ExcAtualDATAATUAL: TDateField;
     sdt_ExcAtualORDEM: TIntegerField;
     sdt_ExcUser: TSQLDataSet;
     sdt_ExcUserCOD_USUARIO: TIntegerField;
     sdt_ExcUserCODIGO: TIntegerField;
-    sdt_ExcUserDATAATUAL: TDateField;
     sdt_ExcUserORDEM: TIntegerField;
     dsp_ExcUser: TDataSetProvider;
     cds_ExcUser: TClientDataSet;
     cds_ExcUserCOD_USUARIO: TIntegerField;
     cds_ExcUserCODIGO: TIntegerField;
-    cds_ExcUserDATAATUAL: TDateField;
     cds_ExcUserORDEM: TIntegerField;
     sdt_ExcRepetidos: TSQLDataSet;
     sdt_ExcRepetidosCOD_USUARIO: TIntegerField;
@@ -365,18 +362,20 @@ type
     sds_Report_DetalheADMINISTRADOR: TIntegerField;
     frxGradientObject1: TfrxGradientObject;
     frxDesigner1: TfrxDesigner;
-    sdt_ArquivoDATA: TStringField;
-    cds_ArquivoDATA: TStringField;
-    sdt_LogINSERDATA: TStringField;
-    cds_LogINSERDATA: TStringField;
-    sdt_LogadosDATAATUAL: TStringField;
-    cds_LogadosDATAATUAL: TStringField;
-    sdt_ExcRepetidosDATAATUAL: TStringField;
-    cds_ExcRepetidosDATAATUAL: TStringField;
     sds_view_todosDATA: TStringField;
-    sdt_UserDATA: TStringField;
-    cds_UserDATA: TStringField;
-    sds_OpenDATA: TStringField;
+    sdt_LogINSERDATA: TDateField;
+    cds_LogINSERDATA: TDateField;
+    sdt_LogadosDATAATUAL: TDateField;
+    cds_LogadosDATAATUAL: TDateField;
+    sdt_ArquivoDATA: TDateField;
+    cds_ArquivoDATA: TDateField;
+    sdt_UserDATA: TDateField;
+    cds_UserDATA: TDateField;
+    sds_OpenDATA: TDateField;
+    sdt_ExcUserDATAATUAL: TDateField;
+    cds_ExcUserDATAATUAL: TDateField;
+    sdt_ExcRepetidosDATAATUAL: TDateField;
+    cds_ExcRepetidosDATAATUAL: TDateField;
     procedure DataModuleCreate(Sender: TObject);
     function PreencheCombo: TStrings;
     function PreencheList: TStrings;
@@ -692,10 +691,14 @@ begin
 end;
 
 procedure TDM.cds_ArquivoBeforePost(DataSet: TDataSet);
+var
+DataInserimento:String;
 begin
   if cds_Arquivo.State = dsInsert then
   begin
-    cds_ArquivoDATA.Value := DateToStr(Date);
+    DataInserimento := DM.cds_ArquivoDATA.AsString;
+
+    cds_ArquivoDATA.Value := Date;//FormatDateTime('dd/MM/yyyy',StrToDate(DataInserimento));
     cds_ArquivoHORA.Value := Time;
   end;
 
@@ -836,7 +839,7 @@ procedure TDM.cds_LogadosBeforePost(DataSet: TDataSet);
 begin
   if cds_Logados.State = dsInsert then
     IncrementaPersonalizado('NUM_LOGADOS', cds_LogadosCODIGO);
-  cds_LogadosDATAATUAL.Value := DateToStr(Date);
+  cds_LogadosDATAATUAL.Value := Date;
 
 end;
 
@@ -873,7 +876,7 @@ procedure TDM.cds_LogBeforePost(DataSet: TDataSet);
 begin
   if cds_Log.State = dsInsert then
     IncrementaPersonalizado('LOG', cds_LogCODIGO);
-  cds_LogINSERDATA.Value := DateToStr(Date);
+  cds_LogINSERDATA.Value := Date;
 
 end;
 
@@ -916,7 +919,7 @@ begin
   checado := frmlogin.ADMIN;
   if cds_User.State = dsInsert then
   begin
-    cds_UserDATA.Value := DateToStr(Date);
+    cds_UserDATA.Value := Date;
 
     if (checado = 0) then
     begin

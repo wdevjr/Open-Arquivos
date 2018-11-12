@@ -162,10 +162,9 @@ object DM: TDM
     object sds_OpenTIPO_TODOS: TIntegerField
       FieldName = 'TIPO_TODOS'
     end
-    object sds_OpenDATA: TStringField
+    object sds_OpenDATA: TDateField
       FieldName = 'DATA'
       Required = True
-      Size = 10
     end
   end
   object sds_Cont: TSimpleDataSet
@@ -247,10 +246,10 @@ object DM: TDM
       ProviderFlags = []
       Size = 70
     end
-    object sdt_UserDATA: TStringField
+    object sdt_UserDATA: TDateField
       FieldName = 'DATA'
+      ProviderFlags = [pfInUpdate]
       Required = True
-      Size = 10
     end
   end
   object dsp_User: TDataSetProvider
@@ -322,10 +321,10 @@ object DM: TDM
       ProviderFlags = []
       Size = 70
     end
-    object cds_UserDATA: TStringField
+    object cds_UserDATA: TDateField
       FieldName = 'DATA'
+      ProviderFlags = [pfInUpdate]
       Required = True
-      Size = 10
     end
   end
   object sdt_User_Cod: TSQLDataSet
@@ -1135,10 +1134,10 @@ object DM: TDM
       ProviderFlags = [pfInUpdate]
       Required = True
     end
-    object sdt_LogadosDATAATUAL: TStringField
+    object sdt_LogadosDATAATUAL: TDateField
       FieldName = 'DATAATUAL'
+      ProviderFlags = [pfInUpdate]
       Required = True
-      Size = 10
     end
   end
   object dsp_Logados: TDataSetProvider
@@ -1176,10 +1175,10 @@ object DM: TDM
       ProviderFlags = [pfInUpdate]
       Required = True
     end
-    object cds_LogadosDATAATUAL: TStringField
+    object cds_LogadosDATAATUAL: TDateField
       FieldName = 'DATAATUAL'
+      ProviderFlags = [pfInUpdate]
       Required = True
-      Size = 10
     end
   end
   object DtsrcLogados: TDataSource
@@ -1206,10 +1205,6 @@ object DM: TDM
     end
     object sdt_ExcAtualCODIGO: TIntegerField
       FieldName = 'CODIGO'
-      Required = True
-    end
-    object sdt_ExcAtualDATAATUAL: TDateField
-      FieldName = 'DATAATUAL'
       Required = True
     end
     object sdt_ExcAtualORDEM: TIntegerField
@@ -1242,13 +1237,13 @@ object DM: TDM
       ProviderFlags = [pfInUpdate]
       Required = True
     end
-    object sdt_ExcUserDATAATUAL: TDateField
-      FieldName = 'DATAATUAL'
+    object sdt_ExcUserORDEM: TIntegerField
+      FieldName = 'ORDEM'
       ProviderFlags = [pfInUpdate]
       Required = True
     end
-    object sdt_ExcUserORDEM: TIntegerField
-      FieldName = 'ORDEM'
+    object sdt_ExcUserDATAATUAL: TDateField
+      FieldName = 'DATAATUAL'
       ProviderFlags = [pfInUpdate]
       Required = True
     end
@@ -1275,13 +1270,13 @@ object DM: TDM
       ProviderFlags = [pfInUpdate]
       Required = True
     end
-    object cds_ExcUserDATAATUAL: TDateField
-      FieldName = 'DATAATUAL'
+    object cds_ExcUserORDEM: TIntegerField
+      FieldName = 'ORDEM'
       ProviderFlags = [pfInUpdate]
       Required = True
     end
-    object cds_ExcUserORDEM: TIntegerField
-      FieldName = 'ORDEM'
+    object cds_ExcUserDATAATUAL: TDateField
+      FieldName = 'DATAATUAL'
       ProviderFlags = [pfInUpdate]
       Required = True
     end
@@ -1314,10 +1309,10 @@ object DM: TDM
       FieldName = 'ORDEM'
       ProviderFlags = []
     end
-    object sdt_ExcRepetidosDATAATUAL: TStringField
+    object sdt_ExcRepetidosDATAATUAL: TDateField
       FieldName = 'DATAATUAL'
+      ProviderFlags = [pfInUpdate]
       Required = True
-      Size = 10
     end
   end
   object dsp_ExcRepetidos: TDataSetProvider
@@ -1350,10 +1345,10 @@ object DM: TDM
       FieldName = 'ORDEM'
       ProviderFlags = []
     end
-    object cds_ExcRepetidosDATAATUAL: TStringField
+    object cds_ExcRepetidosDATAATUAL: TDateField
       FieldName = 'DATAATUAL'
+      ProviderFlags = [pfInUpdate]
       Required = True
-      Size = 10
     end
   end
   object sdt_CadDep: TSQLDataSet
@@ -1550,11 +1545,6 @@ object DM: TDM
       ProviderFlags = [pfInUpdate]
       Required = True
     end
-    object sdt_LogINSERDATA: TStringField
-      FieldName = 'INSERDATA'
-      Required = True
-      Size = 10
-    end
     object sdt_LogHORA: TTimeField
       FieldName = 'HORA'
       ProviderFlags = [pfInUpdate]
@@ -1582,6 +1572,11 @@ object DM: TDM
       FieldName = 'DISCRIMINACAO'
       ProviderFlags = [pfInUpdate]
       Size = 300
+    end
+    object sdt_LogINSERDATA: TDateField
+      FieldName = 'INSERDATA'
+      ProviderFlags = [pfInUpdate]
+      Required = True
     end
   end
   object dsp_Log: TDataSetProvider
@@ -1613,11 +1608,6 @@ object DM: TDM
       ProviderFlags = [pfInUpdate]
       Required = True
     end
-    object cds_LogINSERDATA: TStringField
-      FieldName = 'INSERDATA'
-      Required = True
-      Size = 10
-    end
     object cds_LogHORA: TTimeField
       FieldName = 'HORA'
       ProviderFlags = [pfInUpdate]
@@ -1645,6 +1635,11 @@ object DM: TDM
       FieldName = 'DISCRIMINACAO'
       ProviderFlags = [pfInUpdate]
       Size = 300
+    end
+    object cds_LogINSERDATA: TDateField
+      FieldName = 'INSERDATA'
+      ProviderFlags = [pfInUpdate]
+      Required = True
     end
   end
   object sds_Verif: TSimpleDataSet
@@ -1686,6 +1681,7 @@ object DM: TDM
       ProviderFlags = [pfInUpdate]
     end
     object sdt_ArquivoCOD_ASSUNTO: TIntegerField
+      DisplayWidth = 15
       FieldName = 'COD_ASSUNTO'
       ProviderFlags = [pfInUpdate]
     end
@@ -1697,12 +1693,6 @@ object DM: TDM
       FieldName = 'TITULO'
       ProviderFlags = [pfInUpdate]
       Size = 140
-    end
-    object sdt_ArquivoDATA: TStringField
-      FieldName = 'DATA'
-      Required = True
-      EditMask = '!99/99/0000;1;_'
-      Size = 10
     end
     object sdt_ArquivoNOME_ARQUIVO: TStringField
       FieldName = 'NOME_ARQUIVO'
@@ -1754,6 +1744,11 @@ object DM: TDM
       ProviderFlags = []
       Size = 140
     end
+    object sdt_ArquivoDATA: TDateField
+      FieldName = 'DATA'
+      ProviderFlags = [pfInUpdate]
+      Required = True
+    end
   end
   object dsp_Arquivo: TDataSetProvider
     DataSet = sdt_Arquivo
@@ -1796,12 +1791,6 @@ object DM: TDM
       FieldName = 'TITULO'
       ProviderFlags = [pfInUpdate]
       Size = 140
-    end
-    object cds_ArquivoDATA: TStringField
-      FieldName = 'DATA'
-      Required = True
-      EditMask = '!99/99/0000;1;_'
-      Size = 10
     end
     object cds_ArquivoNOME_ARQUIVO: TStringField
       FieldName = 'NOME_ARQUIVO'
@@ -1852,6 +1841,11 @@ object DM: TDM
       FieldName = 'NOME'
       ProviderFlags = []
       Size = 140
+    end
+    object cds_ArquivoDATA: TDateField
+      FieldName = 'DATA'
+      ProviderFlags = [pfInUpdate]
+      Required = True
     end
   end
   object sdt_CadCidades: TSQLDataSet
@@ -2065,7 +2059,7 @@ object DM: TDM
       'VendorLib=fbclient.dll'
       'VendorLibWin64=fbclient.dll'
       'VendorLibOsx=/Library/Frameworks/Firebird.framework/Firebird'
-      'Database=127.0.0.1:D:\Banco\3.x\OPENARQUIVOS\OPENARQUIVOS.FDB'
+      'Database=127.0.0.1:D:\Banco\3.x\OPENARQUIVOS\2\OPENARQUIVOS.FDB'
       'User_Name=sysdba'
       'Password=masterkey'
       'Role=RoleName'
@@ -2229,7 +2223,7 @@ object DM: TDM
     Params = <>
     OnReconcileError = sds_listaAddReconcileError
     Left = 672
-    Top = 32
+    Top = 24
     object sds_listaAddCOD_USUARIO: TIntegerField
       DisplayLabel = 'C'#243'digo da Pessoa'
       FieldName = 'COD_USUARIO'

@@ -242,6 +242,7 @@ var
     respLogar, respLogados: Integer;
   thema: TStyleManager;
 
+
 implementation
 
 uses UDMII, ShellAPI, UnAbertura, UnLogin, UnCadDepartamento, UnCadCidades,
@@ -895,6 +896,8 @@ begin
 end;
 
 procedure TFrPrincipal.btntrazerClick(Sender: TObject);
+var
+DataInserimento:String;
 begin
   FrmArquProc := TFrmArquProc.Create(Application);
   // FrmArquProc.ShowModal;
@@ -910,7 +913,8 @@ begin
 
         // DM.cds_arquivo.Params[0].AsInteger := DM.sds_arquID.AsInteger;
         DM.cds_arquivo.Open;
-
+        //DataInserimento := DM.cds_ArquivoDATA.AsString;
+       // DBText6.Caption:= FormatDateTime('dd/MM/yyyy',StrToDate(DataInserimento));
         FrmProcedimento.Progress;
         FrmProcedimento.Close;
 
@@ -925,7 +929,8 @@ begin
         // lookUser.Visible:=true;
         DM.cds_arquivo.Params[0].AsInteger := DM.sds_ArquTodosID.AsInteger;
         DM.cds_arquivo.Open;
-
+       // DataInserimento := DM.cds_ArquivoDATA.AsString;
+       // DBText6.Caption:= FormatDateTime('dd/MM/yyyy',StrToDate(DataInserimento));
         FrmProcedimento.Progress;
         FrmProcedimento.Close;
 
@@ -1665,7 +1670,7 @@ begin
     DtscLog.DataSet.Open;
     DtscLog.DataSet.Append;
     DM.cds_LogCOD_USUARIO.Value := FrmLogin.COD_USUARIO;
-    DM.cds_LogINSERDATA.Value := DateToStr(Date);
+    DM.cds_LogINSERDATA.Value := Date;
     DM.cds_LogHORA.Value := Time;
     DM.cds_LogCOD_ACAO.Value := 3;
     DM.cds_LogACAO.Value := 'ALTEROU';
@@ -1719,7 +1724,7 @@ begin
     DtscLog.DataSet.Open;
     DtscLog.DataSet.Append;
     DM.cds_LogCOD_USUARIO.Value := FrmLogin.COD_USUARIO;
-    DM.cds_LogINSERDATA.Value := DateToStr(Date);
+    DM.cds_LogINSERDATA.Value := Date;
     DM.cds_LogHORA.Value := Time;
     DM.cds_LogCOD_ACAO.Value := 2;
     DM.cds_LogACAO.Value := 'EXCLUIU';
@@ -2072,7 +2077,7 @@ begin
 
     // Log
     DM.cds_LogCOD_USUARIO.Value := FrmLogin.COD_USUARIO;
-    DM.cds_LogINSERDATA.Value := DateToStr(Date);
+    DM.cds_LogINSERDATA.Value := Date;
     DM.cds_LogHORA.Value := Time;
     DM.cds_LogCOD_ACAO.Value := 1;
     DM.cds_LogACAO.Value := 'GRAVOU';

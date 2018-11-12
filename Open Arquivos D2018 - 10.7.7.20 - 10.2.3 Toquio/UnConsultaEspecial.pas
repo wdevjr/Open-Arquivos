@@ -404,11 +404,7 @@ end;
 
 procedure TFrmView.RadioGroup1Click(Sender: TObject);
 begin
-  Dtsrc.DataSet.CLOSE;
-  DtsrcTodos.DataSet.CLOSE;
-  DtsrcCod.DataSet.CLOSE;
-  Dtscra.DataSet.CLOSE;
-  Dtscru.DataSet.CLOSE;
+
 
   { EditPesqu.text := '';
     Alert.Visible := False;
@@ -497,7 +493,7 @@ end;
 
 procedure TFrmView.SpeedButton2Click(Sender: TObject);
 var
-  Inicial, Final: string;
+  Inicial, Finall: string;
 begin
 
   // DM.sds_view.CLOSE;
@@ -521,8 +517,8 @@ begin
             ' order by AQ.NOME_ARQUIVO';
           if PanelMostrData.Visible = True then
           begin
-            Inicial := FormatDateTime('yyyy-MM-dd', DateTimePicker1.Date);
-            Final := FormatDateTime('yyyy-MM-dd', DateTimePicker2.Date);
+            Inicial := DateToStr(DateTimePicker1.Date); //FormatDateTime('yyyy-MM-dd', );
+            Finall := DateToStr(DateTimePicker2.Date); //FormatDateTime('yyyy-MM-dd', DateTimePicker2.Date);
             DM.sds_view.CLOSE;
             DM.sds_view.DataSet.CommandText := '';
             DM.sds_view.DataSet.CommandText :=
@@ -531,7 +527,7 @@ begin
               ' inner join AUTORES T on (T.CODIGO = AQ.COD_AUTOR)' +
               ' where AQ.NOME_ARQUIVO like ' +
               QuotedStr('%' + EditPesqu.Text + '%') + ' and AQ.DATA >=' +
-              QuotedStr(Inicial) + ' and AQ.DATA <=' + QuotedStr(Final) +
+              QuotedStr(Inicial) + ' and AQ.DATA <=' + QuotedStr(Finall) +
               ' order by AQ.NOME_ARQUIVO';
           end;
           if (CheckBoxConsulta.Checked = True) then
@@ -588,8 +584,8 @@ begin
             ' order by AQ.DESCRICAO';
           if PanelMostrData.Visible = True then
           begin
-            Inicial := FormatDateTime('yyyy-MM-dd', DateTimePicker1.Date);
-            Final := FormatDateTime('yyyy-MM-dd', DateTimePicker2.Date);
+            Inicial := DateToStr(DateTimePicker1.Date); //FormatDateTime('yyyy-MM-dd', );
+            Finall := DateToStr(DateTimePicker2.Date); //FormatDateTime('yyyy-MM-dd', DateTimePicker2.Date);
             DM.sds_view.CLOSE;
             DM.sds_view.DataSet.CommandText := '';
             DM.sds_view.DataSet.CommandText :=
@@ -597,10 +593,15 @@ begin
               + ' inner join USUARIO U on (AQ.COD_USUARIO = U.COD_USUARIO)' +
               ' inner join AUTORES T on (T.CODIGO = AQ.COD_AUTOR)' +
               ' where AQ.NOME_ARQUIVO like ' +
-              QuotedStr('%' + EditPesqu.Text + '%') + ' and AQ.DATA >=' +
-              QuotedStr(Inicial) + ' and AQ.DATA <=' + QuotedStr(Final) +
+              QuotedStr('%' + EditPesqu.Text + '%') +
+              ' and AQ.DATA >= :inicial'+
+              ' and AQ.DATA <= :finall' +
               ' order by AQ.NOME_ARQUIVO';
+              DM.sds_view.DataSet.ParamByName('inicial').AsString := Inicial;
+              DM.sds_view.DataSet.ParamByName('finall').AsString := Finall;
           end;
+          if (CheckBoxConsulta.Checked = True) then
+          begin
           if (CodigoUser <> '') and (CodigoAssunto = '') and
             (CodigoUserPorNome = '') then
           begin
@@ -622,7 +623,7 @@ begin
 
           Dtsrc.DataSet.Filtered := True;
           // DBGrid1.DataSource := Dtsrc;
-          // end;
+           end;
           DM.sds_view.Open;
           DBGrid1.DataSource := Dtsrc;
 
@@ -660,8 +661,8 @@ begin
               IntToStr(FrmLogin.COD_USUARIO) + ' order by AQ.ID ';
             if PanelMostrData.Visible = True then
             begin
-              Inicial := FormatDateTime('yyyy-MM-dd', DateTimePicker1.Date);
-              Final := FormatDateTime('yyyy-MM-dd', DateTimePicker2.Date);
+            Inicial := DateToStr(DateTimePicker1.Date); //FormatDateTime('yyyy-MM-dd', );
+            Finall := DateToStr(DateTimePicker2.Date); //FormatDateTime('yyyy-MM-dd', DateTimePicker2.Date);
               DM.sds_view.CLOSE;
               DM.sds_view.DataSet.CommandText := '';
               DM.sds_view.DataSet.CommandText :=
@@ -670,7 +671,7 @@ begin
                 ' inner join AUTORES T on (T.CODIGO = AQ.COD_AUTOR)' +
                 ' where AQ.NOME_ARQUIVO like ' +
                 QuotedStr('%' + EditPesqu.Text + '%') + ' and AQ.DATA >=' +
-                QuotedStr(Inicial) + ' and AQ.DATA <=' + QuotedStr(Final) +
+                QuotedStr(Inicial) + ' and AQ.DATA <=' + QuotedStr(Finall) +
                 ' order by AQ.NOME_ARQUIVO';
             end;
             if (CheckBoxConsulta.Checked = True) then
@@ -725,8 +726,8 @@ begin
             ' order by AQ.TITULO';
           if PanelMostrData.Visible = True then
           begin
-            Inicial := FormatDateTime('yyyy-MM-dd', DateTimePicker1.Date);
-            Final := FormatDateTime('yyyy-MM-dd', DateTimePicker2.Date);
+            Inicial := DateToStr(DateTimePicker1.Date); //FormatDateTime('yyyy-MM-dd', );
+            Finall := DateToStr(DateTimePicker2.Date); //FormatDateTime('yyyy-MM-dd', DateTimePicker2.Date);
             DM.sds_view.CLOSE;
             DM.sds_view.DataSet.CommandText := '';
             DM.sds_view.DataSet.CommandText :=
@@ -735,7 +736,7 @@ begin
               ' inner join AUTORES T on (T.CODIGO = AQ.COD_AUTOR)' +
               ' where AQ.NOME_ARQUIVO like ' +
               QuotedStr('%' + EditPesqu.Text + '%') + ' and AQ.DATA >=' +
-              QuotedStr(Inicial) + ' and AQ.DATA <=' + QuotedStr(Final) +
+              QuotedStr(Inicial) + ' and AQ.DATA <=' + QuotedStr(Finall) +
               ' order by AQ.NOME_ARQUIVO';
           end;
           if (CheckBoxConsulta.Checked = True) then

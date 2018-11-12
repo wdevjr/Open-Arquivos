@@ -115,7 +115,7 @@ begin
     Dtsrc.DataSet.Append;
     Dtsrc.DataSet.Insert;
     DM.cds_LogCOD_USUARIO.Value := COD_USUARIO;
-    DM.cds_LogINSERDATA.Value := DateToStr(Date);
+    DM.cds_LogINSERDATA.Value := Date;
     DM.cds_LogHORA.Value := Time;
     DM.cds_LogCOD_ACAO.Value := 4;
     DM.cds_LogACAO.Value := 'LOGOU';
@@ -192,7 +192,7 @@ begin
     DtsrcLogados.DataSet.Append;
     DM.cds_LogadosORDEM.Value := 1;
     DM.cds_LogadosCOD_USUARIO.Value := COD_USUARIO;
-    DM.cds_LogadosDATAATUAL.Value := DateToStr(Date);
+    DM.cds_LogadosDATAATUAL.Value := Date;
     DtsrcLogados.DataSet.Post;
     (DtsrcLogados.DataSet as TClientDataSet).ApplyUpdates(0);
   end
