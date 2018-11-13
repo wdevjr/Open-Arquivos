@@ -931,11 +931,11 @@ begin
             DM.sds_view.DataSet.Params.Clear;
             DM.sds_view.DataSet.CommandText := '';
             DM.sds_view.DataSet.CommandText :=
-            'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME,SU.TITULOASSUN from ARQUIVOS_USUARIOS N '
-            + ' inner join ARQUIVOLIST AQ on (AQ.ID = N.IDARQUIVOS) ' +
+            'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,SU.TITULOASSUN,PO.NOME from ARQUIVOS_USUARIOS N '
+            +' inner join ARQUIVOLIST AQ on (AQ.ID = N.IDARQUIVOS) ' +
             ' inner join ASSUNTO SU on AQ.COD_ASSUNTO = SU.CODIGO ' +
             'inner join USUARIO PO on AQ.COD_USUARIO = PO.COD_USUARIO ' +
-            'inner join AUTORES T on T.CODIGO = AQ.COD_AUTOR ' +
+            //'inner join AUTORES T on T.CODIGO = AQ.COD_AUTOR ' +
             'where AQ.DESCRICAO like ' + QuotedStr('%' + EditPesqu.Text + '%') +
             ' and N.IDUSUARIOS=' + IntToStr(FrmLogin.COD_USUARIO) +
             ' order by AQ.DESCRICAO';
