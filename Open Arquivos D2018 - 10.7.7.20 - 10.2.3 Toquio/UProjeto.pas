@@ -911,7 +911,7 @@ begin
     begin
       try
 
-        // DM.cds_arquivo.Params[0].AsInteger := DM.sds_arquID.AsInteger;
+        DM.cds_arquivo.Params[0].AsInteger := DM.sds_arqu.FieldByName('ID').AsInteger;
         DM.cds_arquivo.Open;
         //DataInserimento := DM.cds_ArquivoDATA.AsString;
        // DBText6.Caption:= FormatDateTime('dd/MM/yyyy',StrToDate(DataInserimento));

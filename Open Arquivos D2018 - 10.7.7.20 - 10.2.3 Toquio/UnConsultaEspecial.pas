@@ -863,7 +863,8 @@ begin
       BitBtn1.Visible := False;
 
     end;
-    BitBtn1.Visible := False;
+  end;
+    //BitBtn1.Visible := False;
 
     if (FrmLogin.TODOS = 0) then
     begin
@@ -876,7 +877,7 @@ begin
             DM.sds_view.DataSet.Params.Clear;
             DM.sds_view.DataSet.CommandText := '';
             DM.sds_view.DataSet.CommandText :=
-              'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME from ARQUIVOLIST AQ'
+              'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME from ARQUIVOS_USUARIOS N'
               + ' inner join ARQUIVOS_USUARIOS N  on (AQ.ID = N.IDARQUIVOS) ' +
               ' inner join ARQUIVOS_USUARIOS N on (N.IDARQUIVOS = AQ.ID) and (N.IDUSUARIOS = AQ.COD_USUARIO)'
               + ' inner join USUARIO U on (N.IDUSUARIOS = U.COD_USUARIO)' +
@@ -930,15 +931,14 @@ begin
             DM.sds_view.DataSet.Params.Clear;
             DM.sds_view.DataSet.CommandText := '';
             DM.sds_view.DataSet.CommandText :=
-              'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA, PO.NOME from ARQUIVOLIST AQ'
-            // + ' inner join ARQUIVOS_USUARIOS N  on (AQ.ID = N.IDARQUIVOS) ' +
-              + ' inner join ASSUNTO SU on AQ.COD_ASSUNTO = SU.CODIGO ' +
-              'inner join USUARIO PO on AQ.COD_USUARIO = PO.COD_USUARIO ' +
-              'inner join AUTORES T on T.CODIGO = AQ.COD_AUTOR ' +
-              'where AQ.DESCRICAO like ' +
-              QuotedStr('%' + EditPesqu.Text + '%') +
-            // ' and AQ.COD_USUARIO=' + IntToStr(FrmLogin.COD_USUARIO) +
-              ' order by AQ.DESCRICAO';
+            'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME,SU.TITULOASSUN from ARQUIVOS_USUARIOS N '
+            + ' inner join ARQUIVOLIST AQ on (AQ.ID = N.IDARQUIVOS) ' +
+            ' inner join ASSUNTO SU on AQ.COD_ASSUNTO = SU.CODIGO ' +
+            'inner join USUARIO PO on AQ.COD_USUARIO = PO.COD_USUARIO ' +
+            'inner join AUTORES T on T.CODIGO = AQ.COD_AUTOR ' +
+            'where AQ.DESCRICAO like ' + QuotedStr('%' + EditPesqu.Text + '%') +
+            ' and N.IDUSUARIOS=' + IntToStr(FrmLogin.COD_USUARIO) +
+            ' order by AQ.DESCRICAO';
             if (CodigoUser <> '') and (CodigoAssunto = '') and
               (CodigoUserPorNome = '') then
             begin
@@ -991,8 +991,8 @@ begin
               DM.sds_view.DataSet.Params.Clear;
               DM.sds_view.DataSet.CommandText := '';
               DM.sds_view.DataSet.CommandText :=
-                'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME from ARQUIVOLIST AQ'
-                + ' inner join ARQUIVOS_USUARIOS N  on (AQ.ID = N.IDARQUIVOS) '
+                'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME from ARQUIVOS_USUARIOS N'
+                + ' inner join ARQUIVOLIST AQ  on (AQ.ID = N.IDARQUIVOS) '
                 + 'inner join ASSUNTO SU on (AQ.COD_ASSUNTO = SU.CODIGO) ' +
                 ' inner join USUARIO PO on (AQ.COD_USUARIO = PO.COD_USUARIO) ' +
                 ' inner join AUTORES T on (T.CODIGO = AQ.COD_AUTOR) ' +
@@ -1042,8 +1042,8 @@ begin
             DM.sds_view.DataSet.Params.Clear;
             DM.sds_view.DataSet.CommandText := '';
             DM.sds_view.DataSet.CommandText :=
-              'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME from ARQUIVOLIST AQ'
-              + ' inner join ARQUIVOS_USUARIOS N  on (AQ.ID = N.IDARQUIVOS) ' +
+              'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME from ARQUIVOS_USUARIOS N'
+              + ' inner join ARQUIVOLIST AQ  on (AQ.ID = N.IDARQUIVOS) ' +
               ' inner join ASSUNTO SU on (AQ.COD_ASSUNTO = SU.CODIGO) ' +
               ' inner join USUARIO PO on (AQ.COD_USUARIO = PO.COD_USUARIO) ' +
               ' inner join AUTORES T on (T.CODIGO = AQ.COD_AUTOR) ' +
@@ -1100,8 +1100,8 @@ begin
             DM.sds_view.DataSet.Params.Clear;
             DM.sds_view.DataSet.CommandText := '';
             DM.sds_view.DataSet.CommandText :=
-              'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME from ARQUIVOLIST AQ'
-              + ' inner join ARQUIVOS_USUARIOS N  on (AQ.ID = N.IDARQUIVOS) ' +
+              'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME from ARQUIVOS_USUARIOS N'
+              + ' inner join ARQUIVOLIST AQ  on (AQ.ID = N.IDARQUIVOS) ' +
               'inner join ASSUNTO SU on AQ.COD_ASSUNTO = SU.CODIGO ' +
               'inner join USUARIO PO on AQ.COD_USUARIO = PO.COD_USUARIO ' +
               'inner join AUTORES T on (T.CODIGO = AQ.COD_AUTOR) ' +
@@ -1171,7 +1171,6 @@ begin
       end;
     end;
   end;
-end;
 
 procedure TFrmView.SpeedButton3Click(Sender: TObject);
 begin
