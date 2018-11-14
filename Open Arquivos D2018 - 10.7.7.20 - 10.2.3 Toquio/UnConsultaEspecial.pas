@@ -59,11 +59,8 @@ type
     desabilitar02: TSpeedButton;
     DBEdit2: TDBEdit;
     Panel8: TPanel;
-    SpeedButton1: TSpeedButton;
     Label1: TLabel;
     DBText1: TDBText;
-    habilitar01: TSpeedButton;
-    desabilitar01: TSpeedButton;
     DBEdit1: TDBEdit;
     PanelData: TPanel;
     SpeedButton11: TSpeedButton;
@@ -76,12 +73,10 @@ type
     GroupBox1: TGroupBox;
     CheckBoxConsulta: TCheckBox;
     Panel4: TPanel;
-    SpeedButton7: TSpeedButton;
     Label2: TLabel;
     DBText4: TDBText;
-    SpeedButton9: TSpeedButton;
-    SpeedButton10: TSpeedButton;
     DBEdit4: TDBEdit;
+    DataSourceCriterio: TDataSource;
     procedure SpeedButton8Click(Sender: TObject);
     procedure SpeedButton7Click(Sender: TObject);
     procedure SpeedButton6Click(Sender: TObject);
@@ -93,7 +88,6 @@ type
     procedure SpeedButton4Click(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
-    procedure SpeedButton1Click(Sender: TObject);
     procedure DBGrid1DrawColumnCell(Sender: TObject; const Rect: TRect;
       DataCol: Integer; Column: TColumn; State: TGridDrawState);
     procedure RadioGroup1Click(Sender: TObject);
@@ -102,13 +96,12 @@ type
     procedure SpeedButton2Click(Sender: TObject);
     procedure habilitar00Click(Sender: TObject);
     procedure habilitar02Click(Sender: TObject);
-    procedure habilitar01Click(Sender: TObject);
     procedure desabilitar00Click(Sender: TObject);
-    procedure desabilitar02Click(Sender: TObject);
-    procedure desabilitar01Click(Sender: TObject);
-    procedure SpeedButton11Click(Sender: TObject);
+
     procedure habilitar03Click(Sender: TObject);
     procedure CheckBoxConsultaClick(Sender: TObject);
+    procedure desabilitar01Click(Sender: TObject);
+    procedure SpeedButton11Click(Sender: TObject);
   private
     buffer: array [0 .. 255] of Char;
     Temp: String;
@@ -123,6 +116,7 @@ var
   CodigoUser: String;
   CodigoUserPorNome: String;
   CodigoAssunto: String;
+  CodigoPorCriterio: string;
 
 implementation
 
@@ -150,6 +144,7 @@ begin
     CodigoUser := '';
     CodigoAssunto := '';
     CodigoUserPorNome := '';
+    CodigoPorCriterio := '';
   end
 
 end;
@@ -298,9 +293,14 @@ end;
 
 procedure TFrmView.desabilitar01Click(Sender: TObject);
 begin
-  Dtscru.DataSet.CLOSE;
-  habilitar01.Enabled := True;
-  desabilitar01.Enabled := False;
+
+end;
+
+{procedure TFrmView.desabilitar01Click(Sender: TObject);
+begin
+  DataSourceCriterio.DataSet.CLOSE;
+  //SpeedButton9.Enabled := True;
+  //SpeedButton10.Enabled := False;
 end;
 
 procedure TFrmView.desabilitar02Click(Sender: TObject);
@@ -308,7 +308,7 @@ begin
   desabilitar02.Enabled := False;
   habilitar02.Enabled := True;
   Dtscra.DataSet.CLOSE;
-end;
+end;  }
 
 procedure TFrmView.EditPesquKeyPress(Sender: TObject; var Key: Char);
 begin
@@ -327,6 +327,7 @@ begin
   DM.cds_User.CLOSE;
   DM.cds_UserCod.CLOSE;
   DM.cds_Assunt.CLOSE;
+
   DM.sds_view.Filtered := False;
 end;
 
@@ -363,7 +364,7 @@ begin
   CodigoAssunto := '';
   habilitar00.Enabled := True;
   habilitar02.Enabled:= true;
-  habilitar01.Enabled := True;
+ // habilitar01.Enabled := True;
   desabilitar00.Enabled := false;
   Dtscra.DataSet.CLOSE;
   Dtscru.DataSet.CLOSE;
@@ -383,18 +384,13 @@ begin
  // PanelMostrData.Visible := False;
 end;
 
-procedure TFrmView.habilitar01Click(Sender: TObject);
+{procedure TFrmView.SpeedButton12Click(Sender: TObject);
 begin
-//  CodigoUser := '';
-  //CodigoAssunto := '';
-  //CodigoUserPorNome := DBEdit1.Text;
-  desabilitar01.Enabled := True;
-  habilitar01.Enabled := False;
-
+     CodigoUserPorNome := DBEdit1.Text;
  // DtsrcCod.DataSet.CLOSE;
  // Dtscra.DataSet.CLOSE;
   PanelMostrData.Visible := False;
-end;
+end;}
 
 procedure TFrmView.habilitar02Click(Sender: TObject);
 begin
@@ -477,6 +473,14 @@ begin
     end; }
 end;
 
+
+
+procedure TFrmView.SpeedButton7Click(Sender: TObject);
+begin
+  FrmLocalizarUser := TFrmLocalizarUser.Create(Self, DM.sds_UserPorCriterio);
+  FrmLocalizarUser.ShowModal;
+end;
+
 procedure TFrmView.SpeedButton11Click(Sender: TObject);
 begin
   if (PanelMostrData.Visible = True) then
@@ -487,24 +491,6 @@ begin
   begin
     PanelMostrData.Visible := True;
   end;
-
-end;
-
-procedure TFrmView.SpeedButton1Click(Sender: TObject);
-begin
-  FrmLocalizarUser := TFrmLocalizarUser.Create(Self, DM.SimpleDataSetUseNome);
-  try
-    if FrmLocalizarUser.ShowModal = mrOk then
-    begin
-      DM.cds_User.CLOSE;
-      DM.cds_User.Params[0].Value := DM.SimpleDataSetUseNomeCOD_USUARIO.AsInteger;
-      DM.cds_User.Open;
-    end;
-  finally
-    DM.SimpleDataSetUseNome.CLOSE;
-    FrmLocalizarUser.Free;
-  end;
-
 end;
 
 procedure TFrmView.SpeedButton2Click(Sender: TObject);
@@ -948,25 +934,30 @@ begin
             DM.sds_view.DataSet.Params.Clear;
             DM.sds_view.DataSet.CommandText := '';
             DM.sds_view.DataSet.CommandText :=
-           { 'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA, PO.NOME from ARQUIVOS_USUARIOS N'
-            + ' inner join ARQUIVOLIST AQ on (AQ.ID = N.IDARQUIVOS) and (N.IDUSUARIOS = AQ.COD_USUARIO)'
-            + ' inner join ASSUNTO SU on AQ.COD_ASSUNTO = SU.CODIGO ' +
-            'inner join USUARIO PO on AQ.COD_USUARIO = PO.COD_USUARIO ' +
-            //' inner join ARQUIVOS_USUARIOS N on (PO.COD_USUARIO = N.IDUSUARIOS) ' +
-            ' inner join AUTORES T on T.CODIGO = AQ.COD_AUTOR ' +
-            'where AQ.DESCRICAO like ' + QuotedStr('%' + EditPesqu.Text + '%') +
-           ' and N.IDUSUARIOS=' + IntToStr(FrmLogin.COD_USUARIO) +
-            ' order by AQ.DESCRICAO'; }
-
-             'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME,SU.TITULOASSUN from ARQUIVOS_USUARIOS N '
+            'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME,SU.TITULOASSUN from ARQUIVOS_USUARIOS N '
             + ' inner join ARQUIVOLIST AQ on (AQ.ID = N.IDARQUIVOS) ' +
             ' inner join ASSUNTO SU on AQ.COD_ASSUNTO = SU.CODIGO ' +
             'inner join USUARIO PO on AQ.COD_USUARIO = PO.COD_USUARIO ' +
             'inner join AUTORES T on T.CODIGO = AQ.COD_AUTOR ' +
             'where AQ.DESCRICAO like ' + QuotedStr('%' + EditPesqu.Text + '%') +
-           ' and N.IDUSUARIOS=' + IntToStr(FrmLogin.COD_USUARIO) +
-            ' order by AQ.DESCRICAO';
 
+            ' order by AQ.DESCRICAO';
+            if (DBText4.Caption <> '') then
+            begin
+            DM.sds_view.CLOSE;
+            DM.sds_view.Params.Clear;
+            DM.sds_view.DataSet.Params.Clear;
+            DM.sds_view.DataSet.CommandText := '';
+            DM.sds_view.DataSet.CommandText :=
+            'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME,SU.TITULOASSUN from ARQUIVOS_USUARIOS N '
+            + ' inner join ARQUIVOLIST AQ on (AQ.ID = N.IDARQUIVOS) ' +
+            ' inner join ASSUNTO SU on AQ.COD_ASSUNTO = SU.CODIGO ' +
+            'inner join USUARIO PO on AQ.COD_USUARIO = PO.COD_USUARIO ' +
+            'inner join AUTORES T on T.CODIGO = AQ.COD_AUTOR ' +
+            'where AQ.DESCRICAO like ' + QuotedStr('%' + EditPesqu.Text + '%') +
+            ' and N.IDUSUARIOS=' + CodigoPorCriterio +
+            ' order by AQ.DESCRICAO';
+            end;
 
             if (CodigoUser <> '') and (CodigoAssunto = '') and
               (CodigoUserPorNome = '') then
@@ -986,6 +977,7 @@ begin
               Dtsrc.DataSet.Filtered := False;
               Dtsrc.DataSet.Filter := ' COD_USUARIO=' + CodigoUserPorNome;
             end;
+
 
             Dtsrc.DataSet.Filtered := True;
             // DBGrid1.DataSource := Dtsrc;
@@ -1274,7 +1266,7 @@ begin
 
 end;
 
-procedure TFrmView.SpeedButton7Click(Sender: TObject);
+{procedure TFrmView.SpeedButton22Click(Sender: TObject);
 var
   x, y: pchar;
   Flag: Integer;
@@ -1301,8 +1293,7 @@ begin
     end;
   end;
 
-end;
-
+end;}
 procedure TFrmView.SpeedButton8Click(Sender: TObject);
 begin
   FrmLocalizarUserCod := TFrmLocalizarUserCod.Create(Self, DM.sds_UserCod);

@@ -382,6 +382,8 @@ type
     SimpleDataSetUseNomeLOGIN: TStringField;
     SimpleDataSetUseNomeSENHA: TStringField;
     SimpleDataSetUseNomeADMINISTRADOR: TIntegerField;
+    sds_UserPorCriterio: TSimpleDataSet;
+    sdstemp: TSimpleDataSet;
     procedure DataModuleCreate(Sender: TObject);
     function PreencheCombo: TStrings;
     function PreencheList: TStrings;

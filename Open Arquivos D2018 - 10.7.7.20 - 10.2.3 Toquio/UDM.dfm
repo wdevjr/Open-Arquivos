@@ -173,14 +173,14 @@ object DM: TDM
     DataSet.MaxBlobSize = -1
     DataSet.Params = <>
     Params = <>
-    Left = 552
+    Left = 600
     Top = 152
   end
   object sdt_Verif: TSQLDataSet
     MaxBlobSize = -1
     Params = <>
-    Left = 616
-    Top = 152
+    Left = 656
+    Top = 160
   end
   object sdt_User: TSQLDataSet
     SchemaName = 'sysdba'
@@ -1648,7 +1648,7 @@ object DM: TDM
     DataSet.MaxBlobSize = -1
     DataSet.Params = <>
     Params = <>
-    Left = 688
+    Left = 704
     Top = 160
   end
   object DtsrcExcLogados: TDataSource
@@ -3241,8 +3241,8 @@ object DM: TDM
         Name = 'NOME'
         ParamType = ptInput
       end>
-    Left = 504
-    Top = 136
+    Left = 512
+    Top = 152
     object SimpleDataSetUseNomeCOD_USUARIO: TIntegerField
       FieldName = 'COD_USUARIO'
       Required = True
@@ -3262,5 +3262,38 @@ object DM: TDM
       FieldName = 'ADMINISTRADOR'
       Required = True
     end
+  end
+  object sds_UserPorCriterio: TSimpleDataSet
+    Aggregates = <>
+    Connection = SQLConnection
+    DataSet.CommandText = 
+      'select DISTINCT N.IDUSUARIOS, PO.NOME  from ARQUIVOLIST AQ  '#13#10'in' +
+      'ner join ARQUIVOS_USUARIOS N  on N.IDARQUIVOS =  AQ.ID'#13#10'inner jo' +
+      'in USUARIO PO on N.IDUSUARIOS =  PO.COD_USUARIO'#13#10'where  PO.NOME ' +
+      'like :pnome'#13#10'order by PO.NOME desc'
+    DataSet.MaxBlobSize = -1
+    DataSet.Params = <
+      item
+        DataType = ftString
+        Name = 'pnome'
+        ParamType = ptInput
+      end>
+    Params = <
+      item
+        DataType = ftString
+        Name = 'pnome'
+        ParamType = ptInput
+      end>
+    Left = 856
+    Top = 216
+  end
+  object sdstemp: TSimpleDataSet
+    Aggregates = <>
+    Connection = SQLConnection
+    DataSet.MaxBlobSize = -1
+    DataSet.Params = <>
+    Params = <>
+    Left = 720
+    Top = 216
   end
 end
