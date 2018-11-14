@@ -23,7 +23,6 @@ object FrmLocalizarUser: TFrmLocalizarUser
     Height = 49
     Align = alBottom
     TabOrder = 0
-    ExplicitWidth = 704
     object Panel4: TPanel
       Left = 417
       Top = 1
@@ -32,7 +31,6 @@ object FrmLocalizarUser: TFrmLocalizarUser
       Align = alRight
       BevelOuter = bvNone
       TabOrder = 0
-      ExplicitLeft = 465
       object BitBtn1: TBitBtn
         Left = 138
         Top = 9
@@ -122,7 +120,6 @@ object FrmLocalizarUser: TFrmLocalizarUser
     Height = 111
     Align = alClient
     TabOrder = 1
-    ExplicitWidth = 704
     object DBGrid1: TDBGrid
       Left = 1
       Top = 1
@@ -151,7 +148,6 @@ object FrmLocalizarUser: TFrmLocalizarUser
     Align = alTop
     Color = clWhite
     TabOrder = 2
-    ExplicitWidth = 704
     object Panel5: TPanel
       Left = 406
       Top = 1
@@ -162,7 +158,6 @@ object FrmLocalizarUser: TFrmLocalizarUser
       Color = clWhite
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 454
       object SpeedButton1: TSpeedButton
         Left = 136
         Top = 15
@@ -267,6 +262,7 @@ object FrmLocalizarUser: TFrmLocalizarUser
     end
   end
   object Dtsc: TDataSource
+    DataSet = DM.SimpleDataSetUseNome
     Left = 488
     Top = 88
   end

@@ -1682,8 +1682,8 @@ object FrmView: TFrmView
         ParentFont = False
       end
       object DBText1: TDBText
-        Left = 131
-        Top = 10
+        Left = 129
+        Top = 8
         Width = 206
         Height = 23
         Margins.Left = 4
@@ -1796,8 +1796,8 @@ object FrmView: TFrmView
         OnClick = desabilitar01Click
       end
       object DBEdit1: TDBEdit
-        Left = 297
-        Top = 19
+        Left = 370
+        Top = 13
         Width = 96
         Height = 26
         Margins.Left = 4

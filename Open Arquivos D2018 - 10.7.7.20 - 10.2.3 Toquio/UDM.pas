@@ -376,6 +376,12 @@ type
     cds_ExcUserDATAATUAL: TDateField;
     sdt_ExcRepetidosDATAATUAL: TDateField;
     cds_ExcRepetidosDATAATUAL: TDateField;
+    SimpleDataSetUseNome: TSimpleDataSet;
+    SimpleDataSetUseNomeCOD_USUARIO: TIntegerField;
+    SimpleDataSetUseNomeNOME: TStringField;
+    SimpleDataSetUseNomeLOGIN: TStringField;
+    SimpleDataSetUseNomeSENHA: TStringField;
+    SimpleDataSetUseNomeADMINISTRADOR: TIntegerField;
     procedure DataModuleCreate(Sender: TObject);
     function PreencheCombo: TStrings;
     function PreencheList: TStrings;

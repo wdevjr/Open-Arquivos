@@ -49,9 +49,9 @@ uses UDM, UDMII, UnContrUser, UnUtilitLog;
 procedure TFrmLocalizarUser.DBGrid1DrawColumnCell(Sender: TObject;
   const Rect: TRect; DataCol: Integer; Column: TColumn; State: TGridDrawState);
 begin
-  if not DM.sdss_User.Eof then
+  if not DM.SimpleDataSetUseNome.Eof then
   begin
-    if Odd(DM.sdss_User.RecNo) then
+    if Odd(DM.SimpleDataSetUseNome.RecNo) then
     begin
       DBGrid1.Canvas.Brush.Color := $00CBEAEB;
       DBGrid1.Canvas.FillRect(Rect);
@@ -72,7 +72,7 @@ begin
   end
   ELSE if not DM.sdsss_User.Eof then
   begin
-    if Odd(DM.sdsss_User.RecNo) then
+    if Odd(DM.SimpleDataSetUseNome.RecNo) then
     begin
       DBGrid1.Canvas.Brush.Color := $00CBEAEB;
       DBGrid1.Canvas.FillRect(Rect);

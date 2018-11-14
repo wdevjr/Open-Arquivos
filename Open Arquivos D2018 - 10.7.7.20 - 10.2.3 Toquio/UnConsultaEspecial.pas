@@ -357,26 +357,25 @@ end;
 procedure TFrmView.habilitar00Click(Sender: TObject);
 begin
   CodigoUser := DBEdit3.Text;
-  CodigoUserPorNome := '';
-  CodigoAssunto := '';
+ // CodigoUserPorNome := '';
+  //CodigoAssunto := '';
   habilitar00.Enabled := False;
   desabilitar00.Enabled := True;
-  Dtscra.DataSet.CLOSE;
-  Dtscru.DataSet.CLOSE;
-  PanelMostrData.Visible := False;
+  //Dtscra.DataSet.CLOSE;
+  //Dtscru.DataSet.CLOSE;
+ // PanelMostrData.Visible := False;
 end;
 
 procedure TFrmView.habilitar01Click(Sender: TObject);
 begin
-  CodigoUser := '';
-  CodigoAssunto := '';
-  CodigoUserPorNome := DBEdit1.Text;
+//  CodigoUser := '';
+  //CodigoAssunto := '';
+  //CodigoUserPorNome := DBEdit1.Text;
   desabilitar01.Enabled := True;
   habilitar01.Enabled := False;
 
-  DtsrcCod.DataSet.CLOSE;
-  Dtscra.DataSet.CLOSE;
-  // Dtscru.DataSet.Close;
+ // DtsrcCod.DataSet.CLOSE;
+ // Dtscra.DataSet.CLOSE;
   PanelMostrData.Visible := False;
 end;
 
@@ -476,16 +475,16 @@ end;
 
 procedure TFrmView.SpeedButton1Click(Sender: TObject);
 begin
-  FrmLocalizarUser := TFrmLocalizarUser.Create(Self, DM.sdss_User);
+  FrmLocalizarUser := TFrmLocalizarUser.Create(Self, DM.SimpleDataSetUseNome);
   try
     if FrmLocalizarUser.ShowModal = mrOk then
     begin
       DM.cds_User.CLOSE;
-      DM.cds_User.Params[0].asInteger := DM.sdss_UserCOD_USUARIO.asInteger;
+      DM.cds_User.Params[0].Value := DM.SimpleDataSetUseNomeCOD_USUARIO.AsInteger;
       DM.cds_User.Open;
     end;
   finally
-    DM.sdss_User.CLOSE;
+    DM.SimpleDataSetUseNome.CLOSE;
     FrmLocalizarUser.Free;
   end;
 
@@ -495,7 +494,8 @@ procedure TFrmView.SpeedButton2Click(Sender: TObject);
 var
   Inicial, Finall: string;
 begin
-
+    Inicial:='';
+    Finall:='';
   // DM.sds_view.CLOSE;
   // DM.sds_view_todos.CLOSE;
   if (FrmLogin.TODOS = 1) then
@@ -883,7 +883,7 @@ begin
               + ' inner join USUARIO U on (N.IDUSUARIOS = U.COD_USUARIO)' +
               ' inner join AUTORES T on (T.CODIGO = AQ.COD_AUTOR)' +
               ' where AQ.NOME_ARQUIVO like ' +
-              QuotedStr('%' + EditPesqu.Text + '%') + ' and N.IDUSUARIOS=' +
+              QuotedStr('%' + EditPesqu.Text + '%') + ' and AQ.COD_USUARIO=' +
               IntToStr(FrmLogin.COD_USUARIO) + ' order by AQ.NOME_ARQUIVO';
             if (CheckBoxConsulta.Checked = True) then
             begin
@@ -931,14 +931,26 @@ begin
             DM.sds_view.DataSet.Params.Clear;
             DM.sds_view.DataSet.CommandText := '';
             DM.sds_view.DataSet.CommandText :=
-            'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,SU.TITULOASSUN,PO.NOME from ARQUIVOS_USUARIOS N '
-            +' inner join ARQUIVOLIST AQ on (AQ.ID = N.IDARQUIVOS) ' +
+           { 'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA, PO.NOME from ARQUIVOS_USUARIOS N'
+            + ' inner join ARQUIVOLIST AQ on (AQ.ID = N.IDARQUIVOS) and (N.IDUSUARIOS = AQ.COD_USUARIO)'
+            + ' inner join ASSUNTO SU on AQ.COD_ASSUNTO = SU.CODIGO ' +
+            'inner join USUARIO PO on AQ.COD_USUARIO = PO.COD_USUARIO ' +
+            //' inner join ARQUIVOS_USUARIOS N on (PO.COD_USUARIO = N.IDUSUARIOS) ' +
+            ' inner join AUTORES T on T.CODIGO = AQ.COD_AUTOR ' +
+            'where AQ.DESCRICAO like ' + QuotedStr('%' + EditPesqu.Text + '%') +
+           ' and N.IDUSUARIOS=' + IntToStr(FrmLogin.COD_USUARIO) +
+            ' order by AQ.DESCRICAO'; }
+
+             'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME,SU.TITULOASSUN from ARQUIVOS_USUARIOS N '
+            + ' inner join ARQUIVOLIST AQ on (AQ.ID = N.IDARQUIVOS) ' +
             ' inner join ASSUNTO SU on AQ.COD_ASSUNTO = SU.CODIGO ' +
             'inner join USUARIO PO on AQ.COD_USUARIO = PO.COD_USUARIO ' +
-            //'inner join AUTORES T on T.CODIGO = AQ.COD_AUTOR ' +
+            'inner join AUTORES T on T.CODIGO = AQ.COD_AUTOR ' +
             'where AQ.DESCRICAO like ' + QuotedStr('%' + EditPesqu.Text + '%') +
-            ' and N.IDUSUARIOS=' + IntToStr(FrmLogin.COD_USUARIO) +
+           ' and N.IDUSUARIOS=' + IntToStr(FrmLogin.COD_USUARIO) +
             ' order by AQ.DESCRICAO';
+
+
             if (CodigoUser <> '') and (CodigoAssunto = '') and
               (CodigoUserPorNome = '') then
             begin
@@ -955,7 +967,7 @@ begin
               (CodigoUserPorNome <> '') then
             begin
               Dtsrc.DataSet.Filtered := False;
-              Dtsrc.DataSet.Filter := ' COD_USUARIO=' + CodigoUserPorNome;
+              Dtsrc.DataSet.Filter := ' IDUSUARIOS=' + CodigoUserPorNome;
             end;
 
             Dtsrc.DataSet.Filtered := True;

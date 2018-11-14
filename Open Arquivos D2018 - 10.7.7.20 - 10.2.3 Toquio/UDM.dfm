@@ -121,7 +121,7 @@ object DM: TDM
     DataSet.MaxBlobSize = -1
     DataSet.Params = <>
     Params = <>
-    Left = 448
+    Left = 432
     Top = 152
     object sds_OpenCOD_USUARIO: TIntegerField
       FieldName = 'COD_USUARIO'
@@ -173,14 +173,14 @@ object DM: TDM
     DataSet.MaxBlobSize = -1
     DataSet.Params = <>
     Params = <>
-    Left = 520
-    Top = 160
+    Left = 552
+    Top = 152
   end
   object sdt_Verif: TSQLDataSet
     MaxBlobSize = -1
     Params = <>
-    Left = 608
-    Top = 160
+    Left = 616
+    Top = 152
   end
   object sdt_User: TSQLDataSet
     SchemaName = 'sysdba'
@@ -3221,5 +3221,46 @@ object DM: TDM
     MemoParentFont = False
     Left = 664
     Top = 328
+  end
+  object SimpleDataSetUseNome: TSimpleDataSet
+    Aggregates = <>
+    Connection = SQLConnection
+    DataSet.CommandText = 
+      'select UR.COD_USUARIO,UR.NOME,UR.LOGIN,UR.SENHA,UR.ADMINISTRADOR' +
+      #13#10'from USUARIO UR'#13#10'where NOME like :NOME'#13#10'order by NOME desc'
+    DataSet.MaxBlobSize = -1
+    DataSet.Params = <
+      item
+        DataType = ftString
+        Name = 'NOME'
+        ParamType = ptInput
+      end>
+    Params = <
+      item
+        DataType = ftString
+        Name = 'NOME'
+        ParamType = ptInput
+      end>
+    Left = 504
+    Top = 136
+    object SimpleDataSetUseNomeCOD_USUARIO: TIntegerField
+      FieldName = 'COD_USUARIO'
+      Required = True
+    end
+    object SimpleDataSetUseNomeNOME: TStringField
+      FieldName = 'NOME'
+      Size = 70
+    end
+    object SimpleDataSetUseNomeLOGIN: TStringField
+      FieldName = 'LOGIN'
+    end
+    object SimpleDataSetUseNomeSENHA: TStringField
+      FieldName = 'SENHA'
+      Size = 50
+    end
+    object SimpleDataSetUseNomeADMINISTRADOR: TIntegerField
+      FieldName = 'ADMINISTRADOR'
+      Required = True
+    end
   end
 end
