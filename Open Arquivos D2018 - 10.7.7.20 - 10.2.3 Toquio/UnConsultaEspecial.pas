@@ -75,6 +75,13 @@ type
     Panel3: TPanel;
     GroupBox1: TGroupBox;
     CheckBoxConsulta: TCheckBox;
+    Panel4: TPanel;
+    SpeedButton7: TSpeedButton;
+    Label2: TLabel;
+    DBText4: TDBText;
+    SpeedButton9: TSpeedButton;
+    SpeedButton10: TSpeedButton;
+    DBEdit4: TDBEdit;
     procedure SpeedButton8Click(Sender: TObject);
     procedure SpeedButton7Click(Sender: TObject);
     procedure SpeedButton6Click(Sender: TObject);
@@ -351,6 +358,16 @@ begin
     end;
     DM.sds_view.CLOSE;
   end;
+    CodigoUser := '';
+  CodigoUserPorNome := '';
+  CodigoAssunto := '';
+  habilitar00.Enabled := True;
+  habilitar02.Enabled:= true;
+  habilitar01.Enabled := True;
+  desabilitar00.Enabled := false;
+  Dtscra.DataSet.CLOSE;
+  Dtscru.DataSet.CLOSE;
+  PanelMostrData.Visible := False;
 
 end;
 
@@ -967,7 +984,7 @@ begin
               (CodigoUserPorNome <> '') then
             begin
               Dtsrc.DataSet.Filtered := False;
-              Dtsrc.DataSet.Filter := ' IDUSUARIOS=' + CodigoUserPorNome;
+              Dtsrc.DataSet.Filter := ' COD_USUARIO=' + CodigoUserPorNome;
             end;
 
             Dtsrc.DataSet.Filtered := True;
