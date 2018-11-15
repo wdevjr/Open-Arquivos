@@ -2,7 +2,7 @@ object FrmView: TFrmView
   Left = 110
   Top = 115
   Caption = 'Consulta Especial...'
-  ClientHeight = 660
+  ClientHeight = 639
   ClientWidth = 756
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
@@ -17,14 +17,15 @@ object FrmView: TFrmView
   PixelsPerInch = 120
   TextHeight = 17
   object DBGrid1: TDBGrid
-    Left = -1
-    Top = 440
+    Left = 0
+    Top = 48
     Width = 756
-    Height = 146
+    Height = 528
     Margins.Left = 4
     Margins.Top = 4
     Margins.Right = 4
     Margins.Bottom = 4
+    Align = alClient
     Color = clWhite
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
@@ -457,15 +458,17 @@ object FrmView: TFrmView
   end
   object Panel1: TPanel
     Left = 0
-    Top = 586
+    Top = 576
     Width = 756
-    Height = 74
+    Height = 63
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 3
+    ExplicitLeft = -1
+    ExplicitTop = 578
     object SpeedButton4: TSpeedButton
       Left = 15
-      Top = 11
+      Top = 1
       Width = 134
       Height = 55
       Margins.Left = 4
@@ -541,9 +544,9 @@ object FrmView: TFrmView
     end
     object SpeedButton3: TSpeedButton
       Left = 157
-      Top = 11
+      Top = 1
       Width = 121
-      Height = 55
+      Height = 56
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
@@ -2244,6 +2247,7 @@ object FrmView: TFrmView
           FFFFEBF7EF00FFFFFFFFF0EBFFFFEBF7EF00FFFFFFFFFFFFFFFFFFFFFFFFFFF0
           EB075DEFF1FFFFFFFFFFFFF0EB075DEFF1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
           F1F100EFFFFFFFFFFFFFFFFFF1F100EFFFFFFFFFFFFFFFFFFFFF}
+        OnClick = SpeedButton7Click
       end
       object SpeedButton12: TSpeedButton
         Left = 547
