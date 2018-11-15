@@ -2,8 +2,8 @@ object FrmView: TFrmView
   Left = 110
   Top = 115
   Caption = 'Consulta Especial...'
-  ClientHeight = 639
-  ClientWidth = 756
+  ClientHeight = 651
+  ClientWidth = 759
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,14 +18,14 @@ object FrmView: TFrmView
   TextHeight = 17
   object DBGrid1: TDBGrid
     Left = 0
-    Top = 48
-    Width = 756
-    Height = 528
+    Top = 442
+    Width = 759
+    Height = 146
     Margins.Left = 4
     Margins.Top = 4
     Margins.Right = 4
     Margins.Bottom = 4
-    Align = alClient
+    Align = alBottom
     Color = clWhite
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
@@ -127,7 +127,7 @@ object FrmView: TFrmView
   object Panel6: TPanel
     Left = 0
     Top = 0
-    Width = 756
+    Width = 759
     Height = 40
     Margins.Left = 4
     Margins.Top = 4
@@ -137,6 +137,7 @@ object FrmView: TFrmView
     Color = clWhite
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 756
     object Label4: TLabel
       Left = 60
       Top = 13
@@ -266,7 +267,7 @@ object FrmView: TFrmView
       Transparent = True
     end
     object Panel16: TPanel
-      Left = 556
+      Left = 559
       Top = 1
       Width = 199
       Height = 38
@@ -278,7 +279,7 @@ object FrmView: TFrmView
       BevelOuter = bvNone
       Color = clWhite
       TabOrder = 0
-      ExplicitHeight = 23
+      ExplicitLeft = 556
       object Image4: TImage
         Left = 153
         Top = -3
@@ -444,7 +445,7 @@ object FrmView: TFrmView
   object Panel7: TPanel
     Left = 0
     Top = 40
-    Width = 756
+    Width = 759
     Height = 8
     Margins.Left = 4
     Margins.Top = 4
@@ -454,18 +455,18 @@ object FrmView: TFrmView
     Color = 12615680
     ParentBackground = False
     TabOrder = 2
-    ExplicitLeft = 1
+    ExplicitWidth = 756
   end
   object Panel1: TPanel
     Left = 0
-    Top = 576
-    Width = 756
+    Top = 588
+    Width = 759
     Height = 63
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 3
-    ExplicitLeft = -1
-    ExplicitTop = 578
+    ExplicitTop = 576
+    ExplicitWidth = 756
     object SpeedButton4: TSpeedButton
       Left = 15
       Top = 1
@@ -1557,7 +1558,6 @@ object FrmView: TFrmView
       ParentBackground = False
       ParentFont = False
       TabOrder = 4
-      ExplicitLeft = 5
       object Label1: TLabel
         Left = 60
         Top = 10
@@ -2139,7 +2139,6 @@ object FrmView: TFrmView
       ParentBackground = False
       ParentFont = False
       TabOrder = 7
-      ExplicitTop = 144
       object Label2: TLabel
         Left = 60
         Top = 10
