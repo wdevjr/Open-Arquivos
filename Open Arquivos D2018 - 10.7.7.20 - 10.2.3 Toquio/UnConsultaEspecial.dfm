@@ -137,7 +137,6 @@ object FrmView: TFrmView
     Color = clWhite
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 756
     object Label4: TLabel
       Left = 60
       Top = 13
@@ -279,7 +278,6 @@ object FrmView: TFrmView
       BevelOuter = bvNone
       Color = clWhite
       TabOrder = 0
-      ExplicitLeft = 556
       object Image4: TImage
         Left = 153
         Top = -3
@@ -455,7 +453,6 @@ object FrmView: TFrmView
     Color = 12615680
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 756
   end
   object Panel1: TPanel
     Left = 0
@@ -465,8 +462,6 @@ object FrmView: TFrmView
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 3
-    ExplicitTop = 576
-    ExplicitWidth = 756
     object SpeedButton4: TSpeedButton
       Left = 15
       Top = 1

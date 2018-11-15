@@ -1178,22 +1178,22 @@ begin
           end;
       else
 
-        if (FrmLogin.TODOS = 1) then
+        {if (FrmLogin.TODOS = 1) then
         begin
-          with DM.sds_view do
+          with (not DM.sds_view.Eof) do
           begin
-            BitBtn1.Enabled := not IsEmpty;
-            SpeedButton3.Enabled := not IsEmpty;
+            BitBtn1.Enabled := True;
+            SpeedButton3.Enabled := True;
 
           end;
         end;
-        with DM.sds_view do
+        with not DM.sds_view.Eof do
         begin
-          BitBtn1.Enabled := not IsEmpty;
-          SpeedButton3.Enabled := not IsEmpty;
+          BitBtn1.Enabled := True;
+          SpeedButton3.Enabled := True;
           // BitBtn2.Enabled := not IsEmpty;
         end;
-        BitBtn1.Visible := False;
+        BitBtn1.Visible := False; }
 
       end;
     end;
