@@ -77,6 +77,12 @@ type
     DBText4: TDBText;
     DBEdit4: TDBEdit;
     DataSourceCriterio: TDataSource;
+    SpeedButton1: TSpeedButton;
+    SpeedButton7: TSpeedButton;
+    SpeedButton9: TSpeedButton;
+    SpeedButton10: TSpeedButton;
+    SpeedButton12: TSpeedButton;
+    SpeedButton13: TSpeedButton;
     procedure SpeedButton8Click(Sender: TObject);
     procedure SpeedButton7Click(Sender: TObject);
     procedure SpeedButton6Click(Sender: TObject);
