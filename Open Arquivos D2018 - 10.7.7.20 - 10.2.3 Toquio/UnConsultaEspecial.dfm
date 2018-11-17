@@ -3,7 +3,7 @@ object FrmView: TFrmView
   Top = 115
   Caption = 'Consulta Especial...'
   ClientHeight = 651
-  ClientWidth = 759
+  ClientWidth = 796
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,7 +19,7 @@ object FrmView: TFrmView
   object DBGrid1: TDBGrid
     Left = 0
     Top = 442
-    Width = 759
+    Width = 796
     Height = 146
     Margins.Left = 4
     Margins.Top = 4
@@ -123,7 +123,7 @@ object FrmView: TFrmView
   object Panel6: TPanel
     Left = 0
     Top = 0
-    Width = 759
+    Width = 796
     Height = 40
     Margins.Left = 4
     Margins.Top = 4
@@ -133,6 +133,7 @@ object FrmView: TFrmView
     Color = clWhite
     ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 759
     object Label4: TLabel
       Left = 60
       Top = 13
@@ -262,7 +263,7 @@ object FrmView: TFrmView
       Transparent = True
     end
     object Panel16: TPanel
-      Left = 559
+      Left = 596
       Top = 1
       Width = 199
       Height = 38
@@ -274,6 +275,7 @@ object FrmView: TFrmView
       BevelOuter = bvNone
       Color = clWhite
       TabOrder = 0
+      ExplicitLeft = 559
       object Image4: TImage
         Left = 153
         Top = -3
@@ -439,7 +441,7 @@ object FrmView: TFrmView
   object Panel7: TPanel
     Left = 0
     Top = 40
-    Width = 759
+    Width = 796
     Height = 8
     Margins.Left = 4
     Margins.Top = 4
@@ -449,15 +451,17 @@ object FrmView: TFrmView
     Color = 12615680
     ParentBackground = False
     TabOrder = 2
+    ExplicitWidth = 759
   end
   object Panel1: TPanel
     Left = 0
     Top = 588
-    Width = 759
+    Width = 796
     Height = 63
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 3
+    ExplicitWidth = 759
     object SpeedButton4: TSpeedButton
       Left = 15
       Top = 1
@@ -783,17 +787,21 @@ object FrmView: TFrmView
     end
   end
   object PanelComplete: TPanel
-    Left = -1
-    Top = 407
-    Width = 756
+    Left = 0
+    Top = 408
+    Width = 796
     Height = 34
+    Align = alBottom
     BevelOuter = bvNone
     Color = 14155775
     ParentBackground = False
     TabOrder = 4
     Visible = False
+    ExplicitLeft = -1
+    ExplicitTop = 407
+    ExplicitWidth = 756
     object Alert: TPanel
-      Left = 11
+      Left = 10
       Top = 8
       Width = 830
       Height = 33
@@ -867,7 +875,7 @@ object FrmView: TFrmView
   object Panel2: TPanel
     Left = 0
     Top = 47
-    Width = 756
+    Width = 796
     Height = 362
     TabOrder = 5
     object SpeedButton2: TSpeedButton
@@ -949,7 +957,7 @@ object FrmView: TFrmView
     object RadioGroup1: TRadioGroup
       Left = 1
       Top = 285
-      Width = 754
+      Width = 794
       Height = 37
       Margins.Left = 4
       Margins.Top = 4
@@ -977,6 +985,7 @@ object FrmView: TFrmView
       ParentFont = False
       TabOrder = 0
       OnClick = RadioGroup1Click
+      ExplicitWidth = 754
     end
     object EditPesqu: TMaskEdit
       Left = 6
@@ -989,7 +998,7 @@ object FrmView: TFrmView
     object Panel17: TPanel
       Left = 1
       Top = 1
-      Width = 754
+      Width = 794
       Height = 44
       Margins.Left = 4
       Margins.Top = 4
@@ -1006,6 +1015,7 @@ object FrmView: TFrmView
       ParentBackground = False
       ParentFont = False
       TabOrder = 2
+      ExplicitWidth = 754
       object SpeedButton8: TSpeedButton
         Left = 4
         Top = 2
@@ -1263,7 +1273,7 @@ object FrmView: TFrmView
     object Panel12: TPanel
       Left = 1
       Top = 45
-      Width = 754
+      Width = 794
       Height = 51
       Margins.Left = 4
       Margins.Top = 4
@@ -1274,6 +1284,7 @@ object FrmView: TFrmView
       Color = 15531993
       ParentBackground = False
       TabOrder = 3
+      ExplicitWidth = 754
       object SpeedButton6: TSpeedButton
         Left = 5
         Top = 1
@@ -1513,6 +1524,7 @@ object FrmView: TFrmView
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
+        OnClick = desabilitar02Click
       end
       object DBEdit2: TDBEdit
         Left = 243
@@ -1532,7 +1544,7 @@ object FrmView: TFrmView
     object Panel8: TPanel
       Left = 1
       Top = 96
-      Width = 754
+      Width = 794
       Height = 44
       Margins.Left = 4
       Margins.Top = 4
@@ -1549,6 +1561,7 @@ object FrmView: TFrmView
       ParentBackground = False
       ParentFont = False
       TabOrder = 4
+      ExplicitWidth = 754
       object Label1: TLabel
         Left = 60
         Top = 10
@@ -1904,7 +1917,7 @@ object FrmView: TFrmView
     object PanelData: TPanel
       Left = 1
       Top = 184
-      Width = 754
+      Width = 794
       Height = 48
       Margins.Left = 4
       Margins.Top = 4
@@ -1915,6 +1928,7 @@ object FrmView: TFrmView
       Color = 16774388
       ParentBackground = False
       TabOrder = 5
+      ExplicitWidth = 754
       object SpeedButton11: TSpeedButton
         Left = 4
         Top = 3
@@ -2079,13 +2093,14 @@ object FrmView: TFrmView
     object Panel3: TPanel
       Left = 1
       Top = 232
-      Width = 754
+      Width = 794
       Height = 53
       Align = alTop
       BevelOuter = bvNone
       Color = 13828095
       ParentBackground = False
       TabOrder = 6
+      ExplicitWidth = 754
       object GroupBox1: TGroupBox
         Left = 10
         Top = 2
@@ -2116,7 +2131,7 @@ object FrmView: TFrmView
     object Panel4: TPanel
       Left = 1
       Top = 140
-      Width = 754
+      Width = 794
       Height = 44
       Margins.Left = 4
       Margins.Top = 4
@@ -2133,6 +2148,7 @@ object FrmView: TFrmView
       ParentBackground = False
       ParentFont = False
       TabOrder = 7
+      ExplicitWidth = 754
       object Label2: TLabel
         Left = 60
         Top = 10

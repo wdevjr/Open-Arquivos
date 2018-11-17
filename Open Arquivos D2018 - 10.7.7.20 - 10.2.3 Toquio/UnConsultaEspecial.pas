@@ -105,13 +105,13 @@ type
 
     procedure habilitar03Click(Sender: TObject);
     procedure CheckBoxConsultaClick(Sender: TObject);
-    procedure desabilitar01Click(Sender: TObject);
     procedure SpeedButton11Click(Sender: TObject);
     procedure SpeedButton12Click(Sender: TObject);
     procedure SpeedButton13Click(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
     procedure SpeedButton9Click(Sender: TObject);
     procedure SpeedButton10Click(Sender: TObject);
+    procedure desabilitar02Click(Sender: TObject);
   private
     buffer: array [0 .. 255] of Char;
     Temp: String;
@@ -301,9 +301,11 @@ begin
   DtsrcCod.DataSet.CLOSE;
 end;
 
-procedure TFrmView.desabilitar01Click(Sender: TObject);
+procedure TFrmView.desabilitar02Click(Sender: TObject);
 begin
-
+desabilitar02.Enabled := False;
+habilitar02.Enabled := True;
+Dtscra.DataSet.CLOSE;
 end;
 
 { procedure TFrmView.desabilitar01Click(Sender: TObject);
