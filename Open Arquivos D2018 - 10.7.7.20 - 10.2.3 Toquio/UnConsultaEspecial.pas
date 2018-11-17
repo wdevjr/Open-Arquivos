@@ -39,7 +39,6 @@ type
     PanelMaximizar: TPanel;
     Label5: TLabel;
     SpeedButton5: TSpeedButton;
-    DtsrcTodos: TDataSource;
     Panel2: TPanel;
     RadioGroup1: TRadioGroup;
     SpeedButton2: TSpeedButton;
@@ -108,6 +107,11 @@ type
     procedure CheckBoxConsultaClick(Sender: TObject);
     procedure desabilitar01Click(Sender: TObject);
     procedure SpeedButton11Click(Sender: TObject);
+    procedure SpeedButton12Click(Sender: TObject);
+    procedure SpeedButton13Click(Sender: TObject);
+    procedure SpeedButton1Click(Sender: TObject);
+    procedure SpeedButton9Click(Sender: TObject);
+    procedure SpeedButton10Click(Sender: TObject);
   private
     buffer: array [0 .. 255] of Char;
     Temp: String;
@@ -302,19 +306,19 @@ begin
 
 end;
 
-{procedure TFrmView.desabilitar01Click(Sender: TObject);
-begin
+{ procedure TFrmView.desabilitar01Click(Sender: TObject);
+  begin
   DataSourceCriterio.DataSet.CLOSE;
   //SpeedButton9.Enabled := True;
   //SpeedButton10.Enabled := False;
-end;
+  end;
 
-procedure TFrmView.desabilitar02Click(Sender: TObject);
-begin
+  procedure TFrmView.desabilitar02Click(Sender: TObject);
+  begin
   desabilitar02.Enabled := False;
   habilitar02.Enabled := True;
   Dtscra.DataSet.CLOSE;
-end;  }
+  end; }
 
 procedure TFrmView.EditPesquKeyPress(Sender: TObject; var Key: Char);
 begin
@@ -339,41 +343,16 @@ end;
 
 procedure TFrmView.FormShow(Sender: TObject);
 begin
-  if (FrmLogin.TODOS = 0) then
-  begin
-    DBGrid1.DataSource := Dtsrc;
-
-    // with DM.sds_view do
-    // begin
-    BitBtn2.Enabled := True;
-    // end;
-
-    with DM.sds_view do
-    begin
-      DBGrid1.DataSource := DtsrcTodos;
-
-    end;
-    DM.sds_view.CLOSE;
-  end
-  else if (FrmLogin.TODOS = 1) then
-  begin
-
-    with DM.sds_view do
-    begin
-      DBGrid1.DataSource := DtsrcTodos;
-      // BitBtn2.Enabled := not IsEmpty;
-    end;
-    DM.sds_view.CLOSE;
-  end;
-    CodigoUser := '';
+  CodigoUser := '';
   CodigoUserPorNome := '';
   CodigoAssunto := '';
   habilitar00.Enabled := True;
-  habilitar02.Enabled:= true;
- // habilitar01.Enabled := True;
-  desabilitar00.Enabled := false;
+  habilitar02.Enabled := True;
+  // habilitar01.Enabled := True;
+  desabilitar00.Enabled := False;
   Dtscra.DataSet.CLOSE;
   Dtscru.DataSet.CLOSE;
+  DataSourceCriterio.DataSet.Close;
   PanelMostrData.Visible := False;
 
 end;
@@ -381,22 +360,22 @@ end;
 procedure TFrmView.habilitar00Click(Sender: TObject);
 begin
   CodigoUser := DBEdit3.Text;
- // CodigoUserPorNome := '';
-  //CodigoAssunto := '';
+  // CodigoUserPorNome := '';
+  // CodigoAssunto := '';
   habilitar00.Enabled := False;
   desabilitar00.Enabled := True;
-  //Dtscra.DataSet.CLOSE;
-  //Dtscru.DataSet.CLOSE;
- // PanelMostrData.Visible := False;
+  // Dtscra.DataSet.CLOSE;
+  // Dtscru.DataSet.CLOSE;
+  // PanelMostrData.Visible := False;
 end;
 
-{procedure TFrmView.SpeedButton12Click(Sender: TObject);
-begin
-     CodigoUserPorNome := DBEdit1.Text;
- // DtsrcCod.DataSet.CLOSE;
- // Dtscra.DataSet.CLOSE;
+{ procedure TFrmView.SpeedButton12Click(Sender: TObject);
+  begin
+  CodigoUserPorNome := DBEdit1.Text;
+  // DtsrcCod.DataSet.CLOSE;
+  // Dtscra.DataSet.CLOSE;
   PanelMostrData.Visible := False;
-end;}
+  end; }
 
 procedure TFrmView.habilitar02Click(Sender: TObject);
 begin
@@ -422,7 +401,6 @@ end;
 
 procedure TFrmView.RadioGroup1Click(Sender: TObject);
 begin
-
 
   { EditPesqu.text := '';
     Alert.Visible := False;
@@ -479,12 +457,20 @@ begin
     end; }
 end;
 
-
-
 procedure TFrmView.SpeedButton7Click(Sender: TObject);
 begin
   FrmLocalizarUser := TFrmLocalizarUser.Create(Self, DM.sds_UserPorCriterio);
   FrmLocalizarUser.ShowModal;
+end;
+
+procedure TFrmView.SpeedButton10Click(Sender: TObject);
+begin
+  SpeedButton9.Enabled := True;
+  SpeedButton10.Enabled := False;
+  CodigoUserPorNome := '';
+  DBText1.Caption := '';
+  DBEdit1.Text := '';
+  Dtscru.DataSet.CLOSE;
 end;
 
 procedure TFrmView.SpeedButton11Click(Sender: TObject);
@@ -499,16 +485,50 @@ begin
   end;
 end;
 
+procedure TFrmView.SpeedButton12Click(Sender: TObject);
+begin
+  SpeedButton13.Enabled := True;
+  SpeedButton12.Enabled := False;
+  CodigoPorCriterio := DBEdit4.Text;
+end;
+
+procedure TFrmView.SpeedButton13Click(Sender: TObject);
+begin
+  SpeedButton13.Enabled := False;
+  SpeedButton12.Enabled := True;
+  CodigoPorCriterio := '';
+  DBText4.Caption := '';
+  DataSourceCriterio.DataSet.CLOSE;
+end;
+
+procedure TFrmView.SpeedButton1Click(Sender: TObject);
+begin
+  FrmLocalizarUser := TFrmLocalizarUser.Create(Self, DM.sdss_User);
+  try
+    if FrmLocalizarUser.ShowModal = mrOk then
+    begin
+      DM.cds_User.CLOSE;
+      DM.cds_User.Params[0].asInteger := DM.sdss_UserCOD_USUARIO.asInteger;
+      DM.cds_User.Open;
+    end;
+  finally
+    DM.sdss_User.CLOSE;
+    FrmLocalizarUser.Free;
+  end;
+end;
+
 procedure TFrmView.SpeedButton2Click(Sender: TObject);
 var
   Inicial, Finall: string;
 begin
-    Inicial:='';
-    Finall:='';
-  // DM.sds_view.CLOSE;
+  Inicial := '';
+  Finall := '';
+
+  //DM.sds_view.CLOSE;
   // DM.sds_view_todos.CLOSE;
   if (FrmLogin.TODOS = 1) then
   begin
+    Panel4.Visible := False;
     case RadioGroup1.ItemIndex of
       0:
         begin
@@ -517,7 +537,7 @@ begin
           DM.sds_view.DataSet.Params.Clear;
           DM.sds_view.DataSet.CommandText := '';
           DM.sds_view.DataSet.CommandText :=
-            'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME from ARQUIVOLIST AQ'
+            'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,AQ.NOME from ARQUIVOLIST AQ'
           // + ' inner join ARQUIVOS_USUARIOS N  on (AQ.ID = N.IDARQUIVOS) ' +
             + ' inner join ARQUIVOS_USUARIOS N on (N.IDARQUIVOS = AQ.ID) and (N.IDUSUARIOS = AQ.COD_USUARIO)'
             + ' inner join USUARIO U on (AQ.COD_USUARIO = U.COD_USUARIO)' +
@@ -528,19 +548,28 @@ begin
             ' order by AQ.NOME_ARQUIVO';
           if PanelMostrData.Visible = True then
           begin
-            Inicial := DateToStr(DateTimePicker1.Date); //FormatDateTime('yyyy-MM-dd', );
-            Finall := DateToStr(DateTimePicker2.Date); //FormatDateTime('yyyy-MM-dd', DateTimePicker2.Date);
+
+            Inicial := DateToStr(DateTimePicker1.Date);
+            // FormatDateTime('yyyy-MM-dd', );
+            Finall := DateToStr(DateTimePicker2.Date);
+            // FormatDateTime('yyyy-MM-dd', DateTimePicker2.Date);
+
             DM.sds_view.CLOSE;
+            DM.sds_view.Params.Clear;
+            DM.sds_view.DataSet.Params.Clear;
             DM.sds_view.DataSet.CommandText := '';
             DM.sds_view.DataSet.CommandText :=
               'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,T.NOME from ARQUIVOLIST AQ'
               + ' inner join USUARIO U on (AQ.COD_USUARIO = U.COD_USUARIO)' +
               ' inner join AUTORES T on (T.CODIGO = AQ.COD_AUTOR)' +
               ' where AQ.NOME_ARQUIVO like ' +
-              QuotedStr('%' + EditPesqu.Text + '%') + ' and AQ.DATA >=' +
-              QuotedStr(Inicial) + ' and AQ.DATA <=' + QuotedStr(Finall) +
-              ' order by AQ.NOME_ARQUIVO';
+              QuotedStr('%' + EditPesqu.Text + '%') +
+            ' and AQ.DATA >= :inicial'
+              + ' and AQ.DATA <= :finall' + ' order by AQ.NOME_ARQUIVO';
+            DM.sds_view.DataSet.ParamByName('inicial').asDate := StrToDate(Inicial);
+            DM.sds_view.DataSet.ParamByName('finall').asDate := StrToDate(Finall);
           end;
+
           if (CheckBoxConsulta.Checked = True) then
           begin
             if (CodigoUser <> '') and (CodigoAssunto = '') and
@@ -564,6 +593,7 @@ begin
             Dtsrc.DataSet.Filtered := True;
           end;
 
+          Dtsrc.DataSet.Filtered := True;
           DM.sds_view.Open;
           DBGrid1.DataSource := Dtsrc;
 
@@ -597,9 +627,14 @@ begin
             ' order by AQ.DESCRICAO';
           if PanelMostrData.Visible = True then
           begin
-            Inicial := DateToStr(DateTimePicker1.Date); //FormatDateTime('yyyy-MM-dd', );
-            Finall := DateToStr(DateTimePicker2.Date); //FormatDateTime('yyyy-MM-dd', DateTimePicker2.Date);
+            DM.sds_view.Params.Clear;
+            DM.sds_view.DataSet.Params.Clear;
+            Inicial := DateToStr(DateTimePicker1.Date);
+            // FormatDateTime('yyyy-MM-dd', );
+            Finall := DateToStr(DateTimePicker2.Date);
+            // FormatDateTime('yyyy-MM-dd', DateTimePicker2.Date);
             DM.sds_view.CLOSE;
+
             DM.sds_view.DataSet.CommandText := '';
             DM.sds_view.DataSet.CommandText :=
               'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,T.NOME from ARQUIVOLIST AQ'
@@ -607,36 +642,35 @@ begin
               ' inner join AUTORES T on (T.CODIGO = AQ.COD_AUTOR)' +
               ' where AQ.NOME_ARQUIVO like ' +
               QuotedStr('%' + EditPesqu.Text + '%') +
-              ' and AQ.DATA >= :inicial'+
-              ' and AQ.DATA <= :finall' +
-              ' order by AQ.NOME_ARQUIVO';
-              DM.sds_view.DataSet.ParamByName('inicial').AsString := Inicial;
-              DM.sds_view.DataSet.ParamByName('finall').AsString := Finall;
+              ' and AQ.DATA >= :inicial'
+              + ' and AQ.DATA <= :finall' + ' order by AQ.NOME_ARQUIVO';
+            DM.sds_view.DataSet.ParamByName('inicial').asDate := StrToDate(Inicial);
+            DM.sds_view.DataSet.ParamByName('finall').asDate := StrToDate(Finall);
           end;
           if (CheckBoxConsulta.Checked = True) then
           begin
-          if (CodigoUser <> '') and (CodigoAssunto = '') and
-            (CodigoUserPorNome = '') then
-          begin
-            Dtsrc.DataSet.Filtered := False;
-            Dtsrc.DataSet.Filter := ' COD_USUARIO=' + CodigoUser;
-          end;
-          if (CodigoUser = '') and (CodigoAssunto <> '') and
-            (CodigoUserPorNome = '') then
-          begin
-            Dtsrc.DataSet.Filtered := False;
-            Dtsrc.DataSet.Filter := ' COD_ASSUNTO=' + CodigoAssunto;
-          end;
-          if (CodigoUser = '') and (CodigoAssunto = '') and
-            (CodigoUserPorNome <> '') then
-          begin
-            Dtsrc.DataSet.Filtered := False;
-            Dtsrc.DataSet.Filter := ' COD_USUARIO=' + CodigoUserPorNome;
-          end;
+            if (CodigoUser <> '') and (CodigoAssunto = '') and
+              (CodigoUserPorNome = '') then
+            begin
+              Dtsrc.DataSet.Filtered := False;
+              Dtsrc.DataSet.Filter := ' COD_USUARIO=' + CodigoUser;
+            end;
+            if (CodigoUser = '') and (CodigoAssunto <> '') and
+              (CodigoUserPorNome = '') then
+            begin
+              Dtsrc.DataSet.Filtered := False;
+              Dtsrc.DataSet.Filter := ' COD_ASSUNTO=' + CodigoAssunto;
+            end;
+            if (CodigoUser = '') and (CodigoAssunto = '') and
+              (CodigoUserPorNome <> '') then
+            begin
+              Dtsrc.DataSet.Filtered := False;
+              Dtsrc.DataSet.Filter := ' COD_USUARIO=' + CodigoUserPorNome;
+            end;
 
-          Dtsrc.DataSet.Filtered := True;
-          // DBGrid1.DataSource := Dtsrc;
-           end;
+            Dtsrc.DataSet.Filtered := True;
+            // DBGrid1.DataSource := Dtsrc;
+          end;
           DM.sds_view.Open;
           DBGrid1.DataSource := Dtsrc;
 
@@ -663,8 +697,8 @@ begin
           else
           begin
             DM.sds_view.CLOSE;
-          DM.sds_view.Params.Clear;
-          DM.sds_view.DataSet.Params.Clear;
+            DM.sds_view.Params.Clear;
+            DM.sds_view.DataSet.Params.Clear;
             DM.sds_view.DataSet.CommandText := '';
             DM.sds_view.DataSet.CommandText :=
               'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME from ARQUIVOLIST AQ'
@@ -676,8 +710,12 @@ begin
               IntToStr(FrmLogin.COD_USUARIO) + ' order by AQ.ID ';
             if PanelMostrData.Visible = True then
             begin
-            Inicial := DateToStr(DateTimePicker1.Date); //FormatDateTime('yyyy-MM-dd', );
-            Finall := DateToStr(DateTimePicker2.Date); //FormatDateTime('yyyy-MM-dd', DateTimePicker2.Date);
+             DM.sds_view.Params.Clear;
+             DM.sds_view.DataSet.Params.Clear;
+              Inicial := DateToStr(DateTimePicker1.Date);
+              // FormatDateTime('yyyy-MM-dd', );
+              Finall := DateToStr(DateTimePicker2.Date);
+              // FormatDateTime('yyyy-MM-dd', DateTimePicker2.Date);
               DM.sds_view.CLOSE;
               DM.sds_view.DataSet.CommandText := '';
               DM.sds_view.DataSet.CommandText :=
@@ -685,9 +723,11 @@ begin
                 + ' inner join USUARIO U on (AQ.COD_USUARIO = U.COD_USUARIO)' +
                 ' inner join AUTORES T on (T.CODIGO = AQ.COD_AUTOR)' +
                 ' where AQ.NOME_ARQUIVO like ' +
-                QuotedStr('%' + EditPesqu.Text + '%') + ' and AQ.DATA >=' +
-                QuotedStr(Inicial) + ' and AQ.DATA <=' + QuotedStr(Finall) +
-                ' order by AQ.NOME_ARQUIVO';
+                QuotedStr('%' + EditPesqu.Text + '%') +
+                ' and AQ.DATA >= :inicial'
+              + ' and AQ.DATA <= :finall' + ' order by AQ.NOME_ARQUIVO';
+            DM.sds_view.DataSet.ParamByName('inicial').asDate := StrToDate(Inicial);
+            DM.sds_view.DataSet.ParamByName('finall').asDate := StrToDate(Finall);
             end;
             if (CheckBoxConsulta.Checked = True) then
             begin
@@ -743,8 +783,12 @@ begin
             ' order by AQ.TITULO';
           if PanelMostrData.Visible = True then
           begin
-            Inicial := DateToStr(DateTimePicker1.Date); //FormatDateTime('yyyy-MM-dd', );
-            Finall := DateToStr(DateTimePicker2.Date); //FormatDateTime('yyyy-MM-dd', DateTimePicker2.Date);
+            DM.sds_view.Params.Clear;
+            DM.sds_view.DataSet.Params.Clear;
+            Inicial := DateToStr(DateTimePicker1.Date);
+            // FormatDateTime('yyyy-MM-dd', );
+            Finall := DateToStr(DateTimePicker2.Date);
+            // FormatDateTime('yyyy-MM-dd', DateTimePicker2.Date);
             DM.sds_view.CLOSE;
             DM.sds_view.DataSet.CommandText := '';
             DM.sds_view.DataSet.CommandText :=
@@ -752,9 +796,11 @@ begin
               + ' inner join USUARIO U on (AQ.COD_USUARIO = U.COD_USUARIO)' +
               ' inner join AUTORES T on (T.CODIGO = AQ.COD_AUTOR)' +
               ' where AQ.NOME_ARQUIVO like ' +
-              QuotedStr('%' + EditPesqu.Text + '%') + ' and AQ.DATA >=' +
-              QuotedStr(Inicial) + ' and AQ.DATA <=' + QuotedStr(Finall) +
-              ' order by AQ.NOME_ARQUIVO';
+              QuotedStr('%' + EditPesqu.Text + '%') +
+               ' and AQ.DATA >= :inicial'
+              + ' and AQ.DATA <= :finall' + ' order by AQ.NOME_ARQUIVO';
+            DM.sds_view.DataSet.ParamByName('inicial').asDate := StrToDate(Inicial);
+            DM.sds_view.DataSet.ParamByName('finall').asDate := StrToDate(Finall);
           end;
           if (CheckBoxConsulta.Checked = True) then
           begin
@@ -811,7 +857,7 @@ begin
             ' inner join USUARIO PO on (AQ.COD_USUARIO = PO.COD_USUARIO) ' +
             ' inner join AUTORES T on (T.CODIGO = AQ.COD_AUTOR) ' +
             ' where AQ.DATA = :atual';
-            DM.sds_view.DataSet.ParamByName('atual').AsString := EditPesqu.Text;
+          DM.sds_view.DataSet.ParamByName('atual').asString := EditPesqu.Text;
           if (CheckBoxConsulta.Checked = True) then
           begin
             if (CodigoUser <> '') and (CodigoAssunto = '') and
@@ -873,98 +919,50 @@ begin
 
     end;
   end;
-    //BitBtn1.Visible := False;
+  // BitBtn1.Visible := False;
 
-    if (FrmLogin.TODOS = 0) then
-    begin
+  if (FrmLogin.TODOS = 0) then
+  begin
 
-      case RadioGroup1.ItemIndex of
-        0:
+    case RadioGroup1.ItemIndex of
+      0:
+        begin
+          DM.sds_view.CLOSE;
+          DM.sds_view.Params.Clear;
+          DM.sds_view.DataSet.Params.Clear;
+          DM.sds_view.DataSet.CommandText := '';
+          DM.sds_view.DataSet.CommandText :=
+            'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME,SU.TITULOASSUN from ARQUIVOS_USUARIOS N '
+            + ' inner join ARQUIVOLIST AQ on (AQ.ID = N.IDARQUIVOS) ' +
+            ' inner join ASSUNTO SU on AQ.COD_ASSUNTO = SU.CODIGO ' +
+            'inner join USUARIO PO on AQ.COD_USUARIO = PO.COD_USUARIO ' +
+            'inner join AUTORES T on T.CODIGO = AQ.COD_AUTOR ' +
+            ' where AQ.NOME_ARQUIVO like ' +
+            QuotedStr('%' + EditPesqu.Text + '%') +
+          // ' and AQ.COD_USUARIO=' + IntToStr(FrmLogin.COD_USUARIO)
+            ' order by AQ.NOME_ARQUIVO';
+          if PanelMostrData.Visible = True then
           begin
-            DM.sds_view.CLOSE;
             DM.sds_view.Params.Clear;
             DM.sds_view.DataSet.Params.Clear;
+            Inicial := DateToStr(DateTimePicker1.Date);
+            // FormatDateTime('yyyy-MM-dd', );
+            Finall := DateToStr(DateTimePicker2.Date);
+            // FormatDateTime('yyyy-MM-dd', DateTimePicker2.Date);
+            DM.sds_view.CLOSE;
             DM.sds_view.DataSet.CommandText := '';
             DM.sds_view.DataSet.CommandText :=
-              'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME from ARQUIVOS_USUARIOS N'
-              + ' inner join ARQUIVOS_USUARIOS N  on (AQ.ID = N.IDARQUIVOS) ' +
-              ' inner join ARQUIVOS_USUARIOS N on (N.IDARQUIVOS = AQ.ID) and (N.IDUSUARIOS = AQ.COD_USUARIO)'
-              + ' inner join USUARIO U on (N.IDUSUARIOS = U.COD_USUARIO)' +
+              'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,T.NOME from ARQUIVOLIST AQ'
+              + ' inner join USUARIO U on (AQ.COD_USUARIO = U.COD_USUARIO)' +
               ' inner join AUTORES T on (T.CODIGO = AQ.COD_AUTOR)' +
               ' where AQ.NOME_ARQUIVO like ' +
-              QuotedStr('%' + EditPesqu.Text + '%') + ' and AQ.COD_USUARIO=' +
-              IntToStr(FrmLogin.COD_USUARIO) + ' order by AQ.NOME_ARQUIVO';
-            if (CheckBoxConsulta.Checked = True) then
-            begin
-              if (CodigoUser <> '') and (CodigoAssunto = '') and
-                (CodigoUserPorNome = '') then
-              begin
-                Dtsrc.DataSet.Filtered := False;
-                Dtsrc.DataSet.Filter := ' COD_USUARIO=' + CodigoUser;
-              end;
-              if (CodigoUser = '') and (CodigoAssunto <> '') and
-                (CodigoUserPorNome = '') then
-              begin
-                Dtsrc.DataSet.Filtered := False;
-                Dtsrc.DataSet.Filter := ' COD_ASSUNTO=' + CodigoAssunto;
-              end;
-              if (CodigoUser = '') and (CodigoAssunto = '') and
-                (CodigoUserPorNome <> '') then
-              begin
-                Dtsrc.DataSet.Filtered := False;
-                Dtsrc.DataSet.Filter := ' COD_USUARIO=' + CodigoUserPorNome;
-              end;
-              Dtsrc.DataSet.Filtered := True;
-            end;
-
-            DM.sds_view.Open;
-            DBGrid1.DataSource := Dtsrc;
-
-            Label3.Caption := IntToStr(DM.sds_view.RecordCount);
-            Alert.Visible := True;
-            if ((DM.sds_view.RecordCount) >= 4) then
-            begin
-              PanelMaximizar.Visible := True;
-              PanelComplete.Visible := True;
-            end
-            else if ((DM.sds_view.RecordCount) <= 3) then
-            begin
-              PanelMaximizar.Visible := False;
-              PanelComplete.Visible := False;
-            end;
+              QuotedStr('%' + EditPesqu.Text + '%') + ' and AQ.DATA >= :inicial'
+              + ' and AQ.DATA <= :finall' + ' order by AQ.NOME_ARQUIVO';
+            DM.sds_view.DataSet.ParamByName('inicial').asString := Inicial;
+            DM.sds_view.DataSet.ParamByName('finall').asString := Finall;
           end;
-        1:
+          if (CheckBoxConsulta.Checked = True) then
           begin
-            DM.sds_view.CLOSE;
-            DM.sds_view.Params.Clear;
-            DM.sds_view.DataSet.Params.Clear;
-            DM.sds_view.DataSet.CommandText := '';
-            DM.sds_view.DataSet.CommandText :=
-            'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME,SU.TITULOASSUN from ARQUIVOS_USUARIOS N '
-            + ' inner join ARQUIVOLIST AQ on (AQ.ID = N.IDARQUIVOS) ' +
-            ' inner join ASSUNTO SU on AQ.COD_ASSUNTO = SU.CODIGO ' +
-            'inner join USUARIO PO on AQ.COD_USUARIO = PO.COD_USUARIO ' +
-            'inner join AUTORES T on T.CODIGO = AQ.COD_AUTOR ' +
-            'where AQ.DESCRICAO like ' + QuotedStr('%' + EditPesqu.Text + '%') +
-
-            ' order by AQ.DESCRICAO';
-            if (DBText4.Caption <> '') then
-            begin
-            DM.sds_view.CLOSE;
-            DM.sds_view.Params.Clear;
-            DM.sds_view.DataSet.Params.Clear;
-            DM.sds_view.DataSet.CommandText := '';
-            DM.sds_view.DataSet.CommandText :=
-            'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME,SU.TITULOASSUN from ARQUIVOS_USUARIOS N '
-            + ' inner join ARQUIVOLIST AQ on (AQ.ID = N.IDARQUIVOS) ' +
-            ' inner join ASSUNTO SU on AQ.COD_ASSUNTO = SU.CODIGO ' +
-            'inner join USUARIO PO on AQ.COD_USUARIO = PO.COD_USUARIO ' +
-            'inner join AUTORES T on T.CODIGO = AQ.COD_AUTOR ' +
-            'where AQ.DESCRICAO like ' + QuotedStr('%' + EditPesqu.Text + '%') +
-            ' and N.IDUSUARIOS=' + CodigoPorCriterio +
-            ' order by AQ.DESCRICAO';
-            end;
-
             if (CodigoUser <> '') and (CodigoAssunto = '') and
               (CodigoUserPorNome = '') then
             begin
@@ -983,13 +981,125 @@ begin
               Dtsrc.DataSet.Filtered := False;
               Dtsrc.DataSet.Filter := ' COD_USUARIO=' + CodigoUserPorNome;
             end;
-
-
+            if (CodigoUser = '') and (CodigoAssunto = '') and
+              (CodigoUserPorNome = '') and (CodigoPorCriterio <> '') then
+            begin
+              Dtsrc.DataSet.Filtered := False;
+              Dtsrc.DataSet.Filter := ' IDUSUARIOS=' + CodigoPorCriterio;
+            end;
             Dtsrc.DataSet.Filtered := True;
-            // DBGrid1.DataSource := Dtsrc;
-            // end;
+          end;
+
+          DM.sds_view.Open;
+          DBGrid1.DataSource := Dtsrc;
+
+          Label3.Caption := IntToStr(DM.sds_view.RecordCount);
+          Alert.Visible := True;
+          if ((DM.sds_view.RecordCount) >= 4) then
+          begin
+            PanelMaximizar.Visible := True;
+            PanelComplete.Visible := True;
+          end
+          else if ((DM.sds_view.RecordCount) <= 3) then
+          begin
+            PanelMaximizar.Visible := False;
+            PanelComplete.Visible := False;
+          end;
+        end;
+      1:
+        begin
+        if PanelMostrData.Visible = False then
+        begin
+          DM.sds_view.CLOSE;
+          DM.sds_view.Params.Clear;
+          DM.sds_view.DataSet.Params.Clear;
+          DM.sds_view.DataSet.CommandText := '';
+          DM.sds_view.DataSet.CommandText :=
+            'select DISTINCT AQ.*,N.IDUSUARIOS,PO.NOME from ARQUIVOS_USUARIOS N '
+            + ' inner join ARQUIVOLIST AQ on (AQ.ID = N.IDARQUIVOS) ' +
+            ' inner join ASSUNTO SU on AQ.COD_ASSUNTO = SU.CODIGO ' +
+            'inner join USUARIO PO on AQ.COD_USUARIO = PO.COD_USUARIO ' +
+            'inner join AUTORES T on T.CODIGO = AQ.COD_AUTOR ' +
+            'where AQ.DESCRICAO like' + QuotedStr('%' + EditPesqu.Text + '%') +
+            ' order by AQ.DESCRICAO';
+        end;
+          if (DBText4.Caption <> '') then
+          begin
+            DM.sds_view.CLOSE;
+            DM.sds_view.Params.Clear;
+            DM.sds_view.DataSet.Params.Clear;
+            DM.sds_view.DataSet.CommandText := '';
+            DM.sds_view.DataSet.CommandText :=
+              'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,PO.NOME,SU.TITULOASSUN from ARQUIVOS_USUARIOS N '
+              + ' inner join ARQUIVOLIST AQ on (AQ.ID = N.IDARQUIVOS) ' +
+              ' inner join ASSUNTO SU on AQ.COD_ASSUNTO = SU.CODIGO ' +
+              'inner join USUARIO PO on AQ.COD_USUARIO = PO.COD_USUARIO ' +
+              'inner join AUTORES T on T.CODIGO = AQ.COD_AUTOR ' +
+              'where AQ.DESCRICAO like ' +
+              QuotedStr('%' + EditPesqu.Text + '%') +
+            // ' and N.IDUSUARIOS=' + CodigoPorCriterio +
+              ' order by AQ.DESCRICAO';
+          end;
+
+          if PanelMostrData.Visible = True then
+          begin
+            //try
+            DM.sds_view.Params.Clear;
+            DM.sds_view.DataSet.Params.Clear;
+            Inicial := DateToStr(DateTimePicker1.Date);
+
+            Finall := DateToStr(DateTimePicker2.Date);
+
+            DM.sds_view.CLOSE;
+            DM.sds_view.DataSet.CommandText := '';
+            DM.sds_view.DataSet.CommandText :=
+              'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,T.NOME from ARQUIVOLIST AQ'
+              + ' inner join USUARIO U on (AQ.COD_USUARIO = U.COD_USUARIO)' +
+              ' inner join AUTORES T on (T.CODIGO = AQ.COD_AUTOR)' +
+              ' where AQ.NOME_ARQUIVO like ' + QuotedStr('%' + EditPesqu.Text + '%') +
+               ' and AQ.DATA >= :inicial'
+              + ' and AQ.DATA <= :finall' + ' order by AQ.NOME_ARQUIVO';
+            DM.sds_view.DataSet.ParamByName('inicial').asDate := StrToDate(Inicial);
+            DM.sds_view.DataSet.ParamByName('finall').asDate := StrToDate(Finall);
+
+             { except on E: Exception do
+              begin
+                 MessageDlg('Verifique uma Data Valida de Cadastro!',mtWarning, [mbOK], 0);
+              end;
+           end;}
+          end;
+          if (CheckBoxConsulta.Checked = True) then
+          begin
+            if (CodigoUser <> '') and (CodigoAssunto = '') and
+              (CodigoUserPorNome = '') then
+            begin
+              Dtsrc.DataSet.Filtered := False;
+              Dtsrc.DataSet.Filter := ' COD_USUARIO=' + CodigoUser;
+            end;
+            if (CodigoUser = '') and (CodigoAssunto <> '') and
+              (CodigoUserPorNome = '') then
+            begin
+              Dtsrc.DataSet.Filtered := False;
+              Dtsrc.DataSet.Filter := ' COD_ASSUNTO=' + CodigoAssunto;
+            end;
+            if (CodigoUser = '') and (CodigoAssunto = '') and
+              (CodigoUserPorNome <> '') then
+            begin
+              Dtsrc.DataSet.Filtered := False;
+              Dtsrc.DataSet.Filter := ' COD_USUARIO=' + CodigoUserPorNome;
+            end;
+            if (CodigoUser = '') and (CodigoAssunto = '') and
+              (CodigoUserPorNome = '') and (CodigoPorCriterio <> '') then
+            begin
+              Dtsrc.DataSet.Filtered := False;
+              Dtsrc.DataSet.Filter := ' IDUSUARIOS=' + CodigoPorCriterio;
+            end;
+            Dtsrc.DataSet.Filtered := True;
+          end;
+
+
             DM.sds_view.Open;
-            DBGrid1.DataSource := Dtsrc;
+
 
             Label3.Caption := IntToStr(DM.sds_view.RecordCount);
             Alert.Visible := True;
@@ -1005,64 +1115,14 @@ begin
             end;
 
           end;
-        2:
+
+      2:
+        begin
+          if EditPesqu.Text = '' then
           begin
-            if EditPesqu.Text = '' then
-            begin
-              MessageDlg('Informe o Código desejado!', mtWarning, [mbOK], 0);
-            end
-            else
-            begin
-              DM.sds_view.CLOSE;
-              DM.sds_view.Params.Clear;
-              DM.sds_view.DataSet.Params.Clear;
-              DM.sds_view.DataSet.CommandText := '';
-              DM.sds_view.DataSet.CommandText :=
-                'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME from ARQUIVOS_USUARIOS N'
-                + ' inner join ARQUIVOLIST AQ  on (AQ.ID = N.IDARQUIVOS) '
-                + 'inner join ASSUNTO SU on (AQ.COD_ASSUNTO = SU.CODIGO) ' +
-                ' inner join USUARIO PO on (AQ.COD_USUARIO = PO.COD_USUARIO) ' +
-                ' inner join AUTORES T on (T.CODIGO = AQ.COD_AUTOR) ' +
-                ' where AQ.ID = ' + EditPesqu.Text + ' and N.IDUSUARIOS=' +
-                IntToStr(FrmLogin.COD_USUARIO) + ' order by AQ.ID ';
-              if (CheckBoxConsulta.Checked = True) then
-              begin
-                if (CodigoUser <> '') and (CodigoAssunto = '') and
-                  (CodigoUserPorNome = '') then
-                begin
-                  Dtsrc.DataSet.Filtered := False;
-                  Dtsrc.DataSet.Filter := ' COD_USUARIO=' + CodigoUser;
-                end;
-                if (CodigoUser = '') and (CodigoAssunto <> '') and
-                  (CodigoUserPorNome = '') then
-                begin
-                  Dtsrc.DataSet.Filtered := False;
-                  Dtsrc.DataSet.Filter := ' COD_ASSUNTO=' + CodigoAssunto;
-                end;
-                if (CodigoUser = '') and (CodigoAssunto = '') and
-                  (CodigoUserPorNome <> '') then
-                begin
-                  Dtsrc.DataSet.Filtered := False;
-                  Dtsrc.DataSet.Filter := ' COD_USUARIO=' + CodigoUserPorNome;
-                end;
-
-                Dtsrc.DataSet.Filtered := True;
-                DBGrid1.DataSource := Dtsrc;
-              end;
-              // end;
-              DM.sds_view.Open;
-              DBGrid1.DataSource := Dtsrc;
-              DM.sds_view.Filtered := False;
-              Label3.Caption := IntToStr(DM.sds_view.RecordCount);
-              Alert.Visible := True;
-              if ((DM.sds_view.RecordCount) = 1) then
-              begin
-                PanelMaximizar.Visible := False;
-              end;
-            end;
-
-          end;
-        3:
+            MessageDlg('Informe o Código desejado!', mtWarning, [mbOK], 0);
+          end
+          else
           begin
             DM.sds_view.CLOSE;
             DM.sds_view.Params.Clear;
@@ -1071,133 +1131,231 @@ begin
             DM.sds_view.DataSet.CommandText :=
               'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME from ARQUIVOS_USUARIOS N'
               + ' inner join ARQUIVOLIST AQ  on (AQ.ID = N.IDARQUIVOS) ' +
-              ' inner join ASSUNTO SU on (AQ.COD_ASSUNTO = SU.CODIGO) ' +
+              'inner join ASSUNTO SU on (AQ.COD_ASSUNTO = SU.CODIGO) ' +
               ' inner join USUARIO PO on (AQ.COD_USUARIO = PO.COD_USUARIO) ' +
               ' inner join AUTORES T on (T.CODIGO = AQ.COD_AUTOR) ' +
-              ' where AQ.TITULO like ' + QuotedStr('%' + EditPesqu.Text + '%') +
-              ' and N.IDUSUARIOS=' + IntToStr(FrmLogin.COD_USUARIO) +
-              ' order by AQ.TITULO';
-            if (CheckBoxConsulta.Checked = True) then
-            begin
-              if (CodigoUser <> '') and (CodigoAssunto = '') and
-                (CodigoUserPorNome = '') then
-              begin
-                Dtsrc.DataSet.Filtered := False;
-                Dtsrc.DataSet.Filter := 'COD_USUARIO=' + CodigoUser;
-              end;
-              if (CodigoUser = '') and (CodigoAssunto <> '') and
-                (CodigoUserPorNome = '') then
-              begin
-                Dtsrc.DataSet.Filtered := False;
-                Dtsrc.DataSet.Filter := ' COD_ASSUNTO=' + CodigoAssunto;
-              end;
-              if (CodigoUser = '') and (CodigoAssunto = '') and
-                (CodigoUserPorNome <> '') then
-              begin
-                Dtsrc.DataSet.Filtered := False;
-                Dtsrc.DataSet.Filter := 'COD_USUARIO=' + CodigoUserPorNome;
-              end;
-
-              Dtsrc.DataSet.Filtered := True;
-
-              // end;
-            end;
-            DBGrid1.DataSource := Dtsrc;
-            DM.sds_view.Open;
-
-            Label3.Caption := IntToStr(DM.sds_view.RecordCount);
-            Alert.Visible := True;
-            if ((DM.sds_view.RecordCount) >= 4) then
-            begin
-              PanelMaximizar.Visible := True;
-              PanelComplete.Visible := True;
-            end
-            else if ((DM.sds_view.RecordCount) <= 3) then
-            begin
-              PanelMaximizar.Visible := False;
-              PanelComplete.Visible := False;
-            end;
-
-          end;
-        4:
+              ' where AQ.ID = ' + EditPesqu.Text + ' and N.IDUSUARIOS=' +
+              IntToStr(FrmLogin.COD_USUARIO) + ' order by AQ.ID ';
+            if PanelMostrData.Visible = True then
           begin
-            EditPesqu.EditMask := '!99/99/0000;1;_';
-            DM.sds_view.CLOSE;
             DM.sds_view.Params.Clear;
             DM.sds_view.DataSet.Params.Clear;
+            Inicial := DateToStr(DateTimePicker1.Date);
+            // FormatDateTime('yyyy-MM-dd', );
+            Finall := DateToStr(DateTimePicker2.Date);
+            // FormatDateTime('yyyy-MM-dd', DateTimePicker2.Date);
+            DM.sds_view.CLOSE;
             DM.sds_view.DataSet.CommandText := '';
             DM.sds_view.DataSet.CommandText :=
-              'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME from ARQUIVOS_USUARIOS N'
-              + ' inner join ARQUIVOLIST AQ  on (AQ.ID = N.IDARQUIVOS) ' +
-              'inner join ASSUNTO SU on AQ.COD_ASSUNTO = SU.CODIGO ' +
-              'inner join USUARIO PO on AQ.COD_USUARIO = PO.COD_USUARIO ' +
-              'inner join AUTORES T on (T.CODIGO = AQ.COD_AUTOR) ' +
-              'where AQ.DATA = :date' + ' and N.IDUSUARIOS=' +
-              IntToStr(FrmLogin.COD_USUARIO);
-            DM.sds_view.DataSet.ParamByName('date').AsDate :=
-              StrToDate(EditPesqu.Text);
+              'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,T.NOME from ARQUIVOLIST AQ'
+              + ' inner join USUARIO U on (AQ.COD_USUARIO = U.COD_USUARIO)' +
+              ' inner join AUTORES T on (T.CODIGO = AQ.COD_AUTOR)' +
+              ' where AQ.NOME_ARQUIVO like ' +
+              QuotedStr('%' + EditPesqu.Text + '%') + 
+               ' and AQ.DATA <= :finall' + ' order by AQ.NOME_ARQUIVO';
+            DM.sds_view.DataSet.ParamByName('inicial').asDate := StrToDate(Inicial);
+            DM.sds_view.DataSet.ParamByName('finall').asDate := StrToDate(Finall);
+          end;
             if (CheckBoxConsulta.Checked = True) then
             begin
               if (CodigoUser <> '') and (CodigoAssunto = '') and
-                (CodigoUserPorNome = '') then
+                (CodigoUserPorNome = '') and (CodigoPorCriterio = '') then
               begin
                 Dtsrc.DataSet.Filtered := False;
                 Dtsrc.DataSet.Filter := ' COD_USUARIO=' + CodigoUser;
               end;
               if (CodigoUser = '') and (CodigoAssunto <> '') and
-                (CodigoUserPorNome = '') then
+                (CodigoUserPorNome = '') and (CodigoPorCriterio = '') then
               begin
                 Dtsrc.DataSet.Filtered := False;
                 Dtsrc.DataSet.Filter := ' COD_ASSUNTO=' + CodigoAssunto;
               end;
               if (CodigoUser = '') and (CodigoAssunto = '') and
-                (CodigoUserPorNome <> '') then
+                (CodigoUserPorNome <> '') and (CodigoPorCriterio = '') then
               begin
                 Dtsrc.DataSet.Filtered := False;
                 Dtsrc.DataSet.Filter := ' COD_USUARIO=' + CodigoUserPorNome;
               end;
+              if (CodigoUser = '') and (CodigoAssunto = '') and
+                (CodigoUserPorNome = '') and (CodigoPorCriterio <> '') then
+              begin
+                Dtsrc.DataSet.Filtered := False;
+                Dtsrc.DataSet.Filter := ' IDUSUARIOS=' + CodigoPorCriterio;
+              end;
+              Dtsrc.DataSet.Filtered := True;
+
               Dtsrc.DataSet.Filtered := True;
               DBGrid1.DataSource := Dtsrc;
             end;
-
-            DM.sds_view.Open;
-
-            Label3.Caption := IntToStr(DM.sds_view.RecordCount);
-            Alert.Visible := True;
-            if ((DM.sds_view.RecordCount) >= 4) then
-            begin
-              PanelMaximizar.Visible := True;
-              PanelComplete.Visible := True;
-            end
-            else if ((DM.sds_view.RecordCount) <= 3) then
-            begin
-              PanelMaximizar.Visible := False;
-              PanelComplete.Visible := False;
-            end;
+            // end;
 
           end;
-      else
 
-        {if (FrmLogin.TODOS = 1) then
+        end;
+      3:
         begin
-          with (not DM.sds_view.Eof) do
+          DM.sds_view.CLOSE;
+          DM.sds_view.Params.Clear;
+          DM.sds_view.DataSet.Params.Clear;
+          DM.sds_view.DataSet.CommandText := '';
+          DM.sds_view.DataSet.CommandText :=
+            'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME from ARQUIVOS_USUARIOS N'
+            + ' inner join ARQUIVOLIST AQ  on (AQ.ID = N.IDARQUIVOS) ' +
+            ' inner join ASSUNTO SU on (AQ.COD_ASSUNTO = SU.CODIGO) ' +
+            ' inner join USUARIO PO on (AQ.COD_USUARIO = PO.COD_USUARIO) ' +
+            ' inner join AUTORES T on (T.CODIGO = AQ.COD_AUTOR) ' +
+            ' where AQ.TITULO like ' + QuotedStr('%' + EditPesqu.Text + '%') +
+            ' and N.IDUSUARIOS=' + IntToStr(FrmLogin.COD_USUARIO) +
+            ' order by AQ.TITULO';
+         if PanelMostrData.Visible = True then
           begin
-            BitBtn1.Enabled := True;
-            SpeedButton3.Enabled := True;
-
+            DM.sds_view.Params.Clear;
+            DM.sds_view.DataSet.Params.Clear;
+            Inicial := DateToStr(DateTimePicker1.Date);
+            // FormatDateTime('yyyy-MM-dd', );
+            Finall := DateToStr(DateTimePicker2.Date);
+            // FormatDateTime('yyyy-MM-dd', DateTimePicker2.Date);
+            DM.sds_view.CLOSE;
+            DM.sds_view.DataSet.CommandText := '';
+            DM.sds_view.DataSet.CommandText :=
+              'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,T.NOME from ARQUIVOLIST AQ'
+              + ' inner join USUARIO U on (AQ.COD_USUARIO = U.COD_USUARIO)' +
+              ' inner join AUTORES T on (T.CODIGO = AQ.COD_AUTOR)' +
+              ' where AQ.NOME_ARQUIVO like ' +
+              QuotedStr('%' + EditPesqu.Text + '%') +
+              ' and AQ.DATA >= :inicial'
+              + ' and AQ.DATA <= :finall' + ' order by AQ.NOME_ARQUIVO';
+            DM.sds_view.DataSet.ParamByName('inicial').asDate := StrToDate(Inicial);
+            DM.sds_view.DataSet.ParamByName('finall').asDate := StrToDate(Finall);
           end;
+          if (CheckBoxConsulta.Checked = True) then
+          begin
+            if (CodigoUser <> '') and (CodigoAssunto = '') and
+              (CodigoUserPorNome = '') then
+            begin
+              Dtsrc.DataSet.Filtered := False;
+              Dtsrc.DataSet.Filter := 'COD_USUARIO=' + CodigoUser;
+            end;
+            if (CodigoUser = '') and (CodigoAssunto <> '') and
+              (CodigoUserPorNome = '') then
+            begin
+              Dtsrc.DataSet.Filtered := False;
+              Dtsrc.DataSet.Filter := ' COD_ASSUNTO=' + CodigoAssunto;
+            end;
+            if (CodigoUser = '') and (CodigoAssunto = '') and
+              (CodigoUserPorNome <> '') then
+            begin
+              Dtsrc.DataSet.Filtered := False;
+              Dtsrc.DataSet.Filter := 'COD_USUARIO=' + CodigoUserPorNome;
+            end;
+            if (CodigoUser = '') and (CodigoAssunto = '') and
+              (CodigoUserPorNome = '') and (CodigoPorCriterio <> '') then
+            begin
+              Dtsrc.DataSet.Filtered := False;
+              Dtsrc.DataSet.Filter := ' IDUSUARIOS=' + CodigoPorCriterio;
+            end;
+            Dtsrc.DataSet.Filtered := True;
+
+            Dtsrc.DataSet.Filtered := True;
+
+            // end;
+          end;
+          DBGrid1.DataSource := Dtsrc;
+          DM.sds_view.Open;
+
+          Label3.Caption := IntToStr(DM.sds_view.RecordCount);
+          Alert.Visible := True;
+          if ((DM.sds_view.RecordCount) >= 4) then
+          begin
+            PanelMaximizar.Visible := True;
+            PanelComplete.Visible := True;
+          end
+          else if ((DM.sds_view.RecordCount) <= 3) then
+          begin
+            PanelMaximizar.Visible := False;
+            PanelComplete.Visible := False;
+          end;
+
+        end;
+      4:
+        begin
+          EditPesqu.EditMask := '!99/99/0000;1;_';
+          DM.sds_view.CLOSE;
+          DM.sds_view.Params.Clear;
+          DM.sds_view.DataSet.Params.Clear;
+          DM.sds_view.DataSet.CommandText := '';
+          DM.sds_view.DataSet.CommandText :=
+            'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,T.NOME from ARQUIVOS_USUARIOS N'
+            + ' inner join ARQUIVOLIST AQ  on (AQ.ID = N.IDARQUIVOS) ' +
+            'inner join ASSUNTO SU on AQ.COD_ASSUNTO = SU.CODIGO ' +
+            'inner join USUARIO PO on AQ.COD_USUARIO = PO.COD_USUARIO ' +
+            'inner join AUTORES T on (T.CODIGO = AQ.COD_AUTOR) ' +
+            'where AQ.DATA = :date' + ' and N.IDUSUARIOS=' +
+            IntToStr(FrmLogin.COD_USUARIO);
+          DM.sds_view.DataSet.ParamByName('date').AsDate :=
+            StrToDate(EditPesqu.Text);
+          if (CheckBoxConsulta.Checked = True) then
+          begin
+            if (CodigoUser <> '') and (CodigoAssunto = '') and
+              (CodigoUserPorNome = '') then
+            begin
+              Dtsrc.DataSet.Filtered := False;
+              Dtsrc.DataSet.Filter := ' COD_USUARIO=' + CodigoUser;
+            end;
+            if (CodigoUser = '') and (CodigoAssunto <> '') and
+              (CodigoUserPorNome = '') then
+            begin
+              Dtsrc.DataSet.Filtered := False;
+              Dtsrc.DataSet.Filter := ' COD_ASSUNTO=' + CodigoAssunto;
+            end;
+            if (CodigoUser = '') and (CodigoAssunto = '') and
+              (CodigoUserPorNome <> '') then
+            begin
+              Dtsrc.DataSet.Filtered := False;
+              Dtsrc.DataSet.Filter := ' COD_USUARIO=' + CodigoUserPorNome;
+            end;
+            Dtsrc.DataSet.Filtered := True;
+            DBGrid1.DataSource := Dtsrc;
+          end;
+
+          DM.sds_view.Open;
+
+          Label3.Caption := IntToStr(DM.sds_view.RecordCount);
+          Alert.Visible := True;
+          if ((DM.sds_view.RecordCount) >= 4) then
+          begin
+            PanelMaximizar.Visible := True;
+            PanelComplete.Visible := True;
+          end
+          else if ((DM.sds_view.RecordCount) <= 3) then
+          begin
+            PanelMaximizar.Visible := False;
+            PanelComplete.Visible := False;
+          end;
+
+        end;
+
+
+      { if (FrmLogin.TODOS = 1) then
+        begin
+        with (not DM.sds_view.Eof) do
+        begin
+        BitBtn1.Enabled := True;
+        SpeedButton3.Enabled := True;
+
+        end;
         end;
         with not DM.sds_view.Eof do
         begin
-          BitBtn1.Enabled := True;
-          SpeedButton3.Enabled := True;
-          // BitBtn2.Enabled := not IsEmpty;
+        BitBtn1.Enabled := True;
+        SpeedButton3.Enabled := True;
+        // BitBtn2.Enabled := not IsEmpty;
         end;
         BitBtn1.Visible := False; }
 
-      end;
     end;
   end;
+end;
 
 procedure TFrmView.SpeedButton3Click(Sender: TObject);
 begin
@@ -1272,34 +1430,34 @@ begin
 
 end;
 
-{procedure TFrmView.SpeedButton22Click(Sender: TObject);
-var
+{ procedure TFrmView.SpeedButton22Click(Sender: TObject);
+  var
   x, y: pchar;
   Flag: Integer;
-begin
+  begin
   if selecAtualReport <= 0 then
   begin
-    MessageDlg('Selecione primeiro a Informação Desejada na Lista!', mtWarning,
-      [mbOK], 0);
+  MessageDlg('Selecione primeiro a Informação Desejada na Lista!', mtWarning,
+  [mbOK], 0);
   end
   else
   begin
-    GetTempPath(SizeOf(buffer), buffer);
-    Temp := StrPas(buffer) + '\OpenArquivos';
-    TBlobField(DM.sds_view.Fields[4])
-      .SaveToFile(Temp + '\' + DM.sds_view.Fields[3].asString);
-    x := nil;
-    y := nil;
-    Flag := ShellExecute(Application.Handle, 'OPEN',
-      pchar(Temp + '\' + DM.sds_view.Fields[3].asString), x, y, SW_SHOW);
-    if Flag <= 32 then
-    begin
-      ShowMessage('Erro ao Abrir ' + Temp + '\' + DM.sds_view.Fields[3]
-        .asString);
-    end;
+  GetTempPath(SizeOf(buffer), buffer);
+  Temp := StrPas(buffer) + '\OpenArquivos';
+  TBlobField(DM.sds_view.Fields[4])
+  .SaveToFile(Temp + '\' + DM.sds_view.Fields[3].asString);
+  x := nil;
+  y := nil;
+  Flag := ShellExecute(Application.Handle, 'OPEN',
+  pchar(Temp + '\' + DM.sds_view.Fields[3].asString), x, y, SW_SHOW);
+  if Flag <= 32 then
+  begin
+  ShowMessage('Erro ao Abrir ' + Temp + '\' + DM.sds_view.Fields[3]
+  .asString);
+  end;
   end;
 
-end;}
+  end; }
 procedure TFrmView.SpeedButton8Click(Sender: TObject);
 begin
   FrmLocalizarUserCod := TFrmLocalizarUserCod.Create(Self, DM.sds_UserCod);
@@ -1314,6 +1472,14 @@ begin
     DM.sds_UserCod.CLOSE;
     FrmLocalizarUserCod.Free;
   end;
+
+end;
+
+procedure TFrmView.SpeedButton9Click(Sender: TObject);
+begin
+  SpeedButton9.Enabled := False;
+  SpeedButton10.Enabled := True;
+  CodigoUserPorNome := DBEdit1.Text;
 
 end;
 

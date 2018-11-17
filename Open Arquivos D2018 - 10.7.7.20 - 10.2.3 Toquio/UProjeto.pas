@@ -242,7 +242,6 @@ var
     respLogar, respLogados: Integer;
   thema: TStyleManager;
 
-
 implementation
 
 uses UDMII, ShellAPI, UnAbertura, UnLogin, UnCadDepartamento, UnCadCidades,
@@ -897,7 +896,7 @@ end;
 
 procedure TFrPrincipal.btntrazerClick(Sender: TObject);
 var
-DataInserimento:String;
+  DataInserimento: String;
 begin
   FrmArquProc := TFrmArquProc.Create(Application);
   // FrmArquProc.ShowModal;
@@ -911,10 +910,11 @@ begin
     begin
       try
 
-        DM.cds_arquivo.Params[0].AsInteger := DM.sds_arqu.FieldByName('ID').AsInteger;
+        DM.cds_arquivo.Params[0].AsInteger := DM.sds_arqu.FieldByName('ID')
+          .AsInteger;
         DM.cds_arquivo.Open;
-        //DataInserimento := DM.cds_ArquivoDATA.AsString;
-       // DBText6.Caption:= FormatDateTime('dd/MM/yyyy',StrToDate(DataInserimento));
+        // DataInserimento := DM.cds_ArquivoDATA.AsString;
+        // DBText6.Caption:= FormatDateTime('dd/MM/yyyy',StrToDate(DataInserimento));
         FrmProcedimento.Progress;
         FrmProcedimento.Close;
 
@@ -929,8 +929,8 @@ begin
         // lookUser.Visible:=true;
         DM.cds_arquivo.Params[0].AsInteger := DM.sds_ArquTodosID.AsInteger;
         DM.cds_arquivo.Open;
-       // DataInserimento := DM.cds_ArquivoDATA.AsString;
-       // DBText6.Caption:= FormatDateTime('dd/MM/yyyy',StrToDate(DataInserimento));
+        // DataInserimento := DM.cds_ArquivoDATA.AsString;
+        // DBText6.Caption:= FormatDateTime('dd/MM/yyyy',StrToDate(DataInserimento));
         FrmProcedimento.Progress;
         FrmProcedimento.Close;
 
@@ -1143,7 +1143,7 @@ begin
     if FrmDlgProcurar.ShowModal = mrOk then
     begin
       DM.cds_arquivo.Close;
-      DM.cds_arquivo.Params[0].AsInteger := DM.sds_Arqu.DataSet.FieldByName
+      DM.cds_arquivo.Params[0].AsInteger := DM.sds_arqu.DataSet.FieldByName
         ('ID').AsInteger;
       DM.cds_arquivo.Open;
       if DBEdit4.Text <> '0' then
@@ -1171,7 +1171,7 @@ begin
     end;
 
   finally
-    DM.sds_Arqu.Close;
+    DM.sds_arqu.Close;
     FrmDlgProcurar.Free;
   end;
   MostrarIcon;

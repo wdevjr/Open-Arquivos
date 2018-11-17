@@ -27,6 +27,7 @@ object FrmView: TFrmView
     Margins.Bottom = 4
     Align = alBottom
     Color = clWhite
+    DataSource = Dtsrc
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -67,7 +68,7 @@ object FrmView: TFrmView
         Font.Name = 'Tahoma'
         Font.Style = []
         Title.Caption = 'Descri'#231#227'o'
-        Width = 659
+        Width = 590
         Visible = True
       end
       item
@@ -114,13 +115,8 @@ object FrmView: TFrmView
         Font.Height = -11
         Font.Name = 'Tahoma'
         Font.Style = []
-        Title.Caption = 'Nome do Usu'#225'rio de Cadastro'
-        Width = 224
-        Visible = True
-      end
-      item
-        Expanded = False
-        Title.Caption = 'Usu'#225'rio de Crit'#233'rio'
+        Title.Caption = 'Nome Usu'#225'rio por Criterio'
+        Width = 266
         Visible = True
       end>
   end
@@ -1796,9 +1792,10 @@ object FrmView: TFrmView
           FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
           FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
           FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00}
+        OnClick = SpeedButton1Click
       end
       object SpeedButton9: TSpeedButton
-        Left = 547
+        Left = 548
         Top = 3
         Width = 98
         Height = 37
@@ -1866,6 +1863,7 @@ object FrmView: TFrmView
           4D4D4D4D4D4D4D4D4D4D4D4D4D4D4D4D4D4D4D4D4D4D4D4D4D4D4D4D4D4D4D4D
           4D4DC8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4}
         ParentFont = False
+        OnClick = SpeedButton9Click
       end
       object SpeedButton10: TSpeedButton
         Left = 652
@@ -1880,6 +1878,7 @@ object FrmView: TFrmView
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
+        OnClick = SpeedButton10Click
       end
       object DBEdit1: TDBEdit
         Left = 370
@@ -2312,6 +2311,7 @@ object FrmView: TFrmView
           4D4D4D4D4D4D4D4D4D4D4D4D4D4D4D4D4D4D4D4D4D4D4D4D4D4D4D4D4D4D4D4D
           4D4DC8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4}
         ParentFont = False
+        OnClick = SpeedButton12Click
       end
       object SpeedButton13: TSpeedButton
         Left = 652
@@ -2326,6 +2326,7 @@ object FrmView: TFrmView
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
+        OnClick = SpeedButton13Click
       end
       object DBEdit4: TDBEdit
         Left = 458
@@ -2351,8 +2352,8 @@ object FrmView: TFrmView
   end
   object Dtsrc: TDataSource
     DataSet = DM.sds_view
-    Left = 464
-    Top = 448
+    Left = 448
+    Top = 488
   end
   object Dtscru: TDataSource
     DataSet = DM.cds_User
@@ -2368,11 +2369,6 @@ object FrmView: TFrmView
     DataSet = DM.cds_UserCod
     Left = 424
     Top = 10
-  end
-  object DtsrcTodos: TDataSource
-    DataSet = DM.sds_view_todos
-    Left = 344
-    Top = 488
   end
   object DataSourceCriterio: TDataSource
     DataSet = DM.sds_UserPorCriterio

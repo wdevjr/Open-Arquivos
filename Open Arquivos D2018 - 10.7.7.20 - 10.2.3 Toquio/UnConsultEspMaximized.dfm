@@ -676,7 +676,7 @@ object FrmviewMax: TFrmviewMax
         Font.Height = -11
         Font.Name = 'Tahoma'
         Font.Style = []
-        Title.Caption = 'Nome Usu'#225'rio'
+        Title.Caption = 'Nome Usu'#225'rio por Criterio'
         Width = 279
         Visible = True
       end

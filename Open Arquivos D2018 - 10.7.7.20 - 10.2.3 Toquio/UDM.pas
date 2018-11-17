@@ -700,13 +700,14 @@ end;
 
 procedure TDM.cds_ArquivoBeforePost(DataSet: TDataSet);
 var
-DataInserimento:String;
+  DataInserimento: String;
 begin
   if cds_Arquivo.State = dsInsert then
   begin
     DataInserimento := DM.cds_ArquivoDATA.AsString;
 
-    cds_ArquivoDATA.Value := Date;//FormatDateTime('dd/MM/yyyy',StrToDate(DataInserimento));
+    cds_ArquivoDATA.Value := Date;
+    // FormatDateTime('dd/MM/yyyy',StrToDate(DataInserimento));
     cds_ArquivoHORA.Value := Time;
   end;
 

@@ -833,7 +833,7 @@ object FrmContrUser: TFrmContrUser
     end
     object excluir: TSpeedButton
       Left = 248
-      Top = -2
+      Top = 6
       Width = 81
       Height = 49
       Margins.Left = 4
@@ -909,9 +909,9 @@ object FrmContrUser: TFrmContrUser
     end
     object cancelar: TSpeedButton
       Left = 324
-      Top = -2
+      Top = 6
       Width = 76
-      Height = 50
+      Height = 43
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
@@ -985,9 +985,9 @@ object FrmContrUser: TFrmContrUser
     end
     object trazerj: TSpeedButton
       Left = 408
-      Top = -2
+      Top = 12
       Width = 71
-      Height = 49
+      Height = 30
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
@@ -1868,7 +1868,7 @@ object FrmContrUser: TFrmContrUser
     Left = 352
     Top = 8
     Bitmap = {
-      494C010103000400A80010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010103000400AC0010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000001000000001002000000000000010
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
