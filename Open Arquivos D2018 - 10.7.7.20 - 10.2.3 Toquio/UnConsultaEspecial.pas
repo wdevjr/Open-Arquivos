@@ -343,6 +343,13 @@ end;
 
 procedure TFrmView.FormShow(Sender: TObject);
 begin
+  if (FrmLogin.TODOS = 1) then
+  begin
+    Panel4.Visible := False;
+  end else
+      begin
+        Panel4.Visible := True;
+      end;
   CodigoUser := '';
   CodigoUserPorNome := '';
   CodigoAssunto := '';
