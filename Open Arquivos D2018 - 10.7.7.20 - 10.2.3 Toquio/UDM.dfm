@@ -91,6 +91,7 @@ object DM: TDM
     object sdsss_UserCOD_USUARIO: TIntegerField
       FieldName = 'COD_USUARIO'
       Required = True
+      Visible = False
     end
     object sdsss_UserNOME: TStringField
       FieldName = 'NOME'
@@ -3241,8 +3242,8 @@ object DM: TDM
         Name = 'NOME'
         ParamType = ptInput
       end>
-    Left = 512
-    Top = 152
+    Left = 520
+    Top = 136
     object SimpleDataSetUseNomeCOD_USUARIO: TIntegerField
       FieldName = 'COD_USUARIO'
       Required = True
@@ -3286,6 +3287,15 @@ object DM: TDM
       end>
     Left = 856
     Top = 216
+    object sds_UserPorCriterioIDUSUARIOS: TIntegerField
+      FieldName = 'IDUSUARIOS'
+      Required = True
+      Visible = False
+    end
+    object sds_UserPorCriterioNOME: TStringField
+      FieldName = 'NOME'
+      Size = 70
+    end
   end
   object sdstemp: TSimpleDataSet
     Aggregates = <>

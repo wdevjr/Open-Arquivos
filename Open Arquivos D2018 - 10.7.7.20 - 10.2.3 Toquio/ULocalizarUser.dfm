@@ -130,7 +130,7 @@ object FrmLocalizarUser: TFrmLocalizarUser
       DataSource = Dtsc
       DrawingStyle = gdsGradient
       FixedColor = clWhite
-      Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs]
+      Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect]
       TabOrder = 0
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText

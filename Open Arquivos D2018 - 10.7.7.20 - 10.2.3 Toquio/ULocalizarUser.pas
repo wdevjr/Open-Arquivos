@@ -49,9 +49,9 @@ uses UDM, UDMII, UnContrUser, UnUtilitLog;
 procedure TFrmLocalizarUser.DBGrid1DrawColumnCell(Sender: TObject;
   const Rect: TRect; DataCol: Integer; Column: TColumn; State: TGridDrawState);
 begin
-  if not DM.SimpleDataSetUseNome.Eof then
+  if not DM.sdss_User.Eof then
   begin
-    if Odd(DM.SimpleDataSetUseNome.RecNo) then
+    if Odd(DM.sdss_User.RecNo) then
     begin
       DBGrid1.Canvas.Brush.Color := $00CBEAEB;
       DBGrid1.Canvas.FillRect(Rect);
@@ -72,7 +72,7 @@ begin
   end
   ELSE if not DM.sdsss_User.Eof then
   begin
-    if Odd(DM.SimpleDataSetUseNome.RecNo) then
+    if Odd(DM.sdss_User.RecNo) then
     begin
       DBGrid1.Canvas.Brush.Color := $00CBEAEB;
       DBGrid1.Canvas.FillRect(Rect);
@@ -94,6 +94,27 @@ begin
   ELSE if not DMII.sds_LocalUserSis.Eof then
   begin
     if Odd(DMII.sds_LocalUserSis.RecNo) then
+    begin
+      DBGrid1.Canvas.Brush.Color := $00CBEAEB;
+      DBGrid1.Canvas.FillRect(Rect);
+      DBGrid1.DefaultDrawDataCell(Rect, Column.Field, State);
+    end
+    else
+    begin
+      DBGrid1.Canvas.Brush.Color := $00FFF4F4;
+      DBGrid1.Canvas.FillRect(Rect);
+      DBGrid1.DefaultDrawDataCell(Rect, Column.Field, State);
+    end;
+    if gdfocused in State then
+    begin
+      DBGrid1.Canvas.Brush.Color := $00808040;
+      DBGrid1.Canvas.FillRect(Rect);
+      DBGrid1.DefaultDrawDataCell(Rect, Column.Field, State);
+    end;
+  end
+  ELSE if not DM.sds_UserPorCriterio.Eof then
+  begin
+    if Odd(DM.sds_UserPorCriterio.RecNo) then
     begin
       DBGrid1.Canvas.Brush.Color := $00CBEAEB;
       DBGrid1.Canvas.FillRect(Rect);
