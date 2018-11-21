@@ -82,6 +82,7 @@ type
     SpeedButton10: TSpeedButton;
     SpeedButton12: TSpeedButton;
     SpeedButton13: TSpeedButton;
+    SpeedButton14: TSpeedButton;
     procedure SpeedButton8Click(Sender: TObject);
     procedure SpeedButton7Click(Sender: TObject);
     procedure SpeedButton6Click(Sender: TObject);
@@ -112,6 +113,7 @@ type
     procedure SpeedButton9Click(Sender: TObject);
     procedure SpeedButton10Click(Sender: TObject);
     procedure desabilitar02Click(Sender: TObject);
+    procedure SpeedButton14Click(Sender: TObject);
   private
     buffer: array [0 .. 255] of Char;
     Temp: String;
@@ -508,6 +510,17 @@ begin
   CodigoPorCriterio := '';
   DBText4.Caption := '';
   DataSourceCriterio.DataSet.CLOSE;
+end;
+
+procedure TFrmView.SpeedButton14Click(Sender: TObject);
+begin
+ DM.sds_view.CLOSE;
+ Dtscru.DataSet.Close;
+ Dtscra.DataSet.Close;
+ DtsrcCod.DataSet.Close;
+ DataSourceCriterio.DataSet.Close;
+ PanelComplete.Visible := False;
+ PanelMaximizar.Visible := False;
 end;
 
 procedure TFrmView.SpeedButton1Click(Sender: TObject);
