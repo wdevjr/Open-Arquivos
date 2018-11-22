@@ -562,7 +562,7 @@ begin
           DM.sds_view.DataSet.Params.Clear;
           DM.sds_view.DataSet.CommandText := '';
           DM.sds_view.DataSet.CommandText :=
-            'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,AQ.NOME from ARQUIVOLIST AQ'
+            'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,U.NOME from ARQUIVOLIST AQ'
           // + ' inner join ARQUIVOS_USUARIOS N  on (AQ.ID = N.IDARQUIVOS) ' +
             + ' inner join ARQUIVOS_USUARIOS N on (N.IDARQUIVOS = AQ.ID) and (N.IDUSUARIOS = AQ.COD_USUARIO)'
             + ' inner join USUARIO U on (AQ.COD_USUARIO = U.COD_USUARIO)' +
