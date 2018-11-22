@@ -366,6 +366,7 @@ begin
   DataSourceCriterio.DataSet.Close;
   PanelMostrData.Visible := False;
 
+
 end;
 
 procedure TFrmView.habilitar00Click(Sender: TObject);
@@ -494,6 +495,8 @@ begin
   begin
     PanelMostrData.Visible := True;
   end;
+  DateTimePicker1.Date := Date;
+  DateTimePicker2.Date := Date;
 end;
 
 procedure TFrmView.SpeedButton12Click(Sender: TObject);

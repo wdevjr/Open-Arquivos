@@ -875,7 +875,6 @@ object FrmView: TFrmView
     ParentBackground = False
     TabOrder = 4
     Visible = False
-    ExplicitTop = 423
     object Alert: TPanel
       Left = 10
       Top = 8
@@ -1061,8 +1060,6 @@ object FrmView: TFrmView
       ParentFont = False
       TabOrder = 0
       OnClick = RadioGroup1Click
-      ExplicitLeft = 0
-      ExplicitTop = 308
     end
     object EditPesqu: TMaskEdit
       Left = 6
@@ -2002,8 +1999,6 @@ object FrmView: TFrmView
       Color = 16774388
       ParentBackground = False
       TabOrder = 5
-      ExplicitLeft = 0
-      ExplicitTop = 246
       object SpeedButton11: TSpeedButton
         Left = 4
         Top = 3
