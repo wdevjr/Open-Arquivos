@@ -350,9 +350,11 @@ begin
   if (FrmLogin.TODOS = 1) then
   begin
     Panel4.Visible := False;
+    Panel8.Visible := True;
   end else
       begin
         Panel4.Visible := True;
+        Panel8.Visible := False;
       end;
   CodigoUser := '';
   CodigoUserPorNome := '';
