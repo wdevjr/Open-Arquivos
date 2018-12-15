@@ -31,14 +31,12 @@ type
     BitBtn1: TBitBtn;
     BitBtn2: TBitBtn;
     SpeedButton4: TSpeedButton;
-    SpeedButton3: TSpeedButton;
     PanelComplete: TPanel;
     Alert: TPanel;
     Label3: TLabel;
     Label30: TLabel;
     PanelMaximizar: TPanel;
     Label5: TLabel;
-    SpeedButton5: TSpeedButton;
     Panel2: TPanel;
     RadioGroup1: TRadioGroup;
     SpeedButton2: TSpeedButton;
@@ -83,11 +81,13 @@ type
     SpeedButton12: TSpeedButton;
     SpeedButton13: TSpeedButton;
     SpeedButton14: TSpeedButton;
+    SpeedButton5: TSpeedButton;
+    SpeedButton15: TSpeedButton;
     procedure SpeedButton8Click(Sender: TObject);
     procedure SpeedButton7Click(Sender: TObject);
     procedure SpeedButton6Click(Sender: TObject);
     procedure AlertBotaoClick(Sender: TObject);
-    procedure SpeedButton3Click(Sender: TObject);
+    procedure SpeedButton15Click(Sender: TObject);
     procedure EditPesquKeyPress(Sender: TObject; var Key: Char);
     procedure BitBtn1Click(Sender: TObject);
     procedure DBGrid1CellClick(Column: TColumn);
@@ -98,7 +98,6 @@ type
       DataCol: Integer; Column: TColumn; State: TGridDrawState);
     procedure RadioGroup1Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
-    procedure SpeedButton5Click(Sender: TObject);
     procedure SpeedButton2Click(Sender: TObject);
     procedure habilitar00Click(Sender: TObject);
     procedure habilitar02Click(Sender: TObject);
@@ -114,6 +113,8 @@ type
     procedure SpeedButton10Click(Sender: TObject);
     procedure desabilitar02Click(Sender: TObject);
     procedure SpeedButton14Click(Sender: TObject);
+    procedure SpeedButton5Click(Sender: TObject);
+
   private
     buffer: array [0 .. 255] of Char;
     Temp: String;
@@ -528,6 +529,24 @@ begin
  PanelMaximizar.Visible := False;
 end;
 
+procedure TFrmView.SpeedButton15Click(Sender: TObject);
+begin
+ if selecAtualReport <= 0 then
+  begin
+    MessageDlg('Selecione primeiro a Informação Desejada na Lista!', mtWarning,
+      [mbOK], 0);
+  end
+  else
+  begin
+    DM.sds_report_detalhe.CLOSE;
+    DM.sds_report_detalhe.Params[0].asInteger := selecAtualReport;
+    DM.sds_report_detalhe.Open;
+    DM.frxReport1.LoadFromFile(ExtractFilePath(ParamStr(0)) +
+      'ReportGeral\FastReport\RelatorioPorSelecao.fr3', True);
+    DM.frxReport1.ShowReport;
+  end;
+end;
+
 procedure TFrmView.SpeedButton1Click(Sender: TObject);
 begin
   FrmLocalizarUser := TFrmLocalizarUser.Create(Self, DM.sdss_User);
@@ -932,14 +951,14 @@ begin
         with DM.sds_view do
         begin
           BitBtn1.Enabled := not IsEmpty;
-          SpeedButton3.Enabled := not IsEmpty;
+          SpeedButton15.Enabled := not IsEmpty;
 
         end;
       end;
       with DM.sds_view do
       begin
         BitBtn1.Enabled := not IsEmpty;
-        SpeedButton3.Enabled := not IsEmpty;
+        SpeedButton15.Enabled := not IsEmpty;
         // BitBtn2.Enabled := not IsEmpty;
       end;
       BitBtn1.Visible := False;
@@ -1385,23 +1404,7 @@ begin
   end;
 end;
 
-procedure TFrmView.SpeedButton3Click(Sender: TObject);
-begin
-  if selecAtualReport <= 0 then
-  begin
-    MessageDlg('Selecione primeiro a Informação Desejada na Lista!', mtWarning,
-      [mbOK], 0);
-  end
-  else
-  begin
-    DM.sds_report_detalhe.CLOSE;
-    DM.sds_report_detalhe.Params[0].asInteger := selecAtualReport;
-    DM.sds_report_detalhe.Open;
-    DM.frxReport1.LoadFromFile(ExtractFilePath(ParamStr(0)) +
-      'ReportGeral\FastReport\RelatorioPorSelecao.fr3', True);
-    DM.frxReport1.ShowReport;
-  end;
-end;
+
 
 procedure TFrmView.SpeedButton4Click(Sender: TObject);
 begin
@@ -1411,7 +1414,7 @@ begin
     with DM.sds_view do
     begin
       BitBtn1.Enabled := not IsEmpty;
-      SpeedButton3.Enabled := not IsEmpty;
+      SpeedButton15.Enabled := not IsEmpty;
     end;
   end
   else
@@ -1428,7 +1431,7 @@ end;
 
 procedure TFrmView.SpeedButton5Click(Sender: TObject);
 begin
-  FrmviewMax := TFrmViewMax.Create(Application);
+ FrmviewMax := TFrmViewMax.Create(Self);
   try
     if FrmviewMax.ShowModal = mrOk then
     begin

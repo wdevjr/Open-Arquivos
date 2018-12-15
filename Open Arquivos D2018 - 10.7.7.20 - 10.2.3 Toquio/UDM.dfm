@@ -2465,6 +2465,117 @@ object DM: TDM
     Left = 112
     Top = 336
   end
+  object frxPDFExport1: TfrxPDFExport
+    UseFileCache = True
+    ShowProgress = True
+    OverwritePrompt = False
+    DataOnly = False
+    PrintOptimized = False
+    Outline = False
+    Background = False
+    HTMLTags = True
+    Quality = 95
+    Transparency = False
+    Author = 'FastReport'
+    Subject = 'FastReport PDF export'
+    ProtectionFlags = [ePrint, eModify, eCopy, eAnnot]
+    HideToolbar = False
+    HideMenubar = False
+    HideWindowUI = False
+    FitWindow = False
+    CenterWindow = False
+    PrintScaling = False
+    PdfA = False
+    Left = 744
+    Top = 328
+  end
+  object frxGradientObject1: TfrxGradientObject
+    Left = 576
+    Top = 328
+  end
+  object SimpleDataSetUseNome: TSimpleDataSet
+    Aggregates = <>
+    Connection = SQLConnection
+    DataSet.CommandText = 
+      'select UR.COD_USUARIO,UR.NOME,UR.LOGIN,UR.SENHA,UR.ADMINISTRADOR' +
+      #13#10'from USUARIO UR'#13#10'where NOME like :NOME'#13#10'order by NOME desc'
+    DataSet.MaxBlobSize = -1
+    DataSet.Params = <
+      item
+        DataType = ftString
+        Name = 'NOME'
+        ParamType = ptInput
+      end>
+    Params = <
+      item
+        DataType = ftString
+        Name = 'NOME'
+        ParamType = ptInput
+      end>
+    Left = 520
+    Top = 136
+    object SimpleDataSetUseNomeCOD_USUARIO: TIntegerField
+      FieldName = 'COD_USUARIO'
+      Required = True
+    end
+    object SimpleDataSetUseNomeNOME: TStringField
+      FieldName = 'NOME'
+      Size = 70
+    end
+    object SimpleDataSetUseNomeLOGIN: TStringField
+      FieldName = 'LOGIN'
+    end
+    object SimpleDataSetUseNomeSENHA: TStringField
+      FieldName = 'SENHA'
+      Size = 50
+    end
+    object SimpleDataSetUseNomeADMINISTRADOR: TIntegerField
+      FieldName = 'ADMINISTRADOR'
+      Required = True
+    end
+  end
+  object sds_UserPorCriterio: TSimpleDataSet
+    Aggregates = <>
+    Connection = SQLConnection
+    DataSet.CommandText = 
+      'select DISTINCT N.IDUSUARIOS, PO.NOME  from ARQUIVOLIST AQ  '#13#10'in' +
+      'ner join ARQUIVOS_USUARIOS N  on N.IDARQUIVOS =  AQ.ID'#13#10'inner jo' +
+      'in USUARIO PO on N.IDUSUARIOS =  PO.COD_USUARIO'#13#10'where  PO.NOME ' +
+      'like :pnome'#13#10'order by PO.NOME desc'
+    DataSet.MaxBlobSize = -1
+    DataSet.Params = <
+      item
+        DataType = ftString
+        Name = 'pnome'
+        ParamType = ptInput
+      end>
+    Params = <
+      item
+        DataType = ftString
+        Name = 'pnome'
+        ParamType = ptInput
+      end>
+    Left = 856
+    Top = 216
+    object sds_UserPorCriterioIDUSUARIOS: TIntegerField
+      FieldName = 'IDUSUARIOS'
+      Required = True
+      Visible = False
+    end
+    object sds_UserPorCriterioNOME: TStringField
+      FieldName = 'NOME'
+      Size = 70
+    end
+  end
+  object sdstemp: TSimpleDataSet
+    Aggregates = <>
+    Connection = SQLConnection
+    DataSet.MaxBlobSize = -1
+    DataSet.Params = <>
+    Params = <>
+    Left = 720
+    Top = 216
+  end
   object frxReport1: TfrxReport
     Version = '5.4.6'
     DataSetName = 'frxUserDataSet1'
@@ -3169,141 +3280,7 @@ object DM: TDM
       'ADMINISTRADOR=ADMINISTRADOR')
     DataSet = sds_Report_Detalhe
     BCDToCurrency = False
-    Left = 488
+    Left = 480
     Top = 328
-  end
-  object frxPDFExport1: TfrxPDFExport
-    UseFileCache = True
-    ShowProgress = True
-    OverwritePrompt = False
-    DataOnly = False
-    PrintOptimized = False
-    Outline = False
-    Background = False
-    HTMLTags = True
-    Quality = 95
-    Transparency = False
-    Author = 'FastReport'
-    Subject = 'FastReport PDF export'
-    ProtectionFlags = [ePrint, eModify, eCopy, eAnnot]
-    HideToolbar = False
-    HideMenubar = False
-    HideWindowUI = False
-    FitWindow = False
-    CenterWindow = False
-    PrintScaling = False
-    PdfA = False
-    Left = 744
-    Top = 328
-  end
-  object frxGradientObject1: TfrxGradientObject
-    Left = 576
-    Top = 328
-  end
-  object frxDesigner1: TfrxDesigner
-    DefaultScriptLanguage = 'PascalScript'
-    DefaultFont.Charset = DEFAULT_CHARSET
-    DefaultFont.Color = clWindowText
-    DefaultFont.Height = -13
-    DefaultFont.Name = 'Arial'
-    DefaultFont.Style = []
-    DefaultLeftMargin = 10.000000000000000000
-    DefaultRightMargin = 10.000000000000000000
-    DefaultTopMargin = 10.000000000000000000
-    DefaultBottomMargin = 10.000000000000000000
-    DefaultPaperSize = 9
-    DefaultOrientation = poPortrait
-    Gradient = True
-    GradientEnd = 11982554
-    GradientStart = clWindow
-    TemplatesExt = 'fr3'
-    Restrictions = []
-    RTLLanguage = False
-    MemoParentFont = False
-    Left = 664
-    Top = 328
-  end
-  object SimpleDataSetUseNome: TSimpleDataSet
-    Aggregates = <>
-    Connection = SQLConnection
-    DataSet.CommandText = 
-      'select UR.COD_USUARIO,UR.NOME,UR.LOGIN,UR.SENHA,UR.ADMINISTRADOR' +
-      #13#10'from USUARIO UR'#13#10'where NOME like :NOME'#13#10'order by NOME desc'
-    DataSet.MaxBlobSize = -1
-    DataSet.Params = <
-      item
-        DataType = ftString
-        Name = 'NOME'
-        ParamType = ptInput
-      end>
-    Params = <
-      item
-        DataType = ftString
-        Name = 'NOME'
-        ParamType = ptInput
-      end>
-    Left = 520
-    Top = 136
-    object SimpleDataSetUseNomeCOD_USUARIO: TIntegerField
-      FieldName = 'COD_USUARIO'
-      Required = True
-    end
-    object SimpleDataSetUseNomeNOME: TStringField
-      FieldName = 'NOME'
-      Size = 70
-    end
-    object SimpleDataSetUseNomeLOGIN: TStringField
-      FieldName = 'LOGIN'
-    end
-    object SimpleDataSetUseNomeSENHA: TStringField
-      FieldName = 'SENHA'
-      Size = 50
-    end
-    object SimpleDataSetUseNomeADMINISTRADOR: TIntegerField
-      FieldName = 'ADMINISTRADOR'
-      Required = True
-    end
-  end
-  object sds_UserPorCriterio: TSimpleDataSet
-    Aggregates = <>
-    Connection = SQLConnection
-    DataSet.CommandText = 
-      'select DISTINCT N.IDUSUARIOS, PO.NOME  from ARQUIVOLIST AQ  '#13#10'in' +
-      'ner join ARQUIVOS_USUARIOS N  on N.IDARQUIVOS =  AQ.ID'#13#10'inner jo' +
-      'in USUARIO PO on N.IDUSUARIOS =  PO.COD_USUARIO'#13#10'where  PO.NOME ' +
-      'like :pnome'#13#10'order by PO.NOME desc'
-    DataSet.MaxBlobSize = -1
-    DataSet.Params = <
-      item
-        DataType = ftString
-        Name = 'pnome'
-        ParamType = ptInput
-      end>
-    Params = <
-      item
-        DataType = ftString
-        Name = 'pnome'
-        ParamType = ptInput
-      end>
-    Left = 856
-    Top = 216
-    object sds_UserPorCriterioIDUSUARIOS: TIntegerField
-      FieldName = 'IDUSUARIOS'
-      Required = True
-      Visible = False
-    end
-    object sds_UserPorCriterioNOME: TStringField
-      FieldName = 'NOME'
-      Size = 70
-    end
-  end
-  object sdstemp: TSimpleDataSet
-    Aggregates = <>
-    Connection = SQLConnection
-    DataSet.MaxBlobSize = -1
-    DataSet.Params = <>
-    Params = <>
-    Left = 720
-    Top = 216
   end
 end

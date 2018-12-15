@@ -356,12 +356,9 @@ type
     sds_view_todosNOME: TStringField;
     sds_view_todosTITULOASSUN: TStringField;
     sds_view: TSimpleDataSet;
-    frxReport1: TfrxReport;
-    frxDBDataset1: TfrxDBDataset;
     frxPDFExport1: TfrxPDFExport;
     sds_Report_DetalheADMINISTRADOR: TIntegerField;
     frxGradientObject1: TfrxGradientObject;
-    frxDesigner1: TfrxDesigner;
     sds_view_todosDATA: TStringField;
     sdt_LogINSERDATA: TDateField;
     cds_LogINSERDATA: TDateField;
@@ -386,6 +383,8 @@ type
     sdstemp: TSimpleDataSet;
     sds_UserPorCriterioIDUSUARIOS: TIntegerField;
     sds_UserPorCriterioNOME: TStringField;
+    frxReport1: TfrxReport;
+    frxDBDataset1: TfrxDBDataset;
     procedure DataModuleCreate(Sender: TObject);
     function PreencheCombo: TStrings;
     function PreencheList: TStrings;
