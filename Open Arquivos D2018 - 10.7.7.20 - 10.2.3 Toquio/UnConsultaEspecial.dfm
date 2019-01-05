@@ -115,7 +115,7 @@ object FrmView: TFrmView
         Font.Height = -11
         Font.Name = 'Tahoma'
         Font.Style = []
-        Title.Caption = 'Nome Usu'#225'rio por Criterio'
+        Title.Caption = 'Nome do  Autor'
         Width = 266
         Visible = True
       end>
@@ -458,6 +458,7 @@ object FrmView: TFrmView
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 3
+    ExplicitTop = 595
     object SpeedButton4: TSpeedButton
       Left = 15
       Top = 1
@@ -539,7 +540,7 @@ object FrmView: TFrmView
       Top = 1
       Width = 116
       Height = 55
-      Caption = 'Iniciar'
+      Caption = 'Limpar'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -829,7 +830,6 @@ object FrmView: TFrmView
     ParentBackground = False
     TabOrder = 4
     Visible = False
-    ExplicitTop = 427
     object Alert: TPanel
       Left = 10
       Top = 8
@@ -1910,7 +1910,7 @@ object FrmView: TFrmView
         Caption = 'Desabilitar'
         Enabled = False
         Font.Charset = DEFAULT_CHARSET
-        Font.Color = clNavy
+        Font.Color = clRed
         Font.Height = -11
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
@@ -2358,7 +2358,7 @@ object FrmView: TFrmView
         Caption = 'Desabilitar'
         Enabled = False
         Font.Charset = DEFAULT_CHARSET
-        Font.Color = 10485760
+        Font.Color = clRed
         Font.Height = -11
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
