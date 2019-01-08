@@ -1100,10 +1100,13 @@ begin
             DM.sds_view.CLOSE;
             DM.sds_view.DataSet.CommandText := '';
             DM.sds_view.DataSet.CommandText :=
-              'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,T.NOME from ARQUIVOLIST AQ'
-              + ' inner join USUARIO U on (AQ.COD_USUARIO = U.COD_USUARIO)' +
-              ' inner join AUTORES T on (T.CODIGO = AQ.COD_AUTOR)' +
-              ' where AQ.NOME_ARQUIVO like ' + QuotedStr('%' + EditPesqu.Text + '%') +
+              'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,N.IDUSUARIOS,PO.NOME,SU.TITULOASSUN from ARQUIVOS_USUARIOS N '
+              + ' inner join ARQUIVOLIST AQ on (AQ.ID = N.IDARQUIVOS) ' +
+              ' inner join ASSUNTO SU on AQ.COD_ASSUNTO = SU.CODIGO ' +
+              'inner join USUARIO PO on AQ.COD_USUARIO = PO.COD_USUARIO ' +
+              'inner join AUTORES T on T.CODIGO = AQ.COD_AUTOR ' +
+              'where AQ.DESCRICAO like ' + QuotedStr('%' + EditPesqu.Text + '%') +
+             // ' where AQ.NOME_ARQUIVO like ' + QuotedStr('%' + EditPesqu.Text + '%') +
                ' and AQ.DATA >= :inicial'
               + ' and AQ.DATA <= :finall' + ' order by AQ.NOME_ARQUIVO';
             DM.sds_view.DataSet.ParamByName('inicial').asDate := StrToDate(Inicial);

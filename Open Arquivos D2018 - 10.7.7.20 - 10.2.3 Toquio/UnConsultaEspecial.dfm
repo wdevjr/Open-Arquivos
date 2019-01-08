@@ -458,7 +458,6 @@ object FrmView: TFrmView
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 3
-    ExplicitTop = 595
     object SpeedButton4: TSpeedButton
       Left = 15
       Top = 1
