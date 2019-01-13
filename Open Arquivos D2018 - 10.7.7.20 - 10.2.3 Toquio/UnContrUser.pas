@@ -410,7 +410,8 @@ begin
         MB_OK + MB_ICONINFORMATION);
     end;
   end
-  else if checadoUser = 0 then
+  else
+    if checadoUser = 0 then
   begin
     if (DBEdit1.Text = '') then
     begin
@@ -429,6 +430,7 @@ begin
     end
     else
     begin
+      //DBEdit4.Text := StrToInt(100);
       Dtscu.DataSet.Post;
       (Dtscu.DataSet as TClientDataSet).ApplyUpdates(0);
       ConfigGravar;

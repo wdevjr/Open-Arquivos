@@ -934,7 +934,7 @@ begin
     if (checado = 0) then
     begin
       cds_UserADMINISTRADOR.Value := 0;
-      cds_UserCOD_PERFIL.Value := 0;
+      cds_UserCOD_PERFIL.Value := 100;
       // sinal de erro na varificação ...
       cds_UserNIVEL.Value := 0;
       cds_UserTIPO_TODOS.Value := 0;
