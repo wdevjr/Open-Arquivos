@@ -2060,7 +2060,7 @@ object DM: TDM
       'VendorLib=fbclient.dll'
       'VendorLibWin64=fbclient.dll'
       'VendorLibOsx=/Library/Frameworks/Firebird.framework/Firebird'
-      'Database=127.0.0.1:D:\Banco\3.x\OPENARQUIVOS\2\OPENARQUIVOS.FDB'
+      'Database=127.0.0.1:C:\Bancos\OPENARQUIVOS.FDB'
       'User_Name=sysdba'
       'Password=masterkey'
       'Role=RoleName'

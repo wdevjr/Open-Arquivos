@@ -120,7 +120,6 @@ type
     Panel12: TPanel;
     Label5: TLabel;
     Label4: TLabel;
-    SpeedButton4: TSpeedButton;
     Label13: TLabel;
     DBMemo1: TDBMemo;
     DBMemo3: TDBMemo;
@@ -155,6 +154,7 @@ type
     Label7: TLabel;
     relatorio: TSpeedButton;
     fundobtn: TSpeedButton;
+    SpeedButton1: TSpeedButton;
     procedure relatoriosClick(Sender: TObject);
     procedure N1Click(Sender: TObject);
     procedure cbCadLogAssistenteExecute(Sender: TObject);
@@ -214,6 +214,7 @@ type
     procedure relatorioClick(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
     procedure fundobtnClick(Sender: TObject);
+    procedure SpeedButton1Click(Sender: TObject);
     // para a chamada de status do componente
   private
     buffer: array [0 .. 255] of Char;
@@ -249,7 +250,7 @@ uses UDMII, ShellAPI, UnAbertura, UnLogin, UnCadDepartamento, UnCadCidades,
   UnDlgProcuraAutor, UnCadAutores, UnCadAssuntos, UnDlgProcuraAssunto, UDM,
   UnDlgProcura, UnStatus, MMSystem, UAutoPreench, ABOUT, UnContrUser,
   UnManutencao, UnConsultaEspecial, UnMensProce, UnNovVersao,
-  UnProcessIndefinido, UnatribuiUsuariosPorArquivos, UnFrontColor;
+  UnProcessIndefinido, UnatribuiUsuariosPorArquivos, UnFrontColor, UnViewTextoTelaInicial;
 
 {$R *.dfm}
 
@@ -803,6 +804,16 @@ begin
   finally
     FrmFrontColor.Free;
   end;
+end;
+
+procedure TFrPrincipal.SpeedButton1Click(Sender: TObject);
+begin
+ FrmTelaTexto := TFrmTelaTexto.Create(nil);
+ try
+    FrmTelaTexto.ShowModal;
+ finally
+    FrmTelaTexto.Free;
+ end;
 end;
 
 procedure TFrPrincipal.SpeedButton4Click(Sender: TObject);

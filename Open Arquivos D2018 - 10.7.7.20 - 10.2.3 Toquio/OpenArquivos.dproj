@@ -254,6 +254,10 @@
             <Form>FrmFrontColor</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="UnViewTextoTelaInicial.pas">
+            <Form>FrmTelaTexto</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -282,7 +286,7 @@
                 </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="3">
-                <DeployFile LocalName="D:\Open Arquivos\OpenArquivos.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="C:\Open Arquivos\OpenArquivos.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>OpenArquivos.exe</RemoteName>
                         <Overwrite>true</Overwrite>
