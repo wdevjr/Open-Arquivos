@@ -2,8 +2,8 @@ object FrmTelaTexto: TFrmTelaTexto
   Left = 0
   Top = 0
   Caption = 'Visualizar Texto'
-  ClientHeight = 279
-  ClientWidth = 566
+  ClientHeight = 382
+  ClientWidth = 697
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,33 +17,43 @@ object FrmTelaTexto: TFrmTelaTexto
   object DBMemo1: TDBMemo
     Left = 0
     Top = 0
-    Width = 566
-    Height = 232
+    Width = 697
+    Height = 335
     Align = alClient
     Color = 13363947
     DataField = 'DESCRICAO'
     DataSource = FrPrincipal.Dtsrc
     ScrollBars = ssBoth
     TabOrder = 0
-    ExplicitWidth = 612
-    ExplicitHeight = 244
+    ExplicitHeight = 332
   end
   object Panel1: TPanel
     Left = 0
-    Top = 232
-    Width = 566
+    Top = 335
+    Width = 697
     Height = 47
     Align = alBottom
     TabOrder = 1
-    ExplicitWidth = 567
-    object Button1: TButton
-      Left = 467
-      Top = 10
-      Width = 75
-      Height = 25
-      Caption = 'Fechar'
+    ExplicitTop = 332
+    object Panel2: TPanel
+      Left = 456
+      Top = 1
+      Width = 240
+      Height = 45
+      Align = alRight
+      BevelOuter = bvNone
+      Ctl3D = False
+      ParentCtl3D = False
       TabOrder = 0
-      OnClick = Button1Click
+      object Button1: TButton
+        Left = 144
+        Top = 9
+        Width = 75
+        Height = 25
+        Caption = 'Fechar'
+        TabOrder = 0
+        OnClick = Button1Click
+      end
     end
   end
 end

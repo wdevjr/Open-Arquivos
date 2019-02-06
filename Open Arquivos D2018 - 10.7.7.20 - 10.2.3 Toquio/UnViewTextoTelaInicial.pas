@@ -10,6 +10,7 @@ type
   TFrmTelaTexto = class(TForm)
     DBMemo1: TDBMemo;
     Panel1: TPanel;
+    Panel2: TPanel;
     Button1: TButton;
     procedure Button1Click(Sender: TObject);
   private
