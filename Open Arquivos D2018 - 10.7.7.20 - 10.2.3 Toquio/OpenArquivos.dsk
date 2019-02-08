@@ -13,22 +13,42 @@ File_10=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.2.3 Toquio\
 File_11=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.15 - 10.2.3 Toquio\UnDlgProcura.pas',0,1,1,1,1,0,0,,
 
 [Modules]
-Module0=C:\ProjetosE_Sistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UDM.pas
+Module0=C:\ProjetosE_Sistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnViewTextoTelaInicial.pas
 Module1=default.htm
-Count=2
+Module2=documentation.htm
+Module3=C:\ProjetosE_Sistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UProjeto.pas
+Module4=C:\ProjetosE_Sistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UDM.pas
+Module5=C:\ProjetosE_Sistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnConsultaEspecial.pas
+Count=6
 EditWindowCount=1
 
-[C:\ProjetosE_Sistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UDM.pas]
+[C:\ProjetosE_Sistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnViewTextoTelaInicial.pas]
 ModuleType=TSourceModule
 
 [default.htm]
 ModuleType=TURLModule
 
+[documentation.htm]
+ModuleType=TURLModule
+
+[C:\ProjetosE_Sistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UProjeto.pas]
+ModuleType=TSourceModule
+
+[C:\ProjetosE_Sistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UDM.pas]
+ModuleType=TSourceModule
+
+[C:\ProjetosE_Sistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnConsultaEspecial.pas]
+ModuleType=TSourceModule
+
 [EditWindow0]
-ViewCount=2
-CurrentEditView=C:\ProjetosE_Sistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UDM.pas
+ViewCount=6
+CurrentEditView=C:\ProjetosE_Sistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnViewTextoTelaInicial.pas
 View0=0
 View1=1
+View2=2
+View3=3
+View4=4
+View5=5
 PercentageSizes=1
 Create=1
 Visible=1
@@ -59,9 +79,46 @@ CustomEditViewType=TWelcomePageView
 WelcomePageURL=bds:/default.htm
 
 [View1]
+CustomEditViewType=TWelcomePageView
+WelcomePageURL=bds:/documentation.htm
+
+[View2]
 CustomEditViewType=TEditView
 Module=C:\ProjetosE_Sistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UDM.pas
 CursorX=1
+CursorY=1
+TopLine=1
+LeftCol=1
+Elisions=
+Bookmarks=
+EditViewName=Borland.FormDesignerView
+
+[View3]
+CustomEditViewType=TEditView
+Module=C:\ProjetosE_Sistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnConsultaEspecial.pas
+CursorX=1
+CursorY=570
+TopLine=1119
+LeftCol=1
+Elisions=
+Bookmarks=
+EditViewName=C:\ProjetosE_Sistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnConsultaEspecial.pas
+
+[View4]
+CustomEditViewType=TEditView
+Module=C:\ProjetosE_Sistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UProjeto.pas
+CursorX=23
+CursorY=815
+TopLine=809
+LeftCol=1
+Elisions=
+Bookmarks=
+EditViewName=Borland.FormDesignerView
+
+[View5]
+CustomEditViewType=TEditView
+Module=C:\ProjetosE_Sistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnViewTextoTelaInicial.pas
+CursorX=6
 CursorY=1
 TopLine=1
 LeftCol=1
@@ -218,7 +275,7 @@ Create=1
 Visible=0
 Docked=0
 State=0
-Left=951
+Left=475
 Top=0
 Width=1933
 Height=7031
@@ -253,8 +310,8 @@ SplitPos=87
 
 [PropInspDesignerSelection]
 ArrangeBy=Name
-SelectedItem=Connected,
-ExpandedItems=Driver=0,"LiveBindings Designer=0",TableScope=0
+SelectedItem=Align,
+ExpandedItems=Anchors=0,BevelEdges=0,Constraints=0,Font=0
 
 [ClassBrowserTool]
 PercentageSizes=1
@@ -262,7 +319,7 @@ Create=1
 Visible=0
 Docked=0
 State=0
-Left=951
+Left=475
 Top=0
 Width=1894
 Height=3281
@@ -338,7 +395,7 @@ Create=1
 Visible=0
 Docked=0
 State=0
-Left=974
+Left=498
 Top=807
 Width=2155
 Height=6901
@@ -357,7 +414,7 @@ Create=1
 Visible=0
 Docked=0
 State=0
-Left=9164
+Left=8689
 Top=5273
 Width=1787
 Height=4544
@@ -562,7 +619,7 @@ Create=1
 Visible=0
 Docked=0
 State=0
-Left=2876
+Left=2400
 Top=7943
 Width=2853
 Height=3203
@@ -692,8 +749,8 @@ Create=1
 Visible=1
 Docked=0
 State=0
-Left=7983
-Top=1940
+Left=7968
+Top=1862
 Width=1971
 Height=7786
 MaxLeft=-8

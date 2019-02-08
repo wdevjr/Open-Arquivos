@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>2014/10/29 11:06:10.000.458,C:\Users\Walter\Documents\Embarcadero\Studio\Projects\Unit2.dfm=F:\ProjetosESistemas\Sistemas\Open Arquivos D2014XE7\Unit2.dfm</Transaction>
-    <Transaction>2014/10/29 11:06:48.000.152,C:\Users\Walter\Documents\Embarcadero\Studio\Projects\Project1.dproj=F:\ProjetosESistemas\Sistemas\Open Arquivos D2014XE7\OpenArquivos.dproj</Transaction>
-    <Transaction>2018/06/17 07:10:50.000.908,D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.15 - 10.2.3 Toquio\UnatribuiUsuariosPorArquivos.dfm=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.15 - 10.2.3 Toquio\Unit1.dfm</Transaction>
-    <Transaction>2018/06/21 16:57:17.000.568,D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.15 - 10.2.3 Toquio\UnIncluirUsuarios.dfm=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.15 - 10.2.3 Toquio\Unit1.dfm</Transaction>
-    <Transaction>2018/06/28 14:47:43.000.897,D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.15 - 10.2.3 Toquio\UnNovVersao.dfm=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.17 - 10.2.3 Toquio\UnNovVersao.dfm</Transaction>
-    <Transaction>2018/09/15 23:12:26.000.355,D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnThemas.dfm=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\Unit1.dfm</Transaction>
-    <Transaction>2018/09/15 23:14:03.000.848,D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UThema.dfm=D:\projetoseSistemas\CRUD_Delphi_XE7_FireDac_Themas\UThema.dfm</Transaction>
-    <Transaction>2018/11/03 07:08:00.000.966,D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnFrontColor.dfm=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\Unit1.dfm</Transaction>
+    <Transaction>2014/10/29 11:06:10.000.458,F:\ProjetosESistemas\Sistemas\Open Arquivos D2014XE7\Unit2.dfm=C:\Users\Walter\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2014/10/29 11:06:48.000.152,F:\ProjetosESistemas\Sistemas\Open Arquivos D2014XE7\OpenArquivos.dproj=C:\Users\Walter\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2018/06/17 07:10:50.000.908,D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.15 - 10.2.3 Toquio\Unit1.dfm=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.15 - 10.2.3 Toquio\UnatribuiUsuariosPorArquivos.dfm</Transaction>
+    <Transaction>2018/06/21 16:57:17.000.568,D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.15 - 10.2.3 Toquio\Unit1.dfm=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.15 - 10.2.3 Toquio\UnIncluirUsuarios.dfm</Transaction>
+    <Transaction>2018/06/28 14:47:43.000.897,D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.17 - 10.2.3 Toquio\UnNovVersao.dfm=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.15 - 10.2.3 Toquio\UnNovVersao.dfm</Transaction>
+    <Transaction>2018/09/15 23:12:26.000.355,D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\Unit1.dfm=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnThemas.dfm</Transaction>
+    <Transaction>2018/09/15 23:14:03.000.848,D:\projetoseSistemas\CRUD_Delphi_XE7_FireDac_Themas\UThema.dfm=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UThema.dfm</Transaction>
+    <Transaction>2018/11/03 07:08:00.000.966,D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\Unit1.dfm=D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnFrontColor.dfm</Transaction>
+    <Transaction>2019/02/05 09:50:13.000.578,C:\ProjetosE_Sistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnViewTextoTelaInicial.dfm=C:\ProjetosE_Sistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\Unit1.dfm</Transaction>
   </Transactions>
 </BorlandProject>
