@@ -52,7 +52,7 @@ uses UDM;
 procedure TFrmLocalizaAssunto.DBGrid1DrawColumnCell(Sender: TObject;
   const Rect: TRect; DataCol: Integer; Column: TColumn; State: TGridDrawState);
 begin
-  { if Odd(Dtsc.DataSet.RecNo) then
+   if Odd(Dtsc.DataSet.RecNo) then
     begin
     DBGrid1.Canvas.Brush.Color := $00CBEAEB;
     DBGrid1.Canvas.FillRect(Rect);
@@ -69,7 +69,7 @@ begin
     DBGrid1.Canvas.Brush.Color := $00808040;
     DBGrid1.Canvas.FillRect(Rect);
     DBGrid1.DefaultDrawDataCell(Rect, Column.Field, State);
-    end; }
+    end;
 end;
 
 constructor TFrmLocalizaAssunto.Create(AOWner: TComponent;
