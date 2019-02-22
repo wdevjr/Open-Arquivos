@@ -9,9 +9,9 @@ unit UnConsultaEspecial;
 interface
 
 uses
-  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ToolWin, ComCtrls, ExtCtrls, Grids, DBGrids, DB, StdCtrls, Buttons,
-  DBCtrls, SimpleDS, DBClient, Mask;
+  Windows, Messages,Forms,Dialogs ,SysUtils, Variants, Data.DB, Vcl.StdCtrls, Vcl.ComCtrls,
+  Vcl.DBCtrls, Vcl.Mask, Vcl.ExtCtrls, Vcl.Buttons, Vcl.Graphics, Vcl.Controls,
+  System.Classes, Vcl.Grids, Vcl.DBGrids;
 
 type
   TFrmView = class(TForm)
@@ -533,8 +533,7 @@ procedure TFrmView.SpeedButton15Click(Sender: TObject);
 begin
  if selecAtualReport <= 0 then
   begin
-    MessageDlg('Selecione primeiro a Informação Desejada na Lista!', mtWarning,
-      [mbOK], 0);
+    MessageDlg('Selecione primeiro a Informação Desejada na Lista!',mtWarning,[mbOK], 0);
   end
   else
   begin

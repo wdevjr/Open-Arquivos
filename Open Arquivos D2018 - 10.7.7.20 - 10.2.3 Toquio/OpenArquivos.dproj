@@ -82,7 +82,7 @@
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
-        <DCC_ExeOutput>C:\Open Arquivos\</DCC_ExeOutput>
+        <DCC_ExeOutput>C:\Open Arquivos - Toquio\</DCC_ExeOutput>
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
         <BT_BuildType>Debug</BT_BuildType>
         <UsePackages>false</UsePackages>

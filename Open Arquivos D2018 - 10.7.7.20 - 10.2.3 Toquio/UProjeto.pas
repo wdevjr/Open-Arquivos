@@ -334,7 +334,7 @@ end;
 
 procedure TFrPrincipal.relatoriosClick(Sender: TObject);
 begin
-  FrmRelatoriosGerais := TFrmRelatoriosGerais.Create(Application);
+  FrmRelatoriosGerais := TFrmRelatoriosGerais.Create(Self);
   try
     FrmRelatoriosGerais.ShowModal;
   finally
@@ -785,7 +785,7 @@ end;
 
 procedure TFrPrincipal.lookUserClick(Sender: TObject);
 begin
-  FrmAtribuiUser := TFrmAtribuiUser.Create(Application);
+  FrmAtribuiUser := TFrmAtribuiUser.Create(Self);
   try
     FrmAtribuiUser.ShowModal;
   finally
@@ -909,7 +909,7 @@ procedure TFrPrincipal.btntrazerClick(Sender: TObject);
 var
   DataInserimento: String;
 begin
-  FrmArquProc := TFrmArquProc.Create(Application);
+  FrmArquProc := TFrmArquProc.Create(Self);
   // FrmArquProc.ShowModal;
   if FrmArquProc.ShowModal = mrOk then
   begin
@@ -1053,14 +1053,17 @@ end;
 
 procedure TFrPrincipal.AssuntosClick(Sender: TObject);
 begin
+
+
+
   if not Assigned(FrmCadAssuntos) then
-    FrmCadAssuntos := TFrmCadAssuntos.Create(Application);
-  FrmCadAssuntos.Show;
+    FrmCadAssuntos := TFrmCadAssuntos.Create(Self);
+    FrmCadAssuntos.Show;
 end;
 
 procedure TFrPrincipal.cbtconsultaClick(Sender: TObject);
 begin
-  FrmView := TFrmView.Create(Application);
+  FrmView := TFrmView.Create(Self);
   try
     if FrmView.ShowModal = mrOk then
     begin
@@ -1126,7 +1129,7 @@ end;
 
 procedure TFrPrincipal.usuariosClick(Sender: TObject);
 begin
-  FrmContrUser := TFrmContrUser.Create(Application);
+  FrmContrUser := TFrmContrUser.Create(Self);
   try
     FrmContrUser.ShowModal;
   finally
@@ -1137,7 +1140,7 @@ end;
 procedure TFrPrincipal.autoresClick(Sender: TObject);
 begin
   if not Assigned(FrmCadAutor) then
-    FrmCadAutor := TFrmCadAutor.Create(Application);
+    FrmCadAutor := TFrmCadAutor.Create(Self);
   FrmCadAutor.Show;
   { FrmCadAutor:=TFrmCadAutor.Create(Application);
     try

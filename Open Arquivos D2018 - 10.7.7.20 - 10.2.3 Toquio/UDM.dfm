@@ -2465,34 +2465,6 @@ object DM: TDM
     Left = 112
     Top = 336
   end
-  object frxPDFExport1: TfrxPDFExport
-    UseFileCache = True
-    ShowProgress = True
-    OverwritePrompt = False
-    DataOnly = False
-    PrintOptimized = False
-    Outline = False
-    Background = False
-    HTMLTags = True
-    Quality = 95
-    Transparency = False
-    Author = 'FastReport'
-    Subject = 'FastReport PDF export'
-    ProtectionFlags = [ePrint, eModify, eCopy, eAnnot]
-    HideToolbar = False
-    HideMenubar = False
-    HideWindowUI = False
-    FitWindow = False
-    CenterWindow = False
-    PrintScaling = False
-    PdfA = False
-    Left = 744
-    Top = 328
-  end
-  object frxGradientObject1: TfrxGradientObject
-    Left = 576
-    Top = 328
-  end
   object SimpleDataSetUseNome: TSimpleDataSet
     Aggregates = <>
     Connection = SQLConnection
@@ -2586,14 +2558,14 @@ object DM: TDM
     PrintOptions.Printer = 'Padr'#227'o'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 43322.045178831000000000
-    ReportOptions.LastChange = 43349.803110625000000000
+    ReportOptions.LastChange = 43518.149269884300000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
       ''
       'end.')
-    Left = 408
-    Top = 328
+    Left = 392
+    Top = 296
     Datasets = <
       item
         DataSet = frxDBDataset1
@@ -3176,10 +3148,9 @@ object DM: TDM
         end
         object frxDBDataset1TITULOASSUN: TfrxMemoView
           Left = 7.559060000000000000
-          Top = 86.929190000000200000
+          Top = 86.929190000000000000
           Width = 695.433520000000000000
           Height = 18.897650000000000000
-          DataField = 'TITULOASSUN'
           DataSet = frxDBDataset1
           DataSetName = 'frxDBDataset1'
           Memo.UTF8W = (
@@ -3263,6 +3234,34 @@ object DM: TDM
       end
     end
   end
+  object frxGradientObject1: TfrxGradientObject
+    Left = 592
+    Top = 288
+  end
+  object frxPDFExport1: TfrxPDFExport
+    UseFileCache = True
+    ShowProgress = True
+    OverwritePrompt = False
+    DataOnly = False
+    PrintOptimized = False
+    Outline = False
+    Background = False
+    HTMLTags = True
+    Quality = 95
+    Transparency = False
+    Author = 'FastReport'
+    Subject = 'FastReport PDF export'
+    ProtectionFlags = [ePrint, eModify, eCopy, eAnnot]
+    HideToolbar = False
+    HideMenubar = False
+    HideWindowUI = False
+    FitWindow = False
+    CenterWindow = False
+    PrintScaling = False
+    PdfA = False
+    Left = 704
+    Top = 296
+  end
   object frxDBDataset1: TfrxDBDataset
     UserName = 'frxDBDataset1'
     CloseDataSource = False
@@ -3280,7 +3279,7 @@ object DM: TDM
       'ADMINISTRADOR=ADMINISTRADOR')
     DataSet = sds_Report_Detalhe
     BCDToCurrency = False
-    Left = 480
-    Top = 328
+    Left = 488
+    Top = 296
   end
 end
