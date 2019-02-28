@@ -29,7 +29,6 @@ object FrmCadAutor: TFrmCadAutor
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 898
     object Label7: TLabel
       Left = 64
       Top = 18
@@ -171,7 +170,6 @@ object FrmCadAutor: TFrmCadAutor
       BevelOuter = bvNone
       Color = clWhite
       TabOrder = 0
-      ExplicitLeft = 609
       object Image2: TImage
         Left = 233
         Top = 3
@@ -344,8 +342,6 @@ object FrmCadAutor: TFrmCadAutor
     Margins.Right = 4
     Margins.Bottom = 4
     Panels = <>
-    ExplicitTop = 730
-    ExplicitWidth = 898
   end
   object Panel2: TPanel
     Left = 0
@@ -357,10 +353,9 @@ object FrmCadAutor: TFrmCadAutor
     Margins.Right = 4
     Margins.Bottom = 4
     Align = alTop
-    Color = clWhite
+    Color = 14083559
     ParentBackground = False
     TabOrder = 2
-    ExplicitWidth = 824
     object Label1: TLabel
       Left = 10
       Top = 8
@@ -569,7 +564,7 @@ object FrmCadAutor: TFrmCadAutor
       Left = 10
       Top = 81
       Width = 786
-      Height = 23
+      Height = 19
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
@@ -591,7 +586,7 @@ object FrmCadAutor: TFrmCadAutor
       Left = 10
       Top = 125
       Width = 786
-      Height = 23
+      Height = 19
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
@@ -613,7 +608,7 @@ object FrmCadAutor: TFrmCadAutor
       Left = 10
       Top = 256
       Width = 113
-      Height = 23
+      Height = 19
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
@@ -635,7 +630,7 @@ object FrmCadAutor: TFrmCadAutor
       Left = 10
       Top = 302
       Width = 786
-      Height = 23
+      Height = 19
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
@@ -665,6 +660,8 @@ object FrmCadAutor: TFrmCadAutor
       BevelInner = bvLowered
       BevelKind = bkSoft
       BevelOuter = bvNone
+      Color = clWhite
+      ParentBackground = False
       TabOrder = 7
       object inserir: TSpeedButton
         Left = 9
@@ -1257,7 +1254,7 @@ object FrmCadAutor: TFrmCadAutor
       Left = 10
       Top = 169
       Width = 104
-      Height = 23
+      Height = 19
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
@@ -1281,7 +1278,7 @@ object FrmCadAutor: TFrmCadAutor
       Left = 10
       Top = 216
       Width = 104
-      Height = 23
+      Height = 19
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
@@ -1354,7 +1351,6 @@ object FrmCadAutor: TFrmCadAutor
     Color = 12615680
     ParentBackground = False
     TabOrder = 3
-    ExplicitWidth = 898
   end
   object ListView1: TListView
     Left = 0
@@ -1393,7 +1389,6 @@ object FrmCadAutor: TFrmCadAutor
     TabOrder = 4
     ViewStyle = vsReport
     OnCustomDrawItem = ListView1CustomDrawItem
-    ExplicitTop = 439
   end
   object Dtsc: TDataSource
     DataSet = DM.cds_Autores

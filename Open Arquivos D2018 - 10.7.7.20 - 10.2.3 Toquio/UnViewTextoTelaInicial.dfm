@@ -23,9 +23,14 @@ object FrmTelaTexto: TFrmTelaTexto
     Color = 13363947
     DataField = 'DESCRICAO'
     DataSource = FrPrincipal.Dtsrc
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     ScrollBars = ssBoth
     TabOrder = 0
-    ExplicitHeight = 332
   end
   object Panel1: TPanel
     Left = 0
@@ -34,7 +39,6 @@ object FrmTelaTexto: TFrmTelaTexto
     Height = 47
     Align = alBottom
     TabOrder = 1
-    ExplicitTop = 332
     object Panel2: TPanel
       Left = 456
       Top = 1

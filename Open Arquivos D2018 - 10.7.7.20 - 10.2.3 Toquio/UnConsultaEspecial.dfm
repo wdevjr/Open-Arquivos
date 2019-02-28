@@ -4,7 +4,7 @@ object FrmView: TFrmView
   Caption = 'Consulta Especial...'
   ClientHeight = 651
   ClientWidth = 796
-  Color = clWhite
+  Color = 14083559
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -14
@@ -904,6 +904,8 @@ object FrmView: TFrmView
     Top = 55
     Width = 796
     Height = 366
+    Color = 14083559
+    ParentBackground = False
     TabOrder = 5
     object SpeedButton2: TSpeedButton
       Left = 496
@@ -992,7 +994,7 @@ object FrmView: TFrmView
       Margins.Bottom = 4
       Align = alTop
       Caption = 'Por :'
-      Color = clBtnFace
+      Color = 14083559
       Columns = 5
       Ctl3D = True
       Font.Charset = DEFAULT_CHARSET
@@ -1007,6 +1009,7 @@ object FrmView: TFrmView
         'C'#243'digo do Arquivo'
         'T'#237'tulo'
         'Data')
+      ParentBackground = False
       ParentColor = False
       ParentCtl3D = False
       ParentFont = False

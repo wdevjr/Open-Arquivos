@@ -5,7 +5,7 @@ object FrPrincipal: TFrPrincipal
   Caption = 'Open Arquivos - v10.9.9.40 - Uso em Rede'
   ClientHeight = 557
   ClientWidth = 844
-  Color = clWhite
+  Color = 14083559
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clSilver
   Font.Height = -11
@@ -706,7 +706,7 @@ object FrPrincipal: TFrPrincipal
     Height = 153
     Align = alTop
     BevelOuter = bvNone
-    Color = clWhite
+    Color = 14083559
     ParentBackground = False
     TabOrder = 3
     object BtnLoc01: TSpeedButton
@@ -1257,7 +1257,7 @@ object FrPrincipal: TFrPrincipal
       Width = 283
       Height = 23
       BevelOuter = bvNone
-      Color = 14939380
+      Color = 14083559
       ParentBackground = False
       TabOrder = 6
       object DBText4: TDBText
@@ -1265,7 +1265,7 @@ object FrPrincipal: TFrPrincipal
         Top = 4
         Width = 262
         Height = 17
-        Color = 14939380
+        Color = 14083559
         DataField = 'TAMANHO'
         DataSource = Dtsrc
         Font.Charset = DEFAULT_CHARSET
@@ -1285,7 +1285,7 @@ object FrPrincipal: TFrPrincipal
     Height = 23
     Align = alTop
     BevelOuter = bvNone
-    Color = clWhite
+    Color = 14083559
     ParentBackground = False
     TabOrder = 4
     object Image5: TImage
@@ -1359,7 +1359,7 @@ object FrPrincipal: TFrPrincipal
     Height = 40
     Align = alTop
     BevelOuter = bvNone
-    Color = clWhite
+    Color = 14083559
     ParentBackground = False
     TabOrder = 5
     Visible = False
@@ -1508,7 +1508,7 @@ object FrPrincipal: TFrPrincipal
     Height = 188
     Align = alTop
     BevelOuter = bvNone
-    Color = clWhite
+    Color = 14083559
     ParentBackground = False
     TabOrder = 6
     object Label5: TLabel
@@ -1558,7 +1558,7 @@ object FrPrincipal: TFrPrincipal
       Caption = 'View'
       Flat = True
       Font.Charset = DEFAULT_CHARSET
-      Font.Color = clRed
+      Font.Color = clBlue
       Font.Height = -11
       Font.Name = 'Tahoma'
       Font.Style = []
@@ -1629,7 +1629,7 @@ object FrPrincipal: TFrPrincipal
       Width = 210
       Height = 112
       BorderStyle = bsNone
-      Color = clWhite
+      Color = 14083559
       Columns = <
         item
           Width = 180
@@ -1652,7 +1652,7 @@ object FrPrincipal: TFrPrincipal
     Left = 608
     Top = 184
     Bitmap = {
-      494C010112001300080028002800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C0101120013000C0028002800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000A0000000C8000000010020000000000000F4
       0100000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -5788,7 +5788,7 @@ object FrPrincipal: TFrPrincipal
     Left = 676
     Top = 183
     Bitmap = {
-      494C010105000900080010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C0101050009000C0010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000002000000001002000000000000020
       00000000000000000000000000000000000000000000F7F7F700EFEFEF00E7E7
       E700E7E7E700EFEFEF00EFEFEF00F7F7F700FFFFFF00FFFFFF00FFFFFF00FFFF
@@ -6298,7 +6298,7 @@ object FrPrincipal: TFrPrincipal
     Left = 592
     Top = 232
     Bitmap = {
-      494C01010F001300080013001300FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010F0013000C0013001300FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       00000000000036000000280000004C0000004C0000000100200000000000405A
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

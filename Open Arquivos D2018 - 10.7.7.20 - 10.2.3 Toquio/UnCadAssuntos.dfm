@@ -342,7 +342,7 @@ object FrmCadAssuntos: TFrmCadAssuntos
     Margins.Right = 4
     Margins.Bottom = 4
     Align = alTop
-    Color = clWhite
+    Color = 14083559
     ParentBackground = False
     TabOrder = 1
     object Label1: TLabel
@@ -438,7 +438,7 @@ object FrmCadAssuntos: TFrmCadAssuntos
       Left = 21
       Top = 76
       Width = 748
-      Height = 23
+      Height = 19
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
@@ -460,7 +460,7 @@ object FrmCadAssuntos: TFrmCadAssuntos
       Left = 21
       Top = 177
       Width = 101
-      Height = 23
+      Height = 19
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
@@ -482,7 +482,7 @@ object FrmCadAssuntos: TFrmCadAssuntos
       Left = 21
       Top = 127
       Width = 748
-      Height = 23
+      Height = 19
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
@@ -513,6 +513,8 @@ object FrmCadAssuntos: TFrmCadAssuntos
       BevelInner = bvLowered
       BevelKind = bkSoft
       BevelOuter = bvNone
+      Color = clWhite
+      ParentBackground = False
       TabOrder = 3
       object inserir: TSpeedButton
         Left = 9
