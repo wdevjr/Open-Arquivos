@@ -1033,7 +1033,7 @@ object Abertura: TAbertura
     Margins.Top = 4
     Margins.Right = 4
     Margins.Bottom = 4
-    Caption = 'Open Arquivos - v7.9.9.20'
+    Caption = 'Open Arquivos - v7.9.9.60'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clGreen
     Font.Height = -22
