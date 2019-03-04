@@ -45,7 +45,9 @@ uses
   UnatribuiUsuariosPorArquivos in 'UnatribuiUsuariosPorArquivos.pas' {FrmAtribuiUser},
   UThema in 'UThema.pas' {FrmThemas},
   UnFrontColor in 'UnFrontColor.pas' {FrmFrontColor},
-  UnViewTextoTelaInicial in 'UnViewTextoTelaInicial.pas' {FrmTelaTexto};
+  UnViewTextoTelaInicial in 'UnViewTextoTelaInicial.pas' {FrmTelaTexto},
+  reinit in 'reinit.pas',
+  remain in 'remain.pas' {MainForm};
 
 {$R *.res}
 

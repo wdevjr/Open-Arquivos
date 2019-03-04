@@ -2,7 +2,7 @@ object FrPrincipal: TFrPrincipal
   Left = 298
   Top = 144
   BorderStyle = bsSingle
-  Caption = 'Open Arquivos - v10.9.9.40 - Uso em Rede'
+  Caption = 'Open Arquivos - v 7.9.9.40 - Uso em Rede'
   ClientHeight = 557
   ClientWidth = 844
   Color = 14083559
@@ -1551,12 +1551,11 @@ object FrPrincipal: TFrPrincipal
       ParentFont = False
     end
     object SpeedButton1: TSpeedButton
-      Left = 577
+      Left = 554
       Top = 48
-      Width = 35
-      Height = 65
-      Caption = 'View'
-      Flat = True
+      Width = 65
+      Height = 25
+      Caption = 'Save Doc'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlue
       Font.Height = -11
@@ -1564,6 +1563,20 @@ object FrPrincipal: TFrPrincipal
       Font.Style = []
       ParentFont = False
       OnClick = SpeedButton1Click
+    end
+    object SpeedButton2: TSpeedButton
+      Left = 554
+      Top = 79
+      Width = 65
+      Height = 26
+      Caption = 'Default'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlue
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      OnClick = SpeedButton2Click
     end
     object DBMemo1: TDBMemo
       Left = 16
@@ -1586,9 +1599,9 @@ object FrPrincipal: TFrPrincipal
       TabOrder = 2
     end
     object DBMemo3: TDBMemo
-      Left = 16
+      Left = 11
       Top = 50
-      Width = 560
+      Width = 537
       Height = 61
       Color = 13363947
       Ctl3D = False
@@ -1601,7 +1614,7 @@ object FrPrincipal: TFrPrincipal
       Font.Style = []
       ParentCtl3D = False
       ParentFont = False
-      ScrollBars = ssVertical
+      ScrollBars = ssBoth
       TabOrder = 1
       OnKeyDown = DBMemo3KeyDown
     end
@@ -1624,10 +1637,10 @@ object FrPrincipal: TFrPrincipal
       TabOrder = 0
     end
     object ListView1: TListView
-      Left = 618
-      Top = 63
-      Width = 210
-      Height = 112
+      Left = 625
+      Top = 56
+      Width = 188
+      Height = 121
       BorderStyle = bsNone
       Color = 14083559
       Columns = <
@@ -1652,7 +1665,7 @@ object FrPrincipal: TFrPrincipal
     Left = 608
     Top = 184
     Bitmap = {
-      494C010112001300100028002800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010112001300140028002800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000A0000000C8000000010020000000000000F4
       0100000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -5788,7 +5801,7 @@ object FrPrincipal: TFrPrincipal
     Left = 676
     Top = 183
     Bitmap = {
-      494C010105000900100010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010105000900140010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000002000000001002000000000000020
       00000000000000000000000000000000000000000000F7F7F700EFEFEF00E7E7
       E700E7E7E700EFEFEF00EFEFEF00F7F7F700FFFFFF00FFFFFF00FFFFFF00FFFF
@@ -6298,7 +6311,7 @@ object FrPrincipal: TFrPrincipal
     Left = 592
     Top = 232
     Bitmap = {
-      494C01010F001300100013001300FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010F001300140013001300FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       00000000000036000000280000004C0000004C0000000100200000000000405A
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -7076,7 +7089,7 @@ object FrPrincipal: TFrPrincipal
   end
   object Timer1: TTimer
     OnTimer = Timer1Timer
-    Left = 592
+    Left = 568
     Top = 444
   end
 end
