@@ -5,7 +5,7 @@ interface
 uses
   SysUtils, Windows, Messages, Classes, Graphics, Controls,
   Forms, Dialogs, StdCtrls, Buttons, ExtCtrls, Menus, ComCtrls, ClipBrd,
-  ToolWin, ActnList, ImgList, System.Actions, System.ImageList, Vcl.DBCtrls, DBClient;
+  ToolWin, ActnList, ImgList, System.Actions, System.ImageList, Vcl.DBCtrls, DBClient, Data.DB;
 
 type
   TMainForm = class(TForm)
@@ -144,7 +144,7 @@ var
 
 implementation
 
-uses RichEdit, ShellAPI, ReInit, UProjeto;
+uses RichEdit, ShellAPI, ReInit, UProjeto,UDM, ComObj;
 
 resourcestring
   sSaveChanges = 'Save changes to %s?';
@@ -334,14 +334,21 @@ begin
 end;
 
 procedure TMainForm.FileSave(Sender: TObject);
+var
+MSWord: Variant;
 begin
+{MSWord := CreateOleObject('Word.Application');
+MSWord.Visible:=false;
+MSWord.Selection.TypeText(Editor.Lines.ToString);
+MSWord.Visible:=true;
+MSWord.ActiveDocument.SaveDialog(FFileName);  }
 if FFileName = sUntitled then
     FileSaveAs(Sender)
   else
   begin
     Editor.Lines.SaveToFile(FFileName);
-    Editor.Modified := False;
-    SetModified(False);
+    Editor.Modified := True;
+    SetModified(true);
   end;
 end;
 
@@ -548,7 +555,8 @@ begin
   DragAcceptFiles(Handle, True);
   RichEditChange(nil);
   Editor.SetFocus;
-  //Editor.Font.Size:=12;
+  Editor.Font.Name:='Colibri';
+  Editor.Font.Size:=12;
   { Check if we should load a file from the command line }
   if (ParamCount > 0) and FileExists(ParamStr(1)) then
     PerformFileOpen(ParamStr(1));
