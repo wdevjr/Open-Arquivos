@@ -62,7 +62,6 @@ object MainForm: TMainForm
     ParentFont = False
     TabOrder = 0
     OnResize = RulerResize
-    ExplicitWidth = 845
     object FirstInd: TLabel
       Left = 2
       Top = 2
@@ -149,8 +148,6 @@ object MainForm: TMainForm
       item
         Width = 50
       end>
-    ExplicitTop = 329
-    ExplicitWidth = 845
   end
   object StandardToolBar: TToolBar
     Left = 0
@@ -165,7 +162,6 @@ object MainForm: TMainForm
     ShowHint = True
     TabOrder = 2
     Wrapable = False
-    ExplicitWidth = 845
     object ToolButton1: TToolButton
       Left = 4
       Top = 0
@@ -250,7 +246,7 @@ object MainForm: TMainForm
       OnChange = FontSizeChange
     end
     object UpDown1: TUpDown
-      Left = 427
+      Left = 443
       Top = 0
       Width = 15
       Height = 22
@@ -259,7 +255,7 @@ object MainForm: TMainForm
       TabOrder = 2
     end
     object ToolButton2: TToolButton
-      Left = 442
+      Left = 458
       Top = 0
       Width = 8
       Caption = 'ToolButton2'
@@ -267,7 +263,7 @@ object MainForm: TMainForm
       Style = tbsSeparator
     end
     object BoldButton: TToolButton
-      Left = 450
+      Left = 466
       Top = 0
       Hint = 'Bold'
       ImageIndex = 8
@@ -275,7 +271,7 @@ object MainForm: TMainForm
       OnClick = BoldButtonClick
     end
     object ItalicButton: TToolButton
-      Left = 473
+      Left = 489
       Top = 0
       Hint = 'Italic'
       ImageIndex = 9
@@ -283,7 +279,7 @@ object MainForm: TMainForm
       OnClick = ItalicButtonClick
     end
     object UnderlineButton: TToolButton
-      Left = 496
+      Left = 512
       Top = 0
       Hint = 'Underline'
       ImageIndex = 10
@@ -291,14 +287,14 @@ object MainForm: TMainForm
       OnClick = UnderlineButtonClick
     end
     object ToolButton16: TToolButton
-      Left = 519
+      Left = 535
       Top = 0
       Width = 8
       ImageIndex = 12
       Style = tbsDivider
     end
     object LeftAlign: TToolButton
-      Left = 527
+      Left = 543
       Top = 0
       Hint = 'Align Left'
       Grouped = True
@@ -308,7 +304,7 @@ object MainForm: TMainForm
     end
     object CenterAlign: TToolButton
       Tag = 2
-      Left = 550
+      Left = 566
       Top = 0
       Hint = 'Center'
       Grouped = True
@@ -318,7 +314,7 @@ object MainForm: TMainForm
     end
     object RightAlign: TToolButton
       Tag = 1
-      Left = 573
+      Left = 589
       Top = 0
       Hint = 'Align Right'
       Grouped = True
@@ -327,14 +323,14 @@ object MainForm: TMainForm
       OnClick = AlignButtonClick
     end
     object ToolButton20: TToolButton
-      Left = 596
+      Left = 612
       Top = 0
       Width = 8
       ImageIndex = 15
       Style = tbsDivider
     end
     object BulletsButton: TToolButton
-      Left = 604
+      Left = 620
       Top = 0
       Hint = 'Bullets|Enter bullet mode'
       ImageIndex = 14
@@ -342,7 +338,7 @@ object MainForm: TMainForm
       OnClick = BulletsButtonClick
     end
     object ToolButton3: TToolButton
-      Left = 627
+      Left = 643
       Top = 0
       Width = 8
       Caption = 'ToolButton3'
@@ -350,7 +346,7 @@ object MainForm: TMainForm
       Style = tbsSeparator
     end
     object ColorBox1: TColorBox
-      Left = 635
+      Left = 651
       Top = 0
       Width = 145
       Height = 22
@@ -368,14 +364,14 @@ object MainForm: TMainForm
     Color = clWhite
     DataField = 'DESCRICAO'
     DataSource = FrPrincipal.Dtsrc
-    ParentFont = True
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Default'
+    Font.Style = []
     ScrollBars = ssBoth
     TabOrder = 3
     Zoom = 100
-    ExplicitLeft = 216
-    ExplicitTop = 120
-    ExplicitWidth = 185
-    ExplicitHeight = 89
   end
   object MainMenu: TMainMenu
     Images = ToolbarImages
@@ -487,7 +483,7 @@ object MainForm: TMainForm
     Left = 88
     Top = 68
     Bitmap = {
-      494C01010F0014000C0010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010F001400100010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000004000000001002000000000000040
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
