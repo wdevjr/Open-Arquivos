@@ -457,14 +457,18 @@ object MainForm: TMainForm
     end
   end
   object OpenDialog: TOpenDialog
-    Filter = 'Rich Text Files (*.RTF)|*.RTF|Text Files (*.TXT)|*.TXT'
-    Left = 56
-    Top = 104
+    Filter = 
+      'Rich Text Files (*.RTF)|*.RTF|Text Files (*.TXT)|*.TXT|Doc(*.doc' +
+      ')|*.DOC'
+    Left = 40
+    Top = 176
   end
   object SaveDialog: TSaveDialog
-    Filter = 'Rich Text Files (*.RTF)|*.RTF|Text Files (*.TXT)|*.TXT'
-    Left = 88
-    Top = 104
+    Filter = 
+      'Rich Text Files (*.RTF)|*.RTF|Text Files (*.TXT)|*.TXT| Doc(*.DO' +
+      'C)|*.DOC'
+    Left = 104
+    Top = 176
   end
   object PrintDialog: TPrintDialog
     Left = 120
@@ -483,7 +487,7 @@ object MainForm: TMainForm
     Left = 88
     Top = 68
     Bitmap = {
-      494C01010F001400100010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010F001400180010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000004000000001002000000000000040
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
