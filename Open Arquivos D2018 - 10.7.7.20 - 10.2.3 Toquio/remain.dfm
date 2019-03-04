@@ -355,20 +355,20 @@ object MainForm: TMainForm
       OnClick = ColorBox1Click
     end
   end
-  object Editor: TDBRichEdit
+  object Editor: TRichEdit
     Left = 0
     Top = 56
     Width = 815
     Height = 272
     Align = alClient
-    Color = clWhite
-    DataField = 'DESCRICAO'
-    DataSource = FrPrincipal.Dtsrc
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
     Font.Name = 'Default'
     Font.Style = []
+    Lines.Strings = (
+      'Editor')
+    ParentFont = False
     ScrollBars = ssBoth
     TabOrder = 3
     Zoom = 100
@@ -487,7 +487,7 @@ object MainForm: TMainForm
     Left = 88
     Top = 68
     Bitmap = {
-      494C01010F001400200010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010F001400240010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000004000000001002000000000000040
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

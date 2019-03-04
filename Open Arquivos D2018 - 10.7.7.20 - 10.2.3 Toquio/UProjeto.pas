@@ -816,6 +816,7 @@ begin
  finally
     MainForm.Free;
  end;
+
 end;
 
 procedure TFrPrincipal.SpeedButton2Click(Sender: TObject);

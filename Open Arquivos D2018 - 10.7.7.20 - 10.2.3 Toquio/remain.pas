@@ -78,7 +78,7 @@ type
     LanguageFrench: TMenuItem;
     ToolButton3: TToolButton;
     ColorBox1: TColorBox;
-    Editor: TDBRichEdit;
+    Editor: TRichEdit;
     procedure ColorBox1Click(Sender: TObject);
 
     procedure SelectionChange(Sender: TObject);
@@ -560,6 +560,7 @@ begin
   { Check if we should load a file from the command line }
   if (ParamCount > 0) and FileExists(ParamStr(1)) then
     PerformFileOpen(ParamStr(1));
+     MainForm.Editor.Lines:=(FrPrincipal.DBMemo3.Lines);
 end;
 
 procedure TMainForm.WMDropFiles(var Msg: TWMDropFiles);
