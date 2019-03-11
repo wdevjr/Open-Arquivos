@@ -158,6 +158,7 @@ begin
     CodigoAssunto := '';
     CodigoUserPorNome := '';
     CodigoPorCriterio := '';
+    DM.sds_view.Filtered := False;
   end
 
 end;
@@ -523,10 +524,14 @@ begin
  DM.sds_view.CLOSE;
  Dtscru.DataSet.Close;
  Dtscra.DataSet.Close;
+ DM.cds_User.CLOSE;
+ DM.cds_UserCod.CLOSE;
+ DM.cds_Assunt.CLOSE;
  DtsrcCod.DataSet.Close;
  DataSourceCriterio.DataSet.Close;
  PanelComplete.Visible := False;
  PanelMaximizar.Visible := False;
+ DM.sds_view.Filtered := False;
 end;
 
 procedure TFrmView.SpeedButton15Click(Sender: TObject);
