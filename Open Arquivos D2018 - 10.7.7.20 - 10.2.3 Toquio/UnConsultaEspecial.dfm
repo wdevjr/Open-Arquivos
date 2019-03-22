@@ -2,7 +2,7 @@ object FrmView: TFrmView
   Left = 110
   Top = 115
   Caption = 'Consulta Especial...'
-  ClientHeight = 651
+  ClientHeight = 724
   ClientWidth = 796
   Color = 14083559
   Font.Charset = DEFAULT_CHARSET
@@ -20,7 +20,7 @@ object FrmView: TFrmView
     Left = 0
     Top = 467
     Width = 796
-    Height = 121
+    Height = 194
     Margins.Left = 4
     Margins.Top = 4
     Margins.Right = 4
@@ -31,7 +31,7 @@ object FrmView: TFrmView
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -80
+    Font.Height = -120
     Font.Name = 'Tahoma'
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgCancelOnExit]
@@ -452,7 +452,7 @@ object FrmView: TFrmView
   end
   object Panel1: TPanel
     Left = 0
-    Top = 588
+    Top = 661
     Width = 796
     Height = 63
     Align = alBottom
@@ -829,6 +829,7 @@ object FrmView: TFrmView
     ParentBackground = False
     TabOrder = 4
     Visible = False
+    ExplicitTop = 418
     object Alert: TPanel
       Left = 10
       Top = 8

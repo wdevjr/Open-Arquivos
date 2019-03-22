@@ -5,7 +5,7 @@ object FrmCadPerfil: TFrmCadPerfil
   Caption = 'Configura'#231#227'o de Perfil'
   ClientHeight = 453
   ClientWidth = 776
-  Color = clWhite
+  Color = 14083559
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -181,7 +181,6 @@ object FrmCadPerfil: TFrmCadPerfil
     BevelOuter = bvNone
     Color = clWhite
     TabOrder = 0
-    ExplicitWidth = 650
     object Image1: TImage
       Left = 14
       Top = 5
@@ -337,7 +336,6 @@ object FrmCadPerfil: TFrmCadPerfil
     BevelOuter = bvNone
     Color = 12615680
     TabOrder = 1
-    ExplicitWidth = 650
   end
   object Panel3: TPanel
     Left = 8
@@ -346,7 +344,8 @@ object FrmCadPerfil: TFrmCadPerfil
     Height = 250
     Align = alCustom
     BevelOuter = bvNone
-    Color = clWhite
+    Color = 14083559
+    ParentBackground = False
     TabOrder = 2
     object GroupBox1: TGroupBox
       Left = 10
@@ -367,7 +366,7 @@ object FrmCadPerfil: TFrmCadPerfil
         Width = 117
         Height = 17
         Caption = 'Inserir'
-        Color = 16774388
+        Color = 14083559
         DataField = 'ARQUI_INSERIR'
         DataSource = Dtsc
         Font.Charset = DEFAULT_CHARSET
@@ -387,7 +386,7 @@ object FrmCadPerfil: TFrmCadPerfil
         Width = 117
         Height = 17
         Caption = 'Excluir'
-        Color = 16774388
+        Color = 14083559
         DataField = 'ARQUI_EXCLUIR'
         DataSource = Dtsc
         Font.Charset = DEFAULT_CHARSET
@@ -407,7 +406,7 @@ object FrmCadPerfil: TFrmCadPerfil
         Width = 117
         Height = 17
         Caption = 'Consultar'
-        Color = 14939380
+        Color = 14083559
         DataField = 'ARQUI_CONSULTAR'
         DataSource = Dtsc
         Font.Charset = DEFAULT_CHARSET
@@ -427,7 +426,7 @@ object FrmCadPerfil: TFrmCadPerfil
         Width = 117
         Height = 17
         Caption = 'Usu'#225'rios'
-        Color = 16774388
+        Color = 14083559
         DataField = 'ARQUI_USUARIO'
         DataSource = Dtsc
         Font.Charset = DEFAULT_CHARSET
@@ -447,7 +446,7 @@ object FrmCadPerfil: TFrmCadPerfil
         Width = 117
         Height = 17
         Caption = 'Editar'
-        Color = 14939380
+        Color = 14083559
         DataField = 'ARQUI_EDITAR'
         DataSource = Dtsc
         Font.Charset = DEFAULT_CHARSET
@@ -467,7 +466,7 @@ object FrmCadPerfil: TFrmCadPerfil
         Width = 117
         Height = 17
         Caption = 'Assuntos'
-        Color = 14939380
+        Color = 14083559
         DataField = 'ARQUI_ASSUNTOS'
         DataSource = Dtsc
         Font.Charset = DEFAULT_CHARSET
@@ -487,7 +486,7 @@ object FrmCadPerfil: TFrmCadPerfil
         Width = 117
         Height = 17
         Caption = 'Autores'
-        Color = 16774388
+        Color = 14083559
         DataField = 'ARQUI_AUTORES'
         DataSource = Dtsc
         Font.Charset = DEFAULT_CHARSET
@@ -507,7 +506,7 @@ object FrmCadPerfil: TFrmCadPerfil
         Width = 117
         Height = 14
         Caption = 'Localizar'
-        Color = 14939380
+        Color = 14083559
         DataField = 'ARQUI_LOCALIZAR'
         DataSource = Dtsc
         Font.Charset = DEFAULT_CHARSET
@@ -541,7 +540,7 @@ object FrmCadPerfil: TFrmCadPerfil
         Width = 140
         Height = 17
         Caption = 'Inserir'
-        Color = 16774388
+        Color = 14083559
         DataField = 'USUARIO_INSERIR'
         DataSource = Dtsc
         Font.Charset = DEFAULT_CHARSET
@@ -561,7 +560,7 @@ object FrmCadPerfil: TFrmCadPerfil
         Width = 140
         Height = 17
         Caption = 'Excluir'
-        Color = 16774388
+        Color = 14083559
         DataField = 'USUARIO_EXCLUIR'
         DataSource = Dtsc
         Font.Charset = DEFAULT_CHARSET
@@ -581,7 +580,7 @@ object FrmCadPerfil: TFrmCadPerfil
         Width = 140
         Height = 17
         Caption = 'Trazer'
-        Color = 14939380
+        Color = 14083559
         DataField = 'USUARIO_TRAZER'
         DataSource = Dtsc
         Font.Charset = DEFAULT_CHARSET
@@ -601,7 +600,7 @@ object FrmCadPerfil: TFrmCadPerfil
         Width = 140
         Height = 17
         Caption = 'Editar'
-        Color = 14939380
+        Color = 14083559
         DataField = 'USUARIO_EDITAR'
         DataSource = Dtsc
         Font.Charset = DEFAULT_CHARSET
@@ -635,7 +634,7 @@ object FrmCadPerfil: TFrmCadPerfil
         Width = 97
         Height = 17
         Caption = 'Inserir'
-        Color = 16774388
+        Color = 14083559
         DataField = 'ASSUNTOS_INSERIR'
         DataSource = Dtsc
         Font.Charset = DEFAULT_CHARSET
@@ -655,7 +654,7 @@ object FrmCadPerfil: TFrmCadPerfil
         Width = 97
         Height = 17
         Caption = 'Editar'
-        Color = 14939380
+        Color = 14083559
         DataField = 'ASSUNTOS_EDITAR'
         DataSource = Dtsc
         Font.Charset = DEFAULT_CHARSET
@@ -675,7 +674,7 @@ object FrmCadPerfil: TFrmCadPerfil
         Width = 97
         Height = 17
         Caption = 'Excluir'
-        Color = 16774388
+        Color = 14083559
         DataField = 'ASSUNTOS_EXCLUIR'
         DataSource = Dtsc
         Font.Charset = DEFAULT_CHARSET
@@ -695,7 +694,7 @@ object FrmCadPerfil: TFrmCadPerfil
         Width = 97
         Height = 17
         Caption = 'Trazer'
-        Color = 14939380
+        Color = 14083559
         DataField = 'ASSUNTOS_TRAZER'
         DataSource = Dtsc
         Font.Charset = DEFAULT_CHARSET
@@ -729,7 +728,7 @@ object FrmCadPerfil: TFrmCadPerfil
         Width = 97
         Height = 17
         Caption = 'Editar'
-        Color = 16774388
+        Color = 14083559
         DataField = 'AUTORES_EDITAR'
         DataSource = Dtsc
         Font.Charset = DEFAULT_CHARSET
@@ -749,7 +748,7 @@ object FrmCadPerfil: TFrmCadPerfil
         Width = 97
         Height = 17
         Caption = 'Excluir'
-        Color = 14939380
+        Color = 14083559
         DataField = 'AUTORES_EXCLUIR'
         DataSource = Dtsc
         Font.Charset = DEFAULT_CHARSET
@@ -769,7 +768,7 @@ object FrmCadPerfil: TFrmCadPerfil
         Width = 97
         Height = 17
         Caption = 'Inserir'
-        Color = 14939380
+        Color = 14083559
         DataField = 'AUTORES_INSERIR'
         DataSource = Dtsc
         Font.Charset = DEFAULT_CHARSET
@@ -789,7 +788,7 @@ object FrmCadPerfil: TFrmCadPerfil
         Width = 97
         Height = 17
         Caption = 'Trazer'
-        Color = 16774388
+        Color = 14083559
         DataField = 'AUTORES_TRAZER'
         DataSource = Dtsc
         Font.Charset = DEFAULT_CHARSET
@@ -836,7 +835,7 @@ object FrmCadPerfil: TFrmCadPerfil
           Width = 142
           Height = 17
           Caption = 'Autores'
-          Color = 14939380
+          Color = 14083559
           DataField = 'MENU_ARQUI_AUTORES'
           DataSource = Dtsc
           Font.Charset = DEFAULT_CHARSET
@@ -856,7 +855,7 @@ object FrmCadPerfil: TFrmCadPerfil
           Width = 142
           Height = 17
           Caption = 'Assuntos'
-          Color = 16774388
+          Color = 14083559
           DataField = 'MENU_ARQUI_ASSUNTOS'
           DataSource = Dtsc
           Font.Charset = DEFAULT_CHARSET
@@ -876,7 +875,7 @@ object FrmCadPerfil: TFrmCadPerfil
           Width = 142
           Height = 17
           Caption = 'Consultas'
-          Color = 14939380
+          Color = 14083559
           DataField = 'MENU_ARQUI_CONSULTAS'
           DataSource = Dtsc
           Font.Charset = DEFAULT_CHARSET
@@ -910,7 +909,7 @@ object FrmCadPerfil: TFrmCadPerfil
           Width = 142
           Height = 17
           Caption = 'Cadastro'
-          Color = 14939380
+          Color = 14083559
           DataField = 'MENU_USUARIO_CADASTRO'
           DataSource = Dtsc
           Font.Charset = DEFAULT_CHARSET
@@ -930,7 +929,7 @@ object FrmCadPerfil: TFrmCadPerfil
           Width = 142
           Height = 17
           Caption = 'Perfil'
-          Color = 16774388
+          Color = 14083559
           DataField = 'MENU_USUARIO_PERFIL'
           DataSource = Dtsc
           Font.Charset = DEFAULT_CHARSET
@@ -964,7 +963,7 @@ object FrmCadPerfil: TFrmCadPerfil
           Width = 142
           Height = 17
           Caption = 'SQL'
-          Color = 14939380
+          Color = 14083559
           DataField = 'MENU_MANUTENCAO_SQL'
           DataSource = Dtsc
           Font.Charset = DEFAULT_CHARSET
@@ -984,7 +983,7 @@ object FrmCadPerfil: TFrmCadPerfil
           Width = 142
           Height = 17
           Caption = 'Arquivos Tempor'#225'rios'
-          Color = 16774388
+          Color = 14083559
           DataField = 'MENU_MANUTENCAO_TEMP'
           DataSource = Dtsc
           Font.Charset = DEFAULT_CHARSET
@@ -1019,7 +1018,7 @@ object FrmCadPerfil: TFrmCadPerfil
         Width = 140
         Height = 17
         Caption = 'Converter'
-        Color = 14939380
+        Color = 14083559
         DataField = 'CONFIG_CONVERTER'
         DataSource = Dtsc
         Font.Charset = DEFAULT_CHARSET
@@ -1039,7 +1038,7 @@ object FrmCadPerfil: TFrmCadPerfil
         Width = 140
         Height = 17
         Caption = 'Bot'#245'es de Controle'
-        Color = 16774388
+        Color = 14083559
         DataField = 'CONFIG_BOTOES'
         DataSource = Dtsc
         Font.Charset = DEFAULT_CHARSET
@@ -1061,8 +1060,6 @@ object FrmCadPerfil: TFrmCadPerfil
     Width = 776
     Height = 19
     Panels = <>
-    ExplicitTop = 303
-    ExplicitWidth = 650
   end
   object Panel6: TPanel
     Left = 0
@@ -1073,6 +1070,8 @@ object FrmCadPerfil: TFrmCadPerfil
     BevelInner = bvLowered
     BevelKind = bkFlat
     BevelOuter = bvNone
+    Color = clWhite
+    ParentBackground = False
     TabOrder = 4
     object inserir: TSpeedButton
       Left = 7
@@ -1565,8 +1564,6 @@ object FrmCadPerfil: TFrmCadPerfil
     BevelOuter = bvNone
     Color = clMaroon
     TabOrder = 5
-    ExplicitTop = 0
-    ExplicitWidth = 650
   end
   object Panel5: TPanel
     Left = 76
