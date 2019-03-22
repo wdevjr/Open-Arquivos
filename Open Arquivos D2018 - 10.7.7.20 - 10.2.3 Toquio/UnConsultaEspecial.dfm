@@ -3,7 +3,7 @@ object FrmView: TFrmView
   Top = 115
   Caption = 'Consulta Especial...'
   ClientHeight = 724
-  ClientWidth = 796
+  ClientWidth = 794
   Color = 14083559
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,114 +16,10 @@ object FrmView: TFrmView
   OnShow = FormShow
   PixelsPerInch = 120
   TextHeight = 17
-  object DBGrid1: TDBGrid
-    Left = 0
-    Top = 467
-    Width = 796
-    Height = 194
-    Margins.Left = 4
-    Margins.Top = 4
-    Margins.Right = 4
-    Margins.Bottom = 4
-    Align = alBottom
-    Color = clWhite
-    DataSource = Dtsrc
-    DrawingStyle = gdsGradient
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -120
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgCancelOnExit]
-    ParentFont = False
-    TabOrder = 0
-    TitleFont.Charset = DEFAULT_CHARSET
-    TitleFont.Color = clWindowText
-    TitleFont.Height = -11
-    TitleFont.Name = 'Tahoma'
-    TitleFont.Style = []
-    OnCellClick = DBGrid1CellClick
-    OnDrawColumnCell = DBGrid1DrawColumnCell
-    Columns = <
-      item
-        Alignment = taCenter
-        Expanded = False
-        FieldName = 'ID'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -20
-        Font.Name = 'Tahoma'
-        Font.Style = []
-        Title.Caption = 'C'#243'digo'
-        Width = 78
-        Visible = True
-      end
-      item
-        Alignment = taCenter
-        Expanded = False
-        FieldName = 'DESCRICAO'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -13
-        Font.Name = 'Tahoma'
-        Font.Style = []
-        Title.Caption = 'Descri'#231#227'o'
-        Width = 590
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'TITULO'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -13
-        Font.Name = 'Tahoma'
-        Font.Style = []
-        Title.Caption = 'T'#237'tulo'
-        Width = 405
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'NOME_ARQUIVO'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Tahoma'
-        Font.Style = []
-        Title.Caption = 'Nome do Arquivo'
-        Width = 269
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'DATA'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Tahoma'
-        Font.Style = []
-        Title.Caption = 'Data do Registro'
-        Width = 98
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'NOME'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -11
-        Font.Name = 'Tahoma'
-        Font.Style = []
-        Title.Caption = 'Nome do  Autor'
-        Width = 266
-        Visible = True
-      end>
-  end
   object Panel6: TPanel
     Left = 0
     Top = 0
-    Width = 796
+    Width = 794
     Height = 40
     Margins.Left = 4
     Margins.Top = 4
@@ -132,7 +28,7 @@ object FrmView: TFrmView
     Align = alTop
     Color = clWhite
     ParentBackground = False
-    TabOrder = 1
+    TabOrder = 0
     object Label4: TLabel
       Left = 60
       Top = 13
@@ -262,7 +158,7 @@ object FrmView: TFrmView
       Transparent = True
     end
     object Panel16: TPanel
-      Left = 596
+      Left = 594
       Top = 1
       Width = 199
       Height = 38
@@ -439,7 +335,7 @@ object FrmView: TFrmView
   object Panel7: TPanel
     Left = 0
     Top = 40
-    Width = 796
+    Width = 794
     Height = 8
     Margins.Left = 4
     Margins.Top = 4
@@ -448,19 +344,19 @@ object FrmView: TFrmView
     Align = alTop
     Color = 12615680
     ParentBackground = False
-    TabOrder = 2
+    TabOrder = 1
   end
   object Panel1: TPanel
     Left = 0
     Top = 661
-    Width = 796
+    Width = 794
     Height = 63
     Align = alBottom
     BevelOuter = bvNone
-    TabOrder = 3
+    TabOrder = 2
     object SpeedButton4: TSpeedButton
       Left = 15
-      Top = 1
+      Top = 6
       Width = 134
       Height = 55
       Margins.Left = 4
@@ -536,7 +432,7 @@ object FrmView: TFrmView
     end
     object SpeedButton14: TSpeedButton
       Left = 285
-      Top = 1
+      Top = 6
       Width = 116
       Height = 55
       Caption = 'Limpar'
@@ -618,7 +514,7 @@ object FrmView: TFrmView
     end
     object SpeedButton15: TSpeedButton
       Left = 155
-      Top = 1
+      Top = 6
       Width = 123
       Height = 55
       Caption = 'Imprimir'
@@ -689,7 +585,7 @@ object FrmView: TFrmView
       OnClick = SpeedButton15Click
     end
     object BitBtn1: TBitBtn
-      Left = 557
+      Left = 599
       Top = 17
       Width = 93
       Height = 32
@@ -747,7 +643,7 @@ object FrmView: TFrmView
       OnClick = BitBtn1Click
     end
     object BitBtn2: TBitBtn
-      Left = 658
+      Left = 700
       Top = 16
       Width = 87
       Height = 32
@@ -818,176 +714,19 @@ object FrmView: TFrmView
       OnClick = BitBtn2Click
     end
   end
-  object PanelComplete: TPanel
-    Left = 0
-    Top = 421
-    Width = 796
-    Height = 46
-    Align = alBottom
-    BevelOuter = bvNone
-    Color = 14155775
-    ParentBackground = False
-    TabOrder = 4
-    Visible = False
-    ExplicitTop = 418
-    object Alert: TPanel
-      Left = 10
-      Top = 8
-      Width = 830
-      Height = 54
-      BevelOuter = bvNone
-      Color = 14155775
-      ParentBackground = False
-      TabOrder = 0
-      Visible = False
-      object Label3: TLabel
-        Left = 149
-        Top = 7
-        Width = 37
-        Height = 13
-        Caption = 'Label3'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clRed
-        Font.Height = -11
-        Font.Name = 'Tahoma'
-        Font.Style = [fsBold]
-        ParentFont = False
-      end
-      object Label30: TLabel
-        Left = 9
-        Top = 7
-        Width = 134
-        Height = 13
-        Caption = 'Registros  encontrados:'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = 12615680
-        Font.Height = -11
-        Font.Name = 'Tahoma'
-        Font.Style = [fsBold]
-        ParentFont = False
-      end
-      object PanelMaximizar: TPanel
-        Left = 214
-        Top = 0
-        Width = 341
-        Height = 33
-        BevelOuter = bvNone
-        Ctl3D = True
-        ParentCtl3D = False
-        TabOrder = 0
-        Visible = False
-        object Label5: TLabel
-          Left = 0
-          Top = 8
-          Width = 188
-          Height = 13
-          Caption = 'Clique neste bot'#227'o para Maximizar --->'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -11
-          Font.Name = 'Tahoma'
-          Font.Style = []
-          ParentFont = False
-        end
-        object SpeedButton5: TSpeedButton
-          Left = 194
-          Top = 4
-          Width = 31
-          Height = 22
-          Caption = '...'
-          OnClick = SpeedButton5Click
-        end
-      end
-    end
-  end
   object Panel2: TPanel
-    Left = -1
-    Top = 55
-    Width = 796
-    Height = 366
+    Left = 0
+    Top = 48
+    Width = 794
+    Height = 418
+    Align = alTop
     Color = 14083559
     ParentBackground = False
-    TabOrder = 5
-    object SpeedButton2: TSpeedButton
-      Left = 496
-      Top = 323
-      Width = 107
-      Height = 31
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      Caption = 'Consultar'
-      Flat = True
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Tahoma'
-      Font.Style = []
-      Glyph.Data = {
-        F6060000424DF606000000000000360000002800000018000000180000000100
-        180000000000C006000000000000000000000000000000000000C8D0D4C8D0D4
-        C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0
-        D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C2C9D15167882F436979686F99
-        8381C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4
-        C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D47C96B1518A
-        B176B0CC42597C7B6C75C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8
-        D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4D4D9DD
-        7C99B4619CBE8BD4EF71C3EC3184C02C426AC8D0D4C8D0D4C8D0D4C8D0D4C8D0
-        D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8
-        D0D4D3DADF7B9CB967A3C586CFEC75CCF43CA2E32174B95A7092C8D0D4C8D0D4
-        C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0
-        D4C8D0D4C8D0D4D3DCE17BA0BF6AA8CB83CDEB75CCF43FA4E3287FC4638CB5CF
-        D5DBC8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4
-        C8D0D4C8D0D4C8D0D4C8D0D4D4DEE57BA5C568ABCF82CDEB75CCF441A5E42C85
-        CA6694BECCD6DDC8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8
-        D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D480A2C2599DC87ECBEB75CCF4
-        42A7E52F8ACF679AC6C9D5DEC8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0
-        D4D2C8C2CDC0B8CCC0B7CDC1B8CDC1BAD2C8C3C8D0D4C8D0D4C8D0D46B87A656
-        97C262B5E342A6E52F8DD3689FCDC7D6E1C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4
-        C8D0D4D7CDC6BEAB9DB19B84AE987CAE9A7EAE9B82AF9C88B3A295C0B1AAC4B6
-        B3CBBEBC9F979D5C7EA23687C52E8BD167A3D3C7D8E5C8D0D4C8D0D4C8D0D4C8
-        D0D4C8D0D4C8D0D4C8B9B1AA8D79C9AE84EFDFA5FDF7B9FEFCC3FEFECBFEFED3
-        F5F3D2C4B6A5917773947B7BA89494A4A0A7709BC17AACD4C9DCE9C8D0D4C8D0
-        D4C8D0D4C8D0D4C8D0D4C8D0D4C6B8B3AB886EE4C78EFAEAA9FCF0B1FDF7B9FE
-        FCC4FEFECFFEFED9FEFEE2FBFBE7E5DDD1927976917777CCC0BDC8D0D4C8D0D4
-        C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4937163E5C388FAE2A1FAE6
-        A4FCECACFDF7BAFEFDC7FEFED2FEFEDCFEFEE6FEFEF0FEFEF7E4DDD4876B69D0
-        C5C1C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4AA9794CBA173
-        F2D394F9DB99FADF9DFCEBAAFDF7BAFEFDC7FEFED2FEFEDCFEFEE6FEFEF0FEFE
-        F7FEFEF2AC9992D1C6C1C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8
-        D0D4937369EBC183F8DA98F8D492FADF9DFCEDAFFDF7BCFEFDC6FEFECEFEFED8
-        FEFEE1FEFEE9FEFEECFEFEEAE1DAC5BCADA6E5DFDAC8D0D4C8D0D4C8D0D4C8D0
-        D4C8D0D4C8D0D4C8D0D49F725CF0C988F8D996FAE1A0FBE9AAFCEDB0FDF5BDFE
-        FCCEFEFED5FEFED3FEFEDAFEFEDFFEFEE2FEFEE1FAF9D8B3A298DED6D2C8D0D4
-        C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4B17C5CF1C888F8D996F9DE9CF9E2
-        A1FAE7AAFBEEB3FDF7C0FEFDD1FEFED7FEFED2FEFED6FEFED8FEFED7FEFED4B6
-        A498DED7D2C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4AC7C61F0C585
-        F8D895FAE6A4FBF0B7FCF5CBFCF5CDFCF5C2FDF8C4FEFDD3FEFEC9FEFECCFEFE
-        CEFEFECDFEFECBBAA99BE0D9D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8
-        D0D4A78374EFC07FF7D490FBE9A8FDF9C2FEFEDAFDFCE1FCF4C9FCF0B7FDFACA
-        FDFABDFEFCC2FEFCC3FEFDC5F3EFBAC3B5A7E6E0DBC8D0D4C8D0D4C8D0D4C8D0
-        D4C8D0D4C8D0D4C8D0D4B6A19AE4B27AF5CB89FAE2A2FCF5BAFDFCCEFEFED9FC
-        F4C6FBEDB1FDF7BFFCF0AFFDF3B4FDF6B7FDF9BCDCCEA4D5CABEC8D0D4C8D0D4
-        C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4D8CFCBCFA481EFBE80F8D794FBEA
-        AAFCF5BAFDF9C2FCF3BAFBECADFBECADFAE2A1FBE9A7FCEFAFF5E8ADC9B59DE6
-        DFD7C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4CAB2A4
-        DFAE7EF2C584F8D895FAE4A3FBEAAAFBEAAAFAE4A3F8DC9AF8DC9BFAE3A2F9E5
-        A6DCC69DD1C3B8C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8
-        D0D4C8D0D4E8E2DECFB19EE1B282EFC184F5CE8CF8D693F8D997F8D896F8D795
-        F7DB9AF2D79CE7CB9BCBB9ABC8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0
-        D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4EAE5E0D4BDAEDAB28FE8B984EFC387F1
-        CA8DF1CC8FF0CB90ECC891DCBD9CCEC0BAC8D0D4C8D0D4C8D0D4C8D0D4C8D0D4
-        C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4DED7
-        D4CDB8AFCCAA96D2A88AD2AA8CC9AFA0CDBFB9C8D0D4C8D0D4C8D0D4C8D0D4C8
-        D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4}
-      ParentFont = False
-      OnClick = SpeedButton2Click
-    end
+    TabOrder = 3
     object RadioGroup1: TRadioGroup
       Left = 1
       Top = 278
-      Width = 794
+      Width = 792
       Height = 37
       Margins.Left = 4
       Margins.Top = 4
@@ -1017,18 +756,10 @@ object FrmView: TFrmView
       TabOrder = 0
       OnClick = RadioGroup1Click
     end
-    object EditPesqu: TMaskEdit
-      Left = 6
-      Top = 329
-      Width = 483
-      Height = 25
-      TabOrder = 1
-      Text = ''
-    end
     object Panel17: TPanel
       Left = 1
       Top = 1
-      Width = 794
+      Width = 792
       Height = 44
       Margins.Left = 4
       Margins.Top = 4
@@ -1044,7 +775,7 @@ object FrmView: TFrmView
       Font.Style = []
       ParentBackground = False
       ParentFont = False
-      TabOrder = 2
+      TabOrder = 1
       object SpeedButton8: TSpeedButton
         Left = 4
         Top = 2
@@ -1302,7 +1033,7 @@ object FrmView: TFrmView
     object Panel12: TPanel
       Left = 1
       Top = 45
-      Width = 794
+      Width = 792
       Height = 51
       Margins.Left = 4
       Margins.Top = 4
@@ -1312,7 +1043,7 @@ object FrmView: TFrmView
       BevelOuter = bvNone
       Color = 15531993
       ParentBackground = False
-      TabOrder = 3
+      TabOrder = 2
       object SpeedButton6: TSpeedButton
         Left = 5
         Top = 1
@@ -1572,7 +1303,7 @@ object FrmView: TFrmView
     object Panel8: TPanel
       Left = 1
       Top = 96
-      Width = 794
+      Width = 792
       Height = 44
       Margins.Left = 4
       Margins.Top = 4
@@ -1588,7 +1319,7 @@ object FrmView: TFrmView
       Font.Style = []
       ParentBackground = False
       ParentFont = False
-      TabOrder = 4
+      TabOrder = 3
       object Label1: TLabel
         Left = 60
         Top = 10
@@ -1944,7 +1675,7 @@ object FrmView: TFrmView
     object PanelData: TPanel
       Left = 1
       Top = 230
-      Width = 794
+      Width = 792
       Height = 48
       Margins.Left = 4
       Margins.Top = 4
@@ -1954,7 +1685,7 @@ object FrmView: TFrmView
       BevelOuter = bvNone
       Color = 16774388
       ParentBackground = False
-      TabOrder = 5
+      TabOrder = 4
       object SpeedButton11: TSpeedButton
         Left = 4
         Top = 3
@@ -2119,13 +1850,13 @@ object FrmView: TFrmView
     object Panel3: TPanel
       Left = 1
       Top = 184
-      Width = 794
+      Width = 792
       Height = 46
       Align = alTop
       BevelOuter = bvNone
       Color = 13828095
       ParentBackground = False
-      TabOrder = 6
+      TabOrder = 5
       object GroupBox1: TGroupBox
         Left = 5
         Top = 1
@@ -2156,7 +1887,7 @@ object FrmView: TFrmView
     object Panel4: TPanel
       Left = 1
       Top = 140
-      Width = 794
+      Width = 792
       Height = 44
       Margins.Left = 4
       Margins.Top = 4
@@ -2172,7 +1903,7 @@ object FrmView: TFrmView
       Font.Style = []
       ParentBackground = False
       ParentFont = False
-      TabOrder = 7
+      TabOrder = 6
       object Label2: TLabel
         Left = 60
         Top = 10
@@ -2388,6 +2119,294 @@ object FrmView: TFrmView
         TabOrder = 0
         Visible = False
       end
+    end
+    object Panel5: TPanel
+      Left = 1
+      Top = 315
+      Width = 792
+      Height = 46
+      Align = alTop
+      BevelOuter = bvNone
+      Ctl3D = True
+      ParentCtl3D = False
+      TabOrder = 7
+      object SpeedButton2: TSpeedButton
+        Left = 496
+        Top = 4
+        Width = 107
+        Height = 31
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        Caption = 'Consultar'
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        Glyph.Data = {
+          F6060000424DF606000000000000360000002800000018000000180000000100
+          180000000000C006000000000000000000000000000000000000C8D0D4C8D0D4
+          C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0
+          D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C2C9D15167882F436979686F99
+          8381C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4
+          C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D47C96B1518A
+          B176B0CC42597C7B6C75C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8
+          D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4D4D9DD
+          7C99B4619CBE8BD4EF71C3EC3184C02C426AC8D0D4C8D0D4C8D0D4C8D0D4C8D0
+          D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8
+          D0D4D3DADF7B9CB967A3C586CFEC75CCF43CA2E32174B95A7092C8D0D4C8D0D4
+          C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0
+          D4C8D0D4C8D0D4D3DCE17BA0BF6AA8CB83CDEB75CCF43FA4E3287FC4638CB5CF
+          D5DBC8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4
+          C8D0D4C8D0D4C8D0D4C8D0D4D4DEE57BA5C568ABCF82CDEB75CCF441A5E42C85
+          CA6694BECCD6DDC8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8
+          D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D480A2C2599DC87ECBEB75CCF4
+          42A7E52F8ACF679AC6C9D5DEC8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0
+          D4D2C8C2CDC0B8CCC0B7CDC1B8CDC1BAD2C8C3C8D0D4C8D0D4C8D0D46B87A656
+          97C262B5E342A6E52F8DD3689FCDC7D6E1C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4
+          C8D0D4D7CDC6BEAB9DB19B84AE987CAE9A7EAE9B82AF9C88B3A295C0B1AAC4B6
+          B3CBBEBC9F979D5C7EA23687C52E8BD167A3D3C7D8E5C8D0D4C8D0D4C8D0D4C8
+          D0D4C8D0D4C8D0D4C8B9B1AA8D79C9AE84EFDFA5FDF7B9FEFCC3FEFECBFEFED3
+          F5F3D2C4B6A5917773947B7BA89494A4A0A7709BC17AACD4C9DCE9C8D0D4C8D0
+          D4C8D0D4C8D0D4C8D0D4C8D0D4C6B8B3AB886EE4C78EFAEAA9FCF0B1FDF7B9FE
+          FCC4FEFECFFEFED9FEFEE2FBFBE7E5DDD1927976917777CCC0BDC8D0D4C8D0D4
+          C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4937163E5C388FAE2A1FAE6
+          A4FCECACFDF7BAFEFDC7FEFED2FEFEDCFEFEE6FEFEF0FEFEF7E4DDD4876B69D0
+          C5C1C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4AA9794CBA173
+          F2D394F9DB99FADF9DFCEBAAFDF7BAFEFDC7FEFED2FEFEDCFEFEE6FEFEF0FEFE
+          F7FEFEF2AC9992D1C6C1C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8
+          D0D4937369EBC183F8DA98F8D492FADF9DFCEDAFFDF7BCFEFDC6FEFECEFEFED8
+          FEFEE1FEFEE9FEFEECFEFEEAE1DAC5BCADA6E5DFDAC8D0D4C8D0D4C8D0D4C8D0
+          D4C8D0D4C8D0D4C8D0D49F725CF0C988F8D996FAE1A0FBE9AAFCEDB0FDF5BDFE
+          FCCEFEFED5FEFED3FEFEDAFEFEDFFEFEE2FEFEE1FAF9D8B3A298DED6D2C8D0D4
+          C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4B17C5CF1C888F8D996F9DE9CF9E2
+          A1FAE7AAFBEEB3FDF7C0FEFDD1FEFED7FEFED2FEFED6FEFED8FEFED7FEFED4B6
+          A498DED7D2C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4AC7C61F0C585
+          F8D895FAE6A4FBF0B7FCF5CBFCF5CDFCF5C2FDF8C4FEFDD3FEFEC9FEFECCFEFE
+          CEFEFECDFEFECBBAA99BE0D9D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8
+          D0D4A78374EFC07FF7D490FBE9A8FDF9C2FEFEDAFDFCE1FCF4C9FCF0B7FDFACA
+          FDFABDFEFCC2FEFCC3FEFDC5F3EFBAC3B5A7E6E0DBC8D0D4C8D0D4C8D0D4C8D0
+          D4C8D0D4C8D0D4C8D0D4B6A19AE4B27AF5CB89FAE2A2FCF5BAFDFCCEFEFED9FC
+          F4C6FBEDB1FDF7BFFCF0AFFDF3B4FDF6B7FDF9BCDCCEA4D5CABEC8D0D4C8D0D4
+          C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4D8CFCBCFA481EFBE80F8D794FBEA
+          AAFCF5BAFDF9C2FCF3BAFBECADFBECADFAE2A1FBE9A7FCEFAFF5E8ADC9B59DE6
+          DFD7C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4CAB2A4
+          DFAE7EF2C584F8D895FAE4A3FBEAAAFBEAAAFAE4A3F8DC9AF8DC9BFAE3A2F9E5
+          A6DCC69DD1C3B8C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8
+          D0D4C8D0D4E8E2DECFB19EE1B282EFC184F5CE8CF8D693F8D997F8D896F8D795
+          F7DB9AF2D79CE7CB9BCBB9ABC8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0
+          D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4EAE5E0D4BDAEDAB28FE8B984EFC387F1
+          CA8DF1CC8FF0CB90ECC891DCBD9CCEC0BAC8D0D4C8D0D4C8D0D4C8D0D4C8D0D4
+          C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4DED7
+          D4CDB8AFCCAA96D2A88AD2AA8CC9AFA0CDBFB9C8D0D4C8D0D4C8D0D4C8D0D4C8
+          D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4}
+        ParentFont = False
+        OnClick = SpeedButton2Click
+      end
+      object EditPesqu: TMaskEdit
+        Left = 6
+        Top = 10
+        Width = 483
+        Height = 25
+        TabOrder = 0
+        Text = ''
+      end
+    end
+    object PanelComplete: TPanel
+      Left = 1
+      Top = 361
+      Width = 792
+      Height = 46
+      Align = alTop
+      BevelOuter = bvNone
+      Color = 14155775
+      ParentBackground = False
+      TabOrder = 8
+      Visible = False
+      object Alert: TPanel
+        Left = 10
+        Top = 8
+        Width = 830
+        Height = 54
+        BevelOuter = bvNone
+        Color = 14155775
+        ParentBackground = False
+        TabOrder = 0
+        Visible = False
+        object Label3: TLabel
+          Left = 149
+          Top = 7
+          Width = 37
+          Height = 13
+          Caption = 'Label3'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clRed
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object Label30: TLabel
+          Left = 9
+          Top = 7
+          Width = 134
+          Height = 13
+          Caption = 'Registros  encontrados:'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = 12615680
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object PanelMaximizar: TPanel
+          Left = 214
+          Top = 0
+          Width = 341
+          Height = 33
+          BevelOuter = bvNone
+          Ctl3D = True
+          ParentCtl3D = False
+          TabOrder = 0
+          Visible = False
+          object Label5: TLabel
+            Left = 0
+            Top = 8
+            Width = 188
+            Height = 13
+            Caption = 'Clique neste bot'#227'o para Maximizar --->'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentFont = False
+          end
+          object SpeedButton5: TSpeedButton
+            Left = 194
+            Top = 4
+            Width = 31
+            Height = 22
+            Caption = '...'
+            OnClick = SpeedButton5Click
+          end
+        end
+      end
+    end
+  end
+  object Panel9: TPanel
+    Left = 0
+    Top = 466
+    Width = 794
+    Height = 195
+    Align = alClient
+    TabOrder = 4
+    object DBGrid1: TDBGrid
+      Left = 1
+      Top = 1
+      Width = 792
+      Height = 193
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
+      Align = alClient
+      Color = clWhite
+      DataSource = Dtsrc
+      DrawingStyle = gdsGradient
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -173
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgCancelOnExit]
+      ParentFont = False
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'Tahoma'
+      TitleFont.Style = []
+      OnCellClick = DBGrid1CellClick
+      OnDrawColumnCell = DBGrid1DrawColumnCell
+      Columns = <
+        item
+          Alignment = taCenter
+          Expanded = False
+          FieldName = 'ID'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -20
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Title.Caption = 'C'#243'digo'
+          Width = 78
+          Visible = True
+        end
+        item
+          Alignment = taCenter
+          Expanded = False
+          FieldName = 'DESCRICAO'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Title.Caption = 'Descri'#231#227'o'
+          Width = 590
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'TITULO'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Title.Caption = 'T'#237'tulo'
+          Width = 405
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOME_ARQUIVO'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Title.Caption = 'Nome do Arquivo'
+          Width = 269
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'DATA'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Title.Caption = 'Data do Registro'
+          Width = 98
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOME'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          Title.Caption = 'Nome do  Autor'
+          Width = 266
+          Visible = True
+        end>
     end
   end
   object Dtsrc: TDataSource

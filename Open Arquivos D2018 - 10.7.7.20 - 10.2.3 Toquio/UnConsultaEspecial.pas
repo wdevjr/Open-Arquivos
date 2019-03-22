@@ -16,7 +16,6 @@ uses
 type
   TFrmView = class(TForm)
     Dtsrc: TDataSource;
-    DBGrid1: TDBGrid;
     Dtscru: TDataSource;
     Dtscra: TDataSource;
     DtsrcCod: TDataSource;
@@ -31,16 +30,8 @@ type
     BitBtn1: TBitBtn;
     BitBtn2: TBitBtn;
     SpeedButton4: TSpeedButton;
-    PanelComplete: TPanel;
-    Alert: TPanel;
-    Label3: TLabel;
-    Label30: TLabel;
-    PanelMaximizar: TPanel;
-    Label5: TLabel;
     Panel2: TPanel;
     RadioGroup1: TRadioGroup;
-    SpeedButton2: TSpeedButton;
-    EditPesqu: TMaskEdit;
     Panel17: TPanel;
     SpeedButton8: TSpeedButton;
     Label13: TLabel;
@@ -81,8 +72,19 @@ type
     SpeedButton12: TSpeedButton;
     SpeedButton13: TSpeedButton;
     SpeedButton14: TSpeedButton;
-    SpeedButton5: TSpeedButton;
     SpeedButton15: TSpeedButton;
+    Panel5: TPanel;
+    EditPesqu: TMaskEdit;
+    SpeedButton2: TSpeedButton;
+    PanelComplete: TPanel;
+    Alert: TPanel;
+    Label3: TLabel;
+    Label30: TLabel;
+    PanelMaximizar: TPanel;
+    Label5: TLabel;
+    SpeedButton5: TSpeedButton;
+    Panel9: TPanel;
+    DBGrid1: TDBGrid;
     procedure SpeedButton8Click(Sender: TObject);
     procedure SpeedButton7Click(Sender: TObject);
     procedure SpeedButton6Click(Sender: TObject);
@@ -353,10 +355,14 @@ begin
   begin
     Panel4.Visible := False;
     Panel8.Visible := True;
+    Panel2.Height:=365;
+    FrmView.Height:=716;
   end else
       begin
         Panel4.Visible := True;
         Panel8.Visible := False;
+        Panel2.Height:=365;
+         FrmView.Height:=716;
       end;
   CodigoUser := '';
   CodigoUserPorNome := '';
