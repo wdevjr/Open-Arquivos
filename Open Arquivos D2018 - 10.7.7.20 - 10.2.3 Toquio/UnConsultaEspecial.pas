@@ -766,6 +766,7 @@ begin
               IntToStr(FrmLogin.COD_USUARIO) + ' order by AQ.ID ';
             if PanelMostrData.Visible = True then
             begin
+             DM.sds_view.Close;
              DM.sds_view.Params.Clear;
              DM.sds_view.DataSet.Params.Clear;
               Inicial := DateToStr(DateTimePicker1.Date);
@@ -839,6 +840,7 @@ begin
             ' order by AQ.TITULO';
           if PanelMostrData.Visible = True then
           begin
+            DM.sds_view.Close;
             DM.sds_view.Params.Clear;
             DM.sds_view.DataSet.Params.Clear;
             Inicial := DateToStr(DateTimePicker1.Date);
@@ -999,6 +1001,7 @@ begin
             ' order by AQ.NOME_ARQUIVO';
           if PanelMostrData.Visible = True then
           begin
+            DM.sds_view.Close;
             DM.sds_view.Params.Clear;
             DM.sds_view.DataSet.Params.Clear;
             Inicial := DateToStr(DateTimePicker1.Date);
@@ -1101,6 +1104,7 @@ begin
           if PanelMostrData.Visible = True then
           begin
             //try
+            DM.sds_view.Close;
             DM.sds_view.Params.Clear;
             DM.sds_view.DataSet.Params.Clear;
             Inicial := DateToStr(DateTimePicker1.Date);
@@ -1198,6 +1202,7 @@ begin
               IntToStr(FrmLogin.COD_USUARIO) + ' order by AQ.ID ';
             if PanelMostrData.Visible = True then
           begin
+            DM.sds_view.Close;
             DM.sds_view.Params.Clear;
             DM.sds_view.DataSet.Params.Clear;
             Inicial := DateToStr(DateTimePicker1.Date);
@@ -1269,13 +1274,14 @@ begin
             ' order by AQ.TITULO';
          if PanelMostrData.Visible = True then
           begin
+            DM.sds_view.CLOSE;
             DM.sds_view.Params.Clear;
             DM.sds_view.DataSet.Params.Clear;
             Inicial := DateToStr(DateTimePicker1.Date);
             // FormatDateTime('yyyy-MM-dd', );
             Finall := DateToStr(DateTimePicker2.Date);
             // FormatDateTime('yyyy-MM-dd', DateTimePicker2.Date);
-            DM.sds_view.CLOSE;
+
             DM.sds_view.DataSet.CommandText := '';
             DM.sds_view.DataSet.CommandText :=
               'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO, AQ.DATA,T.NOME from ARQUIVOLIST AQ'
