@@ -1730,6 +1730,8 @@ begin
   begin
     DM.cds_arquivoCOD_AUTOR.Value := 0;
     DM.cds_arquivoNOME.Value := '';
+    PanelAutor.Visible:=false;
+    CheckBox1.Checked:=false;
   end;
 end;
 

@@ -2,8 +2,8 @@ object FrmArquProc: TFrmArquProc
   Left = 0
   Top = 0
   Caption = 'Localizar Arquivo ...'
-  ClientHeight = 434
-  ClientWidth = 816
+  ClientHeight = 552
+  ClientWidth = 879
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,8 +19,8 @@ object FrmArquProc: TFrmArquProc
   object DBGrid1: TDBGrid
     Left = 0
     Top = 89
-    Width = 816
-    Height = 278
+    Width = 879
+    Height = 396
     Align = alClient
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
@@ -102,13 +102,16 @@ object FrmArquProc: TFrmArquProc
   end
   object Panel1: TPanel
     Left = 0
-    Top = 367
-    Width = 816
+    Top = 485
+    Width = 879
     Height = 48
     Align = alBottom
+    Color = 14083559
+    ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 435
     object Panel3: TPanel
-      Left = 539
+      Left = 602
       Top = 1
       Width = 276
       Height = 46
@@ -209,9 +212,11 @@ object FrmArquProc: TFrmArquProc
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 816
+    Width = 879
     Height = 89
     Align = alTop
+    Color = 14083559
+    ParentBackground = False
     TabOrder = 2
     object Label1: TLabel
       Left = 80
@@ -239,7 +244,7 @@ object FrmArquProc: TFrmArquProc
       OnKeyPress = EditProc1KeyPress
     end
     object Panel4: TPanel
-      Left = 675
+      Left = 738
       Top = 1
       Width = 140
       Height = 87
@@ -400,8 +405,8 @@ object FrmArquProc: TFrmArquProc
   end
   object StsBr: TStatusBar
     Left = 0
-    Top = 415
-    Width = 816
+    Top = 533
+    Width = 879
     Height = 19
     Panels = <
       item
@@ -413,6 +418,7 @@ object FrmArquProc: TFrmArquProc
         Width = 50
       end>
     OnDrawPanel = StsBrDrawPanel
+    ExplicitTop = 483
   end
   object Dtsrc: TDataSource
     DataSet = DM.sds_Arqu
