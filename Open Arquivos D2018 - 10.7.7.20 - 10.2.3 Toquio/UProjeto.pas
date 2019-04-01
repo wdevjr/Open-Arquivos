@@ -906,6 +906,7 @@ end;
 
 procedure TFrPrincipal.ToolButton11Click(Sender: TObject);
 begin
+try
   if (MessageDlg('Deseja Sair do Sistema ?', mtConfirmation, [mbYes, mbNo], 0)
     = mrYes) then
   BEGIN
@@ -917,7 +918,7 @@ begin
       finally
         DM.DtsrcExcLogados.DataSet.Delete;
         (DM.DtsrcExcLogados.DataSet as TClientDataSet).ApplyUpdates(0);
-        Application.Terminate;
+
       end;
     Except
       on E: Exception do
@@ -927,7 +928,23 @@ begin
         // Application.Terminate;
       end;
     end;
+    // DM.cds_ExcRepetidos.Close;
+    // DM.cds_Arquivo.Close;
+    // Timer1.Enabled := false;
+    // DM.sds_cont.Close;
+     Application.Terminate;
   END;
+
+Except
+      on E: Exception do
+      begin
+          Application.Terminate;
+      end;
+
+
+end;
+
+
 end;
 
 procedure TFrPrincipal.btntrazerClick(Sender: TObject);

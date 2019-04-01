@@ -2,7 +2,7 @@ object FrPrincipal: TFrPrincipal
   Left = 298
   Top = 144
   BorderStyle = bsSingle
-  Caption = 'Open Arquivos - v 7.9.9.40 - Uso em Rede'
+  Caption = 'Open Arquivos - v 8.0  - Uso em Rede'
   ClientHeight = 557
   ClientWidth = 844
   Color = 14083559

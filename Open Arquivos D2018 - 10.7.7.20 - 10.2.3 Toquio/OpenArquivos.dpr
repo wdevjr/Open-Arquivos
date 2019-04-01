@@ -63,9 +63,9 @@ begin
 
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TFrmLogin, FrmLogin);
   Application.CreateForm(TDM, DM);
   Application.CreateForm(TDMII, DMII);
+  Application.CreateForm(TFrmLogin, FrmLogin);
   Application.CreateForm(TFrPrincipal, FrPrincipal);
   Application.CreateForm(TFrmThemas, FrmThemas);
   Application.CreateForm(TAboutBox, AboutBox);
