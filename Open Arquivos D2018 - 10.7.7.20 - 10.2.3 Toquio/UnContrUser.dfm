@@ -3,8 +3,8 @@ object FrmContrUser: TFrmContrUser
   Top = 154
   BorderIcons = []
   Caption = 'Controle de Usu'#225'rios'
-  ClientHeight = 566
-  ClientWidth = 670
+  ClientHeight = 621
+  ClientWidth = 765
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,7 +19,7 @@ object FrmContrUser: TFrmContrUser
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 670
+    Width = 765
     Height = 86
     Margins.Left = 4
     Margins.Top = 4
@@ -29,6 +29,7 @@ object FrmContrUser: TFrmContrUser
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 670
     object Label8: TLabel
       Left = 81
       Top = 22
@@ -332,7 +333,7 @@ object FrmContrUser: TFrmContrUser
       TabOrder = 0
     end
     object Panel3: TPanel
-      Left = 408
+      Left = 503
       Top = 1
       Width = 261
       Height = 84
@@ -345,6 +346,7 @@ object FrmContrUser: TFrmContrUser
       Color = clWhite
       ParentBackground = False
       TabOrder = 1
+      ExplicitLeft = 408
       object Image2: TImage
         Left = 186
         Top = 6
@@ -597,8 +599,8 @@ object FrmContrUser: TFrmContrUser
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 547
-    Width = 670
+    Top = 602
+    Width = 765
     Height = 19
     Margins.Left = 4
     Margins.Top = 4
@@ -617,68 +619,28 @@ object FrmContrUser: TFrmContrUser
         Style = psOwnerDraw
         Width = 50
       end>
+    ExplicitTop = 547
+    ExplicitWidth = 670
   end
-  object ListView1: TListView
+  object Panel6MenuPrinc: TPanel
     Left = 0
-    Top = 443
-    Width = 670
-    Height = 104
-    Margins.Left = 4
-    Margins.Top = 4
-    Margins.Right = 4
-    Margins.Bottom = 4
-    Align = alBottom
-    Columns = <
-      item
-        AutoSize = True
-        Caption = 'Login'
-      end
-      item
-        AutoSize = True
-        Caption = 'Nome'
-      end
-      item
-        Alignment = taCenter
-        AutoSize = True
-        Caption = 'Administrador'
-      end
-      item
-        Alignment = taCenter
-        AutoSize = True
-        Caption = 'Visualizar Todos Arquivos'
-      end
-      item
-        AutoSize = True
-        Caption = 'Nome Apelido'
-      end>
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    ReadOnly = True
-    RowSelect = True
-    ParentFont = False
-    SmallImages = ImageList1
-    TabOrder = 2
-    ViewStyle = vsReport
-    OnCustomDrawItem = ListView1CustomDrawItem
-  end
-  object Panel6: TPanel
-    Left = -1
-    Top = 394
-    Width = 670
+    Top = 401
+    Width = 765
     Height = 51
     Margins.Left = 4
     Margins.Top = 4
     Margins.Right = 4
     Margins.Bottom = 4
+    Align = alTop
     BevelInner = bvLowered
     BevelKind = bkFlat
     BevelOuter = bvNone
     Color = clWhite
     ParentBackground = False
-    TabOrder = 3
+    TabOrder = 2
+    ExplicitLeft = -1
+    ExplicitTop = 394
+    ExplicitWidth = 670
     object inserir: TSpeedButton
       Left = 6
       Top = 3
@@ -1060,7 +1022,7 @@ object FrmContrUser: TFrmContrUser
       OnClick = trazerjClick
     end
     object SpeedButton1: TSpeedButton
-      Left = 592
+      Left = 687
       Top = 1
       Width = 73
       Height = 45
@@ -1130,7 +1092,6 @@ object FrmContrUser: TFrmContrUser
       NumGlyphs = 2
       ParentFont = False
       OnClick = SpeedButton1Click
-      ExplicitLeft = 687
       ExplicitTop = 2
       ExplicitHeight = 53
     end
@@ -1234,13 +1195,14 @@ object FrmContrUser: TFrmContrUser
   object PageControl1: TPageControl
     Left = 0
     Top = 86
-    Width = 670
+    Width = 765
     Height = 315
     Margins.Left = 4
     Margins.Top = 4
     Margins.Right = 4
     Margins.Bottom = 4
     ActivePage = TabSheet1
+    Align = alTop
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -1248,7 +1210,8 @@ object FrmContrUser: TFrmContrUser
     Font.Style = []
     Images = ImageList1
     ParentFont = False
-    TabOrder = 4
+    TabOrder = 3
+    ExplicitWidth = 670
     object TabSheet1: TTabSheet
       HelpType = htKeyword
       Margins.Left = 4
@@ -1263,20 +1226,23 @@ object FrmContrUser: TFrmContrUser
       Font.Style = [fsBold]
       ImageIndex = 1
       ParentFont = False
+      ExplicitWidth = 645
       object Panel10: TPanel
         Left = 0
         Top = 0
-        Width = 662
-        Height = 289
+        Width = 757
+        Height = 286
         Margins.Left = 4
         Margins.Top = 4
         Margins.Right = 4
         Margins.Bottom = 4
-        Align = alTop
+        Align = alClient
         BevelOuter = bvNone
         Color = 14083559
         ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 633
+        ExplicitHeight = 289
         object Label1: TLabel
           Left = 10
           Top = 41
@@ -1864,11 +1830,73 @@ object FrmContrUser: TFrmContrUser
       end
     end
   end
+  object Panel2: TPanel
+    Left = 0
+    Top = 452
+    Width = 765
+    Height = 150
+    Align = alClient
+    BevelOuter = bvNone
+    TabOrder = 4
+    ExplicitLeft = 4
+    ExplicitWidth = 368
+    ExplicitHeight = 81
+    object ListView1: TListView
+      Left = 0
+      Top = 0
+      Width = 765
+      Height = 150
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
+      Align = alClient
+      Columns = <
+        item
+          AutoSize = True
+          Caption = 'Login'
+        end
+        item
+          AutoSize = True
+          Caption = 'Nome'
+        end
+        item
+          Alignment = taCenter
+          AutoSize = True
+          Caption = 'Administrador'
+        end
+        item
+          Alignment = taCenter
+          AutoSize = True
+          Caption = 'Visualizar Todos Arquivos'
+        end
+        item
+          AutoSize = True
+          Caption = 'Nome Apelido'
+        end>
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ReadOnly = True
+      RowSelect = True
+      ParentFont = False
+      SmallImages = ImageList1
+      TabOrder = 0
+      ViewStyle = vsReport
+      OnCustomDrawItem = ListView1CustomDrawItem
+      ExplicitLeft = -7
+      ExplicitTop = 17
+      ExplicitWidth = 670
+      ExplicitHeight = 104
+    end
+  end
   object ImageList1: TImageList
     Left = 352
     Top = 8
     Bitmap = {
-      494C010103000400B00010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010103000400B40010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000001000000001002000000000000010
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

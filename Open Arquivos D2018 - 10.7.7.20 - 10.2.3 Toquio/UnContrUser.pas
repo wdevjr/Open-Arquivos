@@ -22,8 +22,7 @@ type
     Image1: TImage;
     Dtscu: TDataSource;
     Panel4: TPanel;
-    ListView1: TListView;
-    Panel6: TPanel;
+    Panel6MenuPrinc: TPanel;
     inserir: TSpeedButton;
     gravar: TSpeedButton;
     excluir: TSpeedButton;
@@ -43,6 +42,7 @@ type
     DBText2: TDBText;
     DBEdit1: TDBEdit;
     DBEdit2: TDBEdit;
+    DBCheckBox2: TDBCheckBox;
     DBCheckBox3: TDBCheckBox;
     DBEdit3: TDBEdit;
     Label6: TLabel;
@@ -57,7 +57,8 @@ type
     Image2: TImage;
     Label9: TLabel;
     SpeedButton2: TSpeedButton;
-    DBCheckBox2: TDBCheckBox;
+    Panel2: TPanel;
+    ListView1: TListView;
     procedure spPesquClick(Sender: TObject);
     procedure spPerfilClick(Sender: TObject);
     procedure editarClick(Sender: TObject);
