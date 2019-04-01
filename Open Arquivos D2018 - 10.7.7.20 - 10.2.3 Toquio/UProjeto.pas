@@ -156,7 +156,6 @@ type
     fundobtn: TSpeedButton;
     SpeedButton1: TSpeedButton;
     SpeedButton2: TSpeedButton;
-    SpeedButton3: TSpeedButton;
     procedure relatoriosClick(Sender: TObject);
     procedure N1Click(Sender: TObject);
     procedure cbCadLogAssistenteExecute(Sender: TObject);
@@ -928,10 +927,7 @@ try
         // Application.Terminate;
       end;
     end;
-    // DM.cds_ExcRepetidos.Close;
-    // DM.cds_Arquivo.Close;
-    // Timer1.Enabled := false;
-    // DM.sds_cont.Close;
+
      Application.Terminate;
   END;
 

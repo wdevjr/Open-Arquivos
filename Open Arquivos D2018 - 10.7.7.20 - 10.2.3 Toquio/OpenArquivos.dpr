@@ -55,9 +55,9 @@ begin
 
   Application.MainFormOnTaskbar := True;
   Application.Initialize;
-  //Abertura := TAbertura.Create(Application);
-  //Abertura.Show;
-  //Abertura.Refresh;
+  Abertura := TAbertura.Create(Application);
+  Abertura.Show;
+  Abertura.Refresh;
 
 
 
@@ -66,43 +66,6 @@ begin
   Application.CreateForm(TDM, DM);
   Application.CreateForm(TDMII, DMII);
   Application.CreateForm(TFrmLogin, FrmLogin);
-  Application.CreateForm(TFrPrincipal, FrPrincipal);
-  Application.CreateForm(TFrmThemas, FrmThemas);
-  Application.CreateForm(TAboutBox, AboutBox);
-  Application.CreateForm(TfrmGrid, frmGrid);
-  Application.CreateForm(TFrmLocalizarUser, FrmLocalizarUser);
-  Application.CreateForm(TFrmCadAssuntos, FrmCadAssuntos);
-  Application.CreateForm(TFrmCadAutor, FrmCadAutor);
-  Application.CreateForm(TFrmCadCidades, FrmCadCidades);
-  Application.CreateForm(TFrmCadDepartamento, FrmCadDepartamento);
-  Application.CreateForm(TFrmCadLogDet, FrmCadLogDet);
-  Application.CreateForm(TFrmCadPerfil, FrmCadPerfil);
-  Application.CreateForm(TFrmConfigArqu, FrmConfigArqu);
-  Application.CreateForm(TFrmView, FrmView);
-  Application.CreateForm(TFrmviewMax, FrmviewMax);
-  Application.CreateForm(TFrmContrUser, FrmContrUser);
-  Application.CreateForm(TFrmDlgProcuraCidades, FrmDlgProcuraCidades);
-  Application.CreateForm(TFrmLocalizaAssunto, FrmLocalizaAssunto);
-  Application.CreateForm(TFrmLocalizarAutor, FrmLocalizarAutor);
-  Application.CreateForm(TFrmDlgProcurarCidDep, FrmDlgProcurarCidDep);
-  Application.CreateForm(TFrmDlgProcuraDepartamento, FrmDlgProcuraDepartamento);
-  Application.CreateForm(TFrmDlgProcuraPerfil, FrmDlgProcuraPerfil);
-  Application.CreateForm(TFrmDlgProcuraPerfiProc_I, FrmDlgProcuraPerfiProc_I);
-  Application.CreateForm(TFrmGridAba, FrmGridAba);
-  Application.CreateForm(TFrmLocalizarUserCod, FrmLocalizarUserCod);
-  Application.CreateForm(TFrmMatencao, FrmMatencao);
-  Application.CreateForm(TFrmProcedimento, FrmProcedimento);
-  Application.CreateForm(TfrmSplash, frmSplash);
-  Application.CreateForm(TFrmStatus, FrmStatus);
-  Application.CreateForm(TFrmRelatoriosGerais, FrmRelatoriosGerais);
-  Application.CreateForm(TFrmLogAcesso, FrmLogAcesso);
-  Application.CreateForm(TfrmIncluir, frmIncluir);
-  Application.CreateForm(TFrmArquProc, FrmArquProc);
-  Application.CreateForm(TFrmAtribuiUser, FrmAtribuiUser);
-  Application.CreateForm(TFrmFrontColor, FrmFrontColor);
-  Application.CreateForm(TFrmTelaTexto, FrmTelaTexto);
-  Application.CreateForm(TMainForm, MainForm);
-  Application.CreateForm(TAbertura, Abertura);
   Application.Run;
 
 end.

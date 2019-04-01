@@ -257,7 +257,7 @@ begin
   //Abertura.Show;
   //Abertura.Refresh;
   Edtusuario.Items := DM.PreencheCombo;
- // DM.Gauge;
+  DM.Gauge;
   // auxRegistro := TRegIniFile.Create('\');
   // auxRegistro.rootKey := HKEY_LOCAL_MACHINE;
   // auxRota := '\Software\Classes\Config';
@@ -285,7 +285,7 @@ begin
   // mtWarning, [mbOK], 0);
   // Application.Terminate;
   // end;
-
+    Abertura.Free;
   //Abertura.Close;
 end;
 
