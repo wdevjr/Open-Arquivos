@@ -905,7 +905,7 @@ end;
 
 procedure TFrPrincipal.ToolButton11Click(Sender: TObject);
 begin
-try
+
   if (MessageDlg('Deseja Sair do Sistema ?', mtConfirmation, [mbYes, mbNo], 0)
     = mrYes) then
   BEGIN
@@ -930,16 +930,6 @@ try
 
      Application.Terminate;
   END;
-
-Except
-      on E: Exception do
-      begin
-          Application.Terminate;
-      end;
-
-
-end;
-
 
 end;
 
