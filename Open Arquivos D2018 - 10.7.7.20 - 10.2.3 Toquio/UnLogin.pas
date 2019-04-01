@@ -157,6 +157,7 @@ begin
       FrPrincipal := TFrPrincipal.Create(Application);
     FrPrincipal.Show;
     FrPrincipal.Visible := true;
+
     // thema := TStyleManager.Create();
     // thema.SetStyle(THEMA_ATUAL);
     // FrPrincipal := TFrPrincipal.Create(Application);
@@ -252,8 +253,11 @@ procedure TFrmLogin.FormShow(Sender: TObject);
 var
   i, cont, ForGlobal: Longint;
 begin
+  //Abertura := TAbertura.Create(Application);
+  //Abertura.Show;
+  //Abertura.Refresh;
   Edtusuario.Items := DM.PreencheCombo;
-  DM.Gauge;
+ // DM.Gauge;
   // auxRegistro := TRegIniFile.Create('\');
   // auxRegistro.rootKey := HKEY_LOCAL_MACHINE;
   // auxRota := '\Software\Classes\Config';
@@ -281,7 +285,8 @@ begin
   // mtWarning, [mbOK], 0);
   // Application.Terminate;
   // end;
-  Abertura.Free;
+
+  //Abertura.Close;
 end;
 
 end.

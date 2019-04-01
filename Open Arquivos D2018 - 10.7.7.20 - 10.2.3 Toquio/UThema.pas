@@ -36,24 +36,32 @@ implementation
 
 {$R *.dfm}
 
-uses UDM, UProjeto, UnContrUser;
+uses UDM, UProjeto, UnContrUser, UnLogin;
 
 procedure TFrmThemas.aplicarClick(Sender: TObject);
 var
   thema: TStyleManager;
 begin
+ try
   // ok.Enabled:=true;
   cancela.Enabled := true;
   gravarThema.Enabled := true;
   thema := TStyleManager.Create();
   thema.SetStyle(ListBox1.Items[ListBox1.ItemIndex]);
-  if (FrmContrUser.Dtscu.DataSet.State = dsEdit) or
-    (FrmContrUser.Dtscu.DataSet.State = dsInsert) or
-    (FrmContrUser.Dtscu.DataSet.State = dsBrowse) then
-  begin
+  FrmLogin.Visible := false;
+  //if (FrmContrUser.Dtscu.DataSet.State = dsEdit) or
+  //  (FrmContrUser.Dtscu.DataSet.State = dsInsert) or
+  //  (FrmContrUser.Dtscu.DataSet.State = dsBrowse) then
+  //begin
     // DM.cds_User.Edit;
     // DM.cds_UserTHEMA.AsString := ListBox1.Items[ListBox1.ItemIndex];
+  //end;
+  Except
+  on E: Exception do
+  begin
+
   end;
+ end;
 end;
 
 procedure TFrmThemas.cancelaClick(Sender: TObject);

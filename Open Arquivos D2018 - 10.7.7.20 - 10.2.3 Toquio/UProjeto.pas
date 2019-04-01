@@ -156,6 +156,7 @@ type
     fundobtn: TSpeedButton;
     SpeedButton1: TSpeedButton;
     SpeedButton2: TSpeedButton;
+    SpeedButton3: TSpeedButton;
     procedure relatoriosClick(Sender: TObject);
     procedure N1Click(Sender: TObject);
     procedure cbCadLogAssistenteExecute(Sender: TObject);
@@ -217,6 +218,7 @@ type
     procedure fundobtnClick(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
     procedure SpeedButton2Click(Sender: TObject);
+    procedure SpeedButton3Click(Sender: TObject);
     // para a chamada de status do componente
   private
     buffer: array [0 .. 255] of Char;
@@ -251,7 +253,7 @@ uses UDMII, ShellAPI, UnAbertura, UnLogin, UnCadDepartamento, UnCadCidades,
   UnTeladeRelatorios, UnCadPerfil, UnCadLog, UnConfigArqu, UnUtilitLog,
   UnDlgProcuraAutor, UnCadAutores, UnCadAssuntos, UnDlgProcuraAssunto, UDM,
   UnDlgProcura, UnStatus, MMSystem, UAutoPreench, ABOUT, UnContrUser,
-  UnManutencao, UnConsultaEspecial, UnMensProce, UnNovVersao,
+  UnManutencao, UnConsultaEspecial, UnMensProce, UnNovVersao, UThema,
   UnProcessIndefinido, UnatribuiUsuariosPorArquivos, UnFrontColor, UnViewTextoTelaInicial, remain;
 
 {$R *.dfm}
@@ -827,6 +829,16 @@ FrmTelaTexto := TFrmTelaTexto.Create(nil);
  finally
     FrmTelaTexto.Free;
  end;
+end;
+
+procedure TFrPrincipal.SpeedButton3Click(Sender: TObject);
+begin
+FrmThemas := TFrmThemas.Create(self);
+try
+  FrmThemas.ShowModal;
+finally
+  FrmThemas.Free;
+end;
 end;
 
 procedure TFrPrincipal.SpeedButton4Click(Sender: TObject);
@@ -1780,8 +1792,14 @@ end;
 
 procedure TFrPrincipal.FormActivate(Sender: TObject);
 begin
+
   StatusBar1.Panels[0].Text := Saudacao + ' Hoje é ' +
     formatdatetime('dddddd', Date);
+
+        // FrmLogin.ShowModal;
+
+
+  
 end;
 
 procedure TFrPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -1816,7 +1834,7 @@ begin
   // Height:=590;
   InicializarComponentes;
   IniciaAdministracao;
-  FrmLogin.visible := False;
+
 end;
 
 procedure TFrPrincipal.IniciaAdministracao;
