@@ -63,6 +63,7 @@ begin
 
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
+  TStyleManager.TrySetStyle('Sapphire Kamri');
   Application.CreateForm(TDM, DM);
   Application.CreateForm(TDMII, DMII);
   Application.CreateForm(TFrmLogin, FrmLogin);
