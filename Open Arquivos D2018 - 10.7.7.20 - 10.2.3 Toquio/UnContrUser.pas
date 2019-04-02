@@ -74,6 +74,7 @@ type
     procedure FormShow(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
     procedure DtscuStateChange(Sender: TObject);
+    procedure SpeedButton3Click(Sender: TObject);
   private
     procedure ListarUser;
     procedure ConfigInserir;
@@ -94,7 +95,7 @@ var
 implementation
 
 uses UDM, UDMII, UnLogin, UProjeto, UnCadPerfil,
-  ULocalizarUser, UnDlgProcuraPerfilUser;
+  ULocalizarUser, UnDlgProcuraPerfilUser, UThema;
 
 {$R *.dfm}
 
@@ -485,6 +486,16 @@ begin
   begin
     spPesqu.Enabled := not IsEmpty;
   end;
+end;
+
+procedure TFrmContrUser.SpeedButton3Click(Sender: TObject);
+begin
+FrmThemas := TFrmThemas.Create(self);
+try
+  FrmThemas.ShowModal;
+finally
+  FrmThemas.Free;
+end;
 end;
 
 procedure TFrmContrUser.spPerfilClick(Sender: TObject);

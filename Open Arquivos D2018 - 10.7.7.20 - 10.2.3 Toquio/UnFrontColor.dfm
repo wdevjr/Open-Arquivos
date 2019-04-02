@@ -2,8 +2,8 @@ object FrmFrontColor: TFrmFrontColor
   Left = 0
   Top = 0
   Caption = 'Mudar Cor de Fundo'
-  ClientHeight = 88
-  ClientWidth = 322
+  ClientHeight = 97
+  ClientWidth = 376
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

@@ -157,9 +157,9 @@ begin
       FrPrincipal := TFrPrincipal.Create(Application);
     FrPrincipal.Show;
     FrPrincipal.Visible := true;
-
+   //  try
     // thema := TStyleManager.Create();
-    // thema.SetStyle(THEMA_ATUAL);
+    // thema.TrySetStyle('Sapphire Kamri');
     // FrPrincipal := TFrPrincipal.Create(Application);
     // try
     // FrPrincipal.ShowModal;
@@ -167,6 +167,12 @@ begin
     // finally
     // FrPrincipal.Free;
     // end;
+    {  Except
+     on E: Exception do
+     begin
+
+     end;
+     end; }
 
   end
   else if DM.dst_Login.RecordCount = 0 then

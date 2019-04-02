@@ -41,14 +41,15 @@ uses UDM, UProjeto, UnContrUser, UnLogin;
 procedure TFrmThemas.aplicarClick(Sender: TObject);
 var
   thema: TStyleManager;
+  aparencia:String;
 begin
  try
   // ok.Enabled:=true;
   cancela.Enabled := true;
   gravarThema.Enabled := true;
-  thema := TStyleManager.Create();
-  thema.SetStyle(ListBox1.Items[ListBox1.ItemIndex]);
-  FrmLogin.Visible := false;
+  //thema := TStyleManager.Create();
+  //thema.TrySetStyle(ListBox1.Items[ListBox1.ItemIndex]);
+  //aparencia:= ListBox1.Items[ListBox1.ItemIndex];
   //if (FrmContrUser.Dtscu.DataSet.State = dsEdit) or
   //  (FrmContrUser.Dtscu.DataSet.State = dsInsert) or
   //  (FrmContrUser.Dtscu.DataSet.State = dsBrowse) then

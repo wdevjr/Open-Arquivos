@@ -29,7 +29,6 @@ object FrmContrUser: TFrmContrUser
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 670
     object Label8: TLabel
       Left = 81
       Top = 22
@@ -346,7 +345,6 @@ object FrmContrUser: TFrmContrUser
       Color = clWhite
       ParentBackground = False
       TabOrder = 1
-      ExplicitLeft = 408
       object Image2: TImage
         Left = 186
         Top = 6
@@ -619,8 +617,6 @@ object FrmContrUser: TFrmContrUser
         Style = psOwnerDraw
         Width = 50
       end>
-    ExplicitTop = 547
-    ExplicitWidth = 670
   end
   object Panel6MenuPrinc: TPanel
     Left = 0
@@ -638,9 +634,6 @@ object FrmContrUser: TFrmContrUser
     Color = clWhite
     ParentBackground = False
     TabOrder = 2
-    ExplicitLeft = -1
-    ExplicitTop = 394
-    ExplicitWidth = 670
     object inserir: TSpeedButton
       Left = 6
       Top = 3
@@ -1211,7 +1204,6 @@ object FrmContrUser: TFrmContrUser
     Images = ImageList1
     ParentFont = False
     TabOrder = 3
-    ExplicitWidth = 670
     object TabSheet1: TTabSheet
       HelpType = htKeyword
       Margins.Left = 4
@@ -1226,7 +1218,6 @@ object FrmContrUser: TFrmContrUser
       Font.Style = [fsBold]
       ImageIndex = 1
       ParentFont = False
-      ExplicitWidth = 645
       object Panel10: TPanel
         Left = 0
         Top = 0
@@ -1241,8 +1232,8 @@ object FrmContrUser: TFrmContrUser
         Color = 14083559
         ParentBackground = False
         TabOrder = 0
-        ExplicitWidth = 633
-        ExplicitHeight = 289
+        ExplicitLeft = 3
+        ExplicitTop = 1
         object Label1: TLabel
           Left = 10
           Top = 41
@@ -1384,7 +1375,7 @@ object FrmContrUser: TFrmContrUser
           Layout = tlCenter
         end
         object SpeedButton2: TSpeedButton
-          Left = 474
+          Left = 499
           Top = 59
           Width = 109
           Height = 70
@@ -1393,7 +1384,6 @@ object FrmContrUser: TFrmContrUser
           Margins.Right = 4
           Margins.Bottom = 4
           Caption = 'Usu'#225'rio Atual'
-          Flat = True
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
@@ -1625,7 +1615,7 @@ object FrmContrUser: TFrmContrUser
           Visible = False
         end
         object PanelPerfil: TPanel
-          Left = 4
+          Left = 3
           Top = 232
           Width = 754
           Height = 57
@@ -1838,9 +1828,6 @@ object FrmContrUser: TFrmContrUser
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 4
-    ExplicitLeft = 4
-    ExplicitWidth = 368
-    ExplicitHeight = 81
     object ListView1: TListView
       Left = 0
       Top = 0
@@ -1886,17 +1873,13 @@ object FrmContrUser: TFrmContrUser
       TabOrder = 0
       ViewStyle = vsReport
       OnCustomDrawItem = ListView1CustomDrawItem
-      ExplicitLeft = -7
-      ExplicitTop = 17
-      ExplicitWidth = 670
-      ExplicitHeight = 104
     end
   end
   object ImageList1: TImageList
     Left = 352
     Top = 8
     Bitmap = {
-      494C010103000400B40010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010103000400B80010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000001000000001002000000000000010
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

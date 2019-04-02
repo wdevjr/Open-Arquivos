@@ -217,7 +217,6 @@ type
     procedure fundobtnClick(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
     procedure SpeedButton2Click(Sender: TObject);
-    procedure SpeedButton3Click(Sender: TObject);
     // para a chamada de status do componente
   private
     buffer: array [0 .. 255] of Char;
@@ -830,16 +829,6 @@ FrmTelaTexto := TFrmTelaTexto.Create(nil);
  end;
 end;
 
-procedure TFrPrincipal.SpeedButton3Click(Sender: TObject);
-begin
-FrmThemas := TFrmThemas.Create(self);
-try
-  FrmThemas.ShowModal;
-finally
-  FrmThemas.Free;
-end;
-end;
-
 procedure TFrPrincipal.SpeedButton4Click(Sender: TObject);
 begin
   MostrarEstatistica;
@@ -1157,12 +1146,12 @@ end;
 
 procedure TFrPrincipal.usuariosClick(Sender: TObject);
 begin
-  FrmContrUser := TFrmContrUser.Create(Self);
+ { FrmContrUser := TFrmContrUser.Create(Self);
   try
     FrmContrUser.ShowModal;
   finally
     FrmContrUser.Free;
-  end;
+  end;  }
 end;
 
 procedure TFrPrincipal.autoresClick(Sender: TObject);
