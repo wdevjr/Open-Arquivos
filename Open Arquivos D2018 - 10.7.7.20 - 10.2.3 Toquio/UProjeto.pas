@@ -1146,12 +1146,12 @@ end;
 
 procedure TFrPrincipal.usuariosClick(Sender: TObject);
 begin
- { FrmContrUser := TFrmContrUser.Create(Self);
+  FrmContrUser := TFrmContrUser.Create(Self);
   try
     FrmContrUser.ShowModal;
   finally
     FrmContrUser.Free;
-  end;  }
+  end;
 end;
 
 procedure TFrPrincipal.autoresClick(Sender: TObject);
