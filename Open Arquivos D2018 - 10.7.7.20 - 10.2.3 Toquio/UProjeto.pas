@@ -13,7 +13,7 @@ uses
   Dialogs, ExtCtrls, StdCtrls, ComCtrls, Buttons, Grids, DBGrids, DB, Mask,
   DBCtrls, MidasLib, DBClient, SimpleDS, ExtDlgs, FMTBcd, Provider, SqlExpr,
   ImgList, ToolWin, ActnMan, ActnCtrls, ActnMenus, XPStyleActnCtrls, ActnList,
-  Menus, DateUtils, System.Actions, System.ImageList, Vcl.Themes;
+  Menus, DateUtils, System.Actions, System.ImageList, Vcl.Themes, Vcl.WinXCtrls;
 // adiciona DBCLient para TClientDataSet
 
 type
