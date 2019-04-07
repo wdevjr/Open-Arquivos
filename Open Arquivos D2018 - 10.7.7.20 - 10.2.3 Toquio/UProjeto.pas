@@ -1826,7 +1826,7 @@ begin
   // Height:=590;
   InicializarComponentes;
   IniciaAdministracao;
-
+  FrmLogin.Visible:=false;
 end;
 
 procedure TFrPrincipal.IniciaAdministracao;
