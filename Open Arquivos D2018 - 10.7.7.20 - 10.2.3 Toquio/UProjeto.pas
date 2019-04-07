@@ -984,13 +984,28 @@ begin
     DBText3.Font.Color := clBlue;
     DBText3.visible := True;
     CheckBox1.Checked := True;
-    Height := 615;
+   // Height := 615;
   end
   else if (DM.cds_arquivo.FieldByName('COD_AUTOR').AsInteger = 0) then
   begin
     PanelAutor.visible := False;
     CheckBox1.Checked := False;
-    Height := 615;
+   // Height := 615;
+  end;
+
+    if CheckBox1.Checked = True then
+  begin
+    if DBEdit3.Text > '0' then
+    begin
+      DBEdit3.Font.Color := clBlue;
+    end;
+    PanelAutor.visible := True;
+    Height := 599;
+  end
+  else
+  begin
+    PanelAutor.visible := False;
+    Height := 560;
   end;
 
 
@@ -1827,6 +1842,20 @@ begin
   InicializarComponentes;
   IniciaAdministracao;
   FrmLogin.Visible:=false;
+    if CheckBox1.Checked = True then
+  begin
+    if DBEdit3.Text > '0' then
+    begin
+      DBEdit3.Font.Color := clBlue;
+    end;
+    PanelAutor.visible := True;
+    Height := 599;
+  end
+  else
+  begin
+    PanelAutor.visible := False;
+    Height := 560;
+  end;
 end;
 
 procedure TFrPrincipal.IniciaAdministracao;
