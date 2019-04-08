@@ -1726,7 +1726,20 @@ begin
       ('NOME_ARQUIVO').AsString;
     DtscLog.DataSet.Post;
     (DtscLog.DataSet as TClientDataSet).ApplyUpdates(0);
-    Height := 610;
+        if CheckBox1.Checked = True then
+  begin
+    if DBEdit3.Text > '0' then
+    begin
+      DBEdit3.Font.Color := clBlue;
+    end;
+    PanelAutor.visible := True;
+    Height := 599;
+  end
+  else
+  begin
+    PanelAutor.visible := False;
+    Height := 560;
+  end;
   end;
 end;
 
@@ -1738,6 +1751,20 @@ begin
   begin
     DM.cds_arquivoCOD_ASSUNTO.Value := 0;
     DM.cds_arquivoTITULOASSUN.Value := '';
+  end;
+      if CheckBox1.Checked = True then
+  begin
+    if DBEdit3.Text > '0' then
+    begin
+      DBEdit3.Font.Color := clBlue;
+    end;
+    PanelAutor.visible := True;
+    Height := 599;
+  end
+  else
+  begin
+    PanelAutor.visible := False;
+    Height := 560;
   end;
 end;
 
@@ -1751,6 +1778,20 @@ begin
     DM.cds_arquivoNOME.Value := '';
     PanelAutor.Visible:=false;
     CheckBox1.Checked:=false;
+  end;
+      if CheckBox1.Checked = True then
+  begin
+    if DBEdit3.Text > '0' then
+    begin
+      DBEdit3.Font.Color := clBlue;
+    end;
+    PanelAutor.visible := True;
+    Height := 599;
+  end
+  else
+  begin
+    PanelAutor.visible := False;
+    Height := 560;
   end;
 end;
 
