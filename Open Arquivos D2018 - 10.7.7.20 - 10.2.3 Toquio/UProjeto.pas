@@ -1382,6 +1382,13 @@ begin
     BtnLoc01.Enabled := not IsEmpty;
     BtnLoc02.Enabled := not IsEmpty;
   end;
+     if (FrmLogin.ADMIN = 0) then
+   begin
+     lookUser.Visible := false;
+   end else
+   begin
+     lookUser.Visible := true;
+   end;
   CheckBox1.Checked := False;
   PanelPergunta.visible := True;
   PanelAutor.visible := False;
@@ -1741,6 +1748,14 @@ begin
     Height := 560;
   end;
   end;
+
+     if (FrmLogin.ADMIN = 0) then
+   begin
+     lookUser.Visible := false;
+   end else
+   begin
+     lookUser.Visible := true;
+   end;
 end;
 
 procedure TFrPrincipal.excluiAssuntoClick(Sender: TObject);
@@ -1836,6 +1851,13 @@ begin
     excluiAssunto.Enabled := not IsEmpty;
     excluiAutor.Enabled := not IsEmpty;
   end;
+     if (FrmLogin.ADMIN = 0) then
+   begin
+     lookUser.Visible := false;
+   end else
+   begin
+     lookUser.Visible := true;
+   end;
 end;
 
 procedure TFrPrincipal.FormActivate(Sender: TObject);
@@ -1843,8 +1865,14 @@ begin
 
   StatusBar1.Panels[0].Text := Saudacao + ' Hoje é ' +
     formatdatetime('dddddd', Date);
+   if (FrmLogin.ADMIN = 0) then
+   begin
+     lookUser.Visible := false;
+   end else
+   begin
+     lookUser.Visible := true;
+   end;
 
-        // FrmLogin.ShowModal;
 
 
   
@@ -2224,7 +2252,13 @@ begin
 
     end;
   end;
-
+     if (FrmLogin.ADMIN = 0) then
+   begin
+     lookUser.Visible := false;
+   end else
+   begin
+     lookUser.Visible := true;
+   end;
 end;
 
 end.
