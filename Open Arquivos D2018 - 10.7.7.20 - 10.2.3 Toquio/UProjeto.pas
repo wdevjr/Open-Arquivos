@@ -1382,7 +1382,7 @@ begin
     BtnLoc01.Enabled := not IsEmpty;
     BtnLoc02.Enabled := not IsEmpty;
   end;
-     if (FrmLogin.ADMIN = 0) then
+     if (FrmLogin.TODOS = 0) then
    begin
      lookUser.Visible := false;
    end else
@@ -1749,7 +1749,7 @@ begin
   end;
   end;
 
-     if (FrmLogin.ADMIN = 0) then
+     if (FrmLogin.TODOS = 0) then
    begin
      lookUser.Visible := false;
    end else
@@ -1851,7 +1851,7 @@ begin
     excluiAssunto.Enabled := not IsEmpty;
     excluiAutor.Enabled := not IsEmpty;
   end;
-     if (FrmLogin.ADMIN = 0) then
+     if (FrmLogin.TODOS = 0) then
    begin
      lookUser.Visible := false;
    end else
@@ -2252,7 +2252,7 @@ begin
 
     end;
   end;
-     if (FrmLogin.ADMIN = 0) then
+     if (FrmLogin.TODOS = 0) then
    begin
      lookUser.Visible := false;
    end else
