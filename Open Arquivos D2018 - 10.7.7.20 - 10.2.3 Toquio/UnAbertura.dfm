@@ -1027,13 +1027,13 @@ object Abertura: TAbertura
   object Label1: TLabel
     Left = 182
     Top = 121
-    Width = 245
+    Width = 231
     Height = 27
     Margins.Left = 4
     Margins.Top = 4
     Margins.Right = 4
     Margins.Bottom = 4
-    Caption = 'Open Arquivos - v - 80'
+    Caption = 'Open Arquivos - v8.0'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clGreen
     Font.Height = -22
