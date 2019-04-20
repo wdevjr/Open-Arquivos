@@ -788,7 +788,7 @@ object FrmContrUser: TFrmContrUser
     end
     object excluir: TSpeedButton
       Left = 248
-      Top = 6
+      Top = 3
       Width = 81
       Height = 49
       Margins.Left = 4
@@ -864,7 +864,7 @@ object FrmContrUser: TFrmContrUser
     end
     object cancelar: TSpeedButton
       Left = 324
-      Top = 6
+      Top = 3
       Width = 76
       Height = 43
       Margins.Left = 4
@@ -940,7 +940,7 @@ object FrmContrUser: TFrmContrUser
     end
     object trazerj: TSpeedButton
       Left = 408
-      Top = 12
+      Top = 8
       Width = 71
       Height = 30
       Margins.Left = 4
@@ -1090,7 +1090,7 @@ object FrmContrUser: TFrmContrUser
     end
     object editar: TSpeedButton
       Left = 176
-      Top = 6
+      Top = 3
       Width = 73
       Height = 49
       Margins.Left = 4
@@ -1232,8 +1232,6 @@ object FrmContrUser: TFrmContrUser
         Color = 14083559
         ParentBackground = False
         TabOrder = 0
-        ExplicitLeft = 3
-        ExplicitTop = 1
         object Label1: TLabel
           Left = 10
           Top = 41
@@ -1376,7 +1374,7 @@ object FrmContrUser: TFrmContrUser
         end
         object SpeedButton2: TSpeedButton
           Left = 499
-          Top = 59
+          Top = 68
           Width = 109
           Height = 70
           Margins.Left = 4
@@ -1879,7 +1877,7 @@ object FrmContrUser: TFrmContrUser
     Left = 352
     Top = 8
     Bitmap = {
-      494C010103000400B80010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010103000400BC0010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000001000000001002000000000000010
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

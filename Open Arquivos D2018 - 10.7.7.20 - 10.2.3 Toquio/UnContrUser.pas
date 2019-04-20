@@ -207,7 +207,13 @@ begin
   begin
     excluir.Enabled := not IsEmpty;
   end;
-
+ if (FrmLogin.ADMIN = 0) then
+  begin
+    excluir.Enabled := false;
+  end else
+  begin
+    excluir.Enabled := true;
+  end;
 end;
 
 procedure TFrmContrUser.DtscuStateChange(Sender: TObject);
@@ -255,13 +261,14 @@ begin
   end;
   ConfigInicial;
   checadoUser := DM.receberValor;
-  if (frmlogin.COD_USUARIO = 0) then
+  if (frmlogin.ADMIN = 0) then
   begin
     DBCheckBox1.Visible := False;
     DBCheckBox2.Visible := False;
     DBCheckBox3.Visible := False;
     PanelPerfil.Visible := False;
     DBEdit3.PasswordChar := '*';
+    excluir.Enabled := false;
   end
   else
   begin
@@ -270,6 +277,7 @@ begin
     DBCheckBox3.Visible := True;
     PanelPerfil.Visible := True;
     DBEdit3.PasswordChar := #0;
+    excluir.Enabled:= True;
   end;
   with Dtscu.DataSet do
   begin
@@ -455,6 +463,13 @@ begin
         MB_OK + MB_ICONWARNING);
     end;
   end;
+   if (FrmLogin.ADMIN = 0) then
+  begin
+    excluir.Enabled := false;
+  end else
+  begin
+    excluir.Enabled := true;
+  end;
 end;
 
 procedure TFrmContrUser.inserirClick(Sender: TObject);
@@ -467,6 +482,13 @@ begin
   with DM.cds_User do
   begin
     spPesqu.Enabled := not IsEmpty;
+  end;
+   if (FrmLogin.ADMIN = 0) then
+  begin
+    excluir.Enabled := false;
+  end else
+  begin
+    excluir.Enabled := true;
   end;
 end;
 
@@ -481,6 +503,13 @@ begin
   DM.cds_User.close;
   DM.cds_User.Params[0].AsInteger := DM.receberUsuario;
   DM.cds_User.Open;
+  if (FrmLogin.ADMIN = 0) then
+  begin
+    excluir.Enabled := false;
+  end else
+  begin
+    excluir.Enabled := true;
+  end;
 
   With DM.cds_User do
   begin
@@ -610,6 +639,13 @@ begin
     MessageDlg('Algum campo esta em branco, Preencha-o!', mtWarning, [mbOK], 0);
     Abort;
   end;
+   if (FrmLogin.ADMIN = 0) then
+  begin
+    excluir.Enabled := false;
+  end else
+  begin
+    excluir.Enabled := true;
+  end;
 end;
 
 procedure TFrmContrUser.trazerjClick(Sender: TObject);
@@ -634,6 +670,14 @@ begin
   With DM.cds_User do
   begin
     spPesqu.Enabled := not IsEmpty;
+  end;
+
+   if (FrmLogin.ADMIN = 0) then
+  begin
+    excluir.Enabled := false;
+  end else
+  begin
+    excluir.Enabled := true;
   end;
 end;
 
