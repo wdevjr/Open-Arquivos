@@ -218,6 +218,8 @@ end;
 
 procedure TFrmContrUser.DtscuStateChange(Sender: TObject);
 begin
+ if FrmLogin.ADMIN = 1 then
+  begin
   with Dtscu.DataSet do
   begin
     excluir.Enabled := not IsEmpty;
@@ -230,6 +232,21 @@ begin
 
     // trazerj.Enabled:=Dtscu.State in [dsBrowse,dsInactive];
   end;
+  end else
+      begin
+        with Dtscu.DataSet do
+        begin
+         excluir.Enabled := not IsEmpty;
+         inserir.Enabled := Dtscu.State in [dsBrowse, dsInactive];
+         gravar.Enabled := Dtscu.State in [dsInsert];
+         editar.Enabled := False;
+         cancelar.Enabled := Dtscu.State in [dsInsert, dsEdit];
+         excluir.Enabled := Dtscu.State in [dsBrowse];
+    // trazerj.Enabled:=Dtscu.State in [dsBrowse,dsInactive];
+
+    // trazerj.Enabled:=Dtscu.State in [dsBrowse,dsInactive];
+        end;
+      end;
 end;
 
 procedure TFrmContrUser.excluirClick(Sender: TObject);
