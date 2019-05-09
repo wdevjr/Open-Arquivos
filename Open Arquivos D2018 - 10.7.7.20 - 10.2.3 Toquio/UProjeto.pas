@@ -156,6 +156,8 @@ type
     fundobtn: TSpeedButton;
     SpeedButton1: TSpeedButton;
     SpeedButton2: TSpeedButton;
+    Label9: TLabel;
+    Label14: TLabel;
     procedure relatoriosClick(Sender: TObject);
     procedure N1Click(Sender: TObject);
     procedure cbCadLogAssistenteExecute(Sender: TObject);
@@ -383,8 +385,9 @@ begin
     IntToStr(respAutores);
   ListView1.Items.Add.Caption := 'Logs    :                        ' +
     IntToStr(respLog);
-  ListView1.Items.Add.Caption := 'Logados :                     ' +
-    IntToStr(respLogados);
+    Label14.Caption := IntToStr(respLogados);
+    Label14.Visible := true;
+  //ListView1.Items.Add.Caption := 'Logados :                     ' +IntToStr(respLogados);
 end;
 
 procedure TFrPrincipal.MostrarIcon;

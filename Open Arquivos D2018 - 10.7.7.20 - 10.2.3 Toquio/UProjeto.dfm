@@ -1505,7 +1505,7 @@ object FrPrincipal: TFrPrincipal
     Left = 0
     Top = 284
     Width = 844
-    Height = 188
+    Height = 195
     Align = alTop
     BevelOuter = bvNone
     Color = 14083559
@@ -1578,6 +1578,33 @@ object FrPrincipal: TFrPrincipal
       ParentFont = False
       OnClick = SpeedButton2Click
     end
+    object Label9: TLabel
+      Left = 564
+      Top = 159
+      Width = 123
+      Height = 13
+      Caption = 'Conectados no Momento:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlue
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label14: TLabel
+      Left = 693
+      Top = 159
+      Width = 44
+      Height = 13
+      Caption = 'Label14'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clRed
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      Visible = False
+    end
     object DBMemo1: TDBMemo
       Left = 11
       Top = 136
@@ -1640,7 +1667,7 @@ object FrPrincipal: TFrPrincipal
       Left = 625
       Top = 56
       Width = 188
-      Height = 121
+      Height = 105
       BorderStyle = bsNone
       Color = 14083559
       Columns = <
@@ -1665,7 +1692,7 @@ object FrPrincipal: TFrPrincipal
     Left = 608
     Top = 184
     Bitmap = {
-      494C010112001300480028002800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010112001300680028002800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000A0000000C8000000010020000000000000F4
       0100000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -5801,7 +5828,7 @@ object FrPrincipal: TFrPrincipal
     Left = 676
     Top = 183
     Bitmap = {
-      494C010105000900480010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010105000900680010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000002000000001002000000000000020
       00000000000000000000000000000000000000000000F7F7F700EFEFEF00E7E7
       E700E7E7E700EFEFEF00EFEFEF00F7F7F700FFFFFF00FFFFFF00FFFFFF00FFFF
@@ -6311,7 +6338,7 @@ object FrPrincipal: TFrPrincipal
     Left = 592
     Top = 232
     Bitmap = {
-      494C01010F001300480013001300FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010F001300680013001300FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       00000000000036000000280000004C0000004C0000000100200000000000405A
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -7089,7 +7116,7 @@ object FrPrincipal: TFrPrincipal
   end
   object Timer1: TTimer
     OnTimer = Timer1Timer
-    Left = 568
-    Top = 444
+    Left = 536
+    Top = 236
   end
 end
