@@ -1,0 +1,16 @@
+
+  ...uma explicação de uso do open arquivos:
+  
+   Por exemplo alguém importante vai usar, primeiro deve-se cadastrar o usuário e assinalar como administrador(quando esse for responsavel ou usuário reservado e importante do softer) senão não assinala como "Adiminitrador". Assinalar também visualisar/Extrar.
+   
+   Assinalar "visualisar todos os arquivos", ok? porque isso? porque é com essas configurações que um administrador consegui aplicar quem dos usuários do sistema vai enchergar o arquivo que esta sendo cadastrado já que o administrador tem o poder de enchergar TUDO! e o Usuário NÃO! o usuário só aquilo que os outros ou ele mesmo, cadastra para visualizar.
+   
+   Mais uma vez: quando a pessoa não é administrador ele só vai enchergar os arquivos que outros só os outros é que vão permitir enchergar tal arquivo e ele mesmo.
+   
+   Agora deve-se aplicar politicas de uso porque Todo mundo "não" pode ser "administrador", entendeu? só usuário importante ou responsavel.
+   
+   É por aí .... mas tudo que escrevi agora é muito importante, senão vira uma "Bagunça", já que o softer tem politicas de restrição/uso.
+   
+  warhjr, obrigado por usar o Open Arquivos!
+  
+  
