@@ -138,6 +138,15 @@ begin
             'Mensagem nativa do erro : ' + E.Message, mtError, [mbOK], 0);
         end;
       end;
+      try
+        IncrementaAdd;
+      Except
+        on E: Exception do
+        begin
+          MessageDlg('Erro no procedimento IncrementaAdd !' + #13 +
+            'Mensagem nativa do erro : ' + E.Message, mtError, [mbOK], 0);
+        end;
+      end;
     end
     else if DM.Verifica(COD_USUARIO) = False then
       try
