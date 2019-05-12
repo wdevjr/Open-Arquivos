@@ -1,35 +1,28 @@
 ﻿[Closed Files]
-File_0=TSourceModule,'D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnContrUser.pas',0,1,489,13,491,0,0,,
-File_1=TSourceModule,'D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnCadPerfil.pas',0,1,90,3,101,0,0,,
-File_2=TSourceModule,'D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\remain.pas',0,1,552,32,558,0,0,,
-File_3=TSourceModule,'D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnAbertura.pas',0,1,1,1,1,0,0,,
-File_4=TSourceModule,'D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnViewTextoTelaInicial.pas',0,1,12,3,23,0,0,,
-File_5=TSourceModule,'D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnFrontColor.pas',0,1,1,1,1,0,0,,
-File_6=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnConsultaEspecial.pas',0,1,1112,48,1102,0,0,,
-File_7=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UProjeto.pas',0,1,1,1,1,0,0,,
-File_8=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UThema.pas',0,1,41,1,45,0,0,,
-File_9=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnUtilitLog.pas',0,1,395,60,406,0,0,,
-File_10=TSourceModule,'d:\projetosesistemas\open arquivos d2018 - 10.7.7.20 - 10.2.3 toquio\UnConsultEspMaximized.pas',0,1,34,1,1,0,0,,
-File_11=TSourceModule,'D:\FastReport_5.4.6_Pro_Full\LibD25\frxClass.pas',0,1,2841,1,2854,0,0,,
-File_12=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnThemas.pas',0,1,1,1,1,0,0,,
-File_13=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnConsultaEspecial_old.pas',0,1,19,30,4,0,0,,
-File_14=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.15 - 10.2.3 Toquio\UnConsultaEspecialold.pas',0,1,1,1,1,0,0,,
+File_0=TSourceModule,'D:\ProjetosESistemas_OpenArquivos\Open Arquivos Delphi - 2.2.3 - Tokio -  2019 - V8.0\UnLogin.pas',0,1,1,1,1,0,0,,
+File_1=TSourceModule,'D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnContrUser.pas',0,1,489,13,491,0,0,,
+File_2=TSourceModule,'D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnCadPerfil.pas',0,1,90,3,101,0,0,,
+File_3=TSourceModule,'D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\remain.pas',0,1,552,32,558,0,0,,
+File_4=TSourceModule,'D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnAbertura.pas',0,1,1,1,1,0,0,,
+File_5=TSourceModule,'D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnViewTextoTelaInicial.pas',0,1,12,3,23,0,0,,
+File_6=TSourceModule,'D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnFrontColor.pas',0,1,1,1,1,0,0,,
+File_7=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnConsultaEspecial.pas',0,1,1112,48,1102,0,0,,
+File_8=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UProjeto.pas',0,1,1,1,1,0,0,,
+File_9=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UThema.pas',0,1,41,1,45,0,0,,
+File_10=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnUtilitLog.pas',0,1,395,60,406,0,0,,
+File_11=TSourceModule,'d:\projetosesistemas\open arquivos d2018 - 10.7.7.20 - 10.2.3 toquio\UnConsultEspMaximized.pas',0,1,34,1,1,0,0,,
+File_12=TSourceModule,'D:\FastReport_5.4.6_Pro_Full\LibD25\frxClass.pas',0,1,2841,1,2854,0,0,,
+File_13=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnThemas.pas',0,1,1,1,1,0,0,,
+File_14=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnConsultaEspecial_old.pas',0,1,19,30,4,0,0,,
 
 [Modules]
-Module0=D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UProjeto.pas
+Module0=D:\ProjetosESistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UDM.pas
 Module1=default.htm
 Module2=documentation.htm
-Module3=D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnNovVersao.pas
-Module4=D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnConsultaEspecial.pas
-Module5=D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnConsultEspMaximized.pas
-Module6=D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\reinit.pas
-Module7=D:\ProjetosESistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UDM.pas
-Module8=D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnCadAutores.pas
-Module9=D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnCadAssuntos.pas
-Count=10
+Count=3
 EditWindowCount=1
 
-[D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UProjeto.pas]
+[D:\ProjetosESistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UDM.pas]
 ModuleType=TSourceModule
 
 [default.htm]
@@ -38,52 +31,24 @@ ModuleType=TURLModule
 [documentation.htm]
 ModuleType=TURLModule
 
-[D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnNovVersao.pas]
-ModuleType=TSourceModule
-
-[D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnConsultaEspecial.pas]
-ModuleType=TSourceModule
-
-[D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnConsultEspMaximized.pas]
-ModuleType=TSourceModule
-
-[D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\reinit.pas]
-ModuleType=TSourceModule
-
-[D:\ProjetosESistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UDM.pas]
-ModuleType=TSourceModule
-
-[D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnCadAutores.pas]
-ModuleType=TSourceModule
-
-[D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnCadAssuntos.pas]
-ModuleType=TSourceModule
-
 [EditWindow0]
-ViewCount=10
-CurrentEditView=D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UProjeto.pas
+ViewCount=3
+CurrentEditView=D:\ProjetosESistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UDM.pas
 View0=0
 View1=1
 View2=2
-View3=3
-View4=4
-View5=5
-View6=6
-View7=7
-View8=8
-View9=9
 PercentageSizes=1
 Create=1
 Visible=1
 Docked=0
 State=0
-Left=1587
+Left=1585
 Top=1940
-Width=6526
+Width=6523
 Height=7865
 MaxLeft=-8
 MaxTop=-13
-ClientWidth=6403
+ClientWidth=6400
 ClientHeight=7357
 DockedToMainForm=0
 BorlandEditorCodeExplorer=BorlandEditorCodeExplorer@EditWindow0
@@ -95,7 +60,7 @@ RightPanelSize=0
 BottomPanelSize=0
 BottomMiddlePanelSize=1458
 BottomMiddlePanelClients=DockSite0,ToDo List,MessageView
-BottomMiddelPanelData=0000080001020200000009000000446F636B53697465300E000000546F446F4C69737457696E646F77782A00000000000002B2050000000000000100000000782A00000F0000004D65737361676556696577466F726DFFFFFFFF
+BottomMiddelPanelData=0000080001020200000009000000446F636B53697465300E000000546F446F4C69737457696E646F77512A00000000000002B2050000000000000100000000512A00000F0000004D65737361676556696577466F726DFFFFFFFF
 
 [View0]
 CustomEditViewType=TWelcomePageView
@@ -108,90 +73,13 @@ WelcomePageURL=bds:/documentation.htm
 [View2]
 CustomEditViewType=TEditView
 Module=D:\ProjetosESistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UDM.pas
-CursorX=1
-CursorY=1
-TopLine=1
+CursorX=20
+CursorY=1039
+TopLine=899
 LeftCol=1
 Elisions=
 Bookmarks=
-EditViewName=Borland.FormDesignerView
-
-[View3]
-CustomEditViewType=TEditView
-Module=D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnCadAssuntos.pas
-CursorX=1
-CursorY=1
-TopLine=1
-LeftCol=1
-Elisions=
-Bookmarks=
-EditViewName=Borland.FormDesignerView
-
-[View4]
-CustomEditViewType=TEditView
-Module=D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnCadAutores.pas
-CursorX=1
-CursorY=1
-TopLine=1
-LeftCol=1
-Elisions=
-Bookmarks=
-EditViewName=Borland.FormDesignerView
-
-[View5]
-CustomEditViewType=TEditView
-Module=D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UProjeto.pas
-CursorX=30
-CursorY=1734
-TopLine=1725
-LeftCol=1
-Elisions=
-Bookmarks=
-EditViewName=Borland.FormDesignerView
-
-[View6]
-CustomEditViewType=TEditView
-Module=D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnNovVersao.pas
-CursorX=3
-CursorY=48
-TopLine=37
-LeftCol=1
-Elisions=
-Bookmarks=
-EditViewName=Borland.FormDesignerView
-
-[View7]
-CustomEditViewType=TEditView
-Module=D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\reinit.pas
-CursorX=1
-CursorY=1
-TopLine=1
-LeftCol=1
-Elisions=
-Bookmarks=
-EditViewName=D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\reinit.pas
-
-[View8]
-CustomEditViewType=TEditView
-Module=D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnConsultaEspecial.pas
-CursorX=44
-CursorY=1436
-TopLine=1431
-LeftCol=1
-Elisions=
-Bookmarks=
-EditViewName=D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnConsultaEspecial.pas
-
-[View9]
-CustomEditViewType=TEditView
-Module=D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnConsultEspMaximized.pas
-CursorX=3
-CursorY=47
-TopLine=36
-LeftCol=1
-Elisions=
-Bookmarks=
-EditViewName=Borland.FormDesignerView
+EditViewName=D:\ProjetosESistemas\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UDM.pas
 
 [UndockedDesigner]
 Count=0
@@ -258,7 +146,7 @@ MaxLeft=-8
 MaxTop=-13
 ClientWidth=9877
 ClientHeight=1471
-BottomPanelSize=690
+BottomPanelSize=0
 
 [ProjectManager]
 PercentageSizes=1
@@ -268,14 +156,14 @@ Docked=1
 State=0
 Left=0
 Top=0
-Width=1664
+Width=1662
 Height=7461
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=1664
+ClientWidth=1662
 ClientHeight=7461
 TBDockHeight=273
-LRDockWidth=3727
+LRDockWidth=3731
 Dockable=1
 StayOnTop=0
 
@@ -287,14 +175,14 @@ Docked=1
 State=0
 Left=0
 Top=18
-Width=6403
+Width=6400
 Height=1224
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=6403
+ClientWidth=6400
 ClientHeight=1224
 TBDockHeight=1224
-LRDockWidth=3520
+LRDockWidth=3523
 Dockable=1
 StayOnTop=0
 
@@ -304,16 +192,16 @@ Create=1
 Visible=0
 Docked=0
 State=0
-Left=8213
+Left=8215
 Top=5273
-Width=1787
+Width=1785
 Height=4544
 MaxLeft=-8
 MaxTop=-13
-ClientWidth=1664
+ClientWidth=1662
 ClientHeight=4036
 TBDockHeight=5807
-LRDockWidth=1403
+LRDockWidth=1400
 Dockable=1
 StayOnTop=0
 
@@ -323,16 +211,16 @@ Create=1
 Visible=0
 Docked=0
 State=0
-Left=475
+Left=477
 Top=0
-Width=1787
+Width=1785
 Height=6107
 MaxLeft=-8
 MaxTop=-13
-ClientWidth=1664
+ClientWidth=1662
 ClientHeight=5599
 TBDockHeight=6107
-LRDockWidth=1787
+LRDockWidth=1785
 Dockable=1
 StayOnTop=0
 
@@ -342,16 +230,16 @@ Create=1
 Visible=0
 Docked=0
 State=0
-Left=-475
+Left=-477
 Top=0
-Width=2025
+Width=2023
 Height=6680
 MaxLeft=-8
 MaxTop=-13
-ClientWidth=1902
+ClientWidth=1900
 ClientHeight=6172
 TBDockHeight=6680
-LRDockWidth=2025
+LRDockWidth=2023
 Dockable=1
 StayOnTop=0
 
@@ -363,22 +251,17 @@ Docked=0
 State=0
 Left=0
 Top=1901
-Width=1687
+Width=1685
 Height=8021
 MaxLeft=-8
 MaxTop=-13
-ClientWidth=1564
+ClientWidth=1562
 ClientHeight=7513
 TBDockHeight=5807
-LRDockWidth=1549
+LRDockWidth=1546
 Dockable=1
 StayOnTop=0
 SplitPos=73
-
-[PropInspDesignerSelection]
-ArrangeBy=Name
-SelectedItem=Caption,
-ExpandedItems="LiveBindings Designer=0",BorderIcons=0,Constraints=0,Font=0,GlassFrame=0,HorzScrollBar=0,LiveBindings=0,Margins=0,Padding=0,StyleElements=0,Touch=0,VertScrollBar=0,Anchors=0,BevelEdges=0
 
 [ClassBrowserTool]
 PercentageSizes=1
@@ -386,16 +269,16 @@ Create=1
 Visible=0
 Docked=0
 State=0
-Left=475
+Left=477
 Top=0
-Width=1894
+Width=1892
 Height=3281
 MaxLeft=-8
 MaxTop=-13
-ClientWidth=1771
+ClientWidth=1769
 ClientHeight=2773
 TBDockHeight=3138
-LRDockWidth=1848
+LRDockWidth=1846
 Dockable=1
 StayOnTop=0
 
@@ -407,14 +290,14 @@ Docked=1
 State=0
 Left=0
 Top=0
-Width=3566
+Width=3569
 Height=4831
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=3566
+ClientWidth=3569
 ClientHeight=4831
 TBDockHeight=4831
-LRDockWidth=3566
+LRDockWidth=3569
 Dockable=1
 StayOnTop=0
 
@@ -426,14 +309,14 @@ Docked=1
 State=0
 Left=0
 Top=0
-Width=3566
+Width=3569
 Height=4831
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=3566
+ClientWidth=3569
 ClientHeight=4831
 TBDockHeight=4831
-LRDockWidth=3566
+LRDockWidth=3569
 Dockable=1
 StayOnTop=0
 
@@ -445,11 +328,11 @@ Docked=1
 State=0
 Left=0
 Top=0
-Width=1664
+Width=1662
 Height=7461
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=1664
+ClientWidth=1662
 ClientHeight=7461
 TBDockHeight=5964
 LRDockWidth=2508
@@ -462,16 +345,16 @@ Create=1
 Visible=0
 Docked=0
 State=0
-Left=498
+Left=500
 Top=807
-Width=2155
+Width=2154
 Height=6901
 MaxLeft=-8
 MaxTop=-13
-ClientWidth=2032
+ClientWidth=2031
 ClientHeight=6393
 TBDockHeight=4583
-LRDockWidth=2270
+LRDockWidth=2269
 Dockable=1
 StayOnTop=0
 
@@ -481,16 +364,16 @@ Create=1
 Visible=0
 Docked=0
 State=0
-Left=8689
+Left=8692
 Top=5273
-Width=1787
+Width=1785
 Height=4544
 MaxLeft=-8
 MaxTop=-13
-ClientWidth=1664
+ClientWidth=1662
 ClientHeight=4036
 TBDockHeight=365
-LRDockWidth=276
+LRDockWidth=277
 Dockable=1
 StayOnTop=0
 Name=120
@@ -505,14 +388,14 @@ Docked=0
 State=0
 Left=2623
 Top=7852
-Width=3482
+Width=3485
 Height=2148
 MaxLeft=-8
 MaxTop=-13
-ClientWidth=3359
+ClientWidth=3362
 ClientHeight=1641
 TBDockHeight=299
-LRDockWidth=3620
+LRDockWidth=3623
 Dockable=1
 StayOnTop=0
 
@@ -531,7 +414,7 @@ MaxTop=-13
 ClientWidth=2500
 ClientHeight=1641
 TBDockHeight=156
-LRDockWidth=5422
+LRDockWidth=5423
 Dockable=1
 StayOnTop=0
 Column0Width=145
@@ -585,14 +468,14 @@ Docked=1
 State=0
 Left=0
 Top=0
-Width=4387
+Width=4385
 Height=911
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=4387
+ClientWidth=4385
 ClientHeight=911
 TBDockHeight=2500
-LRDockWidth=3397
+LRDockWidth=3400
 Dockable=1
 StayOnTop=0
 
@@ -604,14 +487,14 @@ Docked=1
 State=0
 Left=0
 Top=0
-Width=4387
+Width=4385
 Height=911
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=4387
+ClientWidth=4385
 ClientHeight=911
 TBDockHeight=5078
-LRDockWidth=5299
+LRDockWidth=5300
 Dockable=1
 StayOnTop=0
 
@@ -623,14 +506,14 @@ Docked=1
 State=0
 Left=0
 Top=0
-Width=4387
+Width=4385
 Height=911
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=4387
+ClientWidth=4385
 ClientHeight=911
 TBDockHeight=3841
-LRDockWidth=5299
+LRDockWidth=5300
 Dockable=1
 StayOnTop=0
 
@@ -640,16 +523,16 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=285
-Top=638
-Width=3673
+Left=288
+Top=641
+Width=3669
 Height=1003
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=3673
+ClientWidth=3669
 ClientHeight=1003
 TBDockHeight=1003
-LRDockWidth=3673
+LRDockWidth=3669
 Dockable=1
 StayOnTop=0
 Column0Width=270
@@ -669,14 +552,14 @@ Docked=1
 State=0
 Left=0
 Top=0
-Width=1664
+Width=1662
 Height=7461
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=1664
+ClientWidth=1662
 ClientHeight=7461
 TBDockHeight=4883
-LRDockWidth=7147
+LRDockWidth=7146
 Dockable=1
 StayOnTop=0
 
@@ -688,14 +571,109 @@ Docked=0
 State=0
 Left=2400
 Top=7943
-Width=2853
+Width=2854
 Height=3203
 MaxLeft=-8
 MaxTop=-13
-ClientWidth=2730
+ClientWidth=2731
 ClientHeight=2695
 TBDockHeight=3203
-LRDockWidth=2853
+LRDockWidth=2854
+Dockable=1
+StayOnTop=0
+
+[CppChecks]
+PercentageSizes=1
+Create=1
+Visible=0
+Docked=1
+State=0
+Left=0
+Top=0
+Width=2338
+Height=990
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=2338
+ClientHeight=990
+TBDockHeight=2227
+LRDockWidth=3700
+Dockable=1
+StayOnTop=0
+
+[FindRefsResults]
+PercentageSizes=1
+Create=1
+Visible=0
+Docked=1
+State=0
+Left=0
+Top=0
+Width=2338
+Height=1146
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=2338
+ClientHeight=1146
+TBDockHeight=3776
+LRDockWidth=4246
+Dockable=1
+StayOnTop=0
+
+[FindDefsResults]
+PercentageSizes=1
+Create=1
+Visible=0
+Docked=1
+State=0
+Left=0
+Top=0
+Width=2338
+Height=1146
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=2338
+ClientHeight=1146
+TBDockHeight=3776
+LRDockWidth=4246
+Dockable=1
+StayOnTop=0
+
+[HeaderDepResults]
+PercentageSizes=1
+Create=1
+Visible=0
+Docked=1
+State=0
+Left=0
+Top=0
+Width=2338
+Height=1146
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=2338
+ClientHeight=1146
+TBDockHeight=3776
+LRDockWidth=4246
+Dockable=1
+StayOnTop=0
+
+[TypeHierarchyResults]
+PercentageSizes=1
+Create=1
+Visible=0
+Docked=1
+State=0
+Left=0
+Top=0
+Width=2338
+Height=1146
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=2338
+ClientHeight=1146
+TBDockHeight=3776
+LRDockWidth=4246
 Dockable=1
 StayOnTop=0
 
@@ -705,16 +683,16 @@ Create=1
 Visible=0
 Docked=0
 State=0
-Left=6104
+Left=6108
 Top=7852
-Width=3896
+Width=3892
 Height=2148
 MaxLeft=-8
 MaxTop=-13
-ClientWidth=3773
+ClientWidth=3769
 ClientHeight=1641
 TBDockHeight=208
-LRDockWidth=6396
+LRDockWidth=6392
 Dockable=1
 StayOnTop=0
 Column0Width=100
@@ -733,14 +711,14 @@ Docked=0
 State=0
 Left=0
 Top=1497
-Width=1687
+Width=1685
 Height=3385
 MaxLeft=-8
 MaxTop=-13
-ClientWidth=1564
+ClientWidth=1562
 ClientHeight=2878
 TBDockHeight=3464
-LRDockWidth=1672
+LRDockWidth=1669
 Dockable=1
 StayOnTop=0
 
@@ -752,14 +730,14 @@ Docked=1
 State=0
 Left=0
 Top=0
-Width=1664
+Width=1662
 Height=7461
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=1664
+ClientWidth=1662
 ClientHeight=7461
 TBDockHeight=4883
-LRDockWidth=5299
+LRDockWidth=5300
 Dockable=1
 StayOnTop=0
 
@@ -769,16 +747,16 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=62
+Left=66
 Top=0
-Width=1472
+Width=1469
 Height=8255
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=1472
+ClientWidth=1469
 ClientHeight=8255
 TBDockHeight=8255
-LRDockWidth=1472
+LRDockWidth=1469
 Dockable=1
 StayOnTop=0
 
@@ -795,19 +773,19 @@ Docked=1
 State=0
 Left=8
 Top=8
-Width=4387
+Width=4385
 Height=1237
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=4387
+ClientWidth=4385
 ClientHeight=1237
 TBDockHeight=1237
-LRDockWidth=4387
+LRDockWidth=4385
 Dockable=1
 StayOnTop=0
 TabPosition=1
 ActiveTabID=RefactoringForm
-TabDockClients=RefactoringForm,PatchForm,FindReferencsForm,MetricsView,QAView
+TabDockClients=RefactoringForm,PatchForm,FindReferencsForm,FindDefsResults,HeaderDepResults,TypeHierarchyResults,FindRefsResults,CppChecks,MetricsView,QAView
 
 [DockSite1]
 DockSiteType=1
@@ -816,16 +794,16 @@ Create=1
 Visible=1
 Docked=0
 State=0
-Left=8098
+Left=8100
 Top=1953
-Width=1787
+Width=1785
 Height=8294
 MaxLeft=-8
 MaxTop=-13
-ClientWidth=1664
+ClientWidth=1662
 ClientHeight=7786
 TBDockHeight=3177
-LRDockWidth=1449
+LRDockWidth=1446
 Dockable=1
 StayOnTop=0
 TabPosition=1

@@ -17,9 +17,9 @@ File_14=TSourceModule,'D:\projetoseSistemas\Open Arquivos D2018 - 10.7.7.15 - 10
 
 [Modules]
 Module0=D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UProjeto.pas
-Module1=D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnNovVersao.pas
-Module2=default.htm
-Module3=documentation.htm
+Module1=default.htm
+Module2=documentation.htm
+Module3=D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnNovVersao.pas
 Module4=D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnConsultaEspecial.pas
 Module5=D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnConsultEspMaximized.pas
 Module6=D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\reinit.pas
@@ -32,14 +32,14 @@ EditWindowCount=1
 [D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UProjeto.pas]
 ModuleType=TSourceModule
 
-[D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnNovVersao.pas]
-ModuleType=TSourceModule
-
 [default.htm]
 ModuleType=TURLModule
 
 [documentation.htm]
 ModuleType=TURLModule
+
+[D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnNovVersao.pas]
+ModuleType=TSourceModule
 
 [D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UnConsultaEspecial.pas]
 ModuleType=TSourceModule
@@ -147,7 +147,7 @@ TopLine=1725
 LeftCol=1
 Elisions=
 Bookmarks=
-EditViewName=D:\ProjetosESistemas_OpenArquivos\Open Arquivos D2018 - 10.7.7.20 - 10.2.3 Toquio\UProjeto.pas
+EditViewName=Borland.FormDesignerView
 
 [View6]
 CustomEditViewType=TEditView
@@ -374,6 +374,11 @@ LRDockWidth=1549
 Dockable=1
 StayOnTop=0
 SplitPos=73
+
+[PropInspDesignerSelection]
+ArrangeBy=Name
+SelectedItem=Caption,
+ExpandedItems="LiveBindings Designer=0",BorderIcons=0,Constraints=0,Font=0,GlassFrame=0,HorzScrollBar=0,LiveBindings=0,Margins=0,Padding=0,StyleElements=0,Touch=0,VertScrollBar=0,Anchors=0,BevelEdges=0
 
 [ClassBrowserTool]
 PercentageSizes=1
@@ -636,7 +641,7 @@ Visible=0
 Docked=1
 State=0
 Left=285
-Top=641
+Top=638
 Width=3673
 Height=1003
 MaxLeft=-1
@@ -764,7 +769,7 @@ Create=1
 Visible=0
 Docked=1
 State=0
-Left=124
+Left=62
 Top=0
 Width=1472
 Height=8255
