@@ -130,7 +130,6 @@ begin
     begin
       try
         CorrigeUserCod;
-        IncrementaAdd;
       Except
         on E: Exception do
         begin
@@ -155,7 +154,7 @@ begin
         on E: Exception do
         begin
           MessageDlg
-            ('Algum procedimento falhou na procedure de incremento de Logandos !'
+            ('Algum procedimento falhou na procedure de incremento (IncrementaAdd) de Logandos !'
             + #13 + 'Mensagem nativa da procedure : ' + E.Message, mtError,
             [mbOK], 0);
           Abort;
