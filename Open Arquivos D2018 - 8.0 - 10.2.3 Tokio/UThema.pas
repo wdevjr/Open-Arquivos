@@ -41,28 +41,28 @@ uses UDM, UProjeto, UnContrUser, UnLogin;
 procedure TFrmThemas.aplicarClick(Sender: TObject);
 var
   thema: TStyleManager;
-  aparencia:String;
+  aparencia: String;
 begin
- try
-  // ok.Enabled:=true;
-  cancela.Enabled := true;
-  gravarThema.Enabled := true;
-  //thema := TStyleManager.Create();
-  //thema.TrySetStyle(ListBox1.Items[ListBox1.ItemIndex]);
-  //aparencia:= ListBox1.Items[ListBox1.ItemIndex];
-  //if (FrmContrUser.Dtscu.DataSet.State = dsEdit) or
-  //  (FrmContrUser.Dtscu.DataSet.State = dsInsert) or
-  //  (FrmContrUser.Dtscu.DataSet.State = dsBrowse) then
-  //begin
+  try
+    // ok.Enabled:=true;
+    cancela.Enabled := true;
+    gravarThema.Enabled := true;
+    // thema := TStyleManager.Create();
+    // thema.TrySetStyle(ListBox1.Items[ListBox1.ItemIndex]);
+    // aparencia:= ListBox1.Items[ListBox1.ItemIndex];
+    // if (FrmContrUser.Dtscu.DataSet.State = dsEdit) or
+    // (FrmContrUser.Dtscu.DataSet.State = dsInsert) or
+    // (FrmContrUser.Dtscu.DataSet.State = dsBrowse) then
+    // begin
     // DM.cds_User.Edit;
     // DM.cds_UserTHEMA.AsString := ListBox1.Items[ListBox1.ItemIndex];
-  //end;
+    // end;
   Except
-  on E: Exception do
-  begin
+    on E: Exception do
+    begin
 
+    end;
   end;
- end;
 end;
 
 procedure TFrmThemas.cancelaClick(Sender: TObject);

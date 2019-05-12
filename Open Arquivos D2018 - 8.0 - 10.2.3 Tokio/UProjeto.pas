@@ -254,7 +254,8 @@ uses UDMII, ShellAPI, UnAbertura, UnLogin, UnCadDepartamento, UnCadCidades,
   UnDlgProcuraAutor, UnCadAutores, UnCadAssuntos, UnDlgProcuraAssunto, UDM,
   UnDlgProcura, UnStatus, MMSystem, UAutoPreench, ABOUT, UnContrUser,
   UnManutencao, UnConsultaEspecial, UnMensProce, UnNovVersao, UThema,
-  UnProcessIndefinido, UnatribuiUsuariosPorArquivos, UnFrontColor, UnViewTextoTelaInicial, remain;
+  UnProcessIndefinido, UnatribuiUsuariosPorArquivos, UnFrontColor,
+  UnViewTextoTelaInicial, remain;
 
 {$R *.dfm}
 
@@ -385,9 +386,9 @@ begin
     IntToStr(respAutores);
   ListView1.Items.Add.Caption := 'Logs    :                        ' +
     IntToStr(respLog);
-    Label14.Caption := IntToStr(respLogados);
-    Label14.Visible := true;
-  //ListView1.Items.Add.Caption := 'Logados :                     ' +IntToStr(respLogados);
+  Label14.Caption := IntToStr(respLogados);
+  Label14.Visible := True;
+  // ListView1.Items.Add.Caption := 'Logados :                     ' +IntToStr(respLogados);
 end;
 
 procedure TFrPrincipal.MostrarIcon;
@@ -597,7 +598,7 @@ begin
   btnvisualizar.Enabled := False;
   btnextrair.Enabled := False;
   ExcluirTemp.Enabled := False;
-  Image6.visible := False;
+  Image6.Visible := False;
 end;
 
 procedure TFrPrincipal.ConfigGravar;
@@ -621,7 +622,7 @@ begin
   btntrazer.Enabled := True;
   // DM.cds_arqu.Close;
   ExcluirTemp.Enabled := False;
-  Image6.visible := False;
+  Image6.Visible := False;
 end;
 
 procedure TFrPrincipal.CheckBox1Click(Sender: TObject);
@@ -632,12 +633,12 @@ begin
     begin
       DBEdit3.Font.Color := clBlue;
     end;
-    PanelAutor.visible := True;
+    PanelAutor.Visible := True;
     Height := 599;
   end
   else
   begin
-    PanelAutor.visible := False;
+    PanelAutor.Visible := False;
     Height := 560;
   end;
 
@@ -677,7 +678,7 @@ begin
   btnextrair.Enabled := False;
   carregar.Enabled := False;
   ExcluirTemp.Enabled := False;
-  Image6.visible := False;
+  Image6.Visible := False;
   excluiAssunto.Enabled := False;
   excluiAutor.Enabled := False;
 
@@ -687,7 +688,7 @@ procedure TFrPrincipal.ExcluirTempClick(Sender: TObject);
 begin
   DeleteFile(Temp + '\' + DM.cds_arquivoNOME_ARQUIVO.AsString);
   ExcluirTemp.Enabled := False;
-  Image6.visible := False;
+  Image6.Visible := False;
 end;
 
 procedure TFrPrincipal.AssistenteDetetive1Click(Sender: TObject);
@@ -765,7 +766,7 @@ begin
     FrmLocalizaAssunto.Free;
     if DBText5.Caption <> '' then
     begin
-      PanelPergunta.visible := True;
+      PanelPergunta.Visible := True;
     end;
     if DBEdit4.Text <> '' then
     begin
@@ -813,23 +814,23 @@ end;
 
 procedure TFrPrincipal.SpeedButton1Click(Sender: TObject);
 begin
- MainForm := TMainForm.Create(nil);
- try
+  MainForm := TMainForm.Create(nil);
+  try
     MainForm.ShowModal;
- finally
+  finally
     MainForm.Free;
- end;
+  end;
 
 end;
 
 procedure TFrPrincipal.SpeedButton2Click(Sender: TObject);
 begin
-FrmTelaTexto := TFrmTelaTexto.Create(nil);
- try
+  FrmTelaTexto := TFrmTelaTexto.Create(nil);
+  try
     FrmTelaTexto.ShowModal;
- finally
+  finally
     FrmTelaTexto.Free;
- end;
+  end;
 end;
 
 procedure TFrPrincipal.SpeedButton4Click(Sender: TObject);
@@ -920,7 +921,7 @@ begin
       end;
     end;
 
-     Application.Terminate;
+    Application.Terminate;
   END;
 
 end;
@@ -983,31 +984,31 @@ begin
   end;
   if (DM.cds_arquivo.FieldByName('COD_AUTOR').AsInteger > 99) then
   begin
-    PanelAutor.visible := True;
+    PanelAutor.Visible := True;
     DBText3.Font.Color := clBlue;
-    DBText3.visible := True;
+    DBText3.Visible := True;
     CheckBox1.Checked := True;
-   // Height := 615;
+    // Height := 615;
   end
   else if (DM.cds_arquivo.FieldByName('COD_AUTOR').AsInteger = 0) then
   begin
-    PanelAutor.visible := False;
+    PanelAutor.Visible := False;
     CheckBox1.Checked := False;
-   // Height := 615;
+    // Height := 615;
   end;
 
-    if CheckBox1.Checked = True then
+  if CheckBox1.Checked = True then
   begin
     if DBEdit3.Text > '0' then
     begin
       DBEdit3.Font.Color := clBlue;
     end;
-    PanelAutor.visible := True;
+    PanelAutor.Visible := True;
     Height := 599;
   end
   else
   begin
-    PanelAutor.visible := False;
+    PanelAutor.Visible := False;
     Height := 560;
   end;
 
@@ -1029,12 +1030,12 @@ begin
   if FileExists(Temp + '\' + DM.cds_arquivoNOME_ARQUIVO.AsString) = True then
   begin
     ExcluirTemp.Enabled := True;
-    Image6.visible := True;
+    Image6.Visible := True;
   end
   else if not(FileExists(Temp + '\' + DM.cds_arquivoNOME_ARQUIVO.AsString)) then
   begin
     ExcluirTemp.Enabled := False;
-    Image6.visible := False;
+    Image6.Visible := False;
     SysUtils.Abort;
   end;
 end;
@@ -1065,12 +1066,12 @@ begin
     if FileExists(Temp + '\' + DM.cds_arquivoNOME_ARQUIVO.AsString) then
     begin
       ExcluirTemp.Enabled := True;
-      Image6.visible := True;
+      Image6.Visible := True;
     end
     else
     begin
       ExcluirTemp.Enabled := False;
-      Image6.visible := False;
+      Image6.Visible := False;
       SysUtils.Abort;
     end;
   end;
@@ -1089,11 +1090,9 @@ end;
 procedure TFrPrincipal.AssuntosClick(Sender: TObject);
 begin
 
-
-
   if not Assigned(FrmCadAssuntos) then
     FrmCadAssuntos := TFrmCadAssuntos.Create(Self);
-    FrmCadAssuntos.Show;
+  FrmCadAssuntos.Show;
 end;
 
 procedure TFrPrincipal.cbtconsultaClick(Sender: TObject);
@@ -1115,15 +1114,15 @@ begin
       end;
       if (DM.cds_arquivo.FieldByName('COD_AUTOR').AsInteger > 99) then
       begin
-        PanelAutor.visible := True;
+        PanelAutor.Visible := True;
         DBText3.Font.Color := clBlue;
-        DBText3.visible := True;
+        DBText3.Visible := True;
         CheckBox1.Checked := True;
         Height := 610;
       end
       else if (DM.cds_arquivo.FieldByName('COD_AUTOR').AsInteger = 0) then
       begin
-        PanelAutor.visible := False;
+        PanelAutor.Visible := False;
         CheckBox1.Checked := False;
         Height := 610;
       end;
@@ -1141,12 +1140,12 @@ begin
   if FileExists(Temp + '\' + DM.cds_arquivoNOME_ARQUIVO.AsString) then
   begin
     ExcluirTemp.Enabled := True;
-    Image6.visible := True;
+    Image6.Visible := True;
   end
   else
   begin
     ExcluirTemp.Enabled := False;
-    Image6.visible := False;
+    Image6.Visible := False;
   end;
   MostrarIcon;
   IniciaAdministracao;
@@ -1205,14 +1204,14 @@ begin
       end;
       if DBEdit3.Text > '0' then
       begin
-        PanelAutor.visible := True;
+        PanelAutor.Visible := True;
         DBEdit3.Font.Color := clBlue;
         Height := 610;
         CheckBox1.Checked := True;
       end
       else if DBEdit3.Text = '0' then
       begin
-        PanelAutor.visible := False;
+        PanelAutor.Visible := False;
         DBText3.Font.Color := $00E3F4F4;
         Height := 610;
         CheckBox1.Checked := False;
@@ -1232,12 +1231,12 @@ begin
   if FileExists(Temp + '\' + DM.cds_arquivoNOME_ARQUIVO.AsString) = True then
   begin
     ExcluirTemp.Enabled := True;
-    Image6.visible := True;
+    Image6.Visible := True;
   end
   else if not(FileExists(Temp + '\' + DM.cds_arquivoNOME_ARQUIVO.AsString)) then
   begin
     ExcluirTemp.Enabled := False;
-    Image6.visible := False;
+    Image6.Visible := False;
     SysUtils.Abort;
   end;
 end;
@@ -1287,14 +1286,14 @@ begin
     end;
     if DBEdit3.Text > '0' then
     begin
-      PanelAutor.visible := True;
+      PanelAutor.Visible := True;
       DBEdit3.Font.Color := clBlue;
       Height := 610;
       CheckBox1.Checked := True;
     end
     else if DBEdit3.Text <> '0' then
     begin
-      PanelAutor.visible := False;
+      PanelAutor.Visible := False;
       DBText3.Font.Color := $00CBEAEB; // $00E3F4F4
       Height := 610;
       CheckBox1.Checked := False;
@@ -1349,12 +1348,12 @@ begin
     if FileExists(Temp + '\' + DM.cds_arquivoNOME_ARQUIVO.AsString) then
     begin
       ExcluirTemp.Enabled := True;
-      Image6.visible := True;
+      Image6.Visible := True;
     end
     else
     begin
       ExcluirTemp.Enabled := False;
-      Image6.visible := False;
+      Image6.Visible := False;
       SysUtils.Abort;
     end;
   end;
@@ -1385,16 +1384,17 @@ begin
     BtnLoc01.Enabled := not IsEmpty;
     BtnLoc02.Enabled := not IsEmpty;
   end;
-     if (FrmLogin.TODOS = 0) then
-   begin
-     lookUser.Visible := false;
-   end else
-   begin
-     lookUser.Visible := true;
-   end;
+  if (FrmLogin.TODOS = 0) then
+  begin
+    lookUser.Visible := False;
+  end
+  else
+  begin
+    lookUser.Visible := True;
+  end;
   CheckBox1.Checked := False;
-  PanelPergunta.visible := True;
-  PanelAutor.visible := False;
+  PanelPergunta.Visible := True;
+  PanelAutor.Visible := False;
 
   // Height:=549;
 end;
@@ -1438,9 +1438,9 @@ begin
       end; }
     if (DM.cds_arquivo.FieldByName('COD_AUTOR').AsInteger > 99) then
     begin
-      PanelAutor.visible := True;
+      PanelAutor.Visible := True;
       DBText3.Font.Color := clBlue;
-      DBText3.visible := True;
+      DBText3.Visible := True;
       CheckBox1.Checked := True;
     end
     else
@@ -1475,8 +1475,8 @@ begin
   Dtsrc.DataSet.Cancel;
   ConfigCancelar;
   CheckBox1.Checked := True;
-  PanelPergunta.visible := True;
-  PanelAutor.visible := True;
+  PanelPergunta.Visible := True;
+  PanelAutor.Visible := True;
   MostrarIcon;
   with Dtsrc.DataSet do
   begin
@@ -1504,14 +1504,14 @@ begin
       end;
       if DBEdit3.Text > '0' then
       begin
-        PanelAutor.visible := True;
+        PanelAutor.Visible := True;
         DBEdit3.Font.Color := clBlue;
         Height := 610;
         CheckBox1.Checked := True;
       end
       else if DBEdit3.Text <> '0' then
       begin
-        PanelAutor.visible := False;
+        PanelAutor.Visible := False;
         DBText3.Font.Color := $00CBEAEB; // $00E3F4F4
         Height := 610;
         CheckBox1.Checked := False;
@@ -1550,7 +1550,7 @@ begin
   begin
     DeleteFile(Temp + '\' + DM.cds_arquivoNOME_ARQUIVO.AsString);
     ExcluirTemp.Enabled := False;
-    Image6.visible := False;
+    Image6.Visible := False;
   end
   else if OpenDialog1.Execute then
   begin
@@ -1736,29 +1736,30 @@ begin
       ('NOME_ARQUIVO').AsString;
     DtscLog.DataSet.Post;
     (DtscLog.DataSet as TClientDataSet).ApplyUpdates(0);
-        if CheckBox1.Checked = True then
-  begin
-    if DBEdit3.Text > '0' then
+    if CheckBox1.Checked = True then
     begin
-      DBEdit3.Font.Color := clBlue;
+      if DBEdit3.Text > '0' then
+      begin
+        DBEdit3.Font.Color := clBlue;
+      end;
+      PanelAutor.Visible := True;
+      Height := 599;
+    end
+    else
+    begin
+      PanelAutor.Visible := False;
+      Height := 560;
     end;
-    PanelAutor.visible := True;
-    Height := 599;
+  end;
+
+  if (FrmLogin.TODOS = 0) then
+  begin
+    lookUser.Visible := False;
   end
   else
   begin
-    PanelAutor.visible := False;
-    Height := 560;
+    lookUser.Visible := True;
   end;
-  end;
-
-     if (FrmLogin.TODOS = 0) then
-   begin
-     lookUser.Visible := false;
-   end else
-   begin
-     lookUser.Visible := true;
-   end;
 end;
 
 procedure TFrPrincipal.excluiAssuntoClick(Sender: TObject);
@@ -1770,18 +1771,18 @@ begin
     DM.cds_arquivoCOD_ASSUNTO.Value := 0;
     DM.cds_arquivoTITULOASSUN.Value := '';
   end;
-      if CheckBox1.Checked = True then
+  if CheckBox1.Checked = True then
   begin
     if DBEdit3.Text > '0' then
     begin
       DBEdit3.Font.Color := clBlue;
     end;
-    PanelAutor.visible := True;
+    PanelAutor.Visible := True;
     Height := 599;
   end
   else
   begin
-    PanelAutor.visible := False;
+    PanelAutor.Visible := False;
     Height := 560;
   end;
 end;
@@ -1794,21 +1795,21 @@ begin
   begin
     DM.cds_arquivoCOD_AUTOR.Value := 0;
     DM.cds_arquivoNOME.Value := '';
-    PanelAutor.Visible:=false;
-    CheckBox1.Checked:=false;
+    PanelAutor.Visible := False;
+    CheckBox1.Checked := False;
   end;
-      if CheckBox1.Checked = True then
+  if CheckBox1.Checked = True then
   begin
     if DBEdit3.Text > '0' then
     begin
       DBEdit3.Font.Color := clBlue;
     end;
-    PanelAutor.visible := True;
+    PanelAutor.Visible := True;
     Height := 599;
   end
   else
   begin
-    PanelAutor.visible := False;
+    PanelAutor.Visible := False;
     Height := 560;
   end;
 end;
@@ -1854,13 +1855,14 @@ begin
     excluiAssunto.Enabled := not IsEmpty;
     excluiAutor.Enabled := not IsEmpty;
   end;
-     if (FrmLogin.TODOS = 0) then
-   begin
-     lookUser.Visible := false;
-   end else
-   begin
-     lookUser.Visible := true;
-   end;
+  if (FrmLogin.TODOS = 0) then
+  begin
+    lookUser.Visible := False;
+  end
+  else
+  begin
+    lookUser.Visible := True;
+  end;
 end;
 
 procedure TFrPrincipal.FormActivate(Sender: TObject);
@@ -1868,17 +1870,15 @@ begin
 
   StatusBar1.Panels[0].Text := Saudacao + ' Hoje é ' +
     formatdatetime('dddddd', Date);
-   if (FrmLogin.ADMIN = 0) then
-   begin
-     lookUser.Visible := false;
-   end else
-   begin
-     lookUser.Visible := true;
-   end;
+  if (FrmLogin.ADMIN = 0) then
+  begin
+    lookUser.Visible := False;
+  end
+  else
+  begin
+    lookUser.Visible := True;
+  end;
 
-
-
-  
 end;
 
 procedure TFrPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -1913,19 +1913,19 @@ begin
   // Height:=590;
   InicializarComponentes;
   IniciaAdministracao;
-  FrmLogin.Visible:=false;
-    if CheckBox1.Checked = True then
+  FrmLogin.Visible := False;
+  if CheckBox1.Checked = True then
   begin
     if DBEdit3.Text > '0' then
     begin
       DBEdit3.Font.Color := clBlue;
     end;
-    PanelAutor.visible := True;
+    PanelAutor.Visible := True;
     Height := 599;
   end
   else
   begin
-    PanelAutor.visible := False;
+    PanelAutor.Visible := False;
     Height := 560;
   end;
 end;
@@ -2000,11 +2000,11 @@ begin
         // Sessão Menu Manutenção
         if FrmLogin.ADMIN = 1 then
         begin
-          FrPrincipal.cbManutSQL.visible := True;
+          FrPrincipal.cbManutSQL.Visible := True;
         end
         else
         begin
-          FrPrincipal.cbManutSQL.visible := False;
+          FrPrincipal.cbManutSQL.Visible := False;
         end;
         if DMII.sdt_Verif_Perfil.FieldByName('MENU_MANUTENCAO_TEMP').AsString = 'S'
         then
@@ -2048,24 +2048,24 @@ begin
           end; }
         if FrmLogin.NIVEL = 1 then
         begin
-          FrPrincipal.btnvisualizar.visible := True;
-          FrPrincipal.btnextrair.visible := True;
+          FrPrincipal.btnvisualizar.Visible := True;
+          FrPrincipal.btnextrair.Visible := True;
         end
         else if FrmLogin.NIVEL = 0 then
         begin
-          FrPrincipal.btnvisualizar.visible := False;
-          FrPrincipal.btnextrair.visible := False;
+          FrPrincipal.btnvisualizar.Visible := False;
+          FrPrincipal.btnextrair.Visible := False;
         end;
         // if FrmLogin.NIVEL = 1 then
         // begin
         if DMII.sdt_Verif_Perfil.FieldByName('ARQUI_CONSULTAR').AsString = 'S'
         then
         begin
-          FrPrincipal.cbtconsulta.visible := True;
+          FrPrincipal.cbtconsulta.Visible := True;
         end
         else
         begin
-          FrPrincipal.cbtconsulta.visible := False;
+          FrPrincipal.cbtconsulta.Visible := False;
         end;
         // end
         // else
@@ -2075,73 +2075,73 @@ begin
         if DMII.sdt_Verif_Perfil.FieldByName('ARQUI_USUARIO').AsString = 'S'
         then
         begin
-          FrPrincipal.usuarios.visible := True;
+          FrPrincipal.usuarios.Visible := True;
         end
         else
         begin
-          FrPrincipal.usuarios.visible := False;
+          FrPrincipal.usuarios.Visible := False;
         end;
         if DMII.sdt_Verif_Perfil.FieldByName('ARQUI_ASSUNTOS').AsString = 'S'
         then
         begin
-          FrPrincipal.Assuntos.visible := True;
+          FrPrincipal.Assuntos.Visible := True;
         end
         else
         begin
-          FrPrincipal.Assuntos.visible := False;
+          FrPrincipal.Assuntos.Visible := False;
         end;
         if DMII.sdt_Verif_Perfil.FieldByName('ARQUI_AUTORES').AsString = 'S'
         then
         begin
-          FrPrincipal.autores.visible := True;
+          FrPrincipal.autores.Visible := True;
         end
         else
         begin
-          FrPrincipal.autores.visible := False;
+          FrPrincipal.autores.Visible := False;
         end;
         if FrmLogin.ADMIN = 1 then
         begin
-          FrPrincipal.log.visible := True;
+          FrPrincipal.log.Visible := True;
         end
         else
         begin
-          FrPrincipal.log.visible := False;
+          FrPrincipal.log.Visible := False;
         end;
         if DMII.sdt_Verif_Perfil.FieldByName('ARQUI_LOCALIZAR').AsString = 'S'
         then
         begin
-          FrPrincipal.btntrazer.visible := True;
+          FrPrincipal.btntrazer.Visible := True;
         end
         else
         begin
-          FrPrincipal.btntrazer.visible := False;
+          FrPrincipal.btntrazer.Visible := False;
         end;
         // Sessão Botões de Cadastro
         if DMII.sdt_Verif_Perfil.FieldByName('ARQUI_INSERIR').AsString = 'S'
         then
         begin
-          FrPrincipal.inserir.visible := True;
+          FrPrincipal.inserir.Visible := True;
         end
         else
         begin
-          FrPrincipal.inserir.visible := False;
+          FrPrincipal.inserir.Visible := False;
         end;
         if DMII.sdt_Verif_Perfil.FieldByName('ARQUI_EDITAR').AsString = 'S' then
         begin
-          FrPrincipal.editar.visible := True;
+          FrPrincipal.editar.Visible := True;
         end
         else
         begin
-          FrPrincipal.editar.visible := False;
+          FrPrincipal.editar.Visible := False;
         end;
         if DMII.sdt_Verif_Perfil.FieldByName('ARQUI_EXCLUIR').AsString = 'S'
         then
         begin
-          FrPrincipal.excluir.visible := True;
+          FrPrincipal.excluir.Visible := True;
         end
         else
         begin
-          FrPrincipal.excluir.visible := False;
+          FrPrincipal.excluir.Visible := False;
         end;
       end;
 
@@ -2157,12 +2157,12 @@ begin
     begin
       DBEdit3.Font.Color := clBlue;
     end;
-    PanelAutor.visible := True;
+    PanelAutor.Visible := True;
     Height := 610;
   end
   else
   begin
-    PanelAutor.visible := False;
+    PanelAutor.Visible := False;
     Height := 610;
   end;
   DBEdit1.Text := IntToStr(FrmLogin.COD_USUARIO);
@@ -2255,13 +2255,14 @@ begin
 
     end;
   end;
-     if (FrmLogin.TODOS = 0) then
-   begin
-     lookUser.Visible := false;
-   end else
-   begin
-     lookUser.Visible := true;
-   end;
+  if (FrmLogin.TODOS = 0) then
+  begin
+    lookUser.Visible := False;
+  end
+  else
+  begin
+    lookUser.Visible := True;
+  end;
 end;
 
 end.

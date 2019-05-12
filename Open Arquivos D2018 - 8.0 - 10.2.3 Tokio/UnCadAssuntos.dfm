@@ -438,7 +438,7 @@ object FrmCadAssuntos: TFrmCadAssuntos
       Left = 21
       Top = 76
       Width = 748
-      Height = 19
+      Height = 23
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
@@ -460,7 +460,7 @@ object FrmCadAssuntos: TFrmCadAssuntos
       Left = 21
       Top = 177
       Width = 101
-      Height = 19
+      Height = 23
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
@@ -482,7 +482,7 @@ object FrmCadAssuntos: TFrmCadAssuntos
       Left = 21
       Top = 127
       Width = 748
-      Height = 19
+      Height = 23
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4

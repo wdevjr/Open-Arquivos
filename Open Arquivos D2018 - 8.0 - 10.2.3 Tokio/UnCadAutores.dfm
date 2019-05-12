@@ -564,7 +564,7 @@ object FrmCadAutor: TFrmCadAutor
       Left = 10
       Top = 81
       Width = 786
-      Height = 19
+      Height = 23
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
@@ -586,7 +586,7 @@ object FrmCadAutor: TFrmCadAutor
       Left = 10
       Top = 125
       Width = 786
-      Height = 19
+      Height = 23
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
@@ -608,7 +608,7 @@ object FrmCadAutor: TFrmCadAutor
       Left = 10
       Top = 256
       Width = 113
-      Height = 19
+      Height = 23
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
@@ -630,7 +630,7 @@ object FrmCadAutor: TFrmCadAutor
       Left = 10
       Top = 302
       Width = 786
-      Height = 19
+      Height = 23
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
@@ -1254,7 +1254,7 @@ object FrmCadAutor: TFrmCadAutor
       Left = 10
       Top = 169
       Width = 104
-      Height = 19
+      Height = 23
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
@@ -1278,7 +1278,7 @@ object FrmCadAutor: TFrmCadAutor
       Left = 10
       Top = 216
       Width = 104
-      Height = 19
+      Height = 23
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4

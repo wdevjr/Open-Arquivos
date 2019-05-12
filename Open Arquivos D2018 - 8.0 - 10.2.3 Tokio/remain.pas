@@ -5,7 +5,8 @@ interface
 uses
   SysUtils, Windows, Messages, Classes, Graphics, Controls,
   Forms, Dialogs, StdCtrls, Buttons, ExtCtrls, Menus, ComCtrls, ClipBrd,
-  ToolWin, ActnList, ImgList, System.Actions, System.ImageList, Vcl.DBCtrls, DBClient, Data.DB;
+  ToolWin, ActnList, ImgList, System.Actions, System.ImageList, Vcl.DBCtrls,
+  DBClient, Data.DB;
 
 type
   TMainForm = class(TForm)
@@ -109,8 +110,8 @@ type
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure RulerItemMouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
-    procedure RulerItemMouseMove(Sender: TObject; Shift: TShiftState; X,
-      Y: Integer);
+    procedure RulerItemMouseMove(Sender: TObject; Shift: TShiftState;
+      X, Y: Integer);
     procedure FirstIndMouseUp(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
     procedure LeftIndMouseUp(Sender: TObject; Button: TMouseButton;
@@ -120,8 +121,7 @@ type
     procedure FormShow(Sender: TObject);
     procedure RichEditChange(Sender: TObject);
     procedure SwitchLanguage(Sender: TObject);
-    procedure ActionList2Update(Action: TBasicAction;
-      var Handled: Boolean);
+    procedure ActionList2Update(Action: TBasicAction; var Handled: Boolean);
   private
     FFileName: string;
     FUpdating: Boolean;
@@ -144,7 +144,7 @@ var
 
 implementation
 
-uses RichEdit, ShellAPI, ReInit, UProjeto,UDM, ComObj;
+uses RichEdit, ShellAPI, ReInit, UProjeto, UDM, ComObj;
 
 resourcestring
   sSaveChanges = 'Save changes to %s?';
@@ -154,44 +154,51 @@ resourcestring
   sColRowInfo = 'Line: %3d   Col: %3d';
 
 const
-  RulerAdj = 4/3;
+  RulerAdj = 4 / 3;
   GutterWid = 6;
 
   ENGLISH = (SUBLANG_ENGLISH_US shl 10) or LANG_ENGLISH;
-  FRENCH  = (SUBLANG_FRENCH shl 10) or LANG_FRENCH;
-  GERMAN  = (SUBLANG_GERMAN shl 10) or LANG_GERMAN;
+  FRENCH = (SUBLANG_FRENCH shl 10) or LANG_FRENCH;
+  GERMAN = (SUBLANG_GERMAN shl 10) or LANG_GERMAN;
 
 {$R *.dfm}
 
 procedure TMainForm.SelectionChange(Sender: TObject);
 begin
   with Editor.Paragraph do
-  try
-    FUpdating := True;
-    FirstInd.Left := Trunc(FirstIndent*RulerAdj)-4+GutterWid;
-    LeftInd.Left := Trunc((LeftIndent+FirstIndent)*RulerAdj)-4+GutterWid;
-    RightInd.Left := Ruler.ClientWidth-6-Trunc((RightIndent+GutterWid)*RulerAdj);
-    BoldButton.Down := fsBold in Editor.SelAttributes.Style;
-    ItalicButton.Down := fsItalic in Editor.SelAttributes.Style;
-    UnderlineButton.Down := fsUnderline in Editor.SelAttributes.Style;
-    BulletsButton.Down := Boolean(Numbering);
-    FontSize.Text := IntToStr(Editor.SelAttributes.Size);
-    FontName.Text := Editor.SelAttributes.Name;
-    case Ord(Alignment) of
-      0: LeftAlign.Down := True;
-      1: RightAlign.Down := True;
-      2: CenterAlign.Down := True;
+    try
+      FUpdating := True;
+      FirstInd.Left := Trunc(FirstIndent * RulerAdj) - 4 + GutterWid;
+      LeftInd.Left := Trunc((LeftIndent + FirstIndent) * RulerAdj) - 4 +
+        GutterWid;
+      RightInd.Left := Ruler.ClientWidth - 6 -
+        Trunc((RightIndent + GutterWid) * RulerAdj);
+      BoldButton.Down := fsBold in Editor.SelAttributes.Style;
+      ItalicButton.Down := fsItalic in Editor.SelAttributes.Style;
+      UnderlineButton.Down := fsUnderline in Editor.SelAttributes.Style;
+      BulletsButton.Down := Boolean(Numbering);
+      FontSize.Text := IntToStr(Editor.SelAttributes.Size);
+      FontName.Text := Editor.SelAttributes.Name;
+      case Ord(Alignment) of
+        0:
+          LeftAlign.Down := True;
+        1:
+          RightAlign.Down := True;
+        2:
+          CenterAlign.Down := True;
+      end;
+      UpdateCursorPos;
+    finally
+      FUpdating := False;
     end;
-    UpdateCursorPos;
-  finally
-    FUpdating := False;
-  end;
 end;
 
 function TMainForm.CurrText: TTextAttributes;
 begin
-  if Editor.SelLength > 0 then Result := Editor.SelAttributes
-  else Result := Editor.DefAttributes;
+  if Editor.SelLength > 0 then
+    Result := Editor.SelAttributes
+  else
+    Result := Editor.DefAttributes;
 end;
 
 function EnumFontsProc(var LogFont: TLogFont; var TextMetric: TTextMetric;
@@ -221,25 +228,29 @@ procedure TMainForm.CheckFileSave;
 var
   SaveResp: Integer;
 begin
-  if not Editor.Modified then Exit;
-  SaveResp := MessageDlg(Format(sSaveChanges, [FFileName]),
-    mtConfirmation, mbYesNoCancel, 0);
+  if not Editor.Modified then
+    Exit;
+  SaveResp := MessageDlg(Format(sSaveChanges, [FFileName]), mtConfirmation,
+    mbYesNoCancel, 0);
   case SaveResp of
-    idYes: FileSave(Self);
-    idNo: {Nothing};
-    idCancel: Abort;
+    idYes:
+      FileSave(Self);
+    idNo: { Nothing }
+      ;
+    idCancel:
+      Abort;
   end;
 end;
 
 procedure TMainForm.ColorBox1Click(Sender: TObject);
 begin
-if FUpdating then
-Exit;
- if ColorBox1.Selected = clBlack then
- Exit
- else
+  if FUpdating then
+    Exit;
+  if ColorBox1.Selected = clBlack then
+    Exit
+  else
   begin
-     CurrText.Color:=ColorBox1.Selected;
+    CurrText.Color := ColorBox1.Selected;
   end;
 
 end;
@@ -254,7 +265,7 @@ begin
   while I < 200 do
   begin
     S[I] := #9;
-    S[I+1] := '|';
+    S[I + 1] := '|';
     Inc(I, 2);
   end;
   Ruler.Caption := S;
@@ -266,7 +277,7 @@ var
 begin
   with Editor do
   begin
-    R := Rect(GutterWid, 0, ClientWidth-GutterWid, ClientHeight);
+    R := Rect(GutterWid, 0, ClientWidth - GutterWid, ClientHeight);
     SendMessage(Handle, EM_SETRECT, 0, Longint(@R));
   end;
 end;
@@ -290,9 +301,12 @@ begin
   LanguageFrench.Tag := FRENCH;
   LanguageGerman.Tag := GERMAN;
   case SysLocale.DefaultLCID of
-    ENGLISH: SwitchLanguage(LanguageEnglish);
-    FRENCH: SwitchLanguage(LanguageFrench);
-    GERMAN: SwitchLanguage(LanguageGerman);
+    ENGLISH:
+      SwitchLanguage(LanguageEnglish);
+    FRENCH:
+      SwitchLanguage(LanguageFrench);
+    GERMAN:
+      SwitchLanguage(LanguageGerman);
   end;
 end;
 
@@ -303,7 +317,8 @@ begin
     StatusBar.SimplePanel := True;
     StatusBar.SimpleText := Application.Hint;
   end
-  else StatusBar.SimplePanel := False;
+  else
+    StatusBar.SimplePanel := False;
 end;
 
 procedure TMainForm.FileNew(Sender: TObject);
@@ -335,20 +350,20 @@ end;
 
 procedure TMainForm.FileSave(Sender: TObject);
 var
-MSWord: Variant;
+  MSWord: Variant;
 begin
-{MSWord := CreateOleObject('Word.Application');
-MSWord.Visible:=false;
-MSWord.Selection.TypeText(Editor.Lines.ToString);
-MSWord.Visible:=true;
-MSWord.ActiveDocument.SaveDialog(FFileName);  }
-if FFileName = sUntitled then
+  { MSWord := CreateOleObject('Word.Application');
+    MSWord.Visible:=false;
+    MSWord.Selection.TypeText(Editor.Lines.ToString);
+    MSWord.Visible:=true;
+    MSWord.ActiveDocument.SaveDialog(FFileName); }
+  if FFileName = sUntitled then
     FileSaveAs(Sender)
   else
   begin
     Editor.Lines.SaveToFile(FFileName);
     Editor.Modified := True;
-    SetModified(true);
+    SetModified(True);
   end;
 end;
 
@@ -357,8 +372,9 @@ begin
   if SaveDialog.Execute then
   begin
     if FileExists(SaveDialog.FileName) then
-      if MessageDlg(Format(sOverWrite, [SaveDialog.FileName]),
-        mtConfirmation, mbYesNoCancel, 0) <> idYes then Exit;
+      if MessageDlg(Format(sOverWrite, [SaveDialog.FileName]), mtConfirmation,
+        mbYesNoCancel, 0) <> idYes then
+        Exit;
     Editor.Lines.SaveToFile(SaveDialog.FileName);
     SetFileName(SaveDialog.FileName);
     Editor.Modified := False;
@@ -380,7 +396,8 @@ end;
 procedure TMainForm.EditUndo(Sender: TObject);
 begin
   with Editor do
-    if HandleAllocated then SendMessage(Handle, EM_UNDO, 0, 0);
+    if HandleAllocated then
+      SendMessage(Handle, EM_UNDO, 0, 0);
 end;
 
 procedure TMainForm.EditCut(Sender: TObject);
@@ -400,12 +417,12 @@ end;
 
 procedure TMainForm.HelpAbout(Sender: TObject);
 begin
-{  with TAboutBox.Create(Self) do
-  try
+  { with TAboutBox.Create(Self) do
+    try
     ShowModal;
-  finally
+    finally
     Free;
-  end;}
+    end; }
 end;
 
 procedure TMainForm.SelectFont(Sender: TObject);
@@ -419,7 +436,7 @@ end;
 
 procedure TMainForm.RulerResize(Sender: TObject);
 begin
-  RulerLine.Width := Ruler.ClientWidth - (RulerLine.Left*2);
+  RulerLine.Width := Ruler.ClientWidth - (RulerLine.Left * 2);
 end;
 
 procedure TMainForm.FormResize(Sender: TObject);
@@ -435,7 +452,8 @@ end;
 
 procedure TMainForm.BoldButtonClick(Sender: TObject);
 begin
-  if FUpdating then Exit;
+  if FUpdating then
+    Exit;
   if BoldButton.Down then
   begin
     CurrText.Style := CurrText.Style + [fsBold]
@@ -446,7 +464,8 @@ end;
 
 procedure TMainForm.ItalicButtonClick(Sender: TObject);
 begin
-  if FUpdating then Exit;
+  if FUpdating then
+    Exit;
   if ItalicButton.Down then
     CurrText.Style := CurrText.Style + [fsItalic]
   else
@@ -455,25 +474,29 @@ end;
 
 procedure TMainForm.FontSizeChange(Sender: TObject);
 begin
-  if FUpdating then Exit;
+  if FUpdating then
+    Exit;
   CurrText.Size := StrToInt(FontSize.Text);
 end;
 
 procedure TMainForm.AlignButtonClick(Sender: TObject);
 begin
-  if FUpdating then Exit;
+  if FUpdating then
+    Exit;
   Editor.Paragraph.Alignment := TAlignment(TControl(Sender).Tag);
 end;
 
 procedure TMainForm.FontNameChange(Sender: TObject);
 begin
-  if FUpdating then Exit;
+  if FUpdating then
+    Exit;
   CurrText.Name := FontName.Items[FontName.ItemIndex];
 end;
 
 procedure TMainForm.UnderlineButtonClick(Sender: TObject);
 begin
-  if FUpdating then Exit;
+  if FUpdating then
+    Exit;
   if UnderlineButton.Down then
     CurrText.Style := CurrText.Style + [fsUnderline]
   else
@@ -482,17 +505,18 @@ end;
 
 procedure TMainForm.BulletsButtonClick(Sender: TObject);
 begin
-  if FUpdating then Exit;
+  if FUpdating then
+    Exit;
   Editor.Paragraph.Numbering := TNumberingStyle(BulletsButton.Down);
 end;
 
 procedure TMainForm.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 begin
-{  try
+  { try
     CheckFileSave;
-  except
+    except
     CanClose := False;
-  end;}
+    end; }
 end;
 
 { Ruler Indent Dragging }
@@ -501,7 +525,7 @@ procedure TMainForm.RulerItemMouseDown(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Integer);
 begin
   FDragOfs := (TLabel(Sender).Width div 2);
-  TLabel(Sender).Left := TLabel(Sender).Left+X-FDragOfs;
+  TLabel(Sender).Left := TLabel(Sender).Left + X - FDragOfs;
   FDragging := True;
 end;
 
@@ -509,14 +533,15 @@ procedure TMainForm.RulerItemMouseMove(Sender: TObject; Shift: TShiftState;
   X, Y: Integer);
 begin
   if FDragging then
-    TLabel(Sender).Left :=  TLabel(Sender).Left+X-FDragOfs
+    TLabel(Sender).Left := TLabel(Sender).Left + X - FDragOfs
 end;
 
 procedure TMainForm.FirstIndMouseUp(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Integer);
 begin
   FDragging := False;
-  Editor.Paragraph.FirstIndent := Trunc((FirstInd.Left+FDragOfs-GutterWid) / RulerAdj);
+  Editor.Paragraph.FirstIndent := Trunc((FirstInd.Left + FDragOfs - GutterWid) /
+    RulerAdj);
   LeftIndMouseUp(Sender, Button, Shift, X, Y);
 end;
 
@@ -524,7 +549,8 @@ procedure TMainForm.LeftIndMouseUp(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Integer);
 begin
   FDragging := False;
-  Editor.Paragraph.LeftIndent := Trunc((LeftInd.Left+FDragOfs-GutterWid) / RulerAdj)-Editor.Paragraph.FirstIndent;
+  Editor.Paragraph.LeftIndent := Trunc((LeftInd.Left + FDragOfs - GutterWid) /
+    RulerAdj) - Editor.Paragraph.FirstIndent;
   SelectionChange(Sender);
 end;
 
@@ -532,7 +558,9 @@ procedure TMainForm.RightIndMouseUp(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Integer);
 begin
   FDragging := False;
-  Editor.Paragraph.RightIndent := Trunc((Ruler.ClientWidth-RightInd.Left+FDragOfs-2) / RulerAdj)-2*GutterWid;
+  Editor.Paragraph.RightIndent :=
+    Trunc((Ruler.ClientWidth - RightInd.Left + FDragOfs - 2) / RulerAdj) - 2 *
+    GutterWid;
   SelectionChange(Sender);
 end;
 
@@ -542,8 +570,8 @@ var
 begin
   CharPos.Y := SendMessage(Editor.Handle, EM_EXLINEFROMCHAR, 0,
     Editor.SelStart);
-  CharPos.X := (Editor.SelStart -
-    SendMessage(Editor.Handle, EM_LINEINDEX, CharPos.Y, 0));
+  CharPos.X := (Editor.SelStart - SendMessage(Editor.Handle, EM_LINEINDEX,
+    CharPos.Y, 0));
   Inc(CharPos.Y);
   Inc(CharPos.X);
   StatusBar.Panels[0].Text := Format(sColRowInfo, [CharPos.Y, CharPos.X]);
@@ -555,17 +583,17 @@ begin
   DragAcceptFiles(Handle, True);
   RichEditChange(nil);
   Editor.SetFocus;
-  Editor.Font.Name:='Colibri';
-  Editor.Font.Size:=12;
+  Editor.Font.Name := 'Colibri';
+  Editor.Font.Size := 12;
   { Check if we should load a file from the command line }
   if (ParamCount > 0) and FileExists(ParamStr(1)) then
     PerformFileOpen(ParamStr(1));
-     MainForm.Editor.Lines:=(FrPrincipal.DBMemo3.Lines);
+  MainForm.Editor.Lines := (FrPrincipal.DBMemo3.Lines);
 end;
 
 procedure TMainForm.WMDropFiles(var Msg: TWMDropFiles);
 var
-  CFileName: array[0..MAX_PATH] of Char;
+  CFileName: array [0 .. MAX_PATH] of Char;
 begin
   try
     if DragQueryFile(Msg.Drop, 0, CFileName, MAX_PATH) > 0 then
@@ -586,14 +614,16 @@ end;
 
 procedure TMainForm.SetModified(Value: Boolean);
 begin
-  if Value then StatusBar.Panels[1].Text := sModified
-  else StatusBar.Panels[1].Text := '';
+  if Value then
+    StatusBar.Panels[1].Text := sModified
+  else
+    StatusBar.Panels[1].Text := '';
 end;
 
 procedure TMainForm.SwitchLanguage(Sender: TObject);
 var
-  Name : String;
-  Size : Integer;
+  Name: String;
+  Size: Integer;
 begin
   if LoadNewResourceModule(TComponent(Sender).Tag) <> 0 then
   begin
@@ -601,8 +631,8 @@ begin
     Size := StrToInt(FontSize.Text);
     ReinitializeForms;
     LanguageEnglish.Checked := LanguageEnglish = Sender;
-    LanguageFrench.Checked  := LanguageFrench  = Sender;
-    LanguageGerman.Checked  := LanguageGerman  = Sender;
+    LanguageFrench.Checked := LanguageFrench = Sender;
+    LanguageGerman.Checked := LanguageGerman = Sender;
 
     CurrText.Name := Name;
     CurrText.Size := Size;
@@ -610,14 +640,15 @@ begin
     FontName.SelLength := 0;
 
     SetupRuler;
-    if Visible then Editor.SetFocus;
+    if Visible then
+      Editor.SetFocus;
   end;
 end;
 
 procedure TMainForm.ActionList2Update(Action: TBasicAction;
   var Handled: Boolean);
 begin
- { Update the status of the edit commands }
+  { Update the status of the edit commands }
   EditCutCmd.Enabled := Editor.SelLength > 0;
   EditCopyCmd.Enabled := EditCutCmd.Enabled;
   if Editor.HandleAllocated then

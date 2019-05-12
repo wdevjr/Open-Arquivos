@@ -165,7 +165,7 @@ begin
       FrPrincipal := TFrPrincipal.Create(Application);
     FrPrincipal.Show;
     FrPrincipal.Visible := true;
-   //  try
+    // try
     // thema := TStyleManager.Create();
     // thema.TrySetStyle('Sapphire Kamri');
     // FrPrincipal := TFrPrincipal.Create(Application);
@@ -175,12 +175,12 @@ begin
     // finally
     // FrPrincipal.Free;
     // end;
-    {  Except
-     on E: Exception do
-     begin
+    { Except
+      on E: Exception do
+      begin
 
-     end;
-     end; }
+      end;
+      end; }
 
   end
   else if DM.dst_Login.RecordCount = 0 then
@@ -217,17 +217,35 @@ begin
     try
       Qryorder.SQLConnection := DM.SQLConnection; // componente de conexão
       Qryorder.SQL.Add('SELECT MAX(ORDEM) FROM NUM_LOGADOS');
-      Qryorder.Open;
+      try
+        Qryorder.Open;
+      Except
+        on E: Exception do
+        begin
+          MessageDlg('Problema com com o Select MAX... problemas no Banco ....'
+            + E.Message, mtError, [mbOK], 0);
+        end;
+      end;
       if Qryorder.Fields[0].IsNull then
         // se a tabela está vazia retornará nulo    //então este será o primeiro registro
+        Qryorder.Fields[0].AsInteger := 1
       else
-        DtsrcLogados.DataSet.Open;
-      DtsrcLogados.DataSet.Append;
-      DM.cds_LogadosORDEM.AsInteger := Qryorder.Fields[0].AsInteger + 1;
-      DM.cds_LogadosCOD_USUARIO.Value := COD_USUARIO;
-      // DM.cds_LogadosDATAATUAL.Value := Date;
-      DtsrcLogados.DataSet.Post;
-      (DtsrcLogados.DataSet as TClientDataSet).ApplyUpdates(0);
+        try
+          DtsrcLogados.DataSet.Open;
+          DtsrcLogados.DataSet.Append;
+          DM.cds_LogadosORDEM.AsInteger := Qryorder.Fields[0].AsInteger + 1;
+          DM.cds_LogadosCOD_USUARIO.Value := COD_USUARIO;
+          // DM.cds_LogadosDATAATUAL.Value := Date;
+          DtsrcLogados.DataSet.Post;
+          (DtsrcLogados.DataSet as TClientDataSet).ApplyUpdates(0);
+        Except
+          on E: Exception do
+          begin
+            MessageDlg('Problemas no incremento (IncrementaAdd) ' + E.Message,
+              mtError, [mbOK], 0);
+          end;
+
+        end;
     finally
       FreeAndNil(Qryorder); // tira o objeto da memória
     end;
@@ -267,9 +285,9 @@ procedure TFrmLogin.FormShow(Sender: TObject);
 var
   i, cont, ForGlobal: Longint;
 begin
-  //Abertura := TAbertura.Create(Application);
-  //Abertura.Show;
-  //Abertura.Refresh;
+  // Abertura := TAbertura.Create(Application);
+  // Abertura.Show;
+  // Abertura.Refresh;
   Edtusuario.Items := DM.PreencheCombo;
   DM.Gauge;
   // auxRegistro := TRegIniFile.Create('\');
@@ -299,8 +317,8 @@ begin
   // mtWarning, [mbOK], 0);
   // Application.Terminate;
   // end;
-    Abertura.Free;
-  //Abertura.Close;
+  Abertura.Free;
+  // Abertura.Close;
 end;
 
 end.

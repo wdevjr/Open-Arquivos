@@ -1928,7 +1928,7 @@ object FrmLogAcesso: TFrmLogAcesso
           Margins.Top = 4
           Margins.Right = 4
           Margins.Bottom = 4
-          Date = 39781.753715729170000000
+          Date = 39781.667089699080000000
           TabOrder = 3
         end
       end
@@ -2032,7 +2032,7 @@ object FrmLogAcesso: TFrmLogAcesso
           Margins.Top = 4
           Margins.Right = 4
           Margins.Bottom = 4
-          Date = 39781.753715752320000000
+          Date = 39781.667089710650000000
           TabOrder = 0
           OnClick = MonthCalendar2Click
         end
@@ -2045,7 +2045,7 @@ object FrmLogAcesso: TFrmLogAcesso
           Margins.Top = 4
           Margins.Right = 4
           Margins.Bottom = 4
-          Date = 39781.753715752320000000
+          Date = 39781.667089710650000000
           TabOrder = 1
           OnClick = MonthCalendar3Click
         end

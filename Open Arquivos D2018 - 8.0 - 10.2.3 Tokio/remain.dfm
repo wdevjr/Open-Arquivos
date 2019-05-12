@@ -246,7 +246,7 @@ object MainForm: TMainForm
       OnChange = FontSizeChange
     end
     object UpDown1: TUpDown
-      Left = 443
+      Left = 427
       Top = 0
       Width = 15
       Height = 22
@@ -255,7 +255,7 @@ object MainForm: TMainForm
       TabOrder = 2
     end
     object ToolButton2: TToolButton
-      Left = 458
+      Left = 442
       Top = 0
       Width = 8
       Caption = 'ToolButton2'
@@ -263,7 +263,7 @@ object MainForm: TMainForm
       Style = tbsSeparator
     end
     object BoldButton: TToolButton
-      Left = 466
+      Left = 450
       Top = 0
       Hint = 'Bold'
       ImageIndex = 8
@@ -271,7 +271,7 @@ object MainForm: TMainForm
       OnClick = BoldButtonClick
     end
     object ItalicButton: TToolButton
-      Left = 489
+      Left = 473
       Top = 0
       Hint = 'Italic'
       ImageIndex = 9
@@ -279,7 +279,7 @@ object MainForm: TMainForm
       OnClick = ItalicButtonClick
     end
     object UnderlineButton: TToolButton
-      Left = 512
+      Left = 496
       Top = 0
       Hint = 'Underline'
       ImageIndex = 10
@@ -287,14 +287,14 @@ object MainForm: TMainForm
       OnClick = UnderlineButtonClick
     end
     object ToolButton16: TToolButton
-      Left = 535
+      Left = 519
       Top = 0
       Width = 8
       ImageIndex = 12
       Style = tbsDivider
     end
     object LeftAlign: TToolButton
-      Left = 543
+      Left = 527
       Top = 0
       Hint = 'Align Left'
       Grouped = True
@@ -304,7 +304,7 @@ object MainForm: TMainForm
     end
     object CenterAlign: TToolButton
       Tag = 2
-      Left = 566
+      Left = 550
       Top = 0
       Hint = 'Center'
       Grouped = True
@@ -314,7 +314,7 @@ object MainForm: TMainForm
     end
     object RightAlign: TToolButton
       Tag = 1
-      Left = 589
+      Left = 573
       Top = 0
       Hint = 'Align Right'
       Grouped = True
@@ -323,14 +323,14 @@ object MainForm: TMainForm
       OnClick = AlignButtonClick
     end
     object ToolButton20: TToolButton
-      Left = 612
+      Left = 596
       Top = 0
       Width = 8
       ImageIndex = 15
       Style = tbsDivider
     end
     object BulletsButton: TToolButton
-      Left = 620
+      Left = 604
       Top = 0
       Hint = 'Bullets|Enter bullet mode'
       ImageIndex = 14
@@ -338,7 +338,7 @@ object MainForm: TMainForm
       OnClick = BulletsButtonClick
     end
     object ToolButton3: TToolButton
-      Left = 643
+      Left = 627
       Top = 0
       Width = 8
       Caption = 'ToolButton3'
@@ -346,7 +346,7 @@ object MainForm: TMainForm
       Style = tbsSeparator
     end
     object ColorBox1: TColorBox
-      Left = 651
+      Left = 635
       Top = 0
       Width = 145
       Height = 22
@@ -487,7 +487,7 @@ object MainForm: TMainForm
     Left = 88
     Top = 68
     Bitmap = {
-      494C01010F001400240010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010F001400280010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000004000000001002000000000000040
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

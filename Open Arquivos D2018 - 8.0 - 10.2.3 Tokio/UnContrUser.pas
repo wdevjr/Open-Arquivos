@@ -207,46 +207,48 @@ begin
   begin
     excluir.Enabled := not IsEmpty;
   end;
- if (FrmLogin.ADMIN = 0) then
+  if (FrmLogin.ADMIN = 0) then
   begin
-    excluir.Enabled := false;
-  end else
+    excluir.Enabled := False;
+  end
+  else
   begin
-    excluir.Enabled := true;
+    excluir.Enabled := True;
   end;
 end;
 
 procedure TFrmContrUser.DtscuStateChange(Sender: TObject);
 begin
- if FrmLogin.ADMIN = 1 then
+  if FrmLogin.ADMIN = 1 then
   begin
-  with Dtscu.DataSet do
-  begin
-    excluir.Enabled := not IsEmpty;
-    inserir.Enabled := Dtscu.State in [dsBrowse, dsInactive];
-    gravar.Enabled := Dtscu.State in [dsInsert];
-    editar.Enabled := Dtscu.State in [dsEdit];
-    cancelar.Enabled := Dtscu.State in [dsInsert, dsEdit];
-    excluir.Enabled := Dtscu.State in [dsBrowse];
-    // trazerj.Enabled:=Dtscu.State in [dsBrowse,dsInactive];
+    with Dtscu.DataSet do
+    begin
+      excluir.Enabled := not IsEmpty;
+      inserir.Enabled := Dtscu.State in [dsBrowse, dsInactive];
+      gravar.Enabled := Dtscu.State in [dsInsert];
+      editar.Enabled := Dtscu.State in [dsEdit];
+      cancelar.Enabled := Dtscu.State in [dsInsert, dsEdit];
+      excluir.Enabled := Dtscu.State in [dsBrowse];
+      // trazerj.Enabled:=Dtscu.State in [dsBrowse,dsInactive];
 
-    // trazerj.Enabled:=Dtscu.State in [dsBrowse,dsInactive];
+      // trazerj.Enabled:=Dtscu.State in [dsBrowse,dsInactive];
+    end;
+  end
+  else
+  begin
+    with Dtscu.DataSet do
+    begin
+      excluir.Enabled := not IsEmpty;
+      inserir.Enabled := Dtscu.State in [dsBrowse, dsInactive];
+      gravar.Enabled := Dtscu.State in [dsInsert];
+      editar.Enabled := False;
+      cancelar.Enabled := Dtscu.State in [dsInsert, dsEdit];
+      excluir.Enabled := Dtscu.State in [dsBrowse];
+      // trazerj.Enabled:=Dtscu.State in [dsBrowse,dsInactive];
+
+      // trazerj.Enabled:=Dtscu.State in [dsBrowse,dsInactive];
+    end;
   end;
-  end else
-      begin
-        with Dtscu.DataSet do
-        begin
-         excluir.Enabled := not IsEmpty;
-         inserir.Enabled := Dtscu.State in [dsBrowse, dsInactive];
-         gravar.Enabled := Dtscu.State in [dsInsert];
-         editar.Enabled := False;
-         cancelar.Enabled := Dtscu.State in [dsInsert, dsEdit];
-         excluir.Enabled := Dtscu.State in [dsBrowse];
-    // trazerj.Enabled:=Dtscu.State in [dsBrowse,dsInactive];
-
-    // trazerj.Enabled:=Dtscu.State in [dsBrowse,dsInactive];
-        end;
-      end;
 end;
 
 procedure TFrmContrUser.excluirClick(Sender: TObject);
@@ -278,14 +280,14 @@ begin
   end;
   ConfigInicial;
   checadoUser := DM.receberValor;
-  if (frmlogin.ADMIN = 0) then
+  if (FrmLogin.ADMIN = 0) then
   begin
     DBCheckBox1.Visible := False;
     DBCheckBox2.Visible := False;
     DBCheckBox3.Visible := False;
     PanelPerfil.Visible := False;
     DBEdit3.PasswordChar := '*';
-    excluir.Enabled := false;
+    excluir.Enabled := False;
   end
   else
   begin
@@ -294,7 +296,7 @@ begin
     DBCheckBox3.Visible := True;
     PanelPerfil.Visible := True;
     DBEdit3.PasswordChar := #0;
-    excluir.Enabled:= True;
+    excluir.Enabled := True;
   end;
   with Dtscu.DataSet do
   begin
@@ -335,7 +337,7 @@ begin
   begin
     trazerj.Visible := False;
   end;
-  if frmlogin.ADMIN = 1 then
+  if FrmLogin.ADMIN = 1 then
   begin
     DBCheckBox1.Visible := True;
     DBCheckBox2.Visible := True;
@@ -376,7 +378,7 @@ var
   mensagem, campoEmBranco, TipoUser: String;
   num: integer;
 begin
-  checadoUser := frmlogin.ADMIN;
+  checadoUser := FrmLogin.ADMIN;
   TipoUser := '';
   mensagem := '';
   if checadoUser = 1 then
@@ -437,8 +439,7 @@ begin
         MB_OK + MB_ICONINFORMATION);
     end;
   end
-  else
-    if checadoUser = 0 then
+  else if checadoUser = 0 then
   begin
     if (DBEdit1.Text = '') then
     begin
@@ -457,7 +458,7 @@ begin
     end
     else
     begin
-      //DBEdit4.Text := StrToInt(100);
+      // DBEdit4.Text := StrToInt(100);
       Dtscu.DataSet.Post;
       (Dtscu.DataSet as TClientDataSet).ApplyUpdates(0);
       ConfigGravar;
@@ -480,12 +481,13 @@ begin
         MB_OK + MB_ICONWARNING);
     end;
   end;
-   if (FrmLogin.ADMIN = 0) then
+  if (FrmLogin.ADMIN = 0) then
   begin
-    excluir.Enabled := false;
-  end else
+    excluir.Enabled := False;
+  end
+  else
   begin
-    excluir.Enabled := true;
+    excluir.Enabled := True;
   end;
 end;
 
@@ -500,12 +502,13 @@ begin
   begin
     spPesqu.Enabled := not IsEmpty;
   end;
-   if (FrmLogin.ADMIN = 0) then
+  if (FrmLogin.ADMIN = 0) then
   begin
-    excluir.Enabled := false;
-  end else
+    excluir.Enabled := False;
+  end
+  else
   begin
-    excluir.Enabled := true;
+    excluir.Enabled := True;
   end;
 end;
 
@@ -522,10 +525,11 @@ begin
   DM.cds_User.Open;
   if (FrmLogin.ADMIN = 0) then
   begin
-    excluir.Enabled := false;
-  end else
+    excluir.Enabled := False;
+  end
+  else
   begin
-    excluir.Enabled := true;
+    excluir.Enabled := True;
   end;
 
   With DM.cds_User do
@@ -536,12 +540,12 @@ end;
 
 procedure TFrmContrUser.SpeedButton3Click(Sender: TObject);
 begin
-FrmThemas := TFrmThemas.Create(self);
-try
-  FrmThemas.ShowModal;
-finally
-  FrmThemas.Free;
-end;
+  FrmThemas := TFrmThemas.Create(self);
+  try
+    FrmThemas.ShowModal;
+  finally
+    FrmThemas.Free;
+  end;
 end;
 
 procedure TFrmContrUser.spPerfilClick(Sender: TObject);
@@ -560,7 +564,7 @@ end;
 
 procedure TFrmContrUser.spPesquClick(Sender: TObject);
 begin
-  FrmDlgProcuraPerfilUser := TFrmDlgProcuraPerfilUser.Create(Self,
+  FrmDlgProcuraPerfilUser := TFrmDlgProcuraPerfilUser.Create(self,
     DMII.sds_Pesq_PL);
   try
     if FrmDlgProcuraPerfilUser.ShowModal = mrOk then
@@ -582,7 +586,7 @@ var
   mensagem, campoEmBranco, TipoUser: String;
   num: integer;
 begin
-  checadoUser := frmlogin.ADMIN;
+  checadoUser := FrmLogin.ADMIN;
   TipoUser := '';
   mensagem := '';
   if (DBEdit1.Text <> '') and (DBEdit2.Text <> '') and (DBEdit3.Text <> '') then
@@ -656,18 +660,19 @@ begin
     MessageDlg('Algum campo esta em branco, Preencha-o!', mtWarning, [mbOK], 0);
     Abort;
   end;
-   if (FrmLogin.ADMIN = 0) then
+  if (FrmLogin.ADMIN = 0) then
   begin
-    excluir.Enabled := false;
-  end else
+    excluir.Enabled := False;
+  end
+  else
   begin
-    excluir.Enabled := true;
+    excluir.Enabled := True;
   end;
 end;
 
 procedure TFrmContrUser.trazerjClick(Sender: TObject);
 begin
-  FrmLocalizarUser := TFrmLocalizarUser.Create(Self, DM.sdss_User);
+  FrmLocalizarUser := TFrmLocalizarUser.Create(self, DM.sdss_User);
   try
     if FrmLocalizarUser.ShowModal = mrOk then
     begin
@@ -689,12 +694,13 @@ begin
     spPesqu.Enabled := not IsEmpty;
   end;
 
-   if (FrmLogin.ADMIN = 0) then
+  if (FrmLogin.ADMIN = 0) then
   begin
-    excluir.Enabled := false;
-  end else
+    excluir.Enabled := False;
+  end
+  else
   begin
-    excluir.Enabled := true;
+    excluir.Enabled := True;
   end;
 end;
 
