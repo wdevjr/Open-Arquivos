@@ -1926,13 +1926,15 @@ object FrmLogin: TFrmLogin
   end
   object Panel1: TPanel
     Left = 0
-    Top = 148
+    Top = 160
     Width = 261
-    Height = 60
+    Height = 48
     Align = alBottom
     BevelOuter = bvNone
     Color = clWhite
     TabOrder = 1
+    ExplicitLeft = -6
+    ExplicitTop = 145
     object Image2: TImage
       Left = 11
       Top = 8
@@ -2082,7 +2084,7 @@ object FrmLogin: TFrmLogin
     end
     object BitBtn2: TBitBtn
       Left = 83
-      Top = 20
+      Top = 9
       Width = 75
       Height = 29
       Caption = 'Login'
@@ -2120,7 +2122,7 @@ object FrmLogin: TFrmLogin
     end
     object BitBtn1: TBitBtn
       Left = 164
-      Top = 20
+      Top = 9
       Width = 81
       Height = 29
       Kind = bkCancel
