@@ -1933,8 +1933,6 @@ object FrmLogin: TFrmLogin
     BevelOuter = bvNone
     Color = clWhite
     TabOrder = 1
-    ExplicitLeft = -6
-    ExplicitTop = 145
     object Image2: TImage
       Left = 11
       Top = 8

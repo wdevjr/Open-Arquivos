@@ -634,12 +634,12 @@ begin
       DBEdit3.Font.Color := clBlue;
     end;
     PanelAutor.Visible := True;
-    Height := 599;
+    Height := 610;
   end
   else
   begin
     PanelAutor.Visible := False;
-    Height := 560;
+    Height := 568;
   end;
 
 end;
@@ -1038,6 +1038,21 @@ begin
     Image6.Visible := False;
     SysUtils.Abort;
   end;
+
+    if CheckBox1.Checked = True then
+  begin
+    if DBEdit3.Text > '0' then
+    begin
+      DBEdit3.Font.Color := clBlue;
+    end;
+    PanelAutor.Visible := True;
+    Height := 610;
+  end
+  else
+  begin
+    PanelAutor.Visible := False;
+    Height := 568;
+  end;
 end;
 
 procedure TFrPrincipal.btnvisualizarClick(Sender: TObject);
@@ -1149,6 +1164,20 @@ begin
   end;
   MostrarIcon;
   IniciaAdministracao;
+  if CheckBox1.Checked = True then
+  begin
+    if DBEdit3.Text > '0' then
+    begin
+      DBEdit3.Font.Color := clBlue;
+    end;
+    PanelAutor.Visible := True;
+    Height := 610;
+  end
+  else
+  begin
+    PanelAutor.Visible := False;
+    Height := 568;
+  end;
 end;
 
 procedure TFrPrincipal.consultasExecute(Sender: TObject);
@@ -1374,6 +1403,9 @@ begin
     Dtsrc.DataSet.Open;
   Dtsrc.DataSet.Append;
 
+  DM.cds_UserAdd.Open;
+  DM.cds_UserAdd.Append;
+
   DtscLog.DataSet.Open;
   DtscLog.DataSet.Append;
   ConfigInserir;
@@ -1395,7 +1427,20 @@ begin
   CheckBox1.Checked := False;
   PanelPergunta.Visible := True;
   PanelAutor.Visible := False;
-
+  if CheckBox1.Checked = True then
+  begin
+    if DBEdit3.Text > '0' then
+    begin
+      DBEdit3.Font.Color := clBlue;
+    end;
+    PanelAutor.Visible := True;
+    Height := 610;
+  end
+  else
+  begin
+    PanelAutor.Visible := False;
+    Height := 568;
+  end;
   // Height:=549;
 end;
 
@@ -1926,7 +1971,7 @@ begin
   else
   begin
     PanelAutor.Visible := False;
-    Height := 560;
+    Height := 568;
   end;
 end;
 
@@ -2158,7 +2203,7 @@ begin
       DBEdit3.Font.Color := clBlue;
     end;
     PanelAutor.Visible := True;
-    Height := 610;
+    Height := 615;
   end
   else
   begin
@@ -2227,6 +2272,12 @@ begin
     tempNome := ExtractFileName(OpenDialog1.FileName);
     DtscLog.DataSet.Post;
     (DtscLog.DataSet as TClientDataSet).ApplyUpdates(0);
+
+    DM.cds_UserAddIDUSUARIOS.Value := FrmLogin.COD_USUARIO;
+    DM.cds_UserAddIDARQUIVOS.Value := DM.cds_arquivoID.Value;
+    DM.cds_UserAdd.Post;
+    DM.cds_UserAdd.ApplyUpdates(0);
+
 
     // altera a ProgressBar
     frmSplash.ProgressBar1.Position := 51;

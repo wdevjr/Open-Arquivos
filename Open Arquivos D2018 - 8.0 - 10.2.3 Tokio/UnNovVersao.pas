@@ -113,7 +113,7 @@ begin
         end;
         DBGrid1.DataSource := Dtsrc;
         Open;
-
+        Refresh;
         BtnOk.Enabled := not IsEmpty;
 
         if (EditProc1.Text <> '') then

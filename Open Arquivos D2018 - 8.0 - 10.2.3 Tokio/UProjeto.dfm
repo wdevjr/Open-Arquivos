@@ -3,7 +3,7 @@ object FrPrincipal: TFrPrincipal
   Top = 144
   BorderStyle = bsSingle
   Caption = 'Open Arquivos - v 8.0  - Uso em Rede'
-  ClientHeight = 557
+  ClientHeight = 565
   ClientWidth = 844
   Color = 14083559
   Font.Charset = DEFAULT_CHARSET
@@ -22,7 +22,7 @@ object FrPrincipal: TFrPrincipal
   TextHeight = 13
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 532
+    Top = 540
     Width = 844
     Height = 25
     Color = 14083559
@@ -43,9 +43,9 @@ object FrPrincipal: TFrPrincipal
   end
   object Panel5: TPanel
     Left = 0
-    Top = 481
+    Top = 479
     Width = 844
-    Height = 51
+    Height = 61
     Align = alBottom
     Color = clWhite
     Font.Charset = DEFAULT_CHARSET
@@ -58,7 +58,7 @@ object FrPrincipal: TFrPrincipal
     TabOrder = 1
     object inserir: TSpeedButton
       Left = 8
-      Top = 2
+      Top = 10
       Width = 74
       Height = 38
       Caption = 'Inserir'
@@ -124,7 +124,7 @@ object FrPrincipal: TFrPrincipal
     end
     object excluir: TSpeedButton
       Left = 238
-      Top = 2
+      Top = 10
       Width = 79
       Height = 38
       Caption = 'Excluir'
@@ -190,7 +190,7 @@ object FrPrincipal: TFrPrincipal
     end
     object cancelar: TSpeedButton
       Left = 317
-      Top = 2
+      Top = 10
       Width = 78
       Height = 38
       Caption = 'Cancelar'
@@ -256,7 +256,7 @@ object FrPrincipal: TFrPrincipal
     end
     object gravar: TSpeedButton
       Left = 82
-      Top = 2
+      Top = 10
       Width = 77
       Height = 38
       Caption = 'Gravar'
@@ -322,7 +322,7 @@ object FrPrincipal: TFrPrincipal
     end
     object ExcluirTemp: TSpeedButton
       Left = 693
-      Top = 4
+      Top = 12
       Width = 129
       Height = 32
       Caption = 'Excluir o Tempor'#225'rio'
@@ -424,7 +424,7 @@ object FrPrincipal: TFrPrincipal
     end
     object editar: TSpeedButton
       Left = 159
-      Top = 2
+      Top = 10
       Width = 79
       Height = 38
       Caption = 'Editar'
@@ -510,7 +510,7 @@ object FrPrincipal: TFrPrincipal
     end
     object relatorio: TSpeedButton
       Left = 504
-      Top = 10
+      Top = 18
       Width = 87
       Height = 25
       Caption = 'Relat'#243'rio'
@@ -577,7 +577,7 @@ object FrPrincipal: TFrPrincipal
     end
     object fundobtn: TSpeedButton
       Left = 416
-      Top = 8
+      Top = 16
       Width = 82
       Height = 29
       Caption = 'Fundo Color'
@@ -1692,7 +1692,7 @@ object FrPrincipal: TFrPrincipal
     Left = 608
     Top = 184
     Bitmap = {
-      494C010112001300780028002800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C0101120013007C0028002800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000A0000000C8000000010020000000000000F4
       0100000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -5828,7 +5828,7 @@ object FrPrincipal: TFrPrincipal
     Left = 676
     Top = 183
     Bitmap = {
-      494C010105000900780010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C0101050009007C0010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000002000000001002000000000000020
       00000000000000000000000000000000000000000000F7F7F700EFEFEF00E7E7
       E700E7E7E700EFEFEF00EFEFEF00F7F7F700FFFFFF00FFFFFF00FFFFFF00FFFF
@@ -6338,7 +6338,7 @@ object FrPrincipal: TFrPrincipal
     Left = 592
     Top = 232
     Bitmap = {
-      494C01010F001300780013001300FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010F0013007C0013001300FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       00000000000036000000280000004C0000004C0000000100200000000000405A
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

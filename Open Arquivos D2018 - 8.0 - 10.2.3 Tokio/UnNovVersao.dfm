@@ -109,7 +109,6 @@ object FrmArquProc: TFrmArquProc
     Color = 14083559
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 435
     object Panel3: TPanel
       Left = 602
       Top = 1
@@ -418,7 +417,6 @@ object FrmArquProc: TFrmArquProc
         Width = 50
       end>
     OnDrawPanel = StsBrDrawPanel
-    ExplicitTop = 483
   end
   object Dtsrc: TDataSource
     DataSet = DM.sds_Arqu
