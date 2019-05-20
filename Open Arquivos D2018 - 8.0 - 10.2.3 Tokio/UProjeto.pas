@@ -1004,12 +1004,12 @@ begin
       DBEdit3.Font.Color := clBlue;
     end;
     PanelAutor.Visible := True;
-    Height := 599;
+    Height := 610;
   end
   else
   begin
     PanelAutor.Visible := False;
-    Height := 560;
+    Height := 568;
   end;
 
 
@@ -1915,7 +1915,7 @@ begin
 
   StatusBar1.Panels[0].Text := Saudacao + ' Hoje é ' +
     formatdatetime('dddddd', Date);
-  if (FrmLogin.ADMIN = 0) then
+  if (FrmLogin.TODOS = 0) then
   begin
     lookUser.Visible := False;
   end
