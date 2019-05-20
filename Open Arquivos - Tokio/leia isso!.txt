@@ -7,9 +7,9 @@
    
    Mais uma vez: quando a pessoa não é administrador ele só vai enchergar os arquivos que outros só os outros é que vão permitir enchergar tal arquivo e ele mesmo.
    
-   Agora deve-se aplicar politicas de uso porque Todo mundo "não" pode ser "administrador", entendeu? só usuário importante ou responsavel.
+   Agora deve-se aplicar politicas de uso porque Todo mundo não pode ser "administrador", entendeu? só usuário importante ou responsavel.
    
-   É por aí .... mas tudo que escrevi agora é muito importante, senão vira uma "Bagunça", já que o softer tem politicas de restrição/uso.
+   É por aí .... mas tudo que escrevi agora é muito importante, senão vira uma "Bagunça", já que o softer tem politicas de restrição de uso.
    
   warhjr, obrigado por usar o Open Arquivos!
   
