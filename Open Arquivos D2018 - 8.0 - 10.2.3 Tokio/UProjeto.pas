@@ -1427,9 +1427,10 @@ begin
   CheckBox1.Checked := False;
   PanelPergunta.Visible := True;
   PanelAutor.Visible := False;
+
   if CheckBox1.Checked = True then
   begin
-    if DBEdit3.Text > '0' then
+    if DBEdit3.Text <> ' ' then
     begin
       DBEdit3.Font.Color := clBlue;
     end;
@@ -1438,7 +1439,8 @@ begin
   end
   else
   begin
-    PanelAutor.Visible := False;
+    //PanelAutor.Visible := false;
+    DBEdit3.Font.Color := clBlue;
     Height := 568;
   end;
   // Height:=549;
@@ -1519,7 +1521,7 @@ procedure TFrPrincipal.cancelarClick(Sender: TObject);
 begin
   Dtsrc.DataSet.Cancel;
   ConfigCancelar;
-  CheckBox1.Checked := True;
+  //CheckBox1.Checked := True;
   PanelPergunta.Visible := True;
   PanelAutor.Visible := True;
   MostrarIcon;
@@ -1539,32 +1541,28 @@ begin
 
     if Dtsrc.DataSet.State = dsbrowse then
     begin
-      if DBEdit4.Text <> '0' then
+      if DBEdit4.Text <> ' ' then
       begin
-        DBText5.Font.Color := clBlue;
-      end
-      else
-      begin
-        DBText5.Font.Color := $00CBEAEB; // $00E3F4F4
+        DBText3.Font.Color := clBlue;
       end;
-      if DBEdit3.Text > '0' then
+      if DBEdit3.Text <> '' then
       begin
         PanelAutor.Visible := True;
         DBEdit3.Font.Color := clBlue;
-        Height := 610;
+        Height := 658;
         CheckBox1.Checked := True;
       end
-      else if DBEdit3.Text <> '0' then
+      else if DBEdit3.Text = '' then
       begin
-        PanelAutor.Visible := False;
-        DBText3.Font.Color := $00CBEAEB; // $00E3F4F4
+        PanelAutor.Visible := false;
+        DBText3.Font.Color := clBlue; // $00E3F4F4
         Height := 610;
         CheckBox1.Checked := False;
       end;
     end;
 
   end;
-
+     //DBText3.Font.Color := clBlue;
 end;
 
 function FileExtencaowrhj(const FileName: string): string;
@@ -1782,20 +1780,21 @@ begin
     DtscLog.DataSet.Post;
     (DtscLog.DataSet as TClientDataSet).ApplyUpdates(0);
     if CheckBox1.Checked = True then
+  begin
+    if DBEdit3.Text <> ' ' then
     begin
-      if DBEdit3.Text > '0' then
-      begin
-        DBEdit3.Font.Color := clBlue;
-      end;
-      PanelAutor.Visible := True;
-      Height := 599;
-    end
-    else
-    begin
-      PanelAutor.Visible := False;
-      Height := 560;
+      DBEdit3.Font.Color := clBlue;
     end;
+    PanelAutor.Visible := True;
+    Height := 610;
+  end
+  else
+  begin
+    PanelAutor.Visible := False;
+    Height := 568;
   end;
+  end;
+
 
   if (FrmLogin.TODOS = 0) then
   begin
@@ -1814,21 +1813,21 @@ begin
   with DM.cds_arquivo do
   begin
     DM.cds_arquivoCOD_ASSUNTO.Value := 0;
-    DM.cds_arquivoTITULOASSUN.Value := '';
+    DM.cds_arquivoTITULOASSUN.Value := 'Sem Assunto!';
   end;
   if CheckBox1.Checked = True then
   begin
-    if DBEdit3.Text > '0' then
+    if DBEdit3.Text <> ' ' then
     begin
       DBEdit3.Font.Color := clBlue;
     end;
     PanelAutor.Visible := True;
-    Height := 599;
+    Height := 610;
   end
   else
   begin
     PanelAutor.Visible := False;
-    Height := 560;
+    Height := 568;
   end;
 end;
 
@@ -1839,23 +1838,23 @@ begin
   with DM.cds_arquivo do
   begin
     DM.cds_arquivoCOD_AUTOR.Value := 0;
-    DM.cds_arquivoNOME.Value := '';
+    DM.cds_arquivoNOME.Value := 'Sem Autor!';
     PanelAutor.Visible := False;
     CheckBox1.Checked := False;
   end;
   if CheckBox1.Checked = True then
   begin
-    if DBEdit3.Text > '0' then
+    if DBEdit3.Text <> ' ' then
     begin
       DBEdit3.Font.Color := clBlue;
     end;
     PanelAutor.Visible := True;
-    Height := 599;
+    Height := 610;
   end
   else
   begin
     PanelAutor.Visible := False;
-    Height := 560;
+    Height := 568;
   end;
 end;
 

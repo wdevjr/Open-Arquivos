@@ -781,9 +781,9 @@ object FrPrincipal: TFrPrincipal
       Transparent = True
     end
     object DBText5: TDBText
-      Left = 64
+      Left = 66
       Top = 129
-      Width = 654
+      Width = 652
       Height = 17
       Color = 13363947
       DataField = 'TITULOASSUN'
@@ -1362,7 +1362,6 @@ object FrPrincipal: TFrPrincipal
     Color = 14083559
     ParentBackground = False
     TabOrder = 5
-    Visible = False
     object Label12: TLabel
       Left = 15
       Top = 1
@@ -1392,7 +1391,6 @@ object FrPrincipal: TFrPrincipal
       ParentColor = False
       ParentFont = False
       Transparent = False
-      Visible = False
     end
     object BtnLoc02: TSpeedButton
       Left = 16
@@ -1467,7 +1465,7 @@ object FrPrincipal: TFrPrincipal
     end
     object excluiAutor: TSpeedButton
       Left = 724
-      Top = 18
+      Top = 12
       Width = 28
       Height = 22
       Flat = True
@@ -1594,7 +1592,7 @@ object FrPrincipal: TFrPrincipal
     object Label14: TLabel
       Left = 693
       Top = 167
-      Width = 79
+      Width = 85
       Height = 24
       Caption = 'Label14'
       Font.Charset = DEFAULT_CHARSET
@@ -1692,7 +1690,7 @@ object FrPrincipal: TFrPrincipal
     Left = 608
     Top = 184
     Bitmap = {
-      494C0101120013007C0028002800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010112001300840028002800FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000A0000000C8000000010020000000000000F4
       0100000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -5828,7 +5826,7 @@ object FrPrincipal: TFrPrincipal
     Left = 676
     Top = 183
     Bitmap = {
-      494C0101050009007C0010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010105000900840010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000002000000001002000000000000020
       00000000000000000000000000000000000000000000F7F7F700EFEFEF00E7E7
       E700E7E7E700EFEFEF00EFEFEF00F7F7F700FFFFFF00FFFFFF00FFFFFF00FFFF
@@ -6338,7 +6336,7 @@ object FrPrincipal: TFrPrincipal
     Left = 592
     Top = 232
     Bitmap = {
-      494C01010F0013007C0013001300FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010F001300840013001300FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       00000000000036000000280000004C0000004C0000000100200000000000405A
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
