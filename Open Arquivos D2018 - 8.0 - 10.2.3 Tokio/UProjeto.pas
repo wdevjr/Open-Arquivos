@@ -1549,7 +1549,7 @@ begin
       begin
         PanelAutor.Visible := True;
         DBEdit3.Font.Color := clBlue;
-        Height := 658;
+        Height := 558;
         CheckBox1.Checked := True;
       end
       else if DBEdit3.Text = '' then
