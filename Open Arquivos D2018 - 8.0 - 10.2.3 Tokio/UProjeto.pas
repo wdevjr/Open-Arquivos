@@ -1549,14 +1549,14 @@ begin
       begin
         PanelAutor.Visible := True;
         DBEdit3.Font.Color := clBlue;
-        Height := 558;
+        Height := 610;
         CheckBox1.Checked := True;
       end
       else if DBEdit3.Text = '' then
       begin
         PanelAutor.Visible := false;
         DBText3.Font.Color := clBlue; // $00E3F4F4
-        Height := 610;
+        Height := 568;
         CheckBox1.Checked := False;
       end;
     end;
@@ -1753,6 +1753,16 @@ begin
     MessageDlg('Preencha o campo Hora!',mtWarning,[mbOK],0);
     end }
   // else
+  if (DBMemo2.Lines.Text = '') then
+  begin
+    MessageDlg('Carregue o Arquivo!', mtWarning, [mbOK], 0);
+  end
+  else
+    if (DBText5.Caption = '') then
+  begin
+    MessageDlg('Preencha o campo Assunto!', mtWarning, [mbOK], 0);
+  end
+  else
   if (DBEdit2.Text = '') then
   begin
     MessageDlg('Preencha o campo Titulo!', mtWarning, [mbOK], 0);
@@ -2197,17 +2207,17 @@ procedure TFrPrincipal.gravarClick(Sender: TObject);
 begin
   if CheckBox1.Checked = True then
   begin
-    if DBEdit3.Text > '0' then
+    if DBEdit3.Text <> ' ' then
     begin
       DBEdit3.Font.Color := clBlue;
     end;
     PanelAutor.Visible := True;
-    Height := 615;
+    Height := 610;
   end
   else
   begin
     PanelAutor.Visible := False;
-    Height := 610;
+    Height := 568;
   end;
   DBEdit1.Text := IntToStr(FrmLogin.COD_USUARIO);
   { if (DBEdit5.Text='  /  /    ') then
@@ -2220,6 +2230,16 @@ begin
     MessageDlg('Preencha o campo Hora!',mtWarning,[mbOK],0);
     end }
   // else
+  if (DBMemo2.Lines.Text = '') then
+  begin
+    MessageDlg('Carregue o Arquivo!', mtWarning, [mbOK], 0);
+  end
+  else
+  if (DBText5.Caption = '') then
+  begin
+    MessageDlg('Preencha o campo Assunto!', mtWarning, [mbOK], 0);
+  end
+  else
   if (DBEdit2.Text = '') then
   begin
     MessageDlg('Preencha o campo Titulo!', mtWarning, [mbOK], 0);
