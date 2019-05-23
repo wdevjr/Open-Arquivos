@@ -997,22 +997,6 @@ begin
     // Height := 615;
   end;
 
-  if CheckBox1.Checked = True then
-  begin
-    if DBEdit3.Text > '0' then
-    begin
-      DBEdit3.Font.Color := clBlue;
-    end;
-    PanelAutor.Visible := True;
-    Height := 610;
-  end
-  else
-  begin
-    PanelAutor.Visible := False;
-    Height := 568;
-  end;
-
-
   // end;
   // finally
   // FrmProcedimento.Close;
@@ -1041,7 +1025,7 @@ begin
 
     if CheckBox1.Checked = True then
   begin
-    if DBEdit3.Text > '0' then
+    if DBEdit3.Text <> ' ' then
     begin
       DBEdit3.Font.Color := clBlue;
     end;
@@ -1535,7 +1519,7 @@ begin
     excluiAssunto.Enabled := not IsEmpty;
     excluiAutor.Enabled := not IsEmpty;
     lookUser.Enabled := not IsEmpty;
-    relatorios.Enabled := not IsEmpty;
+    //relatorios.Enabled := not IsEmpty;
 
     // exclusão de campos recebendo 0
 
