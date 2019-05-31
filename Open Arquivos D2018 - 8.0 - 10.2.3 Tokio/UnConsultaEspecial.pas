@@ -32,7 +32,6 @@ type
     BitBtn2: TBitBtn;
     SpeedButton4: TSpeedButton;
     Panel2: TPanel;
-    RadioGroup1: TRadioGroup;
     Panel17: TPanel;
     SpeedButton8: TSpeedButton;
     Label13: TLabel;
@@ -51,6 +50,25 @@ type
     Label1: TLabel;
     DBText1: TDBText;
     DBEdit1: TDBEdit;
+    DataSourceCriterio: TDataSource;
+    SpeedButton1: TSpeedButton;
+    SpeedButton9: TSpeedButton;
+    SpeedButton10: TSpeedButton;
+    SpeedButton14: TSpeedButton;
+    SpeedButton15: TSpeedButton;
+    Panel5: TPanel;
+    SpeedButton2: TSpeedButton;
+    EditPesqu: TMaskEdit;
+    RadioGroup1: TRadioGroup;
+    DBGrid1: TDBGrid;
+    Alert: TPanel;
+    Label3: TLabel;
+    Label30: TLabel;
+    PanelMaximizar: TPanel;
+    Label5: TLabel;
+    SpeedButton5: TSpeedButton;
+    GroupBox1: TGroupBox;
+    CheckBoxConsulta: TCheckBox;
     PanelData: TPanel;
     SpeedButton11: TSpeedButton;
     Label8: TLabel;
@@ -58,34 +76,13 @@ type
     Label9: TLabel;
     DateTimePicker1: TDateTimePicker;
     DateTimePicker2: TDateTimePicker;
-    Panel3: TPanel;
-    GroupBox1: TGroupBox;
-    CheckBoxConsulta: TCheckBox;
     Panel4: TPanel;
     Label2: TLabel;
     DBText4: TDBText;
-    DBEdit4: TDBEdit;
-    DataSourceCriterio: TDataSource;
-    SpeedButton1: TSpeedButton;
     SpeedButton7: TSpeedButton;
-    SpeedButton9: TSpeedButton;
-    SpeedButton10: TSpeedButton;
     SpeedButton12: TSpeedButton;
     SpeedButton13: TSpeedButton;
-    SpeedButton14: TSpeedButton;
-    SpeedButton15: TSpeedButton;
-    Panel5: TPanel;
-    EditPesqu: TMaskEdit;
-    SpeedButton2: TSpeedButton;
-    PanelComplete: TPanel;
-    Alert: TPanel;
-    Label3: TLabel;
-    Label30: TLabel;
-    PanelMaximizar: TPanel;
-    Label5: TLabel;
-    SpeedButton5: TSpeedButton;
-    Panel9: TPanel;
-    DBGrid1: TDBGrid;
+    DBEdit4: TDBEdit;
     procedure SpeedButton8Click(Sender: TObject);
     procedure SpeedButton7Click(Sender: TObject);
     procedure SpeedButton6Click(Sender: TObject);
@@ -96,7 +93,6 @@ type
     procedure DBGrid1CellClick(Column: TColumn);
     procedure SpeedButton4Click(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
-    procedure FormShow(Sender: TObject);
     procedure DBGrid1DrawColumnCell(Sender: TObject; const Rect: TRect;
       DataCol: Integer; Column: TColumn; State: TGridDrawState);
     procedure RadioGroup1Click(Sender: TObject);
@@ -117,6 +113,7 @@ type
     procedure desabilitar02Click(Sender: TObject);
     procedure SpeedButton14Click(Sender: TObject);
     procedure SpeedButton5Click(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
 
   private
     buffer: array [0 .. 255] of Char;
@@ -339,33 +336,25 @@ begin
 
 end;
 
-procedure TFrmView.FormClose(Sender: TObject; var Action: TCloseAction);
+procedure TFrmView.FormActivate(Sender: TObject);
 begin
-  DM.sds_view.CLOSE;
-  // DM.sds_view_todos.CLOSE;
-  DM.cds_User.CLOSE;
-  DM.cds_UserCod.CLOSE;
-  DM.cds_Assunt.CLOSE;
-
-  DM.sds_view.Filtered := False;
-end;
-
-procedure TFrmView.FormShow(Sender: TObject);
-begin
-  if (FrmLogin.TODOS = 1) then
+  if (FrmLogin.TODOS = 0) then
   begin
-    Panel4.Visible := False;
-    Panel8.Visible := True;
-    Panel2.Height := 365;
-    FrmView.Height := 716;
-  end
-  else
+    Panel8.Visible := False;
+    Panel4.Visible := True;
+
+    Panel2.Height := 320;
+   // FrmView.Height := 716;
+  end   else
+ if (FrmLogin.TODOS = 1) then
   begin
     Panel4.Visible := True;
-    Panel8.Visible := False;
-    Panel2.Height := 365;
-    FrmView.Height := 716;
+    Panel8.Visible := True;
+    Panel2.Height := 354;
+    //FrmView.Height := 716;
   end;
+
+
   CodigoUser := '';
   CodigoUserPorNome := '';
   CodigoAssunto := '';
@@ -378,6 +367,17 @@ begin
   DataSourceCriterio.DataSet.CLOSE;
   PanelMostrData.Visible := False;
 
+end;
+
+procedure TFrmView.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  DM.sds_view.CLOSE;
+  // DM.sds_view_todos.CLOSE;
+  DM.cds_User.CLOSE;
+  DM.cds_UserCod.CLOSE;
+  DM.cds_Assunt.CLOSE;
+
+  DM.sds_view.Filtered := False;
 end;
 
 procedure TFrmView.habilitar00Click(Sender: TObject);
@@ -586,7 +586,7 @@ begin
   // DM.sds_view_todos.CLOSE;
   if (FrmLogin.TODOS = 1) then
   begin
-    Panel4.Visible := False;
+   // Panel4.Visible := False;
     case RadioGroup1.ItemIndex of
       0:
         begin

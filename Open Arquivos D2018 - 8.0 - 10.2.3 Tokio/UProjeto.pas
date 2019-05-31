@@ -1954,12 +1954,12 @@ begin
   FrmLogin.Visible := False;
   if CheckBox1.Checked = True then
   begin
-    if DBEdit3.Text > '0' then
+    if DBEdit3.Text <> ' ' then
     begin
       DBEdit3.Font.Color := clBlue;
     end;
     PanelAutor.Visible := True;
-    Height := 599;
+    Height := 610;
   end
   else
   begin
