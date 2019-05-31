@@ -31,29 +31,7 @@ type
     BitBtn1: TBitBtn;
     BitBtn2: TBitBtn;
     SpeedButton4: TSpeedButton;
-    Panel2: TPanel;
-    Panel17: TPanel;
-    SpeedButton8: TSpeedButton;
-    Label13: TLabel;
-    DBText3: TDBText;
-    habilitar00: TSpeedButton;
-    desabilitar00: TSpeedButton;
-    DBEdit3: TDBEdit;
-    Panel12: TPanel;
-    SpeedButton6: TSpeedButton;
-    Label7: TLabel;
-    DBText2: TDBText;
-    habilitar02: TSpeedButton;
-    desabilitar02: TSpeedButton;
-    DBEdit2: TDBEdit;
-    Panel8: TPanel;
-    Label1: TLabel;
-    DBText1: TDBText;
-    DBEdit1: TDBEdit;
     DataSourceCriterio: TDataSource;
-    SpeedButton1: TSpeedButton;
-    SpeedButton9: TSpeedButton;
-    SpeedButton10: TSpeedButton;
     SpeedButton14: TSpeedButton;
     SpeedButton15: TSpeedButton;
     Panel5: TPanel;
@@ -83,6 +61,27 @@ type
     SpeedButton12: TSpeedButton;
     SpeedButton13: TSpeedButton;
     DBEdit4: TDBEdit;
+    Panel8: TPanel;
+    Label1: TLabel;
+    DBText1: TDBText;
+    SpeedButton1: TSpeedButton;
+    SpeedButton9: TSpeedButton;
+    SpeedButton10: TSpeedButton;
+    DBEdit1: TDBEdit;
+    Panel12: TPanel;
+    SpeedButton6: TSpeedButton;
+    Label7: TLabel;
+    DBText2: TDBText;
+    habilitar02: TSpeedButton;
+    desabilitar02: TSpeedButton;
+    DBEdit2: TDBEdit;
+    Panel17: TPanel;
+    SpeedButton8: TSpeedButton;
+    Label13: TLabel;
+    DBText3: TDBText;
+    habilitar00: TSpeedButton;
+    desabilitar00: TSpeedButton;
+    DBEdit3: TDBEdit;
     procedure SpeedButton8Click(Sender: TObject);
     procedure SpeedButton7Click(Sender: TObject);
     procedure SpeedButton6Click(Sender: TObject);
@@ -343,14 +342,14 @@ begin
     Panel8.Visible := False;
     Panel4.Visible := True;
 
-    Panel2.Height := 320;
+    //Panel2.Height := 320;
    // FrmView.Height := 716;
   end   else
  if (FrmLogin.TODOS = 1) then
   begin
     Panel4.Visible := True;
     Panel8.Visible := True;
-    Panel2.Height := 354;
+   // Panel2.Height := 354;
     //FrmView.Height := 716;
   end;
 
@@ -482,8 +481,17 @@ end;
 
 procedure TFrmView.SpeedButton7Click(Sender: TObject);
 begin
+
   FrmLocalizarUser := TFrmLocalizarUser.Create(Self, DM.sds_UserPorCriterio);
-  FrmLocalizarUser.ShowModal;
+  try
+  if FrmLocalizarUser.ShowModal = mrOk then
+  begin
+      DM.sds_UserPorCriterio.Open;
+  end;
+finally
+  FrmLocalizarUser.Free;
+  //DM.sds_UserPorCriterio.Close;
+end;
 end;
 
 procedure TFrmView.SpeedButton10Click(Sender: TObject);
@@ -536,7 +544,7 @@ begin
   DM.cds_Assunt.CLOSE;
   DtsrcCod.DataSet.CLOSE;
   DataSourceCriterio.DataSet.CLOSE;
-  PanelComplete.Visible := False;
+  //PanelComplete.Visible := False;
   PanelMaximizar.Visible := False;
   DM.sds_view.Filtered := False;
 end;
@@ -661,12 +669,12 @@ begin
           if ((DM.sds_view.RecordCount) >= 4) then
           begin
             PanelMaximizar.Visible := True;
-            PanelComplete.Visible := True;
+            //PanelComplete.Visible := True;
           end
           else if ((DM.sds_view.RecordCount) <= 3) then
           begin
             PanelMaximizar.Visible := False;
-            PanelComplete.Visible := False;
+            //PanelComplete.Visible := False;
           end;
         end;
       1:
@@ -739,12 +747,12 @@ begin
           if ((DM.sds_view.RecordCount) >= 2) then
           begin
             PanelMaximizar.Visible := True;
-            PanelComplete.Visible := True;
+           // PanelComplete.Visible := True;
           end
           else if ((DM.sds_view.RecordCount) = 1) then
           begin
             PanelMaximizar.Visible := False;
-            PanelComplete.Visible := False;
+            //PanelComplete.Visible := False;
           end;
 
         end;
@@ -900,12 +908,12 @@ begin
           if ((DM.sds_view.RecordCount) >= 4) then
           begin
             PanelMaximizar.Visible := True;
-            PanelComplete.Visible := True;
+            //PanelComplete.Visible := True;
           end
           else if ((DM.sds_view.RecordCount) <= 3) then
           begin
             PanelMaximizar.Visible := False;
-            PanelComplete.Visible := False;
+            //PanelComplete.Visible := False;
           end;
 
         end;
@@ -954,12 +962,12 @@ begin
           if ((DM.sds_view.RecordCount) >= 4) then
           begin
             PanelMaximizar.Visible := True;
-            PanelComplete.Visible := True;
+           // PanelComplete.Visible := True;
           end
           else if ((DM.sds_view.RecordCount) <= 3) then
           begin
             PanelMaximizar.Visible := False;
-            PanelComplete.Visible := False;
+           // PanelComplete.Visible := False;
           end;
 
         end;
@@ -1063,12 +1071,12 @@ begin
           if ((DM.sds_view.RecordCount) >= 4) then
           begin
             PanelMaximizar.Visible := True;
-            PanelComplete.Visible := True;
+           // PanelComplete.Visible := True;
           end
           else if ((DM.sds_view.RecordCount) <= 3) then
           begin
             PanelMaximizar.Visible := False;
-            PanelComplete.Visible := False;
+           // PanelComplete.Visible := False;
           end;
         end;
       1:
@@ -1177,12 +1185,12 @@ begin
           if ((DM.sds_view.RecordCount) >= 2) then
           begin
             PanelMaximizar.Visible := True;
-            PanelComplete.Visible := True;
+           // PanelComplete.Visible := True;
           end
           else if ((DM.sds_view.RecordCount) = 1) then
           begin
             PanelMaximizar.Visible := False;
-            PanelComplete.Visible := False;
+           // PanelComplete.Visible := False;
           end;
 
         end;
@@ -1344,12 +1352,12 @@ begin
           if ((DM.sds_view.RecordCount) >= 4) then
           begin
             PanelMaximizar.Visible := True;
-            PanelComplete.Visible := True;
+           // PanelComplete.Visible := True;
           end
           else if ((DM.sds_view.RecordCount) <= 3) then
           begin
             PanelMaximizar.Visible := False;
-            PanelComplete.Visible := False;
+           // PanelComplete.Visible := False;
           end;
 
         end;
@@ -1401,12 +1409,12 @@ begin
           if ((DM.sds_view.RecordCount) >= 4) then
           begin
             PanelMaximizar.Visible := True;
-            PanelComplete.Visible := True;
+           // PanelComplete.Visible := True;
           end
           else if ((DM.sds_view.RecordCount) <= 3) then
           begin
             PanelMaximizar.Visible := False;
-            PanelComplete.Visible := False;
+          //  PanelComplete.Visible := False;
           end;
 
         end;

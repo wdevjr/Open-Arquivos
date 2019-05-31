@@ -66,6 +66,7 @@ object FrmLocalizarUser: TFrmLocalizarUser
           D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4}
         ModalResult = 2
         TabOrder = 0
+        OnClick = BitBtn1Click
       end
       object BtnOk: TBitBtn
         Left = 57

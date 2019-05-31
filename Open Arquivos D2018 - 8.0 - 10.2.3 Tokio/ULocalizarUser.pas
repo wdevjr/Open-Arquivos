@@ -30,6 +30,7 @@ type
     procedure DBGrid1DrawColumnCell(Sender: TObject; const Rect: TRect;
       DataCol: Integer; Column: TColumn; State: TGridDrawState);
     procedure FormShow(Sender: TObject);
+    procedure BitBtn1Click(Sender: TObject);
   private
 
   public
@@ -133,6 +134,11 @@ begin
       DBGrid1.DefaultDrawDataCell(Rect, Column.Field, State);
     end;
   end;
+end;
+
+procedure TFrmLocalizarUser.BitBtn1Click(Sender: TObject);
+begin
+DM.sds_UserPorCriterio.Close;
 end;
 
 constructor TFrmLocalizarUser.Create(AOWner: TComponent;
