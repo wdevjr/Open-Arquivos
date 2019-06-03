@@ -379,12 +379,12 @@ type
     SimpleDataSetUseNomeADMINISTRADOR: TIntegerField;
     sds_UserPorCriterio: TSimpleDataSet;
     sdstemp: TSimpleDataSet;
-    sds_UserPorCriterioIDUSUARIOS: TIntegerField;
-    sds_UserPorCriterioNOME: TStringField;
     frxReport1: TfrxReport;
     frxGradientObject1: TfrxGradientObject;
     frxPDFExport1: TfrxPDFExport;
     frxDBDataset1: TfrxDBDataset;
+    sds_UserPorCriterioIDUSUARIOS: TIntegerField;
+    sds_UserPorCriterioNOME: TStringField;
     procedure DataModuleCreate(Sender: TObject);
     function PreencheCombo: TStrings;
     function PreencheList: TStrings;

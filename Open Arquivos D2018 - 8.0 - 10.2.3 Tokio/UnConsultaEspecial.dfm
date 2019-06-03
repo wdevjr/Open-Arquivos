@@ -354,7 +354,6 @@ object FrmView: TFrmView
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 2
-    ExplicitTop = 686
     object SpeedButton4: TSpeedButton
       Left = 15
       Top = 6
@@ -940,7 +939,7 @@ object FrmView: TFrmView
         Font.Height = -11
         Font.Name = 'Tahoma'
         Font.Style = []
-        Title.Caption = 'Nome do  Autor'
+        Title.Caption = 'Nome do  Autor do Arquiv'
         Width = 266
         Visible = True
       end>
@@ -1238,13 +1237,13 @@ object FrmView: TFrmView
     object Label2: TLabel
       Left = 60
       Top = 10
-      Width = 108
+      Width = 287
       Height = 13
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
       Margins.Bottom = 4
-      Caption = 'Usu'#225'rio de Crit'#233'rio:'
+      Caption = 'Arquivos que ir'#227'o Aparecer por Usu'#225'rio de Crit'#233'rio:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clMaroon
       Font.Height = -11
@@ -1253,9 +1252,9 @@ object FrmView: TFrmView
       ParentFont = False
     end
     object DBText4: TDBText
-      Left = 176
+      Left = 355
       Top = 10
-      Width = 273
+      Width = 252
       Height = 23
       Margins.Left = 4
       Margins.Top = 4
@@ -1345,8 +1344,8 @@ object FrmView: TFrmView
       OnClick = SpeedButton7Click
     end
     object SpeedButton12: TSpeedButton
-      Left = 547
-      Top = 2
+      Left = 614
+      Top = 4
       Width = 98
       Height = 37
       Caption = 'Habilitar'
@@ -1416,8 +1415,8 @@ object FrmView: TFrmView
       OnClick = SpeedButton12Click
     end
     object SpeedButton13: TSpeedButton
-      Left = 652
-      Top = 3
+      Left = 718
+      Top = 4
       Width = 69
       Height = 36
       Caption = 'Desabilitar'
@@ -1431,8 +1430,8 @@ object FrmView: TFrmView
       OnClick = SpeedButton13Click
     end
     object DBEdit4: TDBEdit
-      Left = 458
-      Top = 10
+      Left = 577
+      Top = 13
       Width = 71
       Height = 26
       Margins.Left = 4

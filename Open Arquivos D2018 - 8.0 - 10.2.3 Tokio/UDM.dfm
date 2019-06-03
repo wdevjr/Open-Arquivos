@@ -2060,7 +2060,7 @@ object DM: TDM
       'VendorLib=fbclient.dll'
       'VendorLibWin64=fbclient.dll'
       'VendorLibOsx=/Library/Frameworks/Firebird.framework/Firebird'
-      'Database=127.0.0.1:C:\Bancos\OPENARQUIVOS.FDB'
+      'Database=127.0.0.1:F:\Bancos\OPENARQUIVOS\2\OPENARQUIVOS.FDB'
       'User_Name=sysdba'
       'Password=masterkey'
       'Role=RoleName'
@@ -2510,10 +2510,10 @@ object DM: TDM
     Aggregates = <>
     Connection = SQLConnection
     DataSet.CommandText = 
-      'select DISTINCT N.IDUSUARIOS, PO.NOME  from ARQUIVOLIST AQ  '#13#10'in' +
-      'ner join ARQUIVOS_USUARIOS N  on N.IDARQUIVOS =  AQ.ID'#13#10'inner jo' +
-      'in USUARIO PO on N.IDUSUARIOS =  PO.COD_USUARIO'#13#10'where  PO.NOME ' +
-      'like :pnome'#13#10'order by PO.NOME desc'
+      'select DISTINCT N.IDUSUARIOS, PO.NOME from ARQUIVOS_USUARIOS N'#13#10 +
+      'inner join ARQUIVOLIST  AQ  on N.IDARQUIVOS = AQ.ID'#13#10'inner join ' +
+      'USUARIO PO on N.IDUSUARIOS =  PO.COD_USUARIO'#13#10'where  PO.NOME lik' +
+      'e :pnome'#13#10'order by PO.NOME desc'
     DataSet.MaxBlobSize = -1
     DataSet.Params = <
       item
