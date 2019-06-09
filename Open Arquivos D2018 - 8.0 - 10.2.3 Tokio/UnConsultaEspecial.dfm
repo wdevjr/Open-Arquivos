@@ -1236,7 +1236,7 @@ object FrmView: TFrmView
     Visible = False
     object Label2: TLabel
       Left = 60
-      Top = 10
+      Top = 16
       Width = 287
       Height = 13
       Margins.Left = 4
@@ -1253,7 +1253,7 @@ object FrmView: TFrmView
     end
     object DBText4: TDBText
       Left = 355
-      Top = 10
+      Top = 16
       Width = 252
       Height = 23
       Margins.Left = 4
