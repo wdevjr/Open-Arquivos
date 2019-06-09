@@ -347,7 +347,7 @@ begin
   end   else
  if (FrmLogin.TODOS = 1) then
   begin
-    Panel4.Visible := True;
+    Panel4.Visible := False;
     Panel8.Visible := True;
    // Panel2.Height := 354;
     //FrmView.Height := 716;
