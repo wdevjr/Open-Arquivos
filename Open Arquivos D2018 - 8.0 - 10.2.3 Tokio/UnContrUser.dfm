@@ -1218,10 +1218,6 @@ object FrmContrUser: TFrmContrUser
       Font.Style = [fsBold]
       ImageIndex = 1
       ParentFont = False
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object Panel10: TPanel
         Left = 0
         Top = 0
@@ -1498,7 +1494,7 @@ object FrmContrUser: TFrmContrUser
           Left = 10
           Top = 110
           Width = 416
-          Height = 24
+          Height = 19
           HelpType = htKeyword
           Margins.Left = 4
           Margins.Top = 4
@@ -1524,7 +1520,7 @@ object FrmContrUser: TFrmContrUser
           Left = 10
           Top = 166
           Width = 173
-          Height = 24
+          Height = 19
           Margins.Left = 4
           Margins.Top = 4
           Margins.Right = 4
@@ -1573,7 +1569,7 @@ object FrmContrUser: TFrmContrUser
           Left = 209
           Top = 166
           Width = 178
-          Height = 24
+          Height = 19
           Margins.Left = 4
           Margins.Top = 4
           Margins.Right = 4
@@ -1881,7 +1877,7 @@ object FrmContrUser: TFrmContrUser
     Left = 352
     Top = 8
     Bitmap = {
-      494C010103000400C40010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010103000400C80010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000001000000001002000000000000010
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

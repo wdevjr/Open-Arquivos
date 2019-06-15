@@ -219,8 +219,8 @@ end;
 
 procedure TFrmContrUser.DtscuStateChange(Sender: TObject);
 begin
-  if FrmLogin.ADMIN = 1 then
-  begin
+  //if FrmLogin.ADMIN = 1 then
+//  begin
     with Dtscu.DataSet do
     begin
       excluir.Enabled := not IsEmpty;
@@ -233,8 +233,8 @@ begin
 
       // trazerj.Enabled:=Dtscu.State in [dsBrowse,dsInactive];
     end;
-  end
-  else
+  //end;
+ { else
   begin
     with Dtscu.DataSet do
     begin
@@ -248,7 +248,7 @@ begin
 
       // trazerj.Enabled:=Dtscu.State in [dsBrowse,dsInactive];
     end;
-  end;
+  end; }
 end;
 
 procedure TFrmContrUser.excluirClick(Sender: TObject);
@@ -358,7 +358,7 @@ begin
     // Panel6.Visible := false;
     inserir.Visible := True;
     gravar.Visible := True;
-    editar.Visible := True;
+    //editar.Visible := True;
     trazerj.Visible := True;
     excluir.Visible := True;
     DBEdit3.PasswordChar := '*';
