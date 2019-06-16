@@ -701,6 +701,7 @@ object DM: TDM
       DisplayLabel = 'C'#243'digo'
       FieldName = 'CODIGO'
       Required = True
+      Visible = False
     end
     object sds_AssuntTITULOASSUN: TStringField
       DisplayLabel = 'Titulo  Assunto'
@@ -1070,6 +1071,7 @@ object DM: TDM
     object sds_AutoresCODIGO: TIntegerField
       FieldName = 'CODIGO'
       Required = True
+      Visible = False
     end
     object sds_AutoresNOME: TStringField
       FieldName = 'NOME'
