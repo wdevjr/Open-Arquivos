@@ -359,7 +359,7 @@ begin
     inserir.Visible := True;
     gravar.Visible := True;
     //editar.Visible := True;
-    trazerj.Visible := True;
+    //trazerj.Visible := True;
     excluir.Visible := True;
     DBEdit3.PasswordChar := '*';
   end;
