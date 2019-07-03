@@ -106,7 +106,7 @@ begin
             ' inner join ASSUNTO SU on AQ.COD_ASSUNTO = SU.CODIGO ' +
             'inner join USUARIO PO on AQ.COD_USUARIO = PO.COD_USUARIO ' +
             'inner join AUTORES T on T.CODIGO = AQ.COD_AUTOR ' +
-            'where AQ.DESCRICAO like ' + QuotedStr('%' + EditProc1.Text + '%') +
+            'where AQ.DESCRICAO like ' + QuotedStr('%' + EditProc2.Text + '%') +
             ' and N.IDUSUARIOS=' + IntToStr(FrmLogin.COD_USUARIO) +
             ' order by AQ.DESCRICAO';
 
@@ -143,7 +143,7 @@ begin
             ' inner join ASSUNTO SU on (AQ.COD_ASSUNTO = SU.CODIGO) ' +
             ' inner join USUARIO PO on (AQ.COD_USUARIO = PO.COD_USUARIO) ' +
             ' inner join AUTORES T on (T.CODIGO = AQ.COD_AUTOR) ' +
-            ' where AQ.TITULO like ' + QuotedStr('%' + EditProc2.Text + '%') +
+            ' where AQ.TITULO like ' + QuotedStr('%' + EditProc1.Text + '%') +
             ' and N.IDUSUARIOS=' + IntToStr(FrmLogin.COD_USUARIO) +
             ' order by AQ.TITULO';
 
