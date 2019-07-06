@@ -184,17 +184,15 @@ begin
           //Params[0].AsString := '%' + EditProc1.Text + '%';
           DBGrid1.DataSource := DtsrcTodos;
           Open;
-          if (EditProc1.Text <> '') then
-          begin
-            if IsEmpty then
-              StsBr.Panels[0].Text :=
-                format('Nenum registro foi encontrado com "%s"',
-                [EditProc1.Text])
-           // else
-             // StsBr.Panels[0].Text :=
-              //  format('%d registros encontrados com "%s"',
-              //  [recordcount, EditProc2.Text]);
-          end;
+        if (EditProc1.Text <> '') then
+        begin
+          if IsEmpty then
+            StsBr.Panels[0].Text :=
+              format('Nenum registro foi encontrado com "%s"', [EditProc1.Text])
+          else
+            StsBr.Panels[0].Text := format('%d registros encontrados com "%s"',
+              [recordcount, EditProc1.Text]);
+        end;
         end
          else if (EditProc2.Text <> '') and (EditProc1.Text = '') then
         begin
@@ -210,17 +208,15 @@ begin
           //Params[0].AsString := '%' + EditProc2.Text + '%';
           DBGrid1.DataSource := DtsrcTodos;
           Open;
-          if (EditProc2.Text <> '') then
-          begin
-            if IsEmpty then
-              StsBr.Panels[0].Text :=
-                format('Nenum registro foi encontrado com "%s"',
-                [EditProc2.Text])
-           // else
-            //  StsBr.Panels[0].Text :=
-            //    format('%d registros encontrados com "%s"',
-            //    [recordcount, EditProc2.Text]);
-          end;
+        if (EditProc2.Text <> '') then
+        begin
+          if IsEmpty then
+            StsBr.Panels[0].Text :=
+              format('Nenum registro foi encontrado com "%s"', [EditProc2.Text])
+          else
+            StsBr.Panels[0].Text := format('%d registros encontrados com "%s"',
+              [recordcount, EditProc2.Text]);
+        end;
         end;
       end;
 
