@@ -91,7 +91,7 @@ var
 begin
   if (FrmLogin.TODOS = 0) then
   begin
-    if (EditProc1.Text <> '') then
+    if (EditProc2.Text <> '') and (EditProc1.Text = '') then
     begin
       with DM.sds_Arqu do
       Begin
@@ -106,7 +106,7 @@ begin
             ' inner join ASSUNTO SU on AQ.COD_ASSUNTO = SU.CODIGO ' +
             'inner join USUARIO PO on AQ.COD_USUARIO = PO.COD_USUARIO ' +
             'inner join AUTORES T on T.CODIGO = AQ.COD_AUTOR ' +
-            'where AQ.DESCRICAO like ' + QuotedStr('%' + EditProc2.Text + '%') +
+            'where AQ.DESCRICAO like ' + QuotedStr('%'+EditProc2.Text+'%') +
             ' and N.IDUSUARIOS=' + IntToStr(FrmLogin.COD_USUARIO) +
             ' order by AQ.DESCRICAO';
 
@@ -116,19 +116,19 @@ begin
         Refresh;
         BtnOk.Enabled := not IsEmpty;
 
-        if (EditProc1.Text <> '') then
+        if (EditProc2.Text <> '') then
         begin
           if IsEmpty then
             StsBr.Panels[0].Text :=
-              format('Nenum registro foi encontrado com "%s"', [EditProc1.Text])
+              format('Nenum registro foi encontrado com "%s"', [EditProc2.Text])
           else
             StsBr.Panels[0].Text := format('%d registros encontrados com "%s"',
-              [recordcount, EditProc1.Text]);
+              [recordcount, EditProc2.Text]);
         end;
 
       end;
     end
-    else if (EditProc2.Text <> '') then
+    else if (EditProc1.Text <> '') and (EditProc2.Text = '') then
     begin
       with DM.sds_Arqu do
       Begin
@@ -143,7 +143,7 @@ begin
             ' inner join ASSUNTO SU on (AQ.COD_ASSUNTO = SU.CODIGO) ' +
             ' inner join USUARIO PO on (AQ.COD_USUARIO = PO.COD_USUARIO) ' +
             ' inner join AUTORES T on (T.CODIGO = AQ.COD_AUTOR) ' +
-            ' where AQ.TITULO like ' + QuotedStr('%' + EditProc1.Text + '%') +
+            ' where AQ.TITULO like ' + QuotedStr('%'+EditProc1.Text + '%') +
             ' and N.IDUSUARIOS=' + IntToStr(FrmLogin.COD_USUARIO) +
             ' order by AQ.TITULO';
 
@@ -151,14 +151,14 @@ begin
         DBGrid1.DataSource := Dtsrc;
         Open;
         BtnOk.Enabled := not IsEmpty;
-        if (EditProc2.Text <> '') then
+        if (EditProc1.Text <> '') then
         begin
           if IsEmpty then
             StsBr.Panels[0].Text :=
-              format('Nenum registro foi encontrado com "%s"', [EditProc2.Text])
+              format('Nenum registro foi encontrado com "%s"', [EditProc1.Text])
           else
             StsBr.Panels[0].Text := format('%d registros encontrados com "%s"',
-              [recordcount, EditProc2.Text]);
+              [recordcount, EditProc1.Text]);
         end;
       end;
     end;
@@ -170,9 +170,18 @@ begin
       Close;
       If tag = 0 then
       begin
-        if (EditProc1.Text <> '') then
+        if (EditProc1.Text <> '') and (EditProc2.Text = '')then
         begin
-          Params[1].AsString := '%' + EditProc1.Text + '%';
+          DM.sds_ArquTodos.DataSet.Close;
+          //DM.sds_ArquTodos.Params.Clear;
+          DM.sds_ArquTodos.DataSet.CommandText := '';
+          DM.sds_ArquTodos.DataSet.CommandText :=
+         'select AQ.ID,AQ.COD_USUARIO,AQ.DESCRICAO,AQ.TITULO,AQ.NOME_ARQUIVO,UR.LOGIN,UR.NIVEL,UR.NOME'
+          +' from ARQUIVOLIST AQ'
+          +' inner join USUARIO UR on AQ.COD_USUARIO = UR.COD_USUARIO'
+          +' where AQ.TITULO like ' + QuotedStr('%' + EditProc1.Text + '%')
+          +' order by AQ.DESCRICAO, AQ.TITULO desc';
+          //Params[0].AsString := '%' + EditProc1.Text + '%';
           DBGrid1.DataSource := DtsrcTodos;
           Open;
           if (EditProc1.Text <> '') then
@@ -181,15 +190,24 @@ begin
               StsBr.Panels[0].Text :=
                 format('Nenum registro foi encontrado com "%s"',
                 [EditProc1.Text])
-            else
-              StsBr.Panels[0].Text :=
-                format('%d registros encontrados com "%s"',
-                [recordcount, EditProc2.Text]);
+           // else
+             // StsBr.Panels[0].Text :=
+              //  format('%d registros encontrados com "%s"',
+              //  [recordcount, EditProc2.Text]);
           end;
-        end;
-        if (EditProc2.Text <> '') then
+        end
+         else if (EditProc2.Text <> '') and (EditProc1.Text = '') then
         begin
-          Params[0].AsString := '%' + EditProc2.Text + '%';
+          DM.sds_ArquTodos.DataSet.Close;
+          //DM.sds_ArquTodos.Params.Clear;
+          DM.sds_ArquTodos.DataSet.CommandText := '';
+          DM.sds_ArquTodos.DataSet.CommandText :=
+         'select AQ.ID,AQ.COD_USUARIO,AQ.DESCRICAO,AQ.TITULO,AQ.NOME_ARQUIVO,UR.LOGIN,UR.NIVEL,UR.NOME'
+          +' from ARQUIVOLIST AQ'
+          +' inner join USUARIO UR on AQ.COD_USUARIO = UR.COD_USUARIO'
+          +' where AQ.DESCRICAO like '+ QuotedStr('%'+EditProc2.Text+'%')
+          +' order by AQ.DESCRICAO, AQ.TITULO desc';
+          //Params[0].AsString := '%' + EditProc2.Text + '%';
           DBGrid1.DataSource := DtsrcTodos;
           Open;
           if (EditProc2.Text <> '') then
@@ -198,10 +216,10 @@ begin
               StsBr.Panels[0].Text :=
                 format('Nenum registro foi encontrado com "%s"',
                 [EditProc2.Text])
-            else
-              StsBr.Panels[0].Text :=
-                format('%d registros encontrados com "%s"',
-                [recordcount, EditProc2.Text]);
+           // else
+            //  StsBr.Panels[0].Text :=
+            //    format('%d registros encontrados com "%s"',
+            //    [recordcount, EditProc2.Text]);
           end;
         end;
       end;

@@ -2062,7 +2062,7 @@ object DM: TDM
       'VendorLib=fbclient.dll'
       'VendorLibWin64=fbclient.dll'
       'VendorLibOsx=/Library/Frameworks/Firebird.framework/Firebird'
-      'Database=127.0.0.1:F:\Bancos\OPENARQUIVOS\2\OPENARQUIVOS.FDB'
+      'Database=127.0.0.1:E:\Bancos\OPENARQUIVOS\2\OPENARQUIVOS.FDB'
       'User_Name=sysdba'
       'Password=masterkey'
       'Role=RoleName'
@@ -2242,35 +2242,9 @@ object DM: TDM
   object sds_ArquTodos: TSimpleDataSet
     Aggregates = <>
     Connection = SQLConnection
-    DataSet.CommandText = 
-      'select AQ.ID,AQ.COD_USUARIO,AQ.DESCRICAO,AQ.TITULO,AQ.NOME_ARQUI' +
-      'VO,UR.LOGIN,UR.NIVEL,UR.NOME '#13#10'from ARQUIVOLIST AQ'#13#10'inner join U' +
-      'SUARIO UR on AQ.COD_USUARIO = UR.COD_USUARIO '#13#10'where (AQ.DESCRIC' +
-      'AO like :DESCRICAO) '#13#10'or (AQ.TITULO like :TITULO) '#13#10'order by AQ.' +
-      'DESCRICAO, AQ.TITULO desc'
     DataSet.MaxBlobSize = -1
-    DataSet.Params = <
-      item
-        DataType = ftUnknown
-        Name = 'DESCRICAO'
-        ParamType = ptInput
-      end
-      item
-        DataType = ftUnknown
-        Name = 'TITULO'
-        ParamType = ptInput
-      end>
-    Params = <
-      item
-        DataType = ftString
-        Name = 'TITULO'
-        ParamType = ptInput
-      end
-      item
-        DataType = ftString
-        Name = 'DESCRICAO'
-        ParamType = ptInput
-      end>
+    DataSet.Params = <>
+    Params = <>
     Left = 192
     Top = 152
     object sds_ArquTodosID: TIntegerField
