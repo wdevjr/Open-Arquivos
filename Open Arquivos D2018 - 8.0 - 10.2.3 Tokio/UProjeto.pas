@@ -1528,6 +1528,7 @@ begin
       if DBEdit4.Text <> ' ' then
       begin
         DBText3.Font.Color := clBlue;
+        DBText5.Font.Color := clBlue;
       end;
       if DBEdit3.Text <> '' then
       begin
@@ -1540,9 +1541,10 @@ begin
       begin
         PanelAutor.Visible := false;
         DBText3.Font.Color := clBlue; // $00E3F4F4
+        DBText5.Font.Color := clBlue;
         Height := 568;
         CheckBox1.Checked := False;
-      end;
+       end;
     end;
 
   end;
