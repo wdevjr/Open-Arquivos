@@ -1023,7 +1023,7 @@ begin
     SysUtils.Abort;
   end;
 
-    if CheckBox1.Checked = True then
+  if CheckBox1.Checked = True then
   begin
     if DBEdit3.Text <> ' ' then
     begin
@@ -1423,7 +1423,7 @@ begin
   end
   else
   begin
-    //PanelAutor.Visible := false;
+    // PanelAutor.Visible := false;
     DBEdit3.Font.Color := clBlue;
     Height := 568;
   end;
@@ -1505,7 +1505,7 @@ procedure TFrPrincipal.cancelarClick(Sender: TObject);
 begin
   Dtsrc.DataSet.Cancel;
   ConfigCancelar;
-  //CheckBox1.Checked := True;
+  // CheckBox1.Checked := True;
   PanelPergunta.Visible := True;
   PanelAutor.Visible := True;
   MostrarIcon;
@@ -1519,36 +1519,37 @@ begin
     excluiAssunto.Enabled := not IsEmpty;
     excluiAutor.Enabled := not IsEmpty;
     lookUser.Enabled := not IsEmpty;
-    //relatorios.Enabled := not IsEmpty;
+    // relatorios.Enabled := not IsEmpty;
 
     // exclusão de campos recebendo 0
-
-    if Dtsrc.DataSet.State = dsbrowse then
-    begin
-      if DBEdit4.Text <> ' ' then
-      begin
-        DBText3.Font.Color := clBlue;
-        DBText5.Font.Color := clBlue;
-      end;
-      if DBEdit3.Text <> '' then
-      begin
-        PanelAutor.Visible := True;
-        DBEdit3.Font.Color := clBlue;
-        Height := 610;
-        CheckBox1.Checked := True;
-      end
-      else if DBEdit3.Text = '' then
-      begin
-        PanelAutor.Visible := false;
-        DBText3.Font.Color := clBlue; // $00E3F4F4
-        DBText5.Font.Color := clBlue;
-        Height := 568;
-        CheckBox1.Checked := False;
-       end;
-    end;
-
   end;
-     //DBText3.Font.Color := clBlue;
+
+  // if Dtsrc.DataSet.State = dsbrowse then
+  // begin
+  if DBEdit4.Text <> ' ' then
+  begin
+    DBText3.Font.Color := clBlue;
+    DBText5.Font.Color := clBlue;
+  end;
+  if DBEdit3.Text <> '' then
+  begin
+    PanelAutor.Visible := True;
+    // DBEdit3.Font.Color := clBlue;
+    Height := 610;
+    CheckBox1.Checked := True;
+  end
+  else if DBEdit3.Text = '' then
+  begin
+    PanelAutor.Visible := False;
+    // DBText3.Font.Color := clBlue; // $00E3F4F4
+    // DBText5.Font.Color := clBlue;
+    Height := 568;
+    CheckBox1.Checked := False;
+  end;
+  // end;
+
+  // end;
+  // DBText3.Font.Color := clBlue;
 end;
 
 function FileExtencaowrhj(const FileName: string): string;
@@ -1743,13 +1744,11 @@ begin
   begin
     MessageDlg('Carregue o Arquivo!', mtWarning, [mbOK], 0);
   end
-  else
-    if (DBText5.Caption = '') then
+  else if (DBText5.Caption = '') then
   begin
     MessageDlg('Preencha o campo Assunto!', mtWarning, [mbOK], 0);
   end
-  else
-  if (DBEdit2.Text = '') then
+  else if (DBEdit2.Text = '') then
   begin
     MessageDlg('Preencha o campo Titulo!', mtWarning, [mbOK], 0);
   end
@@ -1776,21 +1775,22 @@ begin
     DtscLog.DataSet.Post;
     (DtscLog.DataSet as TClientDataSet).ApplyUpdates(0);
     if CheckBox1.Checked = True then
-  begin
-    if DBEdit3.Text <> ' ' then
     begin
-      DBEdit3.Font.Color := clBlue;
-    end;
-    PanelAutor.Visible := True;
-    Height := 610;
-  end
-  else
-  begin
-    PanelAutor.Visible := False;
-    Height := 568;
-  end;
-  end;
 
+      DBText5.Font.Color := clBlue;
+      DBText3.Font.Color := clBlue;
+
+      PanelAutor.Visible := True;
+      Height := 610;
+    end
+    else
+    begin
+      PanelAutor.Visible := False;
+      DBText5.Font.Color := clBlue;
+      DBText3.Font.Color := clBlue;
+      Height := 568;
+    end;
+  end;
 
   if (FrmLogin.TODOS = 0) then
   begin
@@ -1813,10 +1813,11 @@ begin
   end;
   if CheckBox1.Checked = True then
   begin
-    if DBEdit3.Text <> ' ' then
-    begin
-      DBEdit3.Font.Color := clBlue;
-    end;
+
+    DBText5.Font.Color := clBlue;
+
+    DBText3.Font.Color := clBlue;
+
     PanelAutor.Visible := True;
     Height := 610;
   end
@@ -1824,6 +1825,9 @@ begin
   begin
     PanelAutor.Visible := False;
     Height := 568;
+    DBText5.Font.Color := clBlue;
+
+    DBText3.Font.Color := clBlue;
   end;
 end;
 
@@ -2220,13 +2224,11 @@ begin
   begin
     MessageDlg('Carregue o Arquivo!', mtWarning, [mbOK], 0);
   end
-  else
-  if (DBText5.Caption = '') then
+  else if (DBText5.Caption = '') then
   begin
     MessageDlg('Preencha o campo Assunto!', mtWarning, [mbOK], 0);
   end
-  else
-  if (DBEdit2.Text = '') then
+  else if (DBEdit2.Text = '') then
   begin
     MessageDlg('Preencha o campo Titulo!', mtWarning, [mbOK], 0);
   end
@@ -2282,7 +2284,6 @@ begin
     DM.cds_UserAddIDARQUIVOS.Value := DM.cds_arquivoID.Value;
     DM.cds_UserAdd.Post;
     DM.cds_UserAdd.ApplyUpdates(0);
-
 
     // altera a ProgressBar
     frmSplash.ProgressBar1.Position := 51;

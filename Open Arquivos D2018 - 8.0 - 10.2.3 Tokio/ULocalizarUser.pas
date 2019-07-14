@@ -138,7 +138,7 @@ end;
 
 procedure TFrmLocalizarUser.BitBtn1Click(Sender: TObject);
 begin
-DM.sds_UserPorCriterio.Close;
+  DM.sds_UserPorCriterio.Close;
 end;
 
 constructor TFrmLocalizarUser.Create(AOWner: TComponent;
@@ -160,7 +160,7 @@ procedure TFrmLocalizarUser.SpeedButton1Click(Sender: TObject);
 begin
   with Dtsc.DataSet as TSimpleDataSet do
   Begin
-    close;
+    Close;
     Params[0].AsString := '%' + EditUser.Text + '%';
     Open;
     BtnOk.Enabled := not IsEmpty;
