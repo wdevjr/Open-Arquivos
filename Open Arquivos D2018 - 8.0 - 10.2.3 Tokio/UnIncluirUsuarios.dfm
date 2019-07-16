@@ -24,9 +24,16 @@ object frmIncluir: TfrmIncluir
     Ctl3D = False
     DataSource = DtsrcAdionar
     DrawingStyle = gdsGradient
+    FixedColor = 14079702
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgTitleClick, dgTitleHotTrack]
     ParentBiDiMode = False
     ParentCtl3D = False
+    ParentFont = False
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -44,8 +51,8 @@ object frmIncluir: TfrmIncluir
     BevelOuter = bvNone
     TabOrder = 1
     object Usua: TLabel
-      Left = 16
-      Top = 16
+      Left = 8
+      Top = 0
       Width = 111
       Height = 13
       Caption = 'Pessoas Existentes:'
@@ -55,6 +62,24 @@ object frmIncluir: TfrmIncluir
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentFont = False
+    end
+    object Button1: TButton
+      Left = 392
+      Top = 15
+      Width = 75
+      Height = 25
+      Caption = 'Consultar'
+      TabOrder = 0
+      OnClick = Button1Click
+    end
+    object Edit1: TEdit
+      Left = 16
+      Top = 19
+      Width = 370
+      Height = 19
+      Ctl3D = False
+      ParentCtl3D = False
+      TabOrder = 1
     end
   end
   object Panel2: TPanel
@@ -170,7 +195,39 @@ object frmIncluir: TfrmIncluir
     end
   end
   object DtsrcAdionar: TDataSource
-    DataSet = DM.sds_listaAdd
-    Left = 176
+    DataSet = sds_Pesq_User
+    Left = 336
+    Top = 8
+  end
+  object sds_Pesq_User: TSimpleDataSet
+    Aggregates = <>
+    Connection = DM.SQLConnection
+    DataSet.CommandText = 
+      'select  COD_USUARIO, NOME  from USUARIO'#13#10'where NOME like :nom'#13#10'o' +
+      'rder by NOME desc'
+    DataSet.MaxBlobSize = -1
+    DataSet.Params = <
+      item
+        DataType = ftString
+        Name = 'nom'
+        ParamType = ptInput
+      end>
+    Params = <
+      item
+        DataType = ftString
+        Name = 'nom'
+        ParamType = ptInput
+      end>
+    Left = 256
+    Top = 8
+    object sds_Pesq_UserCOD_USUARIO: TIntegerField
+      FieldName = 'COD_USUARIO'
+      Required = True
+      Visible = False
+    end
+    object sds_Pesq_UserNOME: TStringField
+      FieldName = 'NOME'
+      Size = 70
+    end
   end
 end

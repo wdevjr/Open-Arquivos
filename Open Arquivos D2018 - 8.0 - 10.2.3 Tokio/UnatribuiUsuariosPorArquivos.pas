@@ -105,9 +105,9 @@ procedure TFrmAtribuiUser.incluirClick(Sender: TObject);
 var
   i: integer;
 begin
-  DM.sds_listaAdd.Close;
-  // DM.sds_listaAdd.Params[0].AsInteger:=DM.cds_ArquivoID.AsInteger;
-  DM.sds_listaAdd.Open;
+ // DM.sds_listaAdd.Close;
+  //DM.sds_listaAdd.Params[0].AsInteger:=//DM.cds_ArquivoID.AsInteger;
+ // DM.sds_listaAdd.Open;
 
   try
     frmIncluir := TfrmIncluir.Create(Application);
@@ -122,10 +122,10 @@ begin
           DM.cds_UserAdd.Open;
           DM.cds_UserAdd.Append;
 
-          DM.cds_UserAddIDUSUARIOS.Value :=
-            DM.sds_listaAddCOD_USUARIO.AsInteger;
+          DM.cds_UserAddIDUSUARIOS.Value := frmIncluir.sds_Pesq_UserCOD_USUARIO.AsInteger;
           DM.cds_UserAddIDARQUIVOS.Value := DM.cds_ArquivoID.Value;
-          DM.cds_UserAddNOME.AsString := DM.sds_listaAddNOME.AsString;
+          DM.cds_UserAddNOME.AsString := frmIncluir.sds_Pesq_UserNOME.AsString;
+
           DM.cds_UserAdd.Post;
           DM.cds_UserAdd.ApplyUpdates(0);
           DM.sds_lista_Usuarios.Refresh;
