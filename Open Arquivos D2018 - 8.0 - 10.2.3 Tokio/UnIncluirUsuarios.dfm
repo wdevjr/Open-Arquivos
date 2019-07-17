@@ -12,6 +12,7 @@ object frmIncluir: TfrmIncluir
   Font.Style = []
   OldCreateOrder = False
   Position = poDesktopCenter
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object DBGrd_lista_usuarios: TDBGrid
@@ -40,6 +41,7 @@ object frmIncluir: TfrmIncluir
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = DBGrd_lista_usuariosCellClick
     OnDrawColumnCell = DBGrd_lista_usuariosDrawColumnCell
   end
   object Panel1: TPanel
@@ -123,6 +125,7 @@ object frmIncluir: TfrmIncluir
       Height = 35
       Caption = 'OK'
       Default = True
+      Enabled = False
       Glyph.Data = {
         F6060000424DF606000000000000360000002800000018000000180000000100
         180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF
@@ -182,6 +185,7 @@ object frmIncluir: TfrmIncluir
         8C00DE8B00DE8C00DE8C00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
       ModalResult = 1
       TabOrder = 0
+      OnClick = BitBtnIncluirClick
     end
     object BitBtnFechar: TBitBtn
       Left = 384
@@ -218,8 +222,8 @@ object frmIncluir: TfrmIncluir
         Name = 'nom'
         ParamType = ptInput
       end>
+    OnReconcileError = sds_Pesq_UserReconcileError
     Left = 256
-    Top = 8
     object sds_Pesq_UserCOD_USUARIO: TIntegerField
       FieldName = 'COD_USUARIO'
       Required = True

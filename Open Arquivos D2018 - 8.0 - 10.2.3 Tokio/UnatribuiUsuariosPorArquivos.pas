@@ -26,9 +26,9 @@ type
     procedure FormCreate(Sender: TObject);
     procedure FecharClick(Sender: TObject);
     procedure excluirClick(Sender: TObject);
-    procedure FormShow(Sender: TObject);
     procedure DBGrid1CellClick(Column: TColumn);
     procedure BitBtn1Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
 
   private
 
@@ -98,7 +98,9 @@ end;
 
 procedure TFrmAtribuiUser.FormShow(Sender: TObject);
 begin
-  /// DM.sds_lista_Usuarios.Refresh;
+  DM.sds_lista_Usuarios.Close;
+  DM.sds_lista_Usuarios.Params[1].AsString := '%' + Edit1.Text + '%';
+  DM.sds_lista_Usuarios.Open;
 end;
 
 procedure TFrmAtribuiUser.incluirClick(Sender: TObject);

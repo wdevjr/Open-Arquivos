@@ -30,6 +30,12 @@ type
       const Rect: TRect; DataCol: Integer; Column: TColumn;
       State: TGridDrawState);
     procedure Button1Click(Sender: TObject);
+    procedure DBGrd_lista_usuariosCellClick(Column: TColumn);
+    procedure sds_Pesq_UserReconcileError(DataSet: TCustomClientDataSet;
+      E: EReconcileError; UpdateKind: TUpdateKind;
+      var Action: TReconcileAction);
+    procedure BitBtnIncluirClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -50,11 +56,28 @@ begin
   close;
 end;
 
+procedure TfrmIncluir.BitBtnIncluirClick(Sender: TObject);
+begin
+  // DM.sds_lista_Usuarios.Open;
+  // DM.sds_lista_Usuarios.Refresh;
+
+end;
+
 procedure TfrmIncluir.Button1Click(Sender: TObject);
 begin
 sds_Pesq_User.Close;
 sds_Pesq_User.Params[0].AsString := '%'+Edit1.Text+'%';
 sds_Pesq_User.Open;
+
+
+end;
+
+procedure TfrmIncluir.DBGrd_lista_usuariosCellClick(Column: TColumn);
+begin
+  with sds_Pesq_User do
+   begin
+      BitBtnIncluir.Enabled:= not IsEmpty;
+   end;
 end;
 
 procedure TfrmIncluir.DBGrd_lista_usuariosDrawColumnCell(Sender: TObject;
@@ -81,6 +104,19 @@ begin
     DBGrd_lista_usuarios.Canvas.FillRect(Rect);
     DBGrd_lista_usuarios.DefaultDrawDataCell(Rect, Column.Field, State);
   end;
+end;
+
+
+
+procedure TfrmIncluir.FormShow(Sender: TObject);
+begin
+DM.sds_lista_Usuarios.Open;
+end;
+
+procedure TfrmIncluir.sds_Pesq_UserReconcileError(DataSet: TCustomClientDataSet;
+  E: EReconcileError; UpdateKind: TUpdateKind; var Action: TReconcileAction);
+begin
+ MessageDlg('Erro na consulta do DataSet: sds_Pesq_User! '+E.Message,mtError,[mbOK],0);
 end;
 
 end.
