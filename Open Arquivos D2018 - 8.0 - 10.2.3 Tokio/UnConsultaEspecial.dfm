@@ -1178,8 +1178,8 @@ object FrmView: TFrmView
         Margins.Top = 4
         Margins.Right = 4
         Margins.Bottom = 4
-        Date = 40960.000000000000000000
-        Time = 0.756994756942731300
+        Date = 40960.756994756940000000
+        Time = 40960.756994756940000000
         Color = 16774388
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -1199,8 +1199,8 @@ object FrmView: TFrmView
         Margins.Top = 4
         Margins.Right = 4
         Margins.Bottom = 4
-        Date = 40960.000000000000000000
-        Time = 0.757740694440144600
+        Date = 40960.757740694440000000
+        Time = 40960.757740694440000000
         Color = 16774388
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
