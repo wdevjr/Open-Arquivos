@@ -331,9 +331,9 @@ begin
     DM.sds_report_detalhe.Close;
     DM.sds_report_detalhe.Params[0].AsInteger := StrToInt(DBText2.Caption);
     DM.sds_report_detalhe.Open;
-    DM.frxReport1.LoadFromFile(ExtractFilePath(ParamStr(0)) +
-      'ReportGeral\FastReport\RelatorioPorSelecao.fr3', True);
-    DM.frxReport1.ShowReport;
+    //DM.frxReport1.LoadFromFile(ExtractFilePath(ParamStr(0)) +
+     // 'ReportGeral\FastReport\Untitled.fr3', True);
+   // DM.frxReport1.ShowReport;
   end;
 end;
 

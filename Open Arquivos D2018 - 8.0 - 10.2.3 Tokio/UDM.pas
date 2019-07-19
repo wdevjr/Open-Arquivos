@@ -7,7 +7,7 @@ uses
   MidasLib, ComCtrls, DBCtrls, Controls, StdCtrls,
   WideStrings,
   DBXFirebird, DBXPool, Data.DBXMsSQL, Datasnap.DBClient,
-  frxExportPDF, frxGradient, frxClass, frxDBSet;
+  frxExportPDF, frxGradient, frxClass, frxDBSet, frxExportBaseDialog;
 
 type
   TDM = class(TDataModule)
@@ -379,10 +379,6 @@ type
     SimpleDataSetUseNomeADMINISTRADOR: TIntegerField;
     sds_UserPorCriterio: TSimpleDataSet;
     sdstemp: TSimpleDataSet;
-    frxReport1: TfrxReport;
-    frxGradientObject1: TfrxGradientObject;
-    frxPDFExport1: TfrxPDFExport;
-    frxDBDataset1: TfrxDBDataset;
     sds_UserPorCriterioIDUSUARIOS: TIntegerField;
     sds_UserPorCriterioNOME: TStringField;
     procedure DataModuleCreate(Sender: TObject);

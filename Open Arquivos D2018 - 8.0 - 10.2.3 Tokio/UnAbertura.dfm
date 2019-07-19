@@ -1033,7 +1033,7 @@ object Abertura: TAbertura
     Margins.Top = 4
     Margins.Right = 4
     Margins.Bottom = 4
-    Caption = 'Open Arquivos - v8.40'
+    Caption = 'Open Arquivos - v9.10'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clGreen
     Font.Height = -22
@@ -1050,7 +1050,7 @@ object Abertura: TAbertura
     Margins.Top = 4
     Margins.Right = 4
     Margins.Bottom = 4
-    Caption = '2018'
+    Caption = '2019'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clHighlight
     Font.Height = -11
