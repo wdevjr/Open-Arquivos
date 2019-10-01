@@ -30,7 +30,6 @@ type
     ToolButton8: TToolButton;
     Ajudar: TToolButton;
     ImageList2: TImageList;
-    ToolButton11: TToolButton;
     inserir: TSpeedButton;
     excluir: TSpeedButton;
     cancelar: TSpeedButton;
@@ -158,6 +157,7 @@ type
     SpeedButton2: TSpeedButton;
     Label9: TLabel;
     Label14: TLabel;
+    ToolButton1: TToolButton;
     procedure relatoriosClick(Sender: TObject);
     procedure N1Click(Sender: TObject);
     procedure cbCadLogAssistenteExecute(Sender: TObject);
@@ -193,7 +193,6 @@ type
     procedure usuariosClick(Sender: TObject);
     procedure SpeedButton5Click(Sender: TObject);
     procedure ToolButton6Click(Sender: TObject);
-    procedure ToolButton11Click(Sender: TObject);
     procedure SpeedButton4Click(Sender: TObject);
     procedure StatusBar1DrawPanel(StatusBar: TStatusBar; Panel: TStatusPanel;
       const Rect: TRect);
@@ -219,6 +218,7 @@ type
     procedure fundobtnClick(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
     procedure SpeedButton2Click(Sender: TObject);
+    procedure ToolButton1Click(Sender: TObject);
     // para a chamada de status do componente
   private
     buffer: array [0 .. 255] of Char;
@@ -896,36 +896,6 @@ begin
   MostrarEstatistica;
 end;
 
-procedure TFrPrincipal.ToolButton11Click(Sender: TObject);
-begin
-
-  if (MessageDlg('Deseja Sair do Sistema ?', mtConfirmation, [mbYes, mbNo], 0)
-    = mrYes) then
-  BEGIN
-    try
-      try
-        DM.cds_ExcRepetidos.Close;
-        DM.cds_ExcRepetidos.Params[0].AsInteger := FrmLogin.COD_USUARIO;
-        DM.cds_ExcRepetidos.Open;
-      finally
-        DM.DtsrcExcLogados.DataSet.Delete;
-        (DM.DtsrcExcLogados.DataSet as TClientDataSet).ApplyUpdates(0);
-
-      end;
-    Except
-      on E: Exception do
-      begin
-        MessageDlg('Houve um problema no termino do aplicativo !', mtWarning,
-          [mbOK], 0);
-        // Application.Terminate;
-      end;
-    end;
-
-    Application.Terminate;
-  END;
-
-end;
-
 procedure TFrPrincipal.btntrazerClick(Sender: TObject);
 var
   DataInserimento: String;
@@ -1195,6 +1165,42 @@ begin
     finally
     FrmCadAutor.Free;
     end; }
+end;
+
+procedure TFrPrincipal.ToolButton1Click(Sender: TObject);
+begin
+if (MessageDlg('Deseja Sair do Sistema ?', mtConfirmation, [mbYes, mbNo], 0)
+    = mrYes) then
+  BEGIN
+    try
+      try
+        DM.cds_ExcRepetidos.Close;
+        DM.cds_ExcRepetidos.Params[0].AsInteger := FrmLogin.COD_USUARIO;
+        DM.cds_ExcRepetidos.Open;
+      finally
+        DM.DtsrcExcLogados.DataSet.Delete;
+        (DM.DtsrcExcLogados.DataSet as TClientDataSet).ApplyUpdates(0);
+
+      end;
+    Except
+      on E: Exception do
+      begin
+        MessageDlg('Houve um problema no termino do aplicativo !', mtWarning,
+          [mbOK], 0);
+
+      end;
+    end;
+    try
+    Application.Terminate;
+
+    Except
+    on E:Exception do
+    begin
+
+    end;
+
+    end;
+  END;
 end;
 
 procedure TFrPrincipal.ToolButton6Click(Sender: TObject);
@@ -1927,7 +1933,7 @@ end;
 
 procedure TFrPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
-  if (MessageDlg('Deseja Sair do Sistema ?', mtConfirmation, [mbYes, mbNo], 0)
+ { if (MessageDlg('Deseja Sair do Sistema ?', mtConfirmation, [mbYes, mbNo], 0)
     = mrYes) then
   BEGIN
     try
@@ -1948,7 +1954,7 @@ begin
         // Application.Terminate;
       end;
     end;
-  END;
+  END; }
 end;
 
 procedure TFrPrincipal.FormShow(Sender: TObject);

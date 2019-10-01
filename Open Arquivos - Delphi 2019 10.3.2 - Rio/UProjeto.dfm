@@ -691,12 +691,12 @@ object FrPrincipal: TFrPrincipal
       Caption = 'ToolButton8'
       Style = tbsDivider
     end
-    object ToolButton11: TToolButton
+    object ToolButton1: TToolButton
       Left = 750
       Top = 0
       Caption = 'Sair'
       ImageIndex = 0
-      OnClick = ToolButton11Click
+      OnClick = ToolButton1Click
     end
   end
   object Panel10: TPanel
