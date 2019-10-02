@@ -82,11 +82,12 @@
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
-        <DCC_ExeOutput>E:\Open Arquivos - 9.10</DCC_ExeOutput>
+        <DCC_ExeOutput>E:\Open Arquivos\</DCC_ExeOutput>
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
         <BT_BuildType>Debug</BT_BuildType>
         <UsePackages>false</UsePackages>
         <Icon_MainIcon>OpenArquivos_Icon1.ico</Icon_MainIcon>
+        <DCC_DcuOutput>E:\Temp\</DCC_DcuOutput>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
