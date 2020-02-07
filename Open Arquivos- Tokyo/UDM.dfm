@@ -2078,8 +2078,8 @@ object DM: TDM
       'RoleName=RoleName'
       'ServerCharSet=win1252'
       'Trim Char=False')
-    Left = 40
-    Top = 152
+    Left = 32
+    Top = 208
   end
   object dst_Login: TSQLDataSet
     SchemaName = 'sysdba'
