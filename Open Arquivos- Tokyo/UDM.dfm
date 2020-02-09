@@ -2534,7 +2534,7 @@ object DM: TDM
     PrintOptions.Printer = 'Padr'#227'o'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 43322.045178831000000000
-    ReportOptions.LastChange = 43518.149269884300000000
+    ReportOptions.LastChange = 43870.397363680550000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -3213,10 +3213,7 @@ object DM: TDM
           Font.Style = []
           Font.Quality = fqProof
           Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
-          FillType = ftGradient
-          Fill.StartColor = 16700346
-          Fill.EndColor = clWhite
-          Fill.GradientStyle = gsHorizontal
+          Fill.BackColor = clWhite
           HAlign = haBlock
           Memo.UTF8W = (
             '[frxDBDataset1."DESCRICAO"]')
