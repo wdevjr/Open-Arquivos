@@ -1595,6 +1595,16 @@ begin
     AssignFile(F, OpenDialog1.FileName);
     Reset(F);
     Tamnh := FileSize(F);
+    if (Tamnh >= 125829120) then // 120MB
+      begin
+
+        MessageDlg('Memória insuficiente no Banco!, Ultrapassou os 120 MB!',
+          mtError, [mbOK], 0);
+          Dtsrc.DataSet.Cancel;
+          ConfigInicial;
+      end else
+   begin
+
     if Tamnh <= 1024 then
     begin
       varifTempBytes := (FloatToStrF((Tamnh), ffNumber, 11, 0));
@@ -1623,14 +1633,15 @@ begin
         DM.cds_ArquivoSIZE_ARQUIVO.AsFloat := TamnhKB;
       end;
       MostrarIcon;
-      if (Tamnh >= 125829120) then // 120MB
+    {  if (Tamnh >= 125829120) then // 120MB
       begin
         Dtsrc.DataSet.Cancel;
         MessageDlg('Memória insuficiente no Banco!, Ultrapassou os 120 MB!',
           mtError, [mbOK], 0);
         MostrarIcon;
-      end;
+      end;  }
     end;
+   end;
   end;
 end;
 

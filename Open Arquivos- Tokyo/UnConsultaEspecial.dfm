@@ -2113,7 +2113,6 @@ object FrmView: TFrmView
     ParentBackground = False
     ParentFont = False
     TabOrder = 12
-    ExplicitTop = 47
     object SpeedButton8: TSpeedButton
       Left = 4
       Top = 2
