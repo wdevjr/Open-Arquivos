@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Release"/>
+    <Units Count="41">
+      <Unit0>
+        <Filename Value="OpenArquivos.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="50" Y="10"/>
+        <UsageCount Value="27"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="unprinc.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrPrincipal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UnPrinc"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="216"/>
+        <CursorPos X="34" Y="221"/>
+        <UsageCount Value="27"/>
+        <Loaded Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="unlogin.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmLogin"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UnLogin"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="319"/>
+        <CursorPos X="3" Y="79"/>
+        <UsageCount Value="27"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="undm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DM"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="UnDM"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="358"/>
+        <CursorPos X="23" Y="361"/>
+        <UsageCount Value="27"/>
+        <Loaded Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="UnCadPerfil.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmCadPerfil"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="89"/>
+        <CursorPos X="3" Y="98"/>
+        <UsageCount Value="27"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="udmii.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DMII"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="UDMII"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="489"/>
+        <CursorPos X="3" Y="494"/>
+        <UsageCount Value="27"/>
+        <Loaded Value="True"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="uncadastrousuarios.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmCadastrodeUsuarios"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <TopLine Value="242"/>
+        <CursorPos X="3" Y="244"/>
+        <UsageCount Value="27"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="undlgpesquisausuario.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="27"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="UndDlgProcuraCidades.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="27"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="UnCadAutores.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmCadAutor"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="181"/>
+        <CursorPos X="20" Y="188"/>
+        <UsageCount Value="27"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="UnCadCidades.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="27"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="UnDlgProcuraDepartamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmDlgProcuraDepartamento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="53"/>
+        <CursorPos X="54" Y="59"/>
+        <UsageCount Value="27"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="UnCadDepartamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="27"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="unconsultaespecial.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmView"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UnConsultaEspecial"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1481"/>
+        <CursorPos X="35" Y="1486"/>
+        <UsageCount Value="27"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="uncadarquivos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormArquivo"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UnCadArquivos"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="1328"/>
+        <CursorPos Y="1330"/>
+        <UsageCount Value="27"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="UnCadAssuntos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmCadAssuntos"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="222"/>
+        <CursorPos X="24" Y="201"/>
+        <UsageCount Value="27"/>
+        <Loaded Value="True"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="thema.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="27"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="UnCadLog.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmCadLogDet"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="316"/>
+        <CursorPos X="3" Y="321"/>
+        <UsageCount Value="27"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="undlgpesquisautores.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="27"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="UnConsultEspMaximized.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="27"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="UnDlgProcuraPerfilUser.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="27"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="UnTeladeRelatorios.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="27"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="UnUtilitLog.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="27"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="UnLocalizarUserCod.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="27"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="undlgdescricao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="27"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="UnDlgProcuraAutor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="27"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="UnGridPesquiza.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="27"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="unprocessindefinido.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="27"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="ULocalizarUser.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="27"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="unincluirusuarios.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="27"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="undlgpesquisaarquivo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmDlgPesquisa"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="unDlgPesquisaArquivo"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="367"/>
+        <CursorPos X="6" Y="280"/>
+        <UsageCount Value="27"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="UnDlgProcuraAssunto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="27"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="unabertura.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="27"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="unatribuiusuariosporarquivos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmAtribuiUser"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UnatribuiUsuariosPorArquivos"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="57"/>
+        <CursorPos X="3" Y="56"/>
+        <UsageCount Value="27"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="UnDlgProcuraPerfil.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="27"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="undlgdialogassunto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="27"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="UAutoPreench.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="27"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="C:\lazarus\lcl\include\control.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2908"/>
+        <CursorPos Y="2915"/>
+        <UsageCount Value="11"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="C:\lazarus\lcl\include\buttoncontrol.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="50"/>
+        <CursorPos Y="56"/>
+        <UsageCount Value="11"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="D:\zeosdbo-7.2.14-stable\src\dbc\ZDbcInterbase6Utils.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="902"/>
+        <CursorPos Y="907"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="C:\lazarus\components\lazutils\laztracer.pas"/>
+        <UnitName Value="LazTracer"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="41"/>
+        <CursorPos X="61" Y="51"/>
+        <UsageCount Value="10"/>
+      </Unit40>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="uncadastrousuarios.pas"/>
+        <Caret Line="581" Column="3" TopLine="578"/>
+      </Position1>
+      <Position2>
+        <Filename Value="uncadastrousuarios.pas"/>
+        <Caret Line="578" TopLine="578"/>
+      </Position2>
+      <Position3>
+        <Filename Value="uncadastrousuarios.pas"/>
+        <Caret Line="577" TopLine="577"/>
+      </Position3>
+      <Position4>
+        <Filename Value="uncadastrousuarios.pas"/>
+        <Caret Line="576" TopLine="576"/>
+      </Position4>
+      <Position5>
+        <Filename Value="uncadastrousuarios.pas"/>
+        <Caret Line="577" TopLine="577"/>
+      </Position5>
+      <Position6>
+        <Filename Value="uncadastrousuarios.pas"/>
+        <Caret Line="217" Column="3" TopLine="188"/>
+      </Position6>
+      <Position7>
+        <Filename Value="uncadastrousuarios.pas"/>
+        <Caret Line="216" Column="3" TopLine="198"/>
+      </Position7>
+      <Position8>
+        <Filename Value="uncadastrousuarios.pas"/>
+        <Caret Line="217" Column="3" TopLine="199"/>
+      </Position8>
+      <Position9>
+        <Filename Value="uncadastrousuarios.pas"/>
+        <Caret Line="219" Column="3" TopLine="201"/>
+      </Position9>
+      <Position10>
+        <Filename Value="uncadastrousuarios.pas"/>
+        <Caret Line="584" Column="3" TopLine="577"/>
+      </Position10>
+      <Position11>
+        <Filename Value="uncadastrousuarios.pas"/>
+        <Caret Line="578" Column="3" TopLine="576"/>
+      </Position11>
+      <Position12>
+        <Filename Value="uncadastrousuarios.pas"/>
+        <Caret Line="577" Column="3" TopLine="575"/>
+      </Position12>
+      <Position13>
+        <Filename Value="uncadastrousuarios.pas"/>
+        <Caret Line="576" Column="3" TopLine="574"/>
+      </Position13>
+      <Position14>
+        <Filename Value="uncadastrousuarios.pas"/>
+        <Caret Line="577" Column="3" TopLine="575"/>
+      </Position14>
+      <Position15>
+        <Filename Value="uncadastrousuarios.pas"/>
+        <Caret Line="217" Column="3" TopLine="206"/>
+      </Position15>
+      <Position16>
+        <Filename Value="uncadastrousuarios.pas"/>
+        <Caret Line="562" Column="3" TopLine="560"/>
+      </Position16>
+      <Position17>
+        <Filename Value="uncadastrousuarios.pas"/>
+        <Caret Line="561" Column="3" TopLine="559"/>
+      </Position17>
+      <Position18>
+        <Filename Value="uncadastrousuarios.pas"/>
+        <Caret Line="562" Column="3" TopLine="560"/>
+      </Position18>
+      <Position19>
+        <Filename Value="uncadastrousuarios.pas"/>
+        <Caret Line="564" Column="3" TopLine="562"/>
+      </Position19>
+      <Position20>
+        <Filename Value="uncadastrousuarios.pas"/>
+        <Caret Line="582" Column="3" TopLine="580"/>
+      </Position20>
+      <Position21>
+        <Filename Value="uncadastrousuarios.pas"/>
+        <Caret Line="581" Column="3" TopLine="579"/>
+      </Position21>
+      <Position22>
+        <Filename Value="uncadastrousuarios.pas"/>
+        <Caret Line="577" Column="3" TopLine="577"/>
+      </Position22>
+      <Position23>
+        <Filename Value="uncadastrousuarios.pas"/>
+        <Caret Line="578" Column="3" TopLine="578"/>
+      </Position23>
+      <Position24>
+        <Filename Value="uncadastrousuarios.pas"/>
+        <Caret Line="238" Column="3" TopLine="236"/>
+      </Position24>
+      <Position25>
+        <Filename Value="uncadastrousuarios.pas"/>
+        <Caret Line="220" TopLine="215"/>
+      </Position25>
+      <Position26>
+        <Filename Value="uncadastrousuarios.pas"/>
+        <Caret Line="218" Column="3" TopLine="218"/>
+      </Position26>
+      <Position27>
+        <Filename Value="uncadastrousuarios.pas"/>
+        <Caret Line="239" Column="9" TopLine="235"/>
+      </Position27>
+      <Position28>
+        <Filename Value="uncadastrousuarios.pas"/>
+        <Caret Line="238" Column="3" TopLine="235"/>
+      </Position28>
+      <Position29>
+        <Filename Value="uncadastrousuarios.pas"/>
+        <Caret Line="218" Column="3" TopLine="216"/>
+      </Position29>
+      <Position30>
+        <Filename Value="uncadastrousuarios.pas"/>
+        <Caret Line="244" Column="3" TopLine="242"/>
+      </Position30>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>
