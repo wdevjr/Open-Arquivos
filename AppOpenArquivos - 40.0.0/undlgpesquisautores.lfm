@@ -1,0 +1,96 @@
+object FrmPesquisaAutor: TFrmPesquisaAutor
+  Left = 323
+  Height = 311
+  Top = 224
+  Width = 687
+  Caption = 'Pesquisa Autor'
+  ClientHeight = 311
+  ClientWidth = 687
+  OnActivate = FormActivate
+  OnShow = FormShow
+  Position = poDesktopCenter
+  LCLVersion = '2.0.10.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 50
+    Top = 0
+    Width = 687
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 50
+    ClientWidth = 687
+    Color = 14083559
+    ParentColor = False
+    TabOrder = 0
+    object Edit1: TEdit
+      Left = 104
+      Height = 23
+      Top = 11
+      Width = 440
+      TabOrder = 0
+    end
+    object BitBtn1: TBitBtn
+      Left = 560
+      Height = 30
+      Top = 8
+      Width = 75
+      Caption = 'Pesquisar'
+      OnClick = BitBtn1Click
+      TabOrder = 1
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 50
+    Top = 261
+    Width = 687
+    Align = alBottom
+    ClientHeight = 50
+    ClientWidth = 687
+    Color = 14083559
+    ParentColor = False
+    TabOrder = 1
+    object btnOk: TBitBtn
+      Left = 512
+      Height = 30
+      Top = 8
+      Width = 75
+      Default = True
+      DefaultCaption = True
+      Enabled = False
+      Kind = bkOK
+      ModalResult = 1
+      OnClick = btnOkClick
+      TabOrder = 0
+    end
+    object BitBtn2: TBitBtn
+      Left = 600
+      Height = 30
+      Top = 8
+      Width = 75
+      DefaultCaption = True
+      Kind = bkClose
+      ModalResult = 11
+      TabOrder = 1
+    end
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 211
+    Top = 50
+    Width = 687
+    Align = alClient
+    AlternateColor = 13363947
+    AutoEdit = False
+    Color = 16774388
+    Columns = <>
+    DataSource = Dtsrc
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgCancelOnExit]
+    TabOrder = 2
+  end
+  object Dtsrc: TDataSource
+    DataSet = DM.sds_Autores
+    Left = 536
+    Top = 64
+  end
+end
