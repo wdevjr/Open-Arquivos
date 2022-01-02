@@ -28,6 +28,9 @@
             <IncludeFiles Value="$(ProjOutDir)"/>
             <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
+          <CodeGeneration>
+            <SmallerCode Value="True"/>
+          </CodeGeneration>
           <Linking>
             <Options>
               <Win32>
