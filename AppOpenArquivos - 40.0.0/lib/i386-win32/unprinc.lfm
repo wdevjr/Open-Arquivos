@@ -1,10 +1,10 @@
 object FrPrincipal: TFrPrincipal
-  Left = 286
-  Height = 518
-  Top = 139
-  Width = 1030
-  ClientHeight = 498
-  ClientWidth = 1030
+  Left = 383
+  Height = 534
+  Top = 113
+  Width = 1025
+  ClientHeight = 514
+  ClientWidth = 1025
   Color = clWhite
   Menu = MainMenu1
   OnActivate = FormActivate
@@ -16,11 +16,11 @@ object FrPrincipal: TFrPrincipal
     Left = 0
     Height = 72
     Top = 0
-    Width = 1030
+    Width = 1025
     Align = alTop
     BevelColor = clBtnFace
     ClientHeight = 72
-    ClientWidth = 1030
+    ClientWidth = 1025
     Color = clWhite
     ParentColor = False
     ParentFont = False
@@ -853,7 +853,7 @@ object FrPrincipal: TFrPrincipal
       ParentFont = False
     end
     object Panel3: TPanel
-      Left = 859
+      Left = 854
       Height = 70
       Top = 1
       Width = 170
@@ -1170,47 +1170,46 @@ object FrPrincipal: TFrPrincipal
   object StatusBar1: TStatusBar
     Left = 0
     Height = 23
-    Top = 475
-    Width = 1030
+    Top = 491
+    Width = 1025
+    Color = 15004141
     Panels = <    
       item
-        ParentBiDiMode = False
         Style = psOwnerDraw
         Width = 380
       end    
       item
-        ParentBiDiMode = False
         Style = psOwnerDraw
         Width = 315
       end    
       item
-        ParentBiDiMode = False
         Style = psOwnerDraw
         Width = 50
       end>
+    ParentColor = False
     ParentFont = False
     SimplePanel = False
     OnDrawPanel = StatusBar1DrawPanel
   end
   object Panel2: TPanel
     Left = 0
-    Height = 403
+    Height = 419
     Top = 72
-    Width = 1030
+    Width = 1025
     Align = alClient
     BevelOuter = bvNone
-    ClientHeight = 403
-    ClientWidth = 1030
+    ClientHeight = 419
+    ClientWidth = 1025
     ParentFont = False
     TabOrder = 2
     object Panel4: TPanel
-      Left = 860
-      Height = 403
+      Left = 855
+      Height = 419
       Top = 0
       Width = 170
       Align = alRight
       BevelOuter = bvNone
-      ClientHeight = 403
+      ClientHeight = 419
       ClientWidth = 170
       ParentFont = False
       TabOrder = 0
@@ -1270,9 +1269,9 @@ object FrPrincipal: TFrPrincipal
     end
     object Image1: TImage
       Left = 0
-      Height = 403
+      Height = 419
       Top = 0
-      Width = 860
+      Width = 855
       Align = alClient
       Picture.Data = {
         0A544A706567496D616765FC360000FFD8FFE000104A46494600010101004800

@@ -417,6 +417,7 @@ begin
                 format('%d registros encontrados com "%s"',
                 [RecordCount, EditProc2.Text]);
               StsBr.Canvas.Font.Color := clGreen;
+
             end;
           end;
         end;
@@ -429,8 +430,9 @@ begin
     end;
 
   end;
-// DBGrid1.SetFocus;
+
  end;
+
 end;
 
 procedure TFrmDlgPesquisa.FormActivate(Sender: TObject);
@@ -728,14 +730,14 @@ begin
   begin
     if Panel.ID = 0 then
     begin
-      StsBr.Canvas.Brush.Color := clWhite;
+      StsBr.Canvas.Brush.Color := DM.myColor;
       //StsBr.Canvas.Font.Color := clGreen;
       StsBr.Canvas.FillRect(Rect);
       StsBr.Canvas.TextOut(Rect.left + 18, Rect.Top, Panel.Text);
     end;
     if Panel.ID = 1 then
     begin
-      StsBr.Canvas.Brush.Color := clWhite;
+      StsBr.Canvas.Brush.Color := DM.myColor;
       // StsBr.Canvas.Font.Color := clGreen;
       StsBr.Canvas.FillRect(Rect);
       StsBr.Canvas.TextOut(Rect.left + 18, Rect.Top, Panel.Text);

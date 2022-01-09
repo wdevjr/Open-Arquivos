@@ -257,7 +257,7 @@ var
 begin
   StatusBar1.Panels[0].Text :=
     Saudacao + ' Hoje é ' + formatdatetime('dddddd', Date);
-  Caption := 'Open Arquivos v30.60.0 - Tela Principal - IP:' + DM.GetIP;
+  Caption := 'Open Arquivos v40.0.0 - Tela Principal - IP:' + DM.GetIP;
   InicializarComponentes;
 
 
@@ -350,6 +350,7 @@ begin
   //  GifAnim1.Visible := True;
   //  GifAnim1.Animate:= True;
   //end;
+
 end;
 
 procedure TFrPrincipal.lookUserClick(Sender: TObject);
@@ -554,7 +555,7 @@ procedure TFrPrincipal.StatusBar1DrawPanel(StatusBar: TStatusBar;
 begin
   if Panel.ID = 1 then
   begin
-    StatusBar1.Canvas.Brush.Color := clWhite;
+    StatusBar1.Canvas.Brush.Color := DM.myColor;
     StatusBar.Canvas.Font.Color := clBlue;
     StatusBar1.Canvas.FillRect(Rect);
     StatusBar1.Canvas.TextOut(Rect.left + 18, Rect.Top, Panel.Text);
@@ -569,7 +570,7 @@ begin
   end
   else if Panel.ID = 2 then
   begin
-    StatusBar1.Canvas.Brush.Color := clWhite;
+    StatusBar1.Canvas.Brush.Color := DM.myColor;
     StatusBar.Canvas.Font.Color := clBlue;
     StatusBar1.Canvas.FillRect(Rect);
     StatusBar1.Canvas.TextOut(Rect.left + 18, Rect.Top, Panel.Text);
@@ -577,12 +578,13 @@ begin
   end
   else
   begin
-    StatusBar1.Canvas.Brush.Color := clWhite;
+    StatusBar1.Canvas.Brush.Color := DM.myColor;
     StatusBar.Canvas.Font.Color := clBlue;
     StatusBar1.Canvas.FillRect(Rect);
     StatusBar1.Canvas.TextOut(Rect.left + 18, Rect.Top, Panel.Text);
     ImageList1.Draw(StatusBar.Canvas, Rect.left, Rect.Top, 3);
   end;
+
 end;
 
 procedure TFrPrincipal.Timer1Timer(Sender: TObject);
@@ -600,8 +602,8 @@ begin
     GifAnim1.Visible := False;
     GifAnim1.Animate:= False;
   end;
-
-
+   StatusBar1.Canvas.Brush.Color := DM.myColor;
+   StatusBar1.Color:=DM.myColor;
 end;
 
 procedure TFrPrincipal.MostrarEstatistica;
