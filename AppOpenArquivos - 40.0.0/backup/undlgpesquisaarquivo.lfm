@@ -1,10 +1,10 @@
 object FrmDlgPesquisa: TFrmDlgPesquisa
-  Left = 318
-  Height = 521
-  Top = 128
+  Left = 367
+  Height = 472
+  Top = 64
   Width = 881
   Caption = 'FrmDlgPesquisa'
-  ClientHeight = 521
+  ClientHeight = 472
   ClientWidth = 881
   OnActivate = FormActivate
   OnShow = FormShow
@@ -13,7 +13,7 @@ object FrmDlgPesquisa: TFrmDlgPesquisa
   object StsBr: TStatusBar
     Left = 0
     Height = 23
-    Top = 498
+    Top = 449
     Width = 881
     Color = clWhite
     Panels = <    
@@ -263,7 +263,7 @@ object FrmDlgPesquisa: TFrmDlgPesquisa
       Top = 4
       Width = 64
       StrictSize = False
-      Text = 'TBarcodeQR'
+      Text = '102345'
     end
     object CheckBoxINC: TCheckBox
       Left = 464
@@ -278,7 +278,7 @@ object FrmDlgPesquisa: TFrmDlgPesquisa
   object Panel2: TPanel
     Left = 0
     Height = 34
-    Top = 464
+    Top = 415
     Width = 881
     Align = alBottom
     BevelOuter = bvNone
@@ -329,7 +329,7 @@ object FrmDlgPesquisa: TFrmDlgPesquisa
   end
   object DBGrid1: TDBGrid
     Left = 0
-    Height = 253
+    Height = 204
     Top = 211
     Width = 881
     Align = alClient

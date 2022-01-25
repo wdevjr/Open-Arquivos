@@ -1172,7 +1172,7 @@ object FrPrincipal: TFrPrincipal
     Height = 23
     Top = 491
     Width = 1025
-    Color = 15004141
+    Color = clMoneyGreen
     Panels = <    
       item
         Style = psOwnerDraw

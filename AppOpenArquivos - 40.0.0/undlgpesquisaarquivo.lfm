@@ -1,7 +1,7 @@
 object FrmDlgPesquisa: TFrmDlgPesquisa
-  Left = 283
+  Left = 367
   Height = 472
-  Top = 40
+  Top = 64
   Width = 881
   Caption = 'FrmDlgPesquisa'
   ClientHeight = 472
@@ -263,7 +263,7 @@ object FrmDlgPesquisa: TFrmDlgPesquisa
       Top = 4
       Width = 64
       StrictSize = False
-      Text = 'TBarcodeQR'
+      Text = '102345'
     end
     object CheckBoxINC: TCheckBox
       Left = 464

@@ -693,8 +693,8 @@ end;
 procedure TDM.ZQArquivoNewRecord(DataSet: TDataSet);
 begin
   IncrementaPersonalizado('ARQUIVOLIST', ZQArquivoID);
-  ZQArquivoDATA.Value:=Date;
-  ZQArquivoHORA.Value:=Time;
+  ZQArquivoDATA.Value := Date;
+  ZQArquivoHORA.Value := Time;
 
 end;
 

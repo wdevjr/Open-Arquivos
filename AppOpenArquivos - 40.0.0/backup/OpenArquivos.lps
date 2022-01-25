@@ -19,10 +19,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UnPrinc"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="553"/>
-        <CursorPos X="3" Y="556"/>
+        <TopLine Value="650"/>
+        <CursorPos Y="668"/>
         <UsageCount Value="32"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -34,12 +33,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UnLogin"/>
-        <EditorIndex Value="5"/>
-        <TopLine Value="317"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="316"/>
         <CursorPos X="3" Y="79"/>
         <UsageCount Value="32"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit2>
       <Unit3>
         <Filename Value="undm.pas"/>
@@ -48,9 +45,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="UnDM"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="3"/>
-        <CursorPos X="31" Y="13"/>
+        <TopLine Value="814"/>
+        <CursorPos X="33" Y="821"/>
         <UsageCount Value="32"/>
         <Loaded Value="True"/>
       </Unit3>
@@ -60,7 +58,7 @@
         <ComponentName Value="FrmCadPerfil"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="10"/>
+        <EditorIndex Value="9"/>
         <TopLine Value="89"/>
         <CursorPos X="3" Y="98"/>
         <UsageCount Value="32"/>
@@ -73,7 +71,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="UDMII"/>
-        <EditorIndex Value="11"/>
+        <EditorIndex Value="10"/>
         <TopLine Value="489"/>
         <CursorPos X="3" Y="494"/>
         <UsageCount Value="32"/>
@@ -162,10 +160,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UnConsultaEspecial"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="1481"/>
-        <CursorPos X="35" Y="1486"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="430"/>
+        <CursorPos X="30" Y="444"/>
         <UsageCount Value="32"/>
+        <Loaded Value="True"/>
       </Unit13>
       <Unit14>
         <Filename Value="uncadarquivos.pas"/>
@@ -174,9 +173,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UnCadArquivos"/>
-        <EditorIndex Value="7"/>
-        <TopLine Value="654"/>
-        <CursorPos X="3" Y="658"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="971"/>
+        <CursorPos X="3" Y="973"/>
         <UsageCount Value="32"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -187,8 +186,8 @@
         <ComponentName Value="FrmCadAssuntos"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="6"/>
-        <TopLine Value="222"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="221"/>
         <CursorPos X="24" Y="201"/>
         <UsageCount Value="32"/>
         <Loaded Value="True"/>
@@ -341,11 +340,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="unDlgPesquisaArquivo"/>
-        <EditorIndex Value="8"/>
-        <TopLine Value="394"/>
-        <CursorPos X="6" Y="335"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="527"/>
+        <CursorPos Y="544"/>
         <UsageCount Value="32"/>
-        <Loaded Value="True"/>
       </Unit30>
       <Unit31>
         <Filename Value="UnDlgProcuraAssunto.pas"/>
@@ -376,8 +374,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UnatribuiUsuariosPorArquivos"/>
-        <EditorIndex Value="9"/>
-        <TopLine Value="57"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="56"/>
         <CursorPos X="3" Y="56"/>
         <UsageCount Value="32"/>
         <Loaded Value="True"/>
@@ -443,127 +441,119 @@
         <UsageCount Value="10"/>
       </Unit40>
     </Units>
-    <JumpHistory Count="30" HistoryIndex="29">
+    <JumpHistory Count="28" HistoryIndex="27">
       <Position1>
         <Filename Value="unprinc.pas"/>
-        <Caret Line="221" Column="34" TopLine="216"/>
+        <Caret Line="580" Column="48" TopLine="576"/>
       </Position1>
       <Position2>
-        <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="658" Column="3" TopLine="653"/>
+        <Filename Value="unprinc.pas"/>
+        <Caret Line="193" Column="3" TopLine="190"/>
       </Position2>
       <Position3>
         <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="955" Column="8" TopLine="899"/>
+        <Caret Line="131" Column="3" TopLine="121"/>
       </Position3>
       <Position4>
-        <Filename Value="unprinc.pas"/>
-        <Caret Line="260" Column="29" TopLine="254"/>
+        <Filename Value="uncadarquivos.pas"/>
+        <Caret Line="658" Column="3" TopLine="654"/>
       </Position4>
       <Position5>
         <Filename Value="unprinc.pas"/>
-        <Caret Line="580" Column="48" TopLine="576"/>
+        <Caret Line="194" Column="3" TopLine="191"/>
       </Position5>
       <Position6>
         <Filename Value="unprinc.pas"/>
-        <Caret Line="193" Column="3" TopLine="190"/>
+        <Caret Line="371" Column="19" TopLine="354"/>
       </Position6>
       <Position7>
-        <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="131" Column="3" TopLine="121"/>
+        <Filename Value="unprinc.pas"/>
+        <Caret Line="557" Column="5" TopLine="546"/>
       </Position7>
       <Position8>
-        <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="658" Column="3" TopLine="654"/>
+        <Filename Value="unprinc.pas"/>
+        <Caret Line="585" Column="36" TopLine="568"/>
       </Position8>
       <Position9>
-        <Filename Value="undlgpesquisaarquivo.pas"/>
-        <Caret Line="62" Column="3" TopLine="53"/>
+        <Filename Value="unprinc.pas"/>
+        <Caret Line="633" Column="36" TopLine="616"/>
       </Position9>
       <Position10>
-        <Filename Value="undlgpesquisaarquivo.pas"/>
-        <Caret Line="738" Column="45" TopLine="716"/>
+        <Filename Value="unprinc.pas"/>
+        <Caret Line="603" Column="3" TopLine="595"/>
       </Position10>
       <Position11>
-        <Filename Value="undlgpesquisaarquivo.pas"/>
-        <Caret Line="378" Column="35" TopLine="366"/>
+        <Filename Value="unprinc.pas"/>
+        <Caret Line="353" Column="2" TopLine="345"/>
       </Position11>
       <Position12>
         <Filename Value="unprinc.pas"/>
-        <Caret Line="194" Column="3" TopLine="191"/>
+        <Caret Line="556" Column="12" TopLine="546"/>
       </Position12>
       <Position13>
-        <Filename Value="unprinc.pas"/>
-        <Caret Line="371" Column="19" TopLine="354"/>
+        <Filename Value="undm.pas"/>
+        <Caret Line="13" Column="31" TopLine="3"/>
       </Position13>
       <Position14>
         <Filename Value="unprinc.pas"/>
-        <Caret Line="557" Column="5" TopLine="546"/>
+        <Caret Line="556" Column="11" TopLine="547"/>
       </Position14>
       <Position15>
         <Filename Value="unprinc.pas"/>
-        <Caret Line="585" Column="36" TopLine="568"/>
+        <Caret Line="558" Column="28" TopLine="547"/>
       </Position15>
       <Position16>
         <Filename Value="unprinc.pas"/>
-        <Caret Line="633" Column="36" TopLine="616"/>
+        <Caret Line="556" Column="10" TopLine="550"/>
       </Position16>
       <Position17>
         <Filename Value="unprinc.pas"/>
-        <Caret Line="603" Column="3" TopLine="595"/>
+        <Caret Line="559" Column="24" TopLine="550"/>
       </Position17>
       <Position18>
         <Filename Value="unprinc.pas"/>
-        <Caret Line="353" Column="2" TopLine="345"/>
+        <Caret Line="592" TopLine="550"/>
       </Position18>
       <Position19>
         <Filename Value="unprinc.pas"/>
-        <Caret Line="556" Column="12" TopLine="546"/>
+        <Caret Line="559" Column="3" TopLine="550"/>
       </Position19>
       <Position20>
-        <Filename Value="undm.pas"/>
-        <Caret Line="13" Column="31" TopLine="3"/>
+        <Filename Value="unprinc.pas"/>
+        <Caret Line="560" Column="6" TopLine="551"/>
       </Position20>
       <Position21>
         <Filename Value="unprinc.pas"/>
-        <Caret Line="556" Column="11" TopLine="547"/>
+        <Caret Line="591" Column="3" TopLine="579"/>
       </Position21>
       <Position22>
         <Filename Value="unprinc.pas"/>
-        <Caret Line="558" Column="28" TopLine="547"/>
+        <Caret Line="559" Column="22" TopLine="552"/>
       </Position22>
       <Position23>
         <Filename Value="unprinc.pas"/>
-        <Caret Line="556" Column="10" TopLine="550"/>
+        <Caret Line="554" Column="43" TopLine="550"/>
       </Position23>
       <Position24>
-        <Filename Value="unprinc.pas"/>
-        <Caret Line="559" Column="24" TopLine="550"/>
+        <Filename Value="uncadarquivos.pas"/>
+        <Caret Line="658" Column="3" TopLine="654"/>
       </Position24>
       <Position25>
-        <Filename Value="unprinc.pas"/>
-        <Caret Line="592" TopLine="550"/>
+        <Filename Value="uncadarquivos.pas"/>
+        <Caret Line="973" Column="3" TopLine="971"/>
       </Position25>
       <Position26>
-        <Filename Value="unprinc.pas"/>
-        <Caret Line="559" Column="3" TopLine="550"/>
+        <Filename Value="unconsultaespecial.pas"/>
+        <Caret Line="130" Column="3" TopLine="120"/>
       </Position26>
       <Position27>
-        <Filename Value="unprinc.pas"/>
-        <Caret Line="560" Column="6" TopLine="551"/>
+        <Filename Value="unconsultaespecial.pas"/>
+        <Caret Line="1518" Column="6" TopLine="236"/>
       </Position27>
       <Position28>
-        <Filename Value="unprinc.pas"/>
-        <Caret Line="591" Column="3" TopLine="579"/>
+        <Filename Value="unconsultaespecial.pas"/>
+        <Caret Line="1517" Column="33" TopLine="1509"/>
       </Position28>
-      <Position29>
-        <Filename Value="unprinc.pas"/>
-        <Caret Line="559" Column="22" TopLine="552"/>
-      </Position29>
-      <Position30>
-        <Filename Value="unprinc.pas"/>
-        <Caret Line="554" Column="43" TopLine="550"/>
-      </Position30>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>

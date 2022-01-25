@@ -1,8 +1,8 @@
 object DM: TDM
   OldCreateOrder = False
   Height = 701
-  HorizontalOffset = 383
-  VerticalOffset = 111
+  HorizontalOffset = 0
+  VerticalOffset = 17
   Width = 1316
   object ZUpdateSQL1: TZUpdateSQL
     DeleteSQL.Strings = (
@@ -3622,8 +3622,8 @@ object DM: TDM
       'order by DE.NOME_DEP'
     )
     Params = <>
-    Left = 994
-    Top = 104
+    Left = 992
+    Top = 112
     object sds_OpenAutorListCODIGO: TLongintField
       FieldKind = fkData
       FieldName = 'CODIGO'
