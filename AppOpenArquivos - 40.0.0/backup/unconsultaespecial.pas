@@ -141,6 +141,36 @@ uses ShellAPI, UnDM, ULocalizarUser, UnLocalizarUserCod, UnPrinc, UnLogin,
 
 {$R *.lfm}
 
+function RemoverPorCento(str: string):string;
+var
+   x: integer;
+   st: string;
+begin
+st:='';
+for x:=1 to length(str) do
+    begin
+    if (str[x] = '%') then
+
+    st:=st + str[x];
+    end;
+Remover:=st;
+end;
+
+function Remover2(campo: string):string;
+var temp:string;
+      i:integer;
+
+begin
+temp:='';
+for i:=1 to length(campo) do //campo e a variavel q vc quer remover os . e -
+begin
+//if ((campo[i]<>´.´) and (campo[i]<>´-´)) then
+if ((campo[i] <> '%')) then
+temp:=temp+campo[i];
+end;
+campo:=temp
+end;
+
 procedure TFrmView.BitBtn2Click(Sender: TObject);
 begin
   Alert.Visible := False;
@@ -437,10 +467,11 @@ begin
 
   // DM.sds_view.CLOSE;
   // DM.sds_view_todos.CLOSE;
-  if (EditPesqu.Text = '%' ) or  (EditPesqu.Text = '%%' ) Then
-  begin
-    EditPesqu.Text:='';
-  end;
+  //if (EditPesqu.Text = '%' ) or (EditPesqu.Text = '%%' ) Then
+  //begin
+  //  EditPesqu.Text:='';
+  //end;
+  EditPesqu.Text:=Remover2(EditPesqu.Text);
   if (EditPesqu.Text <> '' ) or (PanelMostrData.Visible = True) then
   begin
     if (FrmLogin.TODOS = 1) then

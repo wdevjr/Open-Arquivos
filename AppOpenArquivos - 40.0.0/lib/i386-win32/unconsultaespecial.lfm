@@ -805,6 +805,7 @@ object FrmView: TFrmView
       MaxLength = 0
       ParentFont = False
       TabOrder = 0
+      OnKeyPress = EditPesquKeyPress
       SpaceChar = '_'
     end
   end
