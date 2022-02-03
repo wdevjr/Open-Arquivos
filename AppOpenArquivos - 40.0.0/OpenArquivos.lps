@@ -45,13 +45,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="UnDM"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="955"/>
+        <TopLine Value="954"/>
         <CursorPos X="22" Y="822"/>
         <UsageCount Value="32"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit3>
       <Unit4>
         <Filename Value="UnCadPerfil.pas"/>
@@ -161,11 +159,13 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UnConsultaEspecial"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="7"/>
-        <TopLine Value="430"/>
-        <CursorPos X="30" Y="444"/>
+        <TopLine Value="438"/>
+        <CursorPos X="33" Y="440"/>
         <UsageCount Value="32"/>
         <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit13>
       <Unit14>
         <Filename Value="uncadarquivos.pas"/>
@@ -442,7 +442,7 @@
         <UsageCount Value="10"/>
       </Unit40>
     </Units>
-    <JumpHistory Count="28" HistoryIndex="27">
+    <JumpHistory Count="29" HistoryIndex="28">
       <Position1>
         <Filename Value="unprinc.pas"/>
         <Caret Line="580" Column="48" TopLine="576"/>
@@ -555,6 +555,10 @@
         <Filename Value="unconsultaespecial.pas"/>
         <Caret Line="1517" Column="33" TopLine="1509"/>
       </Position28>
+      <Position29>
+        <Filename Value="unconsultaespecial.pas"/>
+        <Caret Line="444" Column="30" TopLine="1316"/>
+      </Position29>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>

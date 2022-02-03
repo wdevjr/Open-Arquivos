@@ -45,10 +45,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="UnDM"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="814"/>
-        <CursorPos X="33" Y="821"/>
+        <TopLine Value="954"/>
+        <CursorPos X="22" Y="822"/>
         <UsageCount Value="32"/>
         <Loaded Value="True"/>
       </Unit3>
@@ -160,6 +159,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UnConsultaEspecial"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="7"/>
         <TopLine Value="430"/>
         <CursorPos X="30" Y="444"/>

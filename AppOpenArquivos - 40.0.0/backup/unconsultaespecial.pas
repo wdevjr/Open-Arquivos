@@ -437,11 +437,11 @@ begin
 
   // DM.sds_view.CLOSE;
   // DM.sds_view_todos.CLOSE;
-  if (EditPesqu.Text = '%' ) Then
+  if (EditPesqu.Text = '%' ) or  (EditPesqu.Text = '%%' ) Then
   begin
     EditPesqu.Text:='';
   end;
-  if (EditPesqu.Text <> '' ) or (EditPesqu.Text = '%')then
+  if (EditPesqu.Text <> '' ) or (PanelMostrData.Visible = True) then
   begin
     if (FrmLogin.TODOS = 1) then
     begin
