@@ -920,9 +920,10 @@ begin
       MostrarIcon;
       if (Tamnh > 1024) then
       begin
-        if (Tamnh >= 167772160) then // 160MB
+        //if (Tamnh >= 167772160) then // 160MB
+        if (Tamnh >= 188743680) then // 180MB
         begin
-          MessageDlg('Memória Insuficiente no Banco!, Ultrapassou os 160 MB!',
+          MessageDlg('Memória Insuficiente no Banco!, Ultrapassou os 180 MB!',
             mtError, [mbOK], 0);
           Dtsrc.DataSet.Cancel;
           ConfigInicial;

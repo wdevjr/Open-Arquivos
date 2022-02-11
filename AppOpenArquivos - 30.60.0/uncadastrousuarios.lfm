@@ -1127,8 +1127,9 @@ object FrmCadastrodeUsuarios: TFrmCadastrodeUsuarios
       DataField = 'DATA'
       DataSource = Dtscu
       CharCase = ecNormal
+      EditMask = '!99/99/0000;1;_'
       Font.Color = clGreen
-      MaxLength = 0
+      MaxLength = 10
       ParentFont = False
       TabOrder = 10
       OnKeyDown = DBEdit6KeyDown

@@ -226,7 +226,7 @@ begin
     FrmCadAutor.Left := 220;
     FrmCadAutor.Top :=10;
   end;
-  FrmCadAutor.SetFocus;
+ // FrmCadAutor.SetFocus;
 
   //if not Assigned(FrmCadAutor) then
   //  FrmCadAutor := TFrmCadAutor.Create(Self);

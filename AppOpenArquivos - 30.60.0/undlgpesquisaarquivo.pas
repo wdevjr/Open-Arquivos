@@ -5,11 +5,12 @@ unit unDlgPesquisaArquivo;
 interface
 
 uses
-  Windows, Messages, SysUtils, Variants,
-  Classes, Graphics,
-  Controls, Forms, Dialogs, Grids, DBGrids, DB, DBCtrls,
-  Buttons, ExtCtrls, ComCtrls,
-  StdCtrls, ubarcodes, LR_BarC;
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, Grids, DBGrids, DB, DBCtrls, Buttons, ExtCtrls, ComCtrls, StdCtrls,
+  JvGridFilter, JvYearGrid, JvTFMonths, JvTFWeeks, JvTFManager, JvBaseEdits,
+  JvDesignSurface, JvFormWallpaper, JvXPButtons, JvXPCore, JvBmpAnimator,
+  JvFullColorCtrls, JvGradient, JvOwnerDrawViewer, JvTabBar, JvNavigationPane,
+  JvAutoComplete, JvDBSearchEdit, JvDBControls, JvDBLookup, ubarcodes, LR_BarC;
 
 type
 
@@ -19,6 +20,7 @@ type
     BarcodeQR1: TBarcodeQR;
     BitBtn2: TBitBtn;
     BtnOk: TBitBtn;
+    CheckBoxINC: TCheckBox;
     DBGrid1: TDBGrid;
     DBMemo1: TDBMemo;
     DtsrcTodos: TDataSource;
@@ -40,8 +42,11 @@ type
       DataCol: integer; Column: TColumn; State: TGridDrawState);
     procedure DBGrid1SelectEditor(Sender: TObject; Column: TColumn;
       var Editor: TWinControl);
+    procedure EditProc1KeyPress(Sender: TObject; var Key: char);
+    procedure EditProc2KeyPress(Sender: TObject; var Key: char);
     procedure FormActivate(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure JvXPButton1Click(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
     procedure SpeedButton2Click(Sender: TObject);
     procedure SpeedButton3Click(Sender: TObject);
@@ -220,6 +225,426 @@ begin
 
 end;
 
+procedure TFrmDlgPesquisa.EditProc1KeyPress(Sender: TObject; var Key: char);
+begin
+   if (FrmLogin.TODOS = 1) then
+  begin
+    if CheckBoxINC.Checked = True then
+    begin
+      with DM.sds_ArquTodos do
+      begin
+        Close;
+        if tag = 0 then
+        begin
+          if (EditProc1.Text <> '') and (EditProc2.Text = '') then
+          begin
+            DM.sds_ArquTodos.Close;
+            DM.sds_ArquTodos.SQL.Clear;
+            // DM.sds_ArquTodos.Params.Clear;
+            DM.sds_ArquTodos.SQL.Add(
+              'select AQ.ID,AQ.COD_USUARIO,AQ.DESCRICAO,AQ.TITULO,AQ.NOME_ARQUIVO,UR.LOGIN,UR.NIVEL,UR.NOME as NOMEUSER,SS.TITULOASSUN,TT.NOME as NOMEAUTOR,AQ.INFORMACOES,AQ.DATA' + ' from ARQUIVOLIST AQ' + ' left join USUARIO UR on AQ.COD_USUARIO = UR.COD_USUARIO' + ' left join ASSUNTO SS on (AQ.COD_ASSUNTO = SS.CODIGO) ' + ' left join AUTORES TT on (TT.CODIGO = AQ.COD_AUTOR) ' + ' where AQ.TITULO like ' + QuotedStr('%' + EditProc1.Text + '%') + ' AND AQ.DESCRICAO like :Param order by AQ.DESCRICAO, AQ.TITULO desc');
+            Params[0].AsString := '%' + EditProc1.Text + '%';
+            DBGrid1.DataSource := DtsrcTodos;
+            DBMemo1.DataSource := DtsrcTodos;
+            try
+              Open;
+            except
+              on E: Exception do
+              begin
+                MessageDlg('Erro ao Consultar!',
+                  'Erro na Consulta do Arquivo: TODOS 1, primeiro Comando SQL!, mensagem nativa do Banco: '
+                  + E.Message, mtError, [mbOK], 0);
+              end;
+            end;
+            if (EditProc1.Text <> '') then
+            begin
+              if IsEmpty then
+              begin
+                StsBr.Panels[0].Text :=
+                  format('Nenhum registro foi encontrado com "%s"',
+                  [EditProc1.Text]);
+                StsBr.Canvas.Font.Color := clRed;
+
+              end
+              else
+              begin
+                StsBr.Panels[0].Text :=
+                  format('%d registros encontrados com "%s"',
+                  [RecordCount, EditProc1.Text]);
+                StsBr.Canvas.Font.Color := clGreen;
+              end;
+            end;
+          end
+          else if (EditProc2.Text <> '') and (EditProc1.Text = '') then
+          begin
+            DM.sds_ArquTodos.Close;
+            DM.sds_ArquTodos.SQL.Clear;
+            // DM.sds_ArquTodos.Params.Clear;
+            DM.sds_ArquTodos.SQL.Add(
+              'select AQ.ID,AQ.COD_USUARIO,AQ.DESCRICAO,' +
+              ' AQ.TITULO,AQ.NOME_ARQUIVO,UR.LOGIN,UR.NIVEL,' +
+              ' UR.NOME as NOMEUSER,SS.TITULOASSUN,TT.NOME as NOMEAUTOR,' +
+              ' AQ.INFORMACOES,AQ.DATA' + ' from ARQUIVOLIST AQ' +
+              ' left join USUARIO UR on AQ.COD_USUARIO = UR.COD_USUARIO' +
+              ' left join ASSUNTO SS on (AQ.COD_ASSUNTO = SS.CODIGO) ' +
+              ' left join AUTORES TT on (TT.CODIGO = AQ.COD_AUTOR) ' +
+              ' where AQ.DESCRICAO like ' + QuotedStr('%' + EditProc2.Text + '%') +
+              ' AND AQ.DESCRICAO like :Param order by AQ.DESCRICAO, AQ.TITULO desc');
+            Params[0].AsString := '%' + EditProc2.Text + '%';
+            DBGrid1.DataSource := DtsrcTodos;
+            DBMemo1.DataSource := DtsrcTodos;
+            try
+              Open;
+            except
+              on E: Exception do
+              begin
+                MessageDlg('Erro ao Consultar!',
+                  'Erro na Consulta do Arquivo: TODOS 1, primeiro Comando SQL!, mensagem nativa do Banco: '
+                  + E.Message, mtError, [mbOK], 0);
+              end;
+            end;
+            if (EditProc2.Text <> '') then
+            begin
+              if IsEmpty then
+              begin
+                StsBr.Panels[0].Text :=
+                  format('Nenhum registro foi encontrado com "%s"',
+                  [EditProc2.Text]);
+                StsBr.Canvas.Font.Color := clRed;
+              end
+              else
+              begin
+                StsBr.Panels[0].Text :=
+                  format('%d registros encontrados com "%s"',
+                  [RecordCount, EditProc2.Text]);
+                StsBr.Canvas.Font.Color := clGreen;
+
+              end;
+            end;
+          end;
+
+
+          BtnOk.Enabled := not IsEmpty;
+
+        end;
+      end;
+    end;
+
+  end;
+
+  if (FrmLogin.TODOS = 0) then
+  begin
+    if CheckBoxINC.Checked = True then
+    begin
+      if (EditProc2.Text <> '') and (EditProc1.Text = '') then
+      begin
+        with DM.sds_Arqu do
+        begin
+          Close;
+          if tag = 0 then
+          begin
+            DM.sds_Arqu.Close;
+            DM.sds_Arqu.SQL.Clear;
+            DM.sds_Arqu.SQL.Add(
+              'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO,PO.NOME as NOMEUSER, AQ.DATA,N.IDUSUARIOS,SS.TITULOASSUN,TT.NOME as NOMEAUTOR from ARQUIVOS_USUARIOS N ' + ' left join ARQUIVOLIST AQ on (AQ.ID = N.IDARQUIVOS) ' + ' left join ASSUNTO SS on (AQ.COD_ASSUNTO = SS.CODIGO) ' + ' left join USUARIO PO on (AQ.COD_USUARIO = PO.COD_USUARIO) ' + ' left join AUTORES TT on (TT.CODIGO = AQ.COD_AUTOR) ' + ' where AQ.DESCRICAO like ' + QuotedStr('%' + EditProc2.Text + '%') + ' and N.IDUSUARIOS=' + IntToStr(FrmLogin.COD_USUARIO) + ' order by AQ.DESCRICAO');
+
+          end;
+          DBGrid1.DataSource := Dtsrc;
+          DBMemo1.DataSource := Dtsrc;
+          try
+            Open;
+          except
+            on E: Exception do
+            begin
+              MessageDlg('Erro ao Consultar!',
+                'Erro na Consulta do Arquivo: TODOS 0, primeiro Comando SQL!, mensagem nativa do Banco: '
+                + E.Message, mtError, [mbOK], 0);
+            end;
+          end;
+          BtnOk.Enabled := not IsEmpty;
+
+          if (EditProc2.Text <> '') then
+          begin
+            if IsEmpty then
+            begin
+              StsBr.Panels[0].Text :=
+                format('Nenhum registro foi encontrado com "%s"',
+                [EditProc2.Text]);
+              StsBr.Canvas.Font.Color := clRed;
+            end
+            else
+            begin
+              StsBr.Panels[0].Text :=
+                format('%d registros encontrados com "%s"',
+                [RecordCount, EditProc2.Text]);
+              StsBr.Canvas.Font.Color := clGreen;
+            end;
+          end;
+        end;
+      end
+      else if (EditProc1.Text <> '') and (EditProc2.Text = '') then
+      begin
+        with DM.sds_Arqu do
+        begin
+          if tag = 0 then
+          begin
+
+            DM.sds_Arqu.Close;
+            DM.sds_Arqu.SQL.Clear;
+            DM.sds_Arqu.SQL.Add(
+              'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO,AQ.DESCRICAO, AQ.TITULO, AQ.NOME_ARQUIVO, PO.NOME as NOMEUSER, AQ.DATA, SS.TITULOASSUN,N.IDUSUARIOS,TT.NOME as NOMEAUTOR from ARQUIVOS_USUARIOS N ' + 'left join ARQUIVOLIST AQ on (AQ.ID = N.IDARQUIVOS)' + ' left join ASSUNTO SS on (AQ.COD_ASSUNTO = SS.CODIGO) ' + ' left join USUARIO PO on (AQ.COD_USUARIO = PO.COD_USUARIO) ' + ' left join AUTORES TT on (TT.CODIGO = AQ.COD_AUTOR) ' + ' where AQ.TITULO like ' + QuotedStr('%' + EditProc1.Text + '%') + ' and N.IDUSUARIOS=' + IntToStr(FrmLogin.COD_USUARIO) + ' order by AQ.TITULO');
+
+          end;
+          DBGrid1.DataSource := Dtsrc;
+          DBMemo1.DataSource := Dtsrc;
+          try
+            Open;
+          except
+            on E: Exception do
+            begin
+              MessageDlg('Erro ao Consultar!',
+                'Erro na Consulta do Arquivo: TODOS 0, primeiro Comando SQL!, mensagem nativa do Banco: '
+                + E.Message, mtError, [mbOK], 0);
+            end;
+          end;
+          BtnOk.Enabled := not IsEmpty;
+          if (EditProc1.Text <> '') then
+          begin
+            if IsEmpty then
+            begin
+              StsBr.Panels[0].Text :=
+                format('Nenhum registro foi encontrado com "%s"',
+                [EditProc1.Text]);
+              StsBr.Canvas.Font.Color := clRed;
+
+            end
+            else
+            begin
+              StsBr.Panels[0].Text :=
+                format('%d registros encontrados com "%s"',
+                [RecordCount, EditProc1.Text]);
+              StsBr.Canvas.Font.Color := clGreen;
+            end;
+          end;
+        end;
+      end;
+    end;
+  end;
+
+
+end;
+
+procedure TFrmDlgPesquisa.EditProc2KeyPress(Sender: TObject; var Key: char);
+begin
+
+  if (FrmLogin.TODOS = 1) then
+  begin
+    if CheckBoxINC.Checked = True then
+    begin
+      with DM.sds_ArquTodos do
+      begin
+        Close;
+        if tag = 0 then
+        begin
+          if (EditProc1.Text <> '') and (EditProc2.Text = '') then
+          begin
+            DM.sds_ArquTodos.Close;
+            DM.sds_ArquTodos.SQL.Clear;
+            // DM.sds_ArquTodos.Params.Clear;
+            DM.sds_ArquTodos.SQL.Add(
+              'select AQ.ID,AQ.COD_USUARIO,AQ.DESCRICAO,AQ.TITULO,AQ.NOME_ARQUIVO,UR.LOGIN,UR.NIVEL,UR.NOME as NOMEUSER,SS.TITULOASSUN,TT.NOME as NOMEAUTOR,AQ.INFORMACOES,AQ.DATA' + ' from ARQUIVOLIST AQ' + ' left join USUARIO UR on AQ.COD_USUARIO = UR.COD_USUARIO' + ' left join ASSUNTO SS on (AQ.COD_ASSUNTO = SS.CODIGO) ' + ' left join AUTORES TT on (TT.CODIGO = AQ.COD_AUTOR) ' + ' where AQ.TITULO like ' + QuotedStr('%' + EditProc1.Text + '%') + ' AND AQ.DESCRICAO like :Param order by AQ.DESCRICAO, AQ.TITULO desc');
+            Params[0].AsString := '%' + EditProc1.Text + '%';
+            DBGrid1.DataSource := DtsrcTodos;
+            DBMemo1.DataSource := DtsrcTodos;
+            try
+              Open;
+            except
+              on E: Exception do
+              begin
+                MessageDlg('Erro ao Consultar!',
+                  'Erro na Consulta do Arquivo: TODOS 1, primeiro Comando SQL!, mensagem nativa do Banco: '
+                  + E.Message, mtError, [mbOK], 0);
+              end;
+            end;
+            if (EditProc1.Text <> '') then
+            begin
+              if IsEmpty then
+              begin
+                StsBr.Panels[0].Text :=
+                  format('Nenhum registro foi encontrado com "%s"',
+                  [EditProc1.Text]);
+                StsBr.Canvas.Font.Color := clRed;
+
+              end
+              else
+              begin
+                StsBr.Panels[0].Text :=
+                  format('%d registros encontrados com "%s"',
+                  [RecordCount, EditProc1.Text]);
+                StsBr.Canvas.Font.Color := clGreen;
+              end;
+            end;
+          end
+          else if (EditProc2.Text <> '') and (EditProc1.Text = '') then
+          begin
+            DM.sds_ArquTodos.Close;
+            DM.sds_ArquTodos.SQL.Clear;
+            // DM.sds_ArquTodos.Params.Clear;
+            DM.sds_ArquTodos.SQL.Add(
+              'select AQ.ID,AQ.COD_USUARIO,AQ.DESCRICAO,' +
+              ' AQ.TITULO,AQ.NOME_ARQUIVO,UR.LOGIN,UR.NIVEL,' +
+              ' UR.NOME as NOMEUSER,SS.TITULOASSUN,TT.NOME as NOMEAUTOR,' +
+              ' AQ.INFORMACOES,AQ.DATA' + ' from ARQUIVOLIST AQ' +
+              ' left join USUARIO UR on AQ.COD_USUARIO = UR.COD_USUARIO' +
+              ' left join ASSUNTO SS on (AQ.COD_ASSUNTO = SS.CODIGO) ' +
+              ' left join AUTORES TT on (TT.CODIGO = AQ.COD_AUTOR) ' +
+              ' where AQ.DESCRICAO like ' + QuotedStr('%' + EditProc2.Text + '%') +
+              ' AND AQ.DESCRICAO like :Param order by AQ.DESCRICAO, AQ.TITULO desc');
+            Params[0].AsString := '%' + EditProc2.Text + '%';
+            DBGrid1.DataSource := DtsrcTodos;
+            DBMemo1.DataSource := DtsrcTodos;
+            try
+              Open;
+            except
+              on E: Exception do
+              begin
+                MessageDlg('Erro ao Consultar!',
+                  'Erro na Consulta do Arquivo: TODOS 1, primeiro Comando SQL!, mensagem nativa do Banco: '
+                  + E.Message, mtError, [mbOK], 0);
+              end;
+            end;
+            if (EditProc2.Text <> '') then
+            begin
+              if IsEmpty then
+              begin
+                StsBr.Panels[0].Text :=
+                  format('Nenhum registro foi encontrado com "%s"',
+                  [EditProc2.Text]);
+                StsBr.Canvas.Font.Color := clRed;
+              end
+              else
+              begin
+                StsBr.Panels[0].Text :=
+                  format('%d registros encontrados com "%s"',
+                  [RecordCount, EditProc2.Text]);
+                StsBr.Canvas.Font.Color := clGreen;
+
+              end;
+            end;
+          end;
+
+
+          BtnOk.Enabled := not IsEmpty;
+
+        end;
+      end;
+    end;
+
+  end;
+
+  if (FrmLogin.TODOS = 0) then
+  begin
+    if CheckBoxINC.Checked = True then
+    begin
+      if (EditProc2.Text <> '') and (EditProc1.Text = '') then
+      begin
+        with DM.sds_Arqu do
+        begin
+          Close;
+          if tag = 0 then
+          begin
+            DM.sds_Arqu.Close;
+            DM.sds_Arqu.SQL.Clear;
+            DM.sds_Arqu.SQL.Add(
+              'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO,PO.NOME as NOMEUSER, AQ.DATA,N.IDUSUARIOS,SS.TITULOASSUN,TT.NOME as NOMEAUTOR from ARQUIVOS_USUARIOS N ' + ' left join ARQUIVOLIST AQ on (AQ.ID = N.IDARQUIVOS) ' + ' left join ASSUNTO SS on (AQ.COD_ASSUNTO = SS.CODIGO) ' + ' left join USUARIO PO on (AQ.COD_USUARIO = PO.COD_USUARIO) ' + ' left join AUTORES TT on (TT.CODIGO = AQ.COD_AUTOR) ' + ' where AQ.DESCRICAO like ' + QuotedStr('%' + EditProc2.Text + '%') + ' and N.IDUSUARIOS=' + IntToStr(FrmLogin.COD_USUARIO) + ' order by AQ.DESCRICAO');
+
+          end;
+          DBGrid1.DataSource := Dtsrc;
+          DBMemo1.DataSource := Dtsrc;
+          try
+            Open;
+          except
+            on E: Exception do
+            begin
+              MessageDlg('Erro ao Consultar!',
+                'Erro na Consulta do Arquivo: TODOS 0, primeiro Comando SQL!, mensagem nativa do Banco: '
+                + E.Message, mtError, [mbOK], 0);
+            end;
+          end;
+          BtnOk.Enabled := not IsEmpty;
+
+          if (EditProc2.Text <> '') then
+          begin
+            if IsEmpty then
+            begin
+              StsBr.Panels[0].Text :=
+                format('Nenhum registro foi encontrado com "%s"',
+                [EditProc2.Text]);
+              StsBr.Canvas.Font.Color := clRed;
+            end
+            else
+            begin
+              StsBr.Panels[0].Text :=
+                format('%d registros encontrados com "%s"',
+                [RecordCount, EditProc2.Text]);
+              StsBr.Canvas.Font.Color := clGreen;
+            end;
+          end;
+        end;
+      end
+      else if (EditProc1.Text <> '') and (EditProc2.Text = '') then
+      begin
+        with DM.sds_Arqu do
+        begin
+          if tag = 0 then
+          begin
+
+            DM.sds_Arqu.Close;
+            DM.sds_Arqu.SQL.Clear;
+            DM.sds_Arqu.SQL.Add(
+              'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO,AQ.DESCRICAO, AQ.TITULO, AQ.NOME_ARQUIVO, PO.NOME as NOMEUSER, AQ.DATA, SS.TITULOASSUN,N.IDUSUARIOS,TT.NOME as NOMEAUTOR from ARQUIVOS_USUARIOS N ' + 'left join ARQUIVOLIST AQ on (AQ.ID = N.IDARQUIVOS)' + ' left join ASSUNTO SS on (AQ.COD_ASSUNTO = SS.CODIGO) ' + ' left join USUARIO PO on (AQ.COD_USUARIO = PO.COD_USUARIO) ' + ' left join AUTORES TT on (TT.CODIGO = AQ.COD_AUTOR) ' + ' where AQ.TITULO like ' + QuotedStr('%' + EditProc1.Text + '%') + ' and N.IDUSUARIOS=' + IntToStr(FrmLogin.COD_USUARIO) + ' order by AQ.TITULO');
+
+          end;
+          DBGrid1.DataSource := Dtsrc;
+          DBMemo1.DataSource := Dtsrc;
+          try
+            Open;
+          except
+            on E: Exception do
+            begin
+              MessageDlg('Erro ao Consultar!',
+                'Erro na Consulta do Arquivo: TODOS 0, primeiro Comando SQL!, mensagem nativa do Banco: '
+                + E.Message, mtError, [mbOK], 0);
+            end;
+          end;
+          BtnOk.Enabled := not IsEmpty;
+          if (EditProc1.Text <> '') then
+          begin
+            if IsEmpty then
+            begin
+              StsBr.Panels[0].Text :=
+                format('Nenhum registro foi encontrado com "%s"',
+                [EditProc1.Text]);
+              StsBr.Canvas.Font.Color := clRed;
+
+            end
+            else
+            begin
+              StsBr.Panels[0].Text :=
+                format('%d registros encontrados com "%s"',
+                [RecordCount, EditProc1.Text]);
+              StsBr.Canvas.Font.Color := clGreen;
+            end;
+          end;
+        end;
+      end;
+    end;
+  end;
+
+
+
+end;
+
 procedure TFrmDlgPesquisa.FormActivate(Sender: TObject);
 begin
   Color := DM.myColor;
@@ -262,6 +687,11 @@ begin
 
 end;
 
+procedure TFrmDlgPesquisa.JvXPButton1Click(Sender: TObject);
+begin
+  BarcodeQR1.Visible := False;
+end;
+
 procedure TFrmDlgPesquisa.SpeedButton1Click(Sender: TObject);
 begin
   FrmDlgDescricao := TFrmDlgDescricao.Create(self);
@@ -276,167 +706,37 @@ procedure TFrmDlgPesquisa.SpeedButton2Click(Sender: TObject);
 var
   sSQL, Texto: string;
 begin
-  if (FrmLogin.TODOS = 0) then
+  if CheckBoxINC.Checked = False then
   begin
-    if (EditProc2.Text <> '') and (EditProc1.Text = '') then
+    if (FrmLogin.TODOS = 0) then
     begin
-      with DM.sds_Arqu do
+      if (EditProc2.Text <> '') and (EditProc1.Text = '') then
       begin
-        Close;
-        if tag = 0 then
+        with DM.sds_Arqu do
         begin
-          DM.sds_Arqu.Close;
-          DM.sds_Arqu.SQL.Clear;
-          DM.sds_Arqu.SQL.Add(
-            'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO,PO.NOME as NOMEUSER, AQ.DATA,N.IDUSUARIOS,SS.TITULOASSUN,TT.NOME as NOMEAUTOR from ARQUIVOS_USUARIOS N ' + ' left join ARQUIVOLIST AQ on (AQ.ID = N.IDARQUIVOS) ' + ' left join ASSUNTO SS on (AQ.COD_ASSUNTO = SS.CODIGO) ' + ' left join USUARIO PO on (AQ.COD_USUARIO = PO.COD_USUARIO) ' + ' left join AUTORES TT on (TT.CODIGO = AQ.COD_AUTOR) ' + ' where AQ.DESCRICAO like ' + QuotedStr('%' + EditProc2.Text + '%') + ' and N.IDUSUARIOS=' + IntToStr(FrmLogin.COD_USUARIO) + ' order by AQ.DESCRICAO');
-
-        end;
-        DBGrid1.DataSource := Dtsrc;
-        DBMemo1.DataSource := Dtsrc;
-        try
-          Open;
-        except
-          on E: Exception do
+          Close;
+          if tag = 0 then
           begin
-            MessageDlg('Erro ao Consultar!',
-              'Erro na Consulta do Arquivo: TODOS 0, primeiro Comando SQL!, mensagem nativa do Banco: '
-              + E.Message, mtError, [mbOK], 0);
+            DM.sds_Arqu.Close;
+            DM.sds_Arqu.SQL.Clear;
+            DM.sds_Arqu.SQL.Add(
+              'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO, AQ.DESCRICAO, AQ.TITULO,AQ.NOME_ARQUIVO,PO.NOME as NOMEUSER, AQ.DATA,N.IDUSUARIOS,SS.TITULOASSUN,TT.NOME as NOMEAUTOR from ARQUIVOS_USUARIOS N ' + ' left join ARQUIVOLIST AQ on (AQ.ID = N.IDARQUIVOS) ' + ' left join ASSUNTO SS on (AQ.COD_ASSUNTO = SS.CODIGO) ' + ' left join USUARIO PO on (AQ.COD_USUARIO = PO.COD_USUARIO) ' + ' left join AUTORES TT on (TT.CODIGO = AQ.COD_AUTOR) ' + ' where AQ.DESCRICAO like ' + QuotedStr('%' + EditProc2.Text + '%') + ' and N.IDUSUARIOS=' + IntToStr(FrmLogin.COD_USUARIO) + ' order by AQ.DESCRICAO');
+
           end;
-        end;
-        BtnOk.Enabled := not IsEmpty;
-
-        if (EditProc2.Text <> '') then
-        begin
-          if IsEmpty then
-          begin
-            StsBr.Panels[0].Text :=
-              format('Nenhum registro foi encontrado com "%s"',
-              [EditProc2.Text]);
-            StsBr.Canvas.Font.Color := clRed;
-          end
-          else
-          begin
-            StsBr.Panels[0].Text :=
-              format('%d registros encontrados com "%s"',
-              [RecordCount, EditProc2.Text]);
-            StsBr.Canvas.Font.Color := clGreen;
-          end;
-        end;
-      end;
-    end
-    else if (EditProc1.Text <> '') and (EditProc2.Text = '') then
-    begin
-      with DM.sds_Arqu do
-      begin
-        if tag = 0 then
-        begin
-
-          DM.sds_Arqu.Close;
-          DM.sds_Arqu.SQL.Clear;
-          DM.sds_Arqu.SQL.Add(
-            'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO,AQ.DESCRICAO, AQ.TITULO, AQ.NOME_ARQUIVO, PO.NOME as NOMEUSER, AQ.DATA, SS.TITULOASSUN,N.IDUSUARIOS,TT.NOME as NOMEAUTOR from ARQUIVOS_USUARIOS N ' + 'left join ARQUIVOLIST AQ on (AQ.ID = N.IDARQUIVOS)' + ' left join ASSUNTO SS on (AQ.COD_ASSUNTO = SS.CODIGO) ' + ' left join USUARIO PO on (AQ.COD_USUARIO = PO.COD_USUARIO) ' + ' left join AUTORES TT on (TT.CODIGO = AQ.COD_AUTOR) ' + ' where AQ.TITULO like ' + QuotedStr('%' + EditProc1.Text + '%') + ' and N.IDUSUARIOS=' + IntToStr(FrmLogin.COD_USUARIO) + ' order by AQ.TITULO');
-
-        end;
-        DBGrid1.DataSource := Dtsrc;
-        DBMemo1.DataSource := Dtsrc;
-        try
-          Open;
-        except
-          on E: Exception do
-          begin
-            MessageDlg('Erro ao Consultar!',
-              'Erro na Consulta do Arquivo: TODOS 0, primeiro Comando SQL!, mensagem nativa do Banco: '
-              + E.Message, mtError, [mbOK], 0);
-          end;
-        end;
-        BtnOk.Enabled := not IsEmpty;
-        if (EditProc1.Text <> '') then
-          begin
-            if IsEmpty then
-            begin
-              StsBr.Panels[0].Text :=
-                format('Nenhum registro foi encontrado com "%s"',
-                [EditProc1.Text]);
-              StsBr.Canvas.Font.Color := clRed;
-
-            end
-            else
-            begin
-              StsBr.Panels[0].Text :=
-                format('%d registros encontrados com "%s"',
-                [RecordCount, EditProc1.Text]);
-              StsBr.Canvas.Font.Color := clGreen;
-            end;
-          end;
-  end;
-
-    end;
-
-end
-  else if (FrmLogin.TODOS = 1) then
-  begin
-    with DM.sds_ArquTodos do
-    begin
-      Close;
-      if tag = 0 then
-      begin
-        if (EditProc1.Text <> '') and (EditProc2.Text = '') then
-        begin
-          DM.sds_ArquTodos.SQL.Clear;
-          // DM.sds_ArquTodos.Params.Clear;
-          DM.sds_ArquTodos.SQL.Add(
-            'select AQ.ID,AQ.COD_USUARIO,AQ.DESCRICAO,AQ.TITULO,AQ.NOME_ARQUIVO,UR.LOGIN,UR.NIVEL,UR.NOME as NOMEUSER,SS.TITULOASSUN,TT.NOME as NOMEAUTOR,AQ.INFORMACOES,AQ.DATA' + ' from ARQUIVOLIST AQ' + ' left join USUARIO UR on AQ.COD_USUARIO = UR.COD_USUARIO' + ' left join ASSUNTO SS on (AQ.COD_ASSUNTO = SS.CODIGO) ' + ' left join AUTORES TT on (TT.CODIGO = AQ.COD_AUTOR) ' + ' where AQ.TITULO like ' + QuotedStr('%' + EditProc1.Text + '%') + ' order by AQ.DESCRICAO, AQ.TITULO desc');
-          // Params[0].AsString := '%' + EditProc1.Text + '%';
-          DBGrid1.DataSource := DtsrcTodos;
-          DBMemo1.DataSource := DtsrcTodos;
+          DBGrid1.DataSource := Dtsrc;
+          DBMemo1.DataSource := Dtsrc;
           try
             Open;
           except
             on E: Exception do
             begin
               MessageDlg('Erro ao Consultar!',
-                'Erro na Consulta do Arquivo: TODOS 1, primeiro Comando SQL!, mensagem nativa do Banco: '
+                'Erro na Consulta do Arquivo: TODOS 0, primeiro Comando SQL!, mensagem nativa do Banco: '
                 + E.Message, mtError, [mbOK], 0);
             end;
           end;
-          if (EditProc1.Text <> '') then
-          begin
-            if IsEmpty then
-            begin
-              StsBr.Panels[0].Text :=
-                format('Nenhum registro foi encontrado com "%s"',
-                [EditProc1.Text]);
-              StsBr.Canvas.Font.Color := clRed;
+          BtnOk.Enabled := not IsEmpty;
 
-            end
-            else
-            begin
-              StsBr.Panels[0].Text :=
-                format('%d registros encontrados com "%s"',
-                [RecordCount, EditProc1.Text]);
-              StsBr.Canvas.Font.Color := clGreen;
-            end;
-          end;
-        end
-        else if (EditProc2.Text <> '') and (EditProc1.Text = '') then
-        begin
-          DM.sds_ArquTodos.SQL.Clear;
-          // DM.sds_ArquTodos.Params.Clear;
-          DM.sds_ArquTodos.SQL.Add(
-            'select AQ.ID,AQ.COD_USUARIO,AQ.DESCRICAO,AQ.TITULO,AQ.NOME_ARQUIVO,UR.LOGIN,UR.NIVEL,UR.NOME as NOMEUSER,SS.TITULOASSUN,TT.NOME as NOMEAUTOR,AQ.INFORMACOES,AQ.DATA' + ' from ARQUIVOLIST AQ' + ' left join USUARIO UR on AQ.COD_USUARIO = UR.COD_USUARIO' + ' left join ASSUNTO SS on (AQ.COD_ASSUNTO = SS.CODIGO) ' + ' left join AUTORES TT on (TT.CODIGO = AQ.COD_AUTOR) ' + ' where AQ.DESCRICAO like ' + QuotedStr('%' + EditProc2.Text + '%') + ' order by AQ.DESCRICAO, AQ.TITULO desc');
-          // Params[0].AsString := '%' + EditProc2.Text + '%';
-          DBGrid1.DataSource := DtsrcTodos;
-          DBMemo1.DataSource := DtsrcTodos;
-          try
-            Open;
-          except
-            on E: Exception do
-            begin
-              MessageDlg('Erro ao Consultar!',
-                'Erro na Consulta do Arquivo: TODOS 1, primeiro Comando SQL!, mensagem nativa do Banco: '
-                + E.Message, mtError, [mbOK], 0);
-            end;
-          end;
           if (EditProc2.Text <> '') then
           begin
             if IsEmpty then
@@ -455,16 +755,152 @@ end
             end;
           end;
         end;
+      end
+      else if (EditProc1.Text <> '') and (EditProc2.Text = '') then
+      begin
+        with DM.sds_Arqu do
+        begin
+          if tag = 0 then
+          begin
+
+            DM.sds_Arqu.Close;
+            DM.sds_Arqu.SQL.Clear;
+            DM.sds_Arqu.SQL.Add(
+              'select AQ.ID,AQ.COD_ASSUNTO,AQ.COD_USUARIO,AQ.DESCRICAO, AQ.TITULO, AQ.NOME_ARQUIVO, PO.NOME as NOMEUSER, AQ.DATA, SS.TITULOASSUN,N.IDUSUARIOS,TT.NOME as NOMEAUTOR from ARQUIVOS_USUARIOS N ' + 'left join ARQUIVOLIST AQ on (AQ.ID = N.IDARQUIVOS)' + ' left join ASSUNTO SS on (AQ.COD_ASSUNTO = SS.CODIGO) ' + ' left join USUARIO PO on (AQ.COD_USUARIO = PO.COD_USUARIO) ' + ' left join AUTORES TT on (TT.CODIGO = AQ.COD_AUTOR) ' + ' where AQ.TITULO like ' + QuotedStr('%' + EditProc1.Text + '%') + ' and N.IDUSUARIOS=' + IntToStr(FrmLogin.COD_USUARIO) + ' order by AQ.TITULO');
+
+          end;
+          DBGrid1.DataSource := Dtsrc;
+          DBMemo1.DataSource := Dtsrc;
+          try
+            Open;
+          except
+            on E: Exception do
+            begin
+              MessageDlg('Erro ao Consultar!',
+                'Erro na Consulta do Arquivo: TODOS 0, primeiro Comando SQL!, mensagem nativa do Banco: '
+                + E.Message, mtError, [mbOK], 0);
+            end;
+          end;
+          BtnOk.Enabled := not IsEmpty;
+          if (EditProc1.Text <> '') then
+          begin
+            if IsEmpty then
+            begin
+              StsBr.Panels[0].Text :=
+                format('Nenhum registro foi encontrado com "%s"',
+                [EditProc1.Text]);
+              StsBr.Canvas.Font.Color := clRed;
+
+            end
+            else
+            begin
+              StsBr.Panels[0].Text :=
+                format('%d registros encontrados com "%s"',
+                [RecordCount, EditProc1.Text]);
+              StsBr.Canvas.Font.Color := clGreen;
+            end;
+          end;
+        end;
+
+      end;
+
+    end
+    else if (FrmLogin.TODOS = 1) then
+    begin
+      with DM.sds_ArquTodos do
+      begin
+        Close;
+        if tag = 0 then
+        begin
+          if (EditProc1.Text <> '') and (EditProc2.Text = '') then
+          begin
+            DM.sds_ArquTodos.Close;
+            DM.sds_ArquTodos.SQL.Clear;
+            // DM.sds_ArquTodos.Params.Clear;
+            DM.sds_ArquTodos.SQL.Add(
+              'select AQ.ID,AQ.COD_USUARIO,AQ.DESCRICAO,AQ.TITULO,AQ.NOME_ARQUIVO,UR.LOGIN,UR.NIVEL,UR.NOME as NOMEUSER,SS.TITULOASSUN,TT.NOME as NOMEAUTOR,AQ.INFORMACOES,AQ.DATA' + ' from ARQUIVOLIST AQ' + ' left join USUARIO UR on AQ.COD_USUARIO = UR.COD_USUARIO' + ' left join ASSUNTO SS on (AQ.COD_ASSUNTO = SS.CODIGO) ' + ' left join AUTORES TT on (TT.CODIGO = AQ.COD_AUTOR) ' + ' where AQ.TITULO like ' + QuotedStr('%' + EditProc1.Text + '%') + ' order by AQ.DESCRICAO, AQ.TITULO desc');
+            //Params[0].AsString := '%' + EditProc1.Text + '%';
+            DBGrid1.DataSource := DtsrcTodos;
+            DBMemo1.DataSource := DtsrcTodos;
+            try
+              Open;
+            except
+              on E: Exception do
+              begin
+                MessageDlg('Erro ao Consultar!',
+                  'Erro na Consulta do Arquivo: TODOS 1, primeiro Comando SQL!, mensagem nativa do Banco: '
+                  + E.Message, mtError, [mbOK], 0);
+              end;
+            end;
+            if (EditProc1.Text <> '') then
+            begin
+              if IsEmpty then
+              begin
+                StsBr.Panels[0].Text :=
+                  format('Nenhum registro foi encontrado com "%s"',
+                  [EditProc1.Text]);
+                StsBr.Canvas.Font.Color := clRed;
+
+              end
+              else
+              begin
+                StsBr.Panels[0].Text :=
+                  format('%d registros encontrados com "%s"',
+                  [RecordCount, EditProc1.Text]);
+                StsBr.Canvas.Font.Color := clGreen;
+              end;
+            end;
+          end
+          else if (EditProc2.Text <> '') and (EditProc1.Text = '') then
+          begin
+            DM.sds_ArquTodos.Close;
+            DM.sds_ArquTodos.SQL.Clear;
+            // DM.sds_ArquTodos.Params.Clear;
+            DM.sds_ArquTodos.SQL.Add(
+              'select AQ.ID,AQ.COD_USUARIO,AQ.DESCRICAO,AQ.TITULO,AQ.NOME_ARQUIVO,UR.LOGIN,UR.NIVEL,UR.NOME as NOMEUSER,SS.TITULOASSUN,TT.NOME as NOMEAUTOR,AQ.INFORMACOES,AQ.DATA' + ' from ARQUIVOLIST AQ' + ' left join USUARIO UR on AQ.COD_USUARIO = UR.COD_USUARIO' + ' left join ASSUNTO SS on (AQ.COD_ASSUNTO = SS.CODIGO) ' + ' left join AUTORES TT on (TT.CODIGO = AQ.COD_AUTOR) ' + ' where AQ.DESCRICAO like ' + QuotedStr('%' + EditProc2.Text + '%') + ' order by AQ.DESCRICAO, AQ.TITULO desc');
+            //Params[0].AsString := '%' + EditProc2.Text + '%';
+            DBGrid1.DataSource := DtsrcTodos;
+            DBMemo1.DataSource := DtsrcTodos;
+            try
+              Open;
+            except
+              on E: Exception do
+              begin
+                MessageDlg('Erro ao Consultar!',
+                  'Erro na Consulta do Arquivo: TODOS 1, primeiro Comando SQL!, mensagem nativa do Banco: '
+                  + E.Message, mtError, [mbOK], 0);
+              end;
+            end;
+            if (EditProc2.Text <> '') then
+            begin
+              if IsEmpty then
+              begin
+                StsBr.Panels[0].Text :=
+                  format('Nenhum registro foi encontrado com "%s"',
+                  [EditProc2.Text]);
+                StsBr.Canvas.Font.Color := clRed;
+              end
+              else
+              begin
+                StsBr.Panels[0].Text :=
+                  format('%d registros encontrados com "%s"',
+                  [RecordCount, EditProc2.Text]);
+                StsBr.Canvas.Font.Color := clGreen;
+              end;
+            end;
+          end;
 
 
-        BtnOk.Enabled := not IsEmpty;
+          BtnOk.Enabled := not IsEmpty;
+
+        end;
 
       end;
 
     end;
+    DBGrid1.SetFocus;
 
   end;
- DBGrid1.SetFocus;
 
 end;
 
@@ -504,14 +940,14 @@ begin
   begin
     if Panel.ID = 0 then
     begin
-      StsBr.Canvas.Brush.Color := clWhite;
+      StsBr.Canvas.Brush.Color := DM.myColor;
       //StsBr.Canvas.Font.Color := clGreen;
       StsBr.Canvas.FillRect(Rect);
       StsBr.Canvas.TextOut(Rect.left + 18, Rect.Top, Panel.Text);
     end;
     if Panel.ID = 1 then
     begin
-      StsBr.Canvas.Brush.Color := clWhite;
+      StsBr.Canvas.Brush.Color := DM.myColor;
       // StsBr.Canvas.Font.Color := clGreen;
       StsBr.Canvas.FillRect(Rect);
       StsBr.Canvas.TextOut(Rect.left + 18, Rect.Top, Panel.Text);

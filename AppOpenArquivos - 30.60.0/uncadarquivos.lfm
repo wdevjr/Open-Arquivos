@@ -1,11 +1,11 @@
 object FormArquivo: TFormArquivo
-  Left = 295
-  Height = 335
-  Top = 188
-  Width = 763
+  Left = 376
+  Height = 369
+  Top = 93
+  Width = 796
   Caption = 'Cadastro de Arquivos'
-  ClientHeight = 335
-  ClientWidth = 763
+  ClientHeight = 369
+  ClientWidth = 796
   OnActivate = FormActivate
   OnClose = FormClose
   OnShow = FormShow
@@ -13,12 +13,12 @@ object FormArquivo: TFormArquivo
   LCLVersion = '2.0.12.0'
   object GroupBox1: TGroupBox
     Left = 0
-    Height = 288
+    Height = 320
     Top = 0
-    Width = 763
+    Width = 796
     Align = alTop
-    ClientHeight = 268
-    ClientWidth = 759
+    ClientHeight = 300
+    ClientWidth = 792
     Color = 14018023
     DoubleBuffered = True
     Font.Style = [fsBold]
@@ -76,7 +76,7 @@ object FormArquivo: TFormArquivo
     object Label5: TLabel
       Left = 14
       Height = 15
-      Top = 228
+      Top = 234
       Width = 64
       Caption = 'Informação:'
       Font.Height = -12
@@ -86,7 +86,7 @@ object FormArquivo: TFormArquivo
     object DBMemo3: TDBMemo
       Left = 14
       Height = 26
-      Top = 243
+      Top = 249
       Width = 568
       DataField = 'INFORMACOES'
       DataSource = Dtsrc
@@ -99,11 +99,11 @@ object FormArquivo: TFormArquivo
       Left = 0
       Height = 102
       Top = 0
-      Width = 759
+      Width = 792
       Align = alTop
       BevelOuter = bvNone
       ClientHeight = 102
-      ClientWidth = 759
+      ClientWidth = 792
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 3
@@ -587,11 +587,11 @@ object FormArquivo: TFormArquivo
       Left = 0
       Height = 18
       Top = 102
-      Width = 759
+      Width = 792
       Align = alTop
       BevelOuter = bvNone
       ClientHeight = 18
-      ClientWidth = 759
+      ClientWidth = 792
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 4
@@ -671,11 +671,11 @@ object FormArquivo: TFormArquivo
       Left = 0
       Height = 34
       Top = 120
-      Width = 759
+      Width = 792
       Align = alTop
       BevelOuter = bvNone
       ClientHeight = 34
-      ClientWidth = 759
+      ClientWidth = 792
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 5
@@ -839,10 +839,10 @@ object FormArquivo: TFormArquivo
       end
     end
     object cbconsulta: TSpeedButton
-      Left = 691
-      Height = 53
-      Top = 211
-      Width = 62
+      Left = 712
+      Height = 64
+      Top = 229
+      Width = 72
       Caption = 'Consultas'
       Font.Height = -12
       Glyph.Data = {
@@ -982,10 +982,10 @@ object FormArquivo: TFormArquivo
       ParentFont = False
     end
     object btntrazerForm: TSpeedButton
-      Left = 691
-      Height = 53
+      Left = 712
+      Height = 64
       Top = 160
-      Width = 62
+      Width = 72
       Caption = 'Localizar'
       Font.Height = -12
       Glyph.Data = {
@@ -1125,10 +1125,10 @@ object FormArquivo: TFormArquivo
       ParentFont = False
     end
     object btnvisualizar: TSpeedButton
-      Left = 589
+      Left = 592
       Height = 40
       Top = 173
-      Width = 102
+      Width = 115
       Caption = 'Visualizar'
       Font.Height = -12
       Glyph.Data = {
@@ -1289,10 +1289,10 @@ object FormArquivo: TFormArquivo
       ParentFont = False
     end
     object btnextrair: TSpeedButton
-      Left = 589
+      Left = 592
       Height = 40
-      Top = 218
-      Width = 102
+      Top = 224
+      Width = 115
       Caption = 'Extrair'
       Font.Height = -12
       Glyph.Data = {
@@ -1454,9 +1454,9 @@ object FormArquivo: TFormArquivo
     end
     object SpeedButton2: TSpeedButton
       Left = 531
-      Height = 40
+      Height = 52
       Top = 192
-      Width = 50
+      Width = 58
       Font.Style = [fsBold]
       Glyph.Data = {
         36240000424D3624000000000000360000002800000030000000300000000100
@@ -1757,7 +1757,7 @@ object FormArquivo: TFormArquivo
   object inserir: TBitBtn
     Left = 5
     Height = 40
-    Top = 292
+    Top = 326
     Width = 80
     Caption = 'Inserir'
     Font.Height = -10
@@ -1900,7 +1900,7 @@ object FormArquivo: TFormArquivo
   object editar: TBitBtn
     Left = 179
     Height = 40
-    Top = 292
+    Top = 326
     Width = 88
     Caption = 'Editar'
     Font.Height = -10
@@ -2043,7 +2043,7 @@ object FormArquivo: TFormArquivo
   object excluir: TBitBtn
     Left = 267
     Height = 40
-    Top = 292
+    Top = 326
     Width = 86
     Caption = 'excluir'
     Font.Height = -10
@@ -2186,7 +2186,7 @@ object FormArquivo: TFormArquivo
   object cancelar: TBitBtn
     Left = 351
     Height = 40
-    Top = 292
+    Top = 326
     Width = 90
     Caption = 'cancelar'
     Font.Height = -10
@@ -2329,7 +2329,7 @@ object FormArquivo: TFormArquivo
   object relatorio: TBitBtn
     Left = 440
     Height = 40
-    Top = 292
+    Top = 326
     Width = 94
     Caption = 'Imprimir'
     Enabled = False
@@ -2417,7 +2417,7 @@ object FormArquivo: TFormArquivo
   object ExcluirTemp: TSpeedButton
     Left = 534
     Height = 40
-    Top = 292
+    Top = 326
     Width = 129
     Caption = 'Excluir Temporário'
     Font.Height = -10
@@ -2559,7 +2559,7 @@ object FormArquivo: TFormArquivo
   object gravar: TBitBtn
     Left = 85
     Height = 40
-    Top = 292
+    Top = 326
     Width = 94
     Caption = 'Gravar'
     Font.Height = -10
@@ -2700,9 +2700,9 @@ object FormArquivo: TFormArquivo
     TabOrder = 6
   end
   object SpeedButton1: TSpeedButton
-    Left = 671
-    Height = 47
-    Top = 288
+    Left = 704
+    Height = 49
+    Top = 320
     Width = 92
     Align = alRight
     Caption = 'Fechar'

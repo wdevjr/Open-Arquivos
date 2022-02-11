@@ -1,11 +1,11 @@
 object FrmDlgPesquisa: TFrmDlgPesquisa
-  Left = 261
-  Height = 418
-  Top = 155
-  Width = 806
+  Left = 405
+  Height = 472
+  Top = 57
+  Width = 881
   Caption = 'FrmDlgPesquisa'
-  ClientHeight = 418
-  ClientWidth = 806
+  ClientHeight = 472
+  ClientWidth = 881
   OnActivate = FormActivate
   OnShow = FormShow
   Position = poDesktopCenter
@@ -13,8 +13,8 @@ object FrmDlgPesquisa: TFrmDlgPesquisa
   object StsBr: TStatusBar
     Left = 0
     Height = 23
-    Top = 395
-    Width = 806
+    Top = 449
+    Width = 881
     Color = clWhite
     Panels = <    
       item
@@ -35,11 +35,11 @@ object FrmDlgPesquisa: TFrmDlgPesquisa
     Left = 0
     Height = 211
     Top = 0
-    Width = 806
+    Width = 881
     Align = alTop
     BevelOuter = bvNone
     ClientHeight = 211
-    ClientWidth = 806
+    ClientWidth = 881
     Color = 14083559
     ParentColor = False
     ParentFont = False
@@ -70,7 +70,8 @@ object FrmDlgPesquisa: TFrmDlgPesquisa
       Left = 77
       Height = 23
       Top = 32
-      Width = 488
+      Width = 379
+      OnKeyPress = EditProc2KeyPress
       ParentFont = False
       TabOrder = 0
     end
@@ -78,9 +79,10 @@ object FrmDlgPesquisa: TFrmDlgPesquisa
       Left = 77
       Height = 23
       Top = 6
-      Width = 488
+      Width = 379
       Color = clInfoBk
       Font.Color = clBlue
+      OnKeyPress = EditProc1KeyPress
       ParentFont = False
       TabOrder = 1
     end
@@ -88,7 +90,7 @@ object FrmDlgPesquisa: TFrmDlgPesquisa
       Left = 0
       Height = 147
       Top = 64
-      Width = 806
+      Width = 881
       Align = alBottom
       Color = clWhite
       DataField = 'DESCRICAO'
@@ -97,13 +99,12 @@ object FrmDlgPesquisa: TFrmDlgPesquisa
       TabOrder = 2
     end
     object SpeedButton2: TSpeedButton
-      Left = 640
+      Left = 696
       Height = 50
-      Top = 6
+      Top = 8
       Width = 70
       Caption = 'Pesquisar'
       Color = clWhite
-      Flat = True
       Font.Style = [fsBold]
       Glyph.Data = {
         96060000424D9606000000000000360000002800000016000000180000000100
@@ -166,13 +167,12 @@ object FrmDlgPesquisa: TFrmDlgPesquisa
       ParentFont = False
     end
     object SpeedButton3: TSpeedButton
-      Left = 717
+      Left = 776
       Height = 50
       Top = 6
       Width = 70
       Caption = 'Imprimir'
       Color = clWhite
-      Flat = True
       Font.Style = [fsBold]
       Glyph.Data = {
         36090000424D3609000000000000360000002800000018000000180000000100
@@ -256,29 +256,38 @@ object FrmDlgPesquisa: TFrmDlgPesquisa
       ParentFont = False
     end
     object BarcodeQR1: TBarcodeQR
-      Left = 568
+      Left = 616
       Height = 60
       Top = 4
       Width = 64
       StrictSize = False
-      Text = 'TBarcodeQR'
+      Text = '102345'
+    end
+    object CheckBoxINC: TCheckBox
+      Left = 464
+      Height = 42
+      Top = 8
+      Width = 135
+      AutoSize = False
+      Caption = 'Pesquisa Incremento'
+      TabOrder = 3
     end
   end
   object Panel2: TPanel
     Left = 0
     Height = 34
-    Top = 361
-    Width = 806
+    Top = 415
+    Width = 881
     Align = alBottom
     BevelOuter = bvNone
     ClientHeight = 34
-    ClientWidth = 806
+    ClientWidth = 881
     Color = 14083559
     ParentColor = False
     ParentFont = False
     TabOrder = 2
     object Panel3: TPanel
-      Left = 556
+      Left = 631
       Height = 34
       Top = 0
       Width = 250
@@ -318,9 +327,9 @@ object FrmDlgPesquisa: TFrmDlgPesquisa
   end
   object DBGrid1: TDBGrid
     Left = 0
-    Height = 150
+    Height = 204
     Top = 211
-    Width = 806
+    Width = 881
     Align = alClient
     AlternateColor = 14083559
     AutoEdit = False

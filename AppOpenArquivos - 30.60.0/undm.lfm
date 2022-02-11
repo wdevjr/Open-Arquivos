@@ -1,8 +1,8 @@
 object DM: TDM
   OldCreateOrder = False
   Height = 701
-  HorizontalOffset = 332
-  VerticalOffset = 85
+  HorizontalOffset = 401
+  VerticalOffset = 132
   Width = 1316
   object ZUpdateSQL1: TZUpdateSQL
     DeleteSQL.Strings = (
@@ -1280,7 +1280,6 @@ object DM: TDM
       ReadOnly = False
       Required = False
       BlobType = ftMemo
-      Size = 30
       Transliterate = False
     end
   end
@@ -3623,8 +3622,8 @@ object DM: TDM
       'order by DE.NOME_DEP'
     )
     Params = <>
-    Left = 994
-    Top = 104
+    Left = 992
+    Top = 112
     object sds_OpenAutorListCODIGO: TLongintField
       FieldKind = fkData
       FieldName = 'CODIGO'
@@ -4800,7 +4799,7 @@ object DM: TDM
     )
     TransactIsolationLevel = tiReadCommitted
     BeforeConnect = ZConnectionBeforeConnect
-    Port = 3050
+    Port = 3088
     Database = 'D:\Bancos\novo\Desenvolvimento\Base\Base\BaseAtual\nova_27.11.2021\OPENARQUIVOS.FDB'
     User = 'SYSDBA'
     Password = 'masterkey'
