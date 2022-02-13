@@ -20,11 +20,10 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UnPrinc"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="650"/>
-        <CursorPos Y="668"/>
+        <TopLine Value="191"/>
+        <CursorPos X="3" Y="193"/>
         <UsageCount Value="33"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="unlogin.pas"/>
@@ -84,7 +83,6 @@
         <CursorPos X="3" Y="244"/>
         <UsageCount Value="33"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit6>
       <Unit7>
         <Filename Value="undlgpesquisausuario.pas"/>
@@ -112,12 +110,11 @@
         <ComponentName Value="FrmCadAutor"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="5"/>
         <TopLine Value="181"/>
         <CursorPos X="20" Y="188"/>
         <UsageCount Value="33"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit9>
       <Unit10>
         <Filename Value="UnCadCidades.pas"/>
@@ -157,10 +154,12 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UnConsultaEspecial"/>
-        <EditorIndex Value="-1"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="3"/>
         <TopLine Value="121"/>
         <CursorPos X="3" Y="130"/>
         <UsageCount Value="33"/>
+        <Loaded Value="True"/>
       </Unit13>
       <Unit14>
         <Filename Value="uncadarquivos.pas"/>
@@ -169,12 +168,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UnCadArquivos"/>
-        <EditorIndex Value="6"/>
+        <EditorIndex Value="7"/>
         <TopLine Value="654"/>
         <CursorPos X="3" Y="658"/>
         <UsageCount Value="33"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit14>
       <Unit15>
         <Filename Value="UnCadAssuntos.pas"/>
@@ -182,7 +180,7 @@
         <ComponentName Value="FrmCadAssuntos"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="6"/>
         <TopLine Value="221"/>
         <CursorPos X="24" Y="201"/>
         <UsageCount Value="33"/>
@@ -336,13 +334,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="unDlgPesquisaArquivo"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="7"/>
-        <TopLine Value="52"/>
-        <CursorPos X="3" Y="62"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="53"/>
+        <CursorPos Y="58"/>
         <UsageCount Value="33"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit30>
       <Unit31>
         <Filename Value="UnDlgProcuraAssunto.pas"/>
@@ -361,10 +357,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UnAbertura"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="4"/>
         <UsageCount Value="33"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit32>
       <Unit33>
         <Filename Value="unatribuiusuariosporarquivos.pas"/>
@@ -447,7 +442,7 @@
         <UsageCount Value="10"/>
       </Unit41>
     </Units>
-    <JumpHistory Count="19" HistoryIndex="18">
+    <JumpHistory Count="20" HistoryIndex="19">
       <Position1>
         <Filename Value="unprinc.pas"/>
         <Caret Line="633" Column="36" TopLine="616"/>
@@ -524,6 +519,10 @@
         <Filename Value="uncadarquivos.pas"/>
         <Caret Line="658" Column="3" TopLine="654"/>
       </Position19>
+      <Position20>
+        <Filename Value="unprinc.pas"/>
+        <Caret Line="668" TopLine="650"/>
+      </Position20>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
