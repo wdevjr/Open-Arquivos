@@ -153,7 +153,7 @@ for x:=1 to length(str) do
 
     st:=st + str[x];
     end;
-Remover:=st;
+RemoverPorCento:=st;
 end;
 
 function Remover2(campo: string):string;
@@ -472,7 +472,7 @@ begin
   //  EditPesqu.Text:='';
   //end;
   EditPesqu.Text:=Remover2(EditPesqu.Text);
-  if (EditPesqu.Text <> '' ) or (PanelMostrData.Visible = True) then
+  if (EditPesqu.Text <> '' ) or (PanelMostrData.Visible = True) or (DBEdit4.Text <> '') or (DBEdit3.Text <> '') or (DBEdit1.Text <> '') then
   begin
     if (FrmLogin.TODOS = 1) then
     begin

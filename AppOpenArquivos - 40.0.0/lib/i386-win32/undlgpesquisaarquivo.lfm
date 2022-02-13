@@ -1,7 +1,7 @@
 object FrmDlgPesquisa: TFrmDlgPesquisa
-  Left = 367
+  Left = 405
   Height = 472
-  Top = 64
+  Top = 57
   Width = 881
   Caption = 'FrmDlgPesquisa'
   ClientHeight = 472
@@ -105,7 +105,6 @@ object FrmDlgPesquisa: TFrmDlgPesquisa
       Width = 70
       Caption = 'Pesquisar'
       Color = clWhite
-      Flat = True
       Font.Style = [fsBold]
       Glyph.Data = {
         96060000424D9606000000000000360000002800000016000000180000000100
@@ -174,7 +173,6 @@ object FrmDlgPesquisa: TFrmDlgPesquisa
       Width = 70
       Caption = 'Imprimir'
       Color = clWhite
-      Flat = True
       Font.Style = [fsBold]
       Glyph.Data = {
         36090000424D3609000000000000360000002800000018000000180000000100
