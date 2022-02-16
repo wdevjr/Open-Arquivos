@@ -1,8 +1,8 @@
 object DM: TDM
   OldCreateOrder = False
   Height = 701
-  HorizontalOffset = 401
-  VerticalOffset = 132
+  HorizontalOffset = 408
+  VerticalOffset = 120
   Width = 1316
   object ZUpdateSQL1: TZUpdateSQL
     DeleteSQL.Strings = (
@@ -4428,13 +4428,14 @@ object DM: TDM
       Required = False
     end
     object ZQArquivoTITULO: TStringField
+      DisplayLabel = 'Título'
       FieldKind = fkData
       FieldName = 'TITULO'
       Index = 4
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = False
+      Required = True
       Size = 140
     end
     object ZQArquivoNOME_ARQUIVO: TStringField
@@ -4467,13 +4468,14 @@ object DM: TDM
       Required = False
     end
     object ZQArquivoDESCRICAO: TStringField
+      DisplayLabel = 'Descrição'
       FieldKind = fkData
       FieldName = 'DESCRICAO'
       Index = 8
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = False
+      Required = True
       Size = 20000
     end
     object ZQArquivoHORA: TTimeField
@@ -4532,7 +4534,7 @@ object DM: TDM
       LookupCache = False
       ProviderFlags = []
       ReadOnly = False
-      Required = False
+      Required = True
       Size = 140
     end
     object ZQArquivoNOME: TStringField

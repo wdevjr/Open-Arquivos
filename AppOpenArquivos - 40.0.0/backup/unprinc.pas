@@ -206,8 +206,6 @@ begin
 
 
 
-
-
   //  if not Assigned(FormArquivo) then
   //    FormArquivo := TFormArquivo.Create(Self);
   //    FormArquivo.Show;
@@ -224,9 +222,9 @@ begin
   if (FrmCadAutor <> nil) then
   begin
     FrmCadAutor.Left := 220;
-    FrmCadAutor.Top :=10;
+    FrmCadAutor.Top := 10;
   end;
- // FrmCadAutor.SetFocus;
+  // FrmCadAutor.SetFocus;
 
   //if not Assigned(FrmCadAutor) then
   //  FrmCadAutor := TFrmCadAutor.Create(Self);
@@ -261,12 +259,12 @@ begin
   InicializarComponentes;
 
 
-    if (FormArquivo <> nil) then
-     begin
-        FormArquivo.Left := 140; //275
-        FormArquivo.Top := 9;
-        //Position:=poDesktopCenter;
-     end;
+  if (FormArquivo <> nil) then
+  begin
+    FormArquivo.Left := 140; //275
+    FormArquivo.Top := 9;
+    //Position:=poDesktopCenter;
+  end;
 
   //Color:=DM.myColor;
   // GroupBox1.Color := DM.myColor;
@@ -410,7 +408,7 @@ begin
     FrmLogAcesso.Left := 275;
     FrmLogAcesso.Top := 40;
   end;
- // FrmLogAcesso.SetFocus;
+  // FrmLogAcesso.SetFocus;
 
   ////if not Assigned(FrmLogAcesso) then
   //FrmLogAcesso := TFrmLogAcesso.Create(Self);
@@ -535,7 +533,7 @@ end;
 
 procedure TFrPrincipal.SpeedButton1Click(Sender: TObject);
 begin
-    if not Assigned(FrmThema) then
+  if not Assigned(FrmThema) then
     FrmThema := TFrmThema.Create(FrPrincipal);
   Windows.SetParent(FrmThema.Handle, Panel2.Handle);
   SendMessage(FrmThema.Handle, WM_NCACTIVATE, WPARAM(True), 0);
@@ -589,21 +587,21 @@ end;
 
 procedure TFrPrincipal.Timer1Timer(Sender: TObject);
 begin
-   DMII.CarregaPerfil;
+  DMII.CarregaPerfil;
   IniciaAdministracao;
   MostrarEstatistica;
   if ((StrToInt(codigo13.Caption)) > 1) then
   begin
     GifAnim1.Visible := True;
-    GifAnim1.Animate:= True;
+    GifAnim1.Animate := True;
   end
   else
   begin
     GifAnim1.Visible := False;
-    GifAnim1.Animate:= False;
+    GifAnim1.Animate := False;
   end;
-   StatusBar1.Canvas.Brush.Color := DM.myColor;
-   StatusBar1.Color:=DM.myColor;
+  StatusBar1.Canvas.Brush.Color := DM.myColor;
+  StatusBar1.Color := DM.myColor;
 end;
 
 procedure TFrPrincipal.MostrarEstatistica;
@@ -665,7 +663,9 @@ begin
     FrmCadastrodeUsuarios.Left := 275;
     FrmCadastrodeUsuarios.Top := 40;
   end;
- // FrmCadastrodeUsuarios.SetFocus;
+  // FrmCadastrodeUsuarios.SetFocus;
+
+
 
 
   //  FrmCadastrodeUsuarios := TFrmCadastrodeUsuarios.Create(Self);

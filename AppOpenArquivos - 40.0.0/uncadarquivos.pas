@@ -1139,7 +1139,9 @@ begin
   IntTempCodResgist := DM.ZQArquivoID.AsInteger;
   if (DBText2.Caption = '') then
   begin
+    Beep;
     ShowMessage('Preencha o Assunto!');
+
     Abort;
   end
   else
@@ -1171,8 +1173,10 @@ begin
       except
         on E: Exception do
         begin
+          Beep;
           MessageDlg('Erro ao Editar o Arquivo!', E.Message, mtError, [mbOK], 0);
           Abort;
+
         end;
       end;
       try
@@ -1194,7 +1198,9 @@ begin
       except
         on E: Exception do
         begin
+          Beep;
           MessageDlg('Erro ao gravar Log!', e.Message, mtError, [mbOK], 0);
+
           Abort;
         end;
       end;
@@ -1231,7 +1237,9 @@ begin
       end;
     end
     else
+    Beep;
       Abort;
+
   end;
   {if (FrmLogin.TODOS = 0) then
   begin
@@ -1506,6 +1514,7 @@ begin
   IntTempCodResgist := DM.ZQArquivoID.AsInteger;
   if (DBMemo1.Text = '') then
   begin
+    Beep;
     ShowMessage('Carregue o Arquivo!');
     Abort;
   end
@@ -1513,7 +1522,9 @@ begin
   begin
     if (DBText2.Caption = '') then
     begin
+      Beep;
       ShowMessage('Preencha o Campo Assunto!');
+
       Abort;
     end
     else
@@ -1545,6 +1556,7 @@ begin
         except
           on E: Exception do
           begin
+          Beep;
             MessageDlg('Erro no de inserimento do Arquivo!', E.Message,
               mtError, [mbOK], 0);
             Abort;
@@ -1566,6 +1578,7 @@ begin
         except
           on E: Exception do
           begin
+            Beep;
             MessageDlg('Erro no de inserimento de Proprietário de Arquivo!',
               E.Message, mtError, [mbOK], 0);
             Abort;
@@ -1590,6 +1603,7 @@ begin
         except
           on E: Exception do
           begin
+            Beep;
             MessageDlg('Erro ao gravar Log!', e.Message, mtError, [mbOK], 0);
             Abort;
           end;
@@ -1628,6 +1642,7 @@ begin
         end;
       end
       else
+      Beep;
         Abort;
     end;
   end;

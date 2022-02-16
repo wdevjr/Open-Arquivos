@@ -472,7 +472,7 @@ begin
   //  EditPesqu.Text:='';
   //end;
   EditPesqu.Text:=Remover2(EditPesqu.Text);
-  if (EditPesqu.Text <> '' ) or (PanelMostrData.Visible = True) or (DBEdit4.Text <> '') or (DBEdit3.Text <> '') or (DBEdit1.Text <> '') then
+  if (EditPesqu.Text <> '' ) or (PanelMostrData.Visible = True) or (DBEdit4.Text <> '') or (DBEdit3.Text <> '') or (DBEdit2.Text <> '') or (DBEdit1.Text <> '') then
   begin
     if (FrmLogin.TODOS = 1) then
     begin

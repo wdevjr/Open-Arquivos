@@ -2787,7 +2787,7 @@ object FormArquivo: TFormArquivo
   end
   object DtscLog: TDataSource
     DataSet = DM.cds_Log
-    Left = 384
-    Top = 134
+    Left = 440
+    Top = 136
   end
 end

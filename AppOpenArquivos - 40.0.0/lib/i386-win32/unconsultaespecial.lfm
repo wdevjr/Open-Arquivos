@@ -711,7 +711,7 @@ object FrmView: TFrmView
   object Panel5: TPanel
     Left = 0
     Height = 35
-    Top = 266
+    Top = 274
     Width = 741
     Align = alTop
     BevelOuter = bvNone
@@ -812,7 +812,7 @@ object FrmView: TFrmView
   object RadioGroup1: TRadioGroup
     Left = 0
     Height = 36
-    Top = 230
+    Top = 238
     Width = 741
     Align = alTop
     AutoFill = True
@@ -847,7 +847,7 @@ object FrmView: TFrmView
   object Alert: TPanel
     Left = 0
     Height = 30
-    Top = 301
+    Top = 309
     Width = 741
     Align = alTop
     BevelOuter = bvNone
@@ -1004,7 +1004,7 @@ object FrmView: TFrmView
   object GroupBox1: TGroupBox
     Left = 0
     Height = 30
-    Top = 166
+    Top = 174
     Width = 741
     Align = alTop
     ClientHeight = 12
@@ -1035,7 +1035,7 @@ object FrmView: TFrmView
   object PanelData: TPanel
     Left = 0
     Height = 34
-    Top = 196
+    Top = 204
     Width = 741
     Align = alTop
     BevelOuter = bvNone
@@ -1291,7 +1291,7 @@ object FrmView: TFrmView
   object Panel8: TPanel
     Left = 0
     Height = 34
-    Top = 132
+    Top = 140
     Width = 741
     Align = alTop
     BevelOuter = bvNone
@@ -1560,12 +1560,12 @@ object FrmView: TFrmView
   end
   object Panel12: TPanel
     Left = 0
-    Height = 39
+    Height = 47
     Top = 57
     Width = 741
     Align = alTop
     BevelOuter = bvNone
-    ClientHeight = 39
+    ClientHeight = 47
     ClientWidth = 741
     Color = 15531993
     Font.Color = clWindowText
@@ -2047,7 +2047,7 @@ object FrmView: TFrmView
   object DBMemo1: TDBMemo
     Left = 0
     Height = 61
-    Top = 331
+    Top = 339
     Width = 741
     Align = alTop
     Color = 15395562
@@ -2062,8 +2062,8 @@ object FrmView: TFrmView
   end
   object DBGrid1: TDBGrid
     Left = 0
-    Height = 72
-    Top = 392
+    Height = 64
+    Top = 400
     Width = 741
     Align = alClient
     AlternateColor = 14083559
@@ -2084,7 +2084,7 @@ object FrmView: TFrmView
   object Panel3: TPanel
     Left = 0
     Height = 36
-    Top = 96
+    Top = 104
     Width = 741
     Align = alTop
     BevelOuter = bvNone
@@ -2100,8 +2100,8 @@ object FrmView: TFrmView
     TabOrder = 12
     object SpeedButton7: TSpeedButton
       Left = 5
-      Height = 33
-      Top = 6
+      Height = 36
+      Top = 3
       Width = 34
       Font.Color = clWindowText
       Font.Height = -14

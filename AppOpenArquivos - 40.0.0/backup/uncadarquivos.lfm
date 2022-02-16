@@ -76,7 +76,7 @@ object FormArquivo: TFormArquivo
     object Label5: TLabel
       Left = 14
       Height = 15
-      Top = 228
+      Top = 234
       Width = 64
       Caption = 'Informação:'
       Font.Height = -12
@@ -86,7 +86,7 @@ object FormArquivo: TFormArquivo
     object DBMemo3: TDBMemo
       Left = 14
       Height = 26
-      Top = 243
+      Top = 249
       Width = 568
       DataField = 'INFORMACOES'
       DataSource = Dtsrc
@@ -841,7 +841,7 @@ object FormArquivo: TFormArquivo
     object cbconsulta: TSpeedButton
       Left = 712
       Height = 64
-      Top = 218
+      Top = 229
       Width = 72
       Caption = 'Consultas'
       Font.Height = -12
@@ -984,7 +984,7 @@ object FormArquivo: TFormArquivo
     object btntrazerForm: TSpeedButton
       Left = 712
       Height = 64
-      Top = 149
+      Top = 160
       Width = 72
       Caption = 'Localizar'
       Font.Height = -12
@@ -1125,7 +1125,7 @@ object FormArquivo: TFormArquivo
       ParentFont = False
     end
     object btnvisualizar: TSpeedButton
-      Left = 589
+      Left = 592
       Height = 40
       Top = 173
       Width = 115
@@ -1289,9 +1289,9 @@ object FormArquivo: TFormArquivo
       ParentFont = False
     end
     object btnextrair: TSpeedButton
-      Left = 589
+      Left = 592
       Height = 40
-      Top = 218
+      Top = 224
       Width = 115
       Caption = 'Extrair'
       Font.Height = -12
@@ -1454,9 +1454,9 @@ object FormArquivo: TFormArquivo
     end
     object SpeedButton2: TSpeedButton
       Left = 531
-      Height = 40
+      Height = 52
       Top = 192
-      Width = 50
+      Width = 58
       Font.Style = [fsBold]
       Glyph.Data = {
         36240000424D3624000000000000360000002800000030000000300000000100
