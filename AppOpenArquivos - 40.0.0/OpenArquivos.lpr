@@ -41,7 +41,6 @@ uses {$IFDEF UNIX} {$IFDEF UseCThreads}
   pkg_gifanim,
   UDMII,
   undlgpesquisaUsuario,
-  lazreportpdfexport,
   thema,
   UnCadArquivos;
 
@@ -49,8 +48,7 @@ uses {$IFDEF UNIX} {$IFDEF UseCThreads}
 
 begin
   RequireDerivedFormResource := True;
-  Application.Title:='OpenArquivos';
-  Application.Scaled := True;
+  Application.Scaled:=True;
   Application.Initialize;
 
   Abertura := TAbertura.Create(nil);

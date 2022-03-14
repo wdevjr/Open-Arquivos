@@ -5,7 +5,7 @@ unit UDMII;
 interface
 
 uses
-  Classes, SysUtils, ZDataset, ZSqlUpdate, lr_e_pdf, lrPDFExport, DB, Dialogs;
+  Classes, SysUtils, ZDataset, ZSqlUpdate, DB, Dialogs;
 
 type
 

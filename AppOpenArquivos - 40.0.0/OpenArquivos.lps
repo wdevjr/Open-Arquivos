@@ -2,7 +2,7 @@
 <CONFIG>
   <ProjectSession>
     <PathDelim Value="\"/>
-    <Version Value="11"/>
+    <Version Value="12"/>
     <BuildModes Active="Release"/>
     <Units Count="43">
       <Unit0>
@@ -19,8 +19,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UnPrinc"/>
-        <TopLine Value="650"/>
-        <CursorPos Y="668"/>
+        <TopLine Value="191"/>
+        <CursorPos X="3" Y="193"/>
         <UsageCount Value="34"/>
         <Loaded Value="True"/>
       </Unit1>
@@ -43,13 +43,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="UnDM"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="952"/>
         <CursorPos X="27" Y="960"/>
         <UsageCount Value="34"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit3>
       <Unit4>
         <Filename Value="UnCadPerfil.pas"/>
@@ -69,10 +66,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="UDMII"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="489"/>
-        <CursorPos X="3" Y="494"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="44" Y="8"/>
         <UsageCount Value="34"/>
+        <Loaded Value="True"/>
       </Unit5>
       <Unit6>
         <Filename Value="uncadastrousuarios.pas"/>
@@ -166,12 +163,12 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UnCadArquivos"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="1523"/>
-        <CursorPos X="9" Y="1530"/>
+        <TopLine Value="124"/>
+        <CursorPos X="12" Y="124"/>
         <UsageCount Value="34"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit14>
       <Unit15>
         <Filename Value="UnCadAssuntos.pas"/>
@@ -248,12 +245,15 @@
       <Unit22>
         <Filename Value="UnUtilitLog.pas"/>
         <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmLogAcesso"/>
         <HasResources Value="True"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="-1"/>
-        <TopLine Value="-1"/>
-        <CursorPos X="-1" Y="-1"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="6"/>
+        <CursorPos X="30" Y="15"/>
         <UsageCount Value="34"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit22>
       <Unit23>
         <Filename Value="UnLocalizarUserCod.pas"/>
@@ -419,7 +419,6 @@
         <TopLine Value="902"/>
         <CursorPos Y="907"/>
         <UsageCount Value="10"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit39>
       <Unit40>
         <Filename Value="C:\lazarus\components\lazutils\laztracer.pas"/>
@@ -443,10 +442,9 @@
         <TopLine Value="3677"/>
         <CursorPos Y="3685"/>
         <UsageCount Value="10"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit42>
     </Units>
-    <JumpHistory Count="6" HistoryIndex="5">
+    <JumpHistory Count="9" HistoryIndex="8">
       <Position1>
         <Filename Value="uncadarquivos.pas"/>
         <Caret Line="658" Column="3" TopLine="654"/>
@@ -461,20 +459,32 @@
       </Position3>
       <Position4>
         <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="1238" Column="7" TopLine="1245"/>
+        <Caret Line="1641" Column="13" TopLine="1639"/>
       </Position4>
       <Position5>
         <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="1641" Column="13" TopLine="1639"/>
+        <Caret Line="1256" Column="40" TopLine="1245"/>
       </Position5>
       <Position6>
         <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="1256" Column="40" TopLine="1245"/>
+        <Caret Line="1524" TopLine="1523"/>
       </Position6>
+      <Position7>
+        <Filename Value="udmii.pas"/>
+        <Caret Line="8" Column="44"/>
+      </Position7>
+      <Position8>
+        <Filename Value="unprinc.pas"/>
+        <Caret Line="668" TopLine="650"/>
+      </Position8>
+      <Position9>
+        <Filename Value="unprinc.pas"/>
+        <Caret Line="193" Column="3" TopLine="191"/>
+      </Position9>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
-      <Modes Count="0" ActiveMode=""/>
+      <Modes ActiveMode=""/>
     </RunParams>
   </ProjectSession>
 </CONFIG>

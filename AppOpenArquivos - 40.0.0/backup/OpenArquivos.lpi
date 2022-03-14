@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <ProjectOptions>
-    <Version Value="11"/>
+    <Version Value="12"/>
     <PathDelim Value="\"/>
     <General>
+      <Flags>
+        <CompatibilityMode Value="True"/>
+      </Flags>
       <SessionStorage Value="InProjectDir"/>
-      <MainUnit Value="0"/>
       <Title Value="OpenArquivos"/>
       <Scaled Value="True"/>
       <ResourceType Value="res"/>
@@ -35,6 +37,7 @@
           <Linking>
             <Debugging>
               <GenerateDebugInfo Value="False"/>
+              <DebugInfoType Value="dsDwarf2"/>
             </Debugging>
             <LinkSmart Value="True"/>
             <Options>
@@ -72,9 +75,8 @@
     </PublishOptions>
     <RunParams>
       <FormatVersion Value="2"/>
-      <Modes Count="0"/>
     </RunParams>
-    <RequiredPackages Count="23">
+    <RequiredPackages Count="20">
       <Item1>
         <PackageName Value="JvDBLazR"/>
       </Item1>
@@ -118,32 +120,23 @@
         <PackageName Value="DateTimeCtrls"/>
       </Item14>
       <Item15>
-        <PackageName Value="lr_pdfexport"/>
+        <PackageName Value="atflatcontrols_package"/>
       </Item15>
       <Item16>
-        <PackageName Value="atflatcontrols_package"/>
+        <PackageName Value="lazbarcodes"/>
       </Item16>
       <Item17>
-        <PackageName Value="lazbarcodes"/>
+        <PackageName Value="lr_zeosdb"/>
       </Item17>
       <Item18>
-        <PackageName Value="lazreportpdfexport"/>
+        <PackageName Value="pkg_gifanim"/>
       </Item18>
       <Item19>
-        <PackageName Value="lazwebextra"/>
+        <PackageName Value="pl_excontrols"/>
       </Item19>
       <Item20>
-        <PackageName Value="lr_zeosdb"/>
-      </Item20>
-      <Item21>
-        <PackageName Value="pkg_gifanim"/>
-      </Item21>
-      <Item22>
-        <PackageName Value="pl_excontrols"/>
-      </Item22>
-      <Item23>
         <PackageName Value="LCL"/>
-      </Item23>
+      </Item20>
     </RequiredPackages>
     <Units Count="37">
       <Unit0>
@@ -288,7 +281,9 @@
       <Unit22>
         <Filename Value="UnUtilitLog.pas"/>
         <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmLogAcesso"/>
         <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
       </Unit22>
       <Unit23>
         <Filename Value="UnLocalizarUserCod.pas"/>

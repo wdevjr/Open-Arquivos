@@ -12,7 +12,7 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, ExtCtrls, ComCtrls, StdCtrls, Buttons, DBCtrls, Grids, DBGrids,
   CheckLst, Calendar, Menus, GifAnim, LR_Class, LR_DBSet,
-  DateTimePicker, DB, ZDataset, lrPDFExport, lr_e_pdf;
+  DateTimePicker, DB, ZDataset;
 
 type
 
