@@ -8,7 +8,6 @@
 Projeto em Lazarus e ZeosLib
 Banco de Dados
 <p>Por Favor, mande seu FeedBack para avaliaçao dos programas e como melhorar!</p>
- <p>FireBird 3.0.x na versão 30.x do Open Arquivos</p>
  <p>FireBird 4.0.x na versão 40.x do Open Arquivos</p>
 <p>Todos os Direitos Reservados a Walter Ribeiro Homem Junior. (c) </p>
 <p><b>Contato: </b><a href="mailto:warhjr@gmail.com?Subject=Olá%20Contato"">warhjr@gmail.com</a></p>
