@@ -47,6 +47,7 @@ type
     trazerj: TBitBtn;
 
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
+    procedure okChange(Sender: TObject);
     procedure okClick(Sender: TObject);
     procedure DtsrcLogStateChange(Sender: TObject);
     procedure trazerjClick(Sender: TObject);
@@ -296,6 +297,11 @@ procedure TFrmCadLogDet.FormClose(Sender: TObject; var CloseAction: TCloseAction
   );
 begin
   DtsrcLog.DataSet.Cancel;
+end;
+
+procedure TFrmCadLogDet.okChange(Sender: TObject);
+begin
+
 end;
 
 procedure TFrmCadLogDet.SpeedButton1Click(Sender: TObject);

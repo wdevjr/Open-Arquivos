@@ -227,6 +227,8 @@ end;
 
 procedure TFrmDlgPesquisa.EditProc1KeyPress(Sender: TObject; var Key: char);
 begin
+ if (key <> #8) then
+ begin
    if (FrmLogin.TODOS = 1) then
   begin
     if CheckBoxINC.Checked = True then
@@ -436,7 +438,8 @@ end;
 
 procedure TFrmDlgPesquisa.EditProc2KeyPress(Sender: TObject; var Key: char);
 begin
-
+ if (key <> #8) then
+ begin
   if (FrmLogin.TODOS = 1) then
   begin
     if CheckBoxINC.Checked = True then
@@ -640,6 +643,7 @@ begin
       end;
     end;
   end;
+ end else Abort;
 
 
 

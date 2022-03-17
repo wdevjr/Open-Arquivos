@@ -321,10 +321,12 @@ end;
 
 procedure TFrmLogAcesso.MenuItem2Click(Sender: TObject);
 begin
-
+ if not DM.ZQueryAssistente.IsEmpty then
+  begin
   DM.frReportLogTodos.LoadFromFile('Reports/RelConsultaLogTodos.lrf');
   DM.frReportLogTodos.Title := 'Tela de Relatórios';
   DM.frReportLogTodos.showReport;
+  end;
 
 end;
 

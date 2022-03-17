@@ -1,7 +1,7 @@
 object FrmDlgPesquisa: TFrmDlgPesquisa
-  Left = 405
+  Left = 360
   Height = 472
-  Top = 57
+  Top = 130
   Width = 881
   Caption = 'FrmDlgPesquisa'
   ClientHeight = 472
@@ -9,7 +9,7 @@ object FrmDlgPesquisa: TFrmDlgPesquisa
   OnActivate = FormActivate
   OnShow = FormShow
   Position = poDesktopCenter
-  LCLVersion = '2.0.12.0'
+  LCLVersion = '2.2.0.4'
   object StsBr: TStatusBar
     Left = 0
     Height = 23
@@ -52,7 +52,6 @@ object FrmDlgPesquisa: TFrmDlgPesquisa
       Caption = 'Título:'
       Font.Color = clGreen
       Font.Style = [fsBold]
-      ParentColor = False
       ParentFont = False
     end
     object Label2: TLabel
@@ -63,7 +62,6 @@ object FrmDlgPesquisa: TFrmDlgPesquisa
       Caption = 'Descrição:'
       Font.Color = clBlue
       Font.Style = [fsBold]
-      ParentColor = False
       ParentFont = False
     end
     object EditProc2: TEdit
