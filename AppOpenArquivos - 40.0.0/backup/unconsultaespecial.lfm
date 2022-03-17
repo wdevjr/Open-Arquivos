@@ -1,7 +1,7 @@
 object FrmView: TFrmView
-  Left = 341
+  Left = 429
   Height = 525
-  Top = 119
+  Top = 36
   Width = 741
   Caption = 'Consulta Especial...'
   ClientHeight = 525
@@ -14,7 +14,7 @@ object FrmView: TFrmView
   OnClose = FormClose
   OnShow = FormShow
   Position = poDesktopCenter
-  LCLVersion = '2.0.12.0'
+  LCLVersion = '2.2.0.4'
   object Panel6: TPanel
     Left = 0
     Height = 27
@@ -41,7 +41,6 @@ object FrmView: TFrmView
       Font.Height = -12
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
-      ParentColor = False
       ParentFont = False
     end
     object Image2: TImage
@@ -711,7 +710,7 @@ object FrmView: TFrmView
   object Panel5: TPanel
     Left = 0
     Height = 35
-    Top = 266
+    Top = 274
     Width = 741
     Align = alTop
     BevelOuter = bvNone
@@ -798,7 +797,6 @@ object FrmView: TFrmView
       Height = 25
       Top = 1
       Width = 473
-      CharCase = ecNormal
       Font.Color = clWindowText
       Font.Height = -14
       Font.Name = 'Tahoma'
@@ -812,7 +810,7 @@ object FrmView: TFrmView
   object RadioGroup1: TRadioGroup
     Left = 0
     Height = 36
-    Top = 230
+    Top = 238
     Width = 741
     Align = alTop
     AutoFill = True
@@ -847,7 +845,7 @@ object FrmView: TFrmView
   object Alert: TPanel
     Left = 0
     Height = 30
-    Top = 301
+    Top = 309
     Width = 741
     Align = alTop
     BevelOuter = bvNone
@@ -872,7 +870,6 @@ object FrmView: TFrmView
       Font.Height = -10
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
-      ParentColor = False
       ParentFont = False
     end
     object Label30: TLabel
@@ -885,7 +882,6 @@ object FrmView: TFrmView
       Font.Height = -10
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
-      ParentColor = False
       ParentFont = False
     end
     object PanelMaximizar: TPanel
@@ -911,7 +907,6 @@ object FrmView: TFrmView
         Font.Color = clWindowText
         Font.Height = -10
         Font.Name = 'Tahoma'
-        ParentColor = False
         ParentFont = False
       end
       object SpeedButton5: TSpeedButton
@@ -1004,7 +999,7 @@ object FrmView: TFrmView
   object GroupBox1: TGroupBox
     Left = 0
     Height = 30
-    Top = 166
+    Top = 174
     Width = 741
     Align = alTop
     ClientHeight = 12
@@ -1014,6 +1009,7 @@ object FrmView: TFrmView
     Font.Height = -11
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
+    ParentBackground = False
     ParentColor = False
     ParentFont = False
     TabOrder = 5
@@ -1035,7 +1031,7 @@ object FrmView: TFrmView
   object PanelData: TPanel
     Left = 0
     Height = 34
-    Top = 196
+    Top = 204
     Width = 741
     Align = alTop
     BevelOuter = bvNone
@@ -1202,7 +1198,6 @@ object FrmView: TFrmView
       Font.Height = -11
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
-      ParentColor = False
       ParentFont = False
     end
     object PanelMostrData: TPanel
@@ -1231,7 +1226,6 @@ object FrmView: TFrmView
         Font.Height = -11
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
-        ParentColor = False
         ParentFont = False
       end
       object DateTimePicker1: TDateTimePicker
@@ -1291,7 +1285,7 @@ object FrmView: TFrmView
   object Panel8: TPanel
     Left = 0
     Height = 34
-    Top = 132
+    Top = 140
     Width = 741
     Align = alTop
     BevelOuter = bvNone
@@ -1315,7 +1309,6 @@ object FrmView: TFrmView
       Font.Height = -11
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
-      ParentColor = False
       ParentFont = False
     end
     object DBText1: TDBText
@@ -1329,7 +1322,6 @@ object FrmView: TFrmView
       Font.Color = clGreen
       Font.Height = -11
       Font.Name = 'Tahoma'
-      ParentColor = False
       ParentFont = False
     end
     object SpeedButton1: TSpeedButton
@@ -1548,7 +1540,6 @@ object FrmView: TFrmView
       Width = 96
       DataField = 'COD_USUARIO'
       DataSource = Dtscru
-      CharCase = ecNormal
       Font.Color = clBlack
       Font.Height = -15
       Font.Name = 'Tahoma'
@@ -1560,12 +1551,12 @@ object FrmView: TFrmView
   end
   object Panel12: TPanel
     Left = 0
-    Height = 39
+    Height = 47
     Top = 57
     Width = 741
     Align = alTop
     BevelOuter = bvNone
-    ClientHeight = 39
+    ClientHeight = 47
     ClientWidth = 741
     Color = 15531993
     Font.Color = clWindowText
@@ -1729,7 +1720,6 @@ object FrmView: TFrmView
       Font.Height = -11
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
-      ParentColor = False
       ParentFont = False
     end
     object DBText2: TDBText
@@ -1743,7 +1733,6 @@ object FrmView: TFrmView
       Font.Color = clBlue
       Font.Height = -11
       Font.Name = 'Tahoma'
-      ParentColor = False
       ParentFont = False
     end
     object habilitar02: TSpeedButton
@@ -1820,7 +1809,6 @@ object FrmView: TFrmView
       Width = 54
       DataField = 'CODIGO'
       DataSource = Dtscra
-      CharCase = ecNormal
       Font.Color = clWindowText
       Font.Height = -14
       Font.Name = 'Tahoma'
@@ -1944,7 +1932,6 @@ object FrmView: TFrmView
       Font.Height = -11
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
-      ParentColor = False
       ParentFont = False
     end
     object DBText3: TDBText
@@ -1958,7 +1945,6 @@ object FrmView: TFrmView
       Font.Color = clRed
       Font.Height = -11
       Font.Name = 'Tahoma'
-      ParentColor = False
       ParentFont = False
     end
     object habilitar00: TSpeedButton
@@ -2034,7 +2020,6 @@ object FrmView: TFrmView
       Width = 49
       DataField = 'COD_USUARIO'
       DataSource = DtsrcCod
-      CharCase = ecNormal
       Font.Color = clWindowText
       Font.Height = -15
       Font.Name = 'Tahoma'
@@ -2047,7 +2032,7 @@ object FrmView: TFrmView
   object DBMemo1: TDBMemo
     Left = 0
     Height = 61
-    Top = 331
+    Top = 339
     Width = 741
     Align = alTop
     Color = 15395562
@@ -2062,8 +2047,8 @@ object FrmView: TFrmView
   end
   object DBGrid1: TDBGrid
     Left = 0
-    Height = 72
-    Top = 392
+    Height = 64
+    Top = 400
     Width = 741
     Align = alClient
     AlternateColor = 14083559
@@ -2084,7 +2069,7 @@ object FrmView: TFrmView
   object Panel3: TPanel
     Left = 0
     Height = 36
-    Top = 96
+    Top = 104
     Width = 741
     Align = alTop
     BevelOuter = bvNone
@@ -2100,8 +2085,8 @@ object FrmView: TFrmView
     TabOrder = 12
     object SpeedButton7: TSpeedButton
       Left = 5
-      Height = 33
-      Top = 6
+      Height = 36
+      Top = 3
       Width = 34
       Font.Color = clWindowText
       Font.Height = -14
@@ -2251,7 +2236,6 @@ object FrmView: TFrmView
       Font.Height = -11
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
-      ParentColor = False
       ParentFont = False
     end
     object DBText4: TDBText
@@ -2265,7 +2249,6 @@ object FrmView: TFrmView
       Font.Color = clWindowText
       Font.Height = -11
       Font.Name = 'Tahoma'
-      ParentColor = False
       ParentFont = False
     end
     object DBEdit4: TDBEdit
@@ -2275,7 +2258,6 @@ object FrmView: TFrmView
       Width = 80
       DataField = 'CODIGO'
       DataSource = DtsrcAutor
-      CharCase = ecNormal
       Font.Color = clWindowText
       Font.Height = -14
       Font.Name = 'Tahoma'

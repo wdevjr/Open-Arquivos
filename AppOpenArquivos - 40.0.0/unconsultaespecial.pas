@@ -132,6 +132,7 @@ var
   CodigoUserPorNome: string;
   CodigoAssunto: string;
   CodigoAutor: string;
+  Rel:Boolean;
 
 implementation
 
@@ -156,19 +157,25 @@ for x:=1 to length(str) do
 RemoverPorCento:=st;
 end;
 
-function Remover2(campo: string):string;
+function Remover2(campo: String): Boolean;
 var temp:string;
       i:integer;
 
 begin
 temp:='';
+//Rel:=False;
 for i:=1 to length(campo) do //campo e a variavel q vc quer remover os . e -
 begin
 //if ((campo[i]<>´.´) and (campo[i]<>´-´)) then
 if ((campo[i] <> '%')) then
 temp:=temp+campo[i];
 end;
-campo:=temp
+campo:=temp;
+if (campo <> '') then
+begin
+  Rel:=True;
+end else Rel:=False;
+Result:=Rel;
 end;
 
 procedure TFrmView.BitBtn2Click(Sender: TObject);
@@ -471,7 +478,9 @@ begin
   //begin
   //  EditPesqu.Text:='';
   //end;
-  EditPesqu.Text:=Remover2(EditPesqu.Text);
+  Remover2(EditPesqu.Text);
+  if (Rel = True) Then
+  begin
   if (EditPesqu.Text <> '' ) or (PanelMostrData.Visible = True) or (DBEdit4.Text <> '') or (DBEdit3.Text <> '') or (DBEdit2.Text <> '') or (DBEdit1.Text <> '') then
   begin
     if (FrmLogin.TODOS = 1) then
@@ -1551,7 +1560,8 @@ begin
       end;
     end;
   end;
-end;
+  end else Abort;
+ end;
 
 procedure TFrmView.SpeedButton4Click(Sender: TObject);
 begin
