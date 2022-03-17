@@ -1762,14 +1762,13 @@ end;
 
 procedure TFrmView.SpeedButton3Click(Sender: TObject);
 begin
-  DM.sds_view.Params.Clear;
-  DM.sds_view.SQL.Clear;
   DM.sds_view.Close;
-  Dtscra.DataSet.Close;
-  Dtscru.DataSet.Close;
-  DtsrcAutor.DataSet.Close;
-  DtsrcCod.DataSet.Close;
-  Dtsrc.DataSet.Close;
+  // DM.sds_view_todos.CLOSE;
+  DM.cds_User.Close;
+  DM.cds_UserCod.Close;
+  DM.cds_Assunt.Close;
+
+  DM.sds_view.Filtered := False;
   CheckBoxConsulta.Checked := False;
   PanelMostrData.Visible := False;
   EditPesqu.Text := '';

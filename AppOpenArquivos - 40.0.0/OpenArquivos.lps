@@ -151,8 +151,8 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UnConsultaEspecial"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="1762"/>
-        <CursorPos X="33" Y="1771"/>
+        <TopLine Value="1561"/>
+        <CursorPos X="3" Y="475"/>
         <UsageCount Value="37"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -441,7 +441,7 @@
         <UsageCount Value="10"/>
       </Unit42>
     </Units>
-    <JumpHistory Count="26" HistoryIndex="25">
+    <JumpHistory Count="27" HistoryIndex="26">
       <Position1>
         <Filename Value="unconsultaespecial.pas"/>
         <Caret Line="613" Column="33" TopLine="606"/>
@@ -546,6 +546,10 @@
         <Filename Value="unconsultaespecial.pas"/>
         <Caret Line="1710" TopLine="1708"/>
       </Position26>
+      <Position27>
+        <Filename Value="unconsultaespecial.pas"/>
+        <Caret Line="1771" Column="33" TopLine="1761"/>
+      </Position27>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
