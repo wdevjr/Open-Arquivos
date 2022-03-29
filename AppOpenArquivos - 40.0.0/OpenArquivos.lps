@@ -150,10 +150,12 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UnConsultaEspecial"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="1560"/>
-        <CursorPos X="3" Y="475"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="424"/>
+        <CursorPos X="81" Y="437"/>
         <UsageCount Value="37"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit13>
       <Unit14>
         <Filename Value="uncadarquivos.pas"/>
@@ -162,8 +164,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UnCadArquivos"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
         <TopLine Value="123"/>
         <CursorPos X="25" Y="128"/>
         <UsageCount Value="37"/>
@@ -440,10 +442,20 @@
         <UsageCount Value="10"/>
       </Unit42>
     </Units>
-    <General>
-      <ActiveWindowIndexAtStart Value="-1"/>
-    </General>
-    <JumpHistory HistoryIndex="-1"/>
+    <JumpHistory Count="3" HistoryIndex="2">
+      <Position1>
+        <Filename Value="unconsultaespecial.pas"/>
+        <Caret Line="1563" Column="24" TopLine="1559"/>
+      </Position1>
+      <Position2>
+        <Filename Value="unconsultaespecial.pas"/>
+        <Caret Line="428" Column="3" TopLine="423"/>
+      </Position2>
+      <Position3>
+        <Filename Value="unconsultaespecial.pas"/>
+        <Caret Line="437" Column="54" TopLine="421"/>
+      </Position3>
+    </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
       <Modes ActiveMode=""/>

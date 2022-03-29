@@ -13,7 +13,7 @@ object FrmCadLogDet: TFrmCadLogDet
   OnClose = FormClose
   OnShow = FormShow
   Position = poDesktopCenter
-  LCLVersion = '2.0.12.0'
+  LCLVersion = '2.2.0.4'
   object Panel4: TPanel
     Left = 0
     Height = 42
@@ -1182,7 +1182,6 @@ object FrmCadLogDet: TFrmCadLogDet
       Font.Height = -13
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
-      ParentColor = False
       ParentFont = False
     end
     object Label2: TLabel
@@ -1196,7 +1195,6 @@ object FrmCadLogDet: TFrmCadLogDet
       Font.Height = -12
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
-      ParentColor = False
       ParentFont = False
       Transparent = False
     end
@@ -1241,7 +1239,6 @@ object FrmCadLogDet: TFrmCadLogDet
       Font.Height = -10
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
-      ParentColor = False
       ParentFont = False
     end
     object Label4: TLabel
@@ -1254,7 +1251,6 @@ object FrmCadLogDet: TFrmCadLogDet
       Font.Height = -10
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
-      ParentColor = False
       ParentFont = False
     end
     object DBText1: TDBText
@@ -1268,7 +1264,6 @@ object FrmCadLogDet: TFrmCadLogDet
       Font.Height = -10
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
-      ParentColor = False
       ParentFont = False
     end
     object Label5: TLabel
@@ -1281,7 +1276,6 @@ object FrmCadLogDet: TFrmCadLogDet
       Font.Height = -10
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
-      ParentColor = False
       ParentFont = False
     end
     object Label6: TLabel
@@ -1295,7 +1289,6 @@ object FrmCadLogDet: TFrmCadLogDet
       Font.Height = -10
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
-      ParentColor = False
       ParentFont = False
       Transparent = False
     end
@@ -1428,7 +1421,6 @@ object FrmCadLogDet: TFrmCadLogDet
       Width = 423
       DataField = 'NOME'
       DataSource = DtsrcLog
-      CharCase = ecNormal
       Color = 14939380
       Font.Color = clWindowText
       Font.Height = -11
@@ -1444,7 +1436,6 @@ object FrmCadLogDet: TFrmCadLogDet
       Width = 236
       DataField = 'LOGIN'
       DataSource = DtsrcLog
-      CharCase = ecNormal
       Color = 14939380
       Font.Color = clWindowText
       Font.Height = -11
@@ -1460,7 +1451,6 @@ object FrmCadLogDet: TFrmCadLogDet
       Width = 236
       DataField = 'SENHA'
       DataSource = DtsrcLog
-      CharCase = ecNormal
       Color = 14939380
       Font.Color = clMaroon
       Font.Height = -12
@@ -1498,7 +1488,6 @@ object FrmCadLogDet: TFrmCadLogDet
         Font.Height = -10
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
-        ParentColor = False
         ParentFont = False
       end
     end
@@ -1513,6 +1502,7 @@ object FrmCadLogDet: TFrmCadLogDet
       Font.Height = -10
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
+      OnChange = okChange
       OnClick = okClick
       ParentColor = False
       ParentFont = False
@@ -1535,7 +1525,6 @@ object FrmCadLogDet: TFrmCadLogDet
       Font.Color = clMaroon
       Font.Height = -11
       Font.Name = 'Tahoma'
-      ParentColor = False
       ParentFont = False
     end
     object Edit1: TEdit

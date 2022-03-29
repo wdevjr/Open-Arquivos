@@ -423,17 +423,18 @@ end;
 
 procedure TFrmView.SpeedButton15Click(Sender: TObject);
 begin
-  if (DBGrid1.DataSource.DataSet.FieldCount = 0) and (DM.sds_view.IsEmpty) then
+ // if (DBGrid1.DataSource.DataSet.FieldCount = 0) and (DM.sds_view.IsEmpty) then
+  if (DBGrid1.Focused = True) then
   begin
-    MessageDlg('Faça uma Pesquisa primero depois selecione na Tabela!',
-      mtInformation, [mbOK], 0);
-  end
-  else
-  begin
+  //  MessageDlg('Faça uma Pesquisa primero depois selecione na Tabela!',
+  //    mtInformation, [mbOK], 0);
+  //end
+  //else
+  //begin
     try
       try
         DM.ZQueryRelatorioArquivo.Close;
-        DM.ZQueryRelatorioArquivo.Params[0].Value := selecAtualReport;
+        DM.ZQueryRelatorioArquivo.Params[0].Value := DM.sds_view.FieldByName('ID').AsInteger;//selecAtualReport;
         //DM.sds_view.FieldByName('ID').AsInteger;
         DM.ZQueryRelatorioArquivo.Open;
       except
@@ -1568,6 +1569,7 @@ begin
   //end
   //else
     //Abort;
+    DBGrid1.SetFocus;
 end;
 
 procedure TFrmView.SpeedButton4Click(Sender: TObject);

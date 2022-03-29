@@ -76,12 +76,10 @@
         <ComponentName Value="FrmCadastrodeUsuarios"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="242"/>
-        <CursorPos X="3" Y="244"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="93"/>
+        <CursorPos X="3" Y="218"/>
         <UsageCount Value="37"/>
-        <Loaded Value="True"/>
       </Unit6>
       <Unit7>
         <Filename Value="undlgpesquisausuario.pas"/>
@@ -152,10 +150,12 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UnConsultaEspecial"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="1560"/>
-        <CursorPos X="3" Y="475"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="418"/>
+        <CursorPos X="29" Y="427"/>
         <UsageCount Value="37"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit13>
       <Unit14>
         <Filename Value="uncadarquivos.pas"/>
@@ -164,10 +164,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UnCadArquivos"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
         <TopLine Value="123"/>
         <CursorPos X="25" Y="128"/>
         <UsageCount Value="37"/>
-        <Loaded Value="True"/>
       </Unit14>
       <Unit15>
         <Filename Value="UnCadAssuntos.pas"/>
@@ -441,7 +442,16 @@
         <UsageCount Value="10"/>
       </Unit42>
     </Units>
-    <JumpHistory HistoryIndex="-1"/>
+    <JumpHistory Count="2" HistoryIndex="1">
+      <Position1>
+        <Filename Value="unconsultaespecial.pas"/>
+        <Caret Line="1563" Column="24" TopLine="1559"/>
+      </Position1>
+      <Position2>
+        <Filename Value="unconsultaespecial.pas"/>
+        <Caret Line="428" Column="3" TopLine="423"/>
+      </Position2>
+    </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
       <Modes ActiveMode=""/>
