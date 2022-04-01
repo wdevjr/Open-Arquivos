@@ -1,7 +1,7 @@
 object FrmView: TFrmView
-  Left = 271
+  Left = 352
   Height = 525
-  Top = 104
+  Top = 128
   Width = 741
   Caption = 'Consulta Especial...'
   ClientHeight = 525
@@ -1325,9 +1325,9 @@ object FrmView: TFrmView
       ParentFont = False
     end
     object SpeedButton1: TSpeedButton
-      Left = 5
+      Left = 4
       Height = 34
-      Top = 1
+      Top = 0
       Width = 34
       Font.Color = 14286847
       Font.Height = -15

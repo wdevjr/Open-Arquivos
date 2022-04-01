@@ -3,14 +3,14 @@
   <ProjectSession>
     <PathDelim Value="\"/>
     <Version Value="12"/>
-    <BuildModes Active="Release"/>
+    <BuildModes Active="Debug"/>
     <Units Count="43">
       <Unit0>
         <Filename Value="OpenArquivos.lpr"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="50" Y="10"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit0>
       <Unit1>
         <Filename Value="unprinc.pas"/>
@@ -22,7 +22,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="191"/>
         <CursorPos X="3" Y="193"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit1>
       <Unit2>
         <Filename Value="unlogin.pas"/>
@@ -34,7 +34,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="316"/>
         <CursorPos X="3" Y="79"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit2>
       <Unit3>
         <Filename Value="undm.pas"/>
@@ -46,7 +46,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="438"/>
         <CursorPos X="28" Y="961"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit3>
       <Unit4>
         <Filename Value="UnCadPerfil.pas"/>
@@ -57,7 +57,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="89"/>
         <CursorPos X="3" Y="98"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit4>
       <Unit5>
         <Filename Value="udmii.pas"/>
@@ -68,7 +68,7 @@
         <UnitName Value="UDMII"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="44" Y="8"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit5>
       <Unit6>
         <Filename Value="uncadastrousuarios.pas"/>
@@ -79,7 +79,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="93"/>
         <CursorPos X="3" Y="218"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit6>
       <Unit7>
         <Filename Value="undlgpesquisausuario.pas"/>
@@ -89,7 +89,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit7>
       <Unit8>
         <Filename Value="UndDlgProcuraCidades.pas"/>
@@ -99,7 +99,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit8>
       <Unit9>
         <Filename Value="UnCadAutores.pas"/>
@@ -110,7 +110,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="181"/>
         <CursorPos X="20" Y="188"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit9>
       <Unit10>
         <Filename Value="UnCadCidades.pas"/>
@@ -120,7 +120,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit10>
       <Unit11>
         <Filename Value="UnDlgProcuraDepartamento.pas"/>
@@ -131,7 +131,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="53"/>
         <CursorPos X="54" Y="59"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit11>
       <Unit12>
         <Filename Value="UnCadDepartamento.pas"/>
@@ -141,7 +141,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit12>
       <Unit13>
         <Filename Value="unconsultaespecial.pas"/>
@@ -151,9 +151,9 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UnConsultaEspecial"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="418"/>
-        <CursorPos X="29" Y="427"/>
-        <UsageCount Value="37"/>
+        <TopLine Value="149"/>
+        <CursorPos X="27" Y="156"/>
+        <UsageCount Value="38"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit13>
@@ -168,7 +168,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="123"/>
         <CursorPos X="25" Y="128"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit14>
       <Unit15>
         <Filename Value="UnCadAssuntos.pas"/>
@@ -179,7 +179,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="221"/>
         <CursorPos X="24" Y="201"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit15>
       <Unit16>
         <Filename Value="thema.pas"/>
@@ -189,7 +189,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit16>
       <Unit17>
         <Filename Value="UnCadLog.pas"/>
@@ -200,7 +200,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="302"/>
         <CursorPos X="3" Y="304"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit17>
       <Unit18>
         <Filename Value="undlgpesquisautores.pas"/>
@@ -210,7 +210,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit18>
       <Unit19>
         <Filename Value="UnConsultEspMaximized.pas"/>
@@ -220,7 +220,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit19>
       <Unit20>
         <Filename Value="UnDlgProcuraPerfilUser.pas"/>
@@ -230,7 +230,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit20>
       <Unit21>
         <Filename Value="UnTeladeRelatorios.pas"/>
@@ -240,7 +240,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit21>
       <Unit22>
         <Filename Value="UnUtilitLog.pas"/>
@@ -251,7 +251,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="371"/>
         <CursorPos X="34" Y="328"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit22>
       <Unit23>
         <Filename Value="UnLocalizarUserCod.pas"/>
@@ -261,7 +261,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit23>
       <Unit24>
         <Filename Value="undlgdescricao.pas"/>
@@ -271,7 +271,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit24>
       <Unit25>
         <Filename Value="UnDlgProcuraAutor.pas"/>
@@ -281,7 +281,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit25>
       <Unit26>
         <Filename Value="UnGridPesquiza.pas"/>
@@ -291,7 +291,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit26>
       <Unit27>
         <Filename Value="unprocessindefinido.pas"/>
@@ -301,7 +301,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit27>
       <Unit28>
         <Filename Value="ULocalizarUser.pas"/>
@@ -311,7 +311,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit28>
       <Unit29>
         <Filename Value="unincluirusuarios.pas"/>
@@ -321,7 +321,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit29>
       <Unit30>
         <Filename Value="undlgpesquisaarquivo.pas"/>
@@ -333,7 +333,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="427"/>
         <CursorPos X="17" Y="435"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit30>
       <Unit31>
         <Filename Value="UnDlgProcuraAssunto.pas"/>
@@ -343,7 +343,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit31>
       <Unit32>
         <Filename Value="unabertura.pas"/>
@@ -353,7 +353,7 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UnAbertura"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit32>
       <Unit33>
         <Filename Value="unatribuiusuariosporarquivos.pas"/>
@@ -365,7 +365,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="56"/>
         <CursorPos X="3" Y="56"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit33>
       <Unit34>
         <Filename Value="UnDlgProcuraPerfil.pas"/>
@@ -375,7 +375,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit34>
       <Unit35>
         <Filename Value="undlgdialogassunto.pas"/>
@@ -385,7 +385,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit35>
       <Unit36>
         <Filename Value="UAutoPreench.pas"/>
@@ -395,7 +395,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
       </Unit36>
       <Unit37>
         <Filename Value="C:\lazarus\lcl\include\control.inc"/>
@@ -442,7 +442,7 @@
         <UsageCount Value="10"/>
       </Unit42>
     </Units>
-    <JumpHistory Count="2" HistoryIndex="1">
+    <JumpHistory Count="9" HistoryIndex="8">
       <Position1>
         <Filename Value="unconsultaespecial.pas"/>
         <Caret Line="1563" Column="24" TopLine="1559"/>
@@ -451,6 +451,34 @@
         <Filename Value="unconsultaespecial.pas"/>
         <Caret Line="428" Column="3" TopLine="423"/>
       </Position2>
+      <Position3>
+        <Filename Value="unconsultaespecial.pas"/>
+        <Caret Line="437" Column="54" TopLine="421"/>
+      </Position3>
+      <Position4>
+        <Filename Value="unconsultaespecial.pas"/>
+        <Caret Line="434" Column="24" TopLine="382"/>
+      </Position4>
+      <Position5>
+        <Filename Value="unconsultaespecial.pas"/>
+        <Caret Line="485" TopLine="477"/>
+      </Position5>
+      <Position6>
+        <Filename Value="unconsultaespecial.pas"/>
+        <Caret Line="476" Column="22" TopLine="463"/>
+      </Position6>
+      <Position7>
+        <Filename Value="unconsultaespecial.pas"/>
+        <Caret Line="462" Column="16" TopLine="455"/>
+      </Position7>
+      <Position8>
+        <Filename Value="unconsultaespecial.pas"/>
+        <Caret Line="460" Column="6" TopLine="38"/>
+      </Position8>
+      <Position9>
+        <Filename Value="unconsultaespecial.pas"/>
+        <Caret Line="496" Column="40" TopLine="490"/>
+      </Position9>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>

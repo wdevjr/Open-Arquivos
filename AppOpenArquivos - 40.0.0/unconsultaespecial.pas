@@ -142,6 +142,24 @@ uses ShellAPI, UnDM, ULocalizarUser, UnLocalizarUserCod, UnPrinc, UnLogin,
 
 {$R *.lfm}
 
+function Remove(str: string):string;
+var
+   x: integer;
+   st: string;
+begin
+st:='';
+for x:=1 to length(str) do
+    begin
+    if (str[x] <> '-') and
+       (str[x] <> '.') and
+       (str[x] <> ',') and
+       (str[x] <> '/') and
+       (str[x] <> '%') then
+    st:=st + str[x];
+    end;
+Remove:=st;
+end;
+
 function RemoverPorCento(str: string): string;
 var
   x: integer;
@@ -157,7 +175,7 @@ begin
   RemoverPorCento := st;
 end;
 
-function Remover2(campo: string): boolean;
+function Remover2(campo: string): String;
 var
   temp: string;
   i: integer;
@@ -172,13 +190,13 @@ begin
       temp := temp + campo[i];
   end;
   campo := temp;
-  if (campo <> '') then
-  begin
-    Rel := True;
-  end
-  else
-    Rel := False;
-  Result := Rel;
+  //if (campo <> '') then
+  //begin
+  //  Rel := True;
+  //end
+  //else
+  //  Rel := False;
+  //Result := Rel;
 end;
 
 procedure TFrmView.BitBtn2Click(Sender: TObject);
@@ -475,16 +493,7 @@ var
 begin
   Inicial := '';
   Finall := '';
-
-  // DM.sds_view.CLOSE;
-  // DM.sds_view_todos.CLOSE;
-  if (EditPesqu.Text = '%' ) or (EditPesqu.Text = '%%' ) Then
-  begin
-    EditPesqu.Text:='';
-  end;
-  //Remover2(EditPesqu.Text);
-  //if (Rel = True) then
-  //begin
+  EditPesqu.Text:=Remove(EditPesqu.Text);
     if (EditPesqu.Text <> '' ) or (PanelMostrData.Visible = True) or (DBEdit4.Text <> '') or
       (DBEdit3.Text <> '') or (DBEdit2.Text <> '') or (DBEdit1.Text <> '') then
     begin
