@@ -229,6 +229,8 @@ procedure TFrmDlgPesquisa.EditProc1KeyPress(Sender: TObject; var Key: char);
 begin
  if (key <> #8) then
  begin
+  EditProc1.Text:=DM.Remover(EditProc1.Text);
+  EditProc2.Text:=DM.Remover(EditProc2.Text);
    if (FrmLogin.TODOS = 1) then
   begin
     if CheckBoxINC.Checked = True then
@@ -432,7 +434,7 @@ begin
       end;
     end;
   end;
-
+ end else Abort;
 
 end;
 
@@ -440,6 +442,8 @@ procedure TFrmDlgPesquisa.EditProc2KeyPress(Sender: TObject; var Key: char);
 begin
  if (key <> #8) then
  begin
+  EditProc1.Text:=DM.Remover(EditProc1.Text);
+  EditProc2.Text:=DM.Remover(EditProc2.Text);
   if (FrmLogin.TODOS = 1) then
   begin
     if CheckBoxINC.Checked = True then
@@ -710,6 +714,8 @@ procedure TFrmDlgPesquisa.SpeedButton2Click(Sender: TObject);
 var
   sSQL, Texto: string;
 begin
+  EditProc1.Text:=DM.Remover(EditProc1.Text);
+  EditProc2.Text:=DM.Remover(EditProc12.Text);
   if CheckBoxINC.Checked = False then
   begin
     if (FrmLogin.TODOS = 0) then

@@ -460,7 +460,7 @@ type
     codigoLogado: integer;
     cordoform: string;
     atual: string;
-
+    function Remover(str: String): String;
     function leriniAtual(tabela_ini, campo_ini: string): string;
     function myColor: TColor;
     function lerini(tabela_ini, campo_ini: string): string;
@@ -472,6 +472,7 @@ type
     function receberValor: integer;
     function receberUsuario: integer;
     function GetIP: string;
+
     procedure ExcluirAtual(CodUserUnic: integer);
     procedure IncrementaPersonalizado(Nome_Tabela: string; Chave_Primaria: TField);
     procedure gravariniAtual(tabela_ini, campo_ini, valor_ini: string);
@@ -492,6 +493,24 @@ implementation
 
 uses UnCadArquivos, Unlogin, UnAbertura, uncadastrousuarios, unDlgPesquisaArquivo,
   Math, Printers;
+
+function TDM.Remover(str: String): String;
+var
+   x: integer;
+   st: AnsiString;
+begin
+st:='';
+for x:=1 to length(str) do
+    begin
+    if (str[x] <> '-') and
+       (str[x] <> '.') and
+       (str[x] <> ',') and
+       (str[x] <> '/') and
+       (str[x] <> '%') then
+    st:=st + str[x];
+    end;
+Remover:=st;
+end;
 
 procedure TDM.gravariniAtual(tabela_ini, campo_ini, valor_ini: string);
 var

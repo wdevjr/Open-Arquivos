@@ -4428,6 +4428,7 @@ object DM: TDM
       Required = False
     end
     object ZQArquivoTITULO: TStringField
+      DisplayLabel = 'Título'
       FieldKind = fkData
       FieldName = 'TITULO'
       Index = 4
@@ -4467,6 +4468,7 @@ object DM: TDM
       Required = False
     end
     object ZQArquivoDESCRICAO: TStringField
+      DisplayLabel = 'Descrição'
       FieldKind = fkData
       FieldName = 'DESCRICAO'
       Index = 8

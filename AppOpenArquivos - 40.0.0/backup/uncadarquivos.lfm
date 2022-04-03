@@ -1,7 +1,7 @@
 object FormArquivo: TFormArquivo
-  Left = 376
+  Left = 328
   Height = 369
-  Top = 93
+  Top = 124
   Width = 796
   Caption = 'Cadastro de Arquivos'
   ClientHeight = 369

@@ -142,62 +142,7 @@ uses ShellAPI, UnDM, ULocalizarUser, UnLocalizarUserCod, UnPrinc, UnLogin,
 
 {$R *.lfm}
 
-function Remove(str: string):string;
-var
-   x: integer;
-   st: string;
-begin
-st:='';
-for x:=1 to length(str) do
-    begin
-    if (str[x] <> '-') and
-       (str[x] <> '.') and
-       (str[x] <> ',') and
-       (str[x] <> '/') and
-       (str[x] <> '%') then
-    st:=st + str[x];
-    end;
-Remove:=st;
-end;
 
-function RemoverPorCento(str: string): string;
-var
-  x: integer;
-  st: string;
-begin
-  st := '';
-  for x := 1 to length(str) do
-  begin
-    if (str[x] = '%') then
-
-      st := st + str[x];
-  end;
-  RemoverPorCento := st;
-end;
-
-function Remover2(campo: string): String;
-var
-  temp: string;
-  i: integer;
-
-begin
-  temp := '';
-  //Rel:=False;
-  for i := 1 to length(campo) do //campo e a variavel q vc quer remover os . e -
-  begin
-    //if ((campo[i]<>´.´) and (campo[i]<>´-´)) then
-    if ((campo[i] <> '%')) then
-      temp := temp + campo[i];
-  end;
-  campo := temp;
-  //if (campo <> '') then
-  //begin
-  //  Rel := True;
-  //end
-  //else
-  //  Rel := False;
-  //Result := Rel;
-end;
 
 procedure TFrmView.BitBtn2Click(Sender: TObject);
 begin
@@ -493,7 +438,7 @@ var
 begin
   Inicial := '';
   Finall := '';
-  EditPesqu.Text:=Remove(EditPesqu.Text);
+  EditPesqu.Text:=DM.Remover(EditPesqu.Text);
     if (EditPesqu.Text <> '' ) or (PanelMostrData.Visible = True) or (DBEdit4.Text <> '') or
       (DBEdit3.Text <> '') or (DBEdit2.Text <> '') or (DBEdit1.Text <> '') then
     begin

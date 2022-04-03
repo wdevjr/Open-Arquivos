@@ -152,49 +152,6 @@ uses UnDM, UDMII, thema, unDlgPesquisaArquivo, UnLogin, UnDlgDialogAssunto,
 procedure TFormArquivo.IniciaAdministracao;
 begin
 
-  //if FrmLogin.BitBtn2.ModalResult = mrOk then
-  //begin
-    {with DM.dst_Login do
-      if not IsEmpty then
-      begin }
-
-        {if (FrmLogin.TODOS = 1) then
-          begin
-          //cbtconsulta.Enabled:=true;
-          cbconsulta.Enabled := True;
-          end;
-          if (FrmLogin.TODOS = 0) then
-          begin
-          cbconsulta.Enabled :=false;
-          end; }
-
-  // Sessão MenuBar
-        { if FrmLogin.NIVEL = 1 then
-          begin
-          if DMII.sdt_Verif_Perfil.FieldByName('ARQUI_CONSULTA').AsString = 'S' then
-          begin
-          FrPrincipal.cbtconsulta.Visible:=True;
-          end
-          else
-          begin
-          FrPrincipal.cbtconsulta.Visible:=false;
-          end;
-          end else
-          begin
-          FrPrincipal.cbtconsulta.Visible:=False;
-          end; }
-  {if (FrmLogin.TODOS = 0) then
-  begin
-    lookUser.Visible := False;
-  end
-  else
-  begin
-    lookUser.Visible := True;
-  end;  }
-
-
-
-
   if DMII.sdt_Verif_Perfil.FieldByName('ARQUI_CONSULTAR').AsString = 'S' then
   begin
     cbconsulta.Visible := True;
@@ -714,15 +671,6 @@ begin
         DM.sds_Arqu.Close;
         FrmDlgPesquisa.Free;
       end;
-
-     { if (FrmLogin.TODOS = 0) then
-      begin
-        lookUser.Visible := False;
-      end
-      else
-      begin
-        lookUser.Visible := True;
-      end; }
     end
     else if FrmLogin.TODOS = 1 then
     begin
@@ -1109,26 +1057,14 @@ begin
     gravar.Enabled := Dtsrc.State in [dsInsert];
     editar.Enabled := Dtsrc.State in [dsEdit];
     cancelar.Enabled := Dtsrc.State in [dsInsert, dsEdit];
-    {if DM.sdt_Verif_Perfil.FieldByName('ARQUI_EXCLUIR').AsString = 'S' then
-    begin
-          excluir.Visible := True;
-          excluir.Enabled := Dtsrc.State in [dsbrowse];
-    end;
-    if DM.sdt_Verif_Perfil.FieldByName('ARQUI_EXCLUIR').AsString = 'N' then
-    begin
-          excluir.Enabled := False;
-    end; }
-    //excluir.Enabled := Dtsrc.State in [dsbrowse];
-    //btntrazerForm.Enabled := Dtsrc.State in [dsbrowse, dsInactive];
     carregar.Enabled := Dtsrc.State in [dsInsert, dsEdit, dsbrowse];
     BtnLoc01.Enabled := Dtsrc.State in [dsInsert, dsEdit, dsbrowse];
     BtnLoc02.Enabled := Dtsrc.State in [dsInsert, dsEdit, dsbrowse];
     excluiAssunto.Enabled := Dtsrc.State in [dsInsert, dsEdit, dsbrowse, dsInactive];
     excluiAutor.Enabled := Dtsrc.State in [dsInsert, dsEdit, dsbrowse, dsInactive];
     lookUser.Enabled := not IsEmpty;
-    //lookUser.Enabled := Dtsrc.State in [dsInsert, dsEdit];
     relatorio.Enabled := Dtsrc.State in [dsbrowse, dsInactive];
-    // relatorios.Enabled := Dtsrc.State in [dsbrowse, dsInactive];
+
   end;
 end;
 
@@ -1647,14 +1583,6 @@ begin
     end;
   end;
 
-  {if (FrmLogin.TODOS = 0) then
-  begin
-    lookUser.Visible := False;
-  end
-  else
-  begin
-    lookUser.Visible := True;
-  end; }
 end;
 
 procedure TFormArquivo.inserirClick(Sender: TObject);
@@ -1664,16 +1592,6 @@ begin
   Dtsrc.DataSet.Append;
 
   lookUser.Enabled := False;
-
-
-  {if (FrmLogin.TODOS = 0) then
-  begin
-    lookUser.Visible := False;
-  end
-  else
-  begin
-    lookUser.Visible := True;
-  end; }
 
 end;
 
