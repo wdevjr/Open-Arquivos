@@ -44,9 +44,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="UnDM"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="4"/>
-        <TopLine Value="496"/>
-        <CursorPos X="21" Y="497"/>
+        <TopLine Value="500"/>
+        <CursorPos X="15" Y="504"/>
         <UsageCount Value="38"/>
         <Loaded Value="True"/>
       </Unit3>
@@ -333,7 +334,6 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="unDlgPesquisaArquivo"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
         <TopLine Value="441"/>
         <CursorPos X="2" Y="443"/>
@@ -448,7 +448,7 @@
         <UsageCount Value="10"/>
       </Unit42>
     </Units>
-    <JumpHistory Count="13" HistoryIndex="12">
+    <JumpHistory Count="17" HistoryIndex="16">
       <Position1>
         <Filename Value="unprinc.pas"/>
         <Caret Line="193" Column="3" TopLine="191"/>
@@ -501,6 +501,22 @@
         <Filename Value="undlgpesquisaarquivo.pas"/>
         <Caret Line="717" Column="3" TopLine="713"/>
       </Position13>
+      <Position14>
+        <Filename Value="unconsultaespecial.pas"/>
+        <Caret Line="439" Column="3" TopLine="435"/>
+      </Position14>
+      <Position15>
+        <Filename Value="unconsultaespecial.pas"/>
+        <Caret Line="192" Column="3" TopLine="190"/>
+      </Position15>
+      <Position16>
+        <Filename Value="unconsultaespecial.pas"/>
+        <Caret Line="439" Column="3" TopLine="435"/>
+      </Position16>
+      <Position17>
+        <Filename Value="undm.pas"/>
+        <Caret Line="463" Column="21" TopLine="455"/>
+      </Position17>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>

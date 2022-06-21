@@ -460,7 +460,7 @@ type
     codigoLogado: integer;
     cordoform: string;
     atual: string;
-    function Remover(str: AnsiString): AnsiString;
+    function Remover(str: String): String;
     function leriniAtual(tabela_ini, campo_ini: string): string;
     function myColor: TColor;
     function lerini(tabela_ini, campo_ini: string): string;
@@ -494,7 +494,7 @@ implementation
 uses UnCadArquivos, Unlogin, UnAbertura, uncadastrousuarios, unDlgPesquisaArquivo,
   Math, Printers;
 
-function TDM.Remover(str: AnsiString):AnsiString;
+function TDM.Remover(str: String): String;
 var
    x: integer;
    st: AnsiString;

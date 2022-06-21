@@ -502,14 +502,21 @@ begin
 st:='';
 for x:=1 to length(str) do
     begin
-    if (str[x] <> '-') and
-       (str[x] <> '.') and
-       (str[x] <> ',') and
-       (str[x] <> '/') and
-       (str[x] <> '%') then
+    if (str[x] <> '%') then
     st:=st + str[x];
     end;
 Remover:=st;
+//st:='';
+//for x:=1 to length(str) do
+//    begin
+//    if (str[x] <> '-') and
+//       (str[x] <> '.') and
+//       (str[x] <> ',') and
+//       (str[x] <> '/') and
+//       (str[x] <> '%') then
+//    st:=st + str[x];
+//    end;
+//Remover:=st;
 end;
 
 procedure TDM.gravariniAtual(tabela_ini, campo_ini, valor_ini: string);
