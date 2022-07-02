@@ -86,6 +86,8 @@ type
     procedure imprimirClick(Sender: TObject);
     procedure MenuItem1Click(Sender: TObject);
     procedure MenuItem2Click(Sender: TObject);
+    procedure Page1BeforeShow(ASender: TObject; ANewPage: TPage;
+      ANewIndex: Integer);
     procedure SpeedButton11Click(Sender: TObject);
     procedure btnLimparClick(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
@@ -137,8 +139,14 @@ end;
 
 procedure TFrmLogAcesso.BitBtn3Click(Sender: TObject);
 begin
-  DM.dst_Login.Close;
   DM.ZQueryAssistente.Close;
+    DM.dst_Login.Close;
+    DM.cds_User.Close;
+    PanelAlert.Visible:=False;
+    PanelMostrData.Visible:=False;
+    Notebook1.PageIndex:=0;
+    EdtUsuario.Text:='';
+    EdtSenha.Text:='';
   Close;
 end;
 
@@ -267,8 +275,12 @@ end;
 
 procedure TFrmLogAcesso.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
-  DM.dst_Login.Close;
-  //DM.ZQueryAssistente.Close;
+  DM.ZQueryAssistente.Close;
+    DM.dst_Login.Close;
+    DM.cds_User.Close;
+    PanelAlert.Visible:=False;
+    PanelMostrData.Visible:=False;
+    Close;
 end;
 
 procedure TFrmLogAcesso.FormShow(Sender: TObject);
@@ -321,10 +333,18 @@ end;
 
 procedure TFrmLogAcesso.MenuItem2Click(Sender: TObject);
 begin
-
+ if not DM.ZQueryAssistente.IsEmpty then
+  begin
   DM.frReportLogTodos.LoadFromFile('Reports/RelConsultaLogTodos.lrf');
   DM.frReportLogTodos.Title := 'Tela de Relatórios';
   DM.frReportLogTodos.showReport;
+  end;
+
+end;
+
+procedure TFrmLogAcesso.Page1BeforeShow(ASender: TObject; ANewPage: TPage;
+  ANewIndex: Integer);
+begin
 
 end;
 

@@ -420,10 +420,11 @@ object FrmLogAcesso: TFrmLogAcesso
     Height = 313
     Top = 65
     Width = 738
-    PageIndex = 1
+    PageIndex = 0
     Align = alClient
     TabOrder = 3
     object Page1: TPage
+      OnBeforeShow = Page1BeforeShow
       object Image2: TImage
         Left = 24
         Height = 42
@@ -1562,7 +1563,7 @@ object FrmLogAcesso: TFrmLogAcesso
     ParentFont = False
     TabOrder = 4
     object BitBtn3: TBitBtn
-      Left = 653
+      Left = 655
       Height = 28
       Top = 6
       Width = 78

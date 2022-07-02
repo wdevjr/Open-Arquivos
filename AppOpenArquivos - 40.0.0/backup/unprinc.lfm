@@ -1,9 +1,9 @@
 object FrPrincipal: TFrPrincipal
-  Left = 236
-  Height = 534
-  Top = 221
+  Left = 294
+  Height = 557
+  Top = 96
   Width = 1025
-  ClientHeight = 514
+  ClientHeight = 535
   ClientWidth = 1025
   Color = clWhite
   Menu = MainMenu1
@@ -1170,7 +1170,7 @@ object FrPrincipal: TFrPrincipal
   object StatusBar1: TStatusBar
     Left = 0
     Height = 23
-    Top = 491
+    Top = 512
     Width = 1025
     Color = clMoneyGreen
     Panels = <    
@@ -1193,31 +1193,31 @@ object FrPrincipal: TFrPrincipal
   end
   object Panel2: TPanel
     Left = 0
-    Height = 419
+    Height = 440
     Top = 72
     Width = 1025
     Align = alClient
     BevelOuter = bvNone
-    ClientHeight = 419
+    ClientHeight = 440
     ClientWidth = 1025
     ParentFont = False
     TabOrder = 2
     object Panel4: TPanel
-      Left = 855
-      Height = 419
+      Left = 800
+      Height = 440
       Top = 0
-      Width = 170
+      Width = 225
       Align = alRight
       BevelOuter = bvNone
-      ClientHeight = 419
-      ClientWidth = 170
+      ClientHeight = 440
+      ClientWidth = 225
       ParentFont = False
       TabOrder = 0
       object ListView1: TListView
         Left = 8
-        Height = 128
-        Top = 192
-        Width = 153
+        Height = 168
+        Top = 152
+        Width = 209
         BorderStyle = bsNone
         Color = 15004141
         Columns = <        
@@ -1236,9 +1236,9 @@ object FrPrincipal: TFrPrincipal
       end
       object Label13: TLabel
         Left = 48
-        Height = 15
+        Height = 19
         Top = 328
-        Width = 67
+        Width = 82
         Caption = 'Conectados:'
         Font.Color = clBlue
         Font.Style = [fsBold]
@@ -1267,9 +1267,9 @@ object FrPrincipal: TFrPrincipal
     end
     object Image1: TImage
       Left = 0
-      Height = 419
+      Height = 440
       Top = 0
-      Width = 855
+      Width = 800
       Align = alClient
       Picture.Data = {
         0A544A706567496D616765FC360000FFD8FFE000104A46494600010101004800

@@ -424,6 +424,7 @@ object FrmLogAcesso: TFrmLogAcesso
     Align = alClient
     TabOrder = 3
     object Page1: TPage
+      OnBeforeShow = Page1BeforeShow
       object Image2: TImage
         Left = 24
         Height = 42
@@ -934,11 +935,11 @@ object FrmLogAcesso: TFrmLogAcesso
         Left = 0
         Height = 22
         Top = 0
-        Width = 923
+        Width = 738
         Align = alTop
         BevelOuter = bvNone
         ClientHeight = 22
-        ClientWidth = 923
+        ClientWidth = 738
         Color = 11075583
         Font.Color = clWindowText
         Font.Height = -14
@@ -987,9 +988,9 @@ object FrmLogAcesso: TFrmLogAcesso
         end
         object Label16: TLabel
           Left = 88
-          Height = 18
+          Height = 14
           Top = 4
-          Width = 258
+          Width = 213
           Caption = 'Numero de Registros Encontrados:'
           Font.Color = clMaroon
           Font.Height = -12
@@ -999,9 +1000,9 @@ object FrmLogAcesso: TFrmLogAcesso
         end
         object LabelNum: TLabel
           Left = 304
-          Height = 22
+          Height = 17
           Top = 3
-          Width = 91
+          Width = 69
           Caption = 'LabelNum'
           Font.Color = clBlue
           Font.Height = -14
@@ -1013,11 +1014,11 @@ object FrmLogAcesso: TFrmLogAcesso
       object Panel10: TPanel
         Left = 0
         Height = 74
-        Top = 73
-        Width = 923
+        Top = 58
+        Width = 738
         Align = alTop
         ClientHeight = 74
-        ClientWidth = 923
+        ClientWidth = 738
         Font.Color = clWindowText
         Font.Height = -14
         Font.Name = 'Tahoma'
@@ -1025,7 +1026,7 @@ object FrmLogAcesso: TFrmLogAcesso
         TabOrder = 1
         object EditPesquNome: TEdit
           Left = 96
-          Height = 30
+          Height = 25
           Top = 11
           Width = 288
           Font.Color = clBlack
@@ -1181,9 +1182,9 @@ object FrmLogAcesso: TFrmLogAcesso
         end
         object Label4: TLabel
           Left = 8
-          Height = 17
+          Height = 13
           Top = 15
-          Width = 110
+          Width = 85
           Caption = 'Nome do Usuário:'
           Font.Color = clBlue
           Font.Height = -11
@@ -1368,9 +1369,9 @@ object FrmLogAcesso: TFrmLogAcesso
       end
       object DBGrid1: TDBGrid
         Left = 0
-        Height = 226
-        Top = 165
-        Width = 923
+        Height = 181
+        Top = 132
+        Width = 738
         Align = alClient
         AlternateColor = 15192015
         Color = 13363947
@@ -1386,12 +1387,12 @@ object FrmLogAcesso: TFrmLogAcesso
       object PanelData: TPanel
         Left = 0
         Height = 36
-        Top = 28
-        Width = 923
+        Top = 22
+        Width = 738
         Align = alTop
         BevelOuter = bvNone
         ClientHeight = 36
-        ClientWidth = 923
+        ClientWidth = 738
         Color = 16774388
         Font.Color = clWindowText
         Font.Height = -14
@@ -1449,9 +1450,9 @@ object FrmLogAcesso: TFrmLogAcesso
         end
         object Label14: TLabel
           Left = 63
-          Height = 17
+          Height = 13
           Top = 8
-          Width = 37
+          Width = 30
           Caption = 'Data:'
           Font.Color = clMaroon
           Font.Height = -11
@@ -1477,9 +1478,9 @@ object FrmLogAcesso: TFrmLogAcesso
           Visible = False
           object Label15: TLabel
             Left = 176
-            Height = 17
+            Height = 13
             Top = 8
-            Width = 22
+            Width = 19
             Caption = 'até'
             Font.Color = clMaroon
             Font.Height = -11
@@ -1562,7 +1563,7 @@ object FrmLogAcesso: TFrmLogAcesso
     ParentFont = False
     TabOrder = 4
     object BitBtn3: TBitBtn
-      Left = 653
+      Left = 655
       Height = 28
       Top = 6
       Width = 78
