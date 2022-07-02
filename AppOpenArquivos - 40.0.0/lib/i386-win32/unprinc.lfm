@@ -1245,7 +1245,7 @@ object FrPrincipal: TFrPrincipal
         ParentFont = False
       end
       object codigo13: TLabel
-        Left = 76
+        Left = 83
         Height = 17
         Top = 344
         Width = 28

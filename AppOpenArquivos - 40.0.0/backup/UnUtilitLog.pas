@@ -280,7 +280,11 @@ begin
     DM.cds_User.Close;
     PanelAlert.Visible:=False;
     PanelMostrData.Visible:=False;
-    Close;
+    Notebook1.PageIndex:=0;
+    EdtUsuario.Text:='';
+    EdtSenha.Text:='';
+  Close;
+  FrmLogAcesso:=Nil;
 end;
 
 procedure TFrmLogAcesso.FormShow(Sender: TObject);

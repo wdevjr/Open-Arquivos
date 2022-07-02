@@ -715,7 +715,7 @@ var
   sSQL, Texto: string;
 begin
   EditProc1.Text:=DM.Remover(EditProc1.Text);
-  EditProc2.Text:=DM.Remover(EditProc12.Text);
+  EditProc2.Text:=DM.Remover(EditProc2.Text);
   if CheckBoxINC.Checked = False then
   begin
     if (FrmLogin.TODOS = 0) then

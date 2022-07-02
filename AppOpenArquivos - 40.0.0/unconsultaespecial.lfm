@@ -1,54 +1,53 @@
 object FrmView: TFrmView
-  Left = 352
-  Height = 710
-  Top = 128
-  Width = 926
+  Left = 193
+  Height = 804
+  Top = 9
+  Width = 1078
   Caption = 'Consulta Especial...'
-  ClientHeight = 710
-  ClientWidth = 926
+  ClientHeight = 804
+  ClientWidth = 1078
   Color = 14083559
   DesignTimePPI = 120
   Font.Color = clWindowText
-  Font.Height = -18
+  Font.Height = -17
   Font.Name = 'Tahoma'
   OnActivate = FormActivate
   OnClose = FormClose
   OnShow = FormShow
-  Position = poDesktopCenter
   LCLVersion = '2.2.0.4'
   object Panel6: TPanel
     Left = 0
-    Height = 34
+    Height = 91
     Top = 0
-    Width = 926
+    Width = 1078
     Align = alTop
-    ClientHeight = 34
-    ClientWidth = 926
+    ClientHeight = 91
+    ClientWidth = 1078
     Color = clWhite
     Font.Color = clWindowText
-    Font.Height = -18
+    Font.Height = -17
     Font.Name = 'Tahoma'
     ParentBackground = False
     ParentColor = False
     ParentFont = False
     TabOrder = 0
     object Label4: TLabel
-      Left = 64
-      Height = 18
-      Top = 8
-      Width = 163
+      Left = 110
+      Height = 24
+      Top = 31
+      Width = 218
       Caption = 'Utilitário de Consulta '
       Font.Color = clGreen
-      Font.Height = -15
+      Font.Height = -20
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object Image2: TImage
       Left = 11
-      Height = 29
-      Top = 0
-      Width = 32
+      Height = 80
+      Top = 10
+      Width = 88
       Picture.Data = {
         07544269746D6170360C0000424D360C00000000000036000000280000002000
         0000200000000100180000000000000C00000000000000000000000000000000
@@ -150,29 +149,30 @@ object FrmView: TFrmView
         D7D1D6D8D3D8DAD1D8DAD0D7D9CDD5D7C9D1D3C8D0D3CBD3D5C8D0D4C8D0D4C8
         D0D4
       }
+      Stretch = True
       Transparent = True
     end
     object Panel16: TPanel
-      Left = 676
-      Height = 32
+      Left = 828
+      Height = 89
       Top = 1
       Width = 249
       Align = alRight
       BevelOuter = bvNone
-      ClientHeight = 32
+      ClientHeight = 89
       ClientWidth = 249
       Color = clWhite
       Font.Color = clWindowText
-      Font.Height = -18
+      Font.Height = -17
       Font.Name = 'Tahoma'
       ParentColor = False
       ParentFont = False
       TabOrder = 0
       object Image4: TImage
-        Left = 191
-        Height = 34
-        Top = -4
-        Width = 58
+        Left = 200
+        Height = 53
+        Top = -3
+        Width = 49
         Picture.Data = {
           07544269746D617036100000424D361000000000000036000000280000002000
           0000200000000100200000000000001000000000000000000000000000000000
@@ -313,25 +313,25 @@ object FrmView: TFrmView
   object Panel1: TPanel
     Left = 0
     Height = 76
-    Top = 634
-    Width = 926
+    Top = 728
+    Width = 1078
     Align = alBottom
     BevelOuter = bvNone
     ClientHeight = 76
-    ClientWidth = 926
+    ClientWidth = 1078
     Font.Color = clWindowText
-    Font.Height = -13
+    Font.Height = -12
     Font.Name = 'Tahoma'
     ParentFont = False
     TabOrder = 1
     object SpeedButton4: TSpeedButton
-      Left = 40
-      Height = 66
-      Top = 4
+      Left = 42
+      Height = 67
+      Top = 3
       Width = 112
       Caption = 'Habilitar Cadastro'
       Font.Color = clWindowText
-      Font.Height = -13
+      Font.Height = -12
       Font.Name = 'Tahoma'
       Glyph.Data = {
         F6060000424DF606000000000000360000002800000018000000180000000100
@@ -396,13 +396,13 @@ object FrmView: TFrmView
       ParentFont = False
     end
     object SpeedButton15: TSpeedButton
-      Left = 152
-      Height = 66
-      Top = 4
-      Width = 98
+      Left = 153
+      Height = 67
+      Top = 3
+      Width = 97
       Caption = 'Imprimir'
       Font.Color = clBlue
-      Font.Height = -13
+      Font.Height = -12
       Font.Name = 'Tahoma'
       Glyph.Data = {
         F6060000424DF606000000000000360000002800000018000000180000000100
@@ -467,7 +467,7 @@ object FrmView: TFrmView
       ParentFont = False
     end
     object Panel2: TPanel
-      Left = 586
+      Left = 738
       Height = 76
       Top = 0
       Width = 340
@@ -476,19 +476,19 @@ object FrmView: TFrmView
       ClientHeight = 76
       ClientWidth = 340
       Font.Color = clWindowText
-      Font.Height = -18
+      Font.Height = -17
       Font.Name = 'Tahoma'
       ParentFont = False
       TabOrder = 0
       object BitBtn1: TBitBtn
-        Left = 40
+        Left = 34
         Height = 40
-        Top = 8
-        Width = 142
+        Top = 20
+        Width = 143
         Default = True
         DefaultCaption = True
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -12
         Font.Name = 'Tahoma'
         Kind = bkOK
         ModalResult = 1
@@ -498,13 +498,13 @@ object FrmView: TFrmView
         Visible = False
       end
       object SpeedButton12: TSpeedButton
-        Left = 192
+        Left = 187
         Height = 40
-        Top = 8
-        Width = 126
+        Top = 20
+        Width = 127
         Caption = 'Fechar'
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -12
         Font.Name = 'Tahoma'
         Glyph.Data = {
           36060000424D3606000000000000360000002800000020000000100000000100
@@ -564,13 +564,13 @@ object FrmView: TFrmView
       end
     end
     object SpeedButton3: TSpeedButton
-      Left = 248
-      Height = 68
-      Top = 4
+      Left = 249
+      Height = 67
+      Top = 3
       Width = 111
       Caption = 'Limpar'
       Font.Color = clWindowText
-      Font.Height = -13
+      Font.Height = -12
       Font.Name = 'Tahoma'
       Glyph.Data = {
         36100000424D3610000000000000360000002800000020000000200000000100
@@ -711,26 +711,25 @@ object FrmView: TFrmView
   object Panel5: TPanel
     Left = 0
     Height = 44
-    Top = 344
-    Width = 926
+    Top = 420
+    Width = 1078
     Align = alTop
     BevelOuter = bvNone
     ClientHeight = 44
-    ClientWidth = 926
+    ClientWidth = 1078
     Font.Color = clWindowText
-    Font.Height = -18
+    Font.Height = -17
     Font.Name = 'Tahoma'
     ParentFont = False
     TabOrder = 2
     object SpeedButton2: TSpeedButton
-      Left = 630
-      Height = 32
-      Top = 1
-      Width = 104
+      Left = 623
+      Height = 41
+      Top = 0
+      Width = 137
       Caption = 'Consultar'
-      Flat = True
       Font.Color = clWindowText
-      Font.Height = -13
+      Font.Height = -12
       Font.Name = 'Tahoma'
       Glyph.Data = {
         F6060000424DF606000000000000360000002800000018000000180000000100
@@ -795,11 +794,11 @@ object FrmView: TFrmView
     end
     object EditPesqu: TMaskEdit
       Left = 24
-      Height = 30
-      Top = 1
+      Height = 29
+      Top = 5
       Width = 591
       Font.Color = clWindowText
-      Font.Height = -18
+      Font.Height = -17
       Font.Name = 'Tahoma'
       MaxLength = 0
       ParentFont = False
@@ -811,8 +810,8 @@ object FrmView: TFrmView
   object RadioGroup1: TRadioGroup
     Left = 0
     Height = 45
-    Top = 299
-    Width = 926
+    Top = 375
+    Width = 1078
     Align = alTop
     AutoFill = True
     ChildSizing.LeftRightSpacing = 6
@@ -822,12 +821,12 @@ object FrmView: TFrmView
     ChildSizing.ShrinkVertical = crsScaleChilds
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 5
-    ClientHeight = 24
-    ClientWidth = 922
+    ClientHeight = 26
+    ClientWidth = 1074
     Color = 14083559
     Columns = 5
     Font.Color = clGreen
-    Font.Height = -13
+    Font.Height = -12
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ItemIndex = 1
@@ -845,16 +844,16 @@ object FrmView: TFrmView
   end
   object Alert: TPanel
     Left = 0
-    Height = 38
-    Top = 388
-    Width = 926
+    Height = 37
+    Top = 464
+    Width = 1078
     Align = alTop
     BevelOuter = bvNone
-    ClientHeight = 38
-    ClientWidth = 926
+    ClientHeight = 37
+    ClientWidth = 1078
     Color = 55769
     Font.Color = clWindowText
-    Font.Height = -18
+    Font.Height = -17
     Font.Name = 'Tahoma'
     ParentBackground = False
     ParentColor = False
@@ -862,61 +861,61 @@ object FrmView: TFrmView
     TabOrder = 4
     Visible = False
     object Label3: TLabel
-      Left = 210
-      Height = 16
+      Left = 207
+      Height = 14
       Top = 8
-      Width = 42
+      Width = 40
       Caption = 'Label3'
       Font.Color = clRed
-      Font.Height = -13
+      Font.Height = -12
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object Label30: TLabel
       Left = 48
-      Height = 16
+      Height = 14
       Top = 8
-      Width = 157
+      Width = 147
       Caption = 'Registros  encontrados:'
       Font.Color = 12615680
-      Font.Height = -13
+      Font.Height = -12
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object PanelMaximizar: TPanel
       Left = 280
-      Height = 30
+      Height = 31
       Top = 0
       Width = 408
       BevelOuter = bvNone
-      ClientHeight = 30
+      ClientHeight = 31
       ClientWidth = 408
       Font.Color = clWindowText
-      Font.Height = -18
+      Font.Height = -17
       Font.Name = 'Tahoma'
       ParentFont = False
       TabOrder = 0
       Visible = False
       object Label5: TLabel
         Left = 40
-        Height = 16
+        Height = 14
         Top = 8
-        Width = 226
+        Width = 209
         Caption = 'Clique neste botão para Maximizar --->'
-        Font.Color = clWindowText
-        Font.Height = -13
+        Font.Color = clBlue
+        Font.Height = -12
         Font.Name = 'Tahoma'
         ParentFont = False
       end
       object SpeedButton5: TSpeedButton
-        Left = 270
-        Height = 25
-        Top = 6
-        Width = 39
+        Left = 271
+        Height = 31
+        Top = 3
+        Width = 45
         Font.Color = clWindowText
-        Font.Height = -18
+        Font.Height = -17
         Font.Name = 'Tahoma'
         Glyph.Data = {
           36040000424D3604000000000000360000002800000010000000100000000100
@@ -959,10 +958,10 @@ object FrmView: TFrmView
       end
     end
     object Image1: TImage
-      Left = 22
-      Height = 22
-      Top = 7
-      Width = 22
+      Left = 26
+      Height = 23
+      Top = 6
+      Width = 20
       Picture.Data = {
         1754506F727461626C654E6574776F726B477261706869638A03000089504E47
         0D0A1A0A0000000D49484452000000100000001008060000001FF3FF61000000
@@ -999,12 +998,12 @@ object FrmView: TFrmView
   end
   object GroupBox1: TGroupBox
     Left = 0
-    Height = 38
-    Top = 219
-    Width = 926
+    Height = 51
+    Top = 281
+    Width = 1078
     Align = alTop
-    ClientHeight = 16
-    ClientWidth = 922
+    ClientHeight = 29
+    ClientWidth = 1074
     Color = 13828095
     Font.Color = clBlue
     Font.Height = -14
@@ -1031,16 +1030,16 @@ object FrmView: TFrmView
   end
   object PanelData: TPanel
     Left = 0
-    Height = 42
-    Top = 257
-    Width = 926
+    Height = 43
+    Top = 332
+    Width = 1078
     Align = alTop
     BevelOuter = bvNone
-    ClientHeight = 42
-    ClientWidth = 926
+    ClientHeight = 43
+    ClientWidth = 1078
     Color = 16774388
     Font.Color = clWindowText
-    Font.Height = -18
+    Font.Height = -17
     Font.Name = 'Tahoma'
     ParentBackground = False
     ParentColor = False
@@ -1048,11 +1047,11 @@ object FrmView: TFrmView
     TabOrder = 6
     object SpeedButton11: TSpeedButton
       Left = 8
-      Height = 42
+      Height = 43
       Top = 0
       Width = 40
       Font.Color = clWindowText
-      Font.Height = -18
+      Font.Height = -17
       Font.Name = 'Tahoma'
       Glyph.Data = {
         36100000424D3610000000000000360000002800000020000000200000000100
@@ -1203,15 +1202,15 @@ object FrmView: TFrmView
     end
     object PanelMostrData: TPanel
       Left = 140
-      Height = 30
-      Top = 4
+      Height = 31
+      Top = 3
       Width = 490
       BevelOuter = bvNone
-      ClientHeight = 30
+      ClientHeight = 31
       ClientWidth = 490
       Color = 16774388
       Font.Color = clWindowText
-      Font.Height = -18
+      Font.Height = -17
       Font.Name = 'Tahoma'
       ParentColor = False
       ParentFont = False
@@ -1231,14 +1230,14 @@ object FrmView: TFrmView
       end
       object DateTimePicker1: TDateTimePicker
         Left = 8
-        Height = 24
+        Height = 22
         Top = 1
         Width = 95
         CenturyFrom = 1941
         MaxDate = 2958465
         MinDate = -53780
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -12
         Font.Name = 'Tahoma'
         ParentFont = False
         TabOrder = 0
@@ -1256,15 +1255,15 @@ object FrmView: TFrmView
         MonthNames = 'Long'
       end
       object DateTimePicker2: TDateTimePicker
-        Left = 184
-        Height = 24
+        Left = 183
+        Height = 22
         Top = 0
         Width = 95
         CenturyFrom = 1941
         MaxDate = 2958465
         MinDate = -53780
         Font.Color = clWindowText
-        Font.Height = -13
+        Font.Height = -12
         Font.Name = 'Tahoma'
         ParentFont = False
         TabOrder = 1
@@ -1285,13 +1284,13 @@ object FrmView: TFrmView
   end
   object Panel8: TPanel
     Left = 0
-    Height = 45
-    Top = 174
-    Width = 926
+    Height = 50
+    Top = 231
+    Width = 1078
     Align = alTop
     BevelOuter = bvNone
-    ClientHeight = 45
-    ClientWidth = 926
+    ClientHeight = 50
+    ClientWidth = 1078
     Color = 14939380
     Font.Color = 14286847
     Font.Height = -19
@@ -1327,9 +1326,9 @@ object FrmView: TFrmView
     end
     object SpeedButton1: TSpeedButton
       Left = 5
-      Height = 42
+      Height = 43
       Top = 0
-      Width = 42
+      Width = 43
       Font.Color = 14286847
       Font.Height = -19
       Font.Name = 'Tahoma'
@@ -1468,76 +1467,10 @@ object FrmView: TFrmView
       OnClick = SpeedButton1Click
       ParentFont = False
     end
-    object SpeedButton9: TSpeedButton
-      Left = 684
-      Height = 38
-      Top = 2
-      Width = 122
-      Caption = 'Habilitar'
-      Font.Color = clNavy
-      Font.Height = -14
-      Font.Name = 'Tahoma'
-      Font.Style = [fsBold]
-      Glyph.Data = {
-        36040000424D3604000000000000360000002800000010000000100000000100
-        2000000000000004000064000000640000000000000000000000000000000000
-        00000000000047464500545352053A393910333332121F1F1E22060606283130
-        2F193433320F4F4E4D044B4A4900131212000303030006060600000000000000
-        000000000000514F4E007E7D7C00424141095654537FA7A5A3FF9B9997FF3231
-        307F3A3A3909706F6E0052504F00141413000303030006060600000000000000
-        00000302020058565500878584008A88870075737281DAD9D8FFC0BFBDFF3A38
-        3786777674027574730056545300151514000303030006060600000000000000
-        00000A0A0A005C5A59008A8887008D8C8A0078757481DAD9D8FFC0BFBDFF3A38
-        3786797776027776750057565500181717000303030006060600000000000D0C
-        0C002827260066646300908E8D00949392007D7A7881DAD9D8FFC0BFBDFF3A38
-        3786807E7D027D7C7B005E5C5B0027252500100F0F0003030300222120004D4B
-        4A00666463008A878600ABA9A800ADACAA0089878581DAD9D8FFC0BFBDFF3B39
-        388794929102908E8D0072706F0043414100373535001817170052504E00706E
-        6D00868483009B9A9800B3B2B100B5B3B2015C59578DDAD9D8FFC0BFBDFF403E
-        3D944F4F4E09969493007C7A7A005A585800545252003B393900706E6D008583
-        820097959400A6A5A300B7B6B5015755544F9E9C9AF8E5E5E4FFC1C0BFFF9895
-        94F82523235C72717008858382006D6B6A006765640055535300868483009694
-        9300A3A2A100AFAEAD015C5B594F9D9A99F8DEDEDDFFEFEFEEFFCFCECDFFBEBC
-        BCFF999695F72523235B686767087B7A790075747300686766009B999700A6A4
-        A300B0AEAD015C5A584F9C9A98F7D0CFCEFFF7F7F7FFECECECFFD7D6D6FFC6C4
-        C4FFBDBBBBFF989594F72423225A67666608868483007E7C7B009B999800A5A3
-        A2015A58574F9D9A98F7C9C8C7FFE9E9E9FFFBFBFBFFEBEAEAFFDCDBDBFFCDCC
-        CCFFC2C1C0FFBDBBBAFF989595F62423225967656508838181009B9998005A58
-        574E9D9A99F7C5C4C3FFDEDDDDFFF7F7F7FFF9F9F9FFEAEAEAFFDEDEDEFFD2D1
-        D1FFC8C7C6FFC1BFBFFFBCBBBAFF989594F62423225761606007898685409D9A
-        98F7C3C2C1FFD6D5D5FFEDEDEDFFFDFDFDFFF5F5F5FFEAEAEAFFE0E0E0FFD6D5
-        D5FFCCCBCBFFC5C4C3FFC0BFBEFFBCBBBAFF989594F5464444408E8B8953A9A7
-        A5FAB5B3B1FFB9B6B5FFBCBAB9FFBDBBBAFFBBB9B8FFBAB8B7FFB8B6B5FFB7B5
-        B4FFB5B3B2FFB4B2B1FFB3B1B0FFB2B0AFFFA6A3A2F98582814CA4A2A100B1AF
-        AE00BCBAB900C2C1C000C6C4C300CBCAC900D1D0CF00D4D3D200D3D2D100CDCC
-        CC00C2C0C000B4B2B100ABAAA900A5A3A3009E9C9B0095939200ABA9A800B6B4
-        B300BEBDBC00C3C2C100C6C4C300CCCBCA00D2D1D000D3D2D100D1D0CF00CCCB
-        CB00C5C4C300B7B6B500B0AEAD00ABA9A800A5A3A2009E9C9B00
-      }
-      OnClick = SpeedButton9Click
-      ParentFont = False
-    end
-    object SpeedButton10: TSpeedButton
-      Left = 810
-      Height = 34
-      Top = 4
-      Width = 85
-      Caption = 'Desabilitar'
-      Color = 15323601
-      Enabled = False
-      Flat = True
-      Font.Color = clRed
-      Font.Height = -14
-      Font.Name = 'Tahoma'
-      Font.Style = [fsBold]
-      Transparent = False
-      OnClick = SpeedButton10Click
-      ParentFont = False
-    end
     object DBEdit1: TDBEdit
       Left = 470
       Height = 31
-      Top = 4
+      Top = 3
       Width = 120
       DataField = 'COD_USUARIO'
       DataSource = Dtscru
@@ -1549,31 +1482,109 @@ object FrmView: TFrmView
       TabOrder = 0
       Visible = False
     end
+    object Panel10: TPanel
+      Left = 828
+      Height = 50
+      Top = 0
+      Width = 250
+      Align = alRight
+      BevelOuter = bvNone
+      Caption = 'Panel10'
+      ClientHeight = 50
+      ClientWidth = 250
+      TabOrder = 1
+      object SpeedButton10: TSpeedButton
+        Left = 138
+        Height = 33
+        Top = 8
+        Width = 85
+        Caption = 'Desabilitar'
+        Color = 15323601
+        Enabled = False
+        Flat = True
+        Font.Color = clRed
+        Font.Height = -14
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        Transparent = False
+        OnClick = SpeedButton10Click
+        ParentFont = False
+      end
+      object SpeedButton9: TSpeedButton
+        Left = 6
+        Height = 35
+        Top = 8
+        Width = 127
+        Caption = 'Habilitar'
+        Font.Color = clNavy
+        Font.Height = -14
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        Glyph.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000064000000640000000000000000000000000000000000
+          00000000000047464500545352053A393910333332121F1F1E22060606283130
+          2F193433320F4F4E4D044B4A4900131212000303030006060600000000000000
+          000000000000514F4E007E7D7C00424141095654537FA7A5A3FF9B9997FF3231
+          307F3A3A3909706F6E0052504F00141413000303030006060600000000000000
+          00000302020058565500878584008A88870075737281DAD9D8FFC0BFBDFF3A38
+          3786777674027574730056545300151514000303030006060600000000000000
+          00000A0A0A005C5A59008A8887008D8C8A0078757481DAD9D8FFC0BFBDFF3A38
+          3786797776027776750057565500181717000303030006060600000000000D0C
+          0C002827260066646300908E8D00949392007D7A7881DAD9D8FFC0BFBDFF3A38
+          3786807E7D027D7C7B005E5C5B0027252500100F0F0003030300222120004D4B
+          4A00666463008A878600ABA9A800ADACAA0089878581DAD9D8FFC0BFBDFF3B39
+          388794929102908E8D0072706F0043414100373535001817170052504E00706E
+          6D00868483009B9A9800B3B2B100B5B3B2015C59578DDAD9D8FFC0BFBDFF403E
+          3D944F4F4E09969493007C7A7A005A585800545252003B393900706E6D008583
+          820097959400A6A5A300B7B6B5015755544F9E9C9AF8E5E5E4FFC1C0BFFF9895
+          94F82523235C72717008858382006D6B6A006765640055535300868483009694
+          9300A3A2A100AFAEAD015C5B594F9D9A99F8DEDEDDFFEFEFEEFFCFCECDFFBEBC
+          BCFF999695F72523235B686767087B7A790075747300686766009B999700A6A4
+          A300B0AEAD015C5A584F9C9A98F7D0CFCEFFF7F7F7FFECECECFFD7D6D6FFC6C4
+          C4FFBDBBBBFF989594F72423225A67666608868483007E7C7B009B999800A5A3
+          A2015A58574F9D9A98F7C9C8C7FFE9E9E9FFFBFBFBFFEBEAEAFFDCDBDBFFCDCC
+          CCFFC2C1C0FFBDBBBAFF989595F62423225967656508838181009B9998005A58
+          574E9D9A99F7C5C4C3FFDEDDDDFFF7F7F7FFF9F9F9FFEAEAEAFFDEDEDEFFD2D1
+          D1FFC8C7C6FFC1BFBFFFBCBBBAFF989594F62423225761606007898685409D9A
+          98F7C3C2C1FFD6D5D5FFEDEDEDFFFDFDFDFFF5F5F5FFEAEAEAFFE0E0E0FFD6D5
+          D5FFCCCBCBFFC5C4C3FFC0BFBEFFBCBBBAFF989594F5464444408E8B8953A9A7
+          A5FAB5B3B1FFB9B6B5FFBCBAB9FFBDBBBAFFBBB9B8FFBAB8B7FFB8B6B5FFB7B5
+          B4FFB5B3B2FFB4B2B1FFB3B1B0FFB2B0AFFFA6A3A2F98582814CA4A2A100B1AF
+          AE00BCBAB900C2C1C000C6C4C300CBCAC900D1D0CF00D4D3D200D3D2D100CDCC
+          CC00C2C0C000B4B2B100ABAAA900A5A3A3009E9C9B0095939200ABA9A800B6B4
+          B300BEBDBC00C3C2C100C6C4C300CCCBCA00D2D1D000D3D2D100D1D0CF00CCCB
+          CB00C5C4C300B7B6B500B0AEAD00ABA9A800A5A3A2009E9C9B00
+        }
+        OnClick = SpeedButton9Click
+        ParentFont = False
+      end
+    end
   end
   object Panel12: TPanel
     Left = 0
     Height = 49
-    Top = 80
-    Width = 926
+    Top = 137
+    Width = 1078
     Align = alTop
     BevelOuter = bvNone
     ClientHeight = 49
-    ClientWidth = 926
+    ClientWidth = 1078
     Color = 15531993
     Font.Color = clWindowText
-    Font.Height = -18
+    Font.Height = -17
     Font.Name = 'Tahoma'
     ParentBackground = False
     ParentColor = False
     ParentFont = False
     TabOrder = 8
     object SpeedButton6: TSpeedButton
-      Left = 6
+      Left = 7
       Height = 46
-      Top = 4
-      Width = 42
+      Top = 3
+      Width = 43
       Font.Color = clWindowText
-      Font.Height = -18
+      Font.Height = -17
       Font.Name = 'Tahoma'
       Glyph.Data = {
         36100000424D3610000000000000360000002800000020000000200000000100
@@ -1727,7 +1738,7 @@ object FrmView: TFrmView
       Left = 161
       Height = 16
       Top = 12
-      Width = 501
+      Width = 502
       AutoSize = False
       DataField = 'TITULOASSUN'
       DataSource = Dtscra
@@ -1736,98 +1747,109 @@ object FrmView: TFrmView
       Font.Name = 'Tahoma'
       ParentFont = False
     end
-    object habilitar02: TSpeedButton
-      Left = 684
-      Height = 34
-      Top = 4
-      Width = 122
-      Caption = 'Habilitar'
-      Font.Color = clNavy
-      Font.Height = -14
-      Font.Name = 'Tahoma'
-      Font.Style = [fsBold]
-      Glyph.Data = {
-        36040000424D3604000000000000360000002800000010000000100000000100
-        2000000000000004000064000000640000000000000000000000000000000000
-        00000000000047464500545352053A393910333332121F1F1E22060606283130
-        2F193433320F4F4E4D044B4A4900131212000303030006060600000000000000
-        000000000000514F4E007E7D7C00424141095654537FA7A5A3FF9B9997FF3231
-        307F3A3A3909706F6E0052504F00141413000303030006060600000000000000
-        00000302020058565500878584008A88870075737281DAD9D8FFC0BFBDFF3A38
-        3786777674027574730056545300151514000303030006060600000000000000
-        00000A0A0A005C5A59008A8887008D8C8A0078757481DAD9D8FFC0BFBDFF3A38
-        3786797776027776750057565500181717000303030006060600000000000D0C
-        0C002827260066646300908E8D00949392007D7A7881DAD9D8FFC0BFBDFF3A38
-        3786807E7D027D7C7B005E5C5B0027252500100F0F0003030300222120004D4B
-        4A00666463008A878600ABA9A800ADACAA0089878581DAD9D8FFC0BFBDFF3B39
-        388794929102908E8D0072706F0043414100373535001817170052504E00706E
-        6D00868483009B9A9800B3B2B100B5B3B2015C59578DDAD9D8FFC0BFBDFF403E
-        3D944F4F4E09969493007C7A7A005A585800545252003B393900706E6D008583
-        820097959400A6A5A300B7B6B5015755544F9E9C9AF8E5E5E4FFC1C0BFFF9895
-        94F82523235C72717008858382006D6B6A006765640055535300868483009694
-        9300A3A2A100AFAEAD015C5B594F9D9A99F8DEDEDDFFEFEFEEFFCFCECDFFBEBC
-        BCFF999695F72523235B686767087B7A790075747300686766009B999700A6A4
-        A300B0AEAD015C5A584F9C9A98F7D0CFCEFFF7F7F7FFECECECFFD7D6D6FFC6C4
-        C4FFBDBBBBFF989594F72423225A67666608868483007E7C7B009B999800A5A3
-        A2015A58574F9D9A98F7C9C8C7FFE9E9E9FFFBFBFBFFEBEAEAFFDCDBDBFFCDCC
-        CCFFC2C1C0FFBDBBBAFF989595F62423225967656508838181009B9998005A58
-        574E9D9A99F7C5C4C3FFDEDDDDFFF7F7F7FFF9F9F9FFEAEAEAFFDEDEDEFFD2D1
-        D1FFC8C7C6FFC1BFBFFFBCBBBAFF989594F62423225761606007898685409D9A
-        98F7C3C2C1FFD6D5D5FFEDEDEDFFFDFDFDFFF5F5F5FFEAEAEAFFE0E0E0FFD6D5
-        D5FFCCCBCBFFC5C4C3FFC0BFBEFFBCBBBAFF989594F5464444408E8B8953A9A7
-        A5FAB5B3B1FFB9B6B5FFBCBAB9FFBDBBBAFFBBB9B8FFBAB8B7FFB8B6B5FFB7B5
-        B4FFB5B3B2FFB4B2B1FFB3B1B0FFB2B0AFFFA6A3A2F98582814CA4A2A100B1AF
-        AE00BCBAB900C2C1C000C6C4C300CBCAC900D1D0CF00D4D3D200D3D2D100CDCC
-        CC00C2C0C000B4B2B100ABAAA900A5A3A3009E9C9B0095939200ABA9A800B6B4
-        B300BEBDBC00C3C2C100C6C4C300CCCBCA00D2D1D000D3D2D100D1D0CF00CCCB
-        CB00C5C4C300B7B6B500B0AEAD00ABA9A800A5A3A2009E9C9B00
-      }
-      Transparent = False
-      OnClick = habilitar02Click
-      ParentFont = False
-    end
-    object desabilitar02: TSpeedButton
-      Left = 806
-      Height = 34
-      Top = 4
-      Width = 85
-      Caption = 'Desabilitar'
-      Color = 15323601
-      Enabled = False
-      Flat = True
-      Font.Color = clRed
-      Font.Height = -14
-      Font.Name = 'Tahoma'
-      Font.Style = [fsBold]
-      Transparent = False
-      OnClick = desabilitar02Click
-      ParentFont = False
-    end
     object DBEdit2: TDBEdit
-      Left = 328
-      Height = 30
+      Left = 327
+      Height = 29
       Top = 10
       Width = 68
       DataField = 'CODIGO'
       DataSource = Dtscra
       Font.Color = clWindowText
-      Font.Height = -18
+      Font.Height = -17
       Font.Name = 'Tahoma'
       MaxLength = 0
       ParentFont = False
       TabOrder = 0
       Visible = False
     end
+    object Panel7: TPanel
+      Left = 797
+      Height = 49
+      Top = 0
+      Width = 281
+      Align = alRight
+      BevelOuter = bvNone
+      ClientHeight = 49
+      ClientWidth = 281
+      TabOrder = 1
+      object desabilitar02: TSpeedButton
+        Left = 169
+        Height = 34
+        Top = 9
+        Width = 85
+        Caption = 'Desabilitar'
+        Color = 15323601
+        Enabled = False
+        Flat = True
+        Font.Color = clRed
+        Font.Height = -14
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        Transparent = False
+        OnClick = desabilitar02Click
+        ParentFont = False
+      end
+      object habilitar02: TSpeedButton
+        Left = 36
+        Height = 34
+        Top = 9
+        Width = 127
+        Caption = 'Habilitar'
+        Font.Color = clNavy
+        Font.Height = -14
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        Glyph.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000064000000640000000000000000000000000000000000
+          00000000000047464500545352053A393910333332121F1F1E22060606283130
+          2F193433320F4F4E4D044B4A4900131212000303030006060600000000000000
+          000000000000514F4E007E7D7C00424141095654537FA7A5A3FF9B9997FF3231
+          307F3A3A3909706F6E0052504F00141413000303030006060600000000000000
+          00000302020058565500878584008A88870075737281DAD9D8FFC0BFBDFF3A38
+          3786777674027574730056545300151514000303030006060600000000000000
+          00000A0A0A005C5A59008A8887008D8C8A0078757481DAD9D8FFC0BFBDFF3A38
+          3786797776027776750057565500181717000303030006060600000000000D0C
+          0C002827260066646300908E8D00949392007D7A7881DAD9D8FFC0BFBDFF3A38
+          3786807E7D027D7C7B005E5C5B0027252500100F0F0003030300222120004D4B
+          4A00666463008A878600ABA9A800ADACAA0089878581DAD9D8FFC0BFBDFF3B39
+          388794929102908E8D0072706F0043414100373535001817170052504E00706E
+          6D00868483009B9A9800B3B2B100B5B3B2015C59578DDAD9D8FFC0BFBDFF403E
+          3D944F4F4E09969493007C7A7A005A585800545252003B393900706E6D008583
+          820097959400A6A5A300B7B6B5015755544F9E9C9AF8E5E5E4FFC1C0BFFF9895
+          94F82523235C72717008858382006D6B6A006765640055535300868483009694
+          9300A3A2A100AFAEAD015C5B594F9D9A99F8DEDEDDFFEFEFEEFFCFCECDFFBEBC
+          BCFF999695F72523235B686767087B7A790075747300686766009B999700A6A4
+          A300B0AEAD015C5A584F9C9A98F7D0CFCEFFF7F7F7FFECECECFFD7D6D6FFC6C4
+          C4FFBDBBBBFF989594F72423225A67666608868483007E7C7B009B999800A5A3
+          A2015A58574F9D9A98F7C9C8C7FFE9E9E9FFFBFBFBFFEBEAEAFFDCDBDBFFCDCC
+          CCFFC2C1C0FFBDBBBAFF989595F62423225967656508838181009B9998005A58
+          574E9D9A99F7C5C4C3FFDEDDDDFFF7F7F7FFF9F9F9FFEAEAEAFFDEDEDEFFD2D1
+          D1FFC8C7C6FFC1BFBFFFBCBBBAFF989594F62423225761606007898685409D9A
+          98F7C3C2C1FFD6D5D5FFEDEDEDFFFDFDFDFFF5F5F5FFEAEAEAFFE0E0E0FFD6D5
+          D5FFCCCBCBFFC5C4C3FFC0BFBEFFBCBBBAFF989594F5464444408E8B8953A9A7
+          A5FAB5B3B1FFB9B6B5FFBCBAB9FFBDBBBAFFBBB9B8FFBAB8B7FFB8B6B5FFB7B5
+          B4FFB5B3B2FFB4B2B1FFB3B1B0FFB2B0AFFFA6A3A2F98582814CA4A2A100B1AF
+          AE00BCBAB900C2C1C000C6C4C300CBCAC900D1D0CF00D4D3D200D3D2D100CDCC
+          CC00C2C0C000B4B2B100ABAAA900A5A3A3009E9C9B0095939200ABA9A800B6B4
+          B300BEBDBC00C3C2C100C6C4C300CCCBCA00D2D1D000D3D2D100D1D0CF00CCCB
+          CB00C5C4C300B7B6B500B0AEAD00ABA9A800A5A3A2009E9C9B00
+        }
+        Transparent = False
+        OnClick = habilitar02Click
+        ParentFont = False
+      end
+    end
   end
   object Panel17: TPanel
     Left = 0
     Height = 46
-    Top = 34
-    Width = 926
+    Top = 91
+    Width = 1078
     Align = alTop
     BevelOuter = bvNone
     ClientHeight = 46
-    ClientWidth = 926
+    ClientWidth = 1078
     Color = 16772810
     Font.Color = clWindowText
     Font.Height = -19
@@ -1838,9 +1860,9 @@ object FrmView: TFrmView
     TabOrder = 9
     object SpeedButton8: TSpeedButton
       Left = 5
-      Height = 42
+      Height = 43
       Top = 2
-      Width = 42
+      Width = 43
       Font.Color = clWindowText
       Font.Height = -19
       Font.Name = 'Tahoma'
@@ -1992,10 +2014,10 @@ object FrmView: TFrmView
       ParentFont = False
     end
     object DBText3: TDBText
-      Left = 208
+      Left = 207
       Height = 16
       Top = 10
-      Width = 452
+      Width = 453
       AutoSize = False
       DataField = 'COD_USUARIO'
       DataSource = DtsrcCod
@@ -2004,76 +2026,10 @@ object FrmView: TFrmView
       Font.Name = 'Tahoma'
       ParentFont = False
     end
-    object habilitar00: TSpeedButton
-      Left = 684
-      Height = 35
-      Top = 2
-      Width = 126
-      Caption = 'Habilitar'
-      Font.Color = clNavy
-      Font.Height = -14
-      Font.Name = 'Tahoma'
-      Font.Style = [fsBold]
-      Glyph.Data = {
-        36040000424D3604000000000000360000002800000010000000100000000100
-        2000000000000004000064000000640000000000000000000000000000000000
-        00000000000047464500545352053A393910333332121F1F1E22060606283130
-        2F193433320F4F4E4D044B4A4900131212000303030006060600000000000000
-        000000000000514F4E007E7D7C00424141095654537FA7A5A3FF9B9997FF3231
-        307F3A3A3909706F6E0052504F00141413000303030006060600000000000000
-        00000302020058565500878584008A88870075737281DAD9D8FFC0BFBDFF3A38
-        3786777674027574730056545300151514000303030006060600000000000000
-        00000A0A0A005C5A59008A8887008D8C8A0078757481DAD9D8FFC0BFBDFF3A38
-        3786797776027776750057565500181717000303030006060600000000000D0C
-        0C002827260066646300908E8D00949392007D7A7881DAD9D8FFC0BFBDFF3A38
-        3786807E7D027D7C7B005E5C5B0027252500100F0F0003030300222120004D4B
-        4A00666463008A878600ABA9A800ADACAA0089878581DAD9D8FFC0BFBDFF3B39
-        388794929102908E8D0072706F0043414100373535001817170052504E00706E
-        6D00868483009B9A9800B3B2B100B5B3B2015C59578DDAD9D8FFC0BFBDFF403E
-        3D944F4F4E09969493007C7A7A005A585800545252003B393900706E6D008583
-        820097959400A6A5A300B7B6B5015755544F9E9C9AF8E5E5E4FFC1C0BFFF9895
-        94F82523235C72717008858382006D6B6A006765640055535300868483009694
-        9300A3A2A100AFAEAD015C5B594F9D9A99F8DEDEDDFFEFEFEEFFCFCECDFFBEBC
-        BCFF999695F72523235B686767087B7A790075747300686766009B999700A6A4
-        A300B0AEAD015C5A584F9C9A98F7D0CFCEFFF7F7F7FFECECECFFD7D6D6FFC6C4
-        C4FFBDBBBBFF989594F72423225A67666608868483007E7C7B009B999800A5A3
-        A2015A58574F9D9A98F7C9C8C7FFE9E9E9FFFBFBFBFFEBEAEAFFDCDBDBFFCDCC
-        CCFFC2C1C0FFBDBBBAFF989595F62423225967656508838181009B9998005A58
-        574E9D9A99F7C5C4C3FFDEDDDDFFF7F7F7FFF9F9F9FFEAEAEAFFDEDEDEFFD2D1
-        D1FFC8C7C6FFC1BFBFFFBCBBBAFF989594F62423225761606007898685409D9A
-        98F7C3C2C1FFD6D5D5FFEDEDEDFFFDFDFDFFF5F5F5FFEAEAEAFFE0E0E0FFD6D5
-        D5FFCCCBCBFFC5C4C3FFC0BFBEFFBCBBBAFF989594F5464444408E8B8953A9A7
-        A5FAB5B3B1FFB9B6B5FFBCBAB9FFBDBBBAFFBBB9B8FFBAB8B7FFB8B6B5FFB7B5
-        B4FFB5B3B2FFB4B2B1FFB3B1B0FFB2B0AFFFA6A3A2F98582814CA4A2A100B1AF
-        AE00BCBAB900C2C1C000C6C4C300CBCAC900D1D0CF00D4D3D200D3D2D100CDCC
-        CC00C2C0C000B4B2B100ABAAA900A5A3A3009E9C9B0095939200ABA9A800B6B4
-        B300BEBDBC00C3C2C100C6C4C300CCCBCA00D2D1D000D3D2D100D1D0CF00CCCB
-        CB00C5C4C300B7B6B500B0AEAD00ABA9A800A5A3A2009E9C9B00
-      }
-      OnClick = habilitar00Click
-      ParentFont = False
-    end
-    object desabilitar00: TSpeedButton
-      Left = 806
-      Height = 36
-      Top = 2
-      Width = 85
-      Caption = 'Desabilitar'
-      Color = 15323601
-      Enabled = False
-      Flat = True
-      Font.Color = clRed
-      Font.Height = -14
-      Font.Name = 'Tahoma'
-      Font.Style = [fsBold]
-      Transparent = False
-      OnClick = desabilitar00Click
-      ParentFont = False
-    end
     object DBEdit3: TDBEdit
-      Left = 381
+      Left = 382
       Height = 31
-      Top = 6
+      Top = 7
       Width = 61
       DataField = 'COD_USUARIO'
       DataSource = DtsrcCod
@@ -2085,18 +2041,95 @@ object FrmView: TFrmView
       TabOrder = 0
       Visible = False
     end
+    object Panel4: TPanel
+      Left = 797
+      Height = 46
+      Top = 0
+      Width = 281
+      Align = alRight
+      BevelOuter = bvNone
+      ClientHeight = 46
+      ClientWidth = 281
+      TabOrder = 1
+      object desabilitar00: TSpeedButton
+        Left = 169
+        Height = 34
+        Top = 6
+        Width = 85
+        Caption = 'Desabilitar'
+        Color = 15323601
+        Enabled = False
+        Flat = True
+        Font.Color = clRed
+        Font.Height = -14
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        Transparent = False
+        OnClick = desabilitar00Click
+        ParentFont = False
+      end
+      object habilitar00: TSpeedButton
+        Left = 36
+        Height = 35
+        Top = 6
+        Width = 127
+        Caption = 'Habilitar'
+        Font.Color = clNavy
+        Font.Height = -14
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        Glyph.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000064000000640000000000000000000000000000000000
+          00000000000047464500545352053A393910333332121F1F1E22060606283130
+          2F193433320F4F4E4D044B4A4900131212000303030006060600000000000000
+          000000000000514F4E007E7D7C00424141095654537FA7A5A3FF9B9997FF3231
+          307F3A3A3909706F6E0052504F00141413000303030006060600000000000000
+          00000302020058565500878584008A88870075737281DAD9D8FFC0BFBDFF3A38
+          3786777674027574730056545300151514000303030006060600000000000000
+          00000A0A0A005C5A59008A8887008D8C8A0078757481DAD9D8FFC0BFBDFF3A38
+          3786797776027776750057565500181717000303030006060600000000000D0C
+          0C002827260066646300908E8D00949392007D7A7881DAD9D8FFC0BFBDFF3A38
+          3786807E7D027D7C7B005E5C5B0027252500100F0F0003030300222120004D4B
+          4A00666463008A878600ABA9A800ADACAA0089878581DAD9D8FFC0BFBDFF3B39
+          388794929102908E8D0072706F0043414100373535001817170052504E00706E
+          6D00868483009B9A9800B3B2B100B5B3B2015C59578DDAD9D8FFC0BFBDFF403E
+          3D944F4F4E09969493007C7A7A005A585800545252003B393900706E6D008583
+          820097959400A6A5A300B7B6B5015755544F9E9C9AF8E5E5E4FFC1C0BFFF9895
+          94F82523235C72717008858382006D6B6A006765640055535300868483009694
+          9300A3A2A100AFAEAD015C5B594F9D9A99F8DEDEDDFFEFEFEEFFCFCECDFFBEBC
+          BCFF999695F72523235B686767087B7A790075747300686766009B999700A6A4
+          A300B0AEAD015C5A584F9C9A98F7D0CFCEFFF7F7F7FFECECECFFD7D6D6FFC6C4
+          C4FFBDBBBBFF989594F72423225A67666608868483007E7C7B009B999800A5A3
+          A2015A58574F9D9A98F7C9C8C7FFE9E9E9FFFBFBFBFFEBEAEAFFDCDBDBFFCDCC
+          CCFFC2C1C0FFBDBBBAFF989595F62423225967656508838181009B9998005A58
+          574E9D9A99F7C5C4C3FFDEDDDDFFF7F7F7FFF9F9F9FFEAEAEAFFDEDEDEFFD2D1
+          D1FFC8C7C6FFC1BFBFFFBCBBBAFF989594F62423225761606007898685409D9A
+          98F7C3C2C1FFD6D5D5FFEDEDEDFFFDFDFDFFF5F5F5FFEAEAEAFFE0E0E0FFD6D5
+          D5FFCCCBCBFFC5C4C3FFC0BFBEFFBCBBBAFF989594F5464444408E8B8953A9A7
+          A5FAB5B3B1FFB9B6B5FFBCBAB9FFBDBBBAFFBBB9B8FFBAB8B7FFB8B6B5FFB7B5
+          B4FFB5B3B2FFB4B2B1FFB3B1B0FFB2B0AFFFA6A3A2F98582814CA4A2A100B1AF
+          AE00BCBAB900C2C1C000C6C4C300CBCAC900D1D0CF00D4D3D200D3D2D100CDCC
+          CC00C2C0C000B4B2B100ABAAA900A5A3A3009E9C9B0095939200ABA9A800B6B4
+          B300BEBDBC00C3C2C100C6C4C300CCCBCA00D2D1D000D3D2D100D1D0CF00CCCB
+          CB00C5C4C300B7B6B500B0AEAD00ABA9A800A5A3A2009E9C9B00
+        }
+        OnClick = habilitar00Click
+        ParentFont = False
+      end
+    end
   end
   object DBMemo1: TDBMemo
     Left = 0
     Height = 76
-    Top = 426
-    Width = 926
+    Top = 501
+    Width = 1078
     Align = alTop
     Color = 15395562
     DataField = 'DESCRICAO'
     DataSource = Dtsrc
     Font.Color = clWindowText
-    Font.Height = -14
+    Font.Height = -16
     Font.Name = 'Tahoma'
     ParentFont = False
     ScrollBars = ssVertical
@@ -2104,16 +2137,16 @@ object FrmView: TFrmView
   end
   object DBGrid1: TDBGrid
     Left = 0
-    Height = 132
-    Top = 502
-    Width = 926
+    Height = 151
+    Top = 577
+    Width = 1078
     Align = alClient
     AlternateColor = 14083559
     BorderStyle = bsNone
     Color = clWindow
     Columns = <>
     DataSource = Dtsrc
-    DefaultRowHeight = 28
+    DefaultRowHeight = 27
     FixedColor = clWhite
     Font.Color = clBlue
     Font.Height = -14
@@ -2126,27 +2159,27 @@ object FrmView: TFrmView
   object Panel3: TPanel
     Left = 0
     Height = 45
-    Top = 129
-    Width = 926
+    Top = 186
+    Width = 1078
     Align = alTop
     BevelOuter = bvNone
     ClientHeight = 45
-    ClientWidth = 926
+    ClientWidth = 1078
     Color = 14083559
     Font.Color = clWindowText
-    Font.Height = -18
+    Font.Height = -17
     Font.Name = 'Tahoma'
     ParentBackground = False
     ParentColor = False
     ParentFont = False
     TabOrder = 12
     object SpeedButton7: TSpeedButton
-      Left = 6
+      Left = 7
       Height = 45
-      Top = 4
-      Width = 42
+      Top = 3
+      Width = 43
       Font.Color = clWindowText
-      Font.Height = -18
+      Font.Height = -17
       Font.Name = 'Tahoma'
       Glyph.Data = {
         36100000424D3610000000000000360000002800000020000000200000000100
@@ -2309,90 +2342,101 @@ object FrmView: TFrmView
       ParentFont = False
     end
     object DBEdit4: TDBEdit
-      Left = 570
-      Height = 30
+      Left = 571
+      Height = 29
       Top = 8
       Width = 100
       DataField = 'CODIGO'
       DataSource = DtsrcAutor
       Font.Color = clWindowText
-      Font.Height = -18
+      Font.Height = -17
       Font.Name = 'Tahoma'
       MaxLength = 0
       ParentFont = False
       TabOrder = 0
       Visible = False
     end
-    object habilitar03: TSpeedButton
-      Left = 684
-      Height = 34
-      Top = 5
-      Width = 125
-      Caption = 'Habilitar'
-      Font.Color = clNavy
-      Font.Height = -14
-      Font.Name = 'Tahoma'
-      Font.Style = [fsBold]
-      Glyph.Data = {
-        36040000424D3604000000000000360000002800000010000000100000000100
-        2000000000000004000064000000640000000000000000000000000000000000
-        00000000000047464500545352053A393910333332121F1F1E22060606283130
-        2F193433320F4F4E4D044B4A4900131212000303030006060600000000000000
-        000000000000514F4E007E7D7C00424141095654537FA7A5A3FF9B9997FF3231
-        307F3A3A3909706F6E0052504F00141413000303030006060600000000000000
-        00000302020058565500878584008A88870075737281DAD9D8FFC0BFBDFF3A38
-        3786777674027574730056545300151514000303030006060600000000000000
-        00000A0A0A005C5A59008A8887008D8C8A0078757481DAD9D8FFC0BFBDFF3A38
-        3786797776027776750057565500181717000303030006060600000000000D0C
-        0C002827260066646300908E8D00949392007D7A7881DAD9D8FFC0BFBDFF3A38
-        3786807E7D027D7C7B005E5C5B0027252500100F0F0003030300222120004D4B
-        4A00666463008A878600ABA9A800ADACAA0089878581DAD9D8FFC0BFBDFF3B39
-        388794929102908E8D0072706F0043414100373535001817170052504E00706E
-        6D00868483009B9A9800B3B2B100B5B3B2015C59578DDAD9D8FFC0BFBDFF403E
-        3D944F4F4E09969493007C7A7A005A585800545252003B393900706E6D008583
-        820097959400A6A5A300B7B6B5015755544F9E9C9AF8E5E5E4FFC1C0BFFF9895
-        94F82523235C72717008858382006D6B6A006765640055535300868483009694
-        9300A3A2A100AFAEAD015C5B594F9D9A99F8DEDEDDFFEFEFEEFFCFCECDFFBEBC
-        BCFF999695F72523235B686767087B7A790075747300686766009B999700A6A4
-        A300B0AEAD015C5A584F9C9A98F7D0CFCEFFF7F7F7FFECECECFFD7D6D6FFC6C4
-        C4FFBDBBBBFF989594F72423225A67666608868483007E7C7B009B999800A5A3
-        A2015A58574F9D9A98F7C9C8C7FFE9E9E9FFFBFBFBFFEBEAEAFFDCDBDBFFCDCC
-        CCFFC2C1C0FFBDBBBAFF989595F62423225967656508838181009B9998005A58
-        574E9D9A99F7C5C4C3FFDEDDDDFFF7F7F7FFF9F9F9FFEAEAEAFFDEDEDEFFD2D1
-        D1FFC8C7C6FFC1BFBFFFBCBBBAFF989594F62423225761606007898685409D9A
-        98F7C3C2C1FFD6D5D5FFEDEDEDFFFDFDFDFFF5F5F5FFEAEAEAFFE0E0E0FFD6D5
-        D5FFCCCBCBFFC5C4C3FFC0BFBEFFBCBBBAFF989594F5464444408E8B8953A9A7
-        A5FAB5B3B1FFB9B6B5FFBCBAB9FFBDBBBAFFBBB9B8FFBAB8B7FFB8B6B5FFB7B5
-        B4FFB5B3B2FFB4B2B1FFB3B1B0FFB2B0AFFFA6A3A2F98582814CA4A2A100B1AF
-        AE00BCBAB900C2C1C000C6C4C300CBCAC900D1D0CF00D4D3D200D3D2D100CDCC
-        CC00C2C0C000B4B2B100ABAAA900A5A3A3009E9C9B0095939200ABA9A800B6B4
-        B300BEBDBC00C3C2C100C6C4C300CCCBCA00D2D1D000D3D2D100D1D0CF00CCCB
-        CB00C5C4C300B7B6B500B0AEAD00ABA9A800A5A3A2009E9C9B00
-      }
-      OnClick = habilitar03Click
-      ParentFont = False
-    end
-    object desabilitar03: TSpeedButton
-      Left = 810
-      Height = 34
-      Top = 5
-      Width = 81
-      Caption = 'Desabilitar'
-      Color = 15323601
-      Flat = True
-      Font.Color = clRed
-      Font.Height = -14
-      Font.Name = 'Tahoma'
-      Font.Style = [fsBold]
-      Transparent = False
-      OnClick = desabilitar03Click
-      ParentFont = False
+    object Panel9: TPanel
+      Left = 797
+      Height = 45
+      Top = 0
+      Width = 281
+      Align = alRight
+      BevelOuter = bvNone
+      ClientHeight = 45
+      ClientWidth = 281
+      TabOrder = 1
+      object desabilitar03: TSpeedButton
+        Left = 169
+        Height = 34
+        Top = 5
+        Width = 85
+        Caption = 'Desabilitar'
+        Color = 15323601
+        Flat = True
+        Font.Color = clRed
+        Font.Height = -14
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        Transparent = False
+        OnClick = desabilitar03Click
+        ParentFont = False
+      end
+      object habilitar03: TSpeedButton
+        Left = 36
+        Height = 34
+        Top = 6
+        Width = 127
+        Caption = 'Habilitar'
+        Font.Color = clNavy
+        Font.Height = -14
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        Glyph.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000064000000640000000000000000000000000000000000
+          00000000000047464500545352053A393910333332121F1F1E22060606283130
+          2F193433320F4F4E4D044B4A4900131212000303030006060600000000000000
+          000000000000514F4E007E7D7C00424141095654537FA7A5A3FF9B9997FF3231
+          307F3A3A3909706F6E0052504F00141413000303030006060600000000000000
+          00000302020058565500878584008A88870075737281DAD9D8FFC0BFBDFF3A38
+          3786777674027574730056545300151514000303030006060600000000000000
+          00000A0A0A005C5A59008A8887008D8C8A0078757481DAD9D8FFC0BFBDFF3A38
+          3786797776027776750057565500181717000303030006060600000000000D0C
+          0C002827260066646300908E8D00949392007D7A7881DAD9D8FFC0BFBDFF3A38
+          3786807E7D027D7C7B005E5C5B0027252500100F0F0003030300222120004D4B
+          4A00666463008A878600ABA9A800ADACAA0089878581DAD9D8FFC0BFBDFF3B39
+          388794929102908E8D0072706F0043414100373535001817170052504E00706E
+          6D00868483009B9A9800B3B2B100B5B3B2015C59578DDAD9D8FFC0BFBDFF403E
+          3D944F4F4E09969493007C7A7A005A585800545252003B393900706E6D008583
+          820097959400A6A5A300B7B6B5015755544F9E9C9AF8E5E5E4FFC1C0BFFF9895
+          94F82523235C72717008858382006D6B6A006765640055535300868483009694
+          9300A3A2A100AFAEAD015C5B594F9D9A99F8DEDEDDFFEFEFEEFFCFCECDFFBEBC
+          BCFF999695F72523235B686767087B7A790075747300686766009B999700A6A4
+          A300B0AEAD015C5A584F9C9A98F7D0CFCEFFF7F7F7FFECECECFFD7D6D6FFC6C4
+          C4FFBDBBBBFF989594F72423225A67666608868483007E7C7B009B999800A5A3
+          A2015A58574F9D9A98F7C9C8C7FFE9E9E9FFFBFBFBFFEBEAEAFFDCDBDBFFCDCC
+          CCFFC2C1C0FFBDBBBAFF989595F62423225967656508838181009B9998005A58
+          574E9D9A99F7C5C4C3FFDEDDDDFFF7F7F7FFF9F9F9FFEAEAEAFFDEDEDEFFD2D1
+          D1FFC8C7C6FFC1BFBFFFBCBBBAFF989594F62423225761606007898685409D9A
+          98F7C3C2C1FFD6D5D5FFEDEDEDFFFDFDFDFFF5F5F5FFEAEAEAFFE0E0E0FFD6D5
+          D5FFCCCBCBFFC5C4C3FFC0BFBEFFBCBBBAFF989594F5464444408E8B8953A9A7
+          A5FAB5B3B1FFB9B6B5FFBCBAB9FFBDBBBAFFBBB9B8FFBAB8B7FFB8B6B5FFB7B5
+          B4FFB5B3B2FFB4B2B1FFB3B1B0FFB2B0AFFFA6A3A2F98582814CA4A2A100B1AF
+          AE00BCBAB900C2C1C000C6C4C300CBCAC900D1D0CF00D4D3D200D3D2D100CDCC
+          CC00C2C0C000B4B2B100ABAAA900A5A3A3009E9C9B0095939200ABA9A800B6B4
+          B300BEBDBC00C3C2C100C6C4C300CCCBCA00D2D1D000D3D2D100D1D0CF00CCCB
+          CB00C5C4C300B7B6B500B0AEAD00ABA9A800A5A3A2009E9C9B00
+        }
+        OnClick = habilitar03Click
+        ParentFont = False
+      end
     end
   end
   object Dtsrc: TDataSource
     DataSet = DM.sds_view
     Left = 820
-    Top = 510
+    Top = 511
   end
   object Dtscru: TDataSource
     DataSet = DM.ZQryConsultaSetUser
@@ -2407,7 +2451,7 @@ object FrmView: TFrmView
   object DtsrcCod: TDataSource
     DataSet = DM.cds_UserCod
     Left = 530
-    Top = 13
+    Top = 12
   end
   object DtsrcAutor: TDataSource
     DataSet = DM.ZQryConsultaSetAutores

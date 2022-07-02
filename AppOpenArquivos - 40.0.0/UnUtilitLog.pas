@@ -147,7 +147,8 @@ begin
     Notebook1.PageIndex:=0;
     EdtUsuario.Text:='';
     EdtSenha.Text:='';
-  Close;
+    Close;
+    FrmLogAcesso:=nil;
 end;
 
 procedure TFrmLogAcesso.BitBtn5Click(Sender: TObject);
@@ -284,6 +285,7 @@ begin
     EdtUsuario.Text:='';
     EdtSenha.Text:='';
   Close;
+  FrmLogAcesso:=Nil;
 end;
 
 procedure TFrmLogAcesso.FormShow(Sender: TObject);

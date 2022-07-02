@@ -671,15 +671,6 @@ begin
         DM.sds_Arqu.Close;
         FrmDlgPesquisa.Free;
       end;
-
-     { if (FrmLogin.TODOS = 0) then
-      begin
-        lookUser.Visible := False;
-      end
-      else
-      begin
-        lookUser.Visible := True;
-      end; }
     end
     else if FrmLogin.TODOS = 1 then
     begin

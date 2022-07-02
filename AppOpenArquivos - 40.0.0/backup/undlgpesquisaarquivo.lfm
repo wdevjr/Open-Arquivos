@@ -33,12 +33,12 @@ object FrmDlgPesquisa: TFrmDlgPesquisa
   end
   object Panel1: TPanel
     Left = 0
-    Height = 211
+    Height = 224
     Top = 0
     Width = 881
     Align = alTop
     BevelOuter = bvNone
-    ClientHeight = 211
+    ClientHeight = 224
     ClientWidth = 881
     Color = 14083559
     ParentColor = False
@@ -46,9 +46,9 @@ object FrmDlgPesquisa: TFrmDlgPesquisa
     TabOrder = 1
     object Label1: TLabel
       Left = 19
-      Height = 15
+      Height = 19
       Top = 6
-      Width = 35
+      Width = 42
       Caption = 'Título:'
       Font.Color = clGreen
       Font.Style = [fsBold]
@@ -56,28 +56,28 @@ object FrmDlgPesquisa: TFrmDlgPesquisa
     end
     object Label2: TLabel
       Left = 13
-      Height = 15
+      Height = 19
       Top = 32
-      Width = 57
+      Width = 69
       Caption = 'Descrição:'
       Font.Color = clBlue
       Font.Style = [fsBold]
       ParentFont = False
     end
     object EditProc2: TEdit
-      Left = 77
-      Height = 23
+      Left = 96
+      Height = 27
       Top = 32
-      Width = 379
+      Width = 360
       OnKeyPress = EditProc2KeyPress
       ParentFont = False
       TabOrder = 0
     end
     object EditProc1: TEdit
-      Left = 77
-      Height = 23
+      Left = 96
+      Height = 27
       Top = 6
-      Width = 379
+      Width = 360
       Color = clInfoBk
       Font.Color = clBlue
       OnKeyPress = EditProc1KeyPress
@@ -87,7 +87,7 @@ object FrmDlgPesquisa: TFrmDlgPesquisa
     object DBMemo1: TDBMemo
       Left = 0
       Height = 147
-      Top = 64
+      Top = 77
       Width = 881
       Align = alBottom
       Color = clWhite
@@ -97,10 +97,10 @@ object FrmDlgPesquisa: TFrmDlgPesquisa
       TabOrder = 2
     end
     object SpeedButton2: TSpeedButton
-      Left = 696
-      Height = 50
-      Top = 8
-      Width = 70
+      Left = 701
+      Height = 55
+      Top = 12
+      Width = 82
       Caption = 'Pesquisar'
       Color = clWhite
       Font.Style = [fsBold]
@@ -165,10 +165,10 @@ object FrmDlgPesquisa: TFrmDlgPesquisa
       ParentFont = False
     end
     object SpeedButton3: TSpeedButton
-      Left = 776
-      Height = 50
-      Top = 6
-      Width = 70
+      Left = 786
+      Height = 55
+      Top = 12
+      Width = 82
       Caption = 'Imprimir'
       Color = clWhite
       Font.Style = [fsBold]
@@ -255,9 +255,9 @@ object FrmDlgPesquisa: TFrmDlgPesquisa
     end
     object BarcodeQR1: TBarcodeQR
       Left = 616
-      Height = 60
+      Height = 68
       Top = 4
-      Width = 64
+      Width = 72
       StrictSize = False
       Text = '102345'
     end
@@ -325,8 +325,8 @@ object FrmDlgPesquisa: TFrmDlgPesquisa
   end
   object DBGrid1: TDBGrid
     Left = 0
-    Height = 204
-    Top = 211
+    Height = 191
+    Top = 224
     Width = 881
     Align = alClient
     AlternateColor = 14083559

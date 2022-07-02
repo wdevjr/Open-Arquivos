@@ -23,7 +23,6 @@
         <CursorPos X="3" Y="328"/>
         <UsageCount Value="39"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="unlogin.pas"/>
@@ -32,12 +31,12 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UnLogin"/>
-        <EditorIndex Value="4"/>
-        <TopLine Value="315"/>
-        <CursorPos X="3" Y="79"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="314"/>
+        <CursorPos X="45" Y="326"/>
         <UsageCount Value="39"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit2>
       <Unit3>
         <Filename Value="undm.pas"/>
@@ -47,7 +46,7 @@
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="UnDM"/>
         <EditorIndex Value="7"/>
-        <TopLine Value="500"/>
+        <TopLine Value="490"/>
         <CursorPos X="15" Y="504"/>
         <UsageCount Value="39"/>
         <Loaded Value="True"/>
@@ -154,11 +153,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UnConsultaEspecial"/>
-        <EditorIndex Value="6"/>
-        <TopLine Value="435"/>
-        <CursorPos X="3" Y="439"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="439"/>
+        <CursorPos X="41" Y="448"/>
         <UsageCount Value="39"/>
-        <Loaded Value="True"/>
       </Unit13>
       <Unit14>
         <Filename Value="uncadarquivos.pas"/>
@@ -168,8 +166,8 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UnCadArquivos"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="611"/>
-        <CursorPos X="13" Y="614"/>
+        <TopLine Value="1598"/>
+        <CursorPos X="3" Y="1600"/>
         <UsageCount Value="39"/>
         <Loaded Value="True"/>
       </Unit14>
@@ -252,13 +250,11 @@
         <ComponentName Value="FrmLogAcesso"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="276"/>
-        <CursorPos X="9" Y="286"/>
+        <TopLine Value="277"/>
+        <CursorPos X="3" Y="279"/>
         <UsageCount Value="39"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit22>
       <Unit23>
         <Filename Value="UnLocalizarUserCod.pas"/>
@@ -337,12 +333,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="unDlgPesquisaArquivo"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="6"/>
         <TopLine Value="441"/>
         <CursorPos X="2" Y="443"/>
         <UsageCount Value="39"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit30>
       <Unit31>
         <Filename Value="UnDlgProcuraAssunto.pas"/>
@@ -371,10 +366,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UnatribuiUsuariosPorArquivos"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="56"/>
-        <CursorPos X="3" Y="56"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="26"/>
+        <CursorPos X="3" Y="36"/>
         <UsageCount Value="39"/>
+        <Loaded Value="True"/>
       </Unit33>
       <Unit34>
         <Filename Value="UnDlgProcuraPerfil.pas"/>
@@ -451,123 +447,47 @@
         <UsageCount Value="10"/>
       </Unit42>
     </Units>
-    <JumpHistory Count="29" HistoryIndex="28">
+    <JumpHistory Count="10" HistoryIndex="9">
       <Position1>
-        <Filename Value="unprinc.pas"/>
-        <Caret Line="193" Column="3" TopLine="191"/>
+        <Filename Value="UnUtilitLog.pas"/>
+        <Caret Line="140" TopLine="134"/>
       </Position1>
       <Position2>
-        <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="131" Column="3" TopLine="122"/>
+        <Filename Value="UnUtilitLog.pas"/>
+        <Caret Line="278" Column="10" TopLine="271"/>
       </Position2>
       <Position3>
-        <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="1117" Column="61" TopLine="980"/>
+        <Filename Value="UnUtilitLog.pas"/>
+        <Caret Line="145" Column="21" TopLine="138"/>
       </Position3>
       <Position4>
-        <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="948" Column="28" TopLine="940"/>
+        <Filename Value="UnUtilitLog.pas"/>
+        <Caret Line="147" Column="21" TopLine="140"/>
       </Position4>
       <Position5>
-        <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="921" Column="3" TopLine="918"/>
+        <Filename Value="UnUtilitLog.pas"/>
+        <Caret Line="346" Column="3" TopLine="343"/>
       </Position5>
       <Position6>
-        <Filename Value="unconsultaespecial.pas"/>
-        <Caret Line="130" Column="3" TopLine="120"/>
+        <Filename Value="UnUtilitLog.pas"/>
+        <Caret Line="147" Column="27" TopLine="140"/>
       </Position6>
       <Position7>
-        <Filename Value="unconsultaespecial.pas"/>
-        <Caret Line="192" Column="3" TopLine="190"/>
+        <Filename Value="UnUtilitLog.pas"/>
+        <Caret Line="142" TopLine="140"/>
       </Position7>
       <Position8>
-        <Filename Value="unconsultaespecial.pas"/>
-        <Caret Line="439" Column="3" TopLine="435"/>
+        <Filename Value="UnUtilitLog.pas"/>
+        <Caret Line="287" Column="20" TopLine="276"/>
       </Position8>
       <Position9>
-        <Filename Value="undm.pas"/>
-        <Caret Line="463" Column="21" TopLine="459"/>
+        <Filename Value="uncadarquivos.pas"/>
+        <Caret Line="614" Column="13" TopLine="611"/>
       </Position9>
       <Position10>
         <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="921" Column="3" TopLine="918"/>
+        <Caret Line="1600" Column="3" TopLine="1598"/>
       </Position10>
-      <Position11>
-        <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="614" Column="13" TopLine="611"/>
-      </Position11>
-      <Position12>
-        <Filename Value="undlgpesquisaarquivo.pas"/>
-        <Caret Line="62" Column="3" TopLine="52"/>
-      </Position12>
-      <Position13>
-        <Filename Value="undlgpesquisaarquivo.pas"/>
-        <Caret Line="717" Column="3" TopLine="713"/>
-      </Position13>
-      <Position14>
-        <Filename Value="unconsultaespecial.pas"/>
-        <Caret Line="439" Column="3" TopLine="435"/>
-      </Position14>
-      <Position15>
-        <Filename Value="unconsultaespecial.pas"/>
-        <Caret Line="192" Column="3" TopLine="190"/>
-      </Position15>
-      <Position16>
-        <Filename Value="unconsultaespecial.pas"/>
-        <Caret Line="439" Column="3" TopLine="435"/>
-      </Position16>
-      <Position17>
-        <Filename Value="undm.pas"/>
-        <Caret Line="463" Column="21" TopLine="455"/>
-      </Position17>
-      <Position18>
-        <Filename Value="unprinc.pas"/>
-        <Caret Line="193" Column="3" TopLine="191"/>
-      </Position18>
-      <Position19>
-        <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="328" Column="34" TopLine="370"/>
-      </Position19>
-      <Position20>
-        <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="141" Column="24" TopLine="138"/>
-      </Position20>
-      <Position21>
-        <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="142" Column="22" TopLine="138"/>
-      </Position21>
-      <Position22>
-        <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="148" Column="3" TopLine="134"/>
-      </Position22>
-      <Position23>
-        <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="140" TopLine="134"/>
-      </Position23>
-      <Position24>
-        <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="278" Column="10" TopLine="271"/>
-      </Position24>
-      <Position25>
-        <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="145" Column="21" TopLine="138"/>
-      </Position25>
-      <Position26>
-        <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="147" Column="21" TopLine="140"/>
-      </Position26>
-      <Position27>
-        <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="346" Column="3" TopLine="343"/>
-      </Position27>
-      <Position28>
-        <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="147" Column="27" TopLine="140"/>
-      </Position28>
-      <Position29>
-        <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="142" TopLine="140"/>
-      </Position29>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
