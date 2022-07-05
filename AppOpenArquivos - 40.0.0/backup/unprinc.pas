@@ -17,7 +17,6 @@ type
   TFrPrincipal = class(TForm)
     codigo13: TLabel;
     GifAnim1: TGifAnim;
-    IdleTimer1: TIdleTimer;
     Image1: TImage;
     Label13: TLabel;
     ListView1: TListView;

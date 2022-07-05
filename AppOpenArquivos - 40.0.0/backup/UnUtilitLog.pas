@@ -147,7 +147,8 @@ begin
     Notebook1.PageIndex:=0;
     EdtUsuario.Text:='';
     EdtSenha.Text:='';
-  Close;
+    Close;
+    FrmLogAcesso:=nil;
 end;
 
 procedure TFrmLogAcesso.BitBtn5Click(Sender: TObject);
@@ -162,7 +163,8 @@ begin
     DM.ZQueryAssistente.Params.Clear;
     DM.ZQueryAssistente.SQL.Clear;
     DM.ZQueryAssistente.SQL.Text :=
-      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO FROM LOG r'
+      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, ar.NOME_ARQUIVO FROM LOG r'
+      + ' left join ARQUIVOLIST ar on r.COD_REGISTRO = ar.ID '
       + ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO ' +
       ' where PO.NOME like ' + QuotedStr('%' + EditPesquNome.Text + '%')
       // + ' or (r.INSERDATA >= :inicial)'
@@ -183,8 +185,9 @@ begin
     //Inicial := DateToStr(DateTimePicker1.Date);
     //Finall := DateToStr(DateTimePicker2.Date);
     DM.ZQueryAssistente.SQL.Add(
-      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO FROM LOG r' + ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO '
+      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, ar.NOME_ARQUIVO FROM LOG r' + ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO '
       //+ ' where PO.NOME like ' + QuotedStr(EditPesquNome.Text + '%')
+      + ' left join ARQUIVOLIST ar on r.COD_REGISTRO = ar.ID '
       + ' where r.COD_USUARIO=' + DBEdit1.Text
       //  + ' where r.INSERDATA >= :inicial'
       //+ ' and r.INSERDATA <= :finall'
@@ -208,7 +211,10 @@ begin
     Inicial := DateToStr(DateTimePicker1.Date);
     Finall := DateToStr(DateTimePicker2.Date);
     DM.ZQueryAssistente.SQL.Add(
-      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO FROM LOG r' + ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO ' + ' where PO.NOME like ' + QuotedStr(EditPesquNome.Text + '%') + ' and r.INSERDATA >= :inicial' + ' and r.INSERDATA <= :finall' + ' order by r.INSERDATA, r.HORA desc');
+      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, ar.NOME_ARQUIVO FROM LOG r'
+      + ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO '
+      + ' left join ARQUIVOLIST ar on r.COD_REGISTRO = ar.ID '
+      + ' where PO.NOME like ' + QuotedStr(EditPesquNome.Text + '%') + ' and r.INSERDATA >= :inicial' + ' and r.INSERDATA <= :finall' + ' order by r.INSERDATA, r.HORA desc');
     DM.ZQueryAssistente.ParamByName('inicial').asDate := StrToDate(Inicial);
     DM.ZQueryAssistente.ParamByName('finall').asDate := StrToDate(Finall);
     DM.ZQueryAssistente.Open;
@@ -226,7 +232,11 @@ begin
     Inicial := DateToStr(DateTimePicker1.Date);
     Finall := DateToStr(DateTimePicker2.Date);
     DM.ZQueryAssistente.SQL.Add(
-      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO FROM LOG r' + ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO ' + ' where r.INSERDATA >= :inicial' + ' and r.INSERDATA <= :finall' + ' order by r.INSERDATA, r.HORA desc');
+      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, ar.NOME_ARQUIVO FROM LOG r' +
+      ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO '
+      + ' left join ARQUIVOLIST ar on r.COD_REGISTRO = ar.ID ' +
+      ' where r.INSERDATA >= :inicial' + ' and r.INSERDATA <= :finall' +
+      ' order by r.INSERDATA, r.HORA desc');
     DM.ZQueryAssistente.ParamByName('inicial').asDate := StrToDate(Inicial);
     DM.ZQueryAssistente.ParamByName('finall').asDate := StrToDate(Finall);
     DM.ZQueryAssistente.Open;
@@ -243,7 +253,11 @@ begin
     Inicial := DateToStr(DateTimePicker1.Date);
     Finall := DateToStr(DateTimePicker2.Date);
     DM.ZQueryAssistente.SQL.Add(
-      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO FROM LOG r' + ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO ' + ' where PO.NOME like ' + QuotedStr(EditPesquNome.Text + '%') + ' or r.COD_USUARIO=' + DBEdit1.Text + ' or r.INSERDATA >= :inicial' + ' and r.INSERDATA <= :finall' + ' order by r.INSERDATA, r.HORA desc');
+      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, ar.NOME_ARQUIVO FROM LOG r' +
+      ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO '
+      + ' left join ARQUIVOLIST ar on r.COD_REGISTRO = ar.ID '
+      + ' where PO.NOME like ' + QuotedStr(EditPesquNome.Text + '%') +
+      ' or r.COD_USUARIO=' + DBEdit1.Text + ' or r.INSERDATA >= :inicial' + ' and r.INSERDATA <= :finall' + ' order by r.INSERDATA, r.HORA desc');
     DM.ZQueryAssistente.ParamByName('inicial').asDate := StrToDate(Inicial);
     DM.ZQueryAssistente.ParamByName('finall').asDate := StrToDate(Finall);
     DM.ZQueryAssistente.Open;
@@ -258,7 +272,9 @@ begin
     Inicial := DateToStr(DateTimePicker1.Date);
     Finall := DateToStr(DateTimePicker2.Date);
     DM.ZQueryAssistente.SQL.Add(
-      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO FROM LOG r' + ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO '
+      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, ar.NOME_ARQUIVO FROM LOG r' +
+      ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO '
+      ' left join ARQUIVOLIST ar on r.COD_REGISTRO = ar.ID '
       //+ ' where PO.NOME like ' + QuotedStr(EditPesquNome.Text + '%')
       //+ ' where r.COD_USUARIO=' + DBEdit1.Text
       + ' where r.INSERDATA >= :inicial' + ' and r.INSERDATA <= :finall' +

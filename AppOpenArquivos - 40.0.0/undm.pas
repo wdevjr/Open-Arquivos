@@ -367,6 +367,8 @@ type
     ZQryConsultaSetUser: TZQuery;
     ZQryConsultaSetAutores: TZQuery;
     ZQryCosultaAutores: TZQuery;
+    ZQueryAssistenteCOD_ACAO: TLongintField;
+    ZQueryAssistenteNOME_ARQUIVO: TStringField;
     ZQueryOpenAutores: TZQuery;
     ZQueryLogParam: TZQuery;
     ZQueryAssistente: TZQuery;
