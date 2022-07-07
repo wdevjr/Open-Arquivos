@@ -19,8 +19,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UnPrinc"/>
-        <TopLine Value="336"/>
-        <CursorPos X="3" Y="338"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="305"/>
+        <CursorPos X="3" Y="308"/>
         <UsageCount Value="41"/>
         <Loaded Value="True"/>
       </Unit1>
@@ -50,7 +51,6 @@
         <CursorPos X="13" Y="504"/>
         <UsageCount Value="41"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit3>
       <Unit4>
         <Filename Value="UnCadPerfil.pas"/>
@@ -168,8 +168,8 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UnCadArquivos"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="1598"/>
-        <CursorPos X="3" Y="1600"/>
+        <TopLine Value="589"/>
+        <CursorPos X="31" Y="575"/>
         <UsageCount Value="41"/>
         <Loaded Value="True"/>
       </Unit14>
@@ -252,13 +252,11 @@
         <ComponentName Value="FrmLogAcesso"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="248"/>
-        <CursorPos X="9" Y="259"/>
+        <TopLine Value="266"/>
+        <CursorPos X="9" Y="277"/>
         <UsageCount Value="41"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit22>
       <Unit23>
         <Filename Value="UnLocalizarUserCod.pas"/>
@@ -451,7 +449,7 @@
         <UsageCount Value="10"/>
       </Unit42>
     </Units>
-    <JumpHistory Count="16" HistoryIndex="15">
+    <JumpHistory Count="22" HistoryIndex="21">
       <Position1>
         <Filename Value="UnUtilitLog.pas"/>
         <Caret Line="140" TopLine="134"/>
@@ -516,6 +514,30 @@
         <Filename Value="UnUtilitLog.pas"/>
         <Caret Line="237" Column="65" TopLine="227"/>
       </Position16>
+      <Position17>
+        <Filename Value="UnUtilitLog.pas"/>
+        <Caret Line="259" Column="9" TopLine="248"/>
+      </Position17>
+      <Position18>
+        <Filename Value="unprinc.pas"/>
+        <Caret Line="338" Column="3" TopLine="336"/>
+      </Position18>
+      <Position19>
+        <Filename Value="unprinc.pas"/>
+        <Caret Line="307" Column="3" TopLine="304"/>
+      </Position19>
+      <Position20>
+        <Filename Value="unprinc.pas"/>
+        <Caret Line="308" Column="3" TopLine="305"/>
+      </Position20>
+      <Position21>
+        <Filename Value="unprinc.pas"/>
+        <Caret Line="307" Column="3" TopLine="304"/>
+      </Position21>
+      <Position22>
+        <Filename Value="uncadarquivos.pas"/>
+        <Caret Line="1600" Column="3" TopLine="1598"/>
+      </Position22>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>

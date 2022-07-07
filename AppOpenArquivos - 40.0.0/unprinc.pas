@@ -27,6 +27,7 @@ type
     Panel2: TPanel;
     Panel3: TPanel;
     Panel4: TPanel;
+    Panel5: TPanel;
     PopupMenu1: TPopupMenu;
     ImageList1: TImageList;
     MainMenu1: TMainMenu;
