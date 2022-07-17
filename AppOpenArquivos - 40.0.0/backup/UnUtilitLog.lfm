@@ -1,16 +1,15 @@
 object FrmLogAcesso: TFrmLogAcesso
-  Left = 510
-  Height = 487
-  Top = 44
-  Width = 815
+  Left = 345
+  Height = 441
+  Top = 151
+  Width = 873
   BorderIcons = [biSystemMenu, biMaximize]
   Caption = 'Log Procedimentos - Assistente Detetive'
-  ClientHeight = 487
-  ClientWidth = 815
+  ClientHeight = 441
+  ClientWidth = 873
   Color = clWhite
-  DesignTimePPI = 106
   Font.Color = clWindowText
-  Font.Height = -15
+  Font.Height = -14
   Font.Name = 'Tahoma'
   OnClose = FormClose
   OnShow = FormShow
@@ -18,25 +17,25 @@ object FrmLogAcesso: TFrmLogAcesso
   LCLVersion = '2.2.0.4'
   object Panel1: TPanel
     Left = 0
-    Height = 62
+    Height = 56
     Top = 0
-    Width = 815
+    Width = 873
     Align = alTop
     BevelOuter = bvNone
-    ClientHeight = 62
-    ClientWidth = 815
+    ClientHeight = 56
+    ClientWidth = 873
     Color = clWhite
     Font.Color = clWindowText
-    Font.Height = -15
+    Font.Height = -14
     Font.Name = 'Tahoma'
     ParentColor = False
     ParentFont = False
     TabOrder = 0
     object Image4: TImage
-      Left = 23
-      Height = 56
-      Top = 6
-      Width = 65
+      Left = 21
+      Height = 51
+      Top = 5
+      Width = 59
       Picture.Data = {
         07544269746D6170D2230000424DD22300000000000036000000280000003900
         00003500000001001800000000009C230000C40E0000C40E0000000000000000
@@ -328,55 +327,55 @@ object FrmLogAcesso: TFrmLogAcesso
       }
     end
     object Label13: TLabel
-      Left = 88
-      Height = 23
-      Top = 27
-      Width = 330
+      Left = 80
+      Height = 21
+      Top = 24
+      Width = 296
       Caption = 'Log de Procedimentos do Sistema.'
       Font.Color = clGreen
-      Font.Height = -19
+      Font.Height = -17
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object Panel5: TPanel
-      Left = 650
-      Height = 62
+      Left = 724
+      Height = 56
       Top = 0
-      Width = 165
+      Width = 149
       Align = alRight
       BevelOuter = bvNone
-      ClientHeight = 62
-      ClientWidth = 165
+      ClientHeight = 56
+      ClientWidth = 149
       Color = clWhite
       Font.Color = clWindowText
-      Font.Height = -15
+      Font.Height = -14
       Font.Name = 'Tahoma'
       ParentColor = False
       ParentFont = False
       TabOrder = 0
       object Label12: TLabel
-        Left = 9
-        Height = 21
-        Top = 9
-        Width = 126
+        Left = 8
+        Height = 18
+        Top = 8
+        Width = 112
         Caption = 'warhjr © 2020'
         Font.Color = clGray
-        Font.Height = -17
+        Font.Height = -15
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
       end
     end
     object DBEdit1: TDBEdit
-      Left = 723
-      Height = 26
-      Top = 27
-      Width = 88
+      Left = 655
+      Height = 25
+      Top = 24
+      Width = 80
       DataField = 'COD_USUARIO'
       DataSource = Dtscu
       Font.Color = clWindowText
-      Font.Height = -15
+      Font.Height = -14
       Font.Name = 'Tahoma'
       MaxLength = 0
       ParentFont = False
@@ -386,31 +385,31 @@ object FrmLogAcesso: TFrmLogAcesso
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Height = 25
-    Top = 462
-    Width = 815
+    Height = 23
+    Top = 418
+    Width = 873
     Font.Color = clWindowText
-    Font.Height = -15
+    Font.Height = -14
     Font.Name = 'Tahoma'
     Panels = <    
       item
-        Width = 276
+        Width = 250
       end    
       item
-        Width = 55
+        Width = 50
       end>
     ParentFont = False
   end
   object Panel3: TPanel
     Left = 0
-    Height = 10
-    Top = 62
-    Width = 815
+    Height = 9
+    Top = 56
+    Width = 873
     Align = alTop
     BevelOuter = bvNone
     Color = 12615680
     Font.Color = clWindowText
-    Font.Height = -15
+    Font.Height = -14
     Font.Name = 'Tahoma'
     ParentColor = False
     ParentFont = False
@@ -418,19 +417,19 @@ object FrmLogAcesso: TFrmLogAcesso
   end
   object Notebook1: TNotebook
     Left = 0
-    Height = 346
-    Top = 72
-    Width = 815
+    Height = 313
+    Top = 65
+    Width = 873
     PageIndex = 1
     Align = alClient
     TabOrder = 3
     object Page1: TPage
       OnBeforeShow = Page1BeforeShow
       object Image2: TImage
-        Left = 27
-        Height = 46
-        Top = 7
-        Width = 54
+        Left = 24
+        Height = 42
+        Top = 6
+        Width = 49
         Picture.Data = {
           1754506F727461626C654E6574776F726B477261706869630A0D000089504E47
           0D0A1A0A0000000D49484452000000300000003008060000005702F987000000
@@ -542,64 +541,64 @@ object FrmLogAcesso: TFrmLogAcesso
         Transparent = True
       end
       object Label3: TLabel
-        Left = 537
-        Height = 14
-        Top = 64
-        Width = 204
+        Left = 486
+        Height = 13
+        Top = 58
+        Width = 180
         Caption = 'Este Assistente ira lhe conduzir para  '
         Font.Color = clBlack
-        Font.Height = -12
+        Font.Height = -11
         Font.Name = 'Tahoma'
         ParentFont = False
       end
       object Label5: TLabel
-        Left = 580
-        Height = 14
-        Top = 92
-        Width = 145
+        Left = 525
+        Height = 13
+        Top = 83
+        Width = 131
         Caption = 'as primeiras configurações.'
         Font.Color = clBlack
-        Font.Height = -12
+        Font.Height = -11
         Font.Name = 'Tahoma'
         ParentFont = False
       end
       object Label6: TLabel
-        Left = 534
-        Height = 14
-        Top = 153
-        Width = 206
+        Left = 484
+        Height = 13
+        Top = 139
+        Width = 182
         Caption = 'Faça Login para ter Acesso Completo.'
         Font.Color = clBlack
-        Font.Height = -12
+        Font.Height = -11
         Font.Name = 'Tahoma'
         ParentFont = False
       end
       object Label7: TLabel
-        Left = 530
-        Height = 14
-        Top = 198
-        Width = 267
+        Left = 480
+        Height = 13
+        Top = 179
+        Width = 235
         Caption = 'Preencha as informações devidamente Conforme'
         Font.Color = clBlack
-        Font.Height = -12
+        Font.Height = -11
         Font.Name = 'Tahoma'
         ParentFont = False
       end
       object Label8: TLabel
-        Left = 655
-        Height = 14
-        Top = 214
-        Width = 134
+        Left = 593
+        Height = 13
+        Top = 194
+        Width = 122
         Caption = 'os Critérios de Avaliação.'
         Font.Color = clBlack
-        Font.Height = -12
+        Font.Height = -11
         Font.Name = 'Tahoma'
         ParentFont = False
       end
       object Image3: TImage
-        Left = 504
+        Left = 456
         Height = 22
-        Top = 64
+        Top = 58
         Width = 21
         AutoSize = True
         Picture.Data = {
@@ -654,9 +653,9 @@ object FrmLogAcesso: TFrmLogAcesso
         Transparent = True
       end
       object Image5: TImage
-        Left = 504
+        Left = 456
         Height = 22
-        Top = 150
+        Top = 136
         Width = 21
         AutoSize = True
         Picture.Data = {
@@ -711,9 +710,9 @@ object FrmLogAcesso: TFrmLogAcesso
         Transparent = True
       end
       object Image6: TImage
-        Left = 504
+        Left = 456
         Height = 22
-        Top = 198
+        Top = 179
         Width = 21
         AutoSize = True
         Picture.Data = {
@@ -768,87 +767,87 @@ object FrmLogAcesso: TFrmLogAcesso
         Transparent = True
       end
       object Label9: TLabel
-        Left = 21
-        Height = 14
-        Top = 59
-        Width = 123
+        Left = 19
+        Height = 13
+        Top = 53
+        Width = 108
         Caption = 'ACESSO RESTRITO !'
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -11
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
       end
       object Label10: TLabel
-        Left = 21
-        Height = 14
-        Top = 76
-        Width = 250
+        Left = 19
+        Height = 13
+        Top = 69
+        Width = 223
         Caption = 'SOMENTE PARA PESSOAS AUTORIZADAS'
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -11
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
       end
       object Label11: TLabel
-        Left = 21
-        Height = 14
-        Top = 94
-        Width = 436
+        Left = 19
+        Height = 13
+        Top = 85
+        Width = 389
         Caption = 'CONSULTE O ADMINISTRADOR DO SISTEMA PARA MAIS INFORMAÇÕES'
         Font.Color = clRed
-        Font.Height = -12
+        Font.Height = -11
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
       end
       object Panel4: TPanel
-        Left = 29
-        Height = 124
-        Top = 233
-        Width = 749
+        Left = 26
+        Height = 112
+        Top = 211
+        Width = 678
         BevelOuter = bvNone
-        ClientHeight = 124
-        ClientWidth = 749
+        ClientHeight = 112
+        ClientWidth = 678
         Color = 14083559
         Font.Color = clWindowText
-        Font.Height = -15
+        Font.Height = -14
         Font.Name = 'Tahoma'
         ParentColor = False
         ParentFont = False
         TabOrder = 0
         object Label1: TLabel
-          Left = 336
-          Height = 14
-          Top = 14
-          Width = 36
+          Left = 304
+          Height = 13
+          Top = 13
+          Width = 31
           Caption = 'Nome:'
           Font.Color = 4227072
-          Font.Height = -12
+          Font.Height = -11
           Font.Name = 'Tahoma'
           ParentFont = False
         end
         object Label2: TLabel
-          Left = 339
-          Height = 14
-          Top = 50
-          Width = 38
+          Left = 307
+          Height = 13
+          Top = 45
+          Width = 34
           Caption = 'Senha:'
           Font.Color = clRed
-          Font.Height = -12
+          Font.Height = -11
           Font.Name = 'Tahoma'
           ParentFont = False
         end
         object BitBtn1: TBitBtn
-          Left = 551
-          Height = 29
-          Top = 85
-          Width = 86
+          Left = 499
+          Height = 26
+          Top = 77
+          Width = 78
           Caption = 'Login'
           Default = True
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -10
           Font.Name = 'Tahoma'
           Glyph.Data = {
             36030000424D3603000000000000360000002800000010000000100000000100
@@ -883,13 +882,13 @@ object FrmLogAcesso: TFrmLogAcesso
           TabOrder = 0
         end
         object BitBtn2: TBitBtn
-          Left = 640
-          Height = 29
-          Top = 85
-          Width = 86
+          Left = 580
+          Height = 26
+          Top = 77
+          Width = 78
           Caption = 'Fechar'
           Font.Color = clBlack
-          Font.Height = -11
+          Font.Height = -10
           Font.Name = 'Tahoma'
           Kind = bkClose
           ModalResult = 11
@@ -897,25 +896,25 @@ object FrmLogAcesso: TFrmLogAcesso
           TabOrder = 1
         end
         object EdtUsuario: TEdit
-          Left = 382
-          Height = 26
-          Top = 14
-          Width = 353
+          Left = 346
+          Height = 25
+          Top = 13
+          Width = 320
           Font.Color = clBlue
-          Font.Height = -15
+          Font.Height = -14
           Font.Name = 'Tahoma'
           Font.Style = [fsBold]
           ParentFont = False
           TabOrder = 2
         end
         object EdtSenha: TEdit
-          Left = 382
-          Height = 26
-          Top = 50
-          Width = 353
+          Left = 346
+          Height = 25
+          Top = 45
+          Width = 320
           EchoMode = emPassword
           Font.Color = clBlue
-          Font.Height = -15
+          Font.Height = -14
           Font.Name = 'Tahoma'
           Font.Style = [fsBold]
           ParentFont = False
@@ -924,9 +923,9 @@ object FrmLogAcesso: TFrmLogAcesso
         end
       end
       object GifAnim1: TGifAnim
-        Left = 53
+        Left = 48
         Height = 90
-        Top = 159
+        Top = 144
         Width = 384
         FileName = 'anima\transmitindo.gif'
       end
@@ -934,26 +933,26 @@ object FrmLogAcesso: TFrmLogAcesso
     object Page2: TPage
       object PanelAlert: TPanel
         Left = 0
-        Height = 24
+        Height = 22
         Top = 0
-        Width = 815
+        Width = 873
         Align = alTop
         BevelOuter = bvNone
-        ClientHeight = 24
-        ClientWidth = 815
+        ClientHeight = 22
+        ClientWidth = 873
         Color = 11075583
         Font.Color = clWindowText
-        Font.Height = -15
+        Font.Height = -14
         Font.Name = 'Tahoma'
         ParentColor = False
         ParentFont = False
         TabOrder = 0
         Visible = False
         object Image1: TImage
-          Left = 75
-          Height = 18
+          Left = 68
+          Height = 16
           Top = 3
-          Width = 19
+          Width = 17
           Picture.Data = {
             1754506F727461626C654E6574776F726B477261706869638A03000089504E47
             0D0A1A0A0000000D49484452000000100000001008060000001FF3FF61000000
@@ -988,25 +987,25 @@ object FrmLogAcesso: TFrmLogAcesso
           }
         end
         object Label16: TLabel
-          Left = 97
-          Height = 16
+          Left = 88
+          Height = 14
           Top = 4
-          Width = 225
+          Width = 213
           Caption = 'Numero de Registros Encontrados:'
           Font.Color = clMaroon
-          Font.Height = -13
+          Font.Height = -12
           Font.Name = 'Tahoma'
           Font.Style = [fsBold]
           ParentFont = False
         end
         object LabelNum: TLabel
-          Left = 336
-          Height = 18
+          Left = 304
+          Height = 17
           Top = 3
-          Width = 75
+          Width = 69
           Caption = 'LabelNum'
           Font.Color = clBlue
-          Font.Height = -15
+          Font.Height = -14
           Font.Name = 'Tahoma'
           Font.Style = [fsBold]
           ParentFont = False
@@ -1014,36 +1013,36 @@ object FrmLogAcesso: TFrmLogAcesso
       end
       object Panel10: TPanel
         Left = 0
-        Height = 82
-        Top = 64
-        Width = 815
+        Height = 94
+        Top = 58
+        Width = 873
         Align = alTop
-        ClientHeight = 82
-        ClientWidth = 815
+        ClientHeight = 94
+        ClientWidth = 873
         Font.Color = clWindowText
-        Font.Height = -15
+        Font.Height = -14
         Font.Name = 'Tahoma'
         ParentFont = False
         TabOrder = 1
         object EditPesquNome: TEdit
-          Left = 106
-          Height = 26
-          Top = 12
-          Width = 318
+          Left = 96
+          Height = 25
+          Top = 11
+          Width = 288
           Font.Color = clBlack
-          Font.Height = -15
+          Font.Height = -14
           Font.Name = 'Tahoma'
           ParentFont = False
           TabOrder = 0
         end
         object BitBtn5: TBitBtn
-          Left = 495
-          Height = 30
-          Top = 42
-          Width = 127
+          Left = 720
+          Height = 40
+          Top = 40
+          Width = 139
           Caption = 'Pesquisar'
           Font.Color = clWindowText
-          Font.Height = -15
+          Font.Height = -14
           Font.Name = 'Tahoma'
           Glyph.Data = {
             36100000424D3610000000000000360000002800000020000000200000000100
@@ -1182,52 +1181,52 @@ object FrmLogAcesso: TFrmLogAcesso
           TabOrder = 1
         end
         object Label4: TLabel
-          Left = 9
-          Height = 14
-          Top = 17
-          Width = 97
+          Left = 8
+          Height = 13
+          Top = 15
+          Width = 85
           Caption = 'Nome do Usuário:'
           Font.Color = clBlue
-          Font.Height = -12
+          Font.Height = -11
           Font.Name = 'Tahoma'
           ParentFont = False
         end
         object SpeedButton1: TSpeedButton
-          Left = 442
-          Height = 28
-          Top = 12
-          Width = 43
+          Left = 400
+          Height = 25
+          Top = 11
+          Width = 39
           Caption = '...'
           Font.Color = clWindowText
-          Font.Height = -15
+          Font.Height = -14
           Font.Name = 'Tahoma'
           OnClick = SpeedButton1Click
           ParentFont = False
         end
         object DBText1: TDBText
-          Left = 495
-          Height = 19
-          Top = 14
-          Width = 276
+          Left = 448
+          Height = 17
+          Top = 13
+          Width = 250
           AutoSize = False
           Color = 13363947
           DataField = 'NOME'
           DataSource = Dtscu
           Font.Color = clGreen
-          Font.Height = -15
+          Font.Height = -14
           Font.Name = 'Tahoma'
           Font.Style = [fsBold]
           ParentFont = False
           Transparent = False
         end
         object imprimir: TBitBtn
-          Left = 4
-          Height = 32
-          Top = 44
-          Width = 140
+          Left = 16
+          Height = 40
+          Top = 43
+          Width = 127
           Caption = 'Imprimir'
           Font.Color = clWindowText
-          Font.Height = -15
+          Font.Height = -14
           Font.Name = 'Tahoma'
           Glyph.Data = {
             36100000424D3610000000000000360000002800000020000000200000000100
@@ -1367,19 +1366,38 @@ object FrmLogAcesso: TFrmLogAcesso
           TabOrder = 2
           Visible = False
         end
+        object ComboBoxEventosButtos: TComboBox
+          Left = 168
+          Height = 23
+          Top = 51
+          Width = 180
+          AutoSize = False
+          Color = 14024703
+          ItemHeight = 17
+          Items.Strings = (
+            ''
+            'Gravou'
+            'Excluiu'
+            'Alterou'
+            'Logou'
+          )
+          OnDrawItem = ComboBoxEventosButtosDrawItem
+          Style = csOwnerDrawFixed
+          TabOrder = 3
+        end
       end
       object DBGrid1: TDBGrid
         Left = 0
-        Height = 200
-        Top = 146
-        Width = 815
+        Height = 161
+        Top = 152
+        Width = 873
         Align = alClient
         AlternateColor = 15192015
         Color = 13363947
         Columns = <>
         DataSource = Dtsrc
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -11
         Font.Name = 'Tahoma'
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
         ParentFont = False
@@ -1387,16 +1405,16 @@ object FrmLogAcesso: TFrmLogAcesso
       end
       object PanelData: TPanel
         Left = 0
-        Height = 40
-        Top = 24
-        Width = 815
+        Height = 36
+        Top = 22
+        Width = 873
         Align = alTop
         BevelOuter = bvNone
-        ClientHeight = 40
-        ClientWidth = 815
+        ClientHeight = 36
+        ClientWidth = 873
         Color = 16774388
         Font.Color = clWindowText
-        Font.Height = -15
+        Font.Height = -14
         Font.Name = 'Tahoma'
         ParentBackground = False
         ParentColor = False
@@ -1404,11 +1422,11 @@ object FrmLogAcesso: TFrmLogAcesso
         TabOrder = 3
         object SpeedButton11: TSpeedButton
           Left = 4
-          Height = 32
+          Height = 29
           Top = 1
-          Width = 44
+          Width = 40
           Font.Color = clWindowText
-          Font.Height = -15
+          Font.Height = -14
           Font.Name = 'Tahoma'
           Glyph.Data = {
             36040000424D3604000000000000360000002800000010000000100000000100
@@ -1450,56 +1468,56 @@ object FrmLogAcesso: TFrmLogAcesso
           ParentFont = False
         end
         object Label14: TLabel
-          Left = 70
-          Height = 14
-          Top = 9
-          Width = 33
+          Left = 63
+          Height = 13
+          Top = 8
+          Width = 30
           Caption = 'Data:'
           Font.Color = clMaroon
-          Font.Height = -12
+          Font.Height = -11
           Font.Name = 'Tahoma'
           Font.Style = [fsBold]
           ParentFont = False
         end
         object PanelMostrData: TPanel
-          Left = 124
-          Height = 30
-          Top = 6
-          Width = 442
+          Left = 112
+          Height = 27
+          Top = 5
+          Width = 400
           BevelOuter = bvNone
-          ClientHeight = 30
-          ClientWidth = 442
+          ClientHeight = 27
+          ClientWidth = 400
           Color = 16774388
           Font.Color = clWindowText
-          Font.Height = -15
+          Font.Height = -14
           Font.Name = 'Tahoma'
           ParentColor = False
           ParentFont = False
           TabOrder = 0
           Visible = False
           object Label15: TLabel
-            Left = 194
-            Height = 14
-            Top = 9
-            Width = 20
+            Left = 176
+            Height = 13
+            Top = 8
+            Width = 19
             Caption = 'até'
             Font.Color = clMaroon
-            Font.Height = -12
+            Font.Height = -11
             Font.Name = 'Tahoma'
             Font.Style = [fsBold]
             ParentFont = False
           end
           object DateTimePicker1: TDateTimePicker
-            Left = 18
-            Height = 28
+            Left = 16
+            Height = 25
             Top = 0
-            Width = 168
+            Width = 152
             CenturyFrom = 1941
             MaxDate = 2958465
             MinDate = -53780
             AutoSize = False
             Font.Color = clWindowText
-            Font.Height = -15
+            Font.Height = -14
             Font.Name = 'Tahoma'
             ParentFont = False
             TabOrder = 0
@@ -1517,16 +1535,16 @@ object FrmLogAcesso: TFrmLogAcesso
             MonthNames = 'Long'
           end
           object DateTimePicker2: TDateTimePicker
-            Left = 230
-            Height = 28
+            Left = 208
+            Height = 25
             Top = 0
-            Width = 162
+            Width = 147
             CenturyFrom = 1941
             MaxDate = 2958465
             MinDate = -53780
             AutoSize = False
             Font.Color = clWindowText
-            Font.Height = -15
+            Font.Height = -14
             Font.Name = 'Tahoma'
             ParentFont = False
             TabOrder = 1
@@ -1549,28 +1567,28 @@ object FrmLogAcesso: TFrmLogAcesso
   end
   object Panel2: TPanel
     Left = 0
-    Height = 44
-    Top = 418
-    Width = 815
+    Height = 40
+    Top = 378
+    Width = 873
     Align = alBottom
     BevelOuter = bvNone
-    ClientHeight = 44
-    ClientWidth = 815
+    ClientHeight = 40
+    ClientWidth = 873
     Color = clWhite
     Font.Color = clWindowText
-    Font.Height = -15
+    Font.Height = -14
     Font.Name = 'Tahoma'
     ParentColor = False
     ParentFont = False
     TabOrder = 4
     object BitBtn3: TBitBtn
-      Left = 723
-      Height = 31
-      Top = 7
-      Width = 86
+      Left = 655
+      Height = 28
+      Top = 6
+      Width = 78
       Caption = 'Fechar'
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -10
       Font.Name = 'Tahoma'
       Kind = bkClose
       ModalResult = 11
@@ -1579,13 +1597,13 @@ object FrmLogAcesso: TFrmLogAcesso
       TabOrder = 0
     end
     object voltar: TBitBtn
-      Left = 622
-      Height = 31
-      Top = 7
-      Width = 95
+      Left = 563
+      Height = 28
+      Top = 6
+      Width = 86
       Caption = 'Voltar'
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -10
       Font.Name = 'Tahoma'
       OnClick = voltarClick
       ParentFont = False
@@ -1593,13 +1611,13 @@ object FrmLogAcesso: TFrmLogAcesso
       Visible = False
     end
     object btnLimpar: TSpeedButton
-      Left = 201
-      Height = 31
-      Top = 8
-      Width = 106
+      Left = 182
+      Height = 28
+      Top = 7
+      Width = 96
       Caption = 'Limpar'
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -10
       Font.Name = 'Tahoma'
       Visible = False
       OnClick = btnLimparClick
@@ -1608,19 +1626,19 @@ object FrmLogAcesso: TFrmLogAcesso
   end
   object Dtscu: TDataSource
     DataSet = DM.cds_User
-    Left = 645
-    Top = 283
+    Left = 584
+    Top = 256
   end
   object Dtsrc: TDataSource
     DataSet = DM.ZQueryAssistente
-    Left = 724
-    Top = 406
+    Left = 656
+    Top = 368
   end
   object PopupMenu1: TPopupMenu
     OwnerDraw = True
     TrackButton = tbLeftButton
-    Left = 733
-    Top = 309
+    Left = 664
+    Top = 280
     object MenuItem1: TMenuItem
       Caption = 'Por Seleção Unica na Tabela'
       Bitmap.Data = {

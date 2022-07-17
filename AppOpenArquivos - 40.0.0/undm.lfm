@@ -1,10 +1,9 @@
 object DM: TDM
   OldCreateOrder = False
-  Height = 774
-  HorizontalOffset = 357
-  VerticalOffset = 130
-  Width = 1390
-  PPI = 106
+  Height = 701
+  HorizontalOffset = 279
+  VerticalOffset = 88
+  Width = 1259
   object ZUpdateSQL1: TZUpdateSQL
     DeleteSQL.Strings = (
       'DELETE FROM ARQUIVOLIST'
@@ -40,8 +39,8 @@ object DM: TDM
       '  ARQUIVOLIST.ID = :OLD_ID'
     )
     UseSequenceFieldForRefreshSQL = False
-    Left = 381
-    Top = 115
+    Left = 345
+    Top = 104
     ParamData = <    
       item
         DataType = ftUnknown
@@ -122,14 +121,14 @@ object DM: TDM
   object sdt_Combo: TZQuery
     Connection = ZConnection
     Params = <>
-    Left = 263
-    Top = 38
+    Left = 238
+    Top = 34
   end
   object dst_Login: TZQuery
     Connection = ZConnection
     Params = <>
-    Left = 380
-    Top = 35
+    Left = 344
+    Top = 32
   end
   object cds_Log: TZQuery
     Connection = ZConnection
@@ -147,8 +146,8 @@ object DM: TDM
         Name = 'CODIGO'
         ParamType = ptInput
       end>
-    Left = 509
-    Top = 35
+    Left = 461
+    Top = 32
     ParamData = <    
       item
         DataType = ftInteger
@@ -243,8 +242,8 @@ object DM: TDM
   object sdt_Verif: TZQuery
     Connection = ZConnection
     Params = <>
-    Left = 733
-    Top = 38
+    Left = 664
+    Top = 34
   end
   object cds_logados: TZQuery
     Connection = ZConnection
@@ -262,8 +261,8 @@ object DM: TDM
         Name = 'CODIGO'
         ParamType = ptInput
       end>
-    Left = 256
-    Top = 193
+    Left = 232
+    Top = 175
     ParamData = <    
       item
         DataType = ftInteger
@@ -329,8 +328,8 @@ object DM: TDM
       '  NUM_LOGADOS.CODIGO = :OLD_CODIGO'
     )
     UseSequenceFieldForRefreshSQL = False
-    Left = 380
-    Top = 194
+    Left = 344
+    Top = 176
     ParamData = <    
       item
         DataType = ftUnknown
@@ -373,8 +372,8 @@ object DM: TDM
         Name = 'COD_USUARIO'
         ParamType = ptInput
       end>
-    Left = 256
-    Top = 274
+    Left = 232
+    Top = 248
     ParamData = <    
       item
         DataType = ftInteger
@@ -440,8 +439,8 @@ object DM: TDM
       '  NUM_LOGADOS.CODIGO = :OLD_CODIGO'
     )
     UseSequenceFieldForRefreshSQL = False
-    Left = 380
-    Top = 274
+    Left = 344
+    Top = 248
     ParamData = <    
       item
         DataType = ftUnknown
@@ -498,8 +497,8 @@ object DM: TDM
       '  LOG.CODIGO = :OLD_CODIGO'
     )
     UseSequenceFieldForRefreshSQL = False
-    Left = 627
-    Top = 38
+    Left = 568
+    Top = 34
     ParamData = <    
       item
         DataType = ftUnknown
@@ -555,47 +554,47 @@ object DM: TDM
   object Qury: TZQuery
     Connection = ZConnection
     Params = <>
-    Left = 512
-    Top = 203
+    Left = 464
+    Top = 184
   end
   object sdt_List: TZQuery
     Connection = ZConnection
     Params = <>
-    Left = 733
-    Top = 115
+    Left = 664
+    Top = 104
   end
   object sds_Verif: TZQuery
     Connection = ZConnection
     Params = <>
-    Left = 822
-    Top = 115
+    Left = 744
+    Top = 104
   end
   object sdt_ExcAtual: TZQuery
     Connection = ZConnection
     Params = <>
-    Left = 622
-    Top = 201
+    Left = 563
+    Top = 182
   end
   object Qry_Secun: TZQuery
     Connection = ZConnection
     Params = <>
-    Left = 734
-    Top = 201
+    Left = 665
+    Top = 182
   end
   object DtsrcExcLogados: TDataSource
     DataSet = cds_ExcRepetidos
-    Left = 512
-    Top = 274
+    Left = 464
+    Top = 248
   end
   object Dtsrc_Logando: TDataSource
-    Left = 627
-    Top = 274
+    Left = 568
+    Top = 248
   end
   object sds_cont: TZQuery
     Connection = ZConnection
     Params = <>
-    Left = 734
-    Top = 274
+    Left = 665
+    Top = 248
   end
   object sds_Cont_Logar: TZQuery
     Connection = ZConnection
@@ -603,8 +602,8 @@ object DM: TDM
       'select CODIGO from NUM_LOGADOS'
     )
     Params = <>
-    Left = 822
-    Top = 35
+    Left = 744
+    Top = 32
     object sds_Cont_LogarCODIGO: TLongintField
       FieldKind = fkData
       FieldName = 'CODIGO'
@@ -628,8 +627,8 @@ object DM: TDM
         Name = 'CODIGO'
         ParamType = ptUnknown
       end>
-    Left = 928
-    Top = 115
+    Left = 840
+    Top = 104
     ParamData = <    
       item
         DataType = ftUnknown
@@ -971,8 +970,8 @@ object DM: TDM
       'select * from NUM_LOGADOS'
     )
     UseSequenceFieldForRefreshSQL = False
-    Left = 928
-    Top = 44
+    Left = 840
+    Top = 40
     ParamData = <    
       item
         DataType = ftUnknown
@@ -1011,8 +1010,8 @@ object DM: TDM
       'order by AQ.TITULO'
     )
     Params = <>
-    Left = 513
-    Top = 115
+    Left = 465
+    Top = 104
     object sds_ArquID: TLongintField
       FieldKind = fkData
       FieldName = 'ID'
@@ -1146,8 +1145,8 @@ object DM: TDM
       'order by AQ.DESCRICAO, AQ.TITULO desc '
     )
     Params = <>
-    Left = 627
-    Top = 115
+    Left = 568
+    Top = 104
     object sds_ArquTodosID: TLongintField
       FieldKind = fkData
       FieldName = 'ID'
@@ -1298,8 +1297,8 @@ object DM: TDM
         Name = 'TITULOASSUN'
         ParamType = ptInput
       end>
-    Left = 866
-    Top = 352
+    Left = 784
+    Top = 319
     ParamData = <    
       item
         DataType = ftString
@@ -1345,8 +1344,8 @@ object DM: TDM
         Name = 'NOME'
         ParamType = ptInput
       end>
-    Left = 1087
-    Top = 371
+    Left = 984
+    Top = 336
     ParamData = <    
       item
         DataType = ftString
@@ -1466,8 +1465,8 @@ object DM: TDM
         Name = 'IDUSUARIOS'
         ParamType = ptInput
       end>
-    Left = 848
-    Top = 201
+    Left = 768
+    Top = 182
     ParamData = <    
       item
         DataType = ftInteger
@@ -1520,8 +1519,8 @@ object DM: TDM
       '  ARQUIVOS_USUARIOS.IDUSUARIOS = :OLD_IDUSUARIOS'
     )
     UseSequenceFieldForRefreshSQL = False
-    Left = 945
-    Top = 201
+    Left = 856
+    Top = 182
     ParamData = <    
       item
         DataType = ftUnknown
@@ -1552,13 +1551,13 @@ object DM: TDM
     DataType = dtDataSet
     Title = 'RCAD5064 - Cadastral de Produtos'
     OnEnterRect = frReportArquivoEnterRect
-    Left = 262
-    Top = 352
+    Left = 237
+    Top = 319
   end
   object frDBDataSetArquivo: TfrDBDataSet
     DataSet = ZQueryRelatorioArquivo
-    Left = 380
-    Top = 350
+    Left = 344
+    Top = 317
   end
   object sds_User_Usuarios: TZQuery
     Connection = ZConnection
@@ -1580,8 +1579,8 @@ object DM: TDM
         Name = 'nome'
         ParamType = ptInput
       end>
-    Left = 857
-    Top = 280
+    Left = 776
+    Top = 254
     ParamData = <    
       item
         DataType = ftInteger
@@ -1662,8 +1661,8 @@ object DM: TDM
         Name = 'idArquivo'
         ParamType = ptInput
       end>
-    Left = 698
-    Top = 352
+    Left = 632
+    Top = 319
     ParamData = <    
       item
         DataType = ftInteger
@@ -1730,8 +1729,8 @@ object DM: TDM
   end
   object DataSourceRelArquivo: TDataSource
     DataSet = ZQueryRelatorioArquivo
-    Left = 530
-    Top = 352
+    Left = 480
+    Top = 319
   end
   object cds_User: TZQuery
     Connection = ZConnection
@@ -1751,8 +1750,8 @@ object DM: TDM
         Name = 'COD_USUARIO'
         ParamType = ptInput
       end>
-    Left = 265
-    Top = 442
+    Left = 240
+    Top = 400
     ParamData = <    
       item
         DataType = ftInteger
@@ -1874,8 +1873,8 @@ object DM: TDM
       'order by UR.NOME'
     )
     Params = <>
-    Left = 698
-    Top = 459
+    Left = 632
+    Top = 416
     object sds_OpenCOD_USUARIO: TLongintField
       FieldKind = fkData
       FieldName = 'COD_USUARIO'
@@ -2011,8 +2010,8 @@ object DM: TDM
       '  USUARIO.COD_USUARIO = :OLD_COD_USUARIO'
     )
     UseSequenceFieldForRefreshSQL = False
-    Left = 382
-    Top = 442
+    Left = 346
+    Top = 400
     ParamData = <    
       item
         DataType = ftUnknown
@@ -2085,8 +2084,8 @@ object DM: TDM
         Name = 'NOME'
         ParamType = ptInput
       end>
-    Left = 830
-    Top = 445
+    Left = 752
+    Top = 403
     ParamData = <    
       item
         DataType = ftString
@@ -2179,8 +2178,8 @@ object DM: TDM
         Name = 'paramNomeUser'
         ParamType = ptInput
       end>
-    Left = 645
-    Top = 463
+    Left = 584
+    Top = 419
     ParamData = <    
       item
         DataType = ftString
@@ -2271,8 +2270,8 @@ object DM: TDM
         Name = 'CODUser'
         ParamType = ptInput
       end>
-    Left = 263
-    Top = 521
+    Left = 238
+    Top = 472
     ParamData = <    
       item
         DataType = ftInteger
@@ -2324,8 +2323,8 @@ object DM: TDM
       ''
     )
     Params = <>
-    Left = 381
-    Top = 521
+    Left = 345
+    Top = 472
     object sds_viewID: TLongintField
       DisplayLabel = 'Cód Arquivo'
       DisplayWidth = 8
@@ -2479,8 +2478,8 @@ object DM: TDM
         Name = 'COD_USUARIO'
         ParamType = ptUnknown
       end>
-    Left = 530
-    Top = 521
+    Left = 480
+    Top = 472
     ParamData = <    
       item
         DataType = ftUnknown
@@ -2563,8 +2562,8 @@ object DM: TDM
         Name = 'COD_USUARIO'
         ParamType = ptInput
       end>
-    Left = 265
-    Top = 645
+    Left = 240
+    Top = 584
     ParamData = <    
       item
         DataType = ftInteger
@@ -2702,8 +2701,8 @@ object DM: TDM
       '  ARQUIVOLIST.ID = :OLD_ID'
     )
     UseSequenceFieldForRefreshSQL = False
-    Left = 528
-    Top = 583
+    Left = 478
+    Top = 528
     ParamData = <    
       item
         DataType = ftUnknown
@@ -2793,8 +2792,8 @@ object DM: TDM
       'select * from ARQUIVOLIST'
     )
     Params = <>
-    Left = 383
-    Top = 592
+    Left = 347
+    Top = 536
     object ZQuery2ID: TLongintField
       FieldKind = fkData
       FieldName = 'ID'
@@ -2938,8 +2937,8 @@ object DM: TDM
       ''
     )
     Params = <>
-    Left = 262
-    Top = 592
+    Left = 237
+    Top = 536
     object ZQuery1NOME_ARQUIVO: TStringField
       FieldKind = fkData
       FieldName = 'NOME_ARQUIVO'
@@ -2965,8 +2964,8 @@ object DM: TDM
         Name = 'CODIGO'
         ParamType = ptInput
       end>
-    Left = 383
-    Top = 645
+    Left = 347
+    Top = 584
     ParamData = <    
       item
         DataType = ftInteger
@@ -3029,8 +3028,8 @@ object DM: TDM
         Name = 'ID'
         ParamType = ptInput
       end>
-    Left = 698
-    Top = 521
+    Left = 632
+    Top = 472
     ParamData = <    
       item
         DataType = ftInteger
@@ -3148,8 +3147,8 @@ object DM: TDM
   object sds_IncCidades: TZQuery
     Connection = ZConnection
     Params = <>
-    Left = 1228
-    Top = 274
+    Left = 1112
+    Top = 248
   end
   object sds_OpenCidades: TZQuery
     Connection = ZConnection
@@ -3157,8 +3156,8 @@ object DM: TDM
       'select * From Cidades'
     )
     Params = <>
-    Left = 1343
-    Top = 274
+    Left = 1216
+    Top = 248
     object sds_OpenCidadesCODIGO: TLongintField
       FieldKind = fkData
       FieldName = 'CODIGO'
@@ -3213,8 +3212,8 @@ object DM: TDM
         Name = 'CODIGO'
         ParamType = ptInput
       end>
-    Left = 981
-    Top = 280
+    Left = 888
+    Top = 254
     ParamData = <    
       item
         DataType = ftInteger
@@ -3283,8 +3282,8 @@ object DM: TDM
       '  CIDADES.CODIGO = :OLD_CODIGO'
     )
     UseSequenceFieldForRefreshSQL = False
-    Left = 1113
-    Top = 279
+    Left = 1008
+    Top = 253
     ParamData = <    
       item
         DataType = ftUnknown
@@ -3326,8 +3325,8 @@ object DM: TDM
         Name = 'NOME'
         ParamType = ptInput
       end>
-    Left = 1098
-    Top = 222
+    Left = 994
+    Top = 201
     ParamData = <    
       item
         DataType = ftString
@@ -3387,8 +3386,8 @@ object DM: TDM
         Name = 'NOME'
         ParamType = ptInput
       end>
-    Left = 1095
-    Top = 177
+    Left = 992
+    Top = 160
     ParamData = <    
       item
         DataType = ftString
@@ -3458,8 +3457,8 @@ object DM: TDM
         Name = 'CODIGO'
         ParamType = ptInput
       end>
-    Left = 1042
-    Top = 433
+    Left = 944
+    Top = 392
     ParamData = <    
       item
         DataType = ftInteger
@@ -3577,8 +3576,8 @@ object DM: TDM
         Name = 'NOME_DEP'
         ParamType = ptUnknown
       end>
-    Left = 1352
-    Top = 357
+    Left = 1224
+    Top = 323
     ParamData = <    
       item
         DataType = ftUnknown
@@ -3623,8 +3622,8 @@ object DM: TDM
       'order by DE.NOME_DEP'
     )
     Params = <>
-    Left = 1095
-    Top = 124
+    Left = 992
+    Top = 112
     object sds_OpenAutorListCODIGO: TLongintField
       FieldKind = fkData
       FieldName = 'CODIGO'
@@ -3708,8 +3707,8 @@ object DM: TDM
       'select * from ASSUNTO'
     )
     Params = <>
-    Left = 875
-    Top = 528
+    Left = 792
+    Top = 478
     object sds_OpenAssuntCODIGO: TLongintField
       FieldKind = fkData
       FieldName = 'CODIGO'
@@ -3763,8 +3762,8 @@ object DM: TDM
         Name = 'TITULOASSUN'
         ParamType = ptUnknown
       end>
-    Left = 972
-    Top = 357
+    Left = 880
+    Top = 323
     ParamData = <    
       item
         DataType = ftUnknown
@@ -3803,8 +3802,8 @@ object DM: TDM
       ''
     )
     Params = <>
-    Left = 769
-    Top = 592
+    Left = 696
+    Top = 536
     object ZQueryAssistenteCODIGO: TLongintField
       FieldKind = fkData
       FieldName = 'CODIGO'
@@ -3881,6 +3880,7 @@ object DM: TDM
       Required = False
     end
     object ZQueryAssistenteNOME_ARQUIVO: TStringField
+      DisplayLabel = 'Nome do Arquivo'
       DisplayWidth = 50
       FieldKind = fkData
       FieldName = 'NOME_ARQUIVO'
@@ -3915,6 +3915,7 @@ object DM: TDM
       Size = 30
     end
     object ZQueryAssistenteCOD_ACAO: TLongintField
+      DisplayLabel = 'Código da Ação'
       FieldKind = fkData
       FieldName = 'COD_ACAO'
       Index = 10
@@ -3938,8 +3939,8 @@ object DM: TDM
         Name = 'CodigoParam'
         ParamType = ptInput
       end>
-    Left = 901
-    Top = 592
+    Left = 816
+    Top = 536
     ParamData = <    
       item
         DataType = ftInteger
@@ -4043,21 +4044,21 @@ object DM: TDM
   end
   object frDBDataSetLogTodos: TfrDBDataSet
     DataSet = ZQueryAssistente
-    Left = 1148
-    Top = 583
+    Left = 1040
+    Top = 528
   end
   object frDBDataSetZQueryLogParam: TfrDBDataSet
     DataSet = ZQueryLogParam
-    Left = 1113
-    Top = 680
+    Left = 1008
+    Top = 616
   end
   object frDesigner1: TfrDesigner
-    Left = 936
-    Top = 451
+    Left = 848
+    Top = 408
   end
   object frBarCodeObject1: TfrBarCodeObject
-    Left = 1193
-    Top = 512
+    Left = 1080
+    Top = 464
   end
   object ZQueryOpenAutores: TZQuery
     Connection = ZConnection
@@ -4074,8 +4075,8 @@ object DM: TDM
         Name = 'CODIGO'
         ParamType = ptInput
       end>
-    Left = 1184
-    Top = 357
+    Left = 1072
+    Top = 323
     ParamData = <    
       item
         DataType = ftInteger
@@ -4194,8 +4195,8 @@ object DM: TDM
         Name = 'CODIGO'
         ParamType = ptInput
       end>
-    Left = 262
-    Top = 698
+    Left = 237
+    Top = 632
     ParamData = <    
       item
         DataType = ftInteger
@@ -4253,8 +4254,8 @@ object DM: TDM
       '  DEPARTAMENTOS.CODIGO = :OLD_CODIGO'
     )
     UseSequenceFieldForRefreshSQL = False
-    Left = 389
-    Top = 698
+    Left = 352
+    Top = 632
     ParamData = <    
       item
         DataType = ftUnknown
@@ -4290,8 +4291,8 @@ object DM: TDM
         Name = 'NOME_DEP'
         ParamType = ptUnknown
       end>
-    Left = 528
-    Top = 689
+    Left = 478
+    Top = 624
     ParamData = <    
       item
         DataType = ftUnknown
@@ -4334,8 +4335,8 @@ object DM: TDM
       'select * from DEPARTAMENTOS'
     )
     Params = <>
-    Left = 656
-    Top = 689
+    Left = 594
+    Top = 624
     object sds_OpenDepCODIGO: TLongintField
       DisplayWidth = 8
       FieldKind = fkData
@@ -4375,8 +4376,8 @@ object DM: TDM
     DataType = dtDataSet
     Title = 'RCAD5064 - Cadastral de Produtos'
     OnGetValue = frReportLogTodosGetValue
-    Left = 1007
-    Top = 539
+    Left = 912
+    Top = 488
   end
   object frReportLogParam: TfrReport
     Dataset = frDBDataSetZQueryLogParam
@@ -4385,8 +4386,8 @@ object DM: TDM
     PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
     DataType = dtDataSet
     Title = 'RCAD5064 - Cadastral de Produtos'
-    Left = 1007
-    Top = 636
+    Left = 912
+    Top = 576
   end
   object ZQArquivo: TZQuery
     Connection = ZConnection
@@ -4407,8 +4408,8 @@ object DM: TDM
         Name = 'ID'
         ParamType = ptInput
       end>
-    Left = 256
-    Top = 115
+    Left = 232
+    Top = 104
     ParamData = <    
       item
         DataType = ftInteger
@@ -4585,8 +4586,8 @@ object DM: TDM
         Name = 'COD_USUARIO'
         ParamType = ptInput
       end>
-    Left = 513
-    Top = 442
+    Left = 465
+    Top = 400
     ParamData = <    
       item
         DataType = ftInteger
@@ -4626,8 +4627,8 @@ object DM: TDM
         Name = 'COD_AUTOR'
         ParamType = ptInput
       end>
-    Left = 622
-    Top = 420
+    Left = 563
+    Top = 380
     ParamData = <    
       item
         DataType = ftInteger
@@ -4668,8 +4669,8 @@ object DM: TDM
         Name = 'nome'
         ParamType = ptInput
       end>
-    Left = 786
-    Top = 415
+    Left = 712
+    Top = 376
     ParamData = <    
       item
         DataType = ftString
@@ -4772,8 +4773,8 @@ object DM: TDM
       '  AUTORES.CODIGO = :OLD_CODIGO'
     )
     UseSequenceFieldForRefreshSQL = False
-    Left = 1157
-    Top = 433
+    Left = 1048
+    Top = 392
     ParamData = <    
       item
         DataType = ftUnknown
@@ -4831,7 +4832,7 @@ object DM: TDM
     Password = 'masterkey'
     Protocol = 'firebird-3.0'
     LibraryLocation = 'fbClient.dll'
-    Left = 71
-    Top = 203
+    Left = 64
+    Top = 184
   end
 end

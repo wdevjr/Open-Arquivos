@@ -12,7 +12,7 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, ExtCtrls, ComCtrls, StdCtrls, Buttons, DBCtrls, Grids, DBGrids,
   CheckLst, Calendar, Menus, GifAnim, LR_Class, LR_DBSet,
-  DateTimePicker, DB, ZDataset;
+  DateTimePicker, DB, ZDataset, Types;
 
 type
 
@@ -22,6 +22,7 @@ type
     BitBtn1: TBitBtn;
     BitBtn2: TBitBtn;
     BitBtn3: TBitBtn;
+    ComboBoxEventosButtos: TComboBox;
     DBEdit1: TDBEdit;
     DBText1: TDBText;
     Dtsrc: TDataSource;
@@ -81,6 +82,10 @@ type
     procedure BitBtn1Click(Sender: TObject);
     procedure BitBtn3Click(Sender: TObject);
     procedure BitBtn5Click(Sender: TObject);
+    procedure ComboBoxEventosButtosDrawItem(Control: TWinControl; Index: Integer;
+      ARect: TRect; State: TOwnerDrawState);
+    procedure ComboBox1MeasureItem(Control: TWinControl; Index: Integer;
+      var AHeight: Integer);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormShow(Sender: TObject);
     procedure imprimirClick(Sender: TObject);
@@ -165,8 +170,10 @@ begin
     DM.ZQueryAssistente.SQL.Text :=
       'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, ar.NOME_ARQUIVO FROM LOG r'
       + ' left join ARQUIVOLIST ar on r.COD_REGISTRO = ar.ID '
-      + ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO ' +
-      ' where PO.NOME like ' + QuotedStr('%' + EditPesquNome.Text + '%')
+      + ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO '
+      + ' left join ACAO ac on r.COD_ACAO = ac.ID '
+      + ' where PO.NOME like ' + QuotedStr('%' + EditPesquNome.Text + '%')+' and r.COD_ACAO ='+IntToStr(ComboBoxEventosButtos.ItemIndex)
+
       // + ' or (r.INSERDATA >= :inicial)'
       // + ' and (r.INSERDATA <= :finall)'
       + ' order by r.INSERDATA, r.HORA desc';
@@ -188,6 +195,7 @@ begin
       'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, ar.NOME_ARQUIVO FROM LOG r' + ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO '
       //+ ' where PO.NOME like ' + QuotedStr(EditPesquNome.Text + '%')
       + ' left join ARQUIVOLIST ar on r.COD_REGISTRO = ar.ID '
+      + ' left join ACAO ac on r.COD_ACAO = ac.ID '
       + ' where r.COD_USUARIO=' + DBEdit1.Text
       //  + ' where r.INSERDATA >= :inicial'
       //+ ' and r.INSERDATA <= :finall'
@@ -214,7 +222,8 @@ begin
       'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, ar.NOME_ARQUIVO FROM LOG r'
       + ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO '
       + ' left join ARQUIVOLIST ar on r.COD_REGISTRO = ar.ID '
-      + ' where PO.NOME like ' + QuotedStr(EditPesquNome.Text + '%') + ' and r.INSERDATA >= :inicial' + ' and r.INSERDATA <= :finall' + ' order by r.INSERDATA, r.HORA desc');
+      + ' left join ACAO ac on r.COD_ACAO = ac.ID '
+      + ' where PO.NOME like ' + QuotedStr(EditPesquNome.Text + '%') + ' and r.INSERDATA >= :inicial' + ' and r.INSERDATA <= :finall and r.COD_ACAO ='+IntToStr(ComboBoxEventosButtos.ItemIndex)+' order by r.INSERDATA, r.HORA desc');
     DM.ZQueryAssistente.ParamByName('inicial').asDate := StrToDate(Inicial);
     DM.ZQueryAssistente.ParamByName('finall').asDate := StrToDate(Finall);
     DM.ZQueryAssistente.Open;
@@ -234,9 +243,10 @@ begin
     DM.ZQueryAssistente.SQL.Add(
       'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, ar.NOME_ARQUIVO FROM LOG r' +
       ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO '
-      + ' left join ARQUIVOLIST ar on r.COD_REGISTRO = ar.ID ' +
-      ' where r.INSERDATA >= :inicial' + ' and r.INSERDATA <= :finall' +
-      ' order by r.INSERDATA, r.HORA desc');
+      + ' left join ARQUIVOLIST ar on r.COD_REGISTRO = ar.ID '
+      + ' left join ACAO ac on r.COD_ACAO = ac.ID '
+      + ' where r.INSERDATA >= :inicial' + ' and r.INSERDATA <= :finall and r.COD_ACAO ='+IntToStr(ComboBoxEventosButtos.ItemIndex)
+      + ' order by r.INSERDATA, r.HORA desc');
     DM.ZQueryAssistente.ParamByName('inicial').asDate := StrToDate(Inicial);
     DM.ZQueryAssistente.ParamByName('finall').asDate := StrToDate(Finall);
     DM.ZQueryAssistente.Open;
@@ -256,8 +266,9 @@ begin
       'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, ar.NOME_ARQUIVO FROM LOG r' +
       ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO '
       + ' left join ARQUIVOLIST ar on r.COD_REGISTRO = ar.ID '
+      + ' left join ACAO ac on r.COD_ACAO = ac.ID '
       + ' where PO.NOME like ' + QuotedStr(EditPesquNome.Text + '%') +
-      ' or r.COD_USUARIO=' + DBEdit1.Text + ' or r.INSERDATA >= :inicial' + ' and r.INSERDATA <= :finall' + ' order by r.INSERDATA, r.HORA desc');
+      ' or r.COD_USUARIO=' + DBEdit1.Text + ' or r.INSERDATA >= :inicial' + ' and r.INSERDATA <= :finalland r.COD_ACAO ='+IntToStr(ComboBoxEventosButtos.ItemIndex)+ ' order by r.INSERDATA, r.HORA desc');
     DM.ZQueryAssistente.ParamByName('inicial').asDate := StrToDate(Inicial);
     DM.ZQueryAssistente.ParamByName('finall').asDate := StrToDate(Finall);
     DM.ZQueryAssistente.Open;
@@ -275,10 +286,11 @@ begin
       'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, ar.NOME_ARQUIVO FROM LOG r' +
       ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO '
       + ' left join ARQUIVOLIST ar on r.COD_REGISTRO = ar.ID '
+      + ' left join ACAO ac on r.COD_ACAO = ac.ID '
       //+ ' where PO.NOME like ' + QuotedStr(EditPesquNome.Text + '%')
       //+ ' where r.COD_USUARIO=' + DBEdit1.Text
-      + ' where r.INSERDATA >= :inicial' + ' and r.INSERDATA <= :finall' +
-      ' order by r.INSERDATA, r.HORA desc');
+      + ' where r.INSERDATA >= :inicial' + ' and r.INSERDATA <= :finall and r.COD_ACAO ='+IntToStr(ComboBoxEventosButtos.ItemIndex)
+      + ' order by r.INSERDATA, r.HORA desc');
     DM.ZQueryAssistente.ParamByName('inicial').asDate := StrToDate(Inicial);
     DM.ZQueryAssistente.ParamByName('finall').asDate := StrToDate(Finall);
     DM.ZQueryAssistente.Filter := 'COD_USUARIO=' + DBEdit1.Text;
@@ -288,6 +300,48 @@ begin
     PanelAlert.Visible := True;
   end;
 end;
+
+procedure TFrmLogAcesso.ComboBoxEventosButtosDrawItem(Control: TWinControl; Index: Integer;
+  ARect: TRect; State: TOwnerDrawState);
+var
+aColor:TColor;
+aBrush:TBrush;
+begin
+  aBrush:=TBrush.Create;
+  with (Control as TCombobox).Canvas do
+    begin
+       if not odd(Index) then
+       begin
+         aColor:=$00CBEAEB;
+       end
+       else
+       begin
+         aColor:=$00E7CFCF;
+       end;
+      aBrush.Style:=bsSolid;
+      aBrush.Color:=aColor;
+      Windows.FillRect(handle,ARect,aBrush.Handle);
+      Brush.Style:=Bsclear;
+      TextOut(ARect.Left,ARect.Top,(Control as TComboBox).Items[Index]);
+      aBrush.Free;
+    end;
+   //with Control as TComboBox do
+   //begin
+   //Canvas.Font.Color := clBlue; // mudar cor da fonte do item
+   //Canvas.Brush.Color := clGreen; // mostrar fundo branco no combobox
+   //Canvas.FillRect(ARect);
+   //Canvas.TextOut(ARect.Left,ARect.Top,ComboBoxEventosButtos.Items.Strings[index]); // mostrar Nomes
+   //end;
+
+end;
+
+procedure TFrmLogAcesso.ComboBox1MeasureItem(Control: TWinControl;
+  Index: Integer; var AHeight: Integer);
+begin
+
+end;
+
+
 
 procedure TFrmLogAcesso.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
@@ -388,6 +442,7 @@ begin
   LabelNum.Caption := '';
   DBEdit1.Text := '';
   EditPesquNome.Text := '';
+  ComboBoxEventosButtos.ItemIndex:=0;
   PanelMostrData.Visible := False;
   PanelAlert.Visible := False;
   DM.ZQueryAssistente.Cancel;
