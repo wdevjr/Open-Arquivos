@@ -45,13 +45,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="UnDM"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="6"/>
-        <TopLine Value="599"/>
+        <TopLine Value="598"/>
         <CursorPos X="25" Y="502"/>
         <UsageCount Value="45"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit3>
       <Unit4>
         <Filename Value="UnCadPerfil.pas"/>
@@ -251,9 +249,10 @@
         <ComponentName Value="FrmLogAcesso"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="281"/>
-        <CursorPos X="9" Y="293"/>
+        <TopLine Value="290"/>
+        <CursorPos X="37" Y="198"/>
         <UsageCount Value="45"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -452,123 +451,123 @@
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="309" TopLine="294"/>
+        <Caret Line="316" Column="10" TopLine="294"/>
       </Position1>
       <Position2>
         <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="316" Column="10" TopLine="294"/>
+        <Caret Line="304" Column="41" TopLine="294"/>
       </Position2>
       <Position3>
         <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="304" Column="41" TopLine="294"/>
+        <Caret Line="314" Column="27" TopLine="297"/>
       </Position3>
       <Position4>
         <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="314" Column="27" TopLine="297"/>
+        <Caret Line="307" Column="28" TopLine="297"/>
       </Position4>
       <Position5>
         <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="307" Column="28" TopLine="297"/>
+        <Caret Line="309" Column="27" TopLine="297"/>
       </Position5>
       <Position6>
         <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="309" Column="27" TopLine="297"/>
+        <Caret Line="311" Column="29" TopLine="296"/>
       </Position6>
       <Position7>
         <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="311" Column="29" TopLine="296"/>
+        <Caret Line="307" Column="27" TopLine="297"/>
       </Position7>
       <Position8>
         <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="307" Column="27" TopLine="297"/>
+        <Caret Line="169" Column="73" TopLine="169"/>
       </Position8>
       <Position9>
         <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="169" Column="73" TopLine="169"/>
+        <Caret Line="308" Column="28" TopLine="297"/>
       </Position9>
       <Position10>
         <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="308" Column="28" TopLine="297"/>
+        <Caret Line="309" Column="29" TopLine="297"/>
       </Position10>
       <Position11>
         <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="309" Column="29" TopLine="297"/>
+        <Caret Line="433" Column="37" TopLine="421"/>
       </Position11>
       <Position12>
         <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="433" Column="37" TopLine="421"/>
+        <Caret Line="162" Column="16" TopLine="159"/>
       </Position12>
       <Position13>
         <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="162" Column="16" TopLine="159"/>
+        <Caret Line="311" Column="33" TopLine="304"/>
       </Position13>
       <Position14>
         <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="311" Column="33" TopLine="304"/>
+        <Caret Line="308" Column="28" TopLine="296"/>
       </Position14>
       <Position15>
         <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="308" Column="28" TopLine="296"/>
+        <Caret Line="309" Column="26" TopLine="297"/>
       </Position15>
       <Position16>
         <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="309" Column="26" TopLine="297"/>
+        <Caret Line="311" Column="33" TopLine="297"/>
       </Position16>
       <Position17>
         <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="311" Column="33" TopLine="297"/>
+        <Caret Line="309" Column="29" TopLine="301"/>
       </Position17>
       <Position18>
         <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="309" Column="29" TopLine="301"/>
+        <Caret Line="325" Column="6" TopLine="315"/>
       </Position18>
       <Position19>
         <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="325" Column="6" TopLine="315"/>
+        <Caret Line="324" Column="31" TopLine="309"/>
       </Position19>
       <Position20>
         <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="324" Column="31" TopLine="309"/>
+        <Caret Line="327" Column="31" TopLine="308"/>
       </Position20>
       <Position21>
         <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="327" Column="31" TopLine="308"/>
+        <Caret Line="326" Column="33" TopLine="312"/>
       </Position21>
       <Position22>
         <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="326" Column="33" TopLine="312"/>
+        <Caret Line="312" Column="37" TopLine="299"/>
       </Position22>
       <Position23>
         <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="312" Column="37" TopLine="299"/>
+        <Caret Line="224" Column="159" TopLine="212"/>
       </Position23>
       <Position24>
         <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="175" TopLine="176"/>
+        <Caret Line="288" Column="64" TopLine="287"/>
       </Position24>
       <Position25>
         <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="224" Column="159" TopLine="212"/>
+        <Caret Line="175" Column="9" TopLine="164"/>
       </Position25>
       <Position26>
         <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="288" Column="64" TopLine="287"/>
+        <Caret Line="173" Column="68" TopLine="163"/>
       </Position26>
       <Position27>
         <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="175" Column="9" TopLine="164"/>
+        <Caret Line="249" Column="9" TopLine="236"/>
       </Position27>
       <Position28>
         <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="173" Column="68" TopLine="163"/>
+        <Caret Line="246" Column="64" TopLine="236"/>
       </Position28>
       <Position29>
         <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="249" Column="9" TopLine="236"/>
+        <Caret Line="293" Column="9" TopLine="281"/>
       </Position29>
       <Position30>
         <Filename Value="UnUtilitLog.pas"/>
-        <Caret Line="246" Column="64" TopLine="236"/>
+        <Caret Line="195" Column="210" TopLine="184"/>
       </Position30>
     </JumpHistory>
     <RunParams>

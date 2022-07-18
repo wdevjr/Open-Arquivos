@@ -192,7 +192,8 @@ begin
     //Inicial := DateToStr(DateTimePicker1.Date);
     //Finall := DateToStr(DateTimePicker2.Date);
     DM.ZQueryAssistente.SQL.Add(
-      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, ar.NOME_ARQUIVO FROM LOG r' + ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO '
+      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, ar.NOME_ARQUIVO FROM LOG r '
+      + ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO '
       //+ ' where PO.NOME like ' + QuotedStr(EditPesquNome.Text + '%')
       + ' left join ARQUIVOLIST ar on r.COD_REGISTRO = ar.ID '
       + ' left join ACAO ac on r.COD_ACAO = ac.ID '
@@ -290,7 +291,7 @@ begin
       //+ ' where PO.NOME like ' + QuotedStr(EditPesquNome.Text + '%')
       //+ ' where r.COD_USUARIO=' + DBEdit1.Text
       + ' where r.INSERDATA >= :inicial' + ' and r.INSERDATA <= :finall and r.COD_ACAO ='+IntToStr(ComboBoxEventosButtos.ItemIndex)
-      ' order by r.INSERDATA, r.HORA desc');
+      + ' order by r.INSERDATA, r.HORA desc');
     DM.ZQueryAssistente.ParamByName('inicial').asDate := StrToDate(Inicial);
     DM.ZQueryAssistente.ParamByName('finall').asDate := StrToDate(Finall);
     DM.ZQueryAssistente.Filter := 'COD_USUARIO=' + DBEdit1.Text;
