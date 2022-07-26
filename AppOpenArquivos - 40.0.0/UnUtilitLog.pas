@@ -161,6 +161,7 @@ begin
   Inicial := '';
   finall := '';
 
+
       if (PanelMostrData.Visible = True) and (EditPesquNome.Text = '') and
     (DBText1.Caption = '') and (ComboBoxEventosButtos.Text = '') then
   begin
@@ -254,6 +255,7 @@ begin
     LabelNum.Caption := IntToStr(DM.ZQueryAssistente.RecordCount);
     PanelAlert.Visible := True;
   end;
+
 
   if (DBEdit1.Text = '') and (EditPesquNome.Text = '') and
     (PanelMostrData.Visible = True)  and (ComboBoxEventosButtos.Text <> '') then

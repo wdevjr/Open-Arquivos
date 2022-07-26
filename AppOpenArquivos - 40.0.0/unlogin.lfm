@@ -555,9 +555,9 @@ object FrmLogin: TFrmLogin
   end
   object GifAnim1: TGifAnim
     Left = 210
-    Height = 24
+    Height = 32
     Top = 88
-    Width = 42
+    Width = 96
     Animate = False
     FileName = 'anima\transmitindo.gif'
   end
@@ -565,7 +565,8 @@ object FrmLogin: TFrmLogin
     Left = 72
     Height = 21
     Top = 16
-    Width = 180
+    Width = 248
+    AutoSize = False
     Caption = 'Open Arquivos - 45.20.0'
     Font.Color = clBlue
     Font.Height = -16

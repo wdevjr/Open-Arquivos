@@ -256,7 +256,7 @@ begin
   end;
 
   if (DBEdit1.Text = '') and (EditPesquNome.Text = '') and
-    (PanelMostrData.Visible = True) then
+    (PanelMostrData.Visible = True)  and (ComboBoxEventosButtos.Text <> '') then
   begin
     DM.ZQueryAssistente.Close;
     DM.ZQueryAssistente.Params.Clear;
