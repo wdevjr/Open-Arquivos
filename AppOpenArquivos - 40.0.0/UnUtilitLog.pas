@@ -161,7 +161,6 @@ begin
   Inicial := '';
   finall := '';
 
-
       if (PanelMostrData.Visible = True) and (EditPesquNome.Text = '') and
     (DBText1.Caption = '') and (ComboBoxEventosButtos.Text = '') then
   begin

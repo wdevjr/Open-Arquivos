@@ -146,7 +146,7 @@ object Abertura: TAbertura
     E3FF
   }
   Position = poDesktopCenter
-  LCLVersion = '2.0.12.0'
+  LCLVersion = '2.2.0.4'
   object Image4: TImage
     Left = 280
     Height = 56
@@ -282,7 +282,6 @@ object Abertura: TAbertura
       Caption = '(c) Todos os Direitos Reservados a Walter Ribeiro H. Jr.'
       Font.Color = clWhite
       Font.Style = [fsBold]
-      ParentColor = False
       ParentFont = False
     end
   end
@@ -824,7 +823,6 @@ object Abertura: TAbertura
     Caption = '2021'
     Font.Color = clRed
     Font.Style = [fsBold]
-    ParentColor = False
     ParentFont = False
   end
   object Image2: TImage
@@ -1236,7 +1234,6 @@ object Abertura: TAbertura
     Font.Color = clGreen
     Font.Height = -16
     Font.Style = [fsBold]
-    ParentColor = False
     ParentFont = False
   end
   object plGauge1: TplGauge
@@ -1266,7 +1263,7 @@ object Abertura: TAbertura
     Top = 10
     Width = 119
     AutoSize = False
-    Caption = '40.0.0'
+    Caption = '45.20.0'
     Font.CharSet = ANSI_CHARSET
     Font.Color = clRed
     Font.Height = -33
@@ -1274,7 +1271,6 @@ object Abertura: TAbertura
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
-    ParentColor = False
     ParentFont = False
   end
   object Label2: TLabel
@@ -1290,7 +1286,6 @@ object Abertura: TAbertura
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
-    ParentColor = False
     ParentFont = False
   end
 end

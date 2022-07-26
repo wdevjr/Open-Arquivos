@@ -33,7 +33,7 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UnLogin"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="312"/>
+        <TopLine Value="285"/>
         <CursorPos X="45" Y="326"/>
         <UsageCount Value="46"/>
         <Loaded Value="True"/>
@@ -197,10 +197,12 @@
         <ComponentName Value="FrmCadLogDet"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
+        <EditorIndex Value="5"/>
         <TopLine Value="302"/>
         <CursorPos X="3" Y="304"/>
         <UsageCount Value="46"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit17>
       <Unit18>
         <Filename Value="undlgpesquisautores.pas"/>
@@ -248,7 +250,6 @@
         <ComponentName Value="FrmLogAcesso"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="4"/>
         <TopLine Value="154"/>
         <CursorPos X="3" Y="163"/>
@@ -354,7 +355,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UnAbertura"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
+        <TopLine Value="16"/>
         <UsageCount Value="46"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>

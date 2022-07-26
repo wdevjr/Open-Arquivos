@@ -33,7 +33,7 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UnLogin"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="312"/>
+        <TopLine Value="285"/>
         <CursorPos X="45" Y="326"/>
         <UsageCount Value="46"/>
         <Loaded Value="True"/>
@@ -46,7 +46,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="UnDM"/>
-        <TopLine Value="597"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="596"/>
         <CursorPos X="25" Y="502"/>
         <UsageCount Value="46"/>
         <Loaded Value="True"/>
@@ -197,12 +198,12 @@
         <ComponentName Value="FrmCadLogDet"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="5"/>
         <TopLine Value="302"/>
         <CursorPos X="3" Y="304"/>
         <UsageCount Value="46"/>
         <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit17>
       <Unit18>
         <Filename Value="undlgpesquisautores.pas"/>
@@ -356,9 +357,9 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UnAbertura"/>
         <EditorIndex Value="2"/>
+        <TopLine Value="16"/>
         <UsageCount Value="46"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit32>
       <Unit33>
         <Filename Value="unatribuiusuariosporarquivos.pas"/>

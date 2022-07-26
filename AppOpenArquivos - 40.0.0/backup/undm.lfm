@@ -1,7 +1,7 @@
 object DM: TDM
   OldCreateOrder = False
   Height = 701
-  HorizontalOffset = 329
+  HorizontalOffset = 123
   VerticalOffset = 90
   Width = 1259
   object ZUpdateSQL1: TZUpdateSQL
