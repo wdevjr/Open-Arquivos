@@ -255,7 +255,7 @@ var
 begin
   StatusBar1.Panels[0].Text :=
     Saudacao + ' Hoje é ' + formatdatetime('dddddd', Date);
-  Caption := 'Open Arquivos v40.0.0 - Tela Principal - IP:' + DM.GetIP;
+  Caption := 'Open Arquivos v45.20.0 - Tela Principal - IP:' + DM.GetIP;
   InicializarComponentes;
 
 

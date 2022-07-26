@@ -161,6 +161,28 @@ begin
   Inicial := '';
   finall := '';
 
+      if (PanelMostrData.Visible = True) and (EditPesquNome.Text = '') and
+    (DBText1.Caption = '') and (ComboBoxEventosButtos.Text = '') then
+  begin
+    DM.ZQueryAssistente.Close;
+    DM.ZQueryAssistente.Params.Clear;
+    DM.ZQueryAssistente.SQL.Clear;
+    Inicial := DateToStr(DateTimePicker1.Date);
+    Finall := DateToStr(DateTimePicker2.Date);
+    DM.ZQueryAssistente.SQL.Text:=
+      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, ar.NOME_ARQUIVO FROM LOG r'
+      + ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO '
+      + ' left join ARQUIVOLIST ar on r.COD_REGISTRO = ar.ID '
+      + ' left join ACAO ac on r.COD_ACAO = ac.ID '
+      + ' where r.INSERDATA >= :inicial and r.INSERDATA <= :finall order by r.INSERDATA, r.HORA desc';
+    DM.ZQueryAssistente.ParamByName('inicial').asDate := StrToDate(Inicial);
+    DM.ZQueryAssistente.ParamByName('finall').asDate := StrToDate(Finall);
+    DM.ZQueryAssistente.Open;
+    DM.ZQueryAssistente.Refresh;
+    LabelNum.Caption := IntToStr(DM.ZQueryAssistente.RecordCount);
+    PanelAlert.Visible := True;
+  end;
+
   if (EditPesquNome.Text <> '') and (DBEdit1.Text = '') and
     (PanelMostrData.Visible = False) then
   begin
@@ -234,7 +256,7 @@ begin
   end;
 
   if (DBEdit1.Text = '') and (EditPesquNome.Text = '') and
-    (PanelMostrData.Visible = True) then
+    (PanelMostrData.Visible = True)  and (ComboBoxEventosButtos.Text <> '') then
   begin
     DM.ZQueryAssistente.Close;
     DM.ZQueryAssistente.Params.Clear;

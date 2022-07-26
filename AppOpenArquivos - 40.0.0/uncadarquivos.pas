@@ -1589,7 +1589,7 @@ procedure TFormArquivo.inserirClick(Sender: TObject);
 begin
   if not Dtsrc.DataSet.Active then
     Dtsrc.DataSet.Open;
-  Dtsrc.DataSet.Append;
+    Dtsrc.DataSet.Append;
 
   lookUser.Enabled := False;
 

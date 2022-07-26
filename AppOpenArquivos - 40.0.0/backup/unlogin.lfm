@@ -1,43 +1,41 @@
 object FrmLogin: TFrmLogin
   Left = 582
-  Height = 230
+  Height = 240
   Top = 311
   Width = 367
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'Open Arquivos - Login de Acesso'
-  ClientHeight = 230
+  ClientHeight = 240
   ClientWidth = 367
   Color = 15004141
   OnShow = FormShow
   Position = poDesktopCenter
-  LCLVersion = '2.0.12.0'
+  LCLVersion = '2.2.0.4'
   object Label1: TLabel
     Left = 10
-    Height = 15
+    Height = 19
     Top = 142
-    Width = 33
+    Width = 41
     Caption = 'Login:'
     Font.Color = clBlack
     Font.Style = [fsBold]
-    ParentColor = False
     ParentFont = False
   end
   object Label2: TLabel
     Left = 8
-    Height = 15
+    Height = 19
     Top = 166
-    Width = 37
+    Width = 44
     Caption = 'Senha:'
     Font.Color = clBlack
     Font.Style = [fsBold]
-    ParentColor = False
     ParentFont = False
   end
   object EdtSenha: TEdit
-    Left = 48
-    Height = 23
+    Left = 64
+    Height = 27
     Top = 166
-    Width = 296
+    Width = 280
     Color = clWhite
     EchoMode = emPassword
     Font.Color = clGreen
@@ -46,10 +44,10 @@ object FrmLogin: TFrmLogin
     TabOrder = 0
   end
   object Edtusuario: TComboBox
-    Left = 48
+    Left = 64
     Height = 25
     Top = 134
-    Width = 296
+    Width = 280
     Color = clWhite
     Font.CharSet = ANSI_CHARSET
     Font.Color = clBlue
@@ -66,7 +64,7 @@ object FrmLogin: TFrmLogin
   object BitBtn1: TBitBtn
     Left = 200
     Height = 30
-    Top = 192
+    Top = 201
     Width = 75
     Default = True
     DefaultCaption = True
@@ -78,7 +76,7 @@ object FrmLogin: TFrmLogin
   object BitBtn2: TBitBtn
     Left = 280
     Height = 30
-    Top = 192
+    Top = 200
     Width = 75
     Caption = 'Fechar'
     Kind = bkClose
@@ -92,7 +90,6 @@ object FrmLogin: TFrmLogin
     Width = 17
     Caption = '(c)'
     Font.Height = -16
-    ParentColor = False
     ParentFont = False
   end
   object Image4: TImage
@@ -554,7 +551,6 @@ object FrmLogin: TFrmLogin
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
-    ParentColor = False
     ParentFont = False
   end
   object GifAnim1: TGifAnim
@@ -574,7 +570,6 @@ object FrmLogin: TFrmLogin
     Font.Color = clBlue
     Font.Height = -16
     Font.Style = [fsBold]
-    ParentColor = False
     ParentFont = False
   end
   object Image1: TImage
@@ -631,7 +626,6 @@ object FrmLogin: TFrmLogin
     Font.Name = 'Segoe UI'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
-    ParentColor = False
     ParentFont = False
     Visible = False
   end

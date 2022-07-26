@@ -1,8 +1,8 @@
 object DM: TDM
   OldCreateOrder = False
   Height = 701
-  HorizontalOffset = 279
-  VerticalOffset = 88
+  HorizontalOffset = 329
+  VerticalOffset = 90
   Width = 1259
   object ZUpdateSQL1: TZUpdateSQL
     DeleteSQL.Strings = (
@@ -3915,6 +3915,7 @@ object DM: TDM
       Size = 30
     end
     object ZQueryAssistenteCOD_ACAO: TLongintField
+      DisplayLabel = 'Código da Ação'
       FieldKind = fkData
       FieldName = 'COD_ACAO'
       Index = 10

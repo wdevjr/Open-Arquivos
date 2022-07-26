@@ -1266,7 +1266,7 @@ object Abertura: TAbertura
     Top = 10
     Width = 119
     AutoSize = False
-    Caption = '30.60.0'
+    Caption = '40.0.0'
     Font.CharSet = ANSI_CHARSET
     Font.Color = clRed
     Font.Height = -33

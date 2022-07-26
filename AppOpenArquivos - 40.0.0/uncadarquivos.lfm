@@ -1,12 +1,11 @@
 object FormArquivo: TFormArquivo
   Left = 314
-  Height = 407
+  Height = 369
   Top = 221
-  Width = 879
+  Width = 796
   Caption = 'Cadastro de Arquivos'
-  ClientHeight = 407
-  ClientWidth = 879
-  DesignTimePPI = 106
+  ClientHeight = 369
+  ClientWidth = 796
   OnActivate = FormActivate
   OnClose = FormClose
   OnShow = FormShow
@@ -14,12 +13,12 @@ object FormArquivo: TFormArquivo
   LCLVersion = '2.2.0.4'
   object GroupBox1: TGroupBox
     Left = 0
-    Height = 353
+    Height = 320
     Top = 0
-    Width = 879
+    Width = 796
     Align = alTop
-    ClientHeight = 331
-    ClientWidth = 875
+    ClientHeight = 300
+    ClientWidth = 792
     Color = 14018023
     DoubleBuffered = True
     Font.Style = [fsBold]
@@ -29,173 +28,173 @@ object FormArquivo: TFormArquivo
     ParentFont = False
     TabOrder = 0
     object Label3: TLabel
-      Left = 14
-      Height = 17
-      Top = 169
-      Width = 35
+      Left = 13
+      Height = 15
+      Top = 153
+      Width = 33
       Caption = 'Titulo:'
-      Font.Height = -13
+      Font.Height = -12
       ParentFont = False
     end
     object DBEdit3: TDBEdit
-      Left = 15
-      Height = 21
-      Top = 184
-      Width = 626
+      Left = 14
+      Height = 19
+      Top = 167
+      Width = 567
       DataField = 'TITULO'
       DataSource = Dtsrc
       AutoSelect = False
       AutoSize = False
-      Font.Height = -13
+      Font.Height = -12
       MaxLength = 0
       ParentFont = False
       TabOrder = 0
     end
     object Label4: TLabel
-      Left = 15
-      Height = 17
-      Top = 205
-      Width = 60
+      Left = 14
+      Height = 15
+      Top = 186
+      Width = 54
       Caption = 'Descrição:'
-      Font.Height = -13
+      Font.Height = -12
       ParentFont = False
     end
     object DBMemo2: TDBMemo
-      Left = 15
-      Height = 29
-      Top = 223
-      Width = 563
+      Left = 14
+      Height = 26
+      Top = 202
+      Width = 510
       DataField = 'DESCRICAO'
       DataSource = Dtsrc
-      Font.Height = -13
+      Font.Height = -12
       ParentFont = False
       ScrollBars = ssAutoVertical
       TabOrder = 1
     end
     object Label5: TLabel
-      Left = 15
-      Height = 17
-      Top = 258
-      Width = 69
+      Left = 14
+      Height = 15
+      Top = 234
+      Width = 64
       Caption = 'Informação:'
-      Font.Height = -13
+      Font.Height = -12
       ParentFont = False
     end
     object DBMemo3: TDBMemo
-      Left = 15
-      Height = 29
-      Top = 275
-      Width = 627
+      Left = 14
+      Height = 26
+      Top = 249
+      Width = 568
       DataField = 'INFORMACOES'
       DataSource = Dtsrc
-      Font.Height = -13
+      Font.Height = -12
       ParentFont = False
       ScrollBars = ssAutoVertical
       TabOrder = 2
     end
     object Panel4: TPanel
       Left = 0
-      Height = 113
+      Height = 102
       Top = 0
-      Width = 875
+      Width = 792
       Align = alTop
       BevelOuter = bvNone
-      ClientHeight = 113
-      ClientWidth = 875
+      ClientHeight = 102
+      ClientWidth = 792
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 3
       object Label13: TLabel
-        Left = 9
-        Height = 13
-        Top = 35
-        Width = 41
+        Left = 8
+        Height = 12
+        Top = 32
+        Width = 36
         Caption = 'Código:'
-        Font.Height = -11
+        Font.Height = -10
         Font.Style = [fsBold]
         ParentFont = False
       end
       object DBText1: TDBText
-        Left = 7
-        Height = 20
-        Top = 49
-        Width = 60
+        Left = 6
+        Height = 19
+        Top = 44
+        Width = 55
         DataField = 'ID'
         DataSource = Dtsrc
         Font.Color = clBlue
-        Font.Height = -15
+        Font.Height = -14
         Font.Style = [fsBold]
         ParentFont = False
       end
       object Label14: TLabel
-        Left = 129
-        Height = 13
-        Top = 35
-        Width = 27
+        Left = 117
+        Height = 12
+        Top = 32
+        Width = 24
         Caption = 'Data:'
-        Font.Height = -11
+        Font.Height = -10
         Font.Style = [fsBold]
         ParentFont = False
       end
       object Label15: TLabel
-        Left = 209
-        Height = 13
-        Top = 35
-        Width = 28
+        Left = 189
+        Height = 12
+        Top = 32
+        Width = 26
         Caption = 'Hora:'
-        Font.Height = -11
+        Font.Height = -10
         Font.Style = [fsBold]
         ParentFont = False
       end
       object DBText8: TDBText
-        Left = 212
-        Height = 15
-        Top = 54
-        Width = 49
+        Left = 192
+        Height = 13
+        Top = 49
+        Width = 42
         DataField = 'HORA'
         DataSource = Dtsrc
         Font.Color = 4227072
-        Font.Height = -12
+        Font.Height = -11
         Font.Style = [fsBold]
         ParentFont = False
       end
       object Label16: TLabel
-        Left = 283
-        Height = 13
-        Top = 35
-        Width = 50
+        Left = 256
+        Height = 12
+        Top = 32
+        Width = 45
         Caption = 'Extenção:'
-        Font.Height = -11
+        Font.Height = -10
         Font.Style = [fsBold]
         ParentFont = False
       end
       object DBText4: TDBText
-        Left = 282
-        Height = 15
-        Top = 54
-        Width = 49
+        Left = 255
+        Height = 13
+        Top = 49
+        Width = 42
         DataField = 'EXTENCAO'
         DataSource = Dtsrc
         Font.Color = clPurple
-        Font.Height = -12
-        Font.Style = [fsBold]
-        ParentFont = False
-      end
-      object Label17: TLabel
-        Left = 352
-        Height = 13
-        Top = 35
-        Width = 82
-        Caption = 'Aplicar Usuário:'
         Font.Height = -11
         Font.Style = [fsBold]
         ParentFont = False
       end
+      object Label17: TLabel
+        Left = 319
+        Height = 12
+        Top = 32
+        Width = 74
+        Caption = 'Aplicar Usuário:'
+        Font.Height = -10
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
       object lookUser: TSpeedButton
-        Left = 374
-        Height = 24
-        Top = 54
-        Width = 29
+        Left = 339
+        Height = 22
+        Top = 49
+        Width = 26
         Enabled = False
         Flat = True
         Font.Style = [fsBold]
@@ -261,32 +260,32 @@ object FormArquivo: TFormArquivo
         ParentFont = False
       end
       object Label18: TLabel
-        Left = 459
-        Height = 13
-        Top = 35
-        Width = 51
+        Left = 416
+        Height = 12
+        Top = 32
+        Width = 45
         Caption = 'Tamanho:'
-        Font.Height = -11
+        Font.Height = -10
         Font.Style = [fsBold]
         ParentFont = False
       end
       object DBText5: TDBText
-        Left = 459
-        Height = 21
-        Top = 54
-        Width = 241
+        Left = 416
+        Height = 19
+        Top = 49
+        Width = 218
         AutoSize = False
         DataField = 'TAMANHO'
         DataSource = Dtsrc
         Font.Color = clBlue
-        Font.Height = -12
+        Font.Height = -11
         ParentFont = False
       end
       object DBMemo1: TDBMemo
-        Left = 9
-        Height = 35
+        Left = 8
+        Height = 32
         Top = 0
-        Width = 565
+        Width = 512
         Color = 16773345
         DataField = 'NOME_ARQUIVO'
         DataSource = Dtsrc
@@ -296,12 +295,12 @@ object FormArquivo: TFormArquivo
         TabOrder = 0
       end
       object carregar: TSpeedButton
-        Left = 576
-        Height = 35
+        Left = 522
+        Height = 32
         Top = 0
-        Width = 124
+        Width = 112
         Caption = 'Carregar...'
-        Font.Height = -11
+        Font.Height = -10
         Font.Style = [fsBold]
         Glyph.Data = {
           F6060000424DF606000000000000360000002800000018000000180000000100
@@ -365,19 +364,19 @@ object FormArquivo: TFormArquivo
         ParentFont = False
       end
       object Label19: TLabel
-        Left = 9
-        Height = 17
-        Top = 71
-        Width = 49
+        Left = 8
+        Height = 15
+        Top = 64
+        Width = 46
         Caption = 'Assunto:'
-        Font.Height = -13
+        Font.Height = -12
         ParentFont = False
       end
       object DBEdit1: TDBEdit
-        Left = 576
-        Height = 25
-        Top = 127
-        Width = 71
+        Left = 522
+        Height = 23
+        Top = 115
+        Width = 64
         DataField = 'COD_ASSUNTO'
         DataSource = Dtsrc
         Alignment = taRightJustify
@@ -389,10 +388,10 @@ object FormArquivo: TFormArquivo
         Visible = False
       end
       object BtnLoc01: TSpeedButton
-        Left = 9
-        Height = 22
-        Top = 85
-        Width = 28
+        Left = 8
+        Height = 20
+        Top = 77
+        Width = 25
         Font.Style = [fsBold]
         Glyph.Data = {
           36030000424D3603000000000000360000002800000010000000100000000100
@@ -426,10 +425,10 @@ object FormArquivo: TFormArquivo
         ParentFont = False
       end
       object Image5: TImage
-        Left = 39
-        Height = 20
-        Top = 88
-        Width = 19
+        Left = 35
+        Height = 18
+        Top = 80
+        Width = 17
         Picture.Data = {
           1754506F727461626C654E6574776F726B47726170686963E602000089504E47
           0D0A1A0A0000000D49484452000000100000001008060000001FF3FF61000000
@@ -460,17 +459,17 @@ object FormArquivo: TFormArquivo
         Transparent = True
       end
       object Image3: TImage
-        Left = 713
-        Height = 82
-        Top = 21
-        Width = 85
+        Left = 646
+        Height = 74
+        Top = 19
+        Width = 77
         Transparent = True
       end
       object excluiAssunto: TSpeedButton
-        Left = 602
-        Height = 24
-        Top = 85
-        Width = 25
+        Left = 545
+        Height = 22
+        Top = 77
+        Width = 23
         Flat = True
         Font.Style = [fsBold]
         Glyph.Data = {
@@ -505,30 +504,30 @@ object FormArquivo: TFormArquivo
         ParentFont = False
       end
       object Label20: TLabel
-        Left = 707
-        Height = 13
+        Left = 640
+        Height = 12
         Top = 0
-        Width = 31
+        Width = 28
         Caption = 'Icone:'
-        Font.Height = -11
+        Font.Height = -10
         Font.Style = [fsBold]
         ParentFont = False
       end
       object Edit1: TEdit
-        Left = 586
-        Height = 25
-        Top = 71
-        Width = 62
+        Left = 531
+        Height = 23
+        Top = 64
+        Width = 56
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 2
         Visible = False
       end
       object DBEdit4: TDBEdit
-        Left = 495
-        Height = 25
-        Top = 78
-        Width = 67
+        Left = 448
+        Height = 23
+        Top = 71
+        Width = 61
         DataField = 'COD_USUARIO'
         DataSource = Dtsrc
         AutoSize = False
@@ -539,49 +538,49 @@ object FormArquivo: TFormArquivo
         Visible = False
       end
       object DatadeCaD1: TDBText
-        Left = 127
-        Height = 15
-        Top = 54
-        Width = 69
+        Left = 115
+        Height = 13
+        Top = 49
+        Width = 64
         DataField = 'DATA'
         DataSource = Dtsrc
         Font.Color = clGreen
-        Font.Height = -12
+        Font.Height = -11
         Font.Style = [fsBold]
         ParentFont = False
       end
       object DBText2: TDBText
-        Left = 64
-        Height = 17
-        Top = 88
-        Width = 529
+        Left = 58
+        Height = 15
+        Top = 80
+        Width = 479
         AutoSize = False
         Color = 11849939
         DataField = 'TITULOASSUN'
         DataSource = Dtsrc
         Font.Color = clBlue
-        Font.Height = -13
+        Font.Height = -12
         ParentFont = False
         Transparent = False
       end
     end
     object Panel5: TPanel
       Left = 0
-      Height = 20
-      Top = 113
-      Width = 875
+      Height = 18
+      Top = 102
+      Width = 792
       Align = alTop
       BevelOuter = bvNone
-      ClientHeight = 20
-      ClientWidth = 875
+      ClientHeight = 18
+      ClientWidth = 792
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 4
       object DBEdit2: TDBEdit
-        Left = 574
-        Height = 25
+        Left = 520
+        Height = 23
         Top = 0
-        Width = 71
+        Width = 64
         DataField = 'COD_AUTOR'
         DataSource = Dtsrc
         Font.Style = [fsBold]
@@ -591,10 +590,10 @@ object FormArquivo: TFormArquivo
         Visible = False
       end
       object Image7: TImage
-        Left = 20
-        Height = 14
+        Left = 18
+        Height = 13
         Top = 1
-        Width = 22
+        Width = 20
         Picture.Data = {
           07544269746D617036030000424D360300000000000036000000280000001000
           0000100000000100180000000000000300000000000000000000000000000000
@@ -627,21 +626,21 @@ object FormArquivo: TFormArquivo
         Transparent = True
       end
       object Autor1: TLabel
-        Left = 50
-        Height = 17
+        Left = 45
+        Height = 15
         Top = 1
-        Width = 38
+        Width = 35
         Caption = 'Autor?'
-        Font.Height = -13
+        Font.Height = -12
         ParentFont = False
       end
       object CheckBox1: TCheckBox
-        Left = 99
-        Height = 21
+        Left = 90
+        Height = 19
         Top = -2
-        Width = 36
+        Width = 33
         Caption = 'ok'
-        Font.Height = -13
+        Font.Height = -12
         OnChange = CheckBox1Change
         ParentFont = False
         TabOrder = 1
@@ -649,31 +648,31 @@ object FormArquivo: TFormArquivo
     end
     object PanelAutor: TPanel
       Left = 0
-      Height = 38
-      Top = 133
-      Width = 875
+      Height = 34
+      Top = 120
+      Width = 792
       Align = alTop
       BevelOuter = bvNone
-      ClientHeight = 38
-      ClientWidth = 875
+      ClientHeight = 34
+      ClientWidth = 792
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 5
       Visible = False
       object Label21: TLabel
-        Left = 9
-        Height = 17
+        Left = 8
+        Height = 15
         Top = -2
-        Width = 35
+        Width = 33
         Caption = 'Autor:'
-        Font.Height = -13
+        Font.Height = -12
         ParentFont = False
       end
       object BtnLoc02: TSpeedButton
-        Left = 9
-        Height = 21
-        Top = 12
-        Width = 28
+        Left = 8
+        Height = 19
+        Top = 11
+        Width = 25
         Font.Style = [fsBold]
         Glyph.Data = {
           36030000424D3603000000000000360000002800000010000000100000000100
@@ -707,10 +706,10 @@ object FormArquivo: TFormArquivo
         ParentFont = False
       end
       object Image8: TImage
-        Left = 38
-        Height = 21
-        Top = 12
-        Width = 19
+        Left = 34
+        Height = 19
+        Top = 11
+        Width = 17
         Picture.Data = {
           07544269746D6170DA050000424DDA0500000000000036000000280000001300
           0000130000000100200000000000A40500000000000000000000000000000000
@@ -764,10 +763,10 @@ object FormArquivo: TFormArquivo
         Transparent = True
       end
       object excluiAutor: TSpeedButton
-        Left = 601
-        Height = 24
-        Top = 18
-        Width = 25
+        Left = 544
+        Height = 22
+        Top = 16
+        Width = 23
         Flat = True
         Font.Style = [fsBold]
         Glyph.Data = {
@@ -802,27 +801,27 @@ object FormArquivo: TFormArquivo
         ParentFont = False
       end
       object DBText6: TDBText
-        Left = 64
-        Height = 17
-        Top = 14
-        Width = 531
+        Left = 58
+        Height = 15
+        Top = 13
+        Width = 481
         AutoSize = False
         Color = 11849939
         DataField = 'NOME'
         DataSource = Dtsrc
         Font.Color = clBlue
-        Font.Height = -13
+        Font.Height = -12
         ParentFont = False
         Transparent = False
       end
     end
     object cbconsulta: TSpeedButton
-      Left = 786
-      Height = 71
-      Top = 253
-      Width = 80
+      Left = 712
+      Height = 64
+      Top = 229
+      Width = 72
       Caption = 'Consultas'
-      Font.Height = -13
+      Font.Height = -12
       Glyph.Data = {
         36100000424D3610000000000000360000002800000020000000200000000100
         2000000000000010000064000000640000000000000000000000000000000000
@@ -960,12 +959,12 @@ object FormArquivo: TFormArquivo
       ParentFont = False
     end
     object btntrazerForm: TSpeedButton
-      Left = 786
-      Height = 71
-      Top = 177
-      Width = 80
+      Left = 712
+      Height = 64
+      Top = 160
+      Width = 72
       Caption = 'Localizar'
-      Font.Height = -13
+      Font.Height = -12
       Glyph.Data = {
         36100000424D3610000000000000360000002800000020000000200000000100
         20000000000000100000640000006400000000000000000000000F0B0B010705
@@ -1103,12 +1102,12 @@ object FormArquivo: TFormArquivo
       ParentFont = False
     end
     object btnvisualizar: TSpeedButton
-      Left = 654
-      Height = 44
-      Top = 191
-      Width = 127
+      Left = 592
+      Height = 40
+      Top = 173
+      Width = 115
       Caption = 'Visualizar'
-      Font.Height = -13
+      Font.Height = -12
       Glyph.Data = {
         F6120000424DF612000000000000360000002800000028000000280000000100
         180000000000C012000064000000640000000000000000000000FF00FFFF00FF
@@ -1267,12 +1266,12 @@ object FormArquivo: TFormArquivo
       ParentFont = False
     end
     object btnextrair: TSpeedButton
-      Left = 654
-      Height = 44
-      Top = 247
-      Width = 127
+      Left = 592
+      Height = 40
+      Top = 224
+      Width = 115
       Caption = 'Extrair'
-      Font.Height = -13
+      Font.Height = -12
       Glyph.Data = {
         F6120000424DF612000000000000360000002800000028000000280000000100
         180000000000C012000064000000640000000000000000000000FF00FFFF00FF
@@ -1431,10 +1430,10 @@ object FormArquivo: TFormArquivo
       ParentFont = False
     end
     object SpeedButton2: TSpeedButton
-      Left = 586
-      Height = 57
-      Top = 212
-      Width = 64
+      Left = 531
+      Height = 52
+      Top = 192
+      Width = 58
       Font.Style = [fsBold]
       Glyph.Data = {
         36240000424D3624000000000000360000002800000030000000300000000100
@@ -1733,12 +1732,12 @@ object FormArquivo: TFormArquivo
     end
   end
   object inserir: TBitBtn
-    Left = 6
-    Height = 44
-    Top = 360
-    Width = 88
+    Left = 5
+    Height = 40
+    Top = 326
+    Width = 80
     Caption = 'Inserir'
-    Font.Height = -11
+    Font.Height = -10
     Glyph.Data = {
       36100000424D3610000000000000360000002800000020000000200000000100
       2000000000000010000064000000640000000000000000000000000000000000
@@ -1876,12 +1875,12 @@ object FormArquivo: TFormArquivo
     TabOrder = 1
   end
   object editar: TBitBtn
-    Left = 198
-    Height = 44
-    Top = 360
-    Width = 97
+    Left = 179
+    Height = 40
+    Top = 326
+    Width = 88
     Caption = 'Editar'
-    Font.Height = -11
+    Font.Height = -10
     Glyph.Data = {
       36100000424D3610000000000000360000002800000020000000200000000100
       20000000000000100000640000006400000000000000000000001C2B32021C1E
@@ -2019,12 +2018,12 @@ object FormArquivo: TFormArquivo
     TabOrder = 2
   end
   object excluir: TBitBtn
-    Left = 295
-    Height = 44
-    Top = 360
-    Width = 95
+    Left = 267
+    Height = 40
+    Top = 326
+    Width = 86
     Caption = 'excluir'
-    Font.Height = -11
+    Font.Height = -10
     Glyph.Data = {
       36100000424D3610000000000000360000002800000020000000200000000100
       2000000000000010000064000000640000000000000000000000000000000000
@@ -2162,12 +2161,12 @@ object FormArquivo: TFormArquivo
     TabOrder = 3
   end
   object cancelar: TBitBtn
-    Left = 388
-    Height = 44
-    Top = 360
-    Width = 99
+    Left = 351
+    Height = 40
+    Top = 326
+    Width = 90
     Caption = 'cancelar'
-    Font.Height = -11
+    Font.Height = -10
     Glyph.Data = {
       36100000424D3610000000000000360000002800000020000000200000000100
       2000000000000010000064000000640000000000000000000000000000000000
@@ -2305,13 +2304,13 @@ object FormArquivo: TFormArquivo
     TabOrder = 4
   end
   object relatorio: TBitBtn
-    Left = 486
-    Height = 44
-    Top = 360
-    Width = 104
+    Left = 440
+    Height = 40
+    Top = 326
+    Width = 94
     Caption = 'Imprimir'
     Enabled = False
-    Font.Height = -11
+    Font.Height = -10
     Glyph.Data = {
       36090000424D3609000000000000360000002800000018000000180000000100
       2000000000000009000064000000640000000000000000000000000000000000
@@ -2393,12 +2392,12 @@ object FormArquivo: TFormArquivo
     TabOrder = 5
   end
   object ExcluirTemp: TSpeedButton
-    Left = 590
-    Height = 44
-    Top = 360
-    Width = 142
+    Left = 534
+    Height = 40
+    Top = 326
+    Width = 129
     Caption = 'Excluir Temporário'
-    Font.Height = -11
+    Font.Height = -10
     Glyph.Data = {
       36100000424D3610000000000000360000002800000020000000200000000100
       2000000000000010000064000000640000000000000000000000000000000000
@@ -2535,12 +2534,12 @@ object FormArquivo: TFormArquivo
     ParentFont = False
   end
   object gravar: TBitBtn
-    Left = 94
-    Height = 44
-    Top = 360
-    Width = 104
+    Left = 85
+    Height = 40
+    Top = 326
+    Width = 94
     Caption = 'Gravar'
-    Font.Height = -11
+    Font.Height = -10
     Glyph.Data = {
       36100000424D3610000000000000360000002800000020000000200000000100
       2000000000000010000064000000640000000000000000000000000000000000
@@ -2678,15 +2677,15 @@ object FormArquivo: TFormArquivo
     TabOrder = 6
   end
   object SpeedButton1: TSpeedButton
-    Left = 777
-    Height = 54
-    Top = 353
-    Width = 102
+    Left = 704
+    Height = 49
+    Top = 320
+    Width = 92
     Align = alRight
     Caption = 'Fechar'
     Flat = True
     Font.Color = clWindowText
-    Font.Height = -12
+    Font.Height = -11
     Font.Name = 'Tahoma'
     Glyph.Data = {
       36060000424D3606000000000000360000002800000020000000100000000100
@@ -2745,27 +2744,27 @@ object FormArquivo: TFormArquivo
     ParentFont = False
   end
   object OpenDialog1: TOpenDialog
-    Left = 671
-    Top = 85
+    Left = 608
+    Top = 77
   end
   object SaveDialog1: TSaveDialog
-    Left = 716
-    Top = 106
+    Left = 648
+    Top = 96
   end
   object Timer1: TTimer
     OnTimer = Timer1Timer
-    Left = 671
-    Top = 141
+    Left = 608
+    Top = 128
   end
   object Dtsrc: TDataSource
     DataSet = DM.ZQArquivo
     OnStateChange = DtsrcStateChange
-    Left = 403
-    Top = 135
+    Left = 365
+    Top = 122
   end
   object DtscLog: TDataSource
     DataSet = DM.cds_Log
-    Left = 486
-    Top = 150
+    Left = 440
+    Top = 136
   end
 end
