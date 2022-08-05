@@ -1,0 +1,201 @@
+object frmIncluir: TfrmIncluir
+  Left = 426
+  Height = 255
+  Top = 231
+  Width = 647
+  Caption = 'frmIncluir'
+  ClientHeight = 255
+  ClientWidth = 647
+  OnShow = FormShow
+  Position = poDesktopCenter
+  LCLVersion = '2.0.12.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 64
+    Top = 0
+    Width = 647
+    Align = alTop
+    ClientHeight = 64
+    ClientWidth = 647
+    Color = clWhite
+    ParentColor = False
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 8
+      Height = 17
+      Top = 6
+      Width = 114
+      Caption = 'Pessoas Existentes'
+      Font.Color = 4227072
+      Font.Height = -13
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Edit1: TEdit
+      Left = 8
+      Height = 23
+      Top = 24
+      Width = 504
+      Color = clInfoBk
+      TabOrder = 0
+    end
+    object BitBtn1: TBitBtn
+      Left = 520
+      Height = 30
+      Top = 16
+      Width = 96
+      Caption = 'Consultar'
+      Color = clWhite
+      Glyph.Data = {
+        36040000424D3604000000000000360000002800000010000000100000000100
+        2000000000000004000064000000640000000000000000000000FFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFF4787CBFF3A629DFFE1C7C3FFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFF3677C6FFA1F1FFFF70D4FFFF163A7BFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFF3280D1FF7EE2FFFFCFFFFFFF148AFDFF4C669FFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFF368CDEFF65D9FFFFE0FFFFFF1791F6FF335193FFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF2F99
+        EDFF58D5FFFFE9FFFFFF2BA1F6FF3865ADFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFCFBFBFFD0BFC6FFC7B4B3FFC8B2B1FFB79A9CFFD1B7B5FFC7CBD5FF19A5
+        FFFFBCFBFFFF4BB3F7FF326EBCFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF3F0
+        F1FFC9AEAAFFEEDABBFFFFFEDAFFFFFFE9FFFFFFFCFFF5EFE8FFC98A7DFFC7B8
+        BCFF118BF0FF368AEAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8F7F7FFCBB1
+        A7FFF6D8B3FFFCEFCEFFFAF2DBFFFBF4E5FFFDFAF2FFFFFFFFFFFDFFFFFFAB74
+        6EFFC3B7BBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFD5D6FFE7C4
+        9FFFF1D9B7FFF2DEC0FFFAF3D9FFFAF5E2FFFCF9EFFFFEFCF5FFFFFFFFFFFAFA
+        F6FF9D7978FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFCDB3A8FFEDC4
+        98FFE8CCACFFF6EAD0FFFBF5E0FFFDF7E9FFFBF4E5FFFCF9EEFFFDFAECFFFFFF
+        FFFFA17F7CFFFAF8F9FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFCBB1A9FFEEC5
+        9AFFF4E2C6FFF3E1C6FFF4E3C6FFFCF4E2FFFDF8E9FFFBF2DFFFFAF2E1FFFFFF
+        F3FFAA8B7EFFEDE8E9FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC5A69DFFEBBD
+        90FFF4E9CAFFFDFDEDFFFEFDFBFFF4E3C9FFFAF3DDFFF9F3D7FFF6F0D3FFFFFF
+        EBFFA27C71FFF4F1F1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFCEBABAFFE1AF
+        84FFF7E3C3FFFAF8E3FFFFFFFBFFF1D9BFFFF5E5C9FFEDD5B7FFF8E8CBFFFFF8
+        D2FF805F60FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE7E2E5FFBF8F
+        79FFF3CC9FFFF7E8C8FFF5EBCFFFEFDDC0FFECD4B6FFF4DCBCFFFFFFD9FF9869
+        5CFFDCD5D6FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFCDBF
+        C7FFB98677FFE8B892FFFDD5ABFFFFE1B9FFFFE4BCFFF5D5AEFF996959FFBBAB
+        ADFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFE4DEE0FFBDA1A2FF9F746EFFA67A72FF986C65FF9D7D7BFFE5DFE0FFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      }
+      OnClick = BitBtn1Click
+      TabOrder = 1
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 49
+    Top = 206
+    Width = 647
+    Align = alBottom
+    ClientHeight = 49
+    ClientWidth = 647
+    Color = clWhite
+    ParentColor = False
+    TabOrder = 1
+    object BitBtnIncluir: TBitBtn
+      Left = 472
+      Height = 30
+      Top = 8
+      Width = 75
+      Default = True
+      DefaultCaption = True
+      Enabled = False
+      Kind = bkOK
+      ModalResult = 1
+      TabOrder = 0
+    end
+    object BitBtn3: TBitBtn
+      Left = 552
+      Height = 30
+      Top = 8
+      Width = 75
+      DefaultCaption = True
+      Kind = bkClose
+      ModalResult = 11
+      TabOrder = 1
+    end
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 142
+    Top = 64
+    Width = 647
+    Align = alClient
+    AlternateColor = 13363947
+    Color = 16773360
+    Columns = <>
+    DataSource = DtsrcAdionar
+    FixedHotColor = 14024661
+    Flat = True
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    TabOrder = 2
+    OnCellClick = DBGrid1CellClick
+  end
+  object DtsrcAdionar: TDataSource
+    DataSet = sds_Pesq_User
+    Left = 464
+    Top = 80
+  end
+  object sds_Pesq_User: TZQuery
+    Connection = DM.ZConnection
+    SQL.Strings = (
+      'select  COD_USUARIO, LOGIN, NOME  from USUARIO'
+      'where NOME like :nom'
+      'order by NOME desc'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'nom'
+        ParamType = ptUnknown
+      end>
+    Left = 328
+    Top = 80
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'nom'
+        ParamType = ptUnknown
+      end>
+    object sds_Pesq_UserCOD_USUARIO: TLongintField
+      DisplayLabel = 'Código'
+      FieldKind = fkData
+      FieldName = 'COD_USUARIO'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object sds_Pesq_UserLOGIN: TStringField
+      DisplayLabel = 'Login'
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'LOGIN'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 560
+    end
+    object sds_Pesq_UserNOME: TStringField
+      DisplayLabel = 'Nome do  Usuário Existente....'
+      DisplayWidth = 45
+      FieldKind = fkData
+      FieldName = 'NOME'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 45
+    end
+  end
+end
