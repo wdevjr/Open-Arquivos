@@ -806,11 +806,11 @@ begin
   end;
   if FrmLogin.ADMIN = 1 then
   begin
-    log.Enabled := True;
+    log.Visible := True;
   end
   else
   begin
-    log.Enabled := False;
+    log.Visible := False;
   end;
 
 end;

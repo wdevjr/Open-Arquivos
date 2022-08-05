@@ -1,7 +1,7 @@
 object FrPrincipal: TFrPrincipal
-  Left = 312
+  Left = 354
   Height = 557
-  Top = 114
+  Top = 110
   Width = 1025
   ClientHeight = 537
   ClientWidth = 1025

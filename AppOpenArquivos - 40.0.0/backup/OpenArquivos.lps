@@ -21,11 +21,13 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UnPrinc"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="191"/>
-        <CursorPos X="3" Y="193"/>
+        <TopLine Value="795"/>
+        <CursorPos X="26" Y="803"/>
         <UsageCount Value="55"/>
         <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="unlogin.pas"/>
@@ -165,10 +167,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UnCadArquivos"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="1064"/>
-        <CursorPos X="23" Y="1076"/>
+        <TopLine Value="1065"/>
+        <CursorPos X="11" Y="1067"/>
         <UsageCount Value="55"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -451,123 +452,123 @@
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="1233" TopLine="1215"/>
+        <Caret Line="1222" TopLine="1216"/>
       </Position1>
       <Position2>
         <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="1234" TopLine="1215"/>
+        <Caret Line="1223" TopLine="1216"/>
       </Position2>
       <Position3>
         <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="1235" TopLine="1215"/>
+        <Caret Line="1227" TopLine="1216"/>
       </Position3>
       <Position4>
         <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="1236" TopLine="1216"/>
+        <Caret Line="1228" TopLine="1216"/>
       </Position4>
       <Position5>
         <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="1233" Column="26" TopLine="1218"/>
+        <Caret Line="1231" TopLine="1216"/>
       </Position5>
       <Position6>
         <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="1221" TopLine="1216"/>
+        <Caret Line="1232" TopLine="1216"/>
       </Position6>
       <Position7>
         <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="1222" TopLine="1216"/>
+        <Caret Line="1233" TopLine="1216"/>
       </Position7>
       <Position8>
         <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="1223" TopLine="1216"/>
+        <Caret Line="1234" TopLine="1216"/>
       </Position8>
       <Position9>
         <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="1227" TopLine="1216"/>
+        <Caret Line="1235" TopLine="1216"/>
       </Position9>
       <Position10>
         <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="1228" TopLine="1216"/>
+        <Caret Line="1236" TopLine="1216"/>
       </Position10>
       <Position11>
         <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="1231" TopLine="1216"/>
+        <Caret Line="1237" TopLine="1218"/>
       </Position11>
       <Position12>
         <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="1232" TopLine="1216"/>
+        <Caret Line="1238" TopLine="1218"/>
       </Position12>
       <Position13>
         <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="1233" TopLine="1216"/>
+        <Caret Line="1239" TopLine="1219"/>
       </Position13>
       <Position14>
         <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="1234" TopLine="1216"/>
+        <Caret Line="1240" TopLine="1220"/>
       </Position14>
       <Position15>
         <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="1235" TopLine="1216"/>
+        <Caret Line="1241" TopLine="1221"/>
       </Position15>
       <Position16>
         <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="1236" TopLine="1216"/>
+        <Caret Line="1242" TopLine="1222"/>
       </Position16>
       <Position17>
-        <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="1237" TopLine="1218"/>
+        <Filename Value="undm.pas"/>
+        <Caret Line="661" Column="35" TopLine="661"/>
       </Position17>
       <Position18>
-        <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="1238" TopLine="1218"/>
+        <Filename Value="undm.pas"/>
+        <Caret Line="660" Column="35" TopLine="660"/>
       </Position18>
       <Position19>
         <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="1239" TopLine="1219"/>
+        <Caret Line="1221" TopLine="1219"/>
       </Position19>
       <Position20>
         <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="1240" TopLine="1220"/>
+        <Caret Line="1463" Column="55" TopLine="1456"/>
       </Position20>
       <Position21>
         <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="1241" TopLine="1221"/>
+        <Caret Line="1077" Column="23" TopLine="1065"/>
       </Position21>
       <Position22>
         <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="1242" TopLine="1222"/>
+        <Caret Line="1467" Column="23" TopLine="1461"/>
       </Position22>
       <Position23>
-        <Filename Value="undm.pas"/>
-        <Caret Line="661" Column="35" TopLine="661"/>
-      </Position23>
-      <Position24>
-        <Filename Value="undm.pas"/>
-        <Caret Line="660" Column="35" TopLine="660"/>
-      </Position24>
-      <Position25>
-        <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="1221" TopLine="1219"/>
-      </Position25>
-      <Position26>
-        <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="1463" Column="55" TopLine="1456"/>
-      </Position26>
-      <Position27>
-        <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="1077" Column="23" TopLine="1065"/>
-      </Position27>
-      <Position28>
-        <Filename Value="uncadarquivos.pas"/>
-        <Caret Line="1467" Column="23" TopLine="1461"/>
-      </Position28>
-      <Position29>
         <Filename Value="uncadarquivos.pas"/>
         <Caret Line="1088" Column="19" TopLine="1071"/>
-      </Position29>
-      <Position30>
+      </Position23>
+      <Position24>
         <Filename Value="uncadarquivos.pas"/>
         <Caret Line="1226" Column="25" TopLine="1220"/>
+      </Position24>
+      <Position25>
+        <Filename Value="unprinc.pas"/>
+        <Caret Line="193" Column="3" TopLine="191"/>
+      </Position25>
+      <Position26>
+        <Filename Value="unprinc.pas"/>
+        <Caret Line="256" Column="3" TopLine="256"/>
+      </Position26>
+      <Position27>
+        <Filename Value="unprinc.pas"/>
+        <Caret Line="302" Column="3" TopLine="581"/>
+      </Position27>
+      <Position28>
+        <Filename Value="unprinc.pas"/>
+        <Caret Line="79" Column="34" TopLine="68"/>
+      </Position28>
+      <Position29>
+        <Filename Value="unprinc.pas"/>
+        <Caret Line="340" Column="24" TopLine="320"/>
+      </Position29>
+      <Position30>
+        <Filename Value="unprinc.pas"/>
+        <Caret Line="591" Column="22" TopLine="571"/>
       </Position30>
     </JumpHistory>
     <RunParams>
