@@ -329,6 +329,7 @@ procedure TFrmLogAcesso.ComboBoxEventosButtosDrawItem(Control: TWinControl; Inde
 var
 aColor:TColor;
 aBrush:TBrush;
+
 begin
   aBrush:=TBrush.Create;
   with (Control as TCombobox).Canvas do
@@ -336,10 +337,12 @@ begin
        if not odd(Index) then
        begin
          aColor:=$00CBEAEB;
+         Font.Color:=clblue;
        end
        else
        begin
          aColor:=$00E7CFCF;
+         Font.Color:=clblue;
        end;
       aBrush.Style:=bsSolid;
       aBrush.Color:=aColor;

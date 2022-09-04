@@ -1,9 +1,9 @@
 object DM: TDM
   OldCreateOrder = False
   Height = 701
-  HorizontalOffset = 324
-  VerticalOffset = 236
-  Width = 1105
+  HorizontalOffset = 237
+  VerticalOffset = 51
+  Width = 1212
   object ZUpdateSQL1: TZUpdateSQL
     DeleteSQL.Strings = (
       'DELETE FROM ARQUIVOLIST'
@@ -3818,13 +3818,14 @@ object DM: TDM
     end
   end
   object frDBDataSetLogTodos: TfrDBDataSet
+    DataSet = ZQueryAssistente
     Left = 1040
     Top = 528
   end
   object frDBDataSetZQueryLogParam: TfrDBDataSet
     DataSet = ZQueryLogParam
-    Left = 1008
-    Top = 616
+    Left = 976
+    Top = 632
   end
   object frDesigner1: TfrDesigner
     Left = 848
@@ -4685,7 +4686,7 @@ object DM: TDM
     end
     object ZQueryAssistenteNOME: TStringField
       DisplayLabel = 'Nome Usuário'
-      DisplayWidth = 33
+      DisplayWidth = 28
       FieldKind = fkData
       FieldName = 'NOME'
       Index = 6
@@ -4697,6 +4698,7 @@ object DM: TDM
     end
     object ZQueryAssistenteNOME_ARQUIVO: TStringField
       DisplayLabel = 'Nome Arquivo'
+      DisplayWidth = 35
       FieldKind = fkData
       FieldName = 'NOME_ARQUIVO'
       Index = 7
@@ -4719,7 +4721,7 @@ object DM: TDM
     end
     object ZQueryAssistenteAPLICATIVO: TStringField
       DisplayLabel = 'Aplicativo Camada'
-      DisplayWidth = 33
+      DisplayWidth = 28
       FieldKind = fkData
       FieldName = 'APLICATIVO'
       Index = 9
@@ -4731,7 +4733,7 @@ object DM: TDM
     end
     object ZQueryAssistenteDISCRIMINACAO: TStringField
       DisplayLabel = 'Discriminação'
-      DisplayWidth = 40
+      DisplayWidth = 28
       FieldKind = fkData
       FieldName = 'DISCRIMINACAO'
       Index = 10

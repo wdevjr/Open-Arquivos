@@ -291,7 +291,9 @@
       <Unit23>
         <Filename Value="UnLocalizarUserCod.pas"/>
         <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmLocalizarUserCod"/>
         <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
       </Unit23>
       <Unit24>
         <Filename Value="undlgdescricao.pas"/>

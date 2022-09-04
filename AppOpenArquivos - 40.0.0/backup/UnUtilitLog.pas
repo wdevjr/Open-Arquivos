@@ -190,7 +190,7 @@ begin
     DM.ZQueryAssistente.Params.Clear;
     DM.ZQueryAssistente.SQL.Clear;
     DM.ZQueryAssistente.SQL.Text :=
-      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, ar.NOME_ARQUIVO FROM LOG r'
+      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, r.NOME_ARQUIVO FROM LOG r'
       + ' left join ARQUIVOLIST ar on r.COD_REGISTRO = ar.ID '
       + ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO '
       + ' left join ACAO ac on r.COD_ACAO = ac.ID '
@@ -214,7 +214,7 @@ begin
     //Inicial := DateToStr(DateTimePicker1.Date);
     //Finall := DateToStr(DateTimePicker2.Date);
     DM.ZQueryAssistente.SQL.Add(
-      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, ar.NOME_ARQUIVO FROM LOG r '
+      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, r.NOME_ARQUIVO FROM LOG r '
       + ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO '
       //+ ' where PO.NOME like ' + QuotedStr(EditPesquNome.Text + '%')
       + ' left join ARQUIVOLIST ar on r.COD_REGISTRO = ar.ID '
@@ -242,7 +242,7 @@ begin
     Inicial := DateToStr(DateTimePicker1.Date);
     Finall := DateToStr(DateTimePicker2.Date);
     DM.ZQueryAssistente.SQL.Add(
-      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, ar.NOME_ARQUIVO FROM LOG r'
+      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, r.NOME_ARQUIVO FROM LOG r'
       + ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO '
       + ' left join ARQUIVOLIST ar on r.COD_REGISTRO = ar.ID '
       + ' left join ACAO ac on r.COD_ACAO = ac.ID '
@@ -264,7 +264,7 @@ begin
     Inicial := DateToStr(DateTimePicker1.Date);
     Finall := DateToStr(DateTimePicker2.Date);
     DM.ZQueryAssistente.SQL.Add(
-      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, ar.NOME_ARQUIVO FROM LOG r' +
+      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, r.NOME_ARQUIVO FROM LOG r' +
       ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO '
       + ' left join ARQUIVOLIST ar on r.COD_REGISTRO = ar.ID '
       + ' left join ACAO ac on r.COD_ACAO = ac.ID '
@@ -286,7 +286,7 @@ begin
     Inicial := DateToStr(DateTimePicker1.Date);
     Finall := DateToStr(DateTimePicker2.Date);
     DM.ZQueryAssistente.SQL.Add(
-      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, ar.NOME_ARQUIVO, r.DISCRIMINACAO FROM LOG r' +
+      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.NOME_ARQUIVO, r.DISCRIMINACAO FROM LOG r' +
       ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO '
       + ' left join ARQUIVOLIST ar on r.COD_REGISTRO = ar.ID '
       + ' left join ACAO ac on r.COD_ACAO = ac.ID '
@@ -306,7 +306,7 @@ begin
     Inicial := DateToStr(DateTimePicker1.Date);
     Finall := DateToStr(DateTimePicker2.Date);
     DM.ZQueryAssistente.SQL.Add(
-      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, ar.NOME_ARQUIVO FROM LOG r' +
+      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, r.NOME_ARQUIVO FROM LOG r' +
       ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO '
       + ' left join ARQUIVOLIST ar on r.COD_REGISTRO = ar.ID '
       + ' left join ACAO ac on r.COD_ACAO = ac.ID '
@@ -329,6 +329,7 @@ procedure TFrmLogAcesso.ComboBoxEventosButtosDrawItem(Control: TWinControl; Inde
 var
 aColor:TColor;
 aBrush:TBrush;
+
 begin
   aBrush:=TBrush.Create;
   with (Control as TCombobox).Canvas do
@@ -336,10 +337,12 @@ begin
        if not odd(Index) then
        begin
          aColor:=$00CBEAEB;
+         Font.Color:=clblue;
        end
        else
        begin
          aColor:=$00E7CFCF;
+         Font.Color:=clblue;
        end;
       aBrush.Style:=bsSolid;
       aBrush.Color:=aColor;

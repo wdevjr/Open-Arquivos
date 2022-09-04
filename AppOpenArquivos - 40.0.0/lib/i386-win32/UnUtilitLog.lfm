@@ -940,7 +940,7 @@ object FrmLogAcesso: TFrmLogAcesso
         BevelOuter = bvNone
         ClientHeight = 22
         ClientWidth = 873
-        Color = 11075583
+        Color = clYellow
         Font.Color = clWindowText
         Font.Height = -14
         Font.Name = 'Tahoma'
@@ -1396,12 +1396,14 @@ object FrmLogAcesso: TFrmLogAcesso
         Color = 13363947
         Columns = <>
         DataSource = Dtsrc
+        Flat = True
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'Tahoma'
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
         ParentFont = False
         TabOrder = 2
+        TitleStyle = tsNative
       end
       object PanelData: TPanel
         Left = 0
