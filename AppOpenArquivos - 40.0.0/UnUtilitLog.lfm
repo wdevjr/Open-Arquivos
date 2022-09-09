@@ -12,6 +12,8 @@ object FrmLogAcesso: TFrmLogAcesso
   Font.Height = -14
   Font.Name = 'Tahoma'
   OnClose = FormClose
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
   OnShow = FormShow
   Position = poDesktopCenter
   LCLVersion = '2.2.0.4'
@@ -1372,7 +1374,7 @@ object FrmLogAcesso: TFrmLogAcesso
           Top = 51
           Width = 180
           AutoSize = False
-          Color = 14024703
+          Color = clWhite
           ItemHeight = 17
           Items.Strings = (
             ''

@@ -2534,7 +2534,7 @@ object FormArquivo: TFormArquivo
     ParentFont = False
   end
   object gravar: TBitBtn
-    Left = 85
+    Left = 88
     Height = 40
     Top = 326
     Width = 94

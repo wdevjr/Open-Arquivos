@@ -82,26 +82,31 @@ type
     procedure BitBtn1Click(Sender: TObject);
     procedure BitBtn3Click(Sender: TObject);
     procedure BitBtn5Click(Sender: TObject);
-    procedure ComboBoxEventosButtosDrawItem(Control: TWinControl; Index: Integer;
-      ARect: TRect; State: TOwnerDrawState);
-    procedure ComboBox1MeasureItem(Control: TWinControl; Index: Integer;
-      var AHeight: Integer);
+    procedure ComboBoxEventosButtosDrawItem(Control: TWinControl;
+      Index: integer; ARect: TRect; State: TOwnerDrawState);
+    procedure ComboBox1MeasureItem(Control: TWinControl; Index: integer;
+      var AHeight: integer);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure imprimirClick(Sender: TObject);
     procedure MenuItem1Click(Sender: TObject);
     procedure MenuItem2Click(Sender: TObject);
     procedure Page1BeforeShow(ASender: TObject; ANewPage: TPage;
-      ANewIndex: Integer);
+      ANewIndex: integer);
     procedure SpeedButton11Click(Sender: TObject);
     procedure btnLimparClick(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
     procedure voltarClick(Sender: TObject);
+
+
   private
     // procedure DisplayLabel;
   public
     codigo: boolean;
     codigoAlert: boolean;
+
   end;
 
 var
@@ -109,6 +114,7 @@ var
   CodigoUserPorNome: string;
   FrmLogAcesso: TFrmLogAcesso;
   ListReal, ListFinal: TListBox;
+  ComponentePro: TComponent;
 
 implementation
 
@@ -117,6 +123,9 @@ uses UnDM, UDMII, ULocalizarUser;
 {$R *.lfm}
 
 { TFrmLogAcesso }
+
+
+
 
 procedure TFrmLogAcesso.BitBtn1Click(Sender: TObject);
 begin
@@ -145,15 +154,15 @@ end;
 procedure TFrmLogAcesso.BitBtn3Click(Sender: TObject);
 begin
   DM.ZQueryAssistente.Close;
-    DM.dst_Login.Close;
-    DM.cds_User.Close;
-    PanelAlert.Visible:=False;
-    PanelMostrData.Visible:=False;
-    Notebook1.PageIndex:=0;
-    EdtUsuario.Text:='';
-    EdtSenha.Text:='';
-    Close;
-    FrmLogAcesso:=nil;
+  DM.dst_Login.Close;
+  DM.cds_User.Close;
+  PanelAlert.Visible := False;
+  PanelMostrData.Visible := False;
+  Notebook1.PageIndex := 0;
+  EdtUsuario.Text := '';
+  EdtSenha.Text := '';
+  Close;
+  FrmLogAcesso := nil;
 end;
 
 procedure TFrmLogAcesso.BitBtn5Click(Sender: TObject);
@@ -161,7 +170,7 @@ begin
   Inicial := '';
   finall := '';
 
-      if (PanelMostrData.Visible = True) and (EditPesquNome.Text = '') and
+  if (PanelMostrData.Visible = True) and (EditPesquNome.Text = '') and
     (DBText1.Caption = '') and (ComboBoxEventosButtos.Text = '') then
   begin
     DM.ZQueryAssistente.Close;
@@ -169,12 +178,8 @@ begin
     DM.ZQueryAssistente.SQL.Clear;
     Inicial := DateToStr(DateTimePicker1.Date);
     Finall := DateToStr(DateTimePicker2.Date);
-    DM.ZQueryAssistente.SQL.Text:=
-      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, r.NOME_ARQUIVO FROM LOG r'
-      + ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO '
-      + ' left join ARQUIVOLIST ar on r.COD_REGISTRO = ar.ID '
-      + ' left join ACAO ac on r.COD_ACAO = ac.ID '
-      + ' where r.INSERDATA >= :inicial and r.INSERDATA <= :finall order by r.INSERDATA, r.HORA desc';
+    DM.ZQueryAssistente.SQL.Text :=
+      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, r.NOME_ARQUIVO FROM LOG r' + ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO ' + ' left join ARQUIVOLIST ar on r.COD_REGISTRO = ar.ID ' + ' left join ACAO ac on r.COD_ACAO = ac.ID ' + ' where r.INSERDATA >= :inicial and r.INSERDATA <= :finall order by r.INSERDATA, r.HORA desc';
     DM.ZQueryAssistente.ParamByName('inicial').asDate := StrToDate(Inicial);
     DM.ZQueryAssistente.ParamByName('finall').asDate := StrToDate(Finall);
     DM.ZQueryAssistente.Open;
@@ -190,11 +195,7 @@ begin
     DM.ZQueryAssistente.Params.Clear;
     DM.ZQueryAssistente.SQL.Clear;
     DM.ZQueryAssistente.SQL.Text :=
-      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, r.NOME_ARQUIVO FROM LOG r'
-      + ' left join ARQUIVOLIST ar on r.COD_REGISTRO = ar.ID '
-      + ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO '
-      + ' left join ACAO ac on r.COD_ACAO = ac.ID '
-      + ' where PO.NOME like ' + QuotedStr('%' + EditPesquNome.Text + '%')+' and r.COD_ACAO ='+IntToStr(ComboBoxEventosButtos.ItemIndex)
+      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, r.NOME_ARQUIVO FROM LOG r' + ' left join ARQUIVOLIST ar on r.COD_REGISTRO = ar.ID ' + ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO ' + ' left join ACAO ac on r.COD_ACAO = ac.ID ' + ' where PO.NOME like ' + QuotedStr('%' + EditPesquNome.Text + '%') + ' and r.COD_ACAO =' + IntToStr(ComboBoxEventosButtos.ItemIndex)
 
       // + ' or (r.INSERDATA >= :inicial)'
       // + ' and (r.INSERDATA <= :finall)'
@@ -214,12 +215,11 @@ begin
     //Inicial := DateToStr(DateTimePicker1.Date);
     //Finall := DateToStr(DateTimePicker2.Date);
     DM.ZQueryAssistente.SQL.Add(
-      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, r.NOME_ARQUIVO FROM LOG r '
-      + ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO '
+      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, r.NOME_ARQUIVO FROM LOG r ' + ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO '
       //+ ' where PO.NOME like ' + QuotedStr(EditPesquNome.Text + '%')
-      + ' left join ARQUIVOLIST ar on r.COD_REGISTRO = ar.ID '
-      + ' left join ACAO ac on r.COD_ACAO = ac.ID '
-      + ' where r.COD_USUARIO=' + DBEdit1.Text + ' and r.COD_ACAO ='+IntToStr(ComboBoxEventosButtos.ItemIndex)
+      + ' left join ARQUIVOLIST ar on r.COD_REGISTRO = ar.ID ' +
+      ' left join ACAO ac on r.COD_ACAO = ac.ID ' + ' where r.COD_USUARIO=' +
+      DBEdit1.Text + ' and r.COD_ACAO =' + IntToStr(ComboBoxEventosButtos.ItemIndex)
       //  + ' where r.INSERDATA >= :inicial'
       //+ ' and r.INSERDATA <= :finall'
       + ' order by r.INSERDATA, r.HORA desc');
@@ -242,11 +242,7 @@ begin
     Inicial := DateToStr(DateTimePicker1.Date);
     Finall := DateToStr(DateTimePicker2.Date);
     DM.ZQueryAssistente.SQL.Add(
-      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, r.NOME_ARQUIVO FROM LOG r'
-      + ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO '
-      + ' left join ARQUIVOLIST ar on r.COD_REGISTRO = ar.ID '
-      + ' left join ACAO ac on r.COD_ACAO = ac.ID '
-      + ' where PO.NOME like ' + QuotedStr(EditPesquNome.Text + '%') + ' and r.INSERDATA >= :inicial' + ' and r.INSERDATA <= :finall and r.COD_ACAO ='+IntToStr(ComboBoxEventosButtos.ItemIndex)+' order by r.INSERDATA, r.HORA desc');
+      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, r.NOME_ARQUIVO FROM LOG r' + ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO ' + ' left join ARQUIVOLIST ar on r.COD_REGISTRO = ar.ID ' + ' left join ACAO ac on r.COD_ACAO = ac.ID ' + ' where PO.NOME like ' + QuotedStr(EditPesquNome.Text + '%') + ' and r.INSERDATA >= :inicial' + ' and r.INSERDATA <= :finall and r.COD_ACAO =' + IntToStr(ComboBoxEventosButtos.ItemIndex) + ' order by r.INSERDATA, r.HORA desc');
     DM.ZQueryAssistente.ParamByName('inicial').asDate := StrToDate(Inicial);
     DM.ZQueryAssistente.ParamByName('finall').asDate := StrToDate(Finall);
     DM.ZQueryAssistente.Open;
@@ -256,7 +252,7 @@ begin
   end;
 
   if (DBEdit1.Text = '') and (EditPesquNome.Text = '') and
-    (PanelMostrData.Visible = True)  and (ComboBoxEventosButtos.Text <> '') then
+    (PanelMostrData.Visible = True) and (ComboBoxEventosButtos.Text <> '') then
   begin
     DM.ZQueryAssistente.Close;
     DM.ZQueryAssistente.Params.Clear;
@@ -264,12 +260,7 @@ begin
     Inicial := DateToStr(DateTimePicker1.Date);
     Finall := DateToStr(DateTimePicker2.Date);
     DM.ZQueryAssistente.SQL.Add(
-      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, r.NOME_ARQUIVO FROM LOG r' +
-      ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO '
-      + ' left join ARQUIVOLIST ar on r.COD_REGISTRO = ar.ID '
-      + ' left join ACAO ac on r.COD_ACAO = ac.ID '
-      + ' where r.INSERDATA >= :inicial' + ' and r.INSERDATA <= :finall and r.COD_ACAO ='+IntToStr(ComboBoxEventosButtos.ItemIndex)
-      + ' order by r.INSERDATA, r.HORA desc');
+      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, r.NOME_ARQUIVO FROM LOG r' + ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO ' + ' left join ARQUIVOLIST ar on r.COD_REGISTRO = ar.ID ' + ' left join ACAO ac on r.COD_ACAO = ac.ID ' + ' where r.INSERDATA >= :inicial' + ' and r.INSERDATA <= :finall and r.COD_ACAO =' + IntToStr(ComboBoxEventosButtos.ItemIndex) + ' order by r.INSERDATA, r.HORA desc');
     DM.ZQueryAssistente.ParamByName('inicial').asDate := StrToDate(Inicial);
     DM.ZQueryAssistente.ParamByName('finall').asDate := StrToDate(Finall);
     DM.ZQueryAssistente.Open;
@@ -286,12 +277,7 @@ begin
     Inicial := DateToStr(DateTimePicker1.Date);
     Finall := DateToStr(DateTimePicker2.Date);
     DM.ZQueryAssistente.SQL.Add(
-      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.NOME_ARQUIVO, r.DISCRIMINACAO FROM LOG r' +
-      ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO '
-      + ' left join ARQUIVOLIST ar on r.COD_REGISTRO = ar.ID '
-      + ' left join ACAO ac on r.COD_ACAO = ac.ID '
-      + ' where PO.NOME like ' + QuotedStr(EditPesquNome.Text + '%') +
-      ' or r.COD_USUARIO=' + DBEdit1.Text + ' or r.INSERDATA >= :inicial' + ' and r.INSERDATA <= :finalland r.COD_ACAO ='+IntToStr(ComboBoxEventosButtos.ItemIndex)+ ' order by r.INSERDATA, r.HORA desc');
+      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.NOME_ARQUIVO, r.DISCRIMINACAO FROM LOG r' + ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO ' + ' left join ARQUIVOLIST ar on r.COD_REGISTRO = ar.ID ' + ' left join ACAO ac on r.COD_ACAO = ac.ID ' + ' where PO.NOME like ' + QuotedStr(EditPesquNome.Text + '%') + ' or r.COD_USUARIO=' + DBEdit1.Text + ' or r.INSERDATA >= :inicial' + ' and r.INSERDATA <= :finalland r.COD_ACAO =' + IntToStr(ComboBoxEventosButtos.ItemIndex) + ' order by r.INSERDATA, r.HORA desc');
     DM.ZQueryAssistente.ParamByName('inicial').asDate := StrToDate(Inicial);
     DM.ZQueryAssistente.ParamByName('finall').asDate := StrToDate(Finall);
     DM.ZQueryAssistente.Open;
@@ -306,14 +292,12 @@ begin
     Inicial := DateToStr(DateTimePicker1.Date);
     Finall := DateToStr(DateTimePicker2.Date);
     DM.ZQueryAssistente.SQL.Add(
-      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, r.NOME_ARQUIVO FROM LOG r' +
-      ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO '
-      + ' left join ARQUIVOLIST ar on r.COD_REGISTRO = ar.ID '
-      + ' left join ACAO ac on r.COD_ACAO = ac.ID '
+      'SELECT r.CODIGO,r.INSERDATA, r.HORA,r.COD_USUARIO, r.COD_ACAO, r.ACAO, PO.NOME,r.APLICATIVO, r.COD_REGISTRO, r.DISCRIMINACAO, r.NOME_ARQUIVO FROM LOG r' + ' left join USUARIO PO on r.COD_USUARIO = PO.COD_USUARIO ' + ' left join ARQUIVOLIST ar on r.COD_REGISTRO = ar.ID ' + ' left join ACAO ac on r.COD_ACAO = ac.ID '
       //+ ' where PO.NOME like ' + QuotedStr(EditPesquNome.Text + '%')
       //+ ' where r.COD_USUARIO=' + DBEdit1.Text
-      + ' where r.INSERDATA >= :inicial' + ' and r.INSERDATA <= :finall and r.COD_ACAO ='+IntToStr(ComboBoxEventosButtos.ItemIndex)
-      + ' order by r.INSERDATA, r.HORA desc');
+      + ' where r.INSERDATA >= :inicial' +
+      ' and r.INSERDATA <= :finall and r.COD_ACAO =' + IntToStr(
+      ComboBoxEventosButtos.ItemIndex) + ' order by r.INSERDATA, r.HORA desc');
     DM.ZQueryAssistente.ParamByName('inicial').asDate := StrToDate(Inicial);
     DM.ZQueryAssistente.ParamByName('finall').asDate := StrToDate(Finall);
     DM.ZQueryAssistente.Filter := 'COD_USUARIO=' + DBEdit1.Text;
@@ -324,45 +308,48 @@ begin
   end;
 end;
 
-procedure TFrmLogAcesso.ComboBoxEventosButtosDrawItem(Control: TWinControl; Index: Integer;
-  ARect: TRect; State: TOwnerDrawState);
+procedure TFrmLogAcesso.ComboBoxEventosButtosDrawItem(Control: TWinControl;
+  Index: integer; ARect: TRect; State: TOwnerDrawState);
 var
-aColor:TColor;
-aBrush:TBrush;
+  aColor: TColor;
+  aBrush: TBrush;
 
 begin
-  aBrush:=TBrush.Create;
+  aBrush := TBrush.Create;
   with (Control as TCombobox).Canvas do
+  begin
+    if not odd(Index) then
     begin
-       if not odd(Index) then
-       begin
-         aColor:=$00CBEAEB;
-         Font.Color:=clblue;
-       end
-       else
-       begin
-         aColor:=$00E7CFCF;
-         Font.Color:=clblue;
-       end;
-      aBrush.Style:=bsSolid;
-      aBrush.Color:=aColor;
-      Windows.FillRect(handle,ARect,aBrush.Handle);
-      Brush.Style:=Bsclear;
-      TextOut(ARect.Left,ARect.Top,(Control as TComboBox).Items[Index]);
-      aBrush.Free;
+      aColor := $00CBEAEB;
+      Font.Color := clGreen;
+
+    end
+    else
+    begin
+      aColor := $00E7CFCF;
+      Font.Color := clblue;
+
     end;
-   //with Control as TComboBox do
-   //begin
-   //Canvas.Font.Color := clBlue; // mudar cor da fonte do item
-   //Canvas.Brush.Color := clGreen; // mostrar fundo branco no combobox
-   //Canvas.FillRect(ARect);
-   //Canvas.TextOut(ARect.Left,ARect.Top,ComboBoxEventosButtos.Items.Strings[index]); // mostrar Nomes
-   //end;
+    aBrush.Style := bsSolid;
+    aBrush.Color := aColor;
+
+    Windows.FillRect(handle, ARect, aBrush.Handle);
+    Brush.Style := bsClear;
+    TextOut(ARect.Left, ARect.Top, (Control as TComboBox).Items[Index]);
+    aBrush.Free;
+  end;
+  //with Control as TComboBox do
+  //begin
+  //Canvas.Font.Color := clBlue; // mudar cor da fonte do item
+  //Canvas.Brush.Color := clGreen; // mostrar fundo branco no combobox
+  //Canvas.FillRect(ARect);
+  //Canvas.TextOut(ARect.Left,ARect.Top,ComboBoxEventosButtos.Items.Strings[index]); // mostrar Nomes
+  //end;
 
 end;
 
 procedure TFrmLogAcesso.ComboBox1MeasureItem(Control: TWinControl;
-  Index: Integer; var AHeight: Integer);
+  Index: integer; var AHeight: integer);
 begin
 
 end;
@@ -372,15 +359,25 @@ end;
 procedure TFrmLogAcesso.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
   DM.ZQueryAssistente.Close;
-    DM.dst_Login.Close;
-    DM.cds_User.Close;
-    PanelAlert.Visible:=False;
-    PanelMostrData.Visible:=False;
-    Notebook1.PageIndex:=0;
-    EdtUsuario.Text:='';
-    EdtSenha.Text:='';
+  DM.dst_Login.Close;
+  DM.cds_User.Close;
+  PanelAlert.Visible := False;
+  PanelMostrData.Visible := False;
+  Notebook1.PageIndex := 0;
+  EdtUsuario.Text := '';
+  EdtSenha.Text := '';
   Close;
-  FrmLogAcesso:=Nil;
+  FrmLogAcesso := nil;
+end;
+
+procedure TFrmLogAcesso.FormCreate(Sender: TObject);
+begin
+
+end;
+
+procedure TFrmLogAcesso.FormDestroy(Sender: TObject);
+begin
+
 end;
 
 procedure TFrmLogAcesso.FormShow(Sender: TObject);
@@ -433,17 +430,17 @@ end;
 
 procedure TFrmLogAcesso.MenuItem2Click(Sender: TObject);
 begin
- if not DM.ZQueryAssistente.IsEmpty then
+  if not DM.ZQueryAssistente.IsEmpty then
   begin
-  DM.frReportLogTodos.LoadFromFile('Reports/RelConsultaLogTodos.lrf');
-  DM.frReportLogTodos.Title := 'Tela de Relatórios';
-  DM.frReportLogTodos.showReport;
+    DM.frReportLogTodos.LoadFromFile('Reports/RelConsultaLogTodos.lrf');
+    DM.frReportLogTodos.Title := 'Tela de Relatórios';
+    DM.frReportLogTodos.showReport;
   end;
 
 end;
 
 procedure TFrmLogAcesso.Page1BeforeShow(ASender: TObject; ANewPage: TPage;
-  ANewIndex: Integer);
+  ANewIndex: integer);
 begin
 
 end;
@@ -468,7 +465,7 @@ begin
   LabelNum.Caption := '';
   DBEdit1.Text := '';
   EditPesquNome.Text := '';
-  ComboBoxEventosButtos.ItemIndex:=0;
+  ComboBoxEventosButtos.ItemIndex := 0;
   PanelMostrData.Visible := False;
   PanelAlert.Visible := False;
   DM.ZQueryAssistente.Cancel;

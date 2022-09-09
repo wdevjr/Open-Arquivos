@@ -1073,7 +1073,7 @@ var
   IntTempCodResgist: integer;
   StrTempCodRegist: String;
 begin
-  IntTempCodResgist:=´0;
+  IntTempCodResgist:=0;
   StrTempCodRegist:='';
   IntTempCodResgist := DM.ZQArquivoID.AsInteger;
   StrTempCodRegist:= DM.ZQArquivoNOME_ARQUIVO.AsString;

@@ -1,8 +1,8 @@
 object DM: TDM
   OldCreateOrder = False
   Height = 701
-  HorizontalOffset = 237
-  VerticalOffset = 51
+  HorizontalOffset = 378
+  VerticalOffset = 81
   Width = 1212
   object ZUpdateSQL1: TZUpdateSQL
     DeleteSQL.Strings = (
@@ -4805,6 +4805,7 @@ object DM: TDM
       Required = False
     end
     object cds_logNOME_ARQUIVO: TStringField
+      DisplayWidth = 180
       FieldKind = fkData
       FieldName = 'NOME_ARQUIVO'
       Index = 4
@@ -4812,7 +4813,7 @@ object DM: TDM
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      Size = 70
+      Size = 180
     end
     object cds_logINSERDATA: TDateField
       FieldKind = fkData
