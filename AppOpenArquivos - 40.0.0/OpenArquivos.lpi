@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="12"/>
+    <PathDelim Value="\"/>
+    <General>
+      <Flags>
+        <CompatibilityMode Value="True"/>
+      </Flags>
+      <SessionStorage Value="InProjectDir"/>
+      <Title Value="OpenArquivos"/>
+      <Scaled Value="True"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <XPManifest>
+        <DpiAware Value="True"/>
+      </XPManifest>
+      <Icon Value="0"/>
+    </General>
+    <VersionInfo>
+      <UseVersionInfo Value="True"/>
+      <MajorVersionNr Value="45"/>
+      <MinorVersionNr Value="20"/>
+      <RevisionNr Value="25"/>
+      <Language Value="0416"/>
+    </VersionInfo>
+    <BuildModes Count="3">
+      <Item1 Name="Default" Default="True"/>
+      <Item2 Name="Release">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="OpenArquivos"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <RelocatableUnit Value="True"/>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+              <DebugInfoType Value="dsDwarf2"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item2>
+      <Item3 Name="Debug">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="OpenArquivos"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Linking>
+            <Debugging>
+              <DebugInfoType Value="dsDwarf2"/>
+            </Debugging>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item3>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+    <RunParams>
+      <FormatVersion Value="2"/>
+    </RunParams>
+    <RequiredPackages Count="20">
+      <Item1>
+        <PackageName Value="JvDBLazR"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="JvCtrlsLazR"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="JvPageCompsR"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="JvCustomLazR"/>
+      </Item4>
+      <Item5>
+        <PackageName Value="JvMMLazR"/>
+      </Item5>
+      <Item6>
+        <PackageName Value="JvXPCtrlsLazR"/>
+      </Item6>
+      <Item7>
+        <PackageName Value="jvappfrmlazr"/>
+      </Item7>
+      <Item8>
+        <PackageName Value="JvRuntimeDesignLazR"/>
+      </Item8>
+      <Item9>
+        <PackageName Value="JvStdCtrlsLazR"/>
+      </Item9>
+      <Item10>
+        <PackageName Value="JvTimeFrameworkLazR"/>
+      </Item10>
+      <Item11>
+        <PackageName Value="JvJansLazR"/>
+      </Item11>
+      <Item12>
+        <PackageName Value="zcomponent"/>
+      </Item12>
+      <Item13>
+        <PackageName Value="FCL"/>
+      </Item13>
+      <Item14>
+        <PackageName Value="DateTimeCtrls"/>
+      </Item14>
+      <Item15>
+        <PackageName Value="atflatcontrols_package"/>
+      </Item15>
+      <Item16>
+        <PackageName Value="lazbarcodes"/>
+      </Item16>
+      <Item17>
+        <PackageName Value="lr_zeosdb"/>
+      </Item17>
+      <Item18>
+        <PackageName Value="pkg_gifanim"/>
+      </Item18>
+      <Item19>
+        <PackageName Value="pl_excontrols"/>
+      </Item19>
+      <Item20>
+        <PackageName Value="LCL"/>
+      </Item20>
+    </RequiredPackages>
+    <Units Count="37">
+      <Unit0>
+        <Filename Value="OpenArquivos.lpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="unprinc.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrPrincipal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UnPrinc"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="unlogin.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmLogin"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UnLogin"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="undm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DM"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="UnDM"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="UnCadPerfil.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmCadPerfil"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="udmii.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DMII"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="UDMII"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="uncadastrousuarios.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmCadastrodeUsuarios"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="undlgpesquisausuario.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="UndDlgProcuraCidades.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="UnCadAutores.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmCadAutor"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="UnCadCidades.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="UnDlgProcuraDepartamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmDlgProcuraDepartamento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="UnCadDepartamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="unconsultaespecial.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmView"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UnConsultaEspecial"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="uncadarquivos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormArquivo"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UnCadArquivos"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="UnCadAssuntos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmCadAssuntos"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="thema.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="UnCadLog.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmCadLogDet"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="undlgpesquisautores.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="UnConsultEspMaximized.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="UnDlgProcuraPerfilUser.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="UnTeladeRelatorios.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="UnUtilitLog.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmLogAcesso"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="UnLocalizarUserCod.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmLocalizarUserCod"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="undlgdescricao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="UnDlgProcuraAutor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="UnGridPesquiza.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="unprocessindefinido.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="ULocalizarUser.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="unincluirusuarios.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="undlgpesquisaarquivo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmDlgPesquisa"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="unDlgPesquisaArquivo"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="UnDlgProcuraAssunto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="unabertura.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Abertura"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UnAbertura"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="unatribuiusuariosporarquivos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmAtribuiUser"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UnatribuiUsuariosPorArquivos"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="UnDlgProcuraPerfil.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="undlgdialogassunto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="UAutoPreench.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit36>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="OpenArquivos"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Linking>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>
