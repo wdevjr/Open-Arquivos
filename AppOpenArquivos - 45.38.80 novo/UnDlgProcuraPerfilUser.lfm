@@ -1,0 +1,11 @@
+inherited FrmDlgProcuraPerfilUser: TFrmDlgProcuraPerfilUser
+  Left = 397
+  Top = 194
+  Caption = 'FrmDlgProcuraPerfilUser'
+  inherited Panel2: TPanel
+    inherited SpeedButton1: TSpeedButton
+      Caption = 'Pesquisar'
+      OnClick = SpeedButton1Click
+    end
+  end
+end
