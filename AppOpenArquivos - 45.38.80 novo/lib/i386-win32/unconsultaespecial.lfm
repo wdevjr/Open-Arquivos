@@ -1,7 +1,7 @@
 object FrmView: TFrmView
-  Left = 340
+  Left = 339
   Height = 643
-  Top = 156
+  Top = 37
   Width = 862
   Caption = 'Consulta Especial...'
   ClientHeight = 643

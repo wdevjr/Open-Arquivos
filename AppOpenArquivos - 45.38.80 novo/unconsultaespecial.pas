@@ -1750,6 +1750,18 @@ begin
   CodigoAutor:='';
   CodigoUserPorNome:='';
   Alert.Visible := False;
+  DBEdit1.Text:='';
+  DBEdit2.Text:='';
+  DBEdit3.Text:='';
+  DBEdit4.Text:='';
+  DBText1.Caption:='';
+  DBText2.Caption:='';
+  DBText3.Caption:='';
+  DBText4.Caption:='';
+  desabilitar00.Enabled:=false;
+  desabilitar02.Enabled:=false;
+  desabilitar03.Enabled:=false;
+  SpeedButton10.Enabled:=false;
 end;
 
 end.

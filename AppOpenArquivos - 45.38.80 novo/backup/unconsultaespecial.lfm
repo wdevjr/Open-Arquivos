@@ -1,7 +1,7 @@
 object FrmView: TFrmView
-  Left = 340
+  Left = 339
   Height = 643
-  Top = 156
+  Top = 37
   Width = 862
   Caption = 'Consulta Especial...'
   ClientHeight = 643
@@ -1591,7 +1591,6 @@ object FrmView: TFrmView
         Caption = 'Desabilitar'
         Color = 15323601
         Enabled = False
-        Flat = True
         Font.Color = clRed
         Font.Height = -11
         Font.Name = 'Tahoma'
@@ -1872,7 +1871,6 @@ object FrmView: TFrmView
         Caption = 'Desabilitar'
         Color = 15323601
         Enabled = False
-        Flat = True
         Font.Color = clRed
         Font.Height = -11
         Font.Name = 'Tahoma'
@@ -2153,7 +2151,6 @@ object FrmView: TFrmView
         Caption = 'Desabilitar'
         Color = 15323601
         Enabled = False
-        Flat = True
         Font.Color = clRed
         Font.Height = -11
         Font.Name = 'Tahoma'
@@ -2470,7 +2467,7 @@ object FrmView: TFrmView
         Width = 68
         Caption = 'Desabilitar'
         Color = 15323601
-        Flat = True
+        Enabled = False
         Font.Color = clRed
         Font.Height = -11
         Font.Name = 'Tahoma'
