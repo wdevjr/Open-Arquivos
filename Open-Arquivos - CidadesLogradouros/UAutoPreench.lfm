@@ -1,0 +1,37 @@
+object frmGrid: TfrmGrid
+  Left = 415
+  Height = 109
+  Top = 197
+  Width = 517
+  BorderStyle = bsNone
+  Caption = 'frmGrid'
+  ClientHeight = 109
+  ClientWidth = 517
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnShow = FormShow
+  LCLVersion = '2.2.4.0'
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 109
+    Top = 0
+    Width = 517
+    Align = alClient
+    Color = clWhite
+    Columns = <>
+    FixedColor = 16772313
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgAlwaysShowSelection]
+    ParentFont = False
+    TabOrder = 0
+    TitleFont.Color = clBlack
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    OnDblClick = DBGrid1DblClick
+    OnKeyPress = DBGrid1KeyPress
+  end
+end
